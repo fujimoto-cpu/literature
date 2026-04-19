@@ -1,0 +1,102 @@
+@use "./base.scss";
+
+// Literature Notes - Custom Styles
+// Styles for article page UI injected by literature-ui.js
+
+// Hide sidebar and TOC on mobile (reader-focused layout)
+@media (max-width: 800px) {
+  .left.sidebar,
+  .right.sidebar {
+    display: none !important;
+  }
+}
+
+// Literature UI container (injected by literature-ui.js)
+#lit-ui {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+// Back button
+.lit-back {
+  padding: 12px 0 8px;
+
+  a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// Hero thumbnail on article page
+.lit-hero {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 8px 0 12px;
+}
+
+// Read / Want action buttons
+.lit-actions {
+  display: flex;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.lit-action-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border-radius: 24px;
+  border: 1.5px solid #e0e0e0;
+  background: white;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-tap-highlight-color: transparent;
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  // Read active state
+  &.ra {
+    background: #e8f5e9;
+    border-color: #81c784;
+    color: #2e7d32;
+  }
+
+  // Want active state
+  &.wa {
+    background: #fff3e0;
+    border-color: #ffb74d;
+    color: #e65100;
+  }
+}
+
+// Original post link
+.lit-original-link {
+  display: block;
+  text-align: center;
+  padding: 8px 16px;
+  margin: 8px 0 16px;
+  color: var(--secondary);
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid var(--secondary);
+  border-radius: 20px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: var(--secondary);
+    color: white;
+  }
+}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Literature Notes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f7;
+      --card-bg: #ffffff;
+      --text: #2d2d2d;
+      --text-sub: #9a9a9a;
+      --accent: #e8a0bf;
+      --accent2: #b8d4e3;
+      --accent3: #c5b4e3;
+      --border: #f0edea;
+      --read-bg: #e8f5e9;
+      --read-mark: #81c784;
+      --want-bg: #fff3e0;
+      --want-mark: #ffb74d;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans JP', -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: env(safe-area-inset-bottom, 20px);
+    }
+    .header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,249,247,0.92);
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      padding: 16px 16px 0; border-bottom: 1px solid var(--border);
+    }
+    .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    .header h1 {
+      font-size: 1.3rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent3));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .header-stats { font-size: 0.75rem; color: var(--text-sub); }
+    .header-stats .num { font-weight: 700; color: var(--accent); }
+    .filters {
+      display: flex; gap: 6px; overflow-x: auto; padding-bottom: 12px;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .filters::-webkit-scrollbar { display: none; }
+    .filter-btn {
+      flex-shrink: 0; padding: 6px 14px; border-radius: 20px;
+      border: 1.5px solid var(--border); background: white;
+      font-size: 0.8rem; font-family: inherit; color: var(--text-sub);
+      cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn.active { background: var(--text); color: white; border-color: var(--text); }
+    .filter-btn:active { transform: scale(0.95); }
+    .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; padding: 3px; }
+    @media (max-width: 500px) { .grid { grid-template-columns: repeat(2,1fr); gap: 2px; padding: 2px; } }
+    .card {
+      position: relative; aspect-ratio: 1; overflow: hidden;
+      background: var(--card-bg); cursor: pointer; transition: transform 0.15s;
+      text-decoration: none; display: block; color: inherit;
+    }
+    .card:active { transform: scale(0.97); }
+    .card-img { width: 100%; height: 100%; object-fit: cover; }
+    .card-text {
+      width: 100%; height: 100%; display: flex; flex-direction: column;
+      justify-content: center; align-items: center; padding: 12px; text-align: center;
+    }
+    .card-text.youtube   { background: linear-gradient(135deg, #ffe0e6, #ffd6e0); }
+    .card-text.instagram { background: linear-gradient(135deg, #f5e6ff, #ffe0f0); }
+    .card-text.x         { background: linear-gradient(135deg, #e0f0ff, #dde8ff); }
+    .card-text.web       { background: linear-gradient(135deg, #e0f5ee, #dff0e8); }
+    .card-text.threads   { background: linear-gradient(135deg, #fff5e0, #ffe8d0); }
+    .card-text .src-icon { font-size: 1.8rem; margin-bottom: 8px; opacity: 0.5; }
+    .card-text .ttl {
+      font-size: 0.7rem; font-weight: 500; line-height: 1.5;
+      display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .card-overlay {
+      position: absolute; bottom: 0; left: 0; right: 0; padding: 8px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.65)); color: white;
+    }
+    .card-overlay .ttl {
+      font-size: 0.65rem; font-weight: 500; line-height: 1.4;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .src-badge {
+      position: absolute; top: 6px; left: 6px; font-size: 0.7rem;
+      background: rgba(255,255,255,0.9); border-radius: 10px; padding: 2px 6px;
+    }
+    .date-badge {
+      position: absolute; top: 6px; right: 6px; font-size: 0.55rem;
+      color: rgba(255,255,255,0.85); background: rgba(0,0,0,0.25);
+      border-radius: 8px; padding: 2px 6px;
+    }
+    .card-text .date-badge { color: var(--text-sub); background: rgba(0,0,0,0.06); }
+    .marks { position: absolute; bottom: 6px; right: 6px; display: flex; gap: 4px; z-index: 10; }
+    .mark-btn {
+      width: 28px; height: 28px; border-radius: 50%; border: none; font-size: 0.75rem;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.85); backdrop-filter: blur(4px);
+      transition: all 0.2s; -webkit-tap-highlight-color: transparent;
+    }
+    .mark-btn:active { transform: scale(0.85); }
+    .mark-btn.ra { background: #81c784; color: white; }
+    .mark-btn.wa { background: #ffb74d; color: white; }
+    .card.is-read::after {
+      content: ''; position: absolute; inset: 0;
+      background: rgba(129,199,132,0.15); pointer-events: none;
+    }
+    .empty { text-align: center; padding: 60px 20px; color: var(--text-sub); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <h1>Literature Notes</h1>
+    <div class="header-stats">
+      <span class="num" id="rc">0</span> read ・ <span class="num" id="wc">0</span> want
+    </div>
+  </div>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All ({{TOTAL}})</button>
+    <button class="filter-btn" data-filter="unread">Unread</button>
+    <button class="filter-btn" data-filter="read">Read ✓</button>
+    <button class="filter-btn" data-filter="want">Want ★</button>
+    <button class="filter-btn" data-filter="source:x">𝕏 ({{X_COUNT}})</button>
+    <button class="filter-btn" data-filter="source:instagram">📷 IG ({{IG_COUNT}})</button>
+    <button class="filter-btn" data-filter="source:youtube">▶️ YouTube ({{YT_COUNT}})</button>
+    <button class="filter-btn" data-filter="source:threads">🧵 ({{THREADS_COUNT}})</button>
+  </div>
+</div>
+
+<div class="grid" id="grid"></div>
+
+<script>
+var A={{ARTICLES_JSON}};
+var K="lit-marks";
+function gm(){try{return JSON.parse(localStorage.getItem(K)||"{}")}catch(e){return{}}}
+function sm(m){localStorage.setItem(K,JSON.stringify(m))}
+var cf="all";
+
+function uc(){
+  var m=gm(),r=0,w=0;
+  for(var k in m){if(m[k].read)r++;if(m[k].want)w++}
+  document.getElementById("rc").textContent=r;
+  document.getElementById("wc").textContent=w;
+}
+
+function tog(slug,type,ev){
+  ev.preventDefault(); ev.stopPropagation();
+  var m=gm();if(!m[slug])m[slug]={};
+  m[slug][type]=!m[slug][type];sm(m);rg();uc();
+}
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
+
+function rg(){
+  var m=gm(),g=document.getElementById("grid"),f=A;
+  if(cf==="unread")f=A.filter(function(a){return!m[a.slug]||!m[a.slug].read});
+  else if(cf==="read")f=A.filter(function(a){return m[a.slug]&&m[a.slug].read});
+  else if(cf==="want")f=A.filter(function(a){return m[a.slug]&&m[a.slug].want});
+  else if(cf.indexOf("source:")===0){var src=cf.split(":")[1];f=A.filter(function(a){return a.source===src})}
+
+  if(!f.length){g.innerHTML='<div class="empty">まだないよ</div>';return}
+
+  var h="";
+  for(var i=0;i<f.length;i++){
+    var a=f[i],mk=m[a.slug]||{},rc=mk.read?"is-read":"",d=a.date.slice(5).replace("-","/");
+    var mb='<div class="marks">';
+    if(mk.read)mb+='<span class="mark-btn ra" onclick="tog(\''+a.slug+'\',\'read\',event)">✓</span>';
+    if(mk.want)mb+='<span class="mark-btn wa" onclick="tog(\''+a.slug+'\',\'want\',event)">★</span>';
+    mb+='</div>';
+
+    if(a.thumbnail){
+      h+='<a class="card '+rc+'" href="./'+a.slug+'">'
+        +'<img class="card-img" src="'+a.thumbnail+'" alt="" loading="lazy">'
+        +'<span class="src-badge">'+a.sourceIcon+'</span>'
+        +'<span class="date-badge">'+d+'</span>'
+        +'<div class="card-overlay"><div class="ttl">'+esc(a.title)+'</div></div>'
+        +mb+'</a>';
+    } else {
+      h+='<a class="card '+rc+'" href="./'+a.slug+'">'
+        +'<div class="card-text '+a.source+'">'
+        +'<div class="src-icon">'+a.sourceIcon+'</div>'
+        +'<div class="ttl">'+esc(a.title)+'</div></div>'
+        +'<span class="date-badge">'+d+'</span>'
+        +mb+'</a>';
+    }
+  }
+  g.innerHTML=h;
+}
+
+document.querySelectorAll(".filter-btn").forEach(function(b){
+  b.addEventListener("click",function(){
+    document.querySelectorAll(".filter-btn").forEach(function(x){x.classList.remove("active")});
+    b.classList.add("active");cf=b.dataset.filter;rg();
+  });
+});
+rg();uc();
+</script>
+</body>
+</html>
