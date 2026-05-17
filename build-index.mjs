@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync, statSync } from 'fs';
 import { join } from 'path';
 
 // --- Helpers ---
@@ -150,6 +150,20 @@ for (const filename of mdFiles) {
   const slug = generateSlug(title);
   const sourceIcon = detectSourceIcon(source);
 
+  // addedAt: 追加日時。優先順位 created > processed_date > date > file mtime
+  let addedAt = '';
+  if (fm.created) addedAt = String(fm.created);
+  else if (fm.processed_date) addedAt = String(fm.processed_date);
+  else if (fm.date) addedAt = String(fm.date);
+  else {
+    try {
+      const mtime = statSync(filePath).mtime;
+      addedAt = mtime.toISOString().slice(0, 10);
+    } catch (e) {
+      addedAt = '';
+    }
+  }
+
   // Determine thumbnail
   let thumbnail = fm.thumbnail || '';
 
@@ -173,6 +187,7 @@ for (const filename of mdFiles) {
   articles.push({
     title,
     date,
+    addedAt,
     source,
     url,
     tags,
@@ -182,10 +197,10 @@ for (const filename of mdFiles) {
   });
 }
 
-// Sort by date descending (ISO date strings sort lexicographically)
+// Sort by addedAt descending (ISO date strings sort lexicographically)
 articles.sort((a, b) => {
-  if (a.date < b.date) return 1;
-  if (a.date > b.date) return -1;
+  if (a.addedAt < b.addedAt) return 1;
+  if (a.addedAt > b.addedAt) return -1;
   return 0;
 });
 

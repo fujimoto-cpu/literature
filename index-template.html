@@ -56,6 +56,19 @@
     }
     .filter-btn.active { background: var(--text); color: white; border-color: var(--text); }
     .filter-btn:active { transform: scale(0.95); }
+    .sort-row {
+      display: flex; align-items: center; gap: 8px; padding: 0 0 12px;
+    }
+    .sort-label { font-size: 0.7rem; color: var(--text-sub); }
+    .sort-select {
+      flex-shrink: 0; padding: 6px 28px 6px 12px; border-radius: 20px;
+      border: 1.5px solid var(--border); background: white;
+      font-size: 0.8rem; font-family: inherit; color: var(--text);
+      cursor: pointer; appearance: none; -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%239a9a9a' stroke-width='1.5' fill='none' stroke-linecap='round'/></svg>");
+      background-repeat: no-repeat; background-position: right 10px center;
+    }
+    .sort-select:focus { outline: none; border-color: var(--accent); }
     .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; padding: 3px; }
     @media (max-width: 500px) { .grid { grid-template-columns: repeat(2,1fr); gap: 2px; padding: 2px; } }
     .card {
@@ -133,16 +146,27 @@
     <button class="filter-btn" data-filter="source:youtube">▶️ YouTube ({{YT_COUNT}})</button>
     <button class="filter-btn" data-filter="source:threads">🧵 ({{THREADS_COUNT}})</button>
   </div>
+  <div class="sort-row">
+    <span class="sort-label">並び順</span>
+    <select class="sort-select" id="sortSelect">
+      <option value="added-desc">追加順（新→古）</option>
+      <option value="added-asc">追加順（古→新）</option>
+      <option value="title-asc">タイトル順（あ→ん）</option>
+      <option value="random">ランダム</option>
+    </select>
+  </div>
 </div>
 
 <div class="grid" id="grid"></div>
 
 <script>
 var A={{ARTICLES_JSON}};
-var K="lit-marks";
+var K="lit-marks",SK="lit-sort";
 function gm(){try{return JSON.parse(localStorage.getItem(K)||"{}")}catch(e){return{}}}
 function sm(m){localStorage.setItem(K,JSON.stringify(m))}
-var cf="all";
+function gs(){return localStorage.getItem(SK)||"added-desc"}
+function ss(v){localStorage.setItem(SK,v)}
+var cf="all",cs=gs();
 
 function uc(){
   var m=gm(),r=0,w=0;
@@ -159,6 +183,20 @@ function tog(slug,type,ev){
 
 function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;")}
 
+function sortArr(arr,mode){
+  var a=arr.slice();
+  if(mode==="added-desc"){
+    a.sort(function(x,y){return (x.addedAt<y.addedAt)?1:((x.addedAt>y.addedAt)?-1:0)});
+  } else if(mode==="added-asc"){
+    a.sort(function(x,y){return (x.addedAt<y.addedAt)?-1:((x.addedAt>y.addedAt)?1:0)});
+  } else if(mode==="title-asc"){
+    a.sort(function(x,y){return (x.title||"").localeCompare((y.title||""),"ja")});
+  } else if(mode==="random"){
+    for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}
+  }
+  return a;
+}
+
 function rg(){
   var m=gm(),g=document.getElementById("grid"),f=A;
   if(cf==="unread")f=A.filter(function(a){return!m[a.slug]||!m[a.slug].read});
@@ -166,11 +204,15 @@ function rg(){
   else if(cf==="want")f=A.filter(function(a){return m[a.slug]&&m[a.slug].want});
   else if(cf.indexOf("source:")===0){var src=cf.split(":")[1];f=A.filter(function(a){return a.source===src})}
 
+  f=sortArr(f,cs);
+
   if(!f.length){g.innerHTML='<div class="empty">まだないよ</div>';return}
 
   var h="";
   for(var i=0;i<f.length;i++){
-    var a=f[i],mk=m[a.slug]||{},rc=mk.read?"is-read":"",d=a.date.slice(5).replace("-","/");
+    var a=f[i],mk=m[a.slug]||{},rc=mk.read?"is-read":"";
+    var dsrc=a.addedAt||a.date||"";
+    var d=dsrc?dsrc.slice(5).replace("-","/"):"";
     var mb='<div class="marks">';
     if(mk.read)mb+='<span class="mark-btn ra" onclick="tog(\''+a.slug+'\',\'read\',event)">✓</span>';
     if(mk.want)mb+='<span class="mark-btn wa" onclick="tog(\''+a.slug+'\',\'want\',event)">★</span>';
@@ -180,7 +222,7 @@ function rg(){
       h+='<a class="card '+rc+'" href="./'+a.slug+'">'
         +'<img class="card-img" src="'+a.thumbnail+'" alt="" loading="lazy">'
         +'<span class="src-badge">'+a.sourceIcon+'</span>'
-        +'<span class="date-badge">'+d+'</span>'
+        +(d?'<span class="date-badge">'+d+'</span>':'')
         +'<div class="card-overlay"><div class="ttl">'+esc(a.title)+'</div></div>'
         +mb+'</a>';
     } else {
@@ -188,7 +230,7 @@ function rg(){
         +'<div class="card-text '+a.source+'">'
         +'<div class="src-icon">'+a.sourceIcon+'</div>'
         +'<div class="ttl">'+esc(a.title)+'</div></div>'
-        +'<span class="date-badge">'+d+'</span>'
+        +(d?'<span class="date-badge">'+d+'</span>':'')
         +mb+'</a>';
     }
   }
@@ -201,6 +243,15 @@ document.querySelectorAll(".filter-btn").forEach(function(b){
     b.classList.add("active");cf=b.dataset.filter;rg();
   });
 });
+
+var sortSel=document.getElementById("sortSelect");
+if(sortSel){
+  sortSel.value=cs;
+  sortSel.addEventListener("change",function(){
+    cs=sortSel.value;ss(cs);rg();
+  });
+}
+
 rg();uc();
 </script>
 </body>
