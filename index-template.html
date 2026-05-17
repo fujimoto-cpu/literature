@@ -69,6 +69,21 @@
       background-repeat: no-repeat; background-position: right 10px center;
     }
     .sort-select:focus { outline: none; border-color: var(--accent); }
+    .export-btn {
+      flex-shrink: 0; margin-left: auto; padding: 6px 12px; border-radius: 20px;
+      border: 1.5px solid var(--accent); background: white; color: var(--accent);
+      font-size: 0.75rem; font-family: inherit; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .export-btn:active { transform: scale(0.95); background: var(--accent); color: white; }
+    .toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: rgba(45,45,45,0.95); color: white; padding: 12px 20px;
+      border-radius: 24px; font-size: 0.8rem; z-index: 1000;
+      opacity: 0; pointer-events: none; transition: all 0.3s;
+      max-width: 90%; text-align: center;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
     .grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; padding: 3px; }
     @media (max-width: 500px) { .grid { grid-template-columns: repeat(2,1fr); gap: 2px; padding: 2px; } }
     .card {
@@ -154,8 +169,10 @@
       <option value="title-asc">タイトル順（あ→ん）</option>
       <option value="random">ランダム</option>
     </select>
+    <button class="export-btn" id="exportBtn" type="button">📤 Obsidian反映用</button>
   </div>
 </div>
+<div class="toast" id="toast"></div>
 
 <div class="grid" id="grid"></div>
 
@@ -249,6 +266,57 @@ if(sortSel){
   sortSel.value=cs;
   sortSel.addEventListener("change",function(){
     cs=sortSel.value;ss(cs);rg();
+  });
+}
+
+function showToast(msg){
+  var t=document.getElementById("toast");
+  if(!t)return;
+  t.textContent=msg;t.classList.add("show");
+  setTimeout(function(){t.classList.remove("show")},2400);
+}
+
+function buildExportPayload(){
+  var m=gm(),items=[],titleMap={};
+  for(var i=0;i<A.length;i++){titleMap[A[i].slug]=A[i].title}
+  for(var slug in m){
+    var mk=m[slug];
+    if(!mk||(!mk.read&&!mk.want))continue;
+    items.push({
+      slug:slug,
+      title:titleMap[slug]||slug.replace(/-/g," "),
+      read:!!mk.read,
+      want:!!mk.want
+    });
+  }
+  return {
+    version:1,
+    exportedAt:new Date().toISOString(),
+    items:items
+  };
+}
+
+function copyText(text){
+  if(navigator.clipboard&&window.isSecureContext){
+    return navigator.clipboard.writeText(text);
+  }
+  var ta=document.createElement("textarea");
+  ta.value=text;ta.style.position="fixed";ta.style.left="-9999px";
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand("copy")}catch(e){}
+  document.body.removeChild(ta);
+  return Promise.resolve();
+}
+
+var exportBtn=document.getElementById("exportBtn");
+if(exportBtn){
+  exportBtn.addEventListener("click",function(){
+    var payload=buildExportPayload();
+    if(!payload.items.length){showToast("マークがまだないよ");return}
+    var json=JSON.stringify(payload,null,2);
+    copyText(json).then(function(){
+      showToast("📋 "+payload.items.length+"件コピー！CORINに「これObsidianに反映して」と貼ってね");
+    });
   });
 }
 
