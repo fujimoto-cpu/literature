@@ -141,6 +141,33 @@
       background: rgba(129,199,132,0.15); pointer-events: none;
     }
     .empty { text-align: center; padding: 60px 20px; color: var(--text-sub); font-size: 0.9rem; }
+    .search-row {
+      padding: 0 0 8px;
+    }
+    .search-input {
+      width: 100%; padding: 10px 14px; border-radius: 22px;
+      border: 1.5px solid var(--border); background: white;
+      font-size: 0.9rem; font-family: inherit; color: var(--text);
+      -webkit-appearance: none;
+    }
+    .search-input:focus { outline: none; border-color: var(--accent-text); }
+    .search-input::placeholder { color: var(--text-sub); }
+    .tag-chips {
+      display: flex; gap: 6px; overflow-x: auto; padding-bottom: 12px;
+      -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    }
+    .tag-chips::-webkit-scrollbar { display: none; }
+    .tag-chip {
+      flex-shrink: 0; padding: 5px 12px; border-radius: 16px;
+      border: 1px solid var(--border); background: white;
+      font-size: 0.72rem; font-family: inherit; color: var(--text-sub);
+      cursor: pointer; transition: all 0.2s; white-space: nowrap;
+    }
+    .tag-chip:active { transform: scale(0.95); }
+    .tag-chip.active {
+      background: var(--accent-text); color: white; border-color: var(--accent-text);
+    }
+    .tag-chip .ct { opacity: 0.7; margin-left: 4px; font-size: 0.65rem; }
   </style>
 </head>
 <body>
@@ -162,6 +189,10 @@
     <button class="filter-btn" data-filter="source:youtube">▶️ YouTube ({{YT_COUNT}})</button>
     <button class="filter-btn" data-filter="source:threads">🧵 ({{THREADS_COUNT}})</button>
   </div>
+  <div class="search-row">
+    <input type="search" class="search-input" id="searchInput" placeholder="🔍 タイトルで検索" autocomplete="off" />
+  </div>
+  <div class="tag-chips" id="tagChips"></div>
   <div class="sort-row">
     <span class="sort-label">並び順</span>
     <select class="sort-select" id="sortSelect">
@@ -184,7 +215,46 @@ function gm(){try{return JSON.parse(localStorage.getItem(K)||"{}")}catch(e){retu
 function sm(m){localStorage.setItem(K,JSON.stringify(m))}
 function gs(){return localStorage.getItem(SK)||"added-desc"}
 function ss(v){localStorage.setItem(SK,v)}
-var cf="all",cs=gs();
+var cf="all",cs=gs(),q="",selectedTags=new Set();
+
+// ソースタグ・絵文字prefix除外用
+var EXCLUDE_TAGS=new Set(["instagram","youtube","x","threads","clippings","draft"]);
+
+function getTopTags(n){
+  var counts={};
+  for(var i=0;i<A.length;i++){
+    var ts=A[i].tags||[];
+    for(var j=0;j<ts.length;j++){
+      var t=ts[j];
+      if(!t||EXCLUDE_TAGS.has(t))continue;
+      counts[t]=(counts[t]||0)+1;
+    }
+  }
+  var arr=Object.keys(counts).map(function(k){return [k,counts[k]]});
+  arr.sort(function(a,b){return b[1]-a[1]});
+  return arr.slice(0,n);
+}
+
+function renderTagChips(){
+  var top=getTopTags(12);
+  var el=document.getElementById("tagChips");
+  if(!el)return;
+  var h="";
+  for(var i=0;i<top.length;i++){
+    var t=top[i][0],c=top[i][1];
+    var active=selectedTags.has(t)?" active":"";
+    h+='<button class="tag-chip'+active+'" data-tag="'+t.replace(/"/g,"&quot;")+'" type="button">#'+t+'<span class="ct">'+c+'</span></button>';
+  }
+  el.innerHTML=h;
+  el.querySelectorAll(".tag-chip").forEach(function(b){
+    b.addEventListener("click",function(){
+      var t=b.dataset.tag;
+      if(selectedTags.has(t))selectedTags.delete(t);
+      else selectedTags.add(t);
+      renderTagChips();rg();
+    });
+  });
+}
 
 function uc(){
   var m=gm(),r=0,w=0;
@@ -221,6 +291,21 @@ function rg(){
   else if(cf==="read")f=A.filter(function(a){return m[a.slug]&&m[a.slug].read});
   else if(cf==="want")f=A.filter(function(a){return m[a.slug]&&m[a.slug].want});
   else if(cf.indexOf("source:")===0){var src=cf.split(":")[1];f=A.filter(function(a){return a.source===src})}
+
+  // 検索（タイトル部分一致・大文字小文字無視）
+  if(q){
+    var qq=q.toLowerCase();
+    f=f.filter(function(a){return (a.title||"").toLowerCase().indexOf(qq)>=0});
+  }
+
+  // タグフィルタ（選択されたタグのいずれかを含む）
+  if(selectedTags.size){
+    f=f.filter(function(a){
+      var ts=a.tags||[];
+      for(var i=0;i<ts.length;i++){if(selectedTags.has(ts[i]))return true}
+      return false;
+    });
+  }
 
   f=sortArr(f,cs);
 
@@ -321,6 +406,17 @@ if(exportBtn){
   });
 }
 
+// 検索（200ms debounce）
+var searchInput=document.getElementById("searchInput");
+if(searchInput){
+  var t=null;
+  searchInput.addEventListener("input",function(){
+    clearTimeout(t);
+    t=setTimeout(function(){q=searchInput.value.trim();rg()},200);
+  });
+}
+
+renderTagChips();
 rg();uc();
 </script>
 </body>
