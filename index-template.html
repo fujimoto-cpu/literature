@@ -13,9 +13,11 @@
       --card-bg: #ffffff;
       --text: #2d2d2d;
       --text-sub: #9a9a9a;
-      --accent: #e8a0bf;
+      --accent: #e8a0bf;        /* decorative pink (borders, button bg) */
+      --accent-text: #b8538a;   /* readable pink for text on light bg */
       --accent2: #b8d4e3;
       --accent3: #c5b4e3;
+      --accent3-text: #8a6dc4;  /* readable lavender for text */
       --border: #f0edea;
       --read-bg: #e8f5e9;
       --read-mark: #81c784;
@@ -38,11 +40,11 @@
     .header-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
     .header h1 {
       font-size: 1.3rem; font-weight: 700;
-      background: linear-gradient(135deg, var(--accent), var(--accent3));
+      background: linear-gradient(135deg, var(--accent-text), var(--accent3-text));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
     }
     .header-stats { font-size: 0.75rem; color: var(--text-sub); }
-    .header-stats .num { font-weight: 700; color: var(--accent); }
+    .header-stats .num { font-weight: 700; color: var(--accent-text); }
     .filters {
       display: flex; gap: 6px; overflow-x: auto; padding-bottom: 12px;
       -webkit-overflow-scrolling: touch; scrollbar-width: none;
@@ -71,11 +73,11 @@
     .sort-select:focus { outline: none; border-color: var(--accent); }
     .export-btn {
       flex-shrink: 0; margin-left: auto; padding: 6px 12px; border-radius: 20px;
-      border: 1.5px solid var(--accent); background: white; color: var(--accent);
+      border: 1.5px solid var(--accent-text); background: white; color: var(--accent-text);
       font-size: 0.75rem; font-family: inherit; font-weight: 600;
       cursor: pointer; transition: all 0.2s;
     }
-    .export-btn:active { transform: scale(0.95); background: var(--accent); color: white; }
+    .export-btn:active { transform: scale(0.95); background: var(--accent-text); color: white; }
     .toast {
       position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
       background: rgba(45,45,45,0.95); color: white; padding: 12px 20px;
