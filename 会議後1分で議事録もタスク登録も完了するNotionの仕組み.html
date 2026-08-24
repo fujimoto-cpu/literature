@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>会議後1分で議事録もタスク登録も完了するNotionの仕組み</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="会議後1分で議事録もタスク登録も完了するNotionの仕組み"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="会議後1分で議事録もタスク登録も完了するNotionの仕組み"/><meta name="twitter:description" content="📺 動画情報 会議後1分で議事録もタスク登録も完了するNotionの仕組み 🎙️ 管理の山田 | Notion公式アンバサダー ・ 📅 2026-04-25 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノート機能を使って、会議中のリアルタイムアシスト・会議後の自動要約・タスク登録・次回アジェンダ生成までを一気通貫で実現する仕組みを解説。データベース×テンプレートで運用を標準化するところまで実演。 🗺️ 全体像 flowchart TD A[スラッシュコマンドでミーティングノート作成] --&amp;g..."/><meta property="og:description" content="📺 動画情報 会議後1分で議事録もタスク登録も完了するNotionの仕組み 🎙️ 管理の山田 | Notion公式アンバサダー ・ 📅 2026-04-25 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノート機能を使って、会議中のリアルタイムアシスト・会議後の自動要約・タスク登録・次回アジェンダ生成までを一気通貫で実現する仕組みを解説。データベース×テンプレートで運用を標準化するところまで実演。 🗺️ 全体像 flowchart TD A[スラッシュコマンドでミーティングノート作成] --&amp;g..."/><meta property="og:image:alt" content="📺 動画情報 会議後1分で議事録もタスク登録も完了するNotionの仕組み 🎙️ 管理の山田 | Notion公式アンバサダー ・ 📅 2026-04-25 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノート機能を使って、会議中のリアルタイムアシスト・会議後の自動要約・タスク登録・次回アジェンダ生成までを一気通貫で実現する仕組みを解説。データベース×テンプレートで運用を標準化するところまで実演。 🗺️ 全体像 flowchart TD A[スラッシュコマンドでミーティングノート作成] --&amp;g..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/会議後1分で議事録もタスク登録も完了するNotionの仕組み"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/会議後1分で議事録もタスク登録も完了するNotionの仕組み"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 会議後1分で議事録もタスク登録も完了するNotionの仕組み 🎙️ 管理の山田 | Notion公式アンバサダー ・ 📅 2026-04-25 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノート機能を使って、会議中のリアルタイムアシスト・会議後の自動要約・タスク登録・次回アジェンダ生成までを一気通貫で実現する仕組みを解説。データベース×テンプレートで運用を標準化するところまで実演。 🗺️ 全体像 flowchart TD A[スラッシュコマンドでミーティングノート作成] --&amp;g..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="会議後1分で議事録もタスク登録も完了するNotionの仕組み"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2378"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2378" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>会議後1分で議事録もタスク登録も完了するNotionの仕組み</a></div></nav><h1 class="article-title">会議後1分で議事録もタスク登録も完了するNotionの仕組み</h1><p show-comma="true" class="content-meta"><time datetime="2026-04-25T15:00:00.000Z">2026年4月26日</time><span>39 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/meeting-notes" class="internal tag-link">meeting-notes</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/task-management" class="internal tag-link">task-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>会議後1分で議事録もタスク登録も完了するNotionの仕組み</strong>
+🎙️ 管理の山田 | Notion公式アンバサダー ・ 📅 2026-04-25 ・ ⏱️ 16分8秒
+🔗 <a href="https://www.youtube.com/watch?v=N_wJLVuWidY" class="external">https://www.youtube.com/watch?v=N_wJLVuWidY<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 NotionのAIミーティングノート機能を使って、会議中のリアルタイムアシスト・会議後の自動要約・タスク登録・次回アジェンダ生成までを一気通貫で実現する仕組みを解説。データベース×テンプレートで運用を標準化するところまで実演。</p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[スラッシュコマンドでミーティングノート作成] --> B[文字起こし開始]\n    B --> C{会議中}\n    C --> D[AIにリアルタイム質問・要約依頼]\n    C --> E[ヒアリング内容を元に営業提案案を生成]\n    C --> F[文字起こし停止]\n    F --> G[カスタム形式で自動要約生成]\n    G --> H[タスクをDBに自動登録]\n    G --> I[次回アジェンダを自動作成]\n    H --> J[AIスキルとして保存]\n    I --> J\n    J --> K[データベース×テンプレートで標準化]&quot;">flowchart TD
+    A[スラッシュコマンドでミーティングノート作成] --> B[文字起こし開始]
+    B --> C{会議中}
+    C --> D[AIにリアルタイム質問・要約依頼]
+    C --> E[ヒアリング内容を元に営業提案案を生成]
+    C --> F[文字起こし停止]
+    F --> G[カスタム形式で自動要約生成]
+    G --> H[タスクをDBに自動登録]
+    G --> I[次回アジェンダを自動作成]
+    H --> J[AIスキルとして保存]
+    I --> J
+    J --> K[データベース×テンプレートで標準化]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<hr/>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. AIミーティングノートの起動 — スラッシュコマンドだけで始まる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>スラッシュコマンドから「Meet」と入力するだけでミーティングブロックが作成される。「文字起こしを始める」をクリックするだけでリアルタイム文字起こしが開始。スマホのNotionアプリからも同じ手順で使えるため、オフラインで対面している場面でも即使用可能。相手がいる場合は同意確認メッセージを再生する機能も標準搭載。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 会議中のリアルタイムAIアシスト — AIが横で会議を聞いている </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>文字起こしのデータをNotion AIがリアルタイムで把握しているため、会議中にAIへ「ここまでの要約」「抜け漏れの確認」を依頼できる。商談では相手のヒアリング内容をAIが認識した状態で「刺さる提案の角度」「深掘り質問」を生成してくれる。トップ営業の商談ログを3〜4件事前に読み込ませておけば、そのナレッジを会議中に新メンバーへ提供する仕組みにもなる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 要約フォーマットのカスタマイズ — 会議の種類ごとに型を作る </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>会議後の自動要約はデフォルト生成に加え、フォーマット（形式）を指定できる。見出し構成・背景色・要約スタイルをページで定義してAIに読ませると、商談用・定例会議用など会議の種類ごとに最適化された要約が自動生成される。フォーマット自体もNotionの音声入力で要件を話すだけでAIが作成してくれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. タスク登録・次回アジェンダ生成 — 会議後の処理をAIに丸投げ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>会議が終わったらNotion AIに「タスク管理DBに登録して」と指示するだけで、期限・担当者まで自動で入力されたタスクが生成される。定例会議であれば「次回アジェンダを作って」と依頼すれば、今回の会話内容をベースに来週の議題が自動生成される。これらの指示をAIスキルとして保存しておけば、次回以降は「@スキル名」を呼ぶだけで同じことができる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. データベース×テンプレートで標準化 — 誰でも同じ品質を保てる仕組み </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>議事録はDBで管理し、会議の種類（商談・定例・経営会議）ごとにテンプレートを作成する。テンプレート内にはタブブロックでアジェンダ・議事録・AIスキルを整理して格納。新規ページ作成時にテンプレートを選ぶだけで、AIスキルの指定・要約形式・アジェンダの型がすべて自動でセットされる。誰が使っても同じ品質の議事録が取れる体制が完成する。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 社内会議の議事録即時共有</strong>
+商談・チームMTGのテンプレートをNotionに作り込んでおけば、会議後に要約をコピーしてSlack共有するだけで議事録配布が完了する。Circlebackを待たずにNotion内で完結できる場面も増える。</p>
+<p><strong>② AI導入推進の商談活用</strong>
+AI導入の社内提案や外部商談で、相手のヒアリング内容をAIがリアルタイムで把握した状態で提案角度を教えてもらうフローは今すぐ使える。既存のCirclebacker連携と並行して試す価値がある。</p>
+<p><strong>③ 会議テンプレートを部署別に標準化</strong>
+会議種別ごとのテンプレートをKONNEKTのNotionに整備すれば、議事録の品質が属人化しなくなる。AI導入推進として全社展開できるネタとして活用できる。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> どうもノーション公式アンバサダーの山田です突然ですが皆さん会議で話した内容を最大限活用できてますか?もし使えていないのであればそれはめちゃめちゃもったいないです会議の音声情報は社内のノウハウ貴重な情報資産になっていくんですということで今回はノーションのAIミーティングノートの活用術を徹底解説していきます流れはこんな形でこの機能を使うだけで誰でも簡単に議事録を取れることはもちろん会議や商談の質を劇的に上げることができてすぐに効果を実感できる仕組みを構築できるんですさらにデータベースとテンプレートで</p>
+<p><code>00:34</code> 誰でも同じ質を保てる体制を作れちゃいます難しい使い方は一切なし本当にこの機能を使っているだけで生産性がガラリと変わりますよこの動画を見終わる頃にはすぐに試せる状態になっていますのでぜひ最後までご覧くださいではまずはAIミーティングノートの基本的な使い方についてサクッと説明していきますAIミーティングノートはスラッシュコマンドからMeetと入れるだけで簡単に作成することができますこれであとはこちらの文字起こしを始めるというところをクリックするだけですぐに文字起こしが開始されますこれだけでもうこのようにリアルタイムで文字起こしがされていくんです</p>
+<p><code>01:11</code> そして細かい設定については右側のこの設定ボタンで変更することができますいくつかポイントだけ説明していきますねまずは言語ですここで言語を変換することが可能になっていますそして形式こちらは後でまた詳しく説明するので次に行って同意ですねここは大事なポイントで相手がいる会議の場合にはこの文字起こしをする場合にはまず同意をいただいてから起動するようにしましょうこちらをクリックすれば同意メッセージを再生することができるようになっていますノーションAIがこのミーティングを文字起こししていますこんな感じですねそしてこのAIミーティングノートはスマホのノーションアプリからでも</p>
+<p><code>01:45</code> 使うことができるようになっています画面を開いた状態で右下のこちらのアイコンをクリックしてそうするとここにミーティングと表示されているのでここをクリックすればミーティングブロックが作成されるのであとは文字起こしを始めるをクリックするだけですオフラインで会った時でもすぐに文字起こしを取ることができるので非常に便利ですねこんな感じで文字起こしを取るのが非常に簡単にできはするんですがこれだけであればわざわざNotionでやる必要ってそんなにないですよねZoomやGoogle Meetでもデフォルトで文字起こしができると思うのでそれで十分だと思いますただ実はNotionの進化はここからなんですこの文字起こしを1ミリも余すことなく</p>
+<p><code>02:20</code> 会議中も会議後も活用していきましょうということでまずは会議中のAI活用ですこの文字起こしデータの一番の活用ポイントは実はここなんですこの右下のNotion AIこのAIはリアルタイムで記録されているこの文字起こしの内容を認識してくれてるんですよつまりこの会議をAIも一緒に横で聞いてくれているっていう感じなんですねここに例えばここまでの話を要約してといった形でお願いをすればすぐに要約を出してくれます今回はまだ話が少ししかないのでちゃんと出してくれてないですけどもこれは途中から入ってきたメンバーのキャッチアップには最適ですよね</p>
+<p><code>02:54</code> あとは例えば会議の後半でここまで話してきて抜け漏れとか未決定事項ってどんなものがあるという風にここに聞いてみれば会議の中でなんとなく流れていってしまってたこともしっかりと確認できるんですさらにこれを効果的に使えるのが商談なんですよ商談では最初に相手の情報や事業内容課題や現状をヒアリングしますよねそのヒアリングした内容って全部ここに入ってくるんですよそうすると例えば今話している内容の課題を持っている相手に当社のサービスってどう伝えれば刺さるかなとかどんな質問すれば相手の本質的な課題を聞けるかなといった形でAIに聞いてあげるとその質問案を出してくれるんですさらにトップ営業の方営業成績がいい方の商談をあらかじめ3件から4件ぐらいこのミーティングノートでとっておけばそのトップ営業がどうやって商談を進めているかをAIが理解してくれるんですね</p>
+<p><code>03:45</code> それをAIにインプットさせた状態でさっきの質問を投げるとトップ営業と同じレベルの質問とか提案を出してくれるんですつまり営業が1,2年目の方でも常にトップ営業の方が横でサポートしてくれている状態を作ることができるんですこれは本当に便利ですし商談以外にも転用することができますそこそこ話したので改めてここまでの話を要約してもらいましょうはいそうするとこんな形で要約を出してくれましたこのようにこのAIミーティングノートという機能はただの議事録作成ツールじゃないんです会議中のリアルタイムアシスタントなんですよ</p>
+<p><code>04:18</code> しかもまだこれだけじゃ終わりません会議が終わった後でもこの会議内容を100%有効活用できるんです。ということで次は会議後の自動要約について説明していきます。会議が終わったらこの停止ボタンを押すだけでこんな感じで自動的に要約を作成してくれます。はいこんな形で要約を出してくれました。ただこういった要約を出すところまでは他のAI議事録ツールでも同じようにできますよね。ノーションが違うのはこのAIの要約を自分たちに合わせてカスタマイズできるところです。先ほど説明を一旦飛ばしたこの形式というところですねここで要約のフォーマットを用意してあげることができます</p>
+<p><code>04:54</code> 例えば僕の場合はこれだけ用意しているんですが実際に中身を見てみるとこんな形でフォーマットを指定しています見出しの構成であったりとかあとは背景の色であったりとかあとはサマリのスタイルですねどういう形で書いてほしいかという方針を自由に書くことができるんですしかもこの手順を作るのもAIに任せちゃえばいいんですということでこの要約手順を作成するのを実際にやってみましょうまずはこちらのカスタム形式を追加ここをクリックしますそうするとテンプレートのようなものが出来上がるのでここに対してAIに指示をして中身をブラッシュアップしてもらいましょうまずこの状態だとNotion AIに指示がしづらいので</p>
+<p><code>05:30</code> 一旦サイドピークにしてしまいますはいこの状態でまずは指示を与えてあげましょうNotionの音声入力を使っていきますねはいこんな形でお願いしてみましたそうするとこのように内容を更新してくれるんですねなので実際にこの要約方法で更新してみましょうこちらを審査回り作成指示こちらをクリックして続けるですねはいこうすると再度要約を作成し直してくれますはいそうするとこのように要約を出してくれました先ほどと大きく変わっていますよねまず会議の概要があってネクストアクションがあって</p>
+<p><code>06:01</code> その下に参加者目的あとは詳細という形で伝えた通りにですね要約を作成してくれています1回このように出してみてあと気になるところがあればまたブラッシュアップするといった形で更新していくといいかなというふうに思いますこんな形で会議の種類によって出したい要約って変わってきますよね例えば毎週の進捗会議であれば先週からの比較をパッと出してくれたらわかりやすいですし商談であれば相手の課題や刺さった提案クロージングの結果あとは次の予定がまとまっていると便利ですなので会議の種類に応じて必要な分を作っておくとこの要約の価値が何倍にも上がりますしかもこの要約はこの要約を共有というボタンを押すことでメールやスラックで共有することができます</p>
+<p><code>06:43</code> コンテンツをコピーを押せば共有したい媒体に貼り付けるだけですぐに共有することも可能ですここまででも十分に有効活用できるんですがまだまだあります例えば会議が終わった後のネクストアクションって基本的に発生してきますよねやっぱりここに書いてあるだけだと忘れられちゃうんですけど普段管理しているタスク管理ツールに連携されるようにしておけばその抜け漏れをかなり減らせるんですあとは定例会議であれば例えば会議の中でじゃあ来週はこのあたりを確認していきましょうとか次はここから始めていきましょうっていった話をすると思うんですがその内容をもとに来週のアジェンダを自動で作成してもらうといったこともできちゃうんです</p>
+<p><code>07:20</code> ということで次は会議後の連携処理ですねこういうについて解説をしていきますまずはタスク登録についてですがこれもものすごく簡単ですこのNotion AIにお願いしちゃえばいいんですね例えばこんな感じですこんな感じですねちょっとこちらのタスク管理と言いつつそれを指定していなかったのでちょっとこんな感じでタスク管理のデータベースも追加で指定をしてあげますそうするとこんな形でタスクを登録してくれました期限は言っていなかったんですが説明の内容であったりとか</p>
+<p><code>07:52</code> あとは担当者ですねこれを自動的に入れてくれていますこれもめちゃめちゃ簡単ですよねあとはもう一つ来週のアジェンダ作成ですはいこんな感じでお願いしてみますただ今回の内容は定例会議じゃないので多分作れないかちょっと分かりませんぐらいのものしかできてこないと思いますがこのようにお願いをしてあげれば次回のアジェンダっていうのも話をしていればですねちゃんと作成をしてくれますはいでもなんとか作成してくれていますねちょっと見てみましょうかはいこちらですこんな感じですねネクストアクションでミーティングノートを使ってみるっていうのがあったのでその実践報告とかなんかそういったものをアジェンダとして用意してくれています</p>
+<p><code>08:27</code> いろいろ突っ込みどころはあるんですがまずはですねこんな感じで試してみるっていうのがすごく重要で最初からこだわる必要は全くないんですまずはお願いしてみてこういった出てきたものに対してもうちょっとこうしてほしいというふうに伝えていった方がいい方向にブラッシュアップしやすいですまずは試してみてそこから30点40点50点みたいな形で徐々に精度を上げていくのがおすすめですただこういった指示を毎回同じようにやるのは面倒ですよねなのでこういった繰り返し行う指示についてはAIスキルとして保存しておくのがおすすめですこれも簡単なのでAIにお願いしちゃいましょう</p>
+<p><code>09:00</code> はいこんな形でミーティングアジェンダというスキルを作成してくれましたあとはこのページをこの右上の3点コードからAIで使用こちらを選んでこのAIスキルとして使用という風に選んであげればOKですこれだけでこのページがNotion AIのスキルとして定義されましたあとはこのスキルを使いたい場合はアットを押すだけですここでアットを押すとこんな形でこのスキルっていう欄があってですねここに表示されるようになりますこちらをクリックしてあとはエンターを押すだけで同じことを実行してくれますこれはものすごく便利ですよね</p>
+<p><code>09:33</code> こんな感じでAIミーティングノートはまず文字起こしをすごく簡単に取れて会議中にはAIアシスタントとしてサポートをしてくれるさらに会議後もその内容をしっかり有効活用するところまで簡単に実行できるんですこれがNotionのAIミーティングノートが持っている非常に優れた魅力なんですただもう一つしっかりと押さえてほしいポイントがあります今実際にやっていったようにこのページを作ってそこにミーティングノートを作ってさらにその下に次回のアジェンダを作ったりとかスキルを作ったりみたいな形を繰り返していくとこのページの管理がすごい大変になってきちゃいますよね</p>
+<p><code>10:07</code> なのでこの議事録の管理は絶対にデータベースでやるのがおすすめですということで最後にこのデータベースの作り方とあとはテンプレートの活用について説明していきますということでスラッシュコマンドからまずはデータベースを作成していきましょうスラッシュDBでエンター押せば簡単にデータベースを作成することができます名前はサンプル議事録管理でいいですねプロパティも一旦はすごくシンプルで大丈夫だと思います日付を入力してあとは会議の種類ぐらいですかね選択プロパティを選んで名前は会議種類としてプロパティには例えば商談とかあとは定例ミーティングあとは経営会議とかそんなような形で種類を入力するプロパティぐらいはあってもいいかなというふうに思います</p>
+<p><code>10:46</code> そしてデータベースの箱ができたら次はテンプレートです右側のこの下向きのトグルから新規テンプレートを作成してこの中にあらかじめミーティングノートを仕込んでおきましょうこれだけで新規ページを作ればもうこのミーティングノートがある状態であとは文字起こしを始めるをクリックするだけといった状態を作ることができますブロックを作成する手間すら省けるんですさらにこのテンプレートには会議を進めやすくするように例えばアジェンダあとはこの議事録のミーティングノートですねそして先ほど作ったAIスキルのメモもあるといいかと思いますこれをテンプレートに入れておきたいんですけども</p>
+<p><code>11:20</code> これを管理するのに最適なブロックが最近追加されましたそれがタブブロックですスラッシュタブから作成することができますこんな形でタブを切り替えて使うことができるのでこの中にアジェンダそして議事録3つ目はAIスキルですねこんな形でタイトルを入力してあげてあとはアイコンを編集することもできますこんな形でアイコンを設定してあげたらはいこれだけでもかなり見やすいですよねそして議事録のところにはミーティングノートを入れてあげますそしてAIスキルのところには例えば会議が終了したら右下のNotion AIアイコンに以下をコピーして実行</p>
+<p><code>11:56</code> みたいな形で入れておいてここにですねさっきのスキルですねミーティングアジェンダこれを入れておいてあげますそうしたら先ほどのハットメンションから選択する形でもいいんですが誰でもわかりやすいようにですねこんな形で入れておくとあとはこれをコピーして貼り付ければいいんだなっていうのがわかりやすくなると思いますあとはアジェンダですねここに例えば商談であれば最初自己紹介があってヒアリングがあってクロージングがあるみたいなちょっとこれまあかなり内容一旦適当ですけれどもこんな形でアジェンダの型を用意しておくっていうのもいいかなというふうに思いますはいということでまあこれが商談用のテンプレートという形にしたいと思いますので</p>
+<p><code>12:30</code> 名前も商談にして会議種類も設定しておきましょうあとはですねこのミーティングの要約の種類ですねこれもテンプレートで設定をしておけばいちいち変える必要がないのでここも商談にしておきましょうはいこれでテンプレートの作成が完了しました他の会議の種類も作成したい場合はこれを一旦複製して例えば定例会議みたいな形でタイトルを変えてあげて会議の種類も定例ミーティングこういう風にしましょうアジェンダを変えてあげたりとかあとは議事録のこの形式ですね先ほど作成したこちらにしておきましょうかこんな形で設定しておくだけですこれであとは会議を開始する時に</p>
+<p><code>13:03</code> 一旦新規ページを作成してページを開くとここでテンプレートを選択できるようになっているので商談を選択すれば先ほど作成したこんな形ですねこのミーティングの形式も商談になっています定例会議をする場合は同じようにこちらの定例会議を選択してあげれば名前や会議種類そしてこの議事録の形式も変わっていますこのようにテンプレートを選ぶだけでアジェンダも要約形式もAIスキルも全部自動で切り替わるので毎回設定する手間がゼロになりますさらに会議の一つ一つがこのようにデータベースで整理されるので散らばらないし分かりやすく整理することができますここまでセットするとかなり議事録を活用していくレベルが上がりますよね</p>
+<p><code>13:40</code> ちなみにこのAIミーティングノートはNotionのビジネスプラン以上で使うことができますビジネスプランは1ユーザー月3800円当然ミーティングノートだけではなくてノーションAIもスキルも無制限に使えますしかも3大AIモデルの最新モデルが全て使いたい放題なんですこれだけ使えて3800円の元が取れないはずがないんです特にビジネスでノーションを活用していきたいという方はぜひビジネスプラン以上で使ってもらって今お伝えしたミーティングノートの破壊力を体感してみてください皆さんお疲れ様でした</p>
+<p><code>14:13</code> 今回はAIミーティングノートの活用術を7つ紹介してきましたAIミーティングノートを活用すれば簡単に文字起こしを開始できて会議中はAIがリアルタイムに会議をサポート会議が終わった後はチームにあった要約を自動生成してタスクや次の議事録も簡単に作ってくれちゃいますさらにデータベースで情報を構造化しておけば情報が散らからないしテンプレートで誰でも簡単に活用できる仕組みを作れちゃうんです議事録はただとって終わりではなくていかに活用するかが重要その活用方法を今回の動画に凝縮しているのでぜひこの動画を何度も見返してただの文字起こし情報を組織の情報資産に変えていきましょう一つ一つは難しくないのですぐに今日から始められますよ</p>
+<p><code>14:56</code> そしてもっとノーションを本格的に活用していきたい方自社の業務に合わせた環境をしっかりと作り込みたいという方がいればぜひご相談ください目的設定課題抽出から入って業務フローの整理ノーションやAI活用基盤の設計運用定着のための編集やオンボーディングまで仕組み作りをまるっとサポートさせていただきますうちの場合はどうすればいいですかという段階からでも全然構いませんので気になった方はぜひ概要欄のURLから無料相談にお申し込みくださいということで今回も最後まで動画をご覧いただきありがとうございました</p>
+<p><code>15:27</code> このチャンネルではノーションやAIとの向き合い方や設計思想そして活用アイデアをお伝えしながら皆さんの自己実現をサポートしていきますノーションやAIを活用してもっと人生を豊かにしていきたいそんな方はチャンネル登録していただくことをお勧めしていますこの動画を見て少しでも学びや気づきがあったという方はぜひコメント欄で感想やご質問をアウトプットしてみてください言葉にすることでさらなる学びにつながりますよもちろん高評価もお待ちしていますそれではまた次の動画でお会いしましょう管理の山田でしたチャンネル登録よろしくお願いします</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）— Notionの記法・構造設計の参考</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）— AIを使ったワークフロー設計の概念整理</li>
+<li><a href="./Notionで時間を集計する" class="internal alias" data-slug="Notionで時間を集計する">Notionで時間を集計する</a>（PermanentNote）— Notionデータベース活用の関連事例</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-857" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./𝕏-Google-Meet_オフライン会議の自動議事録機能が登場" class="internal">𝕏 Google Meet_オフライン会議の自動議事録機能が登場</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版"/><meta name="twitter:description" content="📺 動画情報 【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版 🎙️ Shin Coding Tutorial ・ 📅 2026-05-21 ・ ⏱️ 34分22秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 claude-codeを使った一人スタートアップの11ステップロードマップ。アイデア発掘から需要検証・開発・PMF達成・スケールまでを体系化した実践ガイド。 🗺️ 全体像 flowchart TD A[1."/><meta property="og:description" content="📺 動画情報 【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版 🎙️ Shin Coding Tutorial ・ 📅 2026-05-21 ・ ⏱️ 34分22秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 claude-codeを使った一人スタートアップの11ステップロードマップ。アイデア発掘から需要検証・開発・PMF達成・スケールまでを体系化した実践ガイド。 🗺️ 全体像 flowchart TD A[1."/><meta property="og:image:alt" content="📺 動画情報 【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版 🎙️ Shin Coding Tutorial ・ 📅 2026-05-21 ・ ⏱️ 34分22秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 claude-codeを使った一人スタートアップの11ステップロードマップ。アイデア発掘から需要検証・開発・PMF達成・スケールまでを体系化した実践ガイド。 🗺️ 全体像 flowchart TD A[1."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【アイデアをお金に】Claude-Codeで一人アプリ開発で成功するまでのロードマップ完全版"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【アイデアをお金に】Claude-Codeで一人アプリ開発で成功するまでのロードマップ完全版"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版 🎙️ Shin Coding Tutorial ・ 📅 2026-05-21 ・ ⏱️ 34分22秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 claude-codeを使った一人スタートアップの11ステップロードマップ。アイデア発掘から需要検証・開発・PMF達成・スケールまでを体系化した実践ガイド。 🗺️ 全体像 flowchart TD A[1."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【アイデアをお金に】Claude-Codeで一人アプリ開発で成功するまでのロードマップ完全版"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1543"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1543" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版</a></div></nav><h1 class="article-title">【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-21T15:00:00.000Z">2026年5月22日</time><span>75 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【アイデアをお金に】Claude Codeで一人アプリ開発で成功するまでのロードマップ完全版</strong>
+🎙️ Shin Coding Tutorial ・ 📅 2026-05-21 ・ ⏱️ 34分22秒
+🔗 <a href="https://www.youtube.com/watch?v=xzV7B-5KaG4" class="external">https://www.youtube.com/watch?v=xzV7B-5KaG4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【アイデアをお金に】Claude-Codeで一人アプリ開発で成功するまでのロードマップ完全版.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>を使った一人スタートアップの11ステップロードマップ。アイデア発掘から需要検証・開発・PMF達成・スケールまでを体系化した実践ガイド。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[1. アイデアの発掘] --> B[2. 要件定義＆LP作成]\n    B --> C[3. 広告で需要検証]\n    C -->|CPA 100-300円以内| D[4. CPA計算・需要判定]\n    C -->|CPA超過| P[ピボット検討]\n    D --> E[5. Claude Codeで開発]\n    E --> F[6. SNS運用並行]\n    F --> G[7. MVPローンチ]\n    G --> H[8. 分析（CVR確認）]\n    H -->|CVR 0%| P\n    H -->|CVR 1%以上| I[9. アップデート繰り返し]\n    I --> J[10. PMFシグナル確認]\n    J -->|未達成| P\n    J -->|達成| K[11. ユニットエコノミクス最適化]\n    K --> L[スケール or バイアウト]\n    P --> A&quot;">flowchart TD
+    A[1. アイデアの発掘] --> B[2. 要件定義＆LP作成]
+    B --> C[3. 広告で需要検証]
+    C -->|CPA 100-300円以内| D[4. CPA計算・需要判定]
+    C -->|CPA超過| P[ピボット検討]
+    D --> E[5. Claude Codeで開発]
+    E --> F[6. SNS運用並行]
+    F --> G[7. MVPローンチ]
+    G --> H[8. 分析（CVR確認）]
+    H -->|CVR 0%| P
+    H -->|CVR 1%以上| I[9. アップデート繰り返し]
+    I --> J[10. PMFシグナル確認]
+    J -->|未達成| P
+    J -->|達成| K[11. ユニットエコノミクス最適化]
+    K --> L[スケール or バイアウト]
+    P --> A
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. アイデア発掘 — 共感能力＋競合分析 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIでアプリは誰でも作れる時代になったため、差別化の源泉はアイデア力。SNSのバズ投稿から「なぜこれが刺さるか」を分析する癖をつける。競合がいる＝需要がある証拠であり、UI/UXで差別化できる。海外でバズったアプリを日本にローカライズするのも有効な手法。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 要件定義＆LP作成 — 30分で完結 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>アイデアが固まったらGPT/Claudeと壁打ちして要件定義。Claude Designに要件定義をコピペするだけでLPが完成。需要検証のためだけのLPなので「雑でもOK」。ウェイティングリストをFormspreeで収集できるよう設置しておくのがポイント。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 広告で需要検証 — CPA 100〜300円が合格ライン </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>X広告・メタ広告それぞれ1万円ずつ投下。1万円で2〜30万インプレッション獲得が目安。ウェイティングリスト登録数からCPA（顧客獲得コスト）を計算し、100〜300円以内なら需要あり。300円超ならピボット検討。SNSフォロワーがいればXでポスト投稿で無料検証も可能。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. MVPローンチ〜分析 — 課金されたかどうかが最初の指標 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>作り込みすぎずに最低限の機能でリリース（課金機能は必ずMVPに含める）。リリース後はCVR（コンバージョンレート）1%以上を最初の目標に。200ダウンロードで課金ゼロならピボット検討。理想はCVR 2〜5%。PostHogでファネル分析し離脱ポイントを特定する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. PMF達成シグナル — 3つの観点で判定 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>定量シグナル</strong>: 30日継続率15%以上、CVR 3%以上、広告停止後もユーザーが増え続ける。<strong>定性シグナル</strong>: 「このアプリがなくなったらとても残念」と答えるユーザーが40%以上（ショーン・エリステスト）。<strong>経済シグナル</strong>: LTV ≥ CPA×3が成立し赤字が出ない状態。PMF達成前にスケールしてもCPA無駄遣い。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>6. スケール〜バイアウト — PMF後に広める </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>PMF達成アプリは「乾いた良質な木材」状態。広告・インフルエンサー・紹介機能で費用対効果高く燃え広がる。月500万円超えたらチーム化を検討。連続起業家タイプならバイアウトして次のアイデアへ。01〜10のフェーズを繰り返すのがこのモデルの本質。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① KONNEKTのAIプロダクト企画への転用</strong>
+このロードマップの「需要検証→MVP→PMF」の順序はKONNEKTのAIツール企画にも使える。新機能を全員に展開する前にウェイティングリスト（社内アンケート）で需要測定し、小さくリリース→CVR確認という流れで社内AI導入の失敗を減らせる。</p>
+<p><strong>② Claude Codeでの実装を試みる前にこのロードマップを参照する</strong>
+「作ったけど誰も使わない」を防ぐために、実装前に必ずステップ1〜4（アイデア→要件定義→需要検証→CPA計算）を実行する。Claude Codeは開発速度を上げるツールであって、アイデアの良し悪しは代替できない。</p>
+</div>
+</blockquote>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいどうも、しんです。今回はですね、クロードコードスタートアップの教科書ということで、クロードコードを使ってね、皆さんアプリ開発だったりとかね、個人開発やってる方ね、いらっしゃると思うんですけど、そのアプリの売り上げを上げるために、再現性となるですね、ロードマップみたいなのを今回ちょっと紹介しようかなと思います。前回の動画で私サブスクボックスっていうのを作ってね、売り上げだと今40万円くらいあるんですけども、そこから得られた知見も含めて今回ちょっとロードマップにしました。ステップとしては11ステップあって今までのスタートアップの常識と新しくクロードコードっていうね</p>
+<p><code>00:32</code> 素晴らしいAIが出てきたのでそれと掛け合わせた流れっていうのを今回私が解説しようかなと思いますなのでこの動画最後まで見ればクロードコードを使ってアプリ作ったりとかSaaSを開発したりできるようになったんですけど結局作ってお金にならないと誰も使ってくれないだからそれをなくしたい作って終わりにしたくないっていうねそういう方に向けた動画になっておりますので気になる方は最後までご覧くださいこのチャンネルではですね AIコーディングの知識だったりクロードコードを使ったこういったビジネスのお話だったりとか面白い使い方を紹介するチャンネルですので</p>
+<p><code>01:05</code> 気になる方は今のうちにチャンネル登録よろしくお願いしますという感じで早速始めていきましょうはいということで早速1番目から解説していきますちょっと拡大していきますね1番目はアイデアの発掘です最近はクロードコードとかコーデックスがすごく賢くなってきているので誰でももうアプリとかは作れるようになってきてるんですよねだから大事になってくるのがこのアイデア力だったりひらめきですねこの質がいいかどうかっていうのが直接的に結果に関わってきてるなと思うんですよ今みんながこれあれば欲しいだろうな使うだろうなって思う共感能力というかそういうのが大事になってきてると思うんですよね</p>
+<p><code>01:39</code> じゃあ前回の私のサブスクボックスっていうサブスクを管理するアプリなんですけど一応アイコンを見せするんですけどこんな感じのねアプリなんですけど正直このサブスク管理のアプリってすでにね同じようなアプリが3つ4つすでに競合として存在していたんですよですけど今回Xでバズったのは改めてAIサービスとか色々最近増えてるじゃないですかサブスクのサービスっていうのがだからそれで困っている人が増えていたっていうところとそこで僕がXで拡散しやすいようなスマホのページを作って誰かが拡散したらバズるだろうなっていうその逆算手法というか</p>
+<p><code>02:12</code> ユーザーの気持ちに立ってタイムラインで流れてきたらすぐに理解しやすいかどうかっていうところとその拡散のしやすさっていうのを意識して私は作りました具体的にはどういうふうに拡散したのかというとこんな感じですね一目でどういうアプリなのかってわかるじゃないですか特に最近のSNSは1秒でもユーザーが理解しづらいデザインであればすぐに流されてしまうのでそこは逆算的に1秒で目に留まって理解しやすいようなデザインを作るっていうのは非常に大事かなと思います中には競合がすでにいるから作っても意味がないと思うかもしれないんですけど競合がいるということは需要があるということでその競合がカバーしきれていない機能だったりとか差別化っていうところができるので例えばUIの見た目の部分だったりとか使いやすさとかUI UXの部分ですね</p>
+<p><code>02:57</code> そこは差別化できるので全然活用があるかなと思いますねこのアイデアの見つけ方の再現性っていうのは僕がおすすめなのは書籍を読んだりとかSNSのタイムラインを眺めてバズっているポストを見たりとかどういうものが今みんなに求められているのかっていうのはしっかりと考えるというかなんでこれがバズっているのかっていうのを考える癖をつけるっていう風にすると普段から見落としていたものが見えるようになったりするのでそういうのはおすすめですね残念ながらこのアイデアの発掘っていうところはAIになかなか代替できなくて一応AIに聞くことはできるんですよね</p>
+<p><code>03:30</code> バズりやすそうなアイデア教えてくださいって聞くことはできるんですけど本当にそれがバズるかどうかって正直それを見ている人間の今までの経験だったりとかっていうのが判断すると思うのでなかなかAIには代替しづらいと思います一番簡単なのが海外でバズっているスマホアプリを日本にローカライズするっていう方法もなくはないかなと思いますねというのがまず一つ目のステップアイデアの発掘でした二つ目のステップなんですけど要件定義とLP作成ですね作るアプリアイデアが決まったらですねそのアイデアをチャットGPT最近賢いのでGPT5.5ですねこれと壁打ちしましょう</p>
+<p><code>04:03</code> 全然クロードコードで壁打ちしても問題ないですよクロード4.7オパスでもいいですAIと壁打ちをしますこのアプリを作りたいんですけど要件定義一緒にやりましょうというふうに聞くといろいろ質問してくれるのでそれに答える形で要件定義をまとめていきますそのアプリの要件定義が固まったら続いてLPの作成ですねLPというのはそのアプリを説明したランディングページ1枚のページのことですねそれを作ります最近私はクロードデザインというのを使ってランディングページを一気に作ってもらっています要件定義をそのままコピペするだけでページ作ってくれるんですよねこれなんでランディングページが必要かというと</p>
+<p><code>04:38</code> 次のステップにですね 広告を出すんですよね広告で需要検証っていうステップがあって今作ろうとしているアプリが本当に市場に 需要があるのかっていうのをまずはチェックするためです今までは僕ここの広告を使った 需要チェックしてこなかったんですけどこれあった方が作って全然需要がありませんでした っていう状態にはなりにくいので私はこのステップを挟むようにしていますこの広告については後で説明するのでちょっと今回せっかくなので 要件定義とランディングページの作成ちょっと軽くやってみようかなと思いますじゃあ例えばなんですけどアイデアの発掘ですよねXとかでも結構アイデア見つけられて</p>
+<p><code>05:13</code> 例えばこれですね検索機能でおすすめに表示される内容だったりとかあとはトレンドですねトレンドでどういうものが流行っているのかっていうのを見るのも一つアイデア発見の素材としていいかなと思いますね例えば最近だと新卒就活の有料ビジネス批判で無料支援アカウントが登場みたいな感じで就活で困っている方がいるなとかですねそういう時代の流れみたいなのはこういうものでつかめたりします。ということで早速サクサクチャットGPTに私が思っているアイデアを伝えていきたいと思いますスタートアップほど大きいアイデアではないんですけど個人開発レベルでメモアプリですね</p>
+<p><code>05:48</code> パソコンでよくあるフォルダのUIとかファイルのUIとかあると思うんですけどそれを表示してそこにメモしたいものをメモしていくみたいなアプリがあればSNSでバズりやすそうだなというか目に留まりやすそうだなというところでちょっと壁打ちしていきたいと思いますこんな感じで思っていることをただ壁打ちしていきますここで重要なのが文字だけじゃなくて画像で教えてほしいわけですよねなので画像でどんなページになりそうか教えてくださいこんな感じで最近はGPTイメージの2.0がありますのでそれでどんなイメージなのかっていうのを書いてもらうといいかなと思いますね</p>
+<p><code>06:22</code> ちょっと画像を出してくれたのでちょっと見ていきますねパソコンのフォルダみたいな感じでスマホでも管理できるって感じですねフォルダタップしたらさらに中に入ってメモを作りたいんだったらファイルが出てきてそこに書けるみたいな感じで直感的にメモの管理ができるっていうのは新しいんじゃないかなと思いますねこういうメモアプリってめちゃくちゃ競合多いじゃないですか100個200個300個くらい多分アプリと思うんですけどその中でもちょっと違うアイディアセンスがあれば人の目に留まっていっぱいダウンロードされるっていう可能性があるので競合がいるから作らないっていうのはもったいないなと思いますね</p>
+<p><code>06:56</code> この時点でXのフォロワーがある程度いる方とか運用している方であればこの画像をそのままXで投稿して反応を見るっていうのでもいいんですけど今回はそのフォロワーがいない状態でどうやって需要チェックするのかっていう再現性を作りたいので広告を作っていかなきゃいけないんですよねだからそのためにこのランディングページを作ってみたいと思いますだから要件定義をちょっと考えてもらいますね後でクロードデザインでランディングページ作りたいのでこのアプリの要件定義もしくはプロンプトを教えてくださいその間にクロードですね立ち上げてくださいクロードデザインはデザイン性に優れているので今回使うだけです</p>
+<p><code>07:32</code> 別にコーデックス使ってもいいですよ普通のクロードコードでもいいですデザイン性に優れているので今回使っていきますということでアプリ名はフォルダメモにしましょうかそしてクリエイトですねここに貼り付けるだけでOKですこういうの出してくれたのでこれをコピーしてここにそのまま貼り付けましょうさっきの画像を入れたい場合ねさっき手に入れたこの画像を入れたい場合はそれぞれスクショ取って貼り付けてランディングページに組み込むでも全然いいと思いますなので本当は透過した方がいいですよ透過した方がいいんですけど</p>
+<p><code>08:05</code> こんな感じでスクショ取ってこうやって貼り付けてみたいな1枚1枚ね今回ちょっと簡易的にやるので透過するのめんどくさいのでそのまま貼り付けちゃうんですけどじゃあ貼り付けられたのでこれでセンドしてLP作ってもらいましょう今から作るランディングページは需要チェックのためだけに使うので結構雑でも大丈夫ですポン出しでも使っていいと思いますはいということで3分くらいで作ってくれたのでちょっと新しいタブで見て いきますnew タブですねnew タブで見れますこんな感じでスマホの中にあなただけのデスクトップをということで先ほど貼り付けたスクリーンショットが使われていますはいノーションみたいなミニマルな感じにしたいのであれば まあそのフォントとか雰囲気を使うといいと思います</p>
+<p><code>08:46</code> まあ背景とかも自分で選べたらいいと思いますけどこのランディングページを広告で使って いきたいと思うのであのウェイティングリストですねなのでウェイティングリスト配置してくださいここにメールアドレス打ち込めるところがあるのでここにウェイトリストがたまるようにすればいいだけですねウェイトリストをためる方法はフォームスプリーというのを私使っておりまして今新しくアプリ作っているのでもウェイティングリストこれで集めているのでこれを導入してみてくださいクロードデザインに言うだけで導入してくれますどんな感じで集まるのかというとアプリ名は伏せるんですけども</p>
+<p><code>09:18</code> こんな感じでウェイトリストがたまっていきます62件ですね1万円広告投下して62件なのでかなり需要はあるかなという形になっていますこの作ったランディングページどうやって公開するのかというと私はNetrify Dropっていうのを使いました詳しいやり方はですね今回の動画で説明すると長すぎるのでクロードコードアカデミーとかで私は説明しようと思っています現時点では作りきれてないんですけどiOS開発とか他にもクロードコードスタートアップみたいな項目も作るかもしれないのでそこでやり方を詳細に解説しようと思っていますとりあえず流れとしてはこんな感じです</p>
+<p><code>09:53</code> というのが2つ目のステップでした要件定義とLPの作成ここまで30分で終わります3番目広告ですね広告は現時点ではX広告とメタ広告を私は使っていますそれぞれ1万円ずつ事業投資として使うといいかなと思います広告の出し方はねそれぞれX広告メタ広告で調べてAIとかと壁打ちしながら設定してみてくださいここまで説明すると大変なので今回はしないんですけどもそれで広告を配信するとX広告で1万円分くらい使うとですね、私の場合は2、30万インプレッションくらいは獲得できます。で、その30万インプレッションからランディングページに誘導して、</p>
+<p><code>10:31</code> で、そこから欲しい人だけウェイトリストに登録されていくって形になりますね。で、そのウェイトリストの数に応じて、じゃあこのアプリに需要があるのかどうかっていうのをチェックする形になります。で、次のステップはその計算方法ですね。CPAっていう考え方がありまして、CPAというのはコストパーアクイジッションの略称で1人のお客さんを獲得するためにかかるコストのことを指しますなので先ほどのX広告とかメタ広告に例えば1万円を広告費用で使ったとしますその1万円を使って仮にウェイトリストに100人登録してくれたと仮定しますなのでちょっとここに書くんですけど</p>
+<p><code>11:09</code> 1万円を投資して100人の顧客が獲得できた場合これCPAコストいくらになるかというとこれ100円になるわけですねそのアプリに需要があるかの指標としてこの指標をCPAの値が100円から300円以内だった場合ですね。これは需要があると言ってもいいんじゃないかなという、私は考えを持っています。ここの100円から300円という数字は、私が体感的に決めたものなので、これが400円でも500円でも、需要があると判断してもいいかもしれませんが、確実に需要があると判断するためには、100から300円以内、この間に入れば、確実に需要があると判断してもいいんじゃないかなと思います。</p>
+<p><code>11:47</code> でちょっと試しにですね先ほどのメモアプリですねXでポストしてみましたこれですねちょっと簡単にXでポストしたんですけども1.5万インプレッションでいいねが94でリポストが2回でしたこれ広告費用で換算するとおそらく2,000,000円くらいの広告効果はあると思うんですよねでこれウェイトリスト確認したところ4人ですねちょっとEメールは防ぐんですけども私を除いてねこれテストなので3人ですね3人のウェイトリストが集まりました広告費が仮にこれが3000円だったとすると3000円の効果があったとすると</p>
+<p><code>12:22</code> これ3人なのでCPAが1000円ですねちょっとAIに聞いてみたところだいたい3000円がミニマムなんじゃないかなというところだったのでこれはほぼ正しいんじゃないかなと思いますだからCPAコスト1000円なので今回考えたアイディアですねフォルダメモっていうこのアプリケーションはそこまで需要があるわけではないんじゃないかなと思いますがただウェイトリストが3人集まっていますので需要がないわけではないのでリリースしたらおそらくですけど僕のアカウントで50ダウンロードほどされてそこでUI UX気に入ってくれた方は</p>
+<p><code>12:56</code> Coreで使っていただけるんじゃないかなと思いますそこで課金もしていただけると思うので01は達成するレベルなんじゃないかなと思いますただ大きくは稼げないって形ですねこれを出したとしてもおそらく月1.3万円から5万円くらいの利益にはなるかなと思います最大でこれは僕の経験則なんですけどそういった判断がどんどんアプリ開発続けていけばできるようになるんじゃないかなと思いますこういった感じで逆算的に考えていくとねこのCPAコストが100円から300円以内これがNOというのであれば届いていないというのであればPivotというのを検討していきますPivotというのは方向転換のことです</p>
+<p><code>13:31</code> このアプリはちょっと需要がなさそうなので違うアプリアイデアを考えてまた広告に出していきましょうという話ですねただ広告ね毎回1万円使うとお金かかっちゃいますよねなのでなるべくお金かけたくない人はやっぱり自分のSNSアカウント育てたりとかバズを見やすいTikTokとかやってみるとかねTikTokだったら投稿無料なのでインスタとかもそうですけどそういうのでやるといいんじゃないかなと思いますが再現性なかなかないので広告が確実なんじゃないかなと思います再現性担保しやすいかなと思いますでもしCPAがこの範囲であればESであればようやくですねクロードコードで開発スタートということですね今回クロードコードで指定してるんですけど別にコーデックス使ったりとかカル使っている方はそちらでも全然構いません。アプリを作る上でツールっていうのは手段でしかないので、基本的にどっちがいいのか論争は僕はどうでもいいかなと思っています。</p>
+<p><code>14:20</code> 僕は一番使っているクロードコードを利用するという形ですね。一応ねクロードコードアカデミーもやっておりますので、そこでハーネス設計とかもやってますので、アプリのMVPミニマムバイアブルプロダクトレベルであれば数時間で作れますプラスセキュリティの話とかもしていく予定なので気になる方は概要欄覗いてみてください別にAIに聞けばいいよって方は別にクロードコードだけで開発頑張ってください全然できると思いますそして開発を続けながら6番目ですねSNS運用しましょうこれ作り終わったらSNS運用じゃなくてこれ作りながらやりましょう私は次回のアプリは新しいXアカウントを作って</p>
+<p><code>14:56</code> ゼロからフォロワーで運用していってるんですけどそのアカウントでX広告も出してるんですけど今だと50フォロワーくらいいますもうすでに広告も回しているので開発って認証とかデータベースとか課金がなかったら例えば1日2日とかで完成するとは思うんですけど大規模なアプリ次回作ってるのはSNSなんですけどSNSとかになってくると最低でも1、2ヶ月はかかると思ってるんですよねだからその間にSNS運用していくって形になりますでそのアプリに関連するユーザーのポストをいいね回りしたりとかコメントを残したりとかある程度の関係性を構築していくっていう段階になりますね</p>
+<p><code>15:31</code> フォローしてもいいと思うんですけど牽引性のためにフォローしないっていう方法もあるのでそれはどちらでもいいと思いますそのいいね回りの他にもこのアプリに関する開発の発信ビルドインパブリックだったりとかそのアプリに関連する内容を発信していきましょうそうするとファンというのがどんどん集まってきますのでそのファンを集めておけばこのアプリをローンチするときにリツイートリポストしてくれたりとかいいねを押してくれたりとかそういう拡散しやすい環境が生まれるのでこのSNS運用というのはある程度大事かなと思います広告費用の削減とかになるのでこれをお勧めしておきます</p>
+<p><code>16:05</code> そしてある程度開発が終わったらですね続いて7番目のステップですねMVPローンチということで最小限の機能を持ったアプリをローンチしましょうということですね需要チェックしたとはいえねこのアプリが本当に市場に刺さるかどうかっていうのはわからないので完璧に作り込んでリリースするよりもアプリとして価値はちゃんと発揮できる状態になればもうローンチしちゃいましょうっていうのが僕の考え方ですねただ万が一バズった時を考えて僕は課金機能は実装した上でリリースしています課金機能をつけとけばバズった時にお金になるので課金もMVPに含めていいかなと思いますでこれは僕の持論なんですけど完璧を目指すっていうのはいわばちょっとした現実逃避なんですよね</p>
+<p><code>16:45</code> まあリリースせずに作り込むって結構簡単なんですよね 心理的にも負荷がかからないしリリースしても何の反応もなかったっていうそういうリスクも抱えなくて済むじゃないですか 開発に向き合うとただそれだといつまでたっても出せないしどんどんどんどん出しづらくなるんですよねハードルが上がってプレッシャーになっていってだから早く現実を見るためにも早くリリースしましょうってことなんですけどあまりにも早すぎると雑なアプリになっちゃうのでそこのバランスっていうのは難しいかもしれませんねデザインとかUI UXはちゃんとしなきゃいけないですしMVPのレベルっていうのは人によって変わってくるので</p>
+<p><code>17:19</code> そこは試行錯誤しながら皆さんの基準を決めていただければなと思いますようやくローンチができたら続いてですね分析をしていきましょう今回一人スタートアップの教科書なんですけどもう全部自分でしなきゃいけないですよ最初の企画から広告、開発、SNS運用、そして分析最終的にはアップデートとスケール、マーケティングしなきゃいけないので全部やらなきゃいけないですただAIがあるので非常にやりやすいっていうのが今のクロードコードの時代ですよねっていう話ですね分析って最初何すればいいかっていうとこれめちゃくちゃ簡単で大丈夫です最初は</p>
+<p><code>17:52</code> リリースしてからまず考えなきゃいけないのは課金されたかどうかこれだけでいいですこの指標だけで僕はいいと思っていますこれでもし例えば100ダウンロードされて1つもダウンロードされなかったってなったらそのアプリはちょっと微妙かもしれません100ダウンロードだとわからないので200ダウンロードされてそれがノーであればアプリあんまり需要ないよっていうかそもそもアプリ価値を発揮できていませんよっていう判断で大丈夫ですいわゆるCVRっていう考え方ですねコンバージョンレートっていって100人利用して1人課金してくれたらコンバージョンレートはこれ×100して1%なんですよねCVR1%</p>
+<p><code>18:27</code> まあその価値としては提供できていますよって話ですね例えば1000円の買い切りだったら1000円の売上が立つという状態ですね1%っていう数字はアプリのジャンルにもよるんですけどまあ全然悪くない数字だと思いますだからこれが1000人ダウンロードしてくれたら10人課金してくれることになるので1000×10で1万円の売上になるわけですねただこれが100人ダウンロードしても0円でした課金が200人ダウンロードしても0円でしたってなったらCVR0%なのでまあピボットを検討した方がいいんじゃないかなと思いますまあ1週間くらい様子見てもいいかなと思いますね</p>
+<p><code>19:00</code> 1週間くらいアップデートし続けてとりあえず300ダウンロードを獲得するまで頑張ってみるとかねデザインを修正したりとかしてねでこの300人のうちに例えば1人でも課金してくれたらまあ一人よがりのアプリではないなっていう判断にはなりますよね理想としてはCVR2%から5%の間とかですねこれだとかなり優秀なので自信を持ってアップデートを続けてもいいんじゃないかなっていうそういう定量的な指標になります今まではここら辺間隔で皆さんやってたんじゃないかなと思うんですけど明確な数字っていうのも出てきますのでAIとかと分析させればすぐ出てくるので</p>
+<p><code>19:34</code> 再現性はある程度あるかなと思いますでこの課金されたかにイエスの場合はですね9番目に移行しましょうアップデートですねでこのアップデートって何すればいいかっていうと現時点では mvp の段階なのでそれを完璧に仕上げるための機能追加だったりとかui ux の改善ですねこちらをひたすら繰り返していきます繰り返していく中でアプリが利用されていると思うのでそれをですね こうやって矢印戻るんですけども分析をしていきますじゃあ何を分析するのかっていうと 今回は課金だけではなくてダウンロード数とアクティブユーザー数ですね</p>
+<p><code>20:08</code> アクティブユーザーのうち何人が課金したのかっていう ファネル分析って言ったりするんですけどいわばどこにアプリに穴が空いているのかっていうのを探す作業になっていきますその穴を見つけるためにはスマホアプリであればポストホグとかそういうサービスがあるので例えばオンボーディングが終わったけど何も登録せずに離脱したとか3件までは登録してもらったんだけど4件までの離脱率が多いとかそういう細かいデータが取れるようになるんですよねそれもMVPの時点で分析ツール入れておいた方がアップデートには非常に役に立つかなと思いますそういったポストホグっていうのもMCPサーバーだったり</p>
+<p><code>20:42</code> 充実はしてないんですけどありますAIチャット機能とかもあるので継続率だったりリテンションって言うんですけどそういったのも調べることができるのでぜひ導入してみてくださいこんな感じの矢印になるかなと思いますねアップデートと分析を繰り返してくださいっていうのが9つ目のステップですそしてですねアップデートと分析をねぐるぐるぐるぐるね繰り返していったと仮定しますね2,3週間ぐらいぐるぐる改善していって次のステップですね繰り返していく中でPMF達成シグナルはあるかどうかこれをちょっと質問してみましょう</p>
+<p><code>21:15</code> 自分に対してこのアプリに対してこのPMFっていうワードなんですけどプロダクトマーケットフィットの略称でその作ったアプリケーションプロダクトが市場に受け入れられたかどうかってことですねマーケットにフィットしたかどうかっていう達成シグナルっていうのを見ていきます例えばどんなシグナルがあるのかっていうとこれちょっといっぱい書いてるんですけど定量シグナル、定性シグナル、経済シグナルっていうのが3つあるみたいです私も調べましたちょっとざっと見ていくんですけど例えば定量シグナルっていうと具体的な数字でPMFを判断するって形ですね例えば継続率アプリの継続率が30日間ですね</p>
+<p><code>21:53</code> 継続率が15%以上あるというシグナル毎日使わずとも1日目使って30日後にもアプリに訪れたっていうユーザーねそれが15%以上いればPMF達成のシグナルの一つですね他にも加減率ですねコンバージョンレートが3%以上ある場合ですねとかオーガニック成長っていって広告をやめてもユーザーが増え続けるみたいなそういうのが定量シグナルになりますPMFに関してはこの一つの指標さえ見ればいいっていうのはなかなかないのでいろんな観点からちょっと見ていく必要があるかなと思います定性シグナルであれば</p>
+<p><code>22:28</code> シンエリステストっていうのがあるみたいでアプリがなくなったらとても残念と回答する人が40%以上いるとつまりそのアプリがその人にとってのワークフローに組み込まれていると普段のね例えば私の中で言うと例えばYouTubeだったりとかクロードコードだったりとか、こういうエピックペンというサービスがあるんですけど、この鉛筆を書くサービスだったりとか、これなくなったらちょっと困るわけですね、私は。特にクロードコードとかね。大体のコーデックスとかはあるんですけど、僕はとても残念というふうに回答すると思うんですよ。だからクロードコードとかYouTubeとかそういったサービスはもうすでにPMFが達成しているというふうな、そういう判断になりますね。</p>
+<p><code>23:05</code> あとは紹介口コミが自然で発生する。いいプロダクトであればみんなに紹介したくなるわけじゃないですか。例えば課金実装するときはレベニューキャットが便利ですよとかユーザーコードを分析したいときはポストフォグがいいですよみたいな感じで別に僕はお金もらってないんですけどもいいサービスだから自ら発信しちゃうわけですよねこれがPMF達成シグナルの一つですよってことですね最後経済シグナルなんですけどLTV代なりCPA×3っていう風に書いてあるんですけどLTVっていうのはライフタイムバリューの略称で一人のユーザーさんがそのアプリに対して</p>
+<p><code>23:39</code> 生涯どのくらいお金を落としてくれるのかっていうそういう値になります例えばその1人のユーザーがそのアプリに対して1万円落としてくれるというのであればCPA顧客獲得コストですねがどのくらいまでかけていいのかっていう話なんですけど例えば3000円かけても3000円×3で9000円ですよねだからLTVの方が大きいので1人の顧客を獲得するために3000円まではかけていいですよってことになりますね課金してもらうユーザーを獲得するコストのことですねこの場合だと利益をたくさん出したい場合はLTVを増加させるかそれともCPAを下げるかオーガニック流入に専念するのかとか</p>
+<p><code>24:16</code> 広告費がかからないような広告クリエイティブを作成するとかそういう施策が考えられるかなと思いますスタートアップの一番難しいところってこのPMFを達成するまでの道のりなんですよねプロダクトを作ってリリースするってこれ結構誰でもできるようになったんですけどこのPMF市場に受け入れられる状態を構築するっていうのに一番時間がかかるのでじゃあこれを全部AIで自動化しようってなってもかなり難しいと思うんですよね常にアプリをアップデートしてユーザーの行動を分析したりフィードバックをもらってちょっとUI UXの微細なところを修正して機能を追加するのかそれとも削除するのかとかそういう細かいところをやっていかなきゃいけないんですよね</p>
+<p><code>24:52</code> そういった泥臭い作業をしなきゃいけないのでAIによってそれも効率化できたんですけど全ては大体は難しいかなと思っていますということでこういったPMFのシグナルが時間が経っても全然現れないという場合はピボット検討していきましょうって話ですねこの時のピボット検討って難しくてもうすでに時間と労力をかけているわけですよねこのアプリに対して例えば1ヶ月2ヶ月アップデート繰り返してこのステップに到達するのでだから今までのやってきたことですねサンクコスト効果が働くのでもったいないと思ってなかなかピボットできない</p>
+<p><code>25:24</code> 撤退できないっていうことになりますのでこの撤退もスムーズにできるかどうかってのは大事かなと思いますただ今回は一人スタートアップなで、誰かを巻き込んで作っているわけではないので、当たらなかったらすぐにやめる、撤退するっていうのはスムーズにできるかなと思います。こういった点が個人開発とかでは有利な点かなと思いますね。あと時間とお金が無駄って言ったんですけども、全然無駄にはなってなくて、経験とかAIを使うスキルとかは身についていると思うので、市場の反応の分析のやり方とか、だから目に見えない資産っていうのはたまっていってるので、全然落ち込まなくていいかなと思いますね。僕も全然伸びなかったアプリめちゃくちゃあるんで</p>
+<p><code>25:59</code> それが普通だと思っていただいて全然いいかなと思います8割くらいはピボット検討するって最初から思ってた方がいいと思いますもし万が一ね何かアプリが当たりましたとイエスですとPMFも達成しましたってなったら続いて10番目ですねまたサクサク終わらせていくんですけどユニットエコノミクスの最適化っていう風にちょっとカッコつけて言ってるんですけどこれは赤字が出ないかどうかっていうことですね先ほどLTV代なりCPAって書いてたんですけどCACですねすいません要はお金を払ってくるユーザーを獲得するコストですねCAC</p>
+<p><code>26:31</code> とりあえずこの数式がですね成り立っているのであれば赤字は出ないのでとりあえずここだけ確認してくださいってことです気をつけていただきたいのがこのLTVの計算方法なんですけど例えばAIのアプリケーションAIの機能を作ったアプリケーションであれば私の場合で言うとサムネAIって言ってAIの機能を作ってサムネイルを生成するアプリなんですけどそれってAIコストがかかるんですよねその平均どのくらいAIが利用されているのかっていうそのコストをちゃんとLTVに含ませてくださいつまりあらりで考えてくださいってことですね売上は例えば1人のユーザーで3000円は経つんですけど</p>
+<p><code>27:05</code> AIの利用量によって例えば1人のユーザー1500円使いますってなったら実際のあらりは1500円じゃないですか売上は3000円だけど実際のあらりは1500円みたいなだからLTVはこのあらりの方で考えてくださいって話ですねじゃないとアプリを拡散すればするほど赤字になるってことになっちゃいますので利用料とかを含めて考えてください例えばインフラの料金とかそういうのも一応含めてくださいってことですねデータベースの料金とかっていうお話ですじゃあ赤字も出ませんというふうな判断になったら最後スケールになりますこの作っているアプリはPMFも達成してるし赤字も出ないということで</p>
+<p><code>27:41</code> みんなが欲しいと思っているアプリになっているんですよ広告で押し付けがまく宣伝する営業するっていう感覚じゃなくてその作ったアプリっていうのはみんなのためになる助けになるようなアプリに成長してるわけですよねスケール段階になったらだから無理やり広めようっていう感覚じゃなくてこのアプリを広めた方がみんなのためになるっていうそういう段階ですねだからスケールしていいっていうことなんですよ言い換えるとマーケティング集客のことですよね広告をさらに投下したりとかSNSの発信強化したりとかインフルエンサーマーケティングしたりとか</p>
+<p><code>28:13</code> 短いショート動画でたくさん配信するとかとにかく広めることに専念しますで pmf 達成した状態で広めると費用対効果が高いんですよね なぜかっていうと顧客を獲得したらユーザーが日すでに満足するアプリなので勝手に広めてくれるんですよね まあ例えば紹介機能とかアフィリエイト機能とかそういうものを導入すればより拡散されやすいのでかなり費用対効果がいいってことになりますね まあ別の例え話で言うと燃えやすいんですよね焚き火をする時とか乾いた良質な木材で火を投下したらよく燃えるじゃないですかだから少ない燃料でかなり燃え広がって費用対効果が高いんですけど</p>
+<p><code>28:50</code> 例えば湿った木材だったりとか燃えにくい素材で火を投下したとしても一瞬は燃え広がるけどすぐに沈下するじゃないですかだから費用対効果が低いんですよねだからPMFを達成したアプリっていうのはそういう上質で乾いた燃えやすい木材の状態になってからマーケティングに力入れた方がいいですよっていうそういう話ですこのスケールなんですけどもニッチな個人開発レベルであれば一人で運営できるんですけど例えば月に500万円以上超えましたとか1000万円超えていきますっていうそういうレベルになったら外注とかチーム化っていう考え方が出てきますね</p>
+<p><code>29:23</code> 会社にしてチームでやっていくとか最近だとカーソルエディターとかのチームってかなり少人数なんですけど一人でやってないですよねあれはもう個人開発レベルではないくらい広がっているのでそこではやっぱチームでやる必要がありますよねただずっと個人開発でいろんなアプリ作っていきたいとかチームでやるの嫌だっていう場合はこれバイアウトが選択肢としてはあるかなと思いますね要はアプリを手放すってことですね私はやったことないんですけど事業売却のことでもう宣伝とかあとは運営していくだけで勝手に伸びていくっていう状態だったらもう面白くないと01と10をするのが楽しいんだっていう</p>
+<p><code>29:57</code> 連続起業家みたいな人だったら僕もそうなんですけどそういう人だったらもうバイアウトしちゃって次のアプリケーションに進むっていうそういう方向がいいんじゃないかなと思います僕はそっちタイプですねシリアル個人開発者って言ったりするらしいんですけど僕も今後アプリ開発続けていくので月の売上が30万円くらいのアプリとかそういうものがたくさん出てきたらそういうバイアウトしてみる1回バイアウトしてみるっていうのも経験の一つとしてやってみようかなと思っていますどのくらいの値段でバイアウトされるのかっていうのはアプリの種類とかサブスクでやってるのか買い切りでやってるのかカテゴリーによって変わってくるので</p>
+<p><code>30:28</code> 一概にはちょっと言えないですね私もやったことがないのででバイアウトした方ですねスケールの方ではなくてこれバイアウトした方であれば最初に戻るって形ですね最初にアイデアの発掘から進んでもう1回最初から自分でやっていくっていうねこれが僕は好きですねやっぱり単純に一番ワクワクして面白いんですよねまだ市場に存在しないというか需要があるかどうかわからないっていうところから自分で需要を確かめていってそれを形にしていくっていうこの流れこれが一番醍醐味だと思うんですよね逆にもうすでに成長しきっているそのサービスとかを頑張って営業して伸ばすとか</p>
+<p><code>31:03</code> アプリを改善するみたいなことはあんまり好きじゃないんですよねそれ自分じゃなくても他の人ができるじゃんっていう話になるので自分にしかできないことっていうのはやっていきたいなと思っています。この考えは僕は今20代で28くらいになるんですけど、若いからこの考えになってるだけで、30過ぎたり40過ぎたりしたら、もう一人で頑張るっていうのは難しくなっていくかもしれませんけど、今現状ではこういうのが好きです。はい、という感じで今回はクロードコードを使った一人スタートアップの教科書ということでした。お疲れ様でした。はい、ということで今回の動画はクロードコードを使った一人スタートアップの教科書という内容でした。いかがだったでしょうか</p>
+<p><code>31:38</code> 今回はスタートアップっていう表現をしたんですけどお小遣いを月に例えば5万円とか20万円とか30万円レベルでやればスタートアップっていう規模じゃなくても日中を攻めた個人開発スモールスタートアップって私は言ってるんですけどそこを最初目指していくのがいいかなと思います簡単なユーティリティアプリだったりとか今回お伝えしたフローを一通りちょっと皆さんでなぞっていただいて実際にやっていただいた方が理解が進むと思うのでぜひ月1万円からでもいいのでチャレンジしてみましょうまだアプリ買えずでマネタイズに成功していない方は月1万円であれば1日に300円ですよね</p>
+<p><code>32:14</code> 300円の買い切りが発生すれば1万円くらいには到達するのでまずはその最初のステップとして頑張ってみてください私前回サブスクボックス紹介したんですけど初月だと50万円くらいの売上にはなる予定なので皆さんもそれくらいを目標に頑張っていただけたらなと思います私も引き続きアプリのアップデートと新しいアプリも現在進行中で作っているのでまた月30万円50万円くらいを目指して頑張っていますので皆さんも頑張っていきましょうクロードコードを使った開発だったりとかセキュリティちょっと気になるなとか</p>
+<p><code>32:46</code> もっと詳しく知りたいという方はですね概要欄にクロードコードアカデミーっていう私の講座プラットフォームこれもクロードコードで作ったプラットフォームがあるんですけどそちらで学べますので気になる方は一度検討してみてください最近クロードコードアカデミーとは別で法人様向けにAI研修とAI顧問ですね提携させていただいた会社さんがいるので社内でAI研修を実施したいとか会社のDXをAIで進めていきたいとかねそういうお悩みのある会社さんはですね概要欄の方を覗いていただくとリンクがありますのでそちらからお問い合わせいただけたらなと思います</p>
+<p><code>33:18</code> 私自身が対応するわけではないんですけどそれ専門の会社さんがいらっしゃいますので気になる方はチェックしてみてくださいもしこの動画が良ければチャンネル登録高評価よろしくお願いしますでも最近はAIの使い方とかクロードコードのベストプラクティスとか皆さんね散々聞いてきたと思うしそれを学んだところで結果にはもう結びつかないと思ってるんですよもうどんぐりの性比べじゃないですかクロードコードもコーデックスもほぼ前からずっと言ってるんですけどだから結局それをどう使うのかどう結果につなげていくのかっていうことだけが知りたいわけじゃないですか結局</p>
+<p><code>33:51</code> AIの使い方じゃなくてだから視聴者さんのニーズとかも変わってくると思うので私の今後のYouTubeどうなるか分かりませんがとりあえずSNSで出回ってる内容とかAIが出力してくれそうな内容とかはあんまり取り上げたくないのでそれって面白くないじゃないですか僕の撮影してる側も面白くないし見てる側もねあんまり面白くないと思うのでそこら辺なんか面白いのがあればまたYouTubeで撮ろうかなと思いますという感じでまた別の動画でお会いしましょうバイバイ</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — Claude Codeの概念・活用方法</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote） — AIエージェントの概念・動向</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote） — 自動化の概念</li>
+<li><a href="./business" class="internal" data-slug="business">business</a>（StructureNote） — ビジネス・スタートアップ</li>
+<li><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote） — 生産性・作業効率</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-572" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

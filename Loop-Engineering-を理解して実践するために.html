@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Loop Engineering を理解して実践するために</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Loop Engineering を理解して実践するために"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Loop Engineering を理解して実践するために"/><meta name="twitter:description" content="📺 動画情報 Loop Engineering を理解して実践するために 🎙️ 数理の弾丸 ・ 📅 2026-06-20 ・ ⏱️ 38分19秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIエージェントに「ループ」を設計することで、人間が逐一プロンプトを打たなくても自律的に作業が進む仕組み（Loop Engineering）の概念・実践手法を解説した動画。 🗺️ 全体像 flowchart TD A[人間がゴールを定義] --> B[ゴールコマンド発行] B --> C[エージェントが作業実行] C --> D[フック起動＋判定モデルで完..."/><meta property="og:description" content="📺 動画情報 Loop Engineering を理解して実践するために 🎙️ 数理の弾丸 ・ 📅 2026-06-20 ・ ⏱️ 38分19秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIエージェントに「ループ」を設計することで、人間が逐一プロンプトを打たなくても自律的に作業が進む仕組み（Loop Engineering）の概念・実践手法を解説した動画。 🗺️ 全体像 flowchart TD A[人間がゴールを定義] --> B[ゴールコマンド発行] B --> C[エージェントが作業実行] C --> D[フック起動＋判定モデルで完..."/><meta property="og:image:alt" content="📺 動画情報 Loop Engineering を理解して実践するために 🎙️ 数理の弾丸 ・ 📅 2026-06-20 ・ ⏱️ 38分19秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIエージェントに「ループ」を設計することで、人間が逐一プロンプトを打たなくても自律的に作業が進む仕組み（Loop Engineering）の概念・実践手法を解説した動画。 🗺️ 全体像 flowchart TD A[人間がゴールを定義] --> B[ゴールコマンド発行] B --> C[エージェントが作業実行] C --> D[フック起動＋判定モデルで完..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Loop-Engineering-を理解して実践するために"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Loop-Engineering-を理解して実践するために"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Loop Engineering を理解して実践するために 🎙️ 数理の弾丸 ・ 📅 2026-06-20 ・ ⏱️ 38分19秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIエージェントに「ループ」を設計することで、人間が逐一プロンプトを打たなくても自律的に作業が進む仕組み（Loop Engineering）の概念・実践手法を解説した動画。 🗺️ 全体像 flowchart TD A[人間がゴールを定義] --> B[ゴールコマンド発行] B --> C[エージェントが作業実行] C --> D[フック起動＋判定モデルで完..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Loop-Engineering-を理解して実践するために"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-567"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-567" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Loop Engineering を理解して実践するために</a></div></nav><h1 class="article-title">Loop Engineering を理解して実践するために</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-27T15:00:00.000Z">2026年6月28日</time><span>59 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/loop-engineering" class="internal tag-link">loop-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Loop Engineering を理解して実践するために</strong>
+🎙️ 数理の弾丸 ・ 📅 2026-06-20 ・ ⏱️ 38分19秒
+🔗 <a href="https://www.youtube.com/watch?v=TeSRbd796gI" class="external">https://www.youtube.com/watch?v=TeSRbd796gI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AIエージェントに「ループ」を設計することで、人間が逐一プロンプトを打たなくても自律的に作業が進む仕組み（Loop Engineering）の概念・実践手法を解説した動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[人間がゴールを定義] --> B[ゴールコマンド発行]\n    B --> C[エージェントが作業実行]\n    C --> D[フック起動＋判定モデルで完了チェック]\n    D -->|未完了| C\n    D -->|完了| E[人間に返却]\n    F[外側のループ：トリガー/定期実行] --> B&quot;">flowchart TD
+    A[人間がゴールを定義] --> B[ゴールコマンド発行]
+    B --> C[エージェントが作業実行]
+    C --> D[フック起動＋判定モデルで完了チェック]
+    D -->|未完了| C
+    D -->|完了| E[人間に返却]
+    F[外側のループ：トリガー/定期実行] --> B
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Loop Engineering とは何か </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>人間がプロンプトを逐一打つ代わりに、「トリガー → エージェントが作業 → 完了判定 → 未完了なら再実行」というループをシステムが自動で回す設計手法。Claude Codeの開発者ボリス・チャーニーが「今やっているのはループを書くことだ」と発信したことで注目を集めた。新概念の発明ではなく、AutoGPT・ReActなど従来の自律エージェント試行錯誤の延長・体系化と見るべき。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. ループの2層構造（内側・外側） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>内側のループ</strong>：特定タスクが完了するまで繰り返す作業ループ（ゴールコマンドが担う）。実行役エージェントと判定役モデルを分離し、完了条件を満たすまでプロンプトを注入し続ける。<strong>外側のループ</strong>：定期実行・外部イベント通知などをトリガーに内側のループを起動する仕組み。こちらは設計難度が高く、GithubワークフローやCICD、クラウド実行基盤が必要。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. ゴールコマンドの実践（Claude Code） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>単純にゴールコマンドでループを回す前に、①Grill with Docs で仕様・認識合わせ → ②イシュー切り分け＋ワークツリー並列化 → ③テストケースを自然言語でレビュー → ④TDD（テスト駆動）でループ実装、という前工程が肝心。ループは「速さのアシスト」であり、品質を上げるものではない。ゴール定義が甘いと望む方向から外れて暴走する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 人間の役割の変化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>プロンプトを「書く」→ ループを「設計する」へ役割がシフト。重要になるのは①コンテキストとして何を与えるか、②ループ中に生まれた情報をどう保管するか、③成果物と人間の認識ズレをどう防ぐか（テスト・検証の自動化）。ボリス・チャーニーのヒント：権限オートモード・ダイナミックワークフロー・クラウド実行・自己検証手段の付与。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINへの依頼をゴール定義から始める</strong>
+「〇〇作って」と丸投げするのではなく「完了条件はこれ・テストケースはこれ」まで詰めてからCORINにループを回させる。前工程（仕様詰め・テスト定義）に時間をかけるほどループの品質が上がる。</p>
+<p><strong>② 外側のループはClaude Code Scheduled Tasksで近似できる</strong>
+完全自律の外側ループは難しいが、定期スケジュール実行（scheduled-tasks）で定型業務を近似的に自動化する。メールやSlack通知をトリガーにしたい場合はGitHub Actionsなど外部基盤と組み合わせる発想を持つ。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> なんでここも回ってるこっちもループなのかゴールっていうのがこれがコマンドですねゴールコマンドってやつで今日のトピックは本命ループエンジニアリングループエンジニアリングだろループエンジニアリングしかねえだろあってんのかよ裏切ってくれよなんか悔しいよね大きな宇宙の中の小さな存在みたいな感じがするわすごい自分が</p>
+<p><code>00:31</code> 扱わざるを得なかったということですねシステムの中で流されて動いてるだけみたいななるほどでも気になってたんでフロンプとはもうきっかけないだとループっていうのが話題になったきっかけがこういう感じのフレーズなんて書いてるんですけどこれはちょっと言い過ぎですよ釣りタイトルじゃないですかじゃあ ごめんなさい8を待ったり合図今日は使うのはループ エンジニアリングというものでまあこれが10日前くらい なんかそんぐらいから一気に魅了になった</p>
+<p><code>01:09</code> 印象ですね一気に研究されるって多分 ちゃんとそれを表だって言ってるのはこのこの記事だと思うんですけど 原型が増えていますといいのででまぁバズワードの一つかなと思うんですがバズり方って割と高 バズワード感で似てるなと言ってどうしても人によって解釈とか解説の仕方ことだったりとか あとよく思うのがなんかこれまでにない新規の技法が発明されたという話なのかこれまでに蓄積された実践の再解釈なのかみたいな 確かがちょっと曖昧だよなというと</p>
+<p><code>01:48</code> まああとその技術を提供する側なエージェント作る側にとって重要な話なのか利用者に とって重要なのかみたいなのが曖昧だったり うんいうのまあ結構思っていてでまぁそれでそういう背景でハーネスエンジニアリングの 動画を撮っても知ってたんですけど今回はループエンジニアリングにフォーカスを当ててまぁ同じように制御できたらなと 思っています確かにねなんか概念的には理解できたような僕もなんかあんまり理解できたようなでき てないよなっていう曖昧な感じだから多分なんか弁償的になんかいろんな解釈解説をしてもらっちゃう でしょう</p>
+<p><code>02:25</code> うんではなんかそれに対してなんかこれが正解ですよっていうのを来なく上から与える ようなことを考えているかきれば決してなくまあアラバムで再生なりの整理をお届けできればなと思っています 入ってもう要点これで尽きるかなと思っているんですけどループエンジニアリングというものを考えることでまぁ人間の役割がどう変わるかと いううんのでそのマクロードコードとか オデックスとかを使ってプロンプトを逐一書いて作業を進めていくという形からプロンプトが勝手に送信されるようなループを作るっていう</p>
+<p><code>03:02</code> 立ち位置へと変わってきますよだから人間がやるべきことっていいプロンプトを書くということよりはそのループがうまく回る仕組みそこにはコンテキストとして何を与えるかとかこのループの各イテレーションの中で生まれた情報をどう保管するかとかそういうことを考えていくループが回るってことはそれだけ自立性高く開発が進んでいくってことになるので出来上がっていくものと</p>
+<p><code>03:37</code> 人間の認識がどんどんずれていきやすいっていうその中で個々人がどう工夫できるかみたいなことを考える領域に名前がついたっていうことかなと思いますなるほど要は人間が設計する対象がプロンプトじゃなくてループに移動したみたいなそういう概念ってことですかねそうですねですとまずループエンジニアリングとは何かみたいな話をしようと思うんですけど</p>
+<p><code>04:10</code> ここで想定されているループってどういうものなんですかっていうとハーネスエンジニアリングと一つの線上に語るのは僕はちょっと違うと思ってるんですけどそこの関係の整理あとこれはちょっと疑義あり得るかもしれないんですけどループエンジニアリングというのはこれまで試行錯誤されてきたものの延長線上にあるものだとなるほどというのを提示したいなという風に思っています実践に近いところで実現する方法ですね</p>
+<p><code>04:42</code> 僕たちがというか各エージェントユーザーがそれを実現するにはっていうのにも絞って話そうと思っているんですけど手元のツールでそのループっていうのはどう実践するかっていう話とボリスチャーニーさんとかが発信してるんでそのコツみたいなところも触れられたらいいなと思っています気になるはいっていう感じですなんですがちょっとチャンネルの紹介をさせてもらえればと思うんですがアセルノダンガンと申しまして人工知能や言語にまつわる学術的層を分かりやすく</p>
+<p><code>05:15</code> ごまかさずに伝える取り組みです今しゃべってる私は船倉と申しまして深層学習とかAIエージェントとかのエンジニアリングとそれに関する教育アウトリーチに取り組んでいるものですバディの皆さんにもいつも参加してもらってるんですけど今日は胸肉お願いします普通に来たいつも桜島の流れがあってふざけるみたいなやつがなるほどねゼロコンって気づいたらそうなるんですねそうですそうです今日は胸に苦が単品できてくれていますお願いします</p>
+<p><code>05:48</code> あと動画の冒頭でチャンネル名となってくれている方がいらっしゃるんですけど青空海人さんという方でナレーターとか歌い手さんとやられている方ですご興味あったら見てみてくださいはいあとノートメンバーシップについてもちょっと紹介させてもらえたらと思うんですけど今このYouTubeの中で使っている資料のPDFをダウンロードできるというプランと技術基準にアクセスできるというプランを置いているのでよかったら見てみてくださいはいというのと私今フリーランスとして活動していまして</p>
+<p><code>06:23</code> 例えばAIのエンジニアリングとか研修とか例として挙げてますけどこの限りでなく一緒にお仕事できる機会を探しているのでよければご相談くださいはいお願いしますでは動画いいと思ったらぜひお願いしますはいそういうので本題に入っていこうと思うんだがこの話を用意する中で参考にしたものがメインで5つありましてその中にはXの記事とかもあるんですけどこの辺り見て僕は今喋っているので</p>
+<p><code>06:56</code> ちょっと興味があったりしたら見てみてもいいかなと思ってあげていますでは行こうと思いますループエンジニアリングとは何かっていうところでそもそもこれが流行りだした発端みたいなところからいこうと思うんですけど多分最初はこのアディオスマニさんの記事がループエンジニアリングという言葉を使って記事を書いているっていうのが最初かなとは思うんですがただそのループを回すのが最近主になってきているみたいな</p>
+<p><code>07:30</code> 最近もバラループ書いてるみたいな発信っていうのはそれに先立ってあるんですよねひときわ目立っているのはクロードコードの開発者のボリス・チャーニーさんが発言しているものなんですけど、今やまた一段抽象度が上がって次の波に行きましたと今もプロンプト書いてなくて走っているループがありそれがクロードにプロンプトを送って何をすべきか考えているのはそのループの方ですと私の仕事はループを書くことであるみたいなへー</p>
+<p><code>08:03</code> うんとか他にもエンジニアの人の発信とかもあったりうんうんうんちょっとトレンドになってきているみたいな背景ですねなるほどここで想定されているループっていうのがどういうものなのかっていうことなんですけど全体的になんていうんですか共通する特徴を取り出したらこうなるんじゃないかっていう感じで書いてるんですけどその本質的な部分っていうのは</p>
+<p><code>08:36</code> 人間が毎回プロンプトを打つ代わりにシステムがエージェントにプロンプトを送信して条件が満たされるまでエージェントが作業し続けるっていうループうんうんうんなんですよねトリガーとして例えば定期実行とか外部からの通知とか別に人間がフロンフと渡してもいいと思うんですけど何かしらきっかけが与えられて実行役のエージェントが作業を行いますとはいで一旦これで完了しましたみたいなで次のフェーズに行ってここで判定のロジッククロードコードでこの後話すやり方でやると</p>
+<p><code>09:09</code> ここもLLMになるんですけどタスクが完了したかどうかというのを判定して完了条件に達していなかったらまだ終わってないでみたいなのを送り返すっていうなるほどループって呼んでるところは一応この右側のこの四角のなんか枠の中みたいなところなのかまずここが一つのループですはいはいはい一つの作業に対するループで完了したら次のトリガーを待つという状態線なんでここも回ってる</p>
+<p><code>09:45</code> こっちもループなのか外側のループと内側のループがあるっていう感じですねはいはいはいはいなるほどですねなんかシステムのうがい側とかCI落ち側とか定期で何時になりましたみたいなのをきっかけにしてタスクを集約して基本的にはこのループが平行で回ることも想定されていると思うんですけど作業ループが回って作業ループ回って完了条件達成したら元に戻ってみたいな繰り返していく</p>
+<p><code>10:18</code> なるほど形ですねこれちょっとあんま自信ないっちゃないんですけどハーネスとループの位置関係みたいな整理したいなという何を表したいんだこれをみたいな自分で思うんですけど例えばクロードコードを使っているという風に想定してもらって別にコーデックスでもいいけどこのAという作業が終わるまでループするっていうのをそのクロードコードとかの中でやるクロードが作業して</p>
+<p><code>10:52</code> 例えば検証役のモデルが呼び出されるとかそれで条件がまだ達成されてなかったらもう一回作業に入るっていうそのループをハーネスの中で実現するっていうパターンももちろんあるなるほど一方でクロードコードもコデックスもコマンドとして呼び出せるじゃないですかそうですねループスクリプトがそのハーネスを呼び出して作業を回していくっていうあーなるほどよかったら定期的にクロードコマンドを呼び出すっていうあーなるほど</p>
+<p><code>11:30</code> クロードそのものを呼び出すループを書くこともできるしそのクロードが起動している状態でその中でループが回ることもあるうんうんうんうんまあ別にループコマンドでやってもいいと思いますけど そうですねまあ今コマンドとして定期的に呼び出すとか そういう形も別にあり得るうん 受けなんでそのハーネスとの関係っていうのは何か一概に言えるものではないという かこのループという概念の構造的にハーネスと の関係が1位に決まるものではないかなっハーネス</p>
+<p><code>12:07</code> そうですねこの概念聞いて結構どうなんだろうなって思ったのがループを設計することもハーネスエンジニアリングの一部と言えるんじゃないかなとか思ってたりしたそう思いますよループを回すってことを前提にしているからこそハーネスに追加で与えられる要請ってあると思うんですよねうんうんなるほどそれこそゴールコマンドとかこの後話しますけどはいあるいは作業ループ回すためのコマンドハーネスの追加要素だし</p>
+<p><code>12:40</code> なるほどハーネスエンジニアリングの次はループエンジニアリングみたいなそういう関係ではないと思っている確かにそれはなんかすごく別の関心事ですね一旦っていうのとあとこのループエンジニアリングというのがつい最近新たに生み出されたというよりはこれまで積み重ねられてきたものの発展一般化と理解すべきかなという話なんですけど人間がプロンプトを逐一与えるのではなくて</p>
+<p><code>13:14</code> 一定の条件がクリアされるまでエージェントが作業を繰り返すっていうこの方法自体は各方面で試行錯誤されてきたものである確かに前に動画で聞いたオートリサーチとかもそうですよねそうですねオートリサーチもそうだし動画で触れたやつで言うとジェミニ2.5プロに問題解かせて検証してダメだったらまたやり直させてみたいなのをめちゃくちゃ繰り返してすぐオリキンメダル級の結果が出ましたみたいなはいはいはい6問中5問解けたみたいな話なるほど</p>
+<p><code>13:47</code> だと思うんですけどこれも自己検証して自己検証っていうか作業の後に検証が走ってその結果いかんでもう一度繰り返すみたいなそのループ構造を持たせるっていう試みの一つなんですよねうんなのでこれまでやられてきているもののになんかこう新しく名前がついたっていう感じかなとうんうんうん思っていますさっきコマンド呼び出すって形もありますよねって話したんですけども</p>
+<p><code>14:18</code> それの一番有名なやつがラルフループってやつへー同じマークダウンクロードコードに渡すっていうのをワイルループでずっと回し続けるっていうなるほどターミナルのコマンドでワイルループで書いてるってことかなるほどねとかCICDパイプラインの中でエージェントの呼び出しを組み込んで繰り返し繰り返し作業が行われるようにするとかうんうんうんっていうのがあるわけなんで</p>
+<p><code>14:52</code> まあまあその積み重ねの上にあるものだという整理ですはいですねという感じでありましてあとループを回すっていうことに対してのレベル分けというかをやっている記事があったんでマット・バンホーンさんの記事ですねAIに作業させるループを回すといっても様々なレベルがありますよねとリアクトとかオートGPTとかこれはかつて提案されてきた技術ですけどラルフループはレベル3でこの後ゴールっていうのがレベル4ですけど</p>
+<p><code>15:32</code> ボリスチャーニーとかピータースタインバーガーさんとかループ回すのが最近主な仕事になってきているみたいなことを発信し始めたこの方たちが実際に意図しているのはレベル5のオーケストレーションにあたるんだろうというのをこのマットさんが言っているなるほどこれはループを回すループ外側のループが自動で回っている状態ですうんうんうんその対して人間の改善なく作業をトリガーする基盤が確立されているその状態を意図してループって言ってるんじゃないかっていうのが</p>
+<p><code>16:10</code> このマットさんの整理ですねなるほどさっきの5つ前ぐらいのスライドに戻ると左側のトリガーがそうそうそうそう違うのループも含むようなものがこのレベル5段階のオーケストレーションでゴールコマンドは多分右側なのかそうですねゴール側回してるのはここですねなるほど整理できましたこっちの方がむずいと思うんですよねうん確かにまず何やるべきか</p>
+<p><code>16:44</code> っていうのが明確になってないといけないし定期的に回すって1時間おきに例えば回すとして何をさせるんですかっていうところが難しいですよ確かにいいところはありますというので概念的な整理はこんな感じで以上かなと思うんですけどどうですかね一旦ここまで一番最後のところで結構整理されてだからこの左側のトリガーベースで動くみたいなところも含めてループなのかっていう風に思ったのと</p>
+<p><code>17:23</code> あとはそうですねなんていうかループで設計する意味合いみたいなところってどこにあるのかなっていうのはちょっと思っていてなんて言うんでしょうか基本的に僕のエージェントに対するイメージですけどエージェントってタスクを渡したらそのゴールまで突き進んで最終的には何かしらのアウトプットを出してくれるとかタスク実行してくれるみたいなイメージがあるんですよなんで一直線にバーって進んでいくイメージがあったんでそこに対してループを設ける意味合いって何なんだろう</p>
+<p><code>17:57</code> っていうのがちょっと気になりました人間が指示を出してそれきっかけでエージェントが走って最後までやってくれるっていうのが仮にループなしでできたとしても例えばそこに人間がいないときエージェントが動く仕組みがないですそれだと例えば夜間にリリースしているシステムがエラーを起こして</p>
+<p><code>18:30</code> ロールバックというか元に戻す一旦ちょっと障害が発生する前の状態に戻しましたとそれを復旧するにはどうしたらいいかみたいな朝起きないと検討できない人間が人間がそこにいなきゃいけないっていうところからどう脱却するかっていう話だと思っていますなるほど人間をトリガーとしない状態でいかにエージェントを吉田に走らせるかと</p>
+<p><code>19:03</code> いうところかなるほどな理解しましたですねはいというのが理解の整理って感じなんですけどここからどうやってループを僕たちの個人のタスクの中で実現したらいいんですかっていう話していこうかなと思っていて組織の中でとか製品として提供しているシステムの周りのエコシステムとしてみたいなちょっと置いといてそういうのは 単その狭いスコープですけどエージェンティックコーディングツールで個人の範囲でタスクに取り組むっていうケースに絞って 話そうと思います</p>
+<p><code>19:45</code> うん ちょっとそれを超えた大きい話についてはどこにリンクだけ貼ってますけどループエンジニアリングプレイブックっていう記事があるのでもうそんなのできてるんですかちょっと見てみたら参考になるかと思いますこの記事の中ではループの実現のパターン3段階というか3つのパターンに分けて議論してますここで紹介したのはゴールですねなんで今笑ったのいやちょっと青いクロードコード見慣れてなさすぎて</p>
+<p><code>20:22</code> 区別したくて体調不良みたいなはい頑張りますゴールっていうのがこれがコマンドですねゴールコマンドってやつでクロード構造がコデックスに搭載されているタスク完了するまでトランプトを継続的に注入するっていう仕組みですねでまぁちょっと主に僕がクロード使ってるってだけなんですけどクロードコードの場合の挙動で書いていますでまぁトリガーとなるのはこのゴールコマンドを先頭に引っ付けて</p>
+<p><code>20:58</code> 何かしら依頼してあげるっていうこれが始まりなんですけど実行役のエージェントが作業を実行してターンが終了したらフックが走るんですねで判定役の別モデルが起動してタスクの完了を判定するっていうなるほどだから別のコンテキストのやつに判定させるわけだ新しい実行役と判定役を分けるっていうのがなるほどデフォルトハイクが走ります完了しなかったらプロンプトが注入される</p>
+<p><code>21:31</code> 完了したらユーザーに返却されるっていう感じですねなるほど注入されるプロンプトはフィードバックみたいな感じってことであってますかそうですねちょっとそれちょっと詳しく見ておけばよかったすいませんいいえそんな急に謝られるといいえいいえとしか言えないから最後にそこちょっとちゃんと確認してから喋ろうと思ってたこれちなみに完了条件みたいなところはなんか吉田にクロードが設定してくれるんですか</p>
+<p><code>22:02</code> その最初の起点となる指示のところでこれがゴールですねそれが終わってますかイエスノーみたいな感じでそうっすねはいはいはいなるほどゴールコマンドでこれ走らせる前段階がとても重要なんですけどちょっとそこは次に消してこれ実践の一例で私がどうやってるかっていう話ですねゴールでいきなり指示出すっていうことはやってなくて前紹介したマットボコクさんの各種スキルと併用してやっています</p>
+<p><code>22:39</code> 最初はグリルウィズドックスっていうドキュメントに残しながら認識合わせていくっていう作業から入るんですけどこれで指示出すとエージェントからいっぱい質問が来て私がそれに答えるっていうのが何発も何発も行われますとまずはいはいはいで使用書作ってそれをイシューに切り分けてどこまで平行にやるかとか結構場合によりけりなんですけどタスク複数切ってワークツリーに独立させますと</p>
+<p><code>23:17</code> 衝突しないようにして平行作業できるようにしておきますはいでその各タスクについてテストを出させるんですけどここで結構丁寧にレビューしていますへーこれやんないとだいぶわけわかんないものが出てくると思うんでそのテストケースどういう条件で振る舞いのテストをするかみたいなもう自然言語で記述させてそれを人間が レビューしてあげるっていうなるほどはいはいテストキーですこういう の書こうと思っていますみたいに出して</p>
+<p><code>23:56</code> きたつに対していやもっとこういう観点を 見てよみたいなのをレビューしてるとだったんですそうそうそう ああなるほどそれテストしてもいいないでしょとかや そういうことじゃないでしょじゃあのはわーってやってうん でもここまで来てようやくゴールでじゃあこの計画に従って実装してくださいっていうなるほどねそのテストを合格するような実装を書いてくれってことかそうっすねここはTDDのサイクルで1個テスト書いてそれを通過する実装して</p>
+<p><code>24:31</code> また1個テスト書いてっていうのを繰り返していく誰しもがTDDを知ってるみたいにさらっと出さないでください僕も理解しきっているとは言い難いんですけどテスト駆動で進めるように指示してますなるほどプルリクエストでできてここで一応テストちゃんと通ってるかとか動作確認とかは丁寧にやってるんですけどチェックして承認できたらマージするっていう形ですねなのでここまでの作業ここでゴールを丁寧に定義しているっていう</p>
+<p><code>25:08</code> 感じですね最終的に要件からどういう風な設計にしてその設計が完了した時にはどういうテストに合格しておくべきかみたいなその完了要件を詳細に詰めていってっていう段階ってことかそうですねなるほど大前提そのループで回すのって自動走行のアシストにはなるけどもループを使うことでいいものが出てくるってものじゃないじゃないですか</p>
+<p><code>25:46</code> まあ確かにそのループそのものによっては全然検討違いの方向に行くとかもあり得ますよね人間が逐一指示出さなきゃいけないっていうスピード的なボトルネックをなるべく排除しようとしているものであって品質上げるってことをやろうとしてるわけじゃないむしろこのループに頼りすぎると作られていくものと人間側の理解っていうのはどんどんずれていくっていう確かにループしてる間って基本だってブラックボックスになっちゃうもんその前段階何をもって完了とするかみたいなところとか</p>
+<p><code>26:23</code> どういうタスクの切り方をして並行作業が今進んでるのかみたいなところは僕の場合はですけどなるべく精緻に定義して理解するように努めていますなるほどなだからちょっとこのピンクで書いてあるっぽいところがやっぱりその人間がちゃんとレビューだったりとかどれに知識が必要になってくるところっていうことですねうんうんうんですねですねはいと思っていますなのでこの外側のループは僕の場合は人間が回してるんですよグリルプロセスを通して次のステップに進んでいる</p>
+<p><code>27:02</code> うんうんうんなるほどなるほどブーブー自動で待ってるのここだけっていう感じ へえまあでもこれでも一応まあループエンジニアリングではあるのか まあそう言ってほしいですあっはこれがですね新しいような難しいところですこれをループエンジニアに呼ぶかいいのかまあでもそこは別に本質じゃないですよねそう俺in the loopですなるほど内側のループを起動する外側のループをゴールを作り込むっていう</p>
+<p><code>27:37</code> 人間AIの協業で行う形ですねC抜けてるけどはいですとはいえなんですけどボリスチャーニーとかピータースタインバーバーさんとかが意図しているループというのは外側のループを監視コントロールしているオーケストレーターというのがとても重要な存在なんだろうと思っていて定期的に送られてくるプロンプトから作業を切り分けてどういうタスクを進めていけばいいかみたいなこの判断</p>
+<p><code>28:12</code> うんしてくれるものがいてで内側のループが回るっていううんうんうんうんで外側も含めた全体が自律的に回るっていうのを狙っていると考えられるなるほどっていう感じですねはいでまあこの形をあの想定してのこれだと思うんですけどそのボイスチャーニーさんがあのこれツイートから割とそのまま持ってきてしまったんですけど言っているオーパスを数時間から数時間稼働させる数時間から数日間稼働させるためのヒントですね</p>
+<p><code>28:47</code> これは結構そうですよねと思ったんですけど権限はオートモードにするっていうのが一つとはいはいはいあとダイナミックワークフローを使って数百から数千のエージェントをオーケストレーションしましょうという話と最近出た機能ですねゴールとかループとかをうまく使いましょうということあとクロードコードをクラウドで使ってPC開いてなくてもいいようにしましょうとかなるほどターミナルとかで動かすんじゃなくてクラウドで動かすってことですか</p>
+<p><code>29:21</code> そうですねだからクラウド上で動いているクロードコードがリモートのGitHubのリポジトリとかとつながっていてそこで作業するってことですよねなるほど最後がクロードが自分の仕事を端から端まで自己検証できる手段を必ず持たせるっていうもう徹底的にってことだねそうですねそれはテストを自分で走らせれるようにっていうのももちろんそうですしテストの自動化ですねもあるしフロントとかのチェックもできるようにした方がいいよねって話だと思っていてプレイライトとかを使ったらそれができるんですけど</p>
+<p><code>29:56</code> 自分で自分が作ったものを確認できるようにしましょうねっていうなるほどこれはすげーでかい話というかとはいえやっぱり作業単位で人間が入り込まないと普通の人というか僕も含めた一般のエンジニアは難しいんじゃないかなとも同時に思うそうですねしかも数日間稼働させてたらもう金額バカにならないですそうですねコストは結構クリティカルな問題ですよねこれ</p>
+<p><code>30:32</code> ジャブジャブに使っちゃうから確かに確かにこれはコストが上限突破しないように仕組みを作るっていうのがこれ6個目にあるべきですね確かにボーリスさん金持ちだからなでしたなので改めてなんですけどループエンジニアリングで変化する人間の役割というのが最初の話でプロンプトを逐一書くというのからプロンプトを送信するループを作るというのに変わってくるというのがループエンジニアリングの趣旨ですねAIエージェントが長時間稼働するループをどう作るか</p>
+<p><code>31:08</code> というところに力点があり人間が必ずしも存在しなくても作業が進み続けるそういう仕組みうんそれはただただ呼び出し続ければ無限に作業できるんですけどそれを人間が望むものとかけ離れすぎないようにするにはどうすればいいかっていう話うんです2点目も言ったりとしてコデックスとかクロードコードで実現するならループはクロードコードにしかないですけどループとかあとゴールの助けを借りるっていううん</p>
+<p><code>31:41</code> あととても大事な論点になると思われるのが成果物が人間の認識を超えて積み上がっていく中で人間がどう立ち回るべきかというところかなと思っています確かに以上なんだがどうでしょうかありがとうございます2つ質問がありますはいニッコはちょっと調べたらわかるよって言われるかもしれないんですけどコマンドループと</p>
+<p><code>32:13</code> ループコマンドとゴールドコマンドって何が違うんですか調べてくださいループは一定間隔で同じプロンプトが送信されるっていうコマンドなんですよなるほどそのセッションの起動中は1時間に1回プロンプトを送ってねとかそういうことができるわけだそうそうそうそううんうんうんでゴールっていうのはそのゴールコマンドの後に書いた完了条件が満たされるまでループが回るってやつですねうーんなるほどなるほど</p>
+<p><code>32:50</code> うんスッキリしました外側のループ回したかったらループコマンドも助けを借りる必要があるっていう感じですかねなるほどそこちょうど聞きたかったんですよね外側のループをどうやって実現するんだろうっていうところでこのループとかも結局クロードコードのセッションがCLIだったらターミナルで立ち上がってるっていうところが条件なわけじゃないですかしかもそれって基本的には定期実行だと思うんですよね1時間に1回とか2時間に1回とか</p>
+<p><code>33:27</code> さっき見たときに何のかのイベントをトリガーとして内側のループを走らせるみたいな話があったと思うんですけどそういうのってどうやって実現するんだろうっていうところがちょっと気になりましたねそれ自分で作るか既存のそういうプラットフォームに頼るしかないんじゃないですかねGitHubワークフローズとかあーそうかなるほどあれもそうなのかあとラングスミスとかもそういうのあったりすると思うんですよねだからスクラッチで作っていくか</p>
+<p><code>34:01</code> 既存のプラットフォームっていうのは何なんですかあーなんでGitHubとかそういう既存のサービスが持っている仕組みの中で実現するっていう形になるんじゃないですかねなるほどいやーなんかそうですよねこの辺どうなんだろうなんか柔軟に実現できたら結構その開発に限らずいろんなところで使えるのかなとか思ったりなんか結構今回そのループエンジニアリングの話って割とその開発文脈でのところで</p>
+<p><code>34:35</code> 話題になってると思うんですけどまあなんでしょう例えば日常のなんかある特定のなんかメールが届いたらそこに対してそれをトリガーとしてなープが回ってみたいなところとかシステムのある敷地を超えたらホニャホニャしてとかいろんなユースケースが実現できそうな気はするんだけどそれをどう形にしたらいいんだろうっていう外側のループの部分が結構難しいなと思いましたねそうですねそうですね</p>
+<p><code>35:08</code> それはもうネットはインターネット上で 動くものじゃないといけないですねインターネット上っていうかクラウド上で 動くものにしないとPC開いてる間しか動かないように なったしないとそうしないといやでもそのうちなんかフロードの クラウドデスクトップ版じゃなくてクラウド版とかになんかそういう機能とかも 追加されていくそうな気しますねこういうとに僕あんま使ってないけどスケジュール実行みたいなのあるよ あーありますねでもあれも基本的にはあれじゃないですか定期実行ですよねあーそれがあるじゃないなその外部の状態変化とかから 動くような何かってことですかあそうですそうです</p>
+<p><code>35:52</code> ああ そっちの方が多分柔軟性としては高いと思うんですよね1時間に1回メールをチェックとかよりもメールホニャホニャ系のメールが届いたらワークフローというかエージェントが動き出すみたいな方がコストのなんていうんだろう管理的にも必要ない時にエージェントが動かないんでいいかなとか思ったりするんですよだからそれがより気軽に実現にできるようになると結構</p>
+<p><code>36:25</code> なんかそのエージェントの普及一気に広まりそうだなっていうのはめちゃめちゃ感じましたね確かに定義事項って余計なことめっちゃしそうですもん確かにそうなんですよどんぐらいのペースでやるかとかも難しいですしあとやっぱそうですねなんだかんだ思ったのがやっぱなんか人間をトリガーとする以上はなんかその人間の指示みたいなところに結構エージェントのアウトプットもなんか左右される気がするんですけどなんかそうですね外側のループのところをうまく設定してあげて</p>
+<p><code>37:01</code> 定型的な業務だったらこういう風に回してくれやっていうのをちゃんと決めた形で設計することができたらすごくいろんなところで使えるんだろうなとそう思いました俗人化しない仕組みというかありがとうございます人間の介在なく勝手にエージェントが走って作業が済んでるみたいなのって割と前々から望まれていたことではある気がしていてこういう形で実現してますみたいなのがあったら</p>
+<p><code>37:42</code> 知りたいですよね確かにぜひよかったら教えてくださいぜひぜひお願いしますでは今日はこれで以上でありがとうございましたありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./2026-06-20-loop-success-conditions" class="internal" data-slug="2026-06-20-loop-success-conditions">2026-06-20-loop-success-conditions</a>（PermanentNote）— ループの完了条件設計</li>
+<li><a href="./2026-06-20-loop-two-layer-understanding" class="internal" data-slug="2026-06-20-loop-two-layer-understanding">2026-06-20-loop-two-layer-understanding</a>（PermanentNote）— 外側ループ・内側ループの2層理解</li>
+<li><a href="./2026-06-20-loop-vs-cron-usage" class="internal" data-slug="2026-06-20-loop-vs-cron-usage">2026-06-20-loop-vs-cron-usage</a>（PermanentNote）— ループ vs 定期実行の使い分け</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）— Claude Code全般（ゴールコマンド・ループコマンドの基盤）</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote）— AIエージェント全般</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（StructureNote）— プロンプト設計（Loop Engineering の前工程）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-249" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

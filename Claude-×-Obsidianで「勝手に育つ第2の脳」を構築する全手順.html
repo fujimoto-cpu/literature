@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude × Obsidianで「勝手に育つ第2の脳」を構築する全手順</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude × Obsidianで「勝手に育つ第2の脳」を構築する全手順"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude × Obsidianで「勝手に育つ第2の脳」を構築する全手順"/><meta name="twitter:description" content="「メモはたくさん溜まるのに、結局どこに何を書いたか分からない」「リンクを貼るのが面倒で、ノート同士がバラバラのまま」「Obsidianを使っているのに、ただのメモ帳になっている」「AIを活用したいけど、毎回コンテキストを一から説明するのが面倒」こんな悩み、ありませんか？海外で @..."/><meta property="og:description" content="「メモはたくさん溜まるのに、結局どこに何を書いたか分からない」「リンクを貼るのが面倒で、ノート同士がバラバラのまま」「Obsidianを使っているのに、ただのメモ帳になっている」「AIを活用したいけど、毎回コンテキストを一から説明するのが面倒」こんな悩み、ありませんか？海外で @..."/><meta property="og:image:alt" content="「メモはたくさん溜まるのに、結局どこに何を書いたか分からない」「リンクを貼るのが面倒で、ノート同士がバラバラのまま」「Obsidianを使っているのに、ただのメモ帳になっている」「AIを活用したいけど、毎回コンテキストを一から説明するのが面倒」こんな悩み、ありませんか？海外で @..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-×-Obsidianで「勝手に育つ第2の脳」を構築する全手順"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-×-Obsidianで「勝手に育つ第2の脳」を構築する全手順"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="「メモはたくさん溜まるのに、結局どこに何を書いたか分からない」「リンクを貼るのが面倒で、ノート同士がバラバラのまま」「Obsidianを使っているのに、ただのメモ帳になっている」「AIを活用したいけど、毎回コンテキストを一から説明するのが面倒」こんな悩み、ありませんか？海外で @..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-×-Obsidianで「勝手に育つ第2の脳」を構築する全手順"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-297"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-297" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude × Obsidianで「勝手に育つ第2の脳」を構築する全手順</a></div></nav><h1 class="article-title">Claude × Obsidianで「勝手に育つ第2の脳」を構築する全手順</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-13T15:00:00.000Z">2026年5月14日</time><span>18 min read</span></p><ul class="tags"><li><a href="./tags/clippings" class="internal tag-link">clippings</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/知識管理" class="internal tag-link">知識管理</a></li><li><a href="./tags/複利" class="internal tag-link">複利</a></li></ul></div></div><article class="popover-hint"><p><img src="./99_🖼️-picture/0fbf4e1a3a44d3289c4616c2e989ce6d_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>「メモはたくさん溜まるのに、結局どこに何を書いたか分からない」</p>
+<p>「リンクを貼るのが面倒で、ノート同士がバラバラのまま」</p>
+<p>「Obsidianを使っているのに、ただのメモ帳になっている」</p>
+<p>「AIを活用したいけど、毎回コンテキストを一から説明するのが面倒」</p>
+<p><img src="./99_🖼️-picture/30466838aa21deef966b3e7d0c4b9f15_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>こんな悩み、ありませんか？</p>
+<p>海外で <a href="https://x.com/@defileo" class="external">@defileo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> 氏が投稿した「Claude + Obsidian | How to use your second brain」という解説が99万ビュー超えの大バズ中😳</p>
+<p><img src="./99_🖼️-picture/1b8f3ca10dad794a4a80b37f02445064_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>Obsidian × Claude Codeで「勝手に育つ第2の脳」を構築する方法を、ステップバイステップで解説した内容です。</p>
+<p>今回はその内容を徹底的に噛み砕いて日本語で解説します👇</p>
+<p>元ポストはこちら：<a href="https://x.com/defileo/status/2043762213597397179" class="external">https://x.com/defileo/status/2043762213597397179<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>■ 𝗰𝗹𝗮𝘂𝗱𝗲-𝗼𝗯𝘀𝗶𝗱𝗶𝗮𝗻 とは何か</p>
+<p><img src="./99_🖼️-picture/4ad6e883cdd3ccb90a11eb5e87b3d2de_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>claude-obsidianは、GitHub上で公開されているオープンソースのClaude Codeプラグインです（MIT License、GitHub: AgriciDaniel/claude-obsidian、1.9kスター）。</p>
+<p>Andrej Karpathy氏（OpenAI創設メンバー、元Tesla AI部門ディレクター）が提唱した「LLM Wiki」パターンを実装したもので、一言でいうと「知識が複利で増えるObsidian Vault」を作るツールです。</p>
+<p>従来のAI × ノートツールの問題点は、毎回セッションが切れるとコンテキストがリセットされること。claude-obsidianはこの問題を根本から解決します。</p>
+<p>ソースを投げれば、Claudeがそれを読み込み、エンティティと概念を抽出し、相互参照を更新し、構造化されたObsidian Vaultに自動でファイリングする。1つの記事を入れるだけで8〜15の相互リンクされたWikiページが生成されます。</p>
+<p>つまり、使えば使うほどVaultが賢くなる。知識が「複利」で積み上がっていく仕組みです。</p>
+<p><img src="./99_🖼️-picture/c220741b2cef844619f69c205c3449f7_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>■ 𝗰𝗹𝗮𝘂𝗱𝗲-𝗼𝗯𝘀𝗶𝗱𝗶𝗮𝗻 の始め方</p>
+<p><img src="./99_🖼️-picture/34371547d13d915070a10d548f9fb999_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>必要なもの：</p>
+<p>・Obsidian（デスクトップ版）</p>
+<p>・Node.js 18以上</p>
+<p>・Claude Code（CLIまたはデスクトップアプリ）</p>
+<p>インストールは3つの方法があります。</p>
+<p><img src="./99_🖼️-picture/ee0d3fcf4673c5fbcdca1cda9fd2c75a_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>【方法1】Vault Clone（推奨・2分で完了）</p>
+<p>```</p>
+<p>git clone <a href="https://github.com/AgriciDaniel/claude-obsidian" class="external">https://github.com/AgriciDaniel/claude-obsidian<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>cd claude-obsidian</p>
+<p>bash bin/setup-vault.sh</p>
+<p>```</p>
+<p>クローンしたフォルダをObsidianで開くだけ。これが最も簡単です。</p>
+<p>【方法2】Claude Codeプラグインとして追加</p>
+<p>```</p>
+<p>claude plugin marketplace add AgriciDaniel/claude-obsidian</p>
+<p>claude plugin install claude-obsidian@claude-obsidian-marketplace</p>
+<p>```</p>
+<p>【方法3】既存のVaultに導入</p>
+<p>GitHubリポジトリから `WIKI.md` をコピーして自分のVaultに配置し、Claudeにセットアップを指示するだけ。</p>
+<p>どの方法でも、最初に `/wiki` コマンドを実行するとVaultの基本構造がスキャフォールドされます。</p>
+<p>■ /𝘄𝗶𝗸𝗶 コマンド── Vault の骨格を一発構築</p>
+<p><img src="./99_🖼️-picture/fc82d502a7f9609ebd0cf3b228755d21_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>`/wiki` は最初に実行するコマンドです。</p>
+<p>これを打つと、Claudeが以下の構造を自動生成します：</p>
+<p>・`wiki/index.md` — マスターカタログ（全ページの目次）</p>
+<p>・`wiki/hot.md` — ホットキャッシュ（最近のコンテキストを保持）</p>
+<p>・ドメイン別のサブインデックス</p>
+<p>・`.raw/` フォルダ — 取り込んだ原文の保管場所</p>
+<p>特に重要なのが `hot.md` と `index.md` の2ファイル。</p>
+<p><img src="./99_🖼️-picture/d51b0333eb60e5aa1273328bbac4467f_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>`hot.md` はセッション間のコンテキストを自動で保持するファイルです。通常のAIチャットでは会話が切れると全部忘れますが、claude-obsidianでは `hot.md` に最近の作業内容が自動キャッシュされるため、次のセッションでも「さっきの続き」から始められます。</p>
+<p>`index.md` はVault全体のマスターカタログ。Claudeはまずこのファイルを読んで、どのページに何が書いてあるかを把握します。全ページを毎回読み込むのではなく、インデックスから必要なページだけを選択的にロードするため、トークンコストを大幅に節約できます。</p>
+<p>■ 𝟯つのコアコマンド── /𝘀𝗮𝘃𝗲 /𝗮𝘂𝘁𝗼𝗿𝗲𝘀𝗲𝗮𝗿𝗰𝗵 /𝗰𝗮𝗻𝘃𝗮𝘀</p>
+<p><img src="./99_🖼️-picture/8b9b4c006894aa06698e3e3a1c0a2d24_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>claude-obsidianの日常的な操作は、主に3つのコマンドで回ります。</p>
+<p>【/save】会話をWikiノートに変換</p>
+<p><img src="./99_🖼️-picture/f09f19cdd476a6a81aded2fdaa18cb0c_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>Claudeとの会話で価値のある情報が出たら `/save` を打つだけ。Claudeが会話全体を読み、キーアイデアを抽出し、適切にフォーマットされたWikiページを作成し、既存ページへのWikilinkを自動生成し、index.mdを更新します。</p>
+<p>`/save プロンプトエンジニアリング` のように名前を指定することも可能です。</p>
+<p>【/autoresearch】自律リサーチループ</p>
+<p><img src="./99_🖼️-picture/a98c8d4a6657cb92bbc67cd9276fd510_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>`/autoresearch [トピック]` を実行すると、Claudeがそのトピックについて自律的にリサーチを行い、結果をWikiページとしてVaultに蓄積します。</p>
+<p>例えば `/autoresearch RAG最新手法` と打てば、RAGに関する知識がVaultに体系的に追加されていきます。</p>
+<p>【/canvas】ビジュアルナレッジマップ</p>
+<p><img src="./99_🖼️-picture/a3a7abb1c281ac7ea2bb7a7f46241075_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>Obsidianのキャンバス機能と連携し、知識の視覚的なマッピングを行います。12のビジュアルテンプレートと6つのレイアウトアルゴリズムが用意されており、プレゼンテーション、フローチャート、ナレッジグラフなどを自動生成できます。</p>
+<p>■ 毎日のインジェストループ── .𝗿𝗮𝘄/ フォルダの使い方</p>
+<p><img src="./99_🖼️-picture/15de6108d9d799b5448549bc1d7a0132_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>claude-obsidianの真価は「日常的な情報の取り込み」にあります。</p>
+<p>やり方はシンプル：</p>
+<p>1. 気になった記事、論文、メモを `.raw/` フォルダに放り込む</p>
+<p>2. `ingest [ファイル名]` コマンドを実行</p>
+<p>3. Claudeが自動で読み込み、要約し、概念を抽出し、既存のWikiページと相互リンクを張る</p>
+<p>複数ファイルを一括処理したい場合は `ingest all of these` で一括取り込みが可能。このとき、ファイル間の相互参照も自動で生成されます。</p>
+<p>さらに便利なのが `lint the wiki` コマンド。これはVault全体のヘルスチェックを実行し、以下を検出します：</p>
+<p>・壊れたリンク（デッドリンク）</p>
+<p>・孤立したページ（どこからもリンクされていないノート）</p>
+<p>・知識のギャップ（言及されているが詳細ページがないトピック）</p>
+<p>・古くなった記述</p>
+<p><img src="./99_🖼️-picture/833474a795117eacdf8bc9f23c75c132_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>つまり、Vaultの「メンテナンス」までAIが自動でやってくれるわけです。</p>
+<p>■ コスト効率の設計── なぜトークンを無駄にしない</p>
+<p><img src="./99_🖼️-picture/e6886164e80f7b1de9e27953b6978e12_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>「AI × ノートツール」で多くの人が心配するのがAPIコストです。</p>
+<p>claude-obsidianはここも巧みに設計されています。</p>
+<p>仕組みは3つ：</p>
+<p>・`hot.md` — 直近のコンテキストだけをキャッシュし、毎回全履歴を読まない</p>
+<p>・`index.md` — マスターカタログから必要なページだけを選択的にロード</p>
+<p>・ドメイン別サブインデックス — 関連する領域のページだけにアクセスを限定</p>
+<p>たとえばプログラミングについて質問した場合、Claudeはindex.mdを見て「programming」関連のサブインデックスだけを読み、そこからさらに必要なページだけを開く。Vault全体が1000ページあっても、実際に読み込むのは10〜20ページ程度で済みます。</p>
+<p><img src="./99_🖼️-picture/458fec68bca1708040911badf41005e5_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>これにより、Vaultが巨大化してもトークンコストが線形に増加しない設計になっています。</p>
+<p>■ 𝟭ヶ月後のグラフビュー── 知識が「見える」瞬間</p>
+<p><img src="./99_🖼️-picture/4ef3d3f7bdba4129b794c48928b074f6_MD5.jpg" width="auto" height="auto" alt/></p>
+<p><a href="https://x.com/@defileo" class="external">@defileo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>氏の投稿で最も反響があったのが、1ヶ月間運用した後のObsidianグラフビューのスクリーンショットです。</p>
+<p>ノード（概念）が色分けされ、それぞれが相互にリンクで繋がっている。手動では絶対に作れない、密度の高いナレッジグラフが自動的に形成されています。</p>
+<p>これが「知識が複利で増える」の意味です。</p>
+<p>最初の1週間はページ数も少なく、リンクもまばら。しかし2週間、3週間と続けるうちに、新しく入れた情報が既存の知識と自動的に結びつき、ネットワーク効果が加速する。4週間目には「自分が何を知っているか」がグラフで一望できる状態になります。</p>
+<p>■ 実際の活用シーン</p>
+<p><img src="./99_🖼️-picture/f9866acc17c0e2bc17b6b0576bc8864a_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>claude-obsidianは以下のような場面で特に威力を発揮します：</p>
+<p>・論文や技術記事を日常的に読む研究者・エンジニア</p>
+<p>→ 読んだ内容が自動で体系化され、後から「あの論文のあの概念」をすぐ引ける</p>
+<p>・複数プロジェクトを並行して進めるマネージャー</p>
+<p>→ プロジェクト間の知識がクロスリファレンスされ、意思決定の質が上がる</p>
+<p>・学習中のトピックを深掘りしたい人</p>
+<p>→ /autoresearchで自律的にリサーチ、知識の穴を自動検出</p>
+<p>・Obsidianを使っているが「メモが散らばる問題」を抱えている人</p>
+<p>→ AI が自動でリンクを張り、整理してくれるため、手動メンテナンスが不要に</p>
+<p>重要なのは、これがObsidianのローカルファイル（Markdown）で動いている点。データは全て自分のマシンに残り、クラウドに依存しません。</p>
+<p><img src="./99_🖼️-picture/08a0d2effa65b0d050a5ba1e1cf836ba_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>■ マルチモデル対応── Claude以外でも動く</p>
+<p>claude-obsidianという名前ですが、実はClaude以外のモデルでも動作します。</p>
+<p>対応モデル：</p>
+<p>・Claude（推奨）</p>
+<p>・Gemini</p>
+<p>・Codex</p>
+<p>・Cursor</p>
+<p>・Windsurf</p>
+<p>プロバイダーに縛られない設計のため、将来的にモデルを切り替えても蓄積した知識はそのまま使えます。</p>
+<p>■ まとめ── 「メモを溜めるだけ」を卒業する</p>
+<p><img src="./99_🖼️-picture/03afd42ec4d408b88b6bbae598ed7707_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>claude-obsidianが解決する問題は明確です。</p>
+<p>従来のObsidian運用：</p>
+<p>メモを書く → リンクを手動で貼る → 面倒で続かない → ノートが散らばる → 結局検索頼み</p>
+<p>claude-obsidian導入後：</p>
+<p>ソースを .raw/ に入れる → ingestする → 自動でWikiページ生成・相互リンク・インデックス更新 → 使うほど賢くなるVaultが育つ</p>
+<p>しかもオープンソース（MIT License）で無料。GitHubスター1.9kが示す通り、海外のObsidianコミュニティではすでに定番ツールになりつつあります。</p>
+<p>「AIセカンド脳」を始めたいなら、最もハードルが低く、最もリターンが大きい選択肢の1つです。</p>
+<p>今すぐ試す手順：</p>
+<p><img src="./99_🖼️-picture/dfcd6afdae8fcf3fc49b4e27d02294d2_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>1. <a href="https://github.com/AgriciDaniel/claude-obsidian" class="external">https://github.com/AgriciDaniel/claude-obsidian<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> をクローン</p>
+<p>2. `bash bin/setup-vault.sh` を実行</p>
+<p>3. Obsidianでフォルダを開く</p>
+<p>4. `/wiki` でVaultを初期化</p>
+<p>5. 好きな記事を `.raw/` に入れて `ingest` する</p>
+<p>5分で始められます。</p>
+<p>どうでしたか。</p>
+<p>記事を書いていくうちに自分でもこうすれば、うまく回せるしコストも削減できるのかってめちゃくちゃ勉強になりました。</p>
+<p>自動化レベルまで運用を極めるのは難しいですが、極めた人を参考にすることはできるのでどんどん学んでいきたいです！</p>
+<hr/>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>海外の @defileo 氏（99万ビュー）の解説をりゅう氏が日本語化したX Article。Karpathy “LLM Wiki” 思想を実装したオープンソース <a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a> プラグイン「claude-obsidian」を紹介し、ingest／lint／save／autoresearch／canvas の5コマンドで「知識が複利で増えるObsidian Vault」を構築する全手順を解説している。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. claude-obsidian = Karpathy LLM Wikiの実装版 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AgriciDaniel/claude-obsidian（GitHub ⭐ 1.9k・MIT License）。1記事を入れると 8〜15の相互リンクされたWikiページが自動生成される。「使えば使うほどVaultが賢くなる＝知識が複利で積み上がる」が中心思想。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 3層キャッシュでトークンコストを線形に増やさない設計 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①hot.md（直近コンテキストキャッシュ）②index.md（マスターカタログ）③ドメイン別サブインデックス、の3層で必要なページだけを選択ロード。Vault 1,000ページでも実読み込みは10〜20ページに抑える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 5つのコアコマンド </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>/wiki</code>（骨格構築）／ <code>/save</code>（会話→Wikiノート変換）／ <code>/autoresearch [トピック]</code>（自律リサーチループ）／ <code>/canvas</code>（ビジュアルナレッジマップ・12テンプレ×6レイアウト）／ <code>ingest [ファイル]</code>（.raw/から取り込み）＋ <code>lint the wiki</code>（健康診断）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 1ヶ月後のグラフビューが「複利の証拠」 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>1週間目はリンクまばら → 4週間目には密度の高いナレッジグラフが自動形成。手動では絶対作れない。「自分が何を知っているか」を視覚的に俯瞰できる状態に到達する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. マルチモデル対応＆ローカルファースト </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude推奨だが Gemini / Codex / Cursor / Windsurf でも動作。プロバイダー縛りなし。データはローカルのMarkdownに残り、クラウド依存しない。</p>
+</div>
+</blockquote>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 今日設計したwiki-brain複利エンジンに「足りない3コマンド」が判明 → Phase 7-9 として追加できる</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>claude-obsidian</th><th>wiki-brain</th><th>状態</th></tr></thead><tbody><tr><td><code>/wiki</code></td><td>構造既存</td><td>✅</td></tr><tr><td><code>ingest</code></td><td><code>/wiki-ingest</code></td><td>✅</td></tr><tr><td><code>lint the wiki</code></td><td><code>/wiki-lint</code></td><td>✅</td></tr><tr><td><code>/save</code>（会話→Wikiノート）</td><td><strong>なし</strong></td><td>🔴 追加すべき</td></tr><tr><td><code>/autoresearch</code>（自律リサーチ）</td><td><strong>なし</strong></td><td>🔴 追加すべき</td></tr><tr><td><code>/canvas</code>（ビジュアル化）</td><td><strong>なし</strong></td><td>🔴 追加すべき</td></tr></tbody></table></div>
+<p>特に <strong><code>/save</code></strong> はCORINとの日常会話をWikiノート化する仕掛けとして即効性が高い。会話のたびに資産が積み上がる＝複利の燃料。</p>
+<p><strong>② 3層キャッシュ設計（hot.md / index.md / ドメイン別サブインデックス）を wiki-brain に導入</strong>
+ゆりこのVaultは既に LN 1,583件・concept 21件で膨らんでる。これ以上育てると Compile/Query のトークンコストが効いてくる。claude-obsidian の3層キャッシュをそのまま採用すれば、Vaultが10倍になってもコストは線形にならない。</p>
+<p><strong>③ <code>/save</code> の活用シーン3つ</strong></p>
+<ul>
+<li>CORINとのCEO会話で「決まったこと」が出た瞬間 → <code>/save</code> で StructureNote 化</li>
+<li>kemio・Armillary. の提案レビュー内容 → <code>/save</code> で案件別ノートに統合</li>
+<li>朝の /ohayo の判断結果 → <code>/save</code> で日次ログとして Vault に蓄積</li>
+</ul>
+<p><strong>④ 1ヶ月後グラフビューを「目標KPI」として可視化する</strong>
+Phase 1（Compile自動化）＋Phase 2（卒業システム）の効果測定として、月初・月末のグラフビュースクショを Notion Log DB に貯める運用にすると、wiki-brain の複利効果を数値ではなく <strong>視覚で実感</strong>できる。</p>
+</div>
+</blockquote>
+<h2 id="-関連する複利wiki-brain系literaturenote">🔗 関連する複利・wiki-brain系LiteratureNote<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-関連する複利wiki-brain系literaturenote" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./天才がやってるNotebookLMの限界を超えたClaude-Code-x-Obsidian神ワークフロー！" class="internal alias" data-slug="天才がやってるNotebookLMの限界を超えたClaude-Code-x-Obsidian神ワークフロー！">天才がやってるNotebookLMの限界を超えたClaude Code x Obsidian神ワークフロー！</a> — ケンジさんによるKarpathy LLM Wiki日本語解説（同テーマの兄弟記事）</li>
+<li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal alias" data-slug="元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a> — 同テーマの完全ガイド</li>
+<li><a href="./スマホで喋るだけで-Obsidian-のセカンドブレインが育つ-—-Claude-×-arscontexta-パイプライン実演" class="internal alias" data-slug="スマホで喋るだけで-Obsidian-のセカンドブレインが育つ-—-Claude-×-arscontexta-パイプライン実演">スマホで喋るだけで Obsidian のセカンドブレインが育つ — Claude × arscontexta パイプライン実演</a> — 「セカンドブレインが育つ」実装例</li>
+<li><a href="./𝕏-Obsidianとn8nで自動トレーディングAIを構築した海外事例" class="internal alias" data-slug="𝕏-Obsidianとn8nで自動トレーディングAIを構築した海外事例">𝕏 Obsidianとn8nで自動トレーディングAIを構築した海外事例</a> — 「ナレッジ複利」言及あり</li>
+<li><a href="./🎇-AI_ChatGPTで投稿量4倍にしても成長しない罠_sociyell" class="internal alias" data-slug="🎇-AI_ChatGPTで投稿量4倍にしても成長しない罠_sociyell">🎇 AI_ChatGPTで投稿量4倍にしても成長しない罠_sociyell</a> — Nothing compounds when nothing connects</li>
+<li><a href="./🎇-AI_AIコンテンツよりAI戦略がブランドを成長させる（Sociyell）" class="internal alias" data-slug="🎇-AI_AIコンテンツよりAI戦略がブランドを成長させる（Sociyell）">🎇 AI_AIコンテンツよりAI戦略がブランドを成長させる（Sociyell）</a> — Intentional・Connected・Compounding</li>
+<li><a href="./🎇-AI_Brands-are-quietly-killing-the-one-off-creator-dea" class="internal alias" data-slug="🎇-AI_Brands-are-quietly-killing-the-one-off-creator-dea">🎇 AI_Brands are quietly killing the one-off creator dea</a> — Trust that compounds</li>
+<li><a href="./🎇-AI_Claudeはもうツールじゃない" class="internal alias" data-slug="🎇-AI_Claudeはもうツールじゃない">🎇 AI_Claudeはもうツールじゃない</a> — creative systems that compound over time</li>
+<li><a href="./天才がやってるClaudeCode-x-Obsidian-x-Claude-DesignでAIビジネス構築する方法" class="internal alias" data-slug="天才がやってるClaudeCode-x-Obsidian-x-Claude-DesignでAIビジネス構築する方法">天才がやってるClaudeCode x Obsidian x Claude DesignでAIビジネス構築する方法</a> — 元データ品質論</li>
+</ul>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Obsidian" class="internal" data-slug="Obsidian">Obsidian</a>（concepts） — Obsidianの統合ページ</li>
+<li><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>（concepts） — Claude Codeの統合ページ</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — Claude Codeのwiki層</li>
+<li><a href="./X" class="internal" data-slug="X">X</a> — X投稿のメタノート</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-135" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#-関連する複利wiki-brain系literaturenote" data-for="-関連する複利wiki-brain系literaturenote">🔗 関連する複利・wiki-brain系LiteratureNote</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

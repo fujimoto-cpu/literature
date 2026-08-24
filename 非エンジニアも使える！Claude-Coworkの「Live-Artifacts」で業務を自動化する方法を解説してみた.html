@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた"/><meta name="twitter:description" content="📺 動画情報 非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-06-20 ・ ⏱️ 21分2秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Coworkは非エンジニア向けの実行型AIデスクトップアプリ。中でも「Live Artifacts」機能はMCP連携で外部フォルダの最新状態をリアルタイム反映し、AIエージェント自身（Haikuモデル）がその場で要約・チャット対応までできる”自分専用の業務ダッシュボード”を作..."/><meta property="og:description" content="📺 動画情報 非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-06-20 ・ ⏱️ 21分2秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Coworkは非エンジニア向けの実行型AIデスクトップアプリ。中でも「Live Artifacts」機能はMCP連携で外部フォルダの最新状態をリアルタイム反映し、AIエージェント自身（Haikuモデル）がその場で要約・チャット対応までできる”自分専用の業務ダッシュボード”を作..."/><meta property="og:image:alt" content="📺 動画情報 非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-06-20 ・ ⏱️ 21分2秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Coworkは非エンジニア向けの実行型AIデスクトップアプリ。中でも「Live Artifacts」機能はMCP連携で外部フォルダの最新状態をリアルタイム反映し、AIエージェント自身（Haikuモデル）がその場で要約・チャット対応までできる”自分専用の業務ダッシュボード”を作..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/非エンジニアも使える！Claude-Coworkの「Live-Artifacts」で業務を自動化する方法を解説してみた"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/非エンジニアも使える！Claude-Coworkの「Live-Artifacts」で業務を自動化する方法を解説してみた"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-06-20 ・ ⏱️ 21分2秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Coworkは非エンジニア向けの実行型AIデスクトップアプリ。中でも「Live Artifacts」機能はMCP連携で外部フォルダの最新状態をリアルタイム反映し、AIエージェント自身（Haikuモデル）がその場で要約・チャット対応までできる”自分専用の業務ダッシュボード”を作..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="非エンジニアも使える！Claude-Coworkの「Live-Artifacts」で業務を自動化する方法を解説してみた"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2743"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2743" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた</a></div></nav><h1 class="article-title">非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-04T15:00:00.000Z">2026年7月05日</time><span>46 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li><li><a href="./tags/claude-cowork" class="internal tag-link">claude-cowork</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>非エンジニアも使える！Claude Coworkの「Live Artifacts」で業務を自動化する方法を解説してみた</strong>
+🎙️ にゃんたのAIチャンネル ・ 📅 2026-06-20 ・ ⏱️ 21分2秒
+🔗 <a href="https://www.youtube.com/watch?v=7lJyLVoIja4" class="external">https://www.youtube.com/watch?v=7lJyLVoIja4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/非エンジニアも使える！Claude-Coworkの「Live-Artifacts」で業務を自動化する方法を解説してみた.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Claude Coworkは非エンジニア向けの実行型AIデスクトップアプリ。中でも「Live Artifacts」機能はMCP連携で外部フォルダの最新状態をリアルタイム反映し、<a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>自身（Haikuモデル）がその場で要約・チャット対応までできる”自分専用の業務ダッシュボード”を作れる。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Claude Desktopアプリ] --> B{3モード}\n    B --> C[チャット&lt;br/>Web版と同等]\n    B --> D[Cowork&lt;br/>非エンジニア向け]\n    B --> E[Code&lt;br/>エンジニア向け]\n    D --> F[プロジェクト機能&lt;br/>ローカルフォルダを丸ごと参照]\n    D --> G[Live Artifacts]\n    D --> H[予定済み&lt;br/>スケジュールタスク]\n    G --> I[MCP連携&lt;br/>Googleドライブ等]\n    I --> J[読み込むたびに&lt;br/>最新情報へ自動更新]\n    G --> K[俳句モデルで&lt;br/>要約・チャット追加]\n    K --> L[ローカルストレージに&lt;br/>キャッシュして高速化]&quot;">flowchart TD
+    A[Claude Desktopアプリ] --> B{3モード}
+    B --> C[チャット&lt;br/>Web版と同等]
+    B --> D[Cowork&lt;br/>非エンジニア向け]
+    B --> E[Code&lt;br/>エンジニア向け]
+    D --> F[プロジェクト機能&lt;br/>ローカルフォルダを丸ごと参照]
+    D --> G[Live Artifacts]
+    D --> H[予定済み&lt;br/>スケジュールタスク]
+    G --> I[MCP連携&lt;br/>Googleドライブ等]
+    I --> J[読み込むたびに&lt;br/>最新情報へ自動更新]
+    G --> K[俳句モデルで&lt;br/>要約・チャット追加]
+    K --> L[ローカルストレージに&lt;br/>キャッシュして高速化]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Claude Coworkの基本 — 非エンジニア向けの実行型AIアプリ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>と同じアンソロピック社のデスクトップアプリ内の機能で、月20ドル以上の有料プランなら誰でも使える。「チャット」「Cowork（非エンジニア向け）」「Code（エンジニア向け）」の3モードがあり、Coworkは自分のPCのフォルダにアクセスして作業させられるのが特徴。注意点として「5時間あたりの利用制限が7/5まで2倍」という告知は誤解しやすく、週あたりの利用制限自体は変わっていない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. プロジェクト機能 — フォルダを丸ごと参照させて仕事の文脈を渡す </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「プロジェクトで作業」から自分のPC内の任意フォルダ（議事録・タスク管理表など）を指定すると、その中身を理解した状態で作業させられる。「最新の議事録からタスクと手法を作って」と頼むだけで、過去の手法のフォーマットをそのまま踏襲した新しい手法が自動生成される。フォルダ変更の許可は「常に許可」にしておくと毎回の確認が省ける。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Live Artifactsの核心① — MCP連携でアーティファクトがリアルタイム更新される </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>アーティファクト（HTMLダッシュボード等）に<a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>を繋いでおくと、開く（読み込む）たびに接続先の最新状態を取得して表示を更新できる。デモではGoogleドライブの議事録フォルダと連携し、ファイルを1件削除してからアーティファクトを再読み込みすると、表示件数もリアルタイムで5件→4件に変わった。Googleドライブに限らずSlack・Gmailなど他の外部サービスでも同じ仕組みが使える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. Live Artifactsの核心② — アーティファクト内でAIモデル（俳句/Haiku）が使える </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>読み込んだファイルの中身をその場でAIが自動要約できる。議事録フォルダなら「決定事項を教えて」と入力するとHaikuモデルが回答するチャット機能も、<code>WindowClaudeAsk</code>という仕組みをアーティファクトに埋め込むだけで追加できる。毎回のAI処理は重いので「同じ処理を繰り返さないようローカルストレージにキャッシュして」と指示すれば、再読み込みが速くなる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 作り方のコツ — 新規タスクからOpus 4.5・思考モードON・エフォート高で依頼する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>複雑なアーティファクト作成には精度の高いモデル設定が向く。「Googleドライブの◯◯フォルダを参照して議事録を表示するアーティファクトを作って」という簡単な指示だけで一通り作ってくれる。同期がうまく動かない場合も「原因を考えて修正して」と追加指示すれば自己修正してくれる。見た目のデザインが気に入らなければ別アプリのClaude Designで整えるのも手。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 今週完成予定の「AI情報ハブツール」に”開くたびに最新化”の発想を1個入れる</strong>
+今週の最重要タスクであるAI情報ハブツール（社内向け）に、Live Artifactsの「MCP連携で読み込むたびに最新状態を反映する」という考え方をそのまま応用できる。社内向けに公開する時に「これは静的なページじゃなくて、開くたびに中身が更新される」と一言添えられると説得力が上がる。</p>
+<p><strong>② 案件フォルダ（BIGBANG等）の議事録・タスク管理をCoworkのプロジェクト機能で読ませてみる</strong>
+ポイント2の「過去の手法フォーマットを継承して自動生成」は、逆算スケジューリングが苦手というゆりこの課題にそのまま効く。次に手法・進捗表を作るタイミングで、案件フォルダをCoworkのプロジェクトに設定し「直近の議事録からタスク表を作って」と1回試す。</p>
+<p><strong>③ 「同じ処理を繰り返さずキャッシュする」という設計視点を持っておく</strong>
+ポイント4のキャッシュの考え方は、CORINに何かを自動化させる時にも効く判断軸になる。次に定期実行系の仕組みを頼むときは「毎回AIに解析させず、変化がなければ前回の結果を使い回して」と一言添える発想を持っておくと、重い処理の設計判断で役立つ。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちはニャントです 本日はクロードコワークについて話していこうと思います今年に入ってからクロードコードがすごい盛り上がってるんですが エンジニア向けっぽいツールでなかなか難しくて使えないよという人はいないでしょうかそういう人におすすめなのがクロードコワークというものがあって クロードコワークはエンジニアじゃない人でもクロードコードを使えるように開発されたアプリになっています以前の動画でクロードコワークの入門というところで紹介してるんですがそこから機能も進化していて特にこのライブアーティファクトというものが非常に仕事でも使えそうだなというふうに思ったので</p>
+<p><code>00:35</code> 本日はクロードコワークの機能を簡単に紹介してライブアーティファクトがどんなものなのかというところについても使い方を含めて誰でも分かるように紹介していこうと思います最新の生成AIについて知りたいという人はぜひ見ていってもらえればと思いますそれでは早速やっていきましょう最初にまずクロードコワークって何?って人もいらっしゃると思うので簡単に紹介するとこちらはクロードっていうモデルを開発しているアンソロピック社が提供しているデスクトップアプリで使える一つの機能になっています月額20ドル以上の有料版を加入していれば誰でも利用できて</p>
+<p><code>01:09</code> 自分のパソコンにクロードデスクトップアプリというものをダウンロードするとこんな感じのアプリが利用できてこちらの中からクロードコワークを利用することができますデスクトップアプリ開くと3つのモードがあってチャットモードとコアークとあとはコードというこの3つが設定できますチャットに関しては普通にweb版でチャットするのとほとんど同じになっていてこのコアークとコードに関しては後ろ側でクロードコードと呼ばれる最近話題のAIエージェントのツールが使えるというものになっていますコアークの方が非エンジニア向けでコードの方がエンジニア向けというところで</p>
+<p><code>01:46</code> 難しいんですけどもややできることの自由度が高くて開発とかもしていきたいとかそういった場合はこのコードの方がおすすめなんですが仕事の中でクロードコードを使いたいとかそういった場合はコワークでもいいかなと思います現在コワークは7月5日まで利用量が2倍という風に書いてるのでおっていう風に思った人もいると思うんですがこれちょっと書き方があんまり良くない気がするんですがクロードのモデルはですね5時間のうちで利用できる回数の制限と1週間の利用できる回数の制限というのがあって2倍になるのはこの5時間の利用量の制限なので</p>
+<p><code>02:20</code> 1週間の利用量の制限は変わってないというところは注意が必要ですこのコワークは何がいいのかという話なんですがこれはデスクトップアプリとして自分のパソコン上で動いているので皆さんが普段触っているフォルダにアクセスしてそこで作業させることができます例えば仕事の中で皆さん進捗とか修法とかそういったものを書いてる人多いんじゃないかと思うんですがこんな感じで手法とかあとは議事録とかあとはタスク管理とかそういった情報を格納されているフォルダーがあればこちらをCoreArcで参照させることで</p>
+<p><code>02:55</code> 皆さんの仕事を理解した状態で何かタスクを行わせることができますこちら今CC CoreArcっていうフォルダー名でちょっとデモ用に作ってみたんですけれどもCoreArcにこちらを読ませるにはこちらのプロジェクトで作業っていうところを押して別のフォルダーを選択ですねこちらでちょっと見にくいんですがcc-co-workっていうフォルダーを設定しますこれに関してはクロードにこのフォルダーのファイルを変更させてもいいですかってところで色的には許可が推奨されてるんですが今回は1回1回許可するのがめんどくさいので常に許可を押しますと</p>
+<p><code>03:27</code> 変更したい場合はこちらから変更できますこちらで現在どういうファイルがありますかというふうに聞くとcc-co-workのこちらのフォルダーを参照してるのでこれらのファイルがあるよってところを教えてくれるかと思います現在フォルダの中にはこんな感じのファイルがありますよという風に言ってくれてますねこういう風にコワークに皆さんが普段仕事で扱っているフォルダを設定してあげると例えばですね最新の議事録からタスクと手法を作ってとかそんな感じで入力するとこちらのフォルダにある議事録を読み取ってそこからどういう会議の内容だったのかというところを考えて</p>
+<p><code>04:05</code> タスクと手法を作ってくれます皆さんですねこういったタスクはわからないですが手法とか自分で書いてたりしないでしょうかもしくはチャットGPTとかで手法を作ろうという場合ですねどういう風に指示をして手法を作ろうかなとかそういう風に迷ったりする人もいると思うんですがこれだったら勝手に議事録から作ってくれるので非常に便利かなと思いますそうすると議事録からルールに沿ってタスク管理表を更新して修法を作成しましたという感じで仕事の成果物をこんな感じで作ってくれます</p>
+<p><code>04:39</code> おそらく皆さんの職場でも特定の修法のフォーマットというのがあるかと思うんですがそういったものもですね過去の文をフォルダに入れておけばそれを参照して同じフォーマットで作ってくれるかと思いますこれ今6月12日の手法があってそのフォーマットがこんな感じなんですが今回作ってくれた6月19日の手法に関しても同じようなフォーマットで作ってくれていますというところでですねAI使っていく上ではどうやって自分の仕事の文脈をAIに伝えるのかっていうのは</p>
+<p><code>05:10</code> 非常に重要になってきますCore Actが使えばですねこんな感じで自分のパソコンのフォルダを設定できるのでそこにアクセスして自由に成果物を作れるというところでクロードのウェブアプリとかを使うよりもより仕事で使いやすいかなというふうに思いますその他コアークの機能としては左側のメニューのところからいくつか選択できますまずプロジェクトっていう機能に関しては特定のフォルダを設定してプロンプトとかメモリー機能を利用できるってものになっています例えばこちらで新規プロジェクトにしてプロジェクトをインポートで</p>
+<p><code>05:43</code> クロードのウェブアプリのプロジェクトからコアークにインポートするかもしくは既存のフォルダというのがあってこちら設定するとCCコアークでこんな感じでオリジナルのプロンプトを設定したりとかファイルを追加できますこんな感じでですねWebアプリの方でプロジェクトの機能を使う場合と似てるかなと思いますプロジェクトごとにプロンプトとか設定できるので何か皆さん複数のプロジェクトやってるという場合はそれぞれのプロジェクトでのルールみたいなものをこのプロンプトに設定しておけば使いやすくなるかもしれませんその他機能としてはアーティファクトというのがあって</p>
+<p><code>06:18</code> こちらについては後ほど説明しますあとは予定済みというので定期的にコワークを起動させるような機能があって私が設定しているのはAIニュースダッシュボードリフレッシュというのでこれを使うとですね毎朝8時にAIのニュースを検索してそれをダッシュボードとして作成してくれますちょっと先に見せるとアーティファクトのところでこちらですねAIニュースダッシュボードというもので私が興味ありそうなニュースを分かりやすいダッシュボードでまとめてくれます最近Fable 5のJailbreakとかそういったところについて調べてたので</p>
+<p><code>06:53</code> それに関連したニュースを持ってきてくれたりとかダイナミックワークフローとか先週動画にした内容を調べてこれに関連する情報をまとめてくれてたりしますこんな感じで定期的に情報を調べたりとかあとは仕事の中で使っているファイルとかを定期的にGoogleドライブから更新したりとかそういった場合とかもいろいろと使えますそれがスケジューリング機能ですねこれも新しいタスクのところからクロードとチャットしながら作ったりとかあとは普通に自分で手動で設定することもできますこれめちゃくちゃ便利なので</p>
+<p><code>07:27</code> ぜひ使った方がいいかと思います最初ちょっと何を作ればいいかって悩ましいかと思うんですがARニュースとか皆さんが興味ある情報を定期的にまとめさせるようなそういったものをですね作ってみるといいんじゃないかと思いますあとはディスパッチ機能というのでこれはスマホから操作できるというものになっていますあとカスタマイズですねこちらはスキルとかコネクターといって特定の処理を自動化したりとかGoogleドライブとかそういった外部のサービスと連携するためのそういった機能があってですねここら辺もいろいろ便利なものがあって仕事で使えるかなと思うので</p>
+<p><code>08:03</code> 今後便利なものを紹介していこうと思いますここまでがだいたいCore Arcの主要な機能になっています本日紹介したいのはこちらのアーティファクトと呼ばれる機能になっています皆さんこちら知ってたでしょうかこちらは今年の4月にリリースされていたみたいであんまり話題になってないかなと思うんですが私もですね久しぶりに怖く触っていてなんだろうなと思っていろいろ使ってみると人によってはかなり便利かなと思ったので紹介させていただきますこれは先ほど紹介したようにこんな感じの html のダッシュボードとかそういったものを作れる機能になっていますそれだけだったらすごくないかなと思うんですが私がいいなというふうに思ったポイントとしては2つあって一つが mcp を連携すれば最新の情報を開いた時に読み込めるというもので例えばですね nyantameeting Minutes Dashboardというのがあるんですけどもこちら今開いたらドキュメントが読み込まれたと思います</p>
+<p><code>09:00</code> これ再度読み込みするとこんな感じで何かを読み込んでいる挙動が確認できたと思うんですがこれはMCPでGoogleドライブの特定のフォルダと連携しているのでこれ読み込みを行った時にそのドライブにある情報をリアルタイムで取得してそれを表示していますこちらが連携しているGoogleドライブのフォルダになっています今ですねGoogleドキュメントとしては5つあるのでCoreアクの方に関しても5つのGoogleのドキュメントが確認できます例えばこちらですね削除しますと</p>
+<p><code>09:34</code> 今ドキュメントとしては4つになりました1つはExcelのファイルがあるという感じですねこれでCoreアクの方で再度読み込みをしますそうすると先ほどは5つあったんですが1つ削除されたので今4つに更新されているというところでリアルタイムでこのダッシュボードを読み込むたびにmcpで連携しているこちらのドライブと同期して最新情報がこちらに反映されるんですねこちらで何か気になったドキュメントがあったら原文を開くというふうに押せばこんな感じですぐにそのファイルを閲覧することができます</p>
+<p><code>10:09</code> というところで他にもこのタスク管理というところを見ればこれは先ほどのフォルダーのタスク管理のExcelですねこちらの方を読み込んで表示をしてくれていますこちらですねこれを見やすく表示してくれているのですぐに状況が理解できると他のチームメンバーと仕事していて何更新されているのかなとかそういったところを見るには非常に便利かなと思いますGoogleのサービスを使ってないよって人いらっしゃると思うんですがこれ本質としては読み込むたびにMCPで最新情報を持ってこれるのでもちろんGoogleドライブじゃなくても</p>
+<p><code>10:43</code> 外部のサービスをいろいろ連携させればアーティファクト上で他のサービスの更新状況っていうのをここで一元管理できるというものになっていますなので何かわからないですけれどもスラックとかですねGmailもそうですがそういったものを連携して連絡を確認したりとかGoogleドライブだったら先ほど見せたように特定のフォルダとリンクしておけばこのコアーク上で全てを見やすいダッシュボードで確認することができますちょっとこれが見やすいかっていうのは一旦置いといてこんな感じで使えるというのがアーティファクト機能ですもう一ついいポイントがあってこちらはこのアーティファクト上でクロードの俳句のモデルですね</p>
+<p><code>11:21</code> それを利用することができますなのでちょっと字がちっちゃくて見にくかったら申し訳ないんですがこれ今AIの要約が勝手に作られていますこれも設定しておけばそのファイルの中身を読み込んで自動で俳句のモデルでそのファイルの中身を要約した文章を作っておくことができますなので例えばこれだったら何かの議事録があってその議事録の内容をいちいち読まなくてもAIで要約させた文章を読めば概要をつかめるかなと思うのでそんな感じでこのCoreArcのダッシュボード上でAIのモデルを使って情報を表示させることができます</p>
+<p><code>11:57</code> というところでMCPによる最新情報の取得とこのサイト上のAIのモデルを使ってそのファイルの中身を読んだりとか情報をまとめさせるとかそういったことができますと言ってもですねよくわからないという人もいらっしゃると思うのでどんな感じで作れるのかというのをちょっと見ていきましょう今回ですね仕事の中でも使えるというイメージを持ってもらうために会議の文字起こしをGoogleドライブに保存しているという仮定のもと便利なツールを作っていきますまずGoogleドライブ開いてですね何かしら適当にフォルダを作っておきます</p>
+<p><code>12:31</code> 株式会社にあんたの会議文字起こしデータとか適当に何でもいいんですけどもこんな感じでフォルダを作っておきますこれをですねチームで共有して会議をしたら文字起こしデータはこちらに保存しましょうという風に決めたとしますいくつかの文字起こしのデータをこんな感じでちょっと作ってみました開いてみるとこんな感じですね文字起こしのデータが入っていますちょっと短いんですがデモなのでこんな感じでいくつかの会議の文字起こしのデータが入っているとこちらで今回利用するデータの準備ができたので続いてコワークの方でアーティファクトの方を作っていきますアーティファクトを作る際にこちらの新規アーティファクトから作成することもできるんですが色々と選択肢が出てくるのでこれちょっとめんどくさいので今回は普通にコワークの新しいタスクからアーティファクトを作っていきますこれ仕組みとしては細かいんですけれどもアーティファクトのMCPっていうのがデフォルトで設定されていて</p>
+<p><code>13:29</code> それを使ってアーティファクトでページを作ったりとか更新したりとかそんな感じで動作しますなのでアーティファクトのMCP関連としてどのようなものがありますかというふうに入力すると現在設定されているMCPのツールがこんな感じで出てきますアーティファクトを作ったりとか更新したりとかあとはリスト表示したりとかですねこの4つがあるよというところが分かります特にここら辺は理解しなくてもいいんですが仕組みとしてはですね後ろ側でクロードがそのMCPを使ってアーティファクトを操作してるんだなという風に理解しておくとより肌感覚を持って作れるかと思います</p>
+<p><code>14:04</code> アーティファクトを作るのはそこそこ複雑かなと思うので今回はオーバスの4.8のモデルを使いますシンキングモードにすると精度が高いのでこちらの思考はオンにしておきますエフォートレベルに関しては高いを設定してこちらのチャット欄で指示を送るとアーティファクトを作らせることができます大事なのが先ほどのGoogleドライブですねこちらと連携させないといけないのでこれもですねコアークだったら非常に簡単でコネクタのところからGoogleドライブをオンにしますこれもしかしたらGoogleドライブ出てなかったら</p>
+<p><code>14:37</code> コネクタを管理というところからGoogleドライブが未接続になっているかと思うのでそちらから追加してもらえればこんな感じでGoogleドライブ連携できるかと思いますはいそれではですねこの状態でアーティファクトを作っていきますまずGoogleドライブのこちらのファイル名ですねこれを渡してあげてどこのフォルダを読めばいいのかというところが分かるようにGoogleドライブの下記のフォルダを参照して議事録をきれいに表示するようなアーティファクトを作成してくださいはいこんな感じでですね入力します非常に簡単な指示なんですがおそらくこれでも作ってくれるんじゃないかと思います</p>
+<p><code>15:14</code> 今進行状況としては一つ目が終わって議事録のデータを構造化しているというところが終了してますね順調に進んでるかなと思います今ですねアーティファクト作成っていうのが出てきたのでこちらで作成をしますそうすると右側にこんな感じでhtmlで会議の議事録を確認するようなそういったアーティファクトが作成できていますこちらでアーティファクトの方行くと今作ったニャンタミーティングミニッツというアーティファクトができていてこちらを読み込むとこちらのGoogleドライブと同期して最新情報が取得できるという感じになっていますどうでしょうかちょっと追加でファイルを作ったのでこちらをアップロードしてみると</p>
+<p><code>15:55</code> 誰かが文字起こしデータをアップロードしたという風に仮定してもう1回再度読み込みをしますそうすると読み込んでほしいところなんですが読み込めてませんねこういう場合はですねこちらのチャットから追加指示を行いますGoogleドライブにファイルをアップロードしたんですが再度読み込みで同期されていませんでした原因を考えて修正しておいてくださいGoogleドライブの方にファイルをアップロードしたらこちらのアーティファクトも自動で読み込んで情報が更新されるようにしてほしいですこちらで実行します結構アプリ作ってるとこんな感じでうまく動作しないってところはありますよね</p>
+<p><code>16:32</code> 許可しておきます修正してくれたので更新をしますこれでアーティファクトを読み込むとファイルの方を読み込んでくれるという感じになっているかと思いますおそらく先ほどはAIでそのファイルの中身を要約してくれてたのでその時間がちょっとかかっているのかなというところで今解析をしてくれているという感じかと思います解析が今終わって4つのファイルをこんな感じでまとめてくれていますちょっともう一つファイルの方をアップロードしてみますかこんな感じで全社キックオフの文字起こしをアップロードしますそうするとこちらで読み込むと5件のファイルを解析しているというので</p>
+<p><code>17:10</code> 1つ増えているのでそちらを解析してまたアーティファクトの方を作ってくれているという感じがと思います今ですね終了して5個の議事録のまとめができていますこれなんか毎回読み込むたびにこのAIの要約とかが作られてしまうという場合はですねAIの処理は重たいので同じ処理は繰り返さないようにローカルストレージに保存することができますかという風に言えば読み込んだ際に毎回この解析が走るというところはなくなるんじゃないかと思いますこんな感じで該当部分を修正してくれていますこちらでAIの処理結果をローカルストレージにキャッシュするようにしましたと</p>
+<p><code>17:47</code> いうところで、このアーティファクト上で自治力をまとめた際のこの要約はAIで作っているので、この処理を読み込むたびに実行しているとちょっと重くなってしまうというところで、一度まとめたものはキャッシュしておくので、読み込みが早くなったかと思います。右上のところから読み込みを行うと、こんな感じですぐに表示されるというところで、いい感じにできたんじゃないかと思います。こんな感じでアーティファクトを作ると、毎日こちらを見て会議の状況を理解すると。さらにアーティファクトはAIの機能を入れられるので例えばそれぞれの会議ごとに追加で文字起こしの内容を参照して</p>
+<p><code>18:24</code> チャットが行えるようなそういった機能をつけておいてくださいこの指示でもいいかと思うんですが確かWindowCoreAscなんちゃらみたいなのがあってですねそちらをアーティファクトの方に埋め込んでもらうとチャットが追加できますWindowCoreAscクロードですねこちらの方を入れてもらいますできたみたいなので更新を押しますそうするとこちらにですねちっちゃくて申し訳ないんですがチャットができていますこの会議に対して例えば決定事項を教えてという風に入力すると後ろでこのWindowCoreArcAskCloudという処理が実行されて返答が生成されるかと思います</p>
+<p><code>18:59</code> こんな感じで若干マークダウンが効いてなくて良くないですがこのアーティファクト上でそれぞれの議事録に対してチャットするような機能も追加することができていますおそらくですね文字起こしってこんな短くないと思うのでこういう機能があるとその会議について質問したい場合とかも利用できるかと思います中身としてはクロードの俳句のモデルが使われているみたいなのですごく複雑なことはいけないかもしれないですが会議の議事録ぐらいだったらおそらく俳句でも十分使えるかと思いますこんな感じですねアーティファクトでアプリが作れるんですけれども</p>
+<p><code>19:33</code> 皆さんどういうふうに思ったでしょうかちょっとまだこのデザインとかが微妙だなっていう場合はクロードデザインっていうアプリがあるのでこちらでダッシュボードをきれいにデザインするとかそんな感じで作ってもいいかなと思います私が今作って運用しているのがこちらになっていてこれでニュースとかを確認したりしていますというところでアーティファクトかなり便利だしMCPとかで外部のサービスと連携するっていうのもコアーク上で単純にこのコネクタをつないでおけばできたりするので非エンジニアの人でも非常に開発しやすいかなと思いますぜひ皆さんも何か便利なアプリを作ってみてください</p>
+<p><code>20:08</code> クロードコアークについて紹介してきたんですが皆さんどういうふうに感じたでしょうか非常に進化していていろんな機能があるので使いこなすのが難しいんですが今回紹介した内容を一通り使ってみるとだいぶイメージが湧くんじゃないかと思います5時間制限は7月5日までは利用料2倍なのでプロプランの人もぜひ一度使ってみて感想とかあったらコメントの方で教えてくださいそれでは本日の動画を終了したいと思います本日も最後まで見ていただきましてありがとうございましたこの動画が良かったなと思った人は高評価コメントチャンネル登録と</p>
+<p><code>20:41</code> 最近ではスマートフォンからハイブボタンというのがあるのでこちらを押してもらえるとありがたいですまた私の方からゼロからわかるDFの教科書って本も出してますので生成AIをもっと学びたい人は概要欄の方から見てみてくださいそれではまた次回の動画でお会いしましょうバイバイ</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts） — Claude Code関連の概念ページ</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（StructureNote/concepts） — MCP（Model Context Protocol）の概念ページ</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote/concepts） — AIエージェント全般の概念ページ</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts） — 業務自動化のクラスター</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-970" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

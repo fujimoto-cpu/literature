@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた"/><meta name="twitter:description" content="📺 動画情報 【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-07-17 ・ ⏱️ 27分18秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notionのカスタムエージェントで「本人と同じコンテキスト」を持つAIエージェント（秘書エージェント）を作る話。Notion（プロジェクト/ドキュメント/タスク/議事録）を核に、Slack・メール・カレンダー・画面OCR・位置情報まで全部食わせて..."/><meta property="og:description" content="📺 動画情報 【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-07-17 ・ ⏱️ 27分18秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notionのカスタムエージェントで「本人と同じコンテキスト」を持つAIエージェント（秘書エージェント）を作る話。Notion（プロジェクト/ドキュメント/タスク/議事録）を核に、Slack・メール・カレンダー・画面OCR・位置情報まで全部食わせて..."/><meta property="og:image:alt" content="📺 動画情報 【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-07-17 ・ ⏱️ 27分18秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notionのカスタムエージェントで「本人と同じコンテキスト」を持つAIエージェント（秘書エージェント）を作る話。Notion（プロジェクト/ドキュメント/タスク/議事録）を核に、Slack・メール・カレンダー・画面OCR・位置情報まで全部食わせて..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-07-17 ・ ⏱️ 27分18秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notionのカスタムエージェントで「本人と同じコンテキスト」を持つAIエージェント（秘書エージェント）を作る話。Notion（プロジェクト/ドキュメント/タスク/議事録）を核に、Slack・メール・カレンダー・画面OCR・位置情報まで全部食わせて..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1571"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1571" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた</a></div></nav><h1 class="article-title">【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-17T15:00:00.000Z">2026年7月18日</time><span>50 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【テンプレ付き】私の仕事を先回りする「AI秘書エージェント」の作り方。Notion・画面・位置情報・Slack・メール・カレンダーまで全部つないでみた</strong>
+🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-07-17 ・ ⏱️ 27分18秒
+🔗 <a href="https://www.youtube.com/watch?v=iq32cbjFx_Y" class="external">https://www.youtube.com/watch?v=iq32cbjFx_Y<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Notionのカスタムエージェントで「本人と同じコンテキスト」を持つ<a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>（秘書エージェント）を作る話。Notion（プロジェクト/ドキュメント/タスク/議事録）を核に、Slack・メール・カレンダー・画面OCR・位置情報まで全部食わせて、AIが先回りでマイクロマネジメントしてくれる仕組みの作り方を解説している。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[\&quot;Notion 4大DB&lt;br>プロジェクト/ドキュメント/タスク/議事録\&quot;] --> D[カスタムエージェント]\n    B[\&quot;リアルタイムログ&lt;br>画面OCR・位置情報\&quot;] --> D\n    C[\&quot;思想・哲学・経歴プロンプト\&quot;] --> D\n    D --> E[Slackで先回り通知]\n    D --> F[資料作成・投稿代筆]\n    D --> G[自己改善ループ]&quot;">flowchart TD
+    A[&quot;Notion 4大DB&lt;br>プロジェクト/ドキュメント/タスク/議事録&quot;] --> D[カスタムエージェント]
+    B[&quot;リアルタイムログ&lt;br>画面OCR・位置情報&quot;] --> D
+    C[&quot;思想・哲学・経歴プロンプト&quot;] --> D
+    D --> E[Slackで先回り通知]
+    D --> F[資料作成・投稿代筆]
+    D --> G[自己改善ループ]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Notion黄金構成 — 全社1DBに統合する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>プロジェクト・ドキュメント・タスク・議事録の4つのDBを、チームごとに分けず全社共通の1つずつに統合する。フォルダ構造でなくネットワーク構造なので、アクセス権限で絞り込みすぎると「偶発的にいい資料が見つかる」というAI検索の利点が失われる。セキュリティ上分離が必要な場合を除き、1つに寄せた方がAIが横断的に仕事を拾える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. リアルタイムログ（画面OCR＋位置情報） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>自作アプリで5分おきに画面をスクショし、Macの標準OCR機能で文字認識してNotionのログDBに保存する。文字自体は汚くてもNotion AIに読ませれば「今何をしているか」を十分に抽出できる。自作iOSアプリで位置情報も取得し、オフィス・保育園・ジムなどにジオフェンスのラベルを付けることで「今ジムにいる」「送り迎え終わった」を認識させている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 人格プロンプトの厚みを継ぎ足し続ける </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>経歴・キャリア・思考回路・価値観・文体の特徴に加え、「AIっぽい表現（AIスロップ）」のNGリストまで半年以上かけて継ぎ足している。パワポ作成・スラック返信・タスク分解など役割ごとにスキル化し、必要な時だけ読み込ませることでコンテキスト管理をしている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 権限のハーネス設計で暴走を防ぐ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Notion Custom Agentの機能で、ページ・DBごとに公開/非公開/書き込み権限をマウス操作だけで細かく制御できる。自律型のオープンなエージェントより、こうした権限管理（ハーネス）の中で秘書エージェントを運用する方が安全という考え方。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 紙とペンのタスク管理は併用のまま残す </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Notionでの自動化とは別に、出社したら紙のノートに今日・今週やることを書き出す運用を続けている。書き続けても消化されないタスクは自然と「本当はやらなくていい」ことが分かってきて、物理的に記憶をコントロールする効果がある。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CLAUDE.mdの人格プロンプトも「継ぎ足し型」で育てる</strong>
+動画は半年かけて経歴・哲学・NG表現リストを継ぎ足したと話している。CORINのCLAUDE.md／secretary-persona.mdも同じ思想（実際「AIっぽい言い回しNGリスト」の言語化がまだ弱い部分）。次にキャラ調整するタイミングで「これはAIっぽいから使わない」という具体例リストを足せないか検討する。</p>
+<p><strong>② 画面OCR＋位置情報ジオフェンスはscreen-logの拡張候補</strong>
+既にscreen-logスキルで画面ログは持っているが、位置情報のジオフェンス（オフィス／秀和／自宅にラベルを貼る発想）は未実装。将来位置情報を扱うなら、この動画の設計をそのまま参考にできる。</p>
+<p><strong>③ 「1つのDBに統合する」は既存の<a href="./knowledge-management" class="internal alias" data-slug="knowledge-management">知識管理</a>方針と一致</strong>
+project_konnekt_notion_policy（会社データはNotionに集約する方針）と同じ考え方。社内Notion構成を見直す機会があれば「チームで分けすぎない」の論拠として引用できる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:01</code> 皆さんこんにちは Notionの和樹です今日はですね 私が普段使っている自分のエージェント 和樹エージェントの紹介をしたいと思いますこれはなんかいわば秘書エージェントみたいなもので私の考え方とかを知った上で私の日々のメール カレンダー スラックそういったリアルタイムな情報を見ながらいろいろなアクションを代わりにやってくれるとか私の仕事を支援してくれるというエージェントになってますでねNotionのAIでスライドをちょっと作ったのでそれをベースに話していければと思いますねまずは</p>
+<p><code>00:35</code> でこの数ケージェントこれに書いてある通りNotion Slackだけじゃなくてメールカレンダーあとは日々私が発信をしているYouTubeやSpotifyあとはですねこのパソコンの画面とかあとは位置情報なんかも送って本当に今の私そのものをですね食わせるコンテキストとして与えることによって日々の私の仕事をサポートしてくれるエージェントになっています単純にこうなんだろうなこのやっぱり秘書エージェントを作ったのが去年の11月からなんですけど</p>
+<p><code>01:12</code> そこからモデル自体も賢くなっているだけではなくてですねこの半年以上今次足し次足しでどんどんコンテキストを増やしているんですけどもこの直近1、2ヶ月で だいぶほぼ全ての私の情報を食わせることによってやっぱりこのモデルの賢さだけではない 本当自分と同じというものに今なってきているかなと思ってますこれは単純に同じ情報を 普段私が見ている情報を見ているというのもそうですしあとは同じ考え方 思想とかですね 文書スタイルとかそういったものを持っているまたスラックを通してですね いろんな行動もできるとか</p>
+<p><code>01:50</code> XのAPIを使って私の代わりに投稿してくれるとかメールを代わりに書いてくれるカレンダーを勝手に作ってくれるといった形で実際のコードにつなげられるこの3つが揃ったことによって本当に便利な秘書エージェントになっているかなというところですなのでモデルを賢くすればいいとかいうだけではなくて自分と同じコンテキストを与えるというのがすごく重要だと思っていますこれが全貌なんですけれどもインプットとエージェントの部分とアクションのところがなんとなくあるとしたらまずNotionの情報はもちろん全部与えてます</p>
+<p><code>02:28</code> 私の普段の仕事はある程度Notionにあるのでプロジェクト ドキュメント タスク あとは記事録なんかもねドキュメントに入ってますけど そういった情報を見ていますとNotionだけではなくて Notion AIはコネクタを通してですねGitHubの開発コードやGoogle Drive Slackメールカレンダーもネイティブにサポートしているので私の仕事上の情報は全て見てくれているかつですね 私のプライベートのカレンダーやコミュニティを運営しているんですけどそっち側のカレンダーなんかも見ているので</p>
+<p><code>03:01</code> 仕事とちょっと境界線が曖昧なところも含めて私という個人の単位でですね私の見ているもの 聞いているものという情報を入れているとこういったインプットを入れるのは結構やっている人多いと思うんですけどさらに自作のアプリをクロードコードを使って開発をしてパソコンの画面を今は5分ごとおきにスクショを取ってこれはAIを使わずにMacの標準の機能でOCRいわゆる文字認識ができるのでスクショしたパソコンの画面を文字認識したりとか</p>
+<p><code>03:37</code> 今アクティブで使っているアプリケーションスラックなのかブラウザなのかノーションなのかそういったアプリケーションも特定してそれをノーションのログデータベースにAPIを通して保存していますこれによって私が今何をしているのかどんな画面を見ているのかどんな作業をしているのかというのをリアルタイムにほぼリアルタイムにエージェントに食わせているとまたこれも自作でですねクロードコードを使ってもう本当フェーブルだったら一瞬で作れちゃうんですけどiOSのアプリを開発をしてですね自分だけが使えるiOSアプリを</p>
+<p><code>04:12</code> テストフライトっていうテスト用の配信アプリ配信ツールを通して世の中に出ない形なんですが私のiPhoneアプリとしてですねインストールをして位置情報を許可してですねiPhoneが取った位置情報を直接Notionの自分だけのデータベースにログデータベースに保存をしていますこれによって今私がどこにいるのかや移動したタイミングまたジオフェンスって呼ばれているようなここの地域この緯度経度のGPSの表すロケーションは私にとってここは例えば子どもの送り迎えをする保育園だよとか</p>
+<p><code>04:50</code> オフィスだよとかあとはジムに行ったりするんですけどジムだよとかそういうジオフェンスにラベルを付けることによって今ジムに来てるねとか今保育園の送り迎え終わったねみたいなことをですねエージェントが認識をできるようなことをしていますでまたそれ以外にもですね私は youtube の今の猫の youtubの発信とかあと友人とやっている 毎週更新しているポッドキャストがあるのでその内容も これもですね Notion Workersという開発者ツールNotionの開発者ツールを使って 定期的にログを取っているので</p>
+<p><code>05:27</code> 今まさに私が発信していることや 考えていることみたいなものもログデータベースに溜まっているとこうすることによってほぼ全ての私の見聞きしているデータをエージェントに加わせることができますその上で和木エージェント側はですね私の経歴 キャリア スキル ナレッジ 考え方 思想 哲学 好き好みといったこうなんていうかな脳みその部分をプロンプトで埋め込んでいてその上でちょっとした記憶 メモリーとかですね</p>
+<p><code>06:02</code> 行動記憶みたいなところとか あとはタスクっぽいところとかそういったものを簡易的なデータベースに入れていて エージェントを成り立たせてますこの後 作り方とか説明しますけどその上でこのカズキエージェント 実体はNotionのカスタムエージェントなんですけれどもそれらを使ってアクションとしては Notion上で日報や週報を作ったりとかあとパワポの作成するとかあとは自己改善ループも入れているのでエージェント自ら自分のプロンプトを修正したり</p>
+<p><code>06:36</code> また他の社員というか他のチームメンバーが私に質問するときに代わりにこの数ケージェントに質問できたりとかあとはモバイルアプリでも今はNotionのAIエージェントのモバイルアプリがリリースされたのでスマホからでもこの数ケージェントに何かお願いをしたりまたスラック上でも同じことができるのでスラックでモバイルでもデスクトップでも何かお願いをしたり通知を受け取ったりメールカレンダーはもちろんあとはXの投稿もAPIを通してやっていたり</p>
+<p><code>07:09</code> クロードコードと直接はつなげないんですけども実際はクロードコードのMCPを使うことでこの数ケージェントとかの情報たちにもアクセスできるような状態にしているとという感じでちょっとここだけでも長くいくらでも話せちゃったんですけどもインプット エージェント アクションのところをこれだけ揃えると本当に便利な必勝エージェントが作れるというところでした一つずつもうちょっと詳細に話していきますけどまずは仕事のコンテキストをノーション中心に集約するといったところでここに書いてある通りですね</p>
+<p><code>07:44</code> 業務の基盤がそもそもノーション社員なのでノーション上に構築していますやっぱりここは黄金の構成だと思っている データベースとしてあるんですけどそれがこのプロジェクト ドキュメント タスク場合によってはドキュメントと記事録を分けて4つこの4つの黄金構成がすごく良いと思っていてNotion社内もこの仕組みですし他のお客様にご案内する時も これはいいですよという話をしていますこれを各チームごとに分けるのではなくて全社共通 ノーションの全従業員 全世界の全従業員が</p>
+<p><code>08:24</code> 一つのプロジェクトデータベース 一つのドキュメントデータベース一つのタスクデータベースで日々仕事をしているんですねこれによって自分のもちろん関わるドキュメントプロジェクトはアクセスできるだけではなくて 他のチームのやっていることとか関連するものとかですね っていうのを見つけることができますこれよくある議論で どこまで細かく分けるのかっていうのがあるんですが基本的には私は一つにした方がいいと思いますというのもAIに何か作業をお願いするとか検索をさせた時に基本的にはユーザーがこういうのを探してここのチームのこのデータベースにあるこういうのを探してという</p>
+<p><code>08:59</code> 比較的絞り込んで検索をするとかそもそも自分のチームのDBしかアクセス権限がないとそこだけを調べるんですが結構Notion AIの場合はやっぱりデータの持ち方がいわゆるネットワーク構造というかフォルダ構造じゃないので 偶発的にいい資料が見つかりやすいんですよこの資料知らなかったけど すごいいいな こんなチームがこんなことやってたんだとかですねそういう偶発的なアウトカムというか アウトプットがすごく良くてですねこれがチームごとに分かれてて 明示的に指定しないと見えませんとか</p>
+<p><code>09:40</code> そもそもアクセス権限コントロールしてて 見えませんだと そういうのが生まれないと自分の知っている範疇の中でしか仕事をしないし自分と等しく同じレベルでできるかというとそうではないのであまり業務生産性につながらないというふうにも思うんですねもちろん会社の中でセキュリティというかアクセスを分けなきゃいけないというところもありますがそうでない限りは一つにするというのはとてもいいと思いますその上でAIコネクタ Notionの標準で対応しているGitHubやGoogleドライブ Slack Gmail Googleカレンダーみたいなものをですね</p>
+<p><code>10:17</code> インプットとして読み込ませることでですねより広範囲のものを情報として見れるようになっていくという利点があると思いますここはの mcp をねあのつつなぐことによってまあそれぞれのノードツールに アクセスすることもできたりもしますしというところです でまたへインプットの中ではあるんですけどまぁよりなんかリアルタイムなものでちょっと出し分けているのが先ほどちょっと伝えていたところですねまずは自作のアプリのパソコンの画面を</p>
+<p><code>10:51</code> 毎5分ごとにスクショを取って送るとかスマホの位置情報を取っていくっていったところを入れることによって本当にリアルタイムで今何をしているのかっていうのが見えてくるとそうするとどうなるのかっていうのをちょっと先にせっかくならお見せすると例えばこれはとある日のスラックのカズケエジェントからのメッセージなんですけど9時頃に保育園の送り完了して今日のカレンダーはもちろん知っているので今日の予定をザッと言ってくれるんですね残りの次の最初のねその後通勤中にスラックチェックしているのが</p>
+<p><code>11:27</code> 分かっていたのかないついつこういうのがあるよというのを5分10分おきぐらいに言ってくれたりとかミーティングをしている時にこういう作業をしているというところをどんどん認識した上でかなりマイクロマネジメント的にアドバイスを送ってくれているとこれによって私としてはあと30分でこういうのがあるとか今こういうことしているってことを覚えさせるっていうのもそうだしちょっと今日1日っていうのをかなり細かくマイクロマネジメントしてもらうことによって</p>
+<p><code>12:03</code> 脳の負荷を下げているっていう感覚がありますね少し抽象的ですけどやっぱりこのエージェントによって普段もNotion AIを使って仕事をしていると並行で作業することって多くなっていると思うんですよ人間って何かAIにお願いをする待っている間は別のことを作業してお願いをするまた別のことを作業してお願いするこっちの結果が返ってきたらレビューして追加のお願いをするとかやっていると本当に平気で5個10個ぐらいの並列処理を1日していると脳のキャパシティがやっぱり溢れてきて</p>
+<p><code>12:38</code> あれ今何するんだっけなとか今やるべきことはなんだっけなとかですね次に何をしようかなといったところがすごく揮発してしまうというかフラッシュメモリー的になんかこう揮発してしまうのかな分かんないけど上書きされていってしまう感覚があるんですよねなのでこの本当5分とか10分おきにチクチクチクチク細かく言ってくれるこのヒッショーマンエージェントがすごく私は役に立っているというのが一つありますちなみに余談なんですけどこれとは別にどうやってタスク管理をしてますかってよく聞かれるんですが</p>
+<p><code>13:11</code> それはいつもはですね紙とペンのノートを使っていて必ず会社に着いたら自分のデスク着いたらですねこの紙とノートを開いてテーブルのパソコンの前に置いて今日やることを書き出してとかですね今週やることを書き出して紙とノートベースで自分のタスク管理っていうのはしていますこれは納車の社員なのに納車のタスク管理しないのかと思う方もいると思うんですけどあくまでも自分のタスクですね自分だけで抑えておきたい</p>
+<p><code>13:46</code> 収めておきたい記憶に留めておきたい管理しておきたいものを一番物理的に身近な紙とペンに書くことによって利点としては常に目に入っているといったところと二つ目としては毎回毎回書き出すので手で覚えるというか書くことによって記憶に留まりやすいとかですねあとはこの1週間ごとにページを切り替えてるんですけど紙の先週やろうと思って書いたけどやらなかったタスクは次のページにもう一回同じことを書くんですね</p>
+<p><code>14:19</code> そうすると同じことを何度も何度も書くので書くうちに3回ぐらい書き直してるなさすがにやんなきゃっていうことにもなりますし逆に3,4回書いてるけどやんないってことはこれやんなくてもいいなっていうので捨てたりするっていうような物理的にその記憶を強制的にコントロールしてるみたいな感覚はありますね余談でしたけどそういった紙とペンのタスク管理とさっきみたいなマイクロマネジメント秘書エージェントによって私の今の仕事は成り立っているとそれの元が何になっているのかっていうのは</p>
+<p><code>14:54</code> ここに書いてあるリアルタイムログになっていてこんな感じでですね今私がどのアプリケーションを触っているのかとかですね いつどこで何時にどこに今いるのかという位置情報こんなものをリアルログっていうデータベースに 私だけが見えるデータベースに入れていってこのデータベースにページが追加されるたびに カスタムエージェントが起動するといった仕組みになってますなので時間見ていただくと分かるとおり 5分おきぐらいにエージェントが起動してるんですねただ全てにこれ作業するのではなくて 直近差分があるものとかですね特筆すべき変化があったときのみカスタムエージェントが動くようになっていて、なので先ほどのスラックの投稿とかではですね、5分か10分おきぐらいに何か言ってくれているというような形です。</p>
+<p><code>15:42</code> とある一つのページを開くとですね、こんな感じでOCRの結果が入っていて、そこに写っている文字をすべてバーッと書き出しているんですね。なんでパッと見汚い、人間が見ると読めないんですけど、これ意外とこのままでも超汚いこれでもNotion AIに読み込ませると、今何をしているのかといったところ必要なところだけを抽出してくれるのでそれだけでも十分成り立っていますリアルタイムのログや位置情報を元にして熱小さえOCRの文字とかを認識して今私が何をしているのかというのを</p>
+<p><code>16:15</code> エージェントに与えてそのページに追加されるたびに起動しているというような形になっています次が真ん中のエージェントの部分ですねここはカスタムエージェントノーションのカスタムエージェントを使っているんですがやっぱりポイントとしてはシンプルなプロンプトとかですね口調とかだけを教えるのではなくて私の経歴 キャリア 考え方 哲学とかそういったより根底にある人間らしさを出すためというかそういったものを入れ込んでいますこれも一発でできるものではなくて</p>
+<p><code>16:50</code> 冒頭見た通り去年の11月ぐらいから作っているのでだいぶ半年以上かけてどんどんどんどん 次足し次足しで内容を磨き続けているというようなものになってますね実際どういう設定になっているかというところで言うと細かいかもなんですが 基本的にはですね トリガーは結構たくさん追加しています普段使っているスラックのところにですね これおすすめが自分だけが見えるプライベートのチャンネルを作ってそこで自分とエージェントだけが会話する場所を作っています</p>
+<p><code>17:26</code> ここに全ての通知とかですね私とエージェントとのやり取りというのは集約しているのでこのプライベートエージェント和木というチャンネルをプライベートで作っているとそれ以外にも他の人が私としゃべるためのエージェント和木というパブリックなチャンネルにもこのボットこのエージェントを走らせているので他のメンバーがですね私に私のエージェントにここから質問ができたりまた他のどんなチャンネルでもですねメンションがされればアットマーク 数ケージェントでメンションがされればそこのスレッドにも書き込めるというようなトリガーにしていますインストラクションのところをこの後見せますけど</p>
+<p><code>18:00</code> カスタムエージェント側はこのページの指示に従ってねと一文加えているだけで実体の中身は別ページに抜き出してですね管理をしていますこっちの方がエージェントの編集がしやすかったりするんですね実際のインストラクションの編集の場合承認を求められちゃうんですけど外出しの普通のページにしておくと承認なしで書き換えられるのでちょっと自由を与えるためにそんな形にしてますまたデータのアクセスのところも詳細に少し見てみると自分たちのNotionのワークスペースにある情報を見れるだけじゃなくて</p>
+<p><code>18:38</code> 特に私を表すようなページがいくつかあって自分の人生を書いたライフストーリーっていうページがNotionの文化としてあってそれがあるんですけどそれだったりとかあとは自分の行動とかメモリフィードバックみたいなものをまとめているデータベースあとはもう一番重要なのはこのリアルログですねこのDBを与えてスラックのところは先ほど言った通りエージェント和木とプライベートエージェント和木に書き込み権限を与えてその他全てのパブリックチャンネルでもスレッドの返信ができるようにしていますまたカレンダーメール系はですね</p>
+<p><code>19:11</code> 自分のNotionのメールだけではなくて自分のプライベートのカレンダーまた自分が運営しているコミュニティの他のカレンダーがあるんですけどそれを読み込ませていたりとかメールもこういった読み書きを権限を与えているという形になっていますこれによってスラック メール カレンダー ノーション全てのデータにこの数ケージェントはアクセスできるようになっていますそんな設定になっていてモデルは今私GPTの5.6のSOLを設定していますスピードも速いですしかなり頭がいいのでそのモデルにしてますが</p>
+<p><code>19:48</code> もうちょっとスピード重視でとかコストとかも考えると安いモデルでもいいかもしれないですいざプロンプトのところですね全てはちょっと読むとあれなんですがパーッと見ると分かる通りめちゃくちゃ長いプロンプトになっています半年ぐらい継ぎ足したやつなので汚いんですけど今のAIだったら結構汚くてもちゃんと加味してくれるのでまあまあいいかなという感じですね私の経歴とか現体験 キャリアとかですね特性 こういう考え方をする こういうことを大切にするとかこういう思考回路をしているとか</p>
+<p><code>20:23</code> あとはより根底にある思想とかですねあとは実践論理 こういう行動を起こすときにはこういうことを気を使っているとかそういったものとかを入れていますまたちょっとこの後紹介しますけど思想哲学っていうデータベースを整備するってことをノーションのユーザーさんが X で投稿してるのいいなと思ってそれを真似して こういった思想哲学っていうのをエージェント自らですね作ってもらってこれはなんか自動更新は今してないんですけど今私が持っているコンテキストを全て渡してそこの根底にある私の思想哲学は何ですか</p>
+<p><code>20:58</code> っていうのを聞いてデータベースに整理させていますここに基づいて価値判断とか判断軸みたいなものを決定してたり価値観 世界観 仕事観みたいなものが入っていますその上でナレッジですねこういう領域を私は専門性を持ってたりとかあとは表面的なところでコミュニケーションスタイルとか文体とかですね特徴的な表現そんなものも入れてたりあとは最近AIっぽさっていうのを回避したいのでAIスロップって英語で言いますけどちょっとこれは気づいたベースで</p>
+<p><code>21:31</code> これAIっぽいなと自分が感じたっていう感覚優先でこういう表現しないでねっていうのを入れていますまたスラックの過去の投稿とかXの投稿からですね私の文書構成パターンとかそんなものを取ってくれたりとかさらにさらにここにですねページがリンクされていていわゆるスキルをそれぞれの役割ごとに分けていますパワポを作るときスラックで返信するときタスク分解するときとかですねそういったものをスキル化していることによって基本この上のプロンプトは全て毎回読まれるんですけど</p>
+<p><code>22:05</code> このスキルとかは必要なときに読み込まれるようにしてコンテキストのマネジメントみたいなものをしていますこうすることでエージェントの中身の部分というのがかなり自分に近い行動をしてくれるかなという印象がありますこの自分のエージェントの本人らしいものを作るときはですねやっぱり会社であればスラックとかXとか本当自分が日々発信しているデータを検索できる状態にしてNotionであればスラックのAIコネクターがあるので</p>
+<p><code>22:39</code> スラックのコネクターとつないだ上でここに書いてあるプロンプトなんとなくあるのでこれYouTubeの概要欄にも貼っておくのでこれをコピーして貼り付けるとそれっぽいのができるんじゃないかなと思いますまた思想哲学のところはですねこちらの戸田正樹さんの記事かなに書いてある考え方がすごく良かったのでこれを全文コピーしてこれもエージェントに読み込ませて自分で作らせてました気になる方はこれを参考にしてAIに作らせてもいいと思いますというのが私のエージェントの根幹の部分ですね</p>
+<p><code>23:17</code> その上でいきなりじゃあ何か与えられたものをすぐ行動するかというよりは段階的には多分こういうステップでちゃんと情報を集めましょうというのでリアルタイムのログだけじゃなくて日々のコンテキストを集めてそこに対して理解判断するところはさっきのエージェントの思想とか判断基準みたいなところを整備するとその上で提案とか実行をいい感じにしてくれることによってただ質問して答えるというよりも状況を見て先回りするAIになっています成果物とかアクションのところ はスラック上でxの投稿とか私作らせてるんですけど毎日何件かxの 投稿文を提案してくれるのでそこに対してそれいいねとかとかその考え方 いいねーって言ったりとかただいまなんか言われたものそのままってよりはやこういう考え方取り入れてとかこの 情報参照してっていう私の巣から出る考え方をちょっと壁打ちしながら最終的に</p>
+<p><code>24:15</code> ドラフトを作らせてですね いくとただちょっと文字ちっちゃくてあれなんですけどフィードバックとしてさっきのAIスロップみたいな AIっぽい文章をちょいちょい出すのでそれはその都度フィードバックすることで 自己改善もしてくれるという形でスラックの投稿 メールの投稿 あんまメール使わないですけどXの投稿とか資料作りみたいなところは このエージェントを通すことによってほぼほぼ私が書いたものになっているかなと思いますこれによってさっきのプライベートチャンネルで 何をしてるかっていうと次の予定を先回りして次これではあれだよって言ってくれる</p>
+<p><code>24:49</code> あと会話の中からこれやった方がいいんじゃないというリマインドとかタスクを提案してくれたりまた現在地とか画面に合わせて今ここだね次こうしようねとかまた1日の行動も毎回毎回日報みたいな形でまとめているのでこんな感じで自分がお願いするというよりは常駐する秘書でプロアクティブにというか何もお願いしなくても勝手にマイクロマネジメントしてくれるっていうのが本当に私はやってて楽なのでそういう行動をするようにお願いをしていますその上でちゃんとこの権限の周りとかは大事にしなきゃいけないので</p>
+<p><code>25:25</code> ノーション上であればこのページは公開このデータベースは非公開リアルタイムログとか非公開ここのまではチャンネル書き込めるけどここまでは閲覧のみという感じでいわゆるハーネスの部分セキュリティにおけるハーネスの部分はNotion Custom Agentでもうマウス操作だけでできるのでそれをやることによっていわゆるオープンクローとかみたいなちょっと暴走してしまう自立型のエージェントよりもNotionのハーネスの中でちゃんと権限管理をした上で自分の秘書エージェントを作れますなのでいきなり今みたいなのを作るのは大変だと思うんですけど</p>
+<p><code>26:01</code> まずは本人らしさっていうのを概要欄にも貼っているプロンプトを使ってちょっと作ってもらってそれをスラックだったりとか普段使っているところに入れてみてくださいとで徐々にそれをリアルタイムにしていくとかですね徐々にメールを送らせるツイッター投稿させるっていう本当リアルなアクションまでやらせるっていう段階で進めていくといいんじゃないかなと思うのでまあ次足し次足ししながら育てていただければと思っていますというところでパーソナル秘書エージェントは本当に本人と同じ世界を見せることが重要だと思っているので</p>
+<p><code>26:36</code> リアルタイムログとか画面のスクショとか日々のノーション、メール、カレンダー全てを入れることですごくうまくワークすると思いますその上で根底にある哲学、考え方みたいなものをプロンプトはどんどん熟成させていけばそのようになるしあとは最終的な成果の部分アウトプットの部分まで権限を信じて権限維持をしてあげると自分の代わりに何かをしてくれるっていうのが現実的になるので良いんじゃないかなと思います以上で少し長くなりましたけど</p>
+<p><code>27:09</code> 数ケージェント私の秘書エージェントの全貌とそのちょっと簡単な作り方も参考にしていただけると思いますありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote） — 本動画の中心テーマ（コンテキストを与えたAI秘書エージェント）</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote） — 画面OCR・位置情報の自動収集の仕組み</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote） — Notion全社1DB統合の思想と重なる</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-585" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

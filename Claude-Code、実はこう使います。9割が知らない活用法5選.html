@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude Code、実はこう使います。9割が知らない活用法5選</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude Code、実はこう使います。9割が知らない活用法5選"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude Code、実はこう使います。9割が知らない活用法5選"/><meta name="twitter:description" content="📺 動画情報 Claude Code、実はこう使います。9割が知らない活用法5選 🎙️ Shin Coding Tutorial ・ 📅 2026-08-06 ・ ⏱️ 18分10秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code の知られざる活用法5選。個人開発者が「ダッシュボード化」「自己分析」「セッション分割」「ブラウザ操作代行」「意思決定スキル自作」でクロードコードを共同経営者のように使う方法を紹介する動画。 🗺️ 全体像 flowchart TD A[知られざる使い方5選] --> B[①専用ダッシュボードで健康状態を可視化..."/><meta property="og:description" content="📺 動画情報 Claude Code、実はこう使います。9割が知らない活用法5選 🎙️ Shin Coding Tutorial ・ 📅 2026-08-06 ・ ⏱️ 18分10秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code の知られざる活用法5選。個人開発者が「ダッシュボード化」「自己分析」「セッション分割」「ブラウザ操作代行」「意思決定スキル自作」でクロードコードを共同経営者のように使う方法を紹介する動画。 🗺️ 全体像 flowchart TD A[知られざる使い方5選] --> B[①専用ダッシュボードで健康状態を可視化..."/><meta property="og:image:alt" content="📺 動画情報 Claude Code、実はこう使います。9割が知らない活用法5選 🎙️ Shin Coding Tutorial ・ 📅 2026-08-06 ・ ⏱️ 18分10秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code の知られざる活用法5選。個人開発者が「ダッシュボード化」「自己分析」「セッション分割」「ブラウザ操作代行」「意思決定スキル自作」でクロードコードを共同経営者のように使う方法を紹介する動画。 🗺️ 全体像 flowchart TD A[知られざる使い方5選] --> B[①専用ダッシュボードで健康状態を可視化..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-Code、実はこう使います。9割が知らない活用法5選"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-Code、実はこう使います。9割が知らない活用法5選"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Claude Code、実はこう使います。9割が知らない活用法5選 🎙️ Shin Coding Tutorial ・ 📅 2026-08-06 ・ ⏱️ 18分10秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code の知られざる活用法5選。個人開発者が「ダッシュボード化」「自己分析」「セッション分割」「ブラウザ操作代行」「意思決定スキル自作」でクロードコードを共同経営者のように使う方法を紹介する動画。 🗺️ 全体像 flowchart TD A[知られざる使い方5選] --> B[①専用ダッシュボードで健康状態を可視化..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-Code、実はこう使います。9割が知らない活用法5選"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-253"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-253" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude Code、実はこう使います。9割が知らない活用法5選</a></div></nav><h1 class="article-title">Claude Code、実はこう使います。9割が知らない活用法5選</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-05T15:00:00.000Z">2026年8月06日</time><span>42 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Claude Code、実はこう使います。9割が知らない活用法5選</strong>
+🎙️ Shin Coding Tutorial ・ 📅 2026-08-06 ・ ⏱️ 18分10秒
+🔗 <a href="https://www.youtube.com/watch?v=zcezBLJXFn4" class="external">https://www.youtube.com/watch?v=zcezBLJXFn4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a> の知られざる活用法5選。個人開発者が「ダッシュボード化」「自己分析」「セッション分割」「ブラウザ操作代行」「意思決定スキル自作」でクロードコードを共同経営者のように使う方法を紹介する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[知られざる使い方5選] --> B[①専用ダッシュボードで健康状態を可視化]\n    A --> C[②/insightsで自分の使い方を分析]\n    A --> D[③セッション分割+記憶は外部へ]\n    A --> E[④Claude in Chromeでブラウザ操作代行]\n    A --> F[⑤意思決定スキルを自作]\n    C --> G[CLAUDE.mdのルール更新]\n    F --> H[パレートの法則で20%に絞る]&quot;">flowchart TD
+    A[知られざる使い方5選] --> B[①専用ダッシュボードで健康状態を可視化]
+    A --> C[②/insightsで自分の使い方を分析]
+    A --> D[③セッション分割+記憶は外部へ]
+    A --> E[④Claude in Chromeでブラウザ操作代行]
+    A --> F[⑤意思決定スキルを自作]
+    C --> G[CLAUDE.mdのルール更新]
+    F --> H[パレートの法則で20%に絞る]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 自分専用の分析ダッシュボード — アプリの健康状態を数値で見る </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>開発中のSNSアプリのユーザー数・伸び・リテンション率などを可視化する専用ダッシュボードを<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>に作らせる。外部公開せずローカルサーバーで動かし、メアド等の個人情報は読み込ませず数値だけ渡すのがポイント。感覚でなく定量的に把握することで、閾値（例: リテンション40%割れ）を下回ったら対策を打つ判断ができる。売上データや自分の健康スコアの数値化など、アプリ開発以外にも応用可能。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. /insights コマンド — 自分のClaude Codeの使い方をAIに分析させる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>/insights</code> というカスタムコマンドで、過去の利用履歴から「あなたはどう使っているか」のレポートを生成できる。「調査せず記憶から数字を断言して中断・却下が多発している」等、足を引っ張っている癖や、CLAUDE.mdに追記すべきルール案（デプロイをより安全に・修正内容を5行で説明等）まで提案してくれる。結果を見て「もっと効率的に使う方法は？」と聞き、ルールを更新し続けると生産性が上がっていく。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. セッションを細かく分けて記憶は外部（CLAUDE.md・メモリ）に置く </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>1セッションに改善・バグ修正・データ分析などを詰め込むとコンテキストが汚染される。フィードバック用・経営戦略用・UI/UX改善用のように用途別にセッションを分け、片方の待ち時間に別セッションで並行作業すると効率が約2倍になる。ただしセッションを増やすほど脳のスイッチングコストが二次関数的に増えるため、2〜3セッションが限界。重要な情報はメモリ機能や<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>のCLAUDE.mdファイルに残し、どのセッションからも参照できる状態にする。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. Claude in Chrome拡張機能でブラウザ操作を代行させる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Chrome拡張機能とClaude Codeを連携させると、価格比較・商品検索・カート投入などのブラウザ操作を自動でやってもらえる。決済ボタンなどお金が発生する直前で止めて、そこだけ人間が判断する運用。APIが提供されていないサービス（広告出稿の操作等）への対応にも使える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. パレートの法則・シンプルルールに基づく意思決定スキルを自作する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>フィードバックが300〜400件溜まるような複雑な意思決定の場面で、パレートの法則（20%の行動が80%の結果を生む）に基づいて「今やるべきこと」を絞り込むカスタムスキル（例: DECIDE）をスキルクリエイターで自作する。実データを見せて発動すると優先順位・やる/やらないを提案してくれるが、それを鵜呑みにせず「共同経営者」的に壁打ちし、最終判断は人間が下す使い方。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① タスク・案件の「健康状態ダッシュボード」を作ってみる</strong>
+TaskForge/Cockpitの実績データ（見積もり精度・案件別消化時間・完了率）をClaude Codeに見せて専用ダッシュボードを作らせる発想は既存の仕組み（Mission Control）に近い。<code>/insights</code> 的に「CORINの使われ方」を分析させてCLAUDE.mdの改善点を洗い出すのも一度試す価値あり。</p>
+<p><strong>② テーマが変わったら新セッションに切り替える意識を持つ</strong>
+案件相談・経営戦略・デザインレビューが同じセッションに混在するとコンテキストが汚れる。重要判断はCLAUDE.md・メモリに残す運用は既にできているので、セッション分割の意識だけ足す。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいどうも、しんです。今回の動画は、クロードコードの知られざる使い方5000という内容でお話ししていきます。私、今クロードコードでSNS開発してるんですけど、現在42,000のユーザー様に触ってもらってます。それを開発アップデートしていく中で、その中で新しいクロードコードの使い方みたいなのが分かってきたので、それをちょっと5つ紹介していきたいと思います。このチャンネルではですね、AI×個人開発みたいな、実際にAIを使ってビジネスで成果を出すための方法についてね、解説しているチャンネルになりますので 気になる方は今のうちにチャンネル登録よろしくお願いしますということで早速始めていきましょう</p>
+<p><code>00:33</code> 今回紹介する5選なんですけど 1つ目が自分専用のデータ分析用のダッシュボードを作るっていうこと2つ目が自分のAIの使い方を AI自体に分析させるっていう方法ですねスラッシュインサイトコマンドっていうのを 使ってるんですけど こちら3つ目がクロードデスクトップを使って セッションを細かく切る記憶は外に置くっていうやり方 これが3つ目4つ目がクロード拡張機能を使ってブラウザでマウスでポチポチしなきゃいけない操作をクロードコードに型変わりしてもらうっていう方法5つ目がやるべきことが多すぎる時に発動できるそれをさばけるスキルを自分でカスタムで作るっていう方法ですね</p>
+<p><code>01:09</code> パレードの法則シンプルルールっていうのを自分で作ってそれを発動させるっていう方法じゃあ一つずつこれから具体的な画面を見せながら解説していきたいと思いますじゃあまず一つ目のダッシュボードを自分用に作るって話なんですけど今お見せしているこのダッシュボードは今開発中のSNSの実際のデータになりますこれは個人情報載っていないのでお見せしてもいい範囲なんですけどもユーザー数が例えば総数で4万2千人いますよとか他にも1日にどのくらいユーザー数が増えていますかみたいなそういうダッシュボードを追加したりとかですねXでバズった時は1万4千人増えてるんですけど</p>
+<p><code>01:43</code> だんだんなだらかになってますよねこんな感じっていうのが一目瞭然でわかるしユーザー数がどのくらい伸びていったのかっていうのがこれ一目瞭然でわかりますこれだけのデータだとちょっとアプリの分析に足りないので例えばPMF プロダクトマーケットフィットを達成するために重要な指標としてリテンションっていうのがあるんですよねどれくらい継続してくれるのか1週間 2週間 3週間先どれくらいのユーザーさんが戻ってきてくれるのかっていうパーセンテージも出すことができるんですけどそれはちょっとお見せできないんですけどそういうグラフっていうのも作ることがこれでできるようになりますなので個人開発をしている方だったら</p>
+<p><code>02:19</code> こういうダッシュボードを作ることでアプリの健康状態っていうのを逐次確認することができますだから例えばリテンション率が40%を下回った場合は何か対策を打たなきゃいけなかったりとか逆に40%台をずっと推移しているのであればアプリの健康状態としては良好なので別にそのまま運営をし続ければいいわけですよねだからアプリが今どのような状態なのかって感覚的に理解するんじゃなくて定量的数字でちゃんと把握しておくっていうためにもこのダッシュボードをクロードコードに作らせるっていうのは全然ありかなと思いますこのダッシュボードをどうやって作るのかっていうとこれも簡単で今皆さんがアプリ開発とかしてる</p>
+<p><code>02:58</code> ディレクトリとかクロードコードのセッションがあると思うのでそのセッションのままでもいいですしそのコンテキストを汚したくない場合は新しいセッションを始めてアプリの健康状態を知りたいのでPMFっていうのが数値とかグラフで分かるようなダッシュボードを作ってくださいみたいなそういうプロンプトを投げればすぐにこういうダッシュボードが自分専用に作れますこれは別に外部に公開しているわけではなくてローカルサーバーで動く内容なのでセキュリティ的にも安心かなという形になりますねただユーザー様の個人情報とかをAIにかませちゃうとそれがログとして残っちゃいますので</p>
+<p><code>03:32</code> メアドだったりとかそういうものはかませずにただ数値だけですね数値だけを読み込ませてグラフ化してあげるっていうのが一番いいかなと思いますこのダッシュボードはアプリ開発だけじゃなくて普通に皆さんのビジネス何でもいいですよフリーランスの方だったりとか一人社長の方も売上げのデータだったりとかあとは自分の健康を数値化するのでもいいですよ今裏で私セカンドブレインっていうのを作ってるんですけど毎日記録として自分の健康状態とかを点数で残してるんですよね今日はちょっと5点だなとか今日はちょっと調子いいなみたいなのを</p>
+<p><code>04:05</code> 理由とともに点数として残すことでグラフ化できるんですよねそこで良かった日と悪かった日をクロードコードに相談するみたいなこともできるしそれをダッシュボードでグラフで表すこともできるので何か数値を取り扱っている方であればこのダッシュボード化っていうのは非常に有効なのでぜひね公開は全然しなくていいので自分用に作ってみるっていうのは一つアイデアとして取り入れていただけたらなと思いますというのが知られざる使い方まず一つ目二つ目は自分のクロードコードの使い方をクロードコードに聞くっていう方法ですね</p>
+<p><code>04:37</code> インサイトコマンドについて紹介していきます具体的にどういうことなのって話なんですけどこんな感じでスラッシュインサイツっていうのがクロードコードでカスタムで使えますこれスキル誰でも使えるんですけどこれはですね今までのクロードコードの履歴からあなたがどういう使い方をしてますかっていうのをレポートでまとめてくれるコマンドなんですよねじゃあちょっとブラウザで見ていくんですけどこんな感じですちょっと拡大しますクロードコード利用レポートということであなたはどういうふうに使っているのかオペレーターとして使っています原因調査実装本番反映実機で検証報告者への返信文まで1本のセッションで案件を閉じるのが標準になってますと</p>
+<p><code>05:14</code> 足を引っ張っていることとしたらクロードコード側が数字とかデプロイ状況を記憶から断言してしまうのでそれはちゃんと調査してからちゃんと実行するようにしましょうってことですねそういうことが起きていたので私は頻繁に中断却下することになっていたっていうのが履歴から分かるんですよね他にもなんですけどここにクロードMDに足すと良い項目っていうところでデプロイをもっと安全にやりましょうっていうところだったりデザインを変更する際はちゃんとこういう感じで修正しますけどよろしいですかっていう風に5行で簡潔に説明するみたいなそういうルールを設定したりとか</p>
+<p><code>05:49</code> 日本語パス設定をちゃんとしたりとかねそういうものの提案をしてくれるわけですねそれでじゃあお願いしますって言ったらじゃあクロードMDのルールが更新されるので今まで途中でやっぱやめてとか本番用にちょっとデプロイする時があったらより安全になったりとかデザインの出戻りが減ったりとかよりですね 効率的にクロードコードを使えるようになるので1回ね 皆さんもこのインサイトコマンドをやってみてくださいこの結果からもっと効率的にクロードコードを使える方法は何ですかというふうに聞いてそれでルールを更新していくということをやると</p>
+<p><code>06:22</code> さらに生産性が上がっていくと思うのでやってみてくださいあんまりこのインサイトコマンドについて言っている人がいなかったので私の知られざる方法の一つとして今回紹介しましたというのが2つ目の使い方です3つ目の方法はですね細かくセッションを分けて記憶は外部に置くっていう方法ですねこちら紹介していきますそもそもセッションって何かっていうとクロードコード皆さん使ってますよねアプリ開発とか個人開発ででとあるフォルダを指定してそこでクロードコード立ち上げると思うんですけどそれで一セッションって言われてるんですよね</p>
+<p><code>06:55</code> でそのセッション内にちょっと具体的にコンテキストっていうのがあって今この例えばセッションであればコンテキストウィンドウが今25%埋まってますこれセッション名にある通りクロードコードの使い方強化ということでインサイトコマンドのセッション私は新しく作ってるんですよねみたいな感じでセッションごとにコンテキストっていうのがそれぞれ決まってるわけですねだから例えば一セッションしか起動していない場合はその一セッション一コンテキスト内に全部改善とかバグの修正だったりデータ分析だったりとかいろんな実装内容を詰め込んじゃうんですよね</p>
+<p><code>07:30</code> そうするとコンテキストが汚染されていってうまく開発が進まないってことになるので私はセッションを細かく切ってますどういう感じで切ってるかっていうとこれ左側のサイドバー見ていただいたら分かるようにSNSの名前がバーってあるんですけど例えばフィードバック用のセッション経営戦略どう進めていけばいいかのセッションUI UX改善用のセッションみたいな感じでコンテキストをきれいに保ちたいので細かくセッションを分けてます僕の場合はクロードデスクトップ 今 こうやって分かりやすくセッション名も変更できて管理しやすいので私は今までCLIとかZのエディター使ってたんですけど</p>
+<p><code>08:07</code> 今 このクロードデスクトップ かなり使いやすくなっているので私はこれにも移行してます ここ1ヶ月はずっとこれ使ってますこのセッションを分けることのメリットとしてこの1セッションで何かクロードコードを知り出しして 待ち時間があるじゃないですかその待ち時間の間に別のセッションに知り出しができるので単純に作業効率が2倍近くになりますただデメリットとしては脳のスイッチングコストがセッションを増やせば増やすほど二次関数的に広がっていくのでそ、そこは注意ですね。私はセッションを作るにしても、2,3セッションまでを限界にしています。じゃないとスイッチングコストでめちゃくちゃ脳を疲労しちゃいますので、人間ってマルチタスク苦手なので、そこは注意しなきゃいけないというところですね。</p>
+<p><code>08:46</code> 外部に記憶、メモを残すの話なんですけど、これはメモリ機能ですね。クロードコードってメモリ機能があるので、例えば記憶してくださいというふうに指示出しすると、記憶してくれるんですよね。メモリに保存してくれたりとかあとクロードMDファイルとかに記載しておけばどのセッションでも共通して持つルールみたいなメモみたいなのを残すことができるので重要なものはメモに残しておくっていうのはクロードコードが勝手に判断してくれたりするのでそれでうまいことクロードコードを使ってるって感じですねこんな感じでまだセッション分けられてなかった方はこれぜひやってみてください</p>
+<p><code>09:20</code> このコンテキストの理解っていうのもちゃんとしてないとこのセッション分けるメリットとかも分からないと思いますのでコンテキストを学びたい方は私の過去のYouTubeだったりとかあとクロードコードアカデミーとかの入門の講座でしっかりとコンテキストエンジニアリングの話しておりますのでそちら覗いていただくとより理解深まるんじゃないかなと思いますこれが3つ目ねちょっと地味なんですけど重要なお話でしたはいじゃあ4つ目の知られざる使い方なんですけどクロード拡張機能を使ってブラウザ操作をクロードコードにやらせるっていう方法ですねこれ今見てもらってる画面なんですけどちょっと拡大してみるんですけど</p>
+<p><code>09:55</code> SNSをAndroid対応させるためにAndroidを購入する必要があったんですよねただどういうAndroidの端末を選べばいいかわからないしいろんな種類もあるし価格とかの比較とかも大変じゃないですか探してくるのがなのでこれをクロードコードとクロード拡張機能を使って自動でブラウザ操作してもらってカートに入れてもらうっていうところまでやりました決済ボタンは自分でやるんですけどそこまで全部自動でやってもらったっていう形になります実際にこの端末が届いたんですけどこれでAndroidの実機のテストができるようになったんですけど</p>
+<p><code>10:30</code> これはこの買い物はクロードコードにやってもらったという形になりますのでもうそういう時代今来てるなと思いました具体的にはクロードインクロームっていうのをスキルが多分発動してるんですけどクロード拡張機能ね普通にブラウザで検索してみてくださいクロード拡張機能でねこれで一番上に出てくるのでこれをインストールしていただいてクロードのサブスクリプションと連携するとクロードコードからこの拡張機能を動かせるんですよねだからいちいちブラウザ自分で開いて</p>
+<p><code>11:02</code> 拡張機能ボタンを押してみたいなことせずにこのクロードコードから直接クロードの拡張機能を使ってこれ買ってきてとか例えば買い物だけじゃなくて例えば広告出したい時とかXとかインスタで広告出したい時って操作わからないじゃないですかやっぱり初心者の方ってだからそれも全部クロードコードにブラウザ操作してもらってお金が発生するところだけその手前まで止まって自分で判断して決済ボタンを押すとかそういうことが今できるのでAPIが提供されていないサービスだったらこういう感じで拡張機能で直接操作してもらう</p>
+<p><code>11:35</code> じゃあせっかくなんで皆さんにこのクロードコードが買い物してくれる様子をちょっと見てほしいんですけどもMacBook Proが欲しいから一番リーズナブルなものを公式のページからちょっと探してきてくださいクロード拡張機能を使ってくださいこんな感じでね買い物は自分がもうしないっていう時代に私なってるかなと思いますねということでChrome拡張機能を覗いてみるんですけどこれですねこの画面中央にマウスカーソルがあると思うんですけどこれは全部AIが動かしています今私は何も今動かしていません</p>
+<p><code>12:10</code> AIがこの画面を見て認識してユーザーさんが欲しい商品を探してきてくれるっていう状況なのでなので来年再来年とかにはもうねAIアシスタントみたいな感じで買い物をAIに全部任せるみたいなことはできるんじゃないかなと思いますね一番安いのは24万円ですということでこれはねモデルをちゃんと指定してないのでこの価格なんですけどもうちょっとモデル落としたりとかするともっとお手頃なのが出てくると思うのでそこもちょっとAIと相談すればいいんじゃないかなと思います今はこうやってブラウザ上でAIとやり取りしてるんですけど</p>
+<p><code>12:44</code> 将来的にはやっぱりVRみたいなARみたいなのメガネとかコンタクトレンズつけてAIと喋るみたいな雑務を全部やってもらうみたいな未来は そう遠くないんじゃないかなと思いましたパソコン上でも私 普通にやってるので それがいつ来てもおかしくないなと思いますというのが4つ目の 知られざる使い方でした最後5つ目の使い方なんですけどパレードの法則とシンプルルールみたいな意思決定をする時って結構いろんな複雑な要因を考えて意思決定しなきゃいけないじゃないですか例えば人生においても例えば誰と付き合うのか</p>
+<p><code>13:18</code> 誰と結婚するのかどういう進路に行くのかどういう経営戦略でやっていくのかって重大な意思決定ってめちゃくちゃあるじゃないですか例えば今作ってるSNSもいろんなフィードバックがもう300件400件届いてるわけですねでどれも全部大事なんですよねでも大事なんですけど全部一つ一つやってったら大事なことっていうのがやっぱ前に進まないわけですよね些細なバグとかも全部一つ一つ修正していったら前に進まないのでじゃあ今この状況でこのアプリを成長させるためには何が必要なのかっていうのを優先順位で決めなきゃいけないんですよね</p>
+<p><code>13:51</code> 人生もそうですねその意思決定っていうのは僕たちが今まで決めてきたと思うんですけどパレードの法則だったら20%の行動がその他80%の結果に結びついているだったりシンプルルールだったら単純明快なルールにのっとって意思決定をすれば成果が出るみたいなそういう抽象的なフレームワークみたいなのがもう確立されているわけなんですよねだからそういうスキルを自分で作って何か意思決定に困った時にそのスキルを呼び出すと自分の次に進むべき方向が分かるっていうそういうことを私は最近やってます</p>
+<p><code>14:27</code> 実例を見ていくんですけど、これ経営戦略のセッションでやってるんですけど、SNS開発で。どういうスキルを作ったのかっていうと、こういうね、DECIDEっていうスキルを自分で作っていて、これはスキルクリエイターっていうスキルを発動して作ったスキルなんですけども、実際の実データを見て意思決定を整理するようなスキルで、このスキの中にはパレートの法則ですね成果の大半を生む少数を特定して残りをやらないっていう風に言うっていうね仕事とかでもそうですよね全部引き受けてたら自分が本来やりたいことはできなくなっちゃうので選択と集中しなきゃいけないので</p>
+<p><code>15:01</code> その集中すべき20%のことを見つけなきゃいけないっていうそういうのをこのスキルに肩代わりしてもらうっていうスキルなので実際にちょっと発動してみたいと思いますはいじゃあこのスキルを発動して今このSNS開発で次やるべきことを考えてくださいこういう意思決定の時はフェーブルのモデルに変えた方がいいかなと思いますねこの出される提案を全て鵜呑みにするんじゃなくて自分の共同経営者みたいな感じで使ってますねだからこういう意見もあるね確かにそうだねっていう風に最終的には人間が判断しなきゃいけないんですけど</p>
+<p><code>15:34</code> だから今まで人間のチームでやってきたことを代わりにクロードコードに壁打ちしてるっていう感じになってきてますね僕はもともと一人でなんかいろいろやりたい性格なのでこの時代だからこそチャレンジできてるなとはもうしみじみ思いますねということで今週やることとしたらAndroid Buildを通しましょうチップIAP提出出荷会1回このユーザーへの返信ということですねその他にも製本機能とか考えてるんですけどまだ試作が届いていないのでどうしようもないのでこれからやりましょうみたいなやるやらないっていうのをちゃんと決めてるのでこの結果に対して私は確かにそうだなっていうレベルの出力になっているので</p>
+<p><code>16:10</code> 結構困った時に呼び出せばいいんじゃないかなと思いますね今回は意思決定のためのスキルを紹介したんですけど皆さんお好みのスキルを作成すればいいと思いますスキルクリエイターっていうのがアンソロピックで提供されているのでこれを呼び出して皆さんが毎回行っている作業を自動化するっていうことができますのでお勧めしたいと思いますというのが5つ目の紹介でこれで以上になりますはいということでお疲れ様でした今回5つの紹介だったんですけどまだ探せばいくつかあります例えばリモートコントロールですね</p>
+<p><code>16:43</code> クロードコードをPCだけで取り扱っている人はスマホでも操作できるようになりますスラッシュリモートコントロールコマンド呼び出せばなのでデスク前の作業で結構疲れちゃいますので疲れてきたら横になりながらクロードコードを仕出ししたい時はリモートコントロール使ったりは出ししてますので結構やってますのでそれも一応お勧めしたいと思いますはいということでこの動画が良ければチャンネル登録をよろしくお願いします今本腰1から入れてるのがぬいびよりのSNSになりますのでまだちょっと赤字なのでこれはちょっと黒字にできるように今頑張っていて</p>
+<p><code>17:17</code> 今Androidの実機が届いているのでその対応もしています目標の売上としては来年の2月くらいには1億円2億円くらいの売上は出そうと思っているのでそこまでいけるように引き続きちょっと頑張っていきたいと思いますこんな感じでその中で得た知見だったりとかはYouTubeでシェアして皆さんの個人開発とかに活かしていただけたらなと思います最後にクロードコードアカデミーもやっておりますクロードコードを使って僕みたいなスマホアプリ開発とかウェブサービスを作るための基礎的な土台が身につく講座になってますのであとは今回のスタートアップについても具体的なデータをお見せしながら</p>
+<p><code>17:53</code> 解説したりしているのでプラス今サマーセールやってますので40%引きですね8月末までやっておりますので気になる方は概要欄を覗いてみてくださいという感じでまた別の動画でお会いしましょうバイバイ</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts） — Claude Codeの概念ページ</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote/concepts） — AIエージェントとしての使い方の文脈で関連</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts） — セッション分割・スキル自作による自動化の文脈で関連</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-118" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

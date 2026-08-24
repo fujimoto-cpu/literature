@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【新機能】Notionから Claude Cursor を呼び出す「外部エージェント」を実演解説</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【新機能】Notionから Claude Cursor を呼び出す「外部エージェント」を実演解説"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【新機能】Notionから Claude Cursor を呼び出す「外部エージェント」を実演解説"/><meta name="twitter:description" content="📺 動画情報 【新機能】Notionから Claude / Cursor を呼び出す「外部エージェント」を実演解説 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-06-26 ・ ⏱️ 53分29秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 皆さんこんにちは Notionの和樹です。今日は、ちょうど収録日の本日リリースされた Notionのエクスターナルエージェント、外部エージェントのクロードとカーサーについて紹介しようと思います。これは、クロードのエージェントやカーサーのエージェントを Notion..."/><meta property="og:description" content="📺 動画情報 【新機能】Notionから Claude / Cursor を呼び出す「外部エージェント」を実演解説 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-06-26 ・ ⏱️ 53分29秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 皆さんこんにちは Notionの和樹です。今日は、ちょうど収録日の本日リリースされた Notionのエクスターナルエージェント、外部エージェントのクロードとカーサーについて紹介しようと思います。これは、クロードのエージェントやカーサーのエージェントを Notion..."/><meta property="og:image:alt" content="📺 動画情報 【新機能】Notionから Claude / Cursor を呼び出す「外部エージェント」を実演解説 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-06-26 ・ ⏱️ 53分29秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 皆さんこんにちは Notionの和樹です。今日は、ちょうど収録日の本日リリースされた Notionのエクスターナルエージェント、外部エージェントのクロードとカーサーについて紹介しようと思います。これは、クロードのエージェントやカーサーのエージェントを Notion..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【新機能】Notionから-Claude-Cursor-を呼び出す「外部エージェント」を実演解説"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【新機能】Notionから-Claude-Cursor-を呼び出す「外部エージェント」を実演解説"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【新機能】Notionから Claude / Cursor を呼び出す「外部エージェント」を実演解説 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-06-26 ・ ⏱️ 53分29秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 皆さんこんにちは Notionの和樹です。今日は、ちょうど収録日の本日リリースされた Notionのエクスターナルエージェント、外部エージェントのクロードとカーサーについて紹介しようと思います。これは、クロードのエージェントやカーサーのエージェントを Notion..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【新機能】Notionから-Claude-Cursor-を呼び出す「外部エージェント」を実演解説"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1716"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1716" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【新機能】Notionから Claude Cursor を呼び出す「外部エージェント」を実演解説</a></div></nav><h1 class="article-title">【新機能】Notionから Claude Cursor を呼び出す「外部エージェント」を実演解説</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-27T15:00:00.000Z">2026年6月28日</time><span>81 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/agent" class="internal tag-link">agent</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li><li><a href="./tags/workflow" class="internal tag-link">workflow</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【新機能】Notionから Claude / Cursor を呼び出す「外部エージェント」を実演解説</strong>
+🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-06-26 ・ ⏱️ 53分29秒
+🔗 <a href="https://www.youtube.com/watch?v=fM4diA4Yr0g" class="external">https://www.youtube.com/watch?v=fM4diA4Yr0g<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちは Notionの和樹です。今日は、ちょうど収録日の本日リリースされた Notionのエクスターナルエージェント、外部エージェントのクロードとカーサーについて紹介しようと思います。これは、クロードのエージェントやカーサーのエージェントを Notion側から呼び出して、一緒に仕事ができるようになるというような機能になっています。プロモーション動画でまず見てみましょうか。とかexternal agentっていうのがnotion で使えますといわゆるnotionで管理しているタスクのチケット管理 とかタスク管理ってあると思うん</p>
+<p><code>00:37</code> ですけれども特定のプランとある バグがオンボーディングの中あれがバグがあってプランになった らですねクロードエージェントが自動的に動き出しますでこれは ですねいわゆるクロード本当ピュアなクロードの実行環境で作業して くれるんですねなので普通のnotionやはりお願いするよりも長くまた できることも多くいわゆるコンピューティングリソースを使いながら実行して くれます結果が返ってくるとノーション上のコメントでできましたよっていう のを書いてくれるのでそれを受け</p>
+<p><code>01:15</code> たユーザーは内容を見てレビュー したら今度はcursor agentをatmarkで呼び出しますすると今度はcursor agent がコンテキストを引き継ぎながら実際の実装コーディングをしてくれてますね。実装を完了すると、いわゆるGitHub上で出したプルリクエスト、PRのステータスになり、エンジニアとかがレビューをしたら完了するという流れです。こんな形でNotionでタスクを完了していれば、Notion AIだけではなくて、クロードやカーサーのエデントを呼び出して、彼らが得意なコーディングや長時間の分析をお願いすることができるというものです。</p>
+<p><code>01:59</code> これがやっぱりNotionでやりました、NotionAで何かしました、クロードでまたやりますというときにコピペしてしまうとはわけが違いますし、あとはわざわざ人間がコンテキストを与えなきゃいけない逆に人間が与えたコンテキストでしか動かないといったところは単純に品質アウトプットの品質も下がりますし単純に面倒くさいですよねなのでNotionから簡単にこれらが呼び出せれば非常にいいんじゃないかといった新しい機能ですちょうどそんな内容をウェビナーで収録日に話していまして</p>
+<p><code>02:34</code> これは登録が必須で1000名もの登録をいただきで大好評というところでもう入場制限がかかってしまって私のXとかではあまり宣伝しなかったんですけれども今日はちょっとその内容も踏まえながらクロードとノーションの共存のS型や本日発表した外部エージェントをどうやって使うのかというリアルな画面をお見せしながら説明できればと思いますそもそもですね今回話としてやっぱり重要となってくるのがノーションかクロードかの二択って考えてる方まだ多くてですねそうじゃないですよっていった話をしたいです</p>
+<p><code>03:11</code> 現場ではノーション普段使ってるけど例えば経営層のツールの一声で全部クロードの方がいいんじゃないのなんか最近流行ってるでしょみたいなケースがやはりありますそんなねちょっとでも内容は分からないふわっとした認識のままどっちか決めなきゃいけないっていうのはよくあるんですがこれは全く違いますNotionはですねクロードを出しているアンソロピック社と非常にこちらあれですけど仲がいい関係性で全く競合じゃないんですねもちろん機能単体で見たら被るところもあると思うんですけども</p>
+<p><code>03:47</code> ユーザー体験といった意味では全く違う共存できるもの併用できるものでありますまた昨今のキーワードとしてトークンマキシマイゼーションいわゆるトークンをとにかくたくさん使おうAIをたくさん使っていればいいんだという発想からトークンマネジメントといういわゆる限られたお金バジェットの中でちゃんとAIを使うつまりトークンを消費しようよといった話が出てきていますただこれはコストを抑えましょう制限をつけましょうではなくて</p>
+<p><code>04:23</code> ちゃんとビジネスの成果いわゆるアウトカムだったりアウトプットと両立させて適度にというか適材適所にだったりとかROIが見合う形でAIを使いましょうねっていった話がありますAIXの福島さんもですねそんな話をしている記事がすごくバズっていましたねだからこそですねじゃあクロードだけ契約しましたらとりあえずトークン使ってくださいだけだと誰がいつどのぐらい何のためにトークンを使ったのかっていう状況の可視化結構難しかったり</p>
+<p><code>04:58</code> そうすると組織としてどの部門ではいいAIの使い方をして ROIが出てるからバジェットを継続他の部門はそうじゃない 逆にもっとこれを改善しなきゃいけないみたいなそもそも改善の施策すらも打てない、最適化というのができないという中で、というのが問題であると。なのでそこで、いわゆるエージェントの基盤、エージェントのオペレーティングシステム、エージェントOSが重要になるといった話が昨今あります。さらにそれに加えて、ちょうど2週間くらい前ですかね、マイクロソフトのCEOのサティアが出した記事も、これもかなり世界的に流行っていてですね</p>
+<p><code>05:38</code> これまで企業活動で重要とされていたいわゆる人的資本ヒューマンキャピタルに加えてこれからはトークン資本というのが大事なんだよといった記事ですこのトークンキャピタルトークン資本はですね単なるトークン消費の話ではなくて組織が今後ですね企業活動する上で蓄積すべきAIエージェントの活用の土台となるようなものまたその能力のことなんですね具体的には業務コンテキストが正しく組織に蓄積されていることAIが何か実行した時の良い悪いの判断基準</p>
+<p><code>06:18</code> そこに必要なプロンプトだったりレビューの履歴人間のレビューの履歴AIのレビューの履歴また最終的な成果物それらが積み重なってじゃあこの業務っていうのは置き換えられるよね、エージェントにという再利用可能なワークフローや、ここが良い悪いみたいな評価観点みたいなものがですね、いわゆる福利、かの有名なアインシュタインはですね、人類の最高の発明福利だみたいなことを言ってましたけども、福利で、相乗効果でというか積み上げでというか、指数関数的にというか、育つことっていうのが今組織には求められているという話です。</p>
+<p><code>07:02</code> だからですね このトークンを単なるコストではなくてですね 会社の資本としてちゃんと最適化管理 再分配しましょうといったところが非常に今重要なキーワードになっていますその中でNotionは非常にいい使われ方をしておりまして Notionね あんまり知らない方はまだドキュメント管理ツールとかコラボレーションツールだと思っている方が多いと思いますが今は全く違います今は人とAIのためのエージェントのOSエージェント基盤として</p>
+<p><code>07:38</code> ここに挙げているような3つのレイヤーでラインナップを増やしていますまず下からコンテキストレイヤーはいわゆるこれまでノーションが評価されてきたデータベースの構造やブロックの構造情報と情報がつながって本当に構造的にかつ直感的に情報がため込めるナレッジのレイヤーでしたけれども それに加えて 現在は下に挙げてる連携ツールと呼ばれてるような Microsoft Snowflake Salesforce GitHub Slack Jira Google Driveなどなどなど ネイティブで 連携がサポートしているので</p>
+<p><code>08:12</code> 設定さえしてしまえば これらのツールと Notion のコンテキストが繋がって このレイヤーの中に 溜まっているという形になりますいわば さまざまな業務アプリケーションの コンテキストの一元化されたハブみたいなものになっていますさらにその上にあるのがコラボレーションレイヤーですここは本当長らくノーションが評価されてきたところでしていわゆるコラボレーションとして人と人が一緒に仕事をする上で必要な共同編集だったり情報のシェア共有だったりとか</p>
+<p><code>08:49</code> コメント機能とかでそれをレビューしたりとかタスクの看板ボードでチケット管理するであるとかですね通知を飛ばすとかダッシュボードでそれを可視化するとかですねそういったところがこれまでも評価されてきたんですがここにですね最近ではエージェントが同じレイヤーで人と共同作業ができるように進化していますエージェントオーケストレーションと書いていますけれども人と人が情報を共有し合う人と人が何かコメントで</p>
+<p><code>09:23</code> 何かタスクを依頼して作業するのと同じようにエージェントを人間と同格に扱って情報を共有したりコメントで指示を依頼したりということができるようになっていますこのあたり後半で実際の画面でお見せしますけれども人とヘッドとのコラボレーションレイヤーが今は人とAIまたAIとAIのコラボレーションレイヤーになっていますそして最後に一番上がエージェントレイヤーですねここはもう長らくNotion AIとして提供してきたノーションのページの文書生成とか</p>
+<p><code>09:58</code> 何か全体を検索するQ&amp;AとかですねそういったものまたAIミーティングノートなどのミーティングの文字起こしをするものだけではなくて現在はカスタムエージェントと呼ばれる一つの仕事の流れのワークフロー仕事の流れをエージェントという形でパッケージ化してそれを一人の人が作ればみんなが使えるような形で組織全体に流通させることができる機能を出しています。これによって今までは一人一人が自分のNotion AIを開いて何か指示を出すとか、何かお願いをする、そのためのスキルを一生懸命整備するとか、</p>
+<p><code>10:38</code> 本当に一人一人に委ねられていたAIの活用、ある意味そこに一人一人の責任になっていたところが、カスタムエージェントという組織全体に再分配できるエージェントのパッケージがあることによって一人の人が一度良いものを作ればそれをあとはみんなが乗っかって使えるようになっていくことができますここもこの後説明しますけどもそんなものがあるそれに加えてちょうど収録日の今日ですねリリースされたのが外部エージェントエクスターナルエージェントというもので</p>
+<p><code>11:16</code> これまではNotion AIをエージェントで使いましょうとしか言ってなかったんですがもちろん持ちは持ちやというかコーディングはやっぱりクロードの方がいいよねとかコードの分析にカーサーの方がいいよねとかいろいろありますなのでそういった外にあるエージェントもNotionから簡単に呼び出せるようになりましたこれによってNotionだけに依存せずにいろんなエージェントの得意不足に合わせてとかサービスの特性に合わせて仕事の中でシームレスにエージェントとのコラボレーションができるようになっているそういったオーケストレーションができるレイヤーになっています</p>
+<p><code>11:54</code> 細かいどういった機能があるのか全ては説明しないですけれども特にこのAIエージェントレイヤーにおいては本当に多くの機能拡張が去年からされていてNotion AI 一つを取ってもこれだけ細かい機能があるので以前の動画でこの辺解説しているものがあるのでそちらをぜひ見ていただければと思いますその上で今回はカスタムエージェントという仕組みがいかにクロードと共存するのに適しているのか</p>
+<p><code>12:31</code> またはクロードだけでやろうとするとここは難しいからNotionの方がいいんじゃないかなという話をしていければと思いますカスタムエージェントというのは 実際に普段ノーションエアを使って指示を出したり何か質問したり検索したりしているといった その一連の流れをパッケージ化できるものですこのパッケージの仕方としては まずいつ動くのかという設定今までは人間が起点で人間がトリガーで 人間が何か指示を出さなければAIというのはずっと待ち状態だったんですよね</p>
+<p><code>13:06</code> それが現在はNotionでこのデータベースにこんなページが追加されたらとかSlackのチャンネルでどころこのチャンネルでこんな投稿がされたらこんな絵文字スタンプが押されたらこんなメールこんなカレンダーが来たら自動的に動いてねという指示を設定してあげることができますなので結論Notionを開いてなくても24時間365日ですねカスタムエージェントがこのトリガーに従って自動的に動いてくれますその上で何をするのかといったところを指示としてですねプロンプトやスキルを使いながらそのエージェントの動きを制御します</p>
+<p><code>13:45</code> ただプロンプトだけだと好き勝手行動してしまっては困るのでそのエージェントごとにそいつは何ができるのかというアクセスコントロールを設定しますこのデータベースにはアクセスできるけどコメントのみこのページは編集はできるとかですねそんな形で細かく何ができるのかを設定したりウェブ検索のありなしこのURLは検索していいよとかまたMCPでスラックを使ってチャンネルの読み込みはできるけど書き込みはできない</p>
+<p><code>14:19</code> Figmaを使ってこういった図を作成はできるとかですねGitHubでコードの閲覧はできるみたいな形で何ができるのかを細かく管理することができますその上で実際にどう動くのかというモデルの部分も実は我々スイスモデルといって中立的な立場であらゆるLLMプロバイダーと契約をしているのでどのモデルもある意味選択し放題なわけですねGPT 5.5を使ったりクロードオーパス4.8を使ったりジェミニやまたオープンウェイトのキミやディープシークといった</p>
+<p><code>14:58</code> 安いんだけれどもそこそこ賢く今動いてくれるものがあるのでそれを使ったりグロックみたいな新しいものを使えたりとかという形でモデルのプロバイダーに依存しない形でそのタスクやりたいことに合ったモデルをコストも踏まえながら選択できるというのが大きな特徴です単純なコストだけではなくてですねクロードといってもアンソロピックといってもたびたび障害で動かなくなるんですよね、モデルが。 AI っていうのはもはや企業のインフラなので、もう1時間、2時間を止まるだけでも業務が進まないということは今後もうザラにあるあるとそんな時にこういったモデルの選択の自由があるとじゃあ今はGPT使おう今はジミに使おうといった形でですね企業活動におけるLLMのインフラとしてモデルの自由な選択というのは必須になるんじゃないかなと思います</p>
+<p><code>15:54</code> そのような設定を1回設定してそれしか使えないではなくて一つの独立したエージェントとしてパッケージ化してそれを組織全体に配布できるっていうのが大きな強みで例えば定期報告エージェントを作って毎週金曜日の16時に例えば営業チームの顧客提案の資料を全てまとめて今週のアップデートを書かせるとかですねあとはプロジェクト管理エージェントという単位で作って</p>
+<p><code>16:31</code> プロジェクトのデータベースとかを参照しながら関連するスラックを読み込みながら何かこう指示をタスクを作ったりとかタスクのアサインを行ったりとかプロジェクトの報告書を作ったりとかっていうのもできますまたナレッジマネジメントエージェントみたいな単位で作ればノーションが得意としているそのナレッジというのはですね人間がわざわざ作らなくても毎日ここに挙げているようなツールを常に監視をしてナレッジになり得るものを自律的に見つけ出して人間側にこんなナレッジ作成するのはどうですかというのを提案してくれたり</p>
+<p><code>17:07</code> またそのたまってきたナレッジに対してスラックなりノーションから誰もが簡単に質問をして精度の高い良い回答を得ることができるみたいな形で企業活動においてそして人間がやっているルーティンワーク、提携業務とか繰り返し行っているもの、型があるものはすべてエージェントに置き換えることができるようになっているかと思います。とはいえ、様々な機能があるとはいえ、ノーションのこれらの機能をすべてまんべんなく完璧に使っているお客様はまだまだ少ないという中で、おそらく3パターンの活用状況があるかなというふうに思います。一つ目はですね やはりまだNotionをただのドキュメントツールとしか使っていなくてですね</p>
+<p><code>17:59</code> もちろんページの作成とか共有とかしてるんだけど タスク管理とかしてるんだけど実態のそのAIの活用といったところはクロードなりですねクロードコードなりを使って何か質問をしてとか コンテキストをコピペして与えて出てきたものをもう一度コピペして Notionのページに貼って誰かに共有してスラックでリンクを共有してみたいなことをやってる方もいると思いますさらにもう少し進むとうちはNotion AIを使っているんだよという形であるんですがとはいえそのNotion AIというのも</p>
+<p><code>18:37</code> AIミーティングノートという文字起こしをするだったりNotionにたまったものを検索するスラックのものを検索するまたちょっとしたページの作成をするのに使っている いわば程度というかぐらいにしかまだ活用しきれていない方が多いかと思います今回のいわゆるエージェント的な仕事の効率化というか AIによる自動化みたいなところはクロードを使っていて とはいえNotionとはMCPとかCLI APIでつないでいるからクロードでやった作業がNotionにためることができるんだよということも</p>
+<p><code>19:16</code> 考えている方もいるかなと思いますただここには結構大きな落とし穴があってこれじゃなかなかうまく成り立たないというのをこの後後半でも話したいと思いますぜひ進めたいというのが絶対こうなった方がいいでしょうと自信を持って言えるのがNotionをやはりエージェントOSとして位置づけるパターンですね先ほど言ったようにAIエージェントのレイヤーでカスタムエージェントでノーション内のことを自動化するのはもちろんですけれども外にあるクロードに適切にコンテキストを渡したり</p>
+<p><code>19:51</code> またこれらの他のツールともですねつながることでいわゆる仕事をナレッジワークと呼ばれているような知的労働の業務の流れをぐるぐる回せるようなループが閉じるような形で作るのがすごく最適な形かなというふうに思っているのでこの辺りをデモとかでお見せできればと思いますまずはですねNotionとクロードが完全なバラバラの場合これはもう言うまでもなく不便なのでやめましょうというところですかねNotionでこういう作業をしている</p>
+<p><code>20:25</code> ページ作る、誰かに共有する、共同編集する中で何かAIに質問があるときにはクロードに何か頼んでですねその回答をコピーして貼り付ける普通に面倒くさい、都度手動でコピーするのは非効率であることに加えて、コンテキストを人間が与え続けるのって、人間が知っていることしかAIに渡せないので、今の仕事を超えられない。6、7割の自動化しかできないんじゃないかなというふうに思うんですよねなのでそれでは困ると</p>
+<p><code>20:59</code> なので少なくともNotionをクロードとですねMCPとかでつなげるってところは非常にまず重要ですNotionで何か作業してクロードに移りましたそこで何か文章を生成してっていった時にMCPを使ってその作業ログをNotionに保存したりとか作業する流れで必要な情報をNotionから取ってくるといったところをMCPを介してお願いするというのは十分にやっていただけるところかなというふうに思いますこれだけでコピペの作業がなくなりますし</p>
+<p><code>21:34</code> ちゃんとクローズの利活用状況ログみたいなとか成果物みたいなものをNotionに簡単に保存ができるのでおすすめです一方でですねMCPを使っていると実際に使うと分かるんですけど遅いんですよ遅いというのとトークンの消費量も激しいのでただNotionにページを保存したいだけなのにクロードを使うとトークン消費が激しくて時間もかかって2分とか普通にかかっちゃう時あるんでね全然仕事にならないわけですよだったら絶対にNotion AIでやった方がいいし</p>
+<p><code>22:08</code> Notion AI切り捨ててまでクロードでMCPあれば何でもできるって言ったっていうのはあんまり現実的ではないかなというふうに思っていますさらにリアルな仕事を俯瞰してみてみると もちろんNotionとクロードで仕事って完結しないわけですよねそこには様々な業務ツールがあったりとか 実際に仕事の始まりは何か人との会話ミーティングで始まることも多いと思うんですけど ミーティングをすると会議の文字起こしみたいなものが Notionでもそれ以外でも出てくる</p>
+<p><code>22:43</code> 文字起こしした内容をまたコピーしてクロードに頼んで、そこから企画書を作らせて、Notionにページ作成して検索させて、毎回クロードのチャットでセッションでプロンプト打ってお願いする。メールカレンダーは繋がってたり繋がってなかったりするから自分で見てスクショ撮って与えてコピペして与えて出てきた結果をまたNotionに貼り付けて共有ボタンを押してページのリンクをコピーして誰かにスラックで共有してとか結局リアルな仕事ってこういう人手の作業っていうのは</p>
+<p><code>23:20</code> どうしても発生してしまうこれじゃあNotionとCloudがMCPで繋がっているから全部大丈夫だというわけにもいかないというのも分かると思いますやっぱり個人レベルでは便利なんですよ手元のローカルのパソコンの中で動くクロードコードないしクロードがNotionとつながりながら何か作業してくれると自分の中だけであればですねMCP接続したりクロード.mdで指示書を作っておいてですねそれに従わせるってことはできるんですが</p>
+<p><code>23:57</code> 基本は全てユーザー任せなのでエンタープライズの契約だったら管理者がある程度の設定を強制させることができるんですけどそこで実際にじゃあMCPを使って保存させるとかこういう時はさせないとかっていうのを全員が同品質で構築するのってまあ無理だと思います従業員が100名 300名 500名 1000名になったらなおさらですよねMCPでつながっているとはいえ 全ての起点は人間になってくるわけなのでクロードコードを使って何かを指示をするとかですね</p>
+<p><code>24:34</code> といったところでなかなか難しいんじゃないかとスケジュールの設定とかその辺はできるんですけど その程度であるというところがあると思いますそこでエージェントOSの場合はどうなるのかといったお話をしたいんですが先ほど見せた実際のリアルな仕事というのもNotionのエージェントを使っていくとスムーズにつながると思います特にクロードで毎回クロード起点であれをお願いするMCPでつなぐようにしておくというわけではなくて</p>
+<p><code>25:10</code> Notionのカスタムエージェントを使えばまず一つの仕事の流れをカスタムエージェントというエージェントの単位にパッケージ化させることができるんですね例えば会議の文字起こしをNotionで取っていたとしますミーティングノートというのを立ち上げて文字起こしが実行されるミーティングが終わったら停止ボタンを押すと自動的に要約が作られて完成するその完成というのをトリガーにして自動的に文書生成エージェントが動きます会議のまとめエージェントでも何でもいいんですけどその文字起こし側の情報をもとにさらに詳細な要約を作ったり</p>
+<p><code>25:49</code> こんな会議が終わりましたっていうのをスラックに通知を飛ばしたっていうエージェントさらにそこから作られたものからですね別のエージェントがタスクを自動で作って誰かに割り当てを行ったりとかするタスクの割り当てエージェントがいるタスクごとには何か別のエージェントがいて業務をアシストしてくれたりメールカレンダーを自動的に知られて加味してくれるエージェントがいたりといった形で1個の仕事の流れごとにカスタムエージェントというのでエージェントの動きをパッケージ化させちゃうと</p>
+<p><code>26:26</code> 一回これを作ってしまえば毎回毎回会議が終わるごとにクロードコード開いてプロンプト書いてスキルでも何でもいいんですけどお願いすることなく自動的にエージェントが回ってくれるようになりますこれやっぱり何が嬉しいのかというと例えば仕事で言うと会議から始まるとして会議から成果物までの始まりから終わりまでの一貫したユーザー体験っていうのがスムーズにつながるんですねさっき言ったみたいに会議が終わったら自動的に何かできて</p>
+<p><code>27:02</code> タスクが作られてページが作ってメールカレンダー参照してコーディングのところまで進むとここでクロードコードの方がコーディングは良いと長期の実行とかローカルのコンピューターを使いながらっていったところだといいのでそのノーション上で作られたページやGitHub上の何かを参照しながらコーディング自体はして その結果をまたMCPでここはページ上でレビューやりやすいとかこの辺りだけMCPを使ってもいいんですけどそれ以降はまたレビュー完了したら 自動でスラック通知したり</p>
+<p><code>27:39</code> スラックのスレッドで手直しがあったら それを自動的に反映してくれたりそういった形でクロード構造 人間起点ではなくて一度仕事の流れをエージェントにしてしまえばこの流れがスムーズに進むようになりますまたそういった複雑な流れだったりいろんなエージェントが動く中でもノーション上に一元化された透明性のあるコンテキストがたまるのでエージェントがエージェントに仕事を振るときもエージェントが何か人にレビューを依頼するときも</p>
+<p><code>28:13</code> またその人が別のエージェントを呼び出すときも一貫した一つのコンテキストの中で情報が受け渡されるためクローザコードで各々が作業してしまうと結局その人のチャット履歴がそのパソコンにあるだけで他の人が引き継ぐのって明示的に共有しないとされないんですよねこれは会社単位で見たときに全員が積極的にそれを共有しようとするかというとそうはならないと思いますここはやはり長年ナレッジワークというのが難しいとされてきた領域ナレッジマネジメントが難しいとされてきたわけですし</p>
+<p><code>28:50</code> Notionを逆に言うとそれを意識せずとも情報がつながって人にそれが共有されるようなプラットフォームであるその利点をエージェント自体にも活用できるというところですさっきから言ってみたようにパッケージ表現として分かりづらいかもですけど要は一つの仕事の流れユースケースだったりを一度定義したエージェントという形で保存できるんですよね一回それを保存すれば誰かに共有をすれば</p>
+<p><code>29:23</code> 他の人は毎回プロンプト書かなくても毎回コンテキストを入れる入れない考えなくても毎回MCPの設定しなくても再利用できるとやっと仕事というのがエージェントに置き換わるといったところを体験できると思いますなのでさっきの例でもですね文章生成エージェント タスク管理エージェント 横断検索分析エージェントまた別の文章生成エージェント メールカレンダーを吉野に何回やってくれるエージェント行動分析エージェント これは本当一例ですけどもみたいな形で仕事で繰り返し行っているものを あらゆるものをこういったエージェントに置き換えることができます</p>
+<p><code>30:00</code> これは何が嬉しいかというと やはりガバナンスという観点とかあとはコスト管理という観点でも非常にいいかなと思っていますまずNotion上にはですね AIの作成者 エージェントの作成者と利用者がいますどちらもNotionのユーザーで AIが使えるユーザーであればですね普通のNotionエージェントが使えるわけですこの右下から呼び出せるやつですねこうやって</p>
+<p><code>30:32</code> これを使っていればですねもうNotion AIというのはNotionのライセンスに含まれているものなので自由に使えるモデルも選び放題です管理者としてはライセンスのシート課金なので一人一人の人がですねこのNotion AIでどのぐらい使ったのかというトークンの管理は実態としてはしなくてもいいわけですねただ一方で利用量の分析というのはできるのでどのぐらいの人がAIを使っているのかとかその辺を見ることによって 企業でのAI活用 AIの定着というのを</p>
+<p><code>31:09</code> 推進 促進することができます また 管理者側から こういったものは連携できるとか ウェブ検索ができる できないって最低限の管理機能もあります。一方でカスタムエージェントは重量課金のものになっています。どのぐらい動かされたのかで課金がされますが、これはクロードコードとか他のAI製品の主流はこうなっています。作成者の人は自由にカスタムエージェントが作れて、そのうち一つは自分だけが使うプライベートなもの、もう片方はみんなが使えるようなものに共有すると</p>
+<p><code>31:44</code> そうすると利用者としては共有されたものが使えるようになりますいずれにせよどちらのカスタムエージェントも管理者側からですねどのぐらいこのエージェントがお金を使ったのかクレジットを使ったのかというのも見えますしエージェントごとに上限のクレジットを設定できるので特定のエージェントがみんなに使わされて莫大なコストがかかってしまったみたいなこともないわけですその中でちゃんと何ができる何ができないといったアクセスのコントロールMCPの利用制限などをしたり</p>
+<p><code>32:20</code> また作成者が辞めてしまったときの管理とか引き継ぎがあるとかまた監査ログみたいなものからカスタムエージェントがどんな行動をしたのかというのを細かく見ることでエージェントの管理や場合によっては無効化有効化という強い権限で管理することができますといった意味でエージェントのガバナンスという観点だと2つちゃんとエージェントを正しく問題なく使うといった部分とそこにクレジットコストの管理を正しくするといったものが備わっていることが分かると思いますこれがクロードの方だけだとですね</p>
+<p><code>33:01</code> いわゆるこのカスタムエージェントみたいな単位でパッケージ化できるものが難しかったりもするので、誰がどんなエージェントをいつどのぐらい何の用途で使ったのかというのが見えないので、管理者から見るとバクッとこの部門はトークンの消費が今月は100万円でした、こっちは200万円でしたぐらいしかわからないと。ただ内訳や実態は開発のコーディング作業に70万使ってプロダクトチームとの連携の部分で20万使って</p>
+<p><code>33:35</code> サポート分あれ10万が実態であるべきでこれがないと企業がトークンにお金を投資をしているとリターンがどのくらいあったのかという分析作業がかなり難しくなるんですねクロードの場合だとマネージドサブエージェントごとにエージェント単位で分析したりとかあとはオープンテレメトリーかなとかで細かい分析基盤ともつなげながら利用状況の分析とかユーザー単位での分析とかですね</p>
+<p><code>34:09</code> できるんですよユーザー単位にモデルの制御とかログを取るとかもちろんできるんですが多くの人はマネージドサブエージェントを使ってとかエージェントのオプションをつけてわざわざチャットなんかしないことが多くてパッと開いてパッと何かを頼むとその頼んだ内容をちゃんと分析しなければちゃんとそのプロンプトを分析しない限りは何で使ったのかっていうのは明らかにはならないので大多数のトークン消費っていうのはブラックボックス化してしまって不透明な使われ方がされてしまうってこともあると思います</p>
+<p><code>34:46</code> そういうのを踏まえていくとここまでのまとめなんですがやはりこのNotionとCloudにしちゃったこいつではなくてまずは個人利用かチーム利用かの観点でどっちを使うかというところまた利用者目線と管理者推進者目線でも見え方が違うのでこんな観点で見ていくとここはCloudを使わせた方がいいかなとここはやっぱNotionではねみたいな話になると思います特に特筆するところで言うと 個人利用で言うとやっぱりクロードを使っていると私も普段は使ってますけど ローカルのコンピューターで動いて</p>
+<p><code>35:24</code> 高度な推論と長い 何時間かけて実行するとか コーディングしたりとかすごい長い分析するとかですね ローカルのファイル操作するところは長けてますよただ農舎の場合だと日常業務 特に誰かと仕事をするとか議事録取る音声認識させるとかですねその辺はやっぱりすごい便利ですし誰かに共有をする観点ならねなのでチームの観点で言うとさっきのカスタムエージェントみたいな形でエージェントを簡単に配布できるしコンテキストが常にみんなで共有されてるし成果物っていうのも共有されるし</p>
+<p><code>35:57</code> そこからレビューを簡単に反映できるっていうのでチームでエージェントを使う上ではノーションがかなり便利かなというふうに思いますねまた管理者推進者目線やはり細かい管理、細かい制限っていうのは クロードかけられるので、ユーザー単位でモデルの制御とかツール制御、MCB制御みたいな 管理者コントロールも効かせられますし、全体でいうと、さっきのマネージドサブエージェントとかを 配布したりとか、オープンテレメトリで利用条件を細かい分析したり、例えば部門単位で コストの安分するとか、そういったことはできるんですけれども、その中の内訳、ユースケースごとの業務の使われ方の内訳っていうのはやっぱり取りづらいので、そこまでそういうチーム作業でっていう意味だと、</p>
+<p><code>36:48</code> さっきのカスタムエージェントみたいな形でやると、カスタムエージェントという単位でしか使えないので、その辺の分析がしやすくなるんじゃないかなと思いますねまずNotionのカスタムエージェントこの左側にあるところから一覧が出るんですけれどもこんな形で一個一個のエージェントが目的ごとにパッケージ化されていますこれ一つを見ればこのエージェントがどんな設定になっているのかですね</p>
+<p><code>37:23</code> どんなツールにアクセスできるのかどんなモデルを使っているのかというのが見れるだけではなくてこのエージェント側になっている業務にどれだけAIによって効率化されたのかというのが見て取れるようになると思いますカスタムエージェントそのものの作り方とか詳細は他の動画でも説明しているのでぜひそれを見てもらいたいんですけれどもクロードとの連携といったところで言うとカスタムエージェントという単位でいろんなエージェントを作って組織に配布すれば例えばこういう業務フローがあったときに</p>
+<p><code>38:03</code> この業務フローのステータスごとにいろんなエージェントを割り当てたりすることもできたりとか予約ページを作るエージェントとかタスクを作るエージェントとかこのカスタムエージェント自体もいろいろなモデルを使えるので例えばクロードのオーパスで動かしましょうとかこっちはGPT5で動かしましょうとかこっちをGeminiで動かしましょういった形でエージェントという単位で割り当てられるのでこの一つの看板の中でですね</p>
+<p><code>38:37</code> いろんなエージェントを同時に動かすこともできるわけですねそうするとこっちの方ではクロードが動いてくれていてとかですねこっちはGPTが動いていてこっちはGLMというオープンウェイトのモデルが動いていてモデルごとにどこで動かすのかというのを細かく選べるのでクロードとかだと全部オーパスでやらせちゃうとかソネットでやらせるとか細かくユーザー側でどのモデルを使うのかというのを考えなきゃいけない</p>
+<p><code>39:13</code> リテラシーというかそういうのが求められるんですけどこのうちの場合だとカスタムエージェントでこの作業にはこのモデルっていうのを管理者とか作成者が一度決めてしまえば他の人はそれに従ってただ使うだけになるんですよねそういった意味でも結構やりやすいかなというふうに思いますねなのでAIっていうとチャットで何かセッション開いて一個一個お願いするっていうのが主流のイメージがありますけどNotionの場合だとカスタムエージェントをこういうNotionページに住まわせることができるのであとは一度設定してしまえばこうやって自動的に作業を進めて</p>
+<p><code>39:48</code> それが可視化される形で一個一個進んでいることが分かりますけどこうやって一個一個動いてくれるのですごく直感的にエージェントが何しているのかというのも分かるようになると思いますものによってはですね例えばクロードを呼び出すパターンもあればディープシークを呼び出すパターンもあればグロックを呼び出したり</p>
+<p><code>40:24</code> GPTを呼び出したりGLMを呼び出したりということもあるわけですよねそうするとこんな形で一つのコンテキストの中で複数のエージェントを動かすということももちろんできるのでモデルごとの特性を生かしながら作業を並行してお願いしたいとかですね今1,2,3,5つのエージェントがこの一つのページに対して動いてくれているとそれぞれオーパスだったら今考え中かな</p>
+<p><code>40:58</code> ディープシークだったらなんかしてますねまあまあみたいな形でこれはちょっとモデルを一気に動かしてみるという面白い表現の仕方ではあるんですけど、実際の業務であれば、じゃあこのぐらい簡便なタスクはOpenweightのDeepSeekでやらせよう、GLMでやらせよう、この作業は深い分析だからOPASにしようというのをカスタムエージェントという単位でパッケージ化して、あとはこのデータベースにみんなをエージェント招待さえしちゃえば、他の人は気軽に使えてしまうと。かつそれぞれのエージェントでどのぐらい使われたのかという管理もできるので</p>
+<p><code>41:36</code> こいつを見ればさっき見せたようにですねインサイトでいつ誰が動かしたのかなどのぐらいのクレジット消費したのかなというのを見れる形になります。さあ、こうするとですね、いかにNotionがエージェントのOSとして非常に優れているのかというのも伝わると思います。さらにですね、今日この録音しているタイミングで朝ですね、Notionから新しいアップデートがありまして、本日リリースあらゆるエージェントをNotionから呼び出せるように</p>
+<p><code>42:13</code> クロードとカーサーのエクスタンダルエージェント外部エージェントというのをリリースしました先ほどNotionでカスタムエージェントを使っていろんなモデルを使い分けるという話をしましたがそうではなくてそもそも同じさっきの仕組みなんですがクロードとカーサーだけはクロードとカーサーそれぞれの本当ピュアなエージェントの実行環境を呼び出せるようになりましたこれまではノーションのカスタムエージェントといういわゆるハーネスの中でクロードのモデルを選ぶとかGPTのモデルを選ぶというだけだったんですが</p>
+<p><code>42:53</code> そもそもそのエージェントの実行環境自体を外というかクロードカーサーのサードパーティー側に持っていくことができるようになりましたただこの入り口オーケストレーションのところやユーザーからは同様に見えていてアットマークでそれぞれのエージェントを呼び出せますし共有から共有もできるアクセス管理とかハーネスの管理というのはNotion側でやるただ実行環境は本当にそれぞれの強みがあるのでそちら側で実際にGitHubとつながりながらコーディングをするとか長時間の何時間かけた処理をするとか</p>
+<p><code>43:28</code> いったことができるようになるというアップデートです実際そう見た目がねちょっとパッと見は分かりづらいんですが実はさっきの中にもすでにいてですねこの辺のOPAS GROCK GPT GLM DEEP SEEKはMotionのカスタムエージェントなんですねただクロードエージェントカーサエージェントはさっき言った外部エージェントを呼び出しています見た目が一緒なので分かりづらいですけどちょっと横に並べてみてみますか名前はただ私が付けただけなので何でもいいんですけど</p>
+<p><code>44:05</code> 右側はNotionのカスタムエージェントカスタムエージェントのオーパスモデルを選んだもの左側はクロードのエージェントです設定を開いてみると一目瞭然なんですが左の外部エージェントは一番上にこれは外部エージェントですよというのが出ています右側はこんなにもないですね。ただそれ以外は一緒でトリガーの設定や指示の作成またツールとアクセスっていうのは同様に選ぶことができますただ外部エージェントの方はこのコードというところでこれは外部エージェントと接続してますよ</p>
+<p><code>44:53</code> さらにどのGitHubのリポジトリとつながってますよというのが表現されていますつまりこの実行環境の部分がノーションから外出しされているんですねこっちはあくまでもモデルが4.8というだけでエージェントの実行自体はノーション側でやっているという違いになっていますこれらが違うとやはりノーション側の方はノーションに特化した形でその周りハーネスの部分が作られているのでモデルをオーパスにしたとしてもやっぱりピュアなクロードとはちょっと動作が違うわけですよね</p>
+<p><code>45:33</code> Notionを操作する上でとかNotionを中心とした作業の上ではすごくいいんですけどやっぱりコーディングをちゃんとしたいとかそういった分析をしたいといった場合にはピュアなクロードを呼び出したいのでその場合にこの外部エージェントに切り替えていただくとモデルの選択とかをしつつもこのリポジトリに従いながら ピュアなクロードの実行環境上でここで指定した指示をしてくれるというものになっていますなのでパッと見ると違いが分からないので 混がらがってしまうこともあると思うんですけどここに示したように それぞれの適したタスクに合わせた エージェントを呼び出せるようになった</p>
+<p><code>46:13</code> けど入り口のところは一つのオーケストレーションレイヤーでシンプルな分かりやすい入り口になっているというのが分かると思いますなので一度これを設定してしまえばクロードエージェントだろうがカスタムエージェントだろうが同様に呼び出せるので例えばここのページではですねクロードのエージェントを呼び出して実装経路を立ててというふうに言っていますそうするとこのノーションのページを参照しつつクロード側の実行環境で処理をして</p>
+<p><code>46:48</code> その結果が出てきているんですねこれが同様にカーサーも呼び出せるので実装を進めてといえば今度はカーサーエージェントも動いてくれるという形ですクロードエージェントを呼び出した場合は実行環境がクロードと何度も言っていたと思うんですけどなのでパワポを作らせたり動画編集をしたりとかすごく長いリサーチをするとかそんなこともできるわけですね。 ピュアなクロードなので。</p>
+<p><code>47:23</code> ここでは、この議事録をもとに Powerpoint を作らせてみたんですけど、これ見れば、デザインとか何もプロンプトしてないので適当ですけど、PowerPoのファイルが作成できるという形です。これは動画編集でも画像編集でもクロードがピュアにできることであれば実行できるので、非常に使い勝手のいいやり方になるかなと思います。例えばですけど もう一回クロードエージェントを呼び出してこれを動画にしてみたいなお願いしてみましょうか</p>
+<p><code>48:03</code> ちょっと無茶なお願いですけどそうするとクロードエージェントが動作をしてくれます表向きはNotion側にそういったステータスが出てるんですけど実態はクロード側で作業をしてくれているという感じですねちょうど今出てますけど いわゆるこういうバッシュのツールコマンドというかスクリプトというか そんなのももちろん実行できるのでクロード側で例えばこれ FFmpegっていう動画を生成するラグラリーが入っているのかを確かめてますけど</p>
+<p><code>48:40</code> それをもとに画像をもとに何かをするとか Pythonを呼び出してPythonで何かしらスクリプトを実行するとかこういったものがクロードの実行環境だからこそスムーズにいい感じにやってくれるというのが見ると分かると思います実際にこの仕組みもNotion社内でも使っていてちょっととあるおととい私が経験した流れがすごい心地よかったので共有するとNotion社内で実際にこれを開発のワークフローにどう組み込んでいるのかどうやってNotionというプロダクトを作っているのかというのを説明すると</p>
+<p><code>49:14</code> ある日私がNotionを触っていたらNotion AIの機能でこれちょっと機能足んないなとこうなってほしいなという機能アイデアがあったんですねそれをスラックでフィードバックという形で特定のチームのチャンネルに投稿しましたそしたらその担当のプロダクトマネージャーがすぐに反応してくれていいね、こんな形の仕様にしようと思うからこれでちょっと検討してくれるっていうのをアットマークでこのカスタムエージェントを呼び出してました</p>
+<p><code>49:48</code> そうするとNotionのカスタムエージェントが分かってこれやってみるねと言いつつこれはコーディングのタスクだったのでクロードのエージェントを呼び出してそちら側でコーディングをさせるとさせつつNotion側でちゃんとタスクのチケット管理してるのでそこでタスクチケットを作成してクロードが実装完了したらGitHubと連携してプルリクエスト作成してそれが返ってくるとでもうSlackのねスレッドにそのまま返ってきたので今度エンジニアの人が入ってきてくれてそれでOKだよ、まあ軽微なね</p>
+<p><code>50:23</code> ほんと軽い機能追加だったのでそこでレビューをしてくれてタスクのチケットもエージェントが閉じてくれたって言った形で人間は最初の入り口とアサインというか走り出しの部分とレビューをするその裏側のチケット管理、コーディング呼び出し、オーケストレーションは全てNotionの中で完結をしているというのがこの間体験をしてこれはすごくスムーズでいいやり方だなと思って紹介させていただきました</p>
+<p><code>50:58</code> これは開発の一連の流れでしたけれどもこれが営業でもテクニカルのサポートでもマーケティングでも仕事ってやっぱり人と人が情報を渡し合って一連の流れがあると思うのでこれを農舎のエージェントに置き換える適材適所でクロードなり別のモデルなりを呼び出せば本当のこの仕事が一貫した形でというか始まりから終わりまでがエージェントによって置き換わるというのがかなり現実的になってくるんじゃないかなというふうに思っています</p>
+<p><code>51:34</code> といったところでクロードとの比較とか共存の形を話しつつも最新の外部エージェントの機能についてお話しさせていただきましたやっぱりクロードは個人とか開発者の能力を最大化するすごい高い推論とローカルのマシンのパワーを使った処理っていうのは便利だしローカルのファイルも触れるんですごく手前にある個人のための手前にあるものですけれどもNotion Agentはやはりチームの全体のコンテキスト文脈を踏まえたり成果物の共有レビューを反映でそれを再利用可能なワークフローに変えるところで</p>
+<p><code>52:12</code> チームで使うに非常に最適化されているかなと思いますなのでどちらかだけを使うってことはおそらくほぼなくてですねノーションエージェントとクロードを組み合わせるまたノーションエージェントからさっきみたいにクロードを外部エージェントと呼び出すことでですね組織の大半のエージェントの利活用っていうのは十分に達成されてその恩恵を受けられるんじゃないかなというふうに思いますこれがやっぱり冒頭言った組織のトークン資本を副理で伸ばすことにつながると思っていますこれがクロードだけだと一人一人のチャットに閉じたものになってしまうとか</p>
+<p><code>52:49</code> わざわざ共有を明示的にしなきゃされないっていうものはやはりこれトークンシェフォンにはつながらないんですよね一方でノーションだけ使ってくださいノーションAIだけ使ってくださいっていうのも足りない部分が出てくるのでそこは我々アンソロピックもオープンAIもカーサーも手をつないでいるのでNotionをAgentOSオーケストレーションの中心としながらそういったここに強いエージェントたちを使っていただくのがとてもいいんじゃないかなというふうに思っているところです</p>
+<p><code>53:22</code> ちょっと長くしゃべってしまいましたけれども参考にしていただければと思いますありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Notionが2026年6月にリリースした「外部エージェント（External Agent）」機能を53分かけて解説。NotionをエージェントOSとして位置づけ、Claude・CursorなどをNotionから直接呼び出して、チーム全体の知識と業務フローをシームレスに繋ぐ仕組みを実演している。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. NotionはエージェントOS（オーケストレーション基盤） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Notionを「ドキュメントツール」と捉えるのは旧時代の認識。現在は3レイヤー（コンテキスト・コラボレーション・エージェント）を備えた「人とAIのためのOS」として進化している。カスタムエージェントで業務フローをパッケージ化し、組織全体に配布できるのが最大の強み。Slack/GitHub/Google Drive等との連携でコンテキストが一元化される。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 外部エージェント（External Agent）= ClaudeやCursorをNotion側から呼び出す </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>従来のカスタムエージェントはNotion内のモデル選択（Claude Opus等）だった。新機能では「ClaudeやCursorのピュアな実行環境ごと」Notionから呼び出せる。コーディング・長時間分析・ローカルファイル操作はClaude側、チームのコンテキスト管理・共有・レビューはNotion側、と適材適所で使い分けられる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. トークン資本（Token Capital）という概念 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Microsoftサティア・ナデラの記事やAIX福島氏の記事を引用し「トークンを単なるコストでなく組織の資本として管理する」重要性を説く。業務コンテキスト・判断基準・プロンプト・レビュー履歴が組織に蓄積されてはじめて「指数関数的な福利効果」が生まれる。クロードだけだとチャット履歴が個人のPCに閉じてしまいナレッジが組織に蓄積されない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. NotionカスタムエージェントのガバナンスとROI可視化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>エージェント単位でクレジット上限設定・利用ログ・アクセス制御（MCPのread/write権限まで）が設定できる。「この業務エージェントにいくらかかったか」が見えることで、企業がAI投資のROIを部門・ユースケース単位で分析できるようになる。ClaudeだけではBlackbox化しやすい点との差別化。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① NotionカスタムエージェントとClaude Codeの使い分けを整理する</strong>
+社内のAI推進でよくある「クロードかNotionか」の二択論に対し、「NotionをOSとして両方使う」という明確な回答を持てる。KONNEKT社内のAI活用ハブやMTG自動化（CircleBack→Notion連携）の文脈で、このフレームを説明資料に盛り込める。</p>
+<p><strong>② 業務フローのエージェント化提案に使える</strong>
+「MTG文字起こし→タスク自動作成→Slack通知→コーディング（外部Claude）→PR→レビュー→完了」という一気通貫のフローが実演されている。社内定例や案件管理（BIGBANGやArmillary.など）にカスタムエージェントを当てはめる議論の裏付けとして使える。</p>
+<p><strong>③ AI活用推進のピラー④「AIを自分の武器に」との接続</strong>
+「組織のトークン資本」「エージェントOSとしてのNotion」という概念は、評価シートに対応項目がなくても自分で言語化して提示するための重要な武器候補。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./notion" class="internal" data-slug="notion">notion</a>（StructureNote）— Notion全体の概念整理</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote）— AIエージェントの設計・運用論</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote）— 組織のナレッジ蓄積・管理</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote）— Claudeのマネージドエージェント運用</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（StructureNote）— Model Context Protocol、Notion連携の仕組み</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-652" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

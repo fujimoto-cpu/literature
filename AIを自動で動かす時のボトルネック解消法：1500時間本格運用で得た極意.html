@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意"/><meta name="twitter:description" content="📺 動画情報 AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-06-26 ・ ⏱️ 20分50秒 🔗 www.youtube.com/watch 📝 要約 🎯 Googleを辞職後にAI組織を1500時間本格運用した著者が、「人間がボトルネックになる問題」と「情報がぐちゃぐちゃになる問題」の2大課題を、情報設計の再構築と判断レイヤーの階層化で解決する方法を解説。AIが楽にしてくれるのではなく、仕事の質が変わるだけという本質的な警告も含む。 🗺️ 全体像 flowchart TD A..."/><meta property="og:description" content="📺 動画情報 AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-06-26 ・ ⏱️ 20分50秒 🔗 www.youtube.com/watch 📝 要約 🎯 Googleを辞職後にAI組織を1500時間本格運用した著者が、「人間がボトルネックになる問題」と「情報がぐちゃぐちゃになる問題」の2大課題を、情報設計の再構築と判断レイヤーの階層化で解決する方法を解説。AIが楽にしてくれるのではなく、仕事の質が変わるだけという本質的な警告も含む。 🗺️ 全体像 flowchart TD A..."/><meta property="og:image:alt" content="📺 動画情報 AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-06-26 ・ ⏱️ 20分50秒 🔗 www.youtube.com/watch 📝 要約 🎯 Googleを辞職後にAI組織を1500時間本格運用した著者が、「人間がボトルネックになる問題」と「情報がぐちゃぐちゃになる問題」の2大課題を、情報設計の再構築と判断レイヤーの階層化で解決する方法を解説。AIが楽にしてくれるのではなく、仕事の質が変わるだけという本質的な警告も含む。 🗺️ 全体像 flowchart TD A..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-06-26 ・ ⏱️ 20分50秒 🔗 www.youtube.com/watch 📝 要約 🎯 Googleを辞職後にAI組織を1500時間本格運用した著者が、「人間がボトルネックになる問題」と「情報がぐちゃぐちゃになる問題」の2大課題を、情報設計の再構築と判断レイヤーの階層化で解決する方法を解説。AIが楽にしてくれるのではなく、仕事の質が変わるだけという本質的な警告も含む。 🗺️ 全体像 flowchart TD A..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-170"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-170" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意</a></div></nav><h1 class="article-title">AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-27T15:00:00.000Z">2026年6月28日</time><span>44 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>AIを自動で動かす時のボトルネック解消法：1500時間本格運用で得た極意</strong>
+🎙️ クウキデザイン |  Kuuki Design ・ 📅 2026-06-26 ・ ⏱️ 20分50秒
+🔗 <a href="https://www.youtube.com/watch?v=4Ho0MXS4StQ" class="external">https://www.youtube.com/watch?v=4Ho0MXS4StQ<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Googleを辞職後にAI組織を1500時間本格運用した著者が、「人間がボトルネックになる問題」と「情報がぐちゃぐちゃになる問題」の2大課題を、情報設計の再構築と判断レイヤーの階層化で解決する方法を解説。AIが楽にしてくれるのではなく、仕事の質が変わるだけという本質的な警告も含む。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[問題1: 人間がボトルネック] --> B[解決: 判断レイヤー階層化]\n    A2[問題2: 情報がぐちゃぐちゃ] --> B2[解決: 動的/静的で分離]\n    B --> C[レベル1: 現場AI が自律判断]\n    B --> D[レベル2: 部長AI が中間決済]\n    B --> E[レベル3: 人間がエグゼクティブ判断のみ]\n    B2 --> F[動的情報 → タスク管理ボード Airflow]\n    B2 --> G[静的情報 → Obsidian 文脈エンジン]\n    E --> H[秘書AI が毎朝朝礼レポートで集約]\n    C --> I[フェイルセーフ: 失敗は記録→次の回が拾う]&quot;">flowchart TD
+    A[問題1: 人間がボトルネック] --> B[解決: 判断レイヤー階層化]
+    A2[問題2: 情報がぐちゃぐちゃ] --> B2[解決: 動的/静的で分離]
+    B --> C[レベル1: 現場AI が自律判断]
+    B --> D[レベル2: 部長AI が中間決済]
+    B --> E[レベル3: 人間がエグゼクティブ判断のみ]
+    B2 --> F[動的情報 → タスク管理ボード Airflow]
+    B2 --> G[静的情報 → Obsidian 文脈エンジン]
+    E --> H[秘書AI が毎朝朝礼レポートで集約]
+    C --> I[フェイルセーフ: 失敗は記録→次の回が拾う]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 情報の動的/静的分離 — ノイズが組織全体を鈍らせる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIが書き込む情報を「変わる速さ」で2種類に厳密分類する。タスク進捗・ログなど1日〜1週間で古くなる<strong>動的情報</strong>はタスク管理ボード（Airflow）へ、個人情報・経歴・好みなど滅多に変わらない<strong>静的情報</strong>はObsidianへ。定義ルールもObsidianに置き、AIが自分で振り分ける仕組みにすることで人間が毎回教えなくてよくなる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 判断の3レベル設計 — エグゼクティブレイヤーに自分を昇進させる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>判断をレベル1（元に戻せる細かい判断→現場AI自律）、レベル2（設計方向性・ディスクある選択→部長AI決済）、レベル3（戦略・取り返しのつかないこと・セキュリティ→人間）の3段に分ける。部長AIには必ず最上位モデル（Claude Opus / Fable等）を惜しまず使う。これで自分の手元に来るのは本当に重要な判断のみになる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 張り紙型vs改札型ルール — プロンプトに書いても無視される </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIはプロンプトやSKILL.mdに書いたルールを読み飛ばしたり無視することがある。重要なルールは「張り紙型（書いてあるだけ）」ではなく「改札型（物理的に通れない仕組み）」にする必要がある。技術用語では<strong>フック</strong>。会話開始時に前提を強制的に読ませる、危ない命令はスクリプトで弾く、本番コードには触れさせずブランチのみで作業させる、などが具体的手法。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. ディスパッチャー＋サンドボックス — 寝ている間も安全に動かす </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>決まった時間に自律起動してボードから仕事を拾うディスパッチャーを何重の壁で囲む。AI単独では安全な小さい判断のみ自律実行→危なそうなら部長AI相談→部長でも無理なら計画書を翌朝提出する。失敗しても黙ってやめず記録を残し、1日3回のサイクルで次の回が拾う。本番コードはブランチのコピー内でのみ編集・マージは人間が行う。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. TPM（技術的PM）エージェント — 引き継ぎと事実の突き合わせ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>各AIの「終わりました」報告を鵜呑みにせず、実際の状態と突き合わせて抜けやズレを拾うTPMという専門AIを置く。これによりタスク管理の記録と実態が乖離しなくなる。毎朝の秘書AIからの朝礼レポートで集約された情報に順番に答えるだけで残りは全部下で回っている状態を作る。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>6. AIで楽になるは嘘 — 仕事の質が変わるだけ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIで生産性は上がるが楽にはならない。「手を動かす仕事」から「判断する仕事」に軸足が移るだけで、むしろ判断の認知負荷は大きい。人間が1日に処理できる判断量には限界があり、AIをどれだけ増やしても中間管理職を挟んでも最後に決めるのは人間1人。天井は「自分が1日に判断できる量そのもの」。AIで仕事消える・楽になるという雑音に惑わされないこと。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINの判断レイヤー設計に直接適用</strong>
+今CORIN（AI組織）に判断を投げているが、「これどうします?」が来すぎている場合は判断レベルを明示的に設定する。レベル1（ゆりこに聞かなくていい・CORIN自律）、レベル2（CORIN内部で解決・提案のみ上げる）、レベル3（必ずゆりこが決める）の3段をSKILL.mdやCLAUDE.mdに明記する。</p>
+<p><strong>② ルール設定は「改札型」で</strong>
+critical-mistakes.mdやrules/に書いても無視される事例が既に複数ある（#7等）。重要ルールはhooksやスクリプトで「通れない」仕組みにする。/.claude/settings.jsonのhooks設定を見直すチャンス。</p>
+<p><strong>③ 動的/静的情報の分離はObsidian設計に直結</strong>
+タスク・進捗・ログは頻繁に変わる動的情報 → tasks/active/に集約（今の運用と一致）。CLAUDE.mdの事業文脈・ゆりこの人物情報などは静的 → Obsidian/memoryが正しい置き場。この設計思想を意識することでAIへのコンテキスト汚染を防げる。</p>
+</div>
+</blockquote>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> AI組織を作るんだったら自分で自分を昇進させないとダメ今ですねAIエージェントを使った社員だとかAI組織だとかだんだんですね流行ってきてますけれどももう時間の問題で一人で抱えられる業務量を超えてしまうんですよねそういったものを運用していると私もですねGoogleをですね辞職後にノートの執筆YouTubeの作成デザインコンサル何本も並行でその上にホームとか税務とかここ3ヶ月ぐらいで抱える仕事がおかしいくらい増えてたんですね全部同時に走ってるそれらの業務を回しているうちに</p>
+<p><code>00:33</code> 2つぐらいはっきりした問題が出てきたんですよまず1つ目に判断することが多すぎるっていう問題AIが挙げてくるこれどうします?が次から次へとくる私が決めないと何も前に進まない気づいたら私自身が組織全体のボトルネックになってたわけですねこれですねAIエージェントをバリバリに回してる方だったらもうすごい実感できると思うんですけど人間がどうやったらボトルネックにならないで済むのか、またはですね、どういうバランスでボトルネックをデザインして、ちゃんとした意思決定を行うのかっていうのは結構永遠の課題なんですね。もう一つ、情報がですね、ぐちゃぐちゃになってきたんですよ。</p>
+<p><code>01:12</code> 文脈エンジンとして、今オブシディアンを運用してるんですけれども、ここにですね、ログとか細かい情報がどんどんどんどん膨らんでいったんですよ。だんだんAI組織が膨らんでくるとどこに何があるのかだんだんわからなくなってきてAIの文脈コンテキストウィンドウがパンクするってことがだんだん増えてきたんですねこのAIエージェント時代特有のこの2つの問題を自分なりに解決してみました2つ解決策を打ちましたまず1つが情報の置き方を整理することもう1つが自動化を強くすることですね</p>
+<p><code>01:50</code> 判断をもっと下のレベルに下げて私の手元には本当に大事なものだけ戦略的なものだけ残るようにするというですねワークフローの再設計を行いました今日の話はほとんどこの自動化の方なんですけれどもただですね情報の整理という部分も結構その中で大事な役割を担っていましてこの判断をですね自動でどう捌くのかそういう仕組みをどう作ったのかそこをですね話していこうと思いますまず情報の整理なんですけれども一応ですね設計思想というか運用思想的なものを話したいんですけれども</p>
+<p><code>02:26</code> オブシティアンの中がごちゃごちゃになったっていう話をしたんですけれども理由は結構はっきりしていてAIに対してですね何をどこにどう書くかを厳密に決めきれてなかったっていうのが最大の原因だったんですねだからAIたちがそれぞれ良かれと思って好き勝手にメモとかですねノートとかログとかをどんどんどんどんオブシディアンの方に貯めていったんですよで気づいたら本当に大事な文脈情報がそういったノイズに埋もれてたんですよ例えばですねデザインを考えなきゃいけないAIがビジネス関連の話を読まされるとか</p>
+<p><code>02:59</code> 私がですねAI社員を20名以下ぐらいで運用した時はあんまりそれも気にならなかったんですけれどもでもやっぱりですね一度に動いてるAIエージェントが増えれば増えるほどこのノイズが組織全体を鈍らせるってことが分かってきたんですねなので私ですね厳密にその情報の性質によってカテゴリーを厳密に分けましたつまりですねどんどん変わっていく動的な情報タスクとか進み具合とかこれはですねエアフローというですね私の自作のタスク管理ボードに集約するようにさせまして</p>
+<p><code>03:34</code> 滅多に変わらない静的な情報静かな情報と書いて静的な情報私の個人情報とか経歴とか好みとかですねこういった性的な情報はオフィシィアンに置けとそういうふうにカテゴライズしました要はですね情報が変わる速さによって情報の種類を分けたってことですね早く変わるものと滅多に変わらないもの混ぜると片方のノイズがまた片方を汚しちゃうんですよだから分けましたでこの何が動的で何が性的かというですね</p>
+<p><code>04:09</code> 定義そのものはですねオブシディアンのいわゆる性的な情報が置いてある文脈エンジンの方に置きましたAIはまずその定義を読んでその上で目の前の情報を動的なのか性的なのかどっちに落とすか自分で振り分けるという仕組みを作りましたつまり人間がいちいち教えなくていい社員が増えてもこの入り口のオブシディアンの文脈を読むことで勝手に整うような仕組みを作ったということですねこれによってですね、1日とか1週間とかそういったスパンで古くなってしまうような情報は全てエアフロー、タスク管理システムの方に落ちるようになりまして、それ以外の長期にわたって持たなくてはいけない、あまり変わらない情報、これはオブジリアンに落ちるようにして、全ての自動化の土台がこういうような形で整ったという形になりました。で本丸の自動化の話なんですけれども</p>
+<p><code>05:02</code> 基本的にその判断する内容が多すぎて私がボトルネックになっていたという話をしたんですけれどもそれをですね評価された自動化で潰しに行きました結局情報を整理しても判断の数は結局減らないんですよねプロジェクトがいくつも同時に走っていて決めることが山ほどあるとでこういった問題をですね考えているうちにちょっとふと思ったんですけれどももうこれですね私が会社の役員とか社長と同じ働き方をするしかないなって思ったんですよちょっと前の動画でAIの組織を人間の会社を真似て作ったという話をしました</p>
+<p><code>05:37</code> 今回も結局同じアイディアですね人間の組織の作り方から学ぶ私が前に勤めていた会社で役員とかですね幹部たちがどう働いていたかそれを真似ようというところから始めましたやっぱりですね会社の幹部クラス役員クラスって現場の作業には基本的に手を出さないじゃないですか一個一個のタスクを自分でやったりしないしそれにあのいちいちですね一人一人の社員の言ってることの判断を助けてあげることもしませんよねそういうのは中間管理職の役割ですよね</p>
+<p><code>06:11</code> だから私もそうしました現場の細かいタスクレベルの情報に一切接しないでもうそのタスクレベルプロジェクトレベルの判断をですねもう他のAIエージェントに投げようと思ったんですよなのでまずですね専業のですねその日の情報とタスクを整理して私がいるものだけにまとめてくれる係会社でいうところの秘書ですよねそういったものをまず作りました要はですねもう会社に新しい上の階層を作って自分を自分で昇進させてエグゼクティブレイヤーって私呼んでるんですけれども</p>
+<p><code>06:46</code> そのエグセクティブレイヤーに自分を配置できる仕組みを作ったんですね具体的に言うとこういうことなんですけれども通常業務をやっている現場の社員AIエージェントですねそこに私が直接指示や決断を渡すのを基本的にやめました代わりに部長と呼ばれるですね中間管理職を間に置きましたそしてその部長にある程度意思決定と情報の集約を任せたんですよ私自身は会社の役員とか社長みたいに高度な判断と集約された情報だけを処理すると部長がそういった判断が来た時だけ私にその判断を上に上げてくると</p>
+<p><code>07:31</code> そういう風な仕組みを作ったってことですねどうやってそれを実際に動かすかという仕組みの話をしたいんですけれども私のコーディングチームを参考にどういう仕組みが回っているのかという説明をしたいんですけれどもまず現場のAIを安全にそして勝手に動かすディスパッチャーという仕組みがあるんですよ決まった時間に勝手に起きてボードから仕事を拾ってくるとで私が寝てる間も動いてるんですけれどもただこれを安全にするのがですね本当に大変だったんですね</p>
+<p><code>08:06</code> 怖いじゃないですか見てない時間にコードを書いて勝手に動くと間違えた時の被害がですね結構青天井になりかねないのでだからですねこのディスパッチャーをですね何重の壁で囲いましたサンドボックスカーと呼ばれるものですね基本的にですねその現場のAIエージェントが判断できるのは小さくて安全な仕事だけこれは勝手に進めていいよというような指示が出てるんですね少しでも判断がいいそう危なそうだと思ったらまず部長に相談してというような指示が出ていますさらにですね部長でも決済できないような判断だったら</p>
+<p><code>08:40</code> 計画書だけを書いて翌朝ですね私がその計画書を確認して決済することによっていつでも動けるようにしておくとそこで止めるような仕組みを作ったわけですねあとAIエージェントがですね勝手にコードを書く時にも本物のコードには触らせないで隔離した作業用のいわゆるブランチと呼ばれるですねコピーの中だけで書くとそれを勝手に本番には入れられないようにしていますなのでブランチ要はコピーの中でまずコードを書いてこういった形で改善したいんですけどこういった形で書いたいんですけどというですね</p>
+<p><code>09:14</code> 最終的に本番コードの方にマージ要はですねコピーしてで入れ込む作業は私がやるというようにしていますあとですねタスクの実行に失敗した時も黙ってですね勝手にやめないで何があったか私が朝に気づくように記録を残させるようにしてますこういったですねフェイルセーフみたいな仕組みをですね1日に3回回すようにしてますなので1回ですねそのタスクの実行に失敗しても次の回が拾うだからAIエージェントは常にですね止まらないで失敗にも関わらず何回か改善サイクルを回して</p>
+<p><code>09:49</code> 実装を行うというような仕組みになってます私あの今ここで止めるだとかここまでやってねとかそういったルールの話をいろいろしたんですけれどもこれってですね基本的に書いておくだけじゃ効かないんですよねプロンプトとかですねスキル.mdの中にAIに対する指示が入ってるじゃないですかそこに書いてあるだけだとですねAIエージェントって結構無視することが多いんで書いておくだけじゃなくてもう完全に止める仕組みを作るようにしてます要は危ないことはするなとこういったルールをですね私最初いろんな場所に何回も書いたんですけれどもこれは無視されることが結構多いってことにやっぱり気づいたんですね</p>
+<p><code>10:25</code> フロンプトエンジニアリングクソだなって私いつも思うことはAIってまず書いても読まないことがあるそして読んでも無視することがあるんですよこれ本当にAIエージェントを運用する上で気をつけていただきたいんですけれども本当にAIって書いたことを確実に実行してくれる保証がどうにもないんですよなのでどれだけ丁寧に書いても読み飛ばされたり無視されたらそれで終わりなんですねなのでもし絶対にやらなきゃいけないこととかルールとかをどうしても適用したい場合はAIの外側で動く仕組みを作る必要があるんですね</p>
+<p><code>11:03</code> これは例えば張り紙型と改札型のルール適用って私は言ってるんですけれどもカードをタッチしてくださいっていう張り紙は無視できるじゃないですかでも改札は物理的にカードをタッチしないと通れないだから大事なルールは張り紙型じゃなくて改札型にする必要があるんですテクノロジー用語ではフックって言うんですけれども会話が始まる瞬間に大事な前提を強制的に読ませる危ない命令が実行されそうになったらAIに行く寸前でもう機械がですねスクリプトで弾くようにしてるんですよAIの全員を当てにしないんですよ</p>
+<p><code>11:38</code> AIがフロンプトによって与えた指示で動くとは限らないという前提での運用を行っているということですねこれがですねAIを自律的自動的に動かすときの最も大事な判断の土台になりますその上でですねAIが考えなくてはいけないディスクレベル判断のディスクレベルは3段階に分けてありますまずレベル1がですね元に戻せる細かい判断これは現場のAIが自分で決めて進むいちいち効かなくて進められる判断ということになっております設計の方向性とかディスクのある選択</p>
+<p><code>12:16</code> これは中間管理職に挙げてくださいとなってますレベル2ですねこのエンジニアリングチームの場合はエンジニアリング部長エンジニアリングディレクターと呼ばれているAIに相談しなさいというですね指示が出ていますそいつが下から上がってきた判断を決めるこのエンジニアリングディレクターというのはですね自分では手を動かさないいわゆる判断専門のAIということになっていましてこれはですね必ず一番賢いモデル例えばクロードでしたらオーバースの最新モデルまたはフェイブルがもちろん使えるんだったらフェイブルを使うと思うんですけれども</p>
+<p><code>12:54</code> ここはですね本当に惜しみなく一番賢いモデルを判断専門として動かすようにしてますそしてですね最終的に戦略に関わるようなことだとか一回失敗したら取り返しのつかないような判断セキュリティとかですねこの3つだけは部長決済ではなく私まで上げるとなってますそれ以外の判断はもう私に聞くなと下で決めろそういうクルーズにしてあるわけですねこのように判断のレベルをはっきりさせてそれをですねルールブックに書いてあるんですね</p>
+<p><code>13:27</code> こうやって振り分けているから私の手元にはですね本当に重要なものだけが残るようになってますさらにもう一つですね引き継ぎを形にして付き合わせるという作業を実は行ってましてAIがですね仕事を一区切りしたら何をやって次に何をすべきかということでですね決まった書式でタスク管理アプリの方に書き残すようになっているんですけれどもその上でですねいわゆるTPMと呼ばれる専門のAIエージェントを置いてますテック企業とかですねGoogleにもあった役職なんですけれども</p>
+<p><code>14:02</code> 各AIのここまで終わりましたっていう報告を鵜呑みにしないで実際の状態と付き合わせてそこで見つけたズレとかですね抜けを拾ってまとめる役割ですねそれによって実際に起こったこととタスク管理の内容が完全にズレない事実関係を確認するそして必要があればタスク管理アプリを更新するいわゆるタスク進捗管理の付き合わせをする専門のAIエージェントですね私ですね毎朝朝礼というものがありまして朝礼というのはですね</p>
+<p><code>14:35</code> クロードの秘書AIが実際に私に毎朝上げてくるレポートなんですけれどもそのレポートの中で上がってきたものに順番に答える例えば一番優先順位の高いタスクから順番に秘書AIがまずこれをやってくださいそれを処理した後にじゃあ次はこれをやってください次はこれをやってくださいという風に順番にタスクを出してくれるようになってますのでそれを順番に答えて判断をしてそれだけとで残りは全部下のレイヤーで勝手に回っているというような状態を作ったんですねでこれでやっと最初にいった状態になったわけです</p>
+<p><code>15:09</code> 要は自分を上積みの判断だとだけに億度エグゼクティブレイヤーに自分を昇進させて自分を自分の作った ai 組織の中で昇進させて自分をエグゼクティブレイヤーに配置したということですね普通の会社ならですね上司が私をここに引き上げてくれてでもすでにあった仕組みとかがですね幹部向けにですねいろいろな情報を集約してくれたりとかですね上流してくれたりとか秘書がついたりとかするんですけれどもでもAI組織にはそういったものが全くないのでこの構造を全部自分で作って</p>
+<p><code>15:44</code> 自分をこの椅子に座らせる必要があったんですよただですねおそらくこれも時間の問題で多分ですねもっともっと私がやることを増やしていったりとか事業を拡大していくとおそらくですねまた似たような問題が出てくると思いますさっき判断を3段に分けたって言いましたけれどもでも一番上の段レベル3戦略と取り返しのつかないこととセキュリティとかそういったものここは絶対にAIに異常できないんですよ中間管理職にどれだけ任せてもこの核の部分は必ず私が判断しなきゃいけないものとして残っちゃうんですよねそれをさばいてさばいてまたさばいてやがて自分の頭の限界にぶつかるんですよ</p>
+<p><code>16:28</code> 皆さんですねあのちゃんとした判断をするっていうものをですねちょっと甘く見てるかもしれないんですけれどちゃんとした決断判断を するのって相当頭に負荷がかかるんですよで人間が1日に判断できる量って限界があるんです 気合でなんとかなるもんじゃないんですよなのでどうしてもここは人間が完全にボトルネックになっちゃうんですね タスクレベルとかですね細かいところまで見て現場レベルの ai エージェントの指示を出していてもすぐ限界が来るんですよ 自分でもう裁かないと自分で決めないとまあ組織全体が止まるとだから手を止められない気づいたら午前4時っていうのが まあザラにあるわけです</p>
+<p><code>17:09</code> でやっぱりこういったですね決済待ちみたいなのがやっぱり ai が早くなるほど私の 机の上に決済待ちが溜まっていくんですよでこれが人間がボトルネックになってくるその姿そのものなんですね 組織が大きくなると ai エージェント相手だろうが人間の会社だろうが関係全く同じきしみが出るんですよだから中間の管理職が必要になってくる役割もどんどんどんどん細分化していって割っていかないとですね回らなくなっちゃうんですね一人のAIにあれもこれも持たせると文脈が重くなりすぎて回らなくなっちゃうんですよ</p>
+<p><code>17:42</code> これ全部人間の組織で普通に起きていることと同じなんですね人が増えれば調整のコストが増えるインフラが詰まる役割を細分化しないといけないAIの組織でもそっくりそのままそれが起きるということですねaiで楽して稼ぐとか自動化で楽々 とかそういうのよく見ますね。私はあれは基本的に嘘だと思ってます。楽にはならないんですよ。変わったのは仕事の量じゃなくて質なんですね。きつさは全然減らないんです。むしろ増える。実際ですね、私がGoogleにいた頃もAIが出てきて、生産性は確かに圧倒的に上がったんですけれども、</p>
+<p><code>18:21</code> 仕事自身は楽になるどころかきつくなったんですよ。なんでかっていうと人間が1日に処理できる量さばける判断の量って決まってるからですもう認知的限界があるんですどうしても人間の認知的限界はAIエージェントがあろうがなかろうが増えないんですよAIをどれだけ増やしても中間管理職をどれだけ挟んでも最後に判断するのは私一人なんですねだから頭数をどんどんどんどん増やすことでも天井は破れないんですよ天井はですね私が1日に判断できる量そのものなんですよさっき役員の働き方を真似たって言いましたよね</p>
+<p><code>18:58</code> ひょっとしたらですね皆さんあの役員になったら楽できるって思ってる方いらっしゃるかもしれないんですけれどもそんなことないですからその分ですね判断と決断にものすごいエネルギーを持っていかれるんですよ彼らもですね自分のその認知限界と戦ってるんですよAIが出てきて私たちに起きているのも同じことなんですよ仕事が消えるわけでも楽になるわけでもないんですただ軸足が移るだなんですね。手を動かす仕事から判断する仕事へ移っただけなんです。正直ですね、そっちの判断を次から次へと重ねていくっていうですね、そういう仕事の方がずっと脳みそにはしんどいんですよ。だから雑音に惑わされないでほしいんですけれど</p>
+<p><code>19:44</code> AIっていう技術が人の仕事に本当はどういう影響を与えるのかその本質を自分の目で見定めてほしいんですそれができる人がこれからをちゃんと生き延びていける私はそう思ってますどこまでの判断をどうやってAIに任せるのかそしてどうやって致命的な判断ミスAIによる判断ミスを防ぐのかそういった仕組みを設計できる人がこれからどんどん生産性を高めていける必要なボトルネックをどうやって設計するのかそういった手腕が試されている</p>
+<p><code>20:19</code> そういったバランス感覚が試されるという時代になっているということですチャンネル登録よろしくお願いします</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote） — AIエージェント全般の概念整理</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote） — AIワークフロー設計</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote） — 自動化パターン</li>
+<li><a href="./2026-06-01-multi-agent-shared-brain" class="internal" data-slug="2026-06-01-multi-agent-shared-brain">2026-06-01-multi-agent-shared-brain</a>（StructureNote） — マルチエージェントの共有脳設計</li>
+<li><a href="./2026-06-10-ai-kanban-board-architecture" class="internal" data-slug="2026-06-10-ai-kanban-board-architecture">2026-06-10-ai-kanban-board-architecture</a>（StructureNote） — AIカンバンボード・タスク管理アーキテクチャ</li>
+<li><a href="./2026-06-12-ai-employee-4parts-model" class="internal" data-slug="2026-06-12-ai-employee-4parts-model">2026-06-12-ai-employee-4parts-model</a>（StructureNote） — AI社員4パーツモデル</li>
+<li><a href="./2026-06-20-exception-only-notification" class="internal" data-slug="2026-06-20-exception-only-notification">2026-06-20-exception-only-notification</a>（StructureNote） — 例外のみ通知設計</li>
+<li><a href="./2026-06-20-judgment-axis-reduces-hesitation" class="internal" data-slug="2026-06-20-judgment-axis-reduces-hesitation">2026-06-20-judgment-axis-reduces-hesitation</a>（StructureNote） — 判断軸設計</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-84" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

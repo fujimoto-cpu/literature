@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）"/><meta name="twitter:description" content="📺 動画情報 スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け） 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-17 ・ ⏱️ 23分50秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコードの「Remote Control」機能を使うと、スマホ・ブラウザ・軽量PCなど任意のデバイスから自宅PCのObsidian＋クロードコード環境にそのまま接続でき、..."/><meta property="og:description" content="📺 動画情報 スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け） 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-17 ・ ⏱️ 23分50秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコードの「Remote Control」機能を使うと、スマホ・ブラウザ・軽量PCなど任意のデバイスから自宅PCのObsidian＋クロードコード環境にそのまま接続でき、..."/><meta property="og:image:alt" content="📺 動画情報 スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け） 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-17 ・ ⏱️ 23分50秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコードの「Remote Control」機能を使うと、スマホ・ブラウザ・軽量PCなど任意のデバイスから自宅PCのObsidian＋クロードコード環境にそのまま接続でき、..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/スマホ1台でObsidian-×-Claude-Codeを操る-─-ソファでも移動中でも止まらない-Remote-Control-活用術（非エンジニア向け）"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/スマホ1台でObsidian-×-Claude-Codeを操る-─-ソファでも移動中でも止まらない-Remote-Control-活用術（非エンジニア向け）"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け） 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-17 ・ ⏱️ 23分50秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコードの「Remote Control」機能を使うと、スマホ・ブラウザ・軽量PCなど任意のデバイスから自宅PCのObsidian＋クロードコード環境にそのまま接続でき、..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="スマホ1台でObsidian-×-Claude-Codeを操る-─-ソファでも移動中でも止まらない-Remote-Control-活用術（非エンジニア向け）"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2096"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2096" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）</a></div></nav><h1 class="article-title">スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-02T15:00:00.000Z">2026年5月03日</time><span>48 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）</strong>
+🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-17 ・ ⏱️ 23分50秒
+🔗 <a href="https://www.youtube.com/watch?v=lUE5MF06zIU" class="external">https://www.youtube.com/watch?v=lUE5MF06zIU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/スマホ1台でObsidian-×-Claude-Codeを操る-─-ソファでも移動中でも止まらない-Remote-Control-活用術（非エンジニア向け）.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>の「Remote Control」機能を使うと、スマホ・ブラウザ・軽量PCなど任意のデバイスから自宅PCの<a href="./Obsidian" class="internal" data-slug="Obsidian">Obsidian</a>＋<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>環境にそのまま接続でき、場所を選ばない「ながら作業」が実現できる。コマンド1つで起動でき、カスタムスキル・MCPサーバー・CLAUDE.md設定がすべてそのまま動く。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[自宅PCでターミナルを開く] --> B[claude --remote-control コマンドを実行]\n    B --> C[QRコードまたはURLが生成される]\n    C --> D{デバイスを選ぶ}\n    D -->|スマホ| E[Claudeアプリでセッションを選択]\n    D -->|ブラウザ| F[URLからアクセス]\n    D -->|別PC| G[Claudeデスクトップアプリ]\n    E --> H[自宅PCのObsidian環境と同じ状態で作業継続]\n    F --> H\n    G --> H&quot;">flowchart TD
+    A[自宅PCでターミナルを開く] --> B[claude --remote-control コマンドを実行]
+    B --> C[QRコードまたはURLが生成される]
+    C --> D{デバイスを選ぶ}
+    D -->|スマホ| E[Claudeアプリでセッションを選択]
+    D -->|ブラウザ| F[URLからアクセス]
+    D -->|別PC| G[Claudeデスクトップアプリ]
+    E --> H[自宅PCのObsidian環境と同じ状態で作業継続]
+    F --> H
+    G --> H
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Remote Control とは何か — 自宅PCをどこからでも操縦できる仕組み </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>claude --remote-control</code> コマンドを打つだけで、自宅PCのクロードセッションに外部デバイスから接続できる状態が作れる。通信は暗号化済みで、認証情報は使い捨てで自動処理されるため、VPN設定などの専門知識は不要。接続後は自宅のカスタムスキル・MCPサーバー・CLAUDE.mdの設定がすべてそのまま動く。「本当に家のパソコンをスマホに取り込んだ」状態になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Dispatch・Channelsとの違い — Remote Controlが圧倒的に安定している理由 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AnthropicはDispatch（モバイルアプリ）・Channels（Telegram/Discord経由）・Remote Controlの3つのリモート手段を提供している。Dispatchは起動に時間がかかったり、プロジェクト・文脈の引き継ぎが弱かったりと使いにくい。Channelsは事前にMCPプラグイン設定が必要でハードルが高い。Remote Controlは「進行中のセッションをそのまま別デバイスで継続できる」唯一の手段であり、セッション文脈・カスタムスキルが完全に引き継がれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. セットアップ手順 — コマンド1つ＋設定1箇所で完了 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①ターミナルで <code>claude --remote-control</code> を実行 → 接続先の選択（Obsidian運用なら「Same Directory」=1番を選ぶ）→ QRコードを読み取るかURLをブラウザで開く。②既存セッションをリモート化したい場合は、セッション内で <code>/remote-control</code> と入力するだけ。③毎回コマンドを打つのが面倒な場合は <code>/config</code> からリモートコントロールを「True（常時オン）」に設定する。接続直後は一度メッセージを送信するまでスラッシュコマンドが認識されないため、最初に何か一言送ること。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 使えるもの・使えないもの — claudianだけ注意 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>✅ 使えるもの：スラッシュコマンド、カスタムスキル、MCPサーバー、CLAUDE.md、ローカルファイルへのアクセス。❌ 使えないもの：claudianで立ち上げたチャット（claudianはCLIセッション外）。Remote ControlはCLIセッション起点なので、claudianユーザーはCLI側にメインの作業環境を移す必要がある。また、ノートPC使用時はスリープ状態・蓋を閉じた状態だとリモートが切れるため、画面ロック・ディスプレイオフのまま運用すること。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 1日の使い方イメージ — 場所を選ばない作業フロー </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>朝：ベッドでスマホから昨日のセッションに接続し、アイデアを固める。午前：デスクで集中作業。煮詰まったらカフェに軽量PCを持ち出してブラウザから継続。昼休み：会社PCのブラウザから自宅セッションを開いて作業（会社規定の確認は必要）。夕方・夜：電車でスマホアプリから音声入力でObsidianに記録、ソファで1日の振り返りをiPadで行う。PCの前に一度も戻らないまま1日が終わる、というワークフローが可能になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 朝のアイデア出しをベッドから始める</strong>
+翌朝のために前夜に <code>claude --remote-control</code> を立ち上げておく。起床後すぐにスマホのClaudeアプリを開き、kemioや案件の続きをベッドから投げ込む。PCを開かなくても「思いついた瞬間」を逃さない。</p>
+<p><strong>② 移動時間をObsidian更新タイムに変える</strong>
+電車・タクシーの中でスマホアプリから音声入力でLiteratureNoteやタスクの整理をクロードに依頼する。Obsidianのドキュメントがリアルタイムで更新されるので、帰宅後の「まとめ作業」が不要になる。</p>
+<p><strong>③ /config でリモートコントロールを常時オンに設定する</strong>
+毎回コマンドを打つのが面倒なので、最初に <code>/config</code> → リモートコントロールを True に設定しておく。これで毎朝PCを立ち上げてターミナルで <code>claude</code> を起動するだけで外出先からすぐ繋がれる状態になる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいどうも、井村直也です。クロードコードでObsidianを使っている方、PCの前に何時間も張り付いてませんかね。煮詰まっているのに場所も変えられない。ちょっとソファーに行きたいけど、クロードコードがデスクに縛り付けている。スマホのメモに仮置きして、後でPCに戻ったら天気を忘れている。こんな経験ないでしょうか。今回はその問題をリモートコントロールという機能で解決する方法をお話しします。セットアップの実演と注意点まで含めてお伝えしますので、ぜひ最後までお付き合いください。正直言うと自分もつい先日まで何時間もデスクに張り付いて作業する状態でした腰が痛いとか首が凝る発想が煮詰まるそんな状態もあります</p>
+<p><code>00:39</code> リモートコントロールって名前は知ってたんですけどエンジニアがコーディングの続きをリモートでやるやつでしょって感じでスルーしてたんですよねあとCore Arcのディスパッチって試してみたんですけどなかなか使えないなと思っててでもある時リモートコントロールを試してみたら全然違ったっていう話ですPCの前にいなくても、スマホを持って外出していても、電車の中でも散歩していても、自宅のクロードとオプシディアン環境にそのまま繋がるんですよね。スライドの左側が今までの状態です。PCの前でしか使えない、右側がリモートコントロールを入れた後、スマホでもタブレットでもブラザーでもどこからでも同じ環境に繋がるという状態になります。</p>
+<p><code>01:20</code> 今日の動画の内容なんですけれども、まず最初にリモートコントロールで1日がどう変わるかという話をします。次にその仕組みの話なぜディスパッチとかじゃなくてリモートコントロールなのかっていう話ですね3つ目にセットアップの実演ということで実際にコマンドを打って接続するところをお見せしていきます最後に注意事項と制限事項ここを知っておかないとハマるポイントがあるのでちゃんとお伝えしていきます今回の内容を理解すると朝から夜までObsidianとCloudの使い方がガラッと変わるかなと思いますこのチャンネルでは非エンジニアの方がクロードとオブシディアンを使って仕事の生産性を劇的に上げる方法を発信しています。</p>
+<p><code>02:00</code> コードは書きません。でもAIはフル活用します。そんなスタイルに共感する方はぜひチャンネル登録お願いします。では早速やっていきましょう。まずですね、オブシディアンとクロードってPCでしか使えないと思ってませんか?私はそんな風に思ってました。実はそうじゃないんですよね。スマホでもタブレットでもブラウザでもほぼ制限なく作業環境が選び放題になるんです。例えばこんな風に使えますある休日の朝を想像してみてくださいベッドで目が覚めてアイディアが浮かんでる時ありませんかね前の日に考えてきたことの続きが頭の中にある</p>
+<p><code>02:33</code> でもPCは別の部屋にあるので普通なら後でPCの前でやろうって思っていますよねで大抵そのまま忘れてしまうっていうことが多いかと思いますリモートコントロールがあるとここが変わってきますスマホのクロードアプリを開いて昨日立ち上げておいたセッションをタップするだけなんですよねベッドから出なくてもそのままクロードにこのアイディアをこんな風に深掘りしてとかっていうことを投げておけるんですよねPCのある部屋まで行かなくてもその場でアイディアを固める作業をできちゃうっていうのが一つの使い方の広がりになるかと思います</p>
+<p><code>03:08</code> 次に業務ですよね午前中はデスクで集中作業するクロードリモートコントロールっていうコマンドがあるんですけれどもそれを立ち上げておくとですねいつでもどこからでも作業できる状態が作れます煮詰まったら場所を変えればいいっていう状態になるのでそういった安心感も出てきますセッションの途中でスラッシュリモートコントロールで打つだけで今の会話をそのままスマホに持ち出せるこれ自分も知らなくて知った時結構感動しました今ちょっとこの画面だけではなかなか伝わりきんないところは後ほどの実演動画の方で詳しく解説していきます</p>
+<p><code>03:42</code> で昼前に煮詰まってきたんでMacBook Airを持ってカフェに移動するなんてこともできますメインのマシンがデスクトップであっても持ち出すのに重いノートPCであっても軽量なですねパソコンがあればそれを持ってカフェに行っちゃえるまあそんな環境これMacBook AirじゃなくてもiPadとかですねそんなものでも構いませんブラウザとかアプリでクロードを開いて自宅のMacセッションを選ぶで場所を変えて気分転換しながらさっきまでの続きをそのまま進められるということですねカスタムスキルなんかも、cloud.md という設定ファイルもそのまま動きます。 自宅の pc で作業しているのと全く同じ環境がブラウザーとかアプリで使えちゃうっていうのがとても画期的なことだと思ってます。 午後は散歩しながらアイディアを練るなんてこともできるようになります。浮かんだ着想をスマホで音声入力してクロードに投げておいて、Obsidianのドキュメントなんかをどんどん更新してアイデアを煮詰めるなんてこともできるようになります。</p>
+<p><code>04:40</code> また別の場面で夕方、友達と遊んでいて、思いついたことをその場でスマホに投げておくこともできます。帰りの電車でその続きをやるみたいなこともできるようになるので、本当パソコン持ち歩かなくてもですねそのまま作業がどこにいてもできるっていうような状態が手に入るかなと思います最後は夜ソファーで作業ができるこの辺アイデアとかもやはりリラックスしている方が浮かびやすかったりしますのでそんな環境をイメージしています寝る前の振り返りをObsidianにつながったクロードとiPadで行うことができますカスタムスキルもそのまま使えますのでPCの前に一度も戻らないまま1日が終わる</p>
+<p><code>05:18</code> そんなこともこのリモートコントロールを知ることによってできるかなというふうに思っています次は平日の話ですこれまでObsidianとCloudは自宅のデスクトップのMacとかWindowsでしか作業できない方のケースを想定していますそんな方は仕事から帰ってきてから作業するそんなイメージかと思いますご飯食べてPCの前に座ってそこからやっとObsidianですとかCloudを使った作業に入るみたいなふうなことかなと思っています気づいたら23時とか24時とかですね結構遅い時間まで作業が続くみたいなことも多いと寝る時間を削ってクロードとオプシディアンを触っているっていう</p>
+<p><code>05:54</code> こういう人結構いるんじゃないかなと思いますリモートコントロールがあると朝出かける前にクロードリモートコントロールっていうコマンドを打っておくだけでセッション立ち上がりますのでどこでも作業ができるような状態を作り出すことができます行きの電車の中では始発でもし座れたんだったらMacBook Airとか軽いノートブックPCを使ってブラウザから自宅のセッションを選んで通勤時間そのまま作業時間に当てることができます昼休み会社のPCのブラウザから自宅のセッションを開いてブラウザ経由で作業を継続できます</p>
+<p><code>06:28</code> これちょっと会社の規定にもよるんでその辺は自己責任になるんですがそんなこともできちゃいます帰りの電車ですね通勤電車だとなかなか座れないってことも多いと思うんですけれども座れなくてもですねスマホのクロードアプリでセッションを選んでGISの入力で1日の振り返りですとか作業をクロードと一緒に進めることができるそんな環境もできます最後帰宅後今まではご飯食べた後にその後作業っていう風になるんですけれどもすでに昼間の間にある程度作業している状態なのでゆっくり過ごせるんですよね今回のユースケースはあくまで私だったらこう使うバージョンなので</p>
+<p><code>07:02</code> 皆さんだったらもっと違った工夫をされるんではないかと思います私にとってはこんな使い方ができる結構衝撃的なことでした自宅のPCに外からアクセスするって普通は結構すごいことなんですよそれがコマンド一つでできてしまうっていうなぜこんなシンプルなのか具体的な設定方法や注意点は後ほど実演しますがその前に仕組みをざっくり理解しておくと使い方の工夫にもつながります自宅のPCに外からアクセスするって普通はネットワークの専門的な設定がいくつも必要なんですよねVPNっていうものを組んだり</p>
+<p><code>07:35</code> 暗号鍵っていうのを管理したり通信の穴っていうのを開けたり非エンジニアにはかなりハードルが高いと思うんですよね私にとってもこれを一個一個全部自分でやるっていうのは結構面倒いなっていうふうに思いますAIに聞きながら設定すること自体は可能だと思います私もこういうことはやったことありますでもトラブルが起きた時の対処も自分でやる必要があるので設定して終わりじゃなくて維持し続ける面倒さっていうのが残っちゃうんですよね一方でリモートコントロールはそういう接続とセキュリティの設定を全部クロードが用意してくれた状態で使えるようになります</p>
+<p><code>08:09</code> 通信は暗号化済み 外から穴を開ける必要がなくて認証情報は使い捨てで自動執行ということでそういうセキュリティ面の心配も全くないそんな状態でユーザーがやることはコマンドを1つ打ってエンターを押すだけ本当簡単になっていますアンソロピック クロードを提供している会社はPCに外からつなぐという問題を解消するために複数のリモート手段を用意していますディスパッチというモバイルアプリとかあとデスクトップアプリからタスクを送信する仕組みっていうのもあります最初セットアップで使えるんですけれども</p>
+<p><code>08:42</code> クロードデスクトップ経由で動くっていう条件があります次にチャネルズっていうのもあってこれはテレグラムとかディスコードっていうアプリからイベント駆動でクロードを動かす仕組みっていうちょっと難しいんですねMCPプラグインの設定なんかも必要になります今回のリモートコントロールはそんな難しい設定を事前にやることはほとんどなくて、そんな中でも進行中のセッションをそのまま別デバイスから操縦できるっていう、私にとっては結構驚きの操作ができるものになっています。ローカルのスキルとかMCPもフロードMDっていう設定ファイルも全部そのまま使えるっていうのが、</p>
+<p><code>09:18</code> 本当に家のパソコンをスマホに取り込んだっていうのが本当そのままの表現なんですけれども、そういう状態になっていると思ってください。リモートコントロールってエンジニアのコーディングの続きをリモートでやるものってこれ冒頭にも言ったんですけれども自分もそう思っててずっとスルーしてたんですよねでも実際は非エンジニアのObsidian運用にこそ合っていると今はそう思ってます多くの人が辿る経路はこうかなと思いますスマホからObsidian使いたいクロードと相談していろいろ進めたいそうするとまず最初にディスパッチから入るかなと思います</p>
+<p><code>09:52</code> アプリから使えるので使いやすそうなイメージがありますでも私が実際使ってみた印象としては結論としてあんまり使いやすくないどんどんバージョンアップされて良くなるとは思うんですけど今の段階では私はちょっとディスパッチ使いにくいという印象です理由としては起動で時間が異常にかかったりですね起動すらしない時もあったりとかですねあとは他のプロジェクトとか文脈をなかなか引き継いでくれてなかったりするので非常に使いにくいなと思ってましたあと、Channelsに関しては、MCPプラグインとかの設定が必要だったり、</p>
+<p><code>10:27</code> その時点で私の方はあんまり気が向いてなくてやってません。その時点で、もうリモートいいやっていう風になっちゃうと思うんですよね。私もリモートコントロールにたどり着く前に止まっちゃってた一人です。結論として、今やっている作業の通知をスマホからやりたいという場合は、リモートコントロールの方が圧倒的に安定します。セッションの文脈がそのまま引き継がれるし、カスタムスキルもMCPサーバーもローカルと同じものが動くまず試すべきはリモートコントロールになりますここからセットアップの実演をやっていきたいと思いますやることは5つで</p>
+<p><code>11:01</code> 1つ目はこれCLI使うんですけれどもそんなに何か難しいなって思わずに見ていただければ助かるんですけれども短いコマンドを打つだけなので非常に簡単ですクロードリモートコントロールっていうこのコマンドを打つだけで新規セッションを作成することができますそこからブラウザですとかスマホだとか別の環境で作業ができる状態になってしまいますここに書いてありますねブラウザで接続とかURまたはQRコードを使用って書いてありますがこれでブラウザに接続できますしスマホの方からも同じセッションが2番も3番も一緒なんですけれども見れますよってことを言ってます</p>
+<p><code>11:39</code> 4番のところは既存のセッションをリモートコントロールでリモート化っていうことなので既存のセッションでスラリモートコントロールっていうのを打つとそれだけでそのセッションがですね外部環境で使えるようになりますのでブラウザーですとかスマホからも見れるようになります最後にスラコンフィグっていう設定のコマンドあるんですけれどもこれをやることによって全セッションを自動有効化しておくこれ何を言ってるかというといちいちこのクロードリモートコントロールとか打つの面倒いと思うんですよね</p>
+<p><code>12:12</code> それを省略するのがこのSlaConfigで全セッションの自動融合化をするってことですねこうすることによって自由にですねもうスマホからセッションにつながれるっていうことになりますちょっともう先に言っておきますけれどもClaudianに関しては適用されないのであくまでCLIでこの操作が必要になりますですのでClaudianでやっているセッションを引き継いでやりたいなっていうことはできないのでちょっと運用の仕方変えていただくか新規セッションだけ立ち上げておいてObsidianの環境を読み込めるセッションを常に手元に持っておくっていう状態を作っておくそういう使い方になるかなと思います</p>
+<p><code>12:50</code> では実際画面見ながら進めていきましょう今ですねこのCLIの画面をこちらに持ってきました今回私の方はデモ環境の方で行っていきますのでパスがこんな感じになってるんですけれどもここからスタートしていきますまず最初ですね、Cloud Remote Controlというコマンドを打ちます。このまま入れていくだけですね。これをEnterを押します。そうすると、いろいろ英語で書いてあるので、ちょっとうってなると思うんですけれども、安心して進めてください。何を聞かれているかというと、このリモートセッションをどこで立ち上げますかというのを聞かれていて、</p>
+<p><code>13:26</code> 選択肢は1または2しかありません。Same Delayと書いてあるんですが、Same Directoryですね。今開いている環境そのまんまにセッションを立ち上げますかっていうのとワークツリーっていう分離したですね環境で 立ち上げますかっていうのを聞かれていてこれはねちょっと開発する人のための機能なので通常だったら開発する人の立場だったら多分2番を選ぶんだと思うんですね 本番環境を壊しちゃいけないので2番を選びますただ今回我々はオブシリアンで作業をすることを前提とした場合2番までする必要はありませんこの一番選んでください でそうすると今コネクティブってなったと思いますそれでこの状態になったら追ってスペースをしますそうするとこんな形で qr コードを出てくるのでこれをスマホの方で取り込んでいきます</p>
+<p><code>14:14</code> QRコードを読み込むとこのようにアイドルのところに新しく作られたセッションが出てきます。ここに例えばこんにちはというふうに打ちます。そうするとセッション読み込みましたというのが出るので、この名前がまず分かりにくいのでこの名前を変えましょうか。OKします。そうするとデモセッションになりました。これがどんなふうに他の環境に伝播しているかというと、クロードコードのさっきのURLを踏むとですねこのページに来るんですけどそのうちのこのデモセッションっていうのが見えてると思います</p>
+<p><code>14:49</code> これ読み込みしてくとさっきスマホの方で回答した内容がここに出てくると思いますんでここでブラウザ上で仕事をすることができます一応セッションが作られてこんにちはとかコメント打った方がより確実かと思いますんでそこまでやって会社行くなり電車の中でやるときはその前に何かメッセージを一言入れるというところまでやった方がいいかなと思いますこのリモートコントロール打つことこのようなまず最初の問いがありますこれ最初の本当1回目しか聞かれないので2回目以降は出てきません</p>
+<p><code>15:21</code> それでここに出てくるURLをコピペしてブラウザで操作することもできるし先ほどのQRコードを表示してそれをスマホ側で読み取ってクロードアプリでセッションを始めるということもできますどっちも選択肢ありますので好きな方でやってみてください他のやり方として既存リモートをリモートコントロールでリモート化するっていうところなんですけれども前回までの動画の中でEarth Contextというセカンドブレインのツールのお話をいろいろしてきた</p>
+<p><code>15:54</code> その時のセッションがありますのでこれをこのままリモートコントロールの方に持っていきたいと思いますここでスラッシュ打ってリモートコントロールっていうのを選択します名前分かりやすいようにここで決めちゃいましょうEarth Contextって打ってこれでリモートコントロールをやるとリモートコントロール is activeってなりましたからこれでブラウザの方でもスマホの方でも見えるようになっていると思います早速ブラウザの方ででもEarth Contextっていうのが見えましたよねこんな感じで先ほどCLIで分かりにくいなっていう風に思ってた方も</p>
+<p><code>16:32</code> ここでブラウザで見るとですねかなり見やすくなりますのでこんな感じで切り替えて使えるっていうのがこのリモートコントロールの非常に使いやすい部分かなというふうに思いますあとはクロードアプリ使っている方もいらっしゃると思うんでクロードアプリの話で今回このコードっていうのを移動しますそうするとコードのこの左側のサイドバーの下の方にotherってあるんですけどその中にデモ、Earth Contextとかですね、デモセッションで先ほど作ったやつが両方出てきます。これスマホでやったチャットの内容がここに表示されているのがわかるかと思います。</p>
+<p><code>17:10</code> さらにEarth Contextですね。こちらもこのように見えますので、要はブラウザ以外にもちょっと気分転換に、このクロードデスクトップでやろうかなみたいな、僕はそんな使い方してるんですけれども、クローディアンだけじゃなくて他の環境でこのオブシリアンの作業を進めたいって方はいろんな見た目を楽しみながらですね作業を進めていただけることができるかなと思いますのでデスクトップアプリとブラウザーあとはスマホこの3つをいろいろ組み合わせながらですね日々のオブシリアンですとかクロードの作業をですね進めていただければいいのかなというふうに思います</p>
+<p><code>17:47</code> それで戻って最後のスラコンフィグってところなんですがこれはですね本当最初にやっていただいた方がいいのかなって思うぐらいこのコマンドが面倒いので重要かなと思ってますちょっと新規にクロード立ち上げますけれどもクロードにログインしてした後ですねここでスラコンフィグってやりますでこのままエンターをしますはいそうするとまあこういう設定画面になるんですけどこのサーチセッティングスってところでリモートって打つとこのイネーブルリモートコントロール for all sessionsって出てきますからこれがこのリモートコントロールを常時オンにするかオンにしないかっていうのを決めてますで私トゥルーにしているので常に新しいセッションをこのCLIで立ち上げたら</p>
+<p><code>18:34</code> 先ほど言ったようにアプリとかですねブラウザーでそのセッションが見れる状態になるその状態に今してますで選んだ状態でタブキーを押すとフォルスになったりデフォルトになったりしますこのデフォルトっていうのはフォルスの意味なのでデフォルトだとコマンド打たないとリモートが作れませんよってなってますですので常時新規に立ち上げたものをリモートにしてほしいということであればTrueにしてくださいということでスライドに戻りたいと思いますはいということでセットアップはそれほど難しくないとは思うんですがここでノートPCの環境をリモートで使う場合の注意点</p>
+<p><code>19:13</code> セッティングポイントだけお伝えしておきますデスクトップPCの方はこの問題ないので読み飛ばしてというか次のところまで進んでいただいて大丈夫です私の場合は macbook pro 使ってるんですけれどもそれで動作確認した結果なども踏まえてますここに書いてある通り常時起動テストってほどで外からリモートで動作確認した結果なども踏まえてます。ここに書いてある通り常時起動テストってほどで、外からリモートで動作確認した時に、この時は動いたけどこの時動かなかったっていうのをちょっと書いてます。画面ロックとか自動ディスプレイオフの状態だと動きますけれども、明示的にこの左上のAppleマークからスリープって選んで押してしまうと、</p>
+<p><code>19:50</code> リモートは動かなくなりますし、あとは完全にPCを畳んでしまってですね、持ち運び状態になったら当然動かないです次にリモートコントロールで使えるものと使えないものを整理しておきます使えるものはスラッシュコマンド、カスタムスキル、MCPサーバー、cloud.md設定ファイルあとはローカルファイルへのアクセスPCと同じ環境はそのまま動くというふうに思ってもらって大丈夫です逆に使えないものはクローディアン関連になります当然ながらClaudianそのものはリモートコントロールの範囲外なので使えないんですけれどもClaudianで立ち上げているチャットをリモートコントロールにすることはできないので</p>
+<p><code>20:32</code> これだけはご注意くださいリモートコントロールをフル活用したいという方はデスクトップアプリメインのチャットに切り替えるみたいなことの検討が必要かなというふうに思いますリモートコントロールで使えるのはCLIセッションだけなのでつまりリモートコントロールを使いたい場合はターミナルからクロードリモートコントロールをコマンドでやるとかセッションでクロードっていう風に立ち上げたものが自動でこのリモートコントロールの配下に入ってきますのでどうしてもCLI起点になってくるってことだけ運用上気をつけてください</p>
+<p><code>21:08</code> 接続直後の挙動についてちょっとだけ補足しますリモートコントロールで接続した直後っていうのはスラッシュコマンドが効かないっていう風に思うかもしれませんこれは接続したばっかりのリモートセッションっていうのはまだ正式にコンピューターとの間で繋がりだけはできたんですけれどもデータのやり取りしてないのでPCがどんなスラッシュコマンドを持っているかなんていうのは知らない状態なんですよねですので1回メッセージを送ってくださいそうすると相手側のPCのですね持っているコマンドの情報とか</p>
+<p><code>21:41</code> MCPの情報とか全部ブラウザ側で認識しますのでそれ以降はスラッシュコマンドとか全部使えるようになりますあとスマホのクロードアプリに関しては私が確認した限りやとスラッシュコマンド保管で出てこないのでスマホのアプリでやる場合でスキルを使いたい場合は明示的にですねこのスキル使ってっていうのを言ってあげる必要がありますのでその点ご注意くださいはいまとめていきますPCの前にいなくてもスマホ1台で自宅のクロードとオブシディアン環境にそのままつながるっていうことです</p>
+<p><code>22:14</code> 本当リモートコントロールを手に入れるとですねワークスタイルがガラッと変わるかなと思いますスマホでもiPadでも会社のPCのブラウザでもですねどこからでも自宅のObsidianとクロードが入っているPCを操作できるっていうことになりますからかなりユーズが効く状態が手に入るそれがリモートコントロールになります右側書いてある通りソファーやベッドでリラックスしながらアイデアを固めるとかですねタブレットとか軽量PCを持ち運んで</p>
+<p><code>22:47</code> 場所を変えて気分転換しながら作業するとかですね出先で思いついたアイディアをスマホアプリからドキュメント化するとかですね散歩とかタクシー内で音声入力できる状態にあるときに音声でアイディアを固めるブレストするみたいなこともできますやることは3つだけです1つ目はクロードリモートコントロールを1回立ち上げるだけですコンフィグでトゥルーにすることも忘れずにやっておいてください2つ目はスマホでもブラウザでもいいんですけれどもそこからクロードのコードのメニューに行くってことが重要です他のチャットとかコアークとかでは出てこないので</p>
+<p><code>23:23</code> 必ずコードの画面に行くってことが重要になりますスキルとかMCPサーバーもそのまま動くなぜならばPCそのままいじってるのと一緒なのでそういう環境が手に入りますということでリモートコントロールでどんな使い方をしているかぜひコメントで教えてください自分がこう使ってるよとかこんな場面で便利だったとかコメント欄で共有してもらえると嬉しいですチャンネル登録と高評価もよろしくお願いしますでは以上ですありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./ObsidianにClaudeCodeを召喚！「claudian」でノート術が劇的に変わる革命的設定【同期も】" class="internal alias" data-slug="ObsidianにClaudeCodeを召喚！「claudian」でノート術が劇的に変わる革命的設定【同期も】">ObsidianにClaudeCodeを召喚！「claudian」でノート術が劇的に変わる革命的設定【同期も】</a>（LiteratureNote）— claudianとRemote Controlの対比：claudianはObsidian内UIでの操作、Remote ControlはCLIセッションの外部接続</li>
+<li><a href="./Obsidian-×-Claude-Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】" class="internal alias" data-slug="Obsidian-×-Claude-Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】">Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】</a>（LiteratureNote）— Obsidian＋Claude Codeの運用ワークフロー</li>
+<li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal alias" data-slug="元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a>（LiteratureNote）— セカンドブレイン構築の全体像</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）— AI活用の概念整理</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts）— <a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>機能・活用法の統合ノート</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-790" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

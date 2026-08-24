@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで"/><meta name="twitter:description" content="📺 動画情報 【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで 🎙️ AI仙人 【AI歴10年・ガチADHD男】 ・ 📅 2026-05-19 ・ ⏱️ 50分43秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのAIエージェント「Codex App」の基本操作から活用哲学まで、実演しながら解説する入門動画。コード作業だけでなく資料作成・ホームページ生成など文系業務にも使えることを示している。 🗺️ 全体像 flowchart TD A[Codex Appをインストール・ログイン] --> B..."/><meta property="og:description" content="📺 動画情報 【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで 🎙️ AI仙人 【AI歴10年・ガチADHD男】 ・ 📅 2026-05-19 ・ ⏱️ 50分43秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのAIエージェント「Codex App」の基本操作から活用哲学まで、実演しながら解説する入門動画。コード作業だけでなく資料作成・ホームページ生成など文系業務にも使えることを示している。 🗺️ 全体像 flowchart TD A[Codex Appをインストール・ログイン] --> B..."/><meta property="og:image:alt" content="📺 動画情報 【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで 🎙️ AI仙人 【AI歴10年・ガチADHD男】 ・ 📅 2026-05-19 ・ ⏱️ 50分43秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのAIエージェント「Codex App」の基本操作から活用哲学まで、実演しながら解説する入門動画。コード作業だけでなく資料作成・ホームページ生成など文系業務にも使えることを示している。 🗺️ 全体像 flowchart TD A[Codex Appをインストール・ログイン] --> B..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで 🎙️ AI仙人 【AI歴10年・ガチADHD男】 ・ 📅 2026-05-19 ・ ⏱️ 50分43秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのAIエージェント「Codex App」の基本操作から活用哲学まで、実演しながら解説する入門動画。コード作業だけでなく資料作成・ホームページ生成など文系業務にも使えることを示している。 🗺️ 全体像 flowchart TD A[Codex Appをインストール・ログイン] --> B..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1834"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1834" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで</a></div></nav><h1 class="article-title">【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-19T15:00:00.000Z">2026年5月20日</time><span>79 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【超入門】一番強いAI！初心者でもスグに使えるCodexの基礎をやさしく解説するで</strong>
+🎙️ AI仙人 【AI歴10年・ガチADHD男】 ・ 📅 2026-05-19 ・ ⏱️ 50分43秒
+🔗 <a href="https://www.youtube.com/watch?v=W7jS-dZuIJY" class="external">https://www.youtube.com/watch?v=W7jS-dZuIJY<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>OpenAIの<a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>「Codex App」の基本操作から活用哲学まで、実演しながら解説する入門動画。コード作業だけでなく資料作成・ホームページ生成など文系業務にも使えることを示している。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Codex Appをインストール・ログイン] --> B[プロジェクトフォルダを開く]\n    B --> C[モデル選択・インテリジェンス設定]\n    C --> D[タスク実行]\n    D --> E1[マークダウン中間コンテキスト作成]\n    E1 --> E2[PPTスライド・HTML・資料に変換]\n    D --> F[ブラウザユースでWeb情報収集]\n    F --> G[コンテキストを蓄積して出力の質を上げる]&quot;">flowchart TD
+    A[Codex Appをインストール・ログイン] --> B[プロジェクトフォルダを開く]
+    B --> C[モデル選択・インテリジェンス設定]
+    C --> D[タスク実行]
+    D --> E1[マークダウン中間コンテキスト作成]
+    E1 --> E2[PPTスライド・HTML・資料に変換]
+    D --> F[ブラウザユースでWeb情報収集]
+    F --> G[コンテキストを蓄積して出力の質を上げる]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Codex App — ChatGPTアカウントで使えるAIエージェント </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>OpenAIのCodex AppはChatGPTと同じアカウントで使える。MacはApple Silicon版をダウンロードしてログインするだけ。コードだけでなく「フォルダに書き込む・ファイル操作する・ブラウザ操作する（ブラウザユース）・コンピューター操作する（コンピューターユース）」など幅広い自動化ができる。マウスカーソルを奪わず自分のPC操作と並行できるのが大きなメリット。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. モデル設定とインテリジェンス — 難しいタスクだけ「非常に高い」を使う </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>インテリジェンスは低・中・高・非常に高いの4段階。すべて「非常に高い」にするのは非推奨で、公式も「難しいタスクだけ最高レベルにせよ」と言っている。難しいタスクの目安は「10万行超えのコード」「複数ファイルが複雑に絡み合う論理構造の把握が必要なもの」。文系タスクには5.5モデルが特に強く、モデルはo4-mini等から選べる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. フルアクセスと自動レビューの違い — データ消失リスクを避ける設定 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>権限設定は「フルアクセス」「自動レビュー」「デフォルト」がある。フルアクセスはデータ消失リスクがあるため普段は「自動レビュー」推奨。自動レビューは危険な操作をしそうな時だけ確認を求め、安全なコマンドは自動で進む。Claude Codeの「ガンガン行こうぜ」モードに近い設計。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 中間コンテキスト（マークダウン）— スライドも資料もここを起点にする </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIの最終成果物を直接作るより、<strong>一度マークダウン形式で中間ファイルを作ってから</strong>スライド・HTML・スピーチ原稿に変換するほうがうまくいく。中間ファイルを挟むことで「カーソルで直接編集→スライド化」という流れになり、後から修正しやすくなる。これを「コンテキストの中間層」と呼んでいる。<a href="./ai-workflow" class="internal alias" data-slug="ai-workflow">AIワークフロー</a>の基本的な考え方として重要。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. コンテキスト収集 — 知らない分野はWebから引っ張ってくる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>自分が持っていない専門知識（エンジニアリング・投資等）はCodexのブラウザユースでWebから集めさせてコンテキストを作れる。ただし「ヤフー知恵袋からごった返しに取ってくる」より「専門家が集まるコミュニティ・論文サイト等から絞り込む」ほうが質が上がる。コンテキストの良し悪しを判断できる人間側の目利き力が重要。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>6. AI全任せプロンプト — AIが自分のベストを見せる使い方 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「あなたが一番綺麗だと思う形式で資料を作ってください」のように、指定せずにAIに委ねると「AIが自分の得意なことを見せる」テストになる。大概しょぼいが、たまにびっくりする出来になる。この「どこまでやれるのか」を試し続けることで、新ツールが出た時に「これは既に知ってる地平か新しい地平か」を判定できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 明日の朝、Codex Appをインストールしてみる</strong>
+ChatGPTアカウントがあればすぐ使える。AI推進プロジェクトの説明用に「Codexで資料を作る様子」を録画しておくと社内デモとして使える。</p>
+<p><strong>② 企画書・提案書は「マークダウン中間層」方式で作る</strong>
+Codexにいきなりパワポを作らせるより、まずマークダウンで下書きを作らせてカーソルで編集し、そこからスライド化するフローに変えると修正コストが大幅に下がる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> こんにちは、屋井仙人です屋井仙人、その変態仮面なんですか?いやー、これ国の案件あるんでね顔出せないんですよね以前の動画でクロードとチャットGPTどっちがいいねんっていう動画あげたじゃないですか結論、GPTGPTで、クロードコードもいらんいーらんまあなんかあのチャットGPTのクロードコードみたいなやつがあるって聞きましてうんコデックスねちょっと使い方を教えてほしいなという いきますか動画ですコレックスってちなみに何ができるんですコーデックスは なんか gpt の脳みそでパソコンの</p>
+<p><code>00:42</code> ファイルが操作できたりホルダーに書き込ん だりまあそういう ai エージェントがやるようなことができるある特徴で言うと ブラウザユースブラウザユースクローマリア google chrome あの上インターネットつながるやつねこれブラウザーこれは操作 も自動化できるしコンピューターユースっていう機能もある んで実はアプリとかも自動化でなんかオープンクローンやなあそうそうそうそれ の精度高いバーセルたりはんっai が勝手にパソコンのか動かすやつの 音声と版が出たところそう結局それってあのまあ画像認識の制度の話が大きかった 例えばまあここにボタンあるなぁとか</p>
+<p><code>01:21</code> これはこういうものやろうなって画像を見たら僕らもなんとなくこのUI見とったら分かるやんこれをAIが認識するっていうことやねそうやってAIが勝手にブラウザの中入って操作してくれたりとかあとアプリもできるみたいなアプリもできるちょっとそこは諸説あるってややこしいこと言うてあれやから一旦画像認識と思っておいてもらったらいいやけどパソコンを操作するやり方結構いっぱいあるから画像認識以外もあるけど画像認識の精度が上がるのは</p>
+<p><code>01:54</code> すごいデカいやっぱりパソコン操作においてここのコンピューターですやっぱすごいのがマウスが分裂するマウスが分裂どういう仕組みなのかわからんけど自分のこのカーソルを奪わんってことやなだから自分のパソコン別の操作しながら裏で動かしてくれるこいつにやらしてる間に自分は別の作業できるって結構デカいだいぶデカいです分身じゃないですか?そうなんですってことは高い値段安い</p>
+<p><code>02:28</code> クロードが一番高い値段で200ドルこいつも200ドル、100ドル、20ドルクロードフォードと一緒かこっちのがレートリミットって言って制限は緩いイメージがあるねGPTの方が長生きそうなってきたら僕の肌感ですけどクラウドコードよりもCodecs使うのはあかんなって気持ちになってきたんでまぁそうやな色々聞いといてあれなんですけど早く教えてください聞いといても申し訳ないです</p>
+<p><code>03:01</code> めっちゃ気になってきましたじゃあCodecs見せていくかお願いしますCodecs取ってくるかCodecsってアプリ?なんか昔おっしゃってたCodecs AppとCodecsって一緒?一緒だけどCodecs Appの方がUI的にははるかに使いやすい中身は一緒だけどねCodecs CLIっていうのもあるダウンロードMac、Apple、Silicon</p>
+<p><code>03:34</code> Windows、LinuxってあるんでそのCodecs Appってやつをダウンロードそうそうそうそうダウンロードしたらインストールここもう入ってるから多分あかんって出るけど初めての方はその手順でログイン画面が出ると思うのでログインボタンを押すといけるはずログインのIDパスワードってChatGPTのIDとパスワードですか?そう、ChatGPTにログインするって感じで出るはずですねへー</p>
+<p><code>04:09</code> そっか課金が一緒ですもんねだからOpenAIのアカウントChatGPTのアカウントが1個あるとOKみたいなという感じでログインできたら開きますじゃあいきますかまず簡単にプロジェクト作業っていうのを押すと既存のフォルダーこれもそうかAIアジェントやからフォルダを開くっていうやつですかそうそうそうそうこれ今回コーデックスってフォルダ作ったからこれ開いてみます</p>
+<p><code>04:44</code> ちょっと聞いてみるかこのフォルダ何入ってますかまあこんな感じでねファインダーで開くあでもそこから開けるんやそう今どこ押しました?ここはいはいはいこの3点リーダーみたいなやつファインダーで開くめっちゃ便利かもここに一応今回入ってるのはこれで見れる今回も毎度おなじみ1000人YouTubeの文字おこしが入ってます動画の本数も増えてきましたね</p>
+<p><code>05:20</code> 使い回してるから最新のやつ入ってへんけど動画のコンテキストはまあいいや最新やつ今度入れとこうこんな形で文字起こしのデータの置き場ですってねではではまずちょっと簡単な使い方の話するけどここがモデルのインテリジェンスつまり頭の良さやね低中高非常に高いってある高いタスクがいいから全部高いタスクにしようという風潮もあるけど公式によるとあまり難しくないタスクで非常に高いばっかりしてるのは微妙らしい</p>
+<p><code>06:00</code> めっちゃムズイやつだけこれが一番いいよって言ってた公式がムズイタスクかムズくないタスクかの違いってどこにあるんですか?コードとかがめっちゃ複雑に絡み合ってるとか大量にコードあるみたいなタスクやったら非常に難しいなんのかなぶっちゃけねあんまり基準ない気はするけどどうなんやろなでもなんかもう10万行超えるようなコードとかは割と</p>
+<p><code>06:32</code> 非常に難しいやなエンジニアの方はそれイメージできそうなんですけど僕あんまりコードとかを使わないんですよけど参照するファイル数とかホルダー数結構多かったりするんですけどこれも複雑なタスクっていう感じですかね?うーん、ちょっとやらしてみてって感じかなぁ感覚、そんなに具体的に論理構造とかを追わんでいいは非常に無高いで なくてもいい気がするなんかこの順番で1行も漏らした赤身で助かるやんこっちが入ってからこっちが入って このファイルも読んで絶妙にこう難しい奴をただ検索するだけじゃなくて論理構造も把握しないとはいこれは結構非常に難しいなり そう</p>
+<p><code>07:13</code> 考えすぎていいアウトプット出るかっていうとそうでもないらしくてそうなんですねそれねコーデックスあるあるなよたまにどれぐらいのベンチマークのスコア出るかっていうのを試してコーデックスでやらすと一番賢くしててもスコアが良くなるかっていうとそうでもないこともあって結構面白いよね一応いくかこんな感じでインテリジェンス選べますモデルはいろいろあるねとりあえず5.5でいいこの5.5がね文系タスクやっぱすげーってサマールトマン言ってたねコードだけじゃないビジネスタスク</p>
+<p><code>07:48</code> プログラムじゃなくてもいいよって言ってサマールトマン言ってたこの高速と指標順は今日は高速にしとくか要は早く結果出した時は高速にするその代わりトークンがめっちゃ消費される優先的に推論されるまあそんな感じやねでも簡単なとこはそれでいけるあとはこのフルアクセスっていうのは自動レビュー、レフォルト、権限フルアクセスは権限強すぎるので気をつけましょうっていうなんかデータ飛んだりするやつですか?うん、データ飛んだりするやつ</p>
+<p><code>08:20</code> これもデータ飛ぶ可能性あるんやうん、まあAIアジェント系はめちゃくちゃ綺麗に囲わないとサンドボックスって言うんやけどデータ飛ぶ可能性あるなデータめっちゃ綺麗に囲ったらそれはそれで意外と不便やったりするから自動レビューぐらいが一番いいんちゃうかなこれ、普通は自動レビューって何ですか?自動で基本的にやってくれるサンドボックスって言うんだけど説明難しいけど危ない操作しそうな時だけ聞いてくるみたいな普段は安心なコマンドだけやってくる</p>
+<p><code>08:58</code> クロードコードでも自動でガンガン行こうぜってモードあったじゃないですかそれに近いめっちゃいいですこれはフルアクセスにしておくとガチ危ない一応レート制限とかも確認できますここがファイルの追加とかで自分のファイルを出せるんですけどよく言われるのはプランモードこれやるとコードとかもし何かシステムを作ったりツールを作ったりする人はこの先に計画だけ練ってください</p>
+<p><code>09:31</code> みたいなプランモードっていうのを使うことによって難しいシステム作るときはこれをオンにすればいい興味あればいつもオンにするわけでもないないですね基礎的な話はそんな感じあと音声認識設定に作業モードコーディング向けと日常業務向けでこのここね音声入力ってあるのでこれ変更って押して好きなキーを押すとフィンキーにしてるけど</p>
+<p><code>10:03</code> これでありとあらゆる場所で音声入力ができるようになります例えばブラウザー上とか他のCodex以外のところでも音声入力ができる普通にウェブ検索とか曲論クロードコード触る時もCodexの音声入力ができる?そうそうそうAqua Voiceじゃないですか?Aqua Voice首やこれがAqua Voiceになってくれてる?そうそうそうそうえ?じゃあほんまにいらんやんいやいらんやんえ?Aqua VoiceですねそれはもはやAqua Voice</p>
+<p><code>10:35</code> え?Aqua Voiceアンインストールしたアンインストールした?やばいでもAqua Voiceいくらでしたっけ?10ドル?20ドル?20ドル?1500円くらいかな?10ドルからで、その機能あったじゃないですかでもGPTに課金してたらもうできるってことですよね?同じことああそうしかも精度高いんですよね?どうやらないいや、Aqua Voice倒産やん知らんけどAqua Voice最近精度悪かったしいいんちゃう?もう貸せてか実質タダでできるしみたいな</p>
+<p><code>11:09</code> GPTやってるとねちょっとねあの遅いかなって思うことあるけどでも 辞書機能とかが微妙かなーって思うこともあるけどまあ まあ gpt でいいんじゃないコーデックスであと携帯バンがないな携帯バンアコブス携帯バーれやさあケータケータイバン まあそんな感じやなということでやっていくかAI仙人の過去のYouTube使って AIの大事なところの資料を作るみたいなやつはい</p>
+<p><code>11:41</code> これですこのYouTubeのAI仙人の動画を使ってAIについて大事なところを抜き出して 資料化してくださいこれ資料っていうのはPowerPoとかですか?あーどうだろうね これ何?こうやるとランダムになる。このAIが判定する。PPTが良かったらPPTって言った方がいい。一旦マークダウン形式で作成をします。とりあえず、資料をいじる前にマークダウン形式で書き出すってことをしとくか。マークダウン形式?</p>
+<p><code>12:18</code> うん。パソコンAIが読み込むの得意な形式。ほいほい。第一位。マークダウン形式。このマークダウン形式でパープルの元のコッシっていう、下書きを作っておくことにしますでえっとスライドを想定想定したがしたがしたがきの数盛りでちなみに難しいけど最近アンソロピックがマークダウンやめるって言い出したからどういうことですか</p>
+<p><code>12:51</code> 表現力弱いhtml時代はアンソロピックかマークダウンって結構AI自体における PDFじゃないけどそれぐらいの中華工になってたファイルだった気するんですけど見づらいっつってHTMLの方がわかりやすい構造とか含めてえーまた時代が変わるんですか?うーんあのーHTMLしか勝たんマジで世界変わったってあのー有名な人も言ってた誰だったっけなカルパシーやったかなってだからまだちょっとクロード系はHTMLまあちょっとそこらへんはねまだねー 結構コンテキサックなやっぱ html の方がそこらへんはちょっとあれないけど html が</p>
+<p><code>13:34</code> いいってなりかけてるないはどうやら ai 界隈よやれそうなんよな やられた感あるなcml 書いてくれてますねこのねえ gpちょっと書いてる行が増えていくUIがいいここを押すと一応中身何やってるかが見えるクロードコードよりちょっと中身見えやすくていいクロードとかAIエージェントの思想って中身いちいち見てる時間がないから</p>
+<p><code>14:07</code> 結果だけ見ろみたいなそういう設計になってんねんって動画でおっしゃったと思うんですけどCodecsは見える?まだこっちはね見せてくれる感あるなクロードも全く見えないわけじゃないけどなんかコーデックスの方が見せてくれてる感はある全体的に見えやすい変更確認って押したら見えるしできた開いた</p>
+<p><code>14:40</code> 見やすいなAIついて大事なところAIは使うツールではなく仕事のOSになるツール選びというよりはAIと融合して仕事をすることAI活用の3段階チャットするAIホルダーにつなげるAI分身エージェントプロンプトよりコンテキストてかこいつやっぱ文系仕事もすごいな文系仕事ってか</p>
+<p><code>15:12</code> いいスライドやなエンジニアさんみたいにコード作るとかじゃなくてビジネス系のタスクでもいけるいけるないけてるないけてるなこれコデックスでそういうことやなじゃあスライドにするはいいけてるな賢いなこいつスライド作る前にマークダウンでファイル作ったと思うんですけどマークダウンで作る意味ってあったんですか?なんか一応編集というか</p>
+<p><code>15:48</code> これカーソルやけどこれ見れるやんここで直したりすることも多いやんさすがにさAIでスライドの元作ってそのまま全部使えへんことも多いやんそういう時のために一旦元を渡してやらないとこの後に画像化とか動画化とかそういうことしてるとちょっと後になればなるほど編集しなくなるかなってカーソル編集しやすいねんなそのあたりこれマークダウンファイルに直接書き換えてるのか例えばこの本文候補いらんと思ったら</p>
+<p><code>16:32</code> 一応こうやって書き換えたりとかするやんはい別に今日はカーソル使い方じゃないからあるけどまあでテキストで手打ちで書き換えることもあるし なんかちょっと書き足したいこともあるよそういう時のために一旦マークダウンにしてからスライドにするとまあいいっちゃいい マークダウンを元にしてそこからスライドだろうとホームページだろうとテキストというスピーチだろうと作れるっていうのがいいんちゃうかなと思ってるんやけどなぁ あなんかあれか1回中継地点みたいな感じでああそうそう僕は中間層って言うんだけど これコンテキストの中間層って言われるん</p>
+<p><code>17:07</code> だけど最終成果物の前に1回マークダウン のまとめとかを挟むことで結構綺麗に作れたりするん 大事やねなくコンテキストどうやって使うんですかってよくやるけどこうやってYouTubeのやつ全部入れてもよくわからんやん一旦なんかスライドに関するとことかアイディアに関するとことかそういう自分が作りたい成果物の前段階の部分を中間コンテキストってそれにまとめるような感じのことが一番やりやすいな大事やるか空白コンフリクトマーカーなしOK</p>
+<p><code>17:41</code> なんか作れたんでじゃあこれスライドしてみるか何しよっかななんかPPTって言ってもいいけどなんかコーデックスってPPT苦手なイメージあるのよへーあっちの方が得意あのクロードフォードの方がPPTはこれなんかいい感じで資料化してくださいちょっと一回あなたが一番綺麗だと思う資料の形でいいデザインで頑張ってくださいこんな感じしてみるか何が得意だと思ってんやろなこいつそこも聞いてみてるのかこれね</p>
+<p><code>18:15</code> これはなんかAIの限界を試すってやつやなこれどこまでやれるねんっていう前の動画で言ったやけどAIお前どこまでやれるねんっていう時にこういう感じのちょっとお前やってみろよっていうプロンプト投げて何も任せてたらこれぐらいなんだっていうのをちょっと見たりするねAIが自分で把握している中のベストソリューションみたいなそうそうそうそうAI全任せプロンプトって呼んでるけど大概しょぼいのが出てくるねんけどあかんか</p>
+<p><code>18:47</code> たまにびっくりするえマジでっていうこともあるからこれ使ったらホームページとかも作れるってことかそうそうそうもちろんもちろんホームページ作る?1000人ホームページ作っちゃう?作っちゃう?AI専念が格好良く流行るようないい感じのコーポレートサイトっぽいホームページを文字起こしから作成してくださいこれ並列タスクってやつやな待ってる暇やからな</p>
+<p><code>19:19</code> 最近なんかめっちゃ暇やなあの長くなってこれも全任せプロンプトアシュやないい感じのコーポレートサイトっぽいホームページ怒られるなデザイナー確かにもうちょっとホームページ作るとき言うことありそうな気がするなんかあるよなそれが例えばプロのホームページ作る人がこういう風にいつも作ってますっていう資料というか本的に人があったらもうちょっとプロ仕様のホームページが作れるってことですよねそうそうそうそう</p>
+<p><code>19:50</code> だからそれもさこういう話した時さじゃあ僕らデザイン分からん僕らじゃないよデザイン分からんやんこういう時に普通の人って固まるんよな固まるそうなんかこうでさもうちょっとホームページっぽいプロンプト入れなきゃあかんことはわかるけどってなるやんうんうんうんそうですねそう僕はAIと融合してるからとりあえずAIに聞いてみるなんかホームページのデザインのプロのなんか手順とかなんかすごい企業がやってる達人の手順みたいなものをウェブサイトからまとめてきてソース付きのリンクを整理してマークダウン形式でまとめてくださいほう</p>
+<p><code>20:27</code> なんかちょっとさ なんか達人の技聞いたらいいことあるかもしれまずいったんちょっと勉強もしてみるこんな感じで知らんことはこれも ai に 任せて勉強してみweb 検索始めた ちょっとこれコツがあるんやけどエージェントなるべく多く出してくださいで、分担していっぱい世界中のサイトからあ、ごめん日本のサイトから調べてくださいホームページはね、やっぱ日本とそうじゃない人で結構クセがあるんでまあいったんねいっぱいエージェント開く?</p>
+<p><code>20:59</code> そう、エージェントなるべく多く出せって言ったら結構エージェント分割して出てくることが多いサブエージェントってやつやね早くなるってことですかそう分担してやってこういう感じでコンテキストが不足してる時は自分でコンテキストって言った時によくさ僕何もコンテキストないですって言われ何もないですなかったらウェブから引っ張ってくる本とかから引っ張ってくるのはマジでありやね僕やったらめちゃめちゃ文系なんですよ</p>
+<p><code>21:32</code> マーケティングの仕事とかをよくやるんですけどエンジニアのコンテキストが全くないんですよねアプリ制作のやり方とかおさほとか全然知らんのですよそれもこんな感じでインターネットから拾ってこいって言ってコンテキスト集めさせたらプロのエンジニアのコンテキストが作れるかそうそうこれはコンテキストの中身が理解できひんから正直二流やけどないよりはマシやしよく僕の話を聞いて何も知らんものがないときついんかっていう話するんだけど知らんものに対してコンテキスト集める能力も上がってるわけやから</p>
+<p><code>22:11</code> コンテキスト今から収集しても間に合うっていうのはよく言ってるねこれちょっと思ったんですけど最近僕投資始めたくて金融トレーダーのコンテキスト欲しいんですよギャンブル系じゃなくていわゆるクオンツみたいなクォンツ通じひんやろこれはもう久しぶりに言うけどトレーダーの時だけガチの用語使うのやめてもらっていいですかマジの金融投資家みたいな海外のってなった時にインターネットで雑にトレードのプロのコンテキスト集めてくださいって言ったら</p>
+<p><code>22:47</code> ちょっと質悪そうじゃないですか詐欺師混ざってるみたいなけど逆に海外のなんちゃらファンドみたいなやつとかクォンツから戦略を引っ張ってきてって言ったら募集団が賢そうじゃないですかってことはよりいいコンテキストができるのかなと思ったトレードの時だけやったら詳しいインタビューは何のやめてもらっていいですか本当にすいません諸君放棄してる例えばエンジニアのコンテキスト取ってくるにしても雑にヤフーチェイブクロから引っ張ってくるんじゃなくて</p>
+<p><code>23:21</code> いわゆるチーターっていうエンジニアさんの相談場所みたいなところから取ってくるとかちゃんとした募集団のところで集めさせたらよりコンテキストの精度上がるんじゃねって思ったっていうそれはあれやろな100%あるなそれはありがとうございますそれはAIとだいぶ融合してるな発想がいやーまあそうやな結局いいコンテキストを持ってる人ほど強いっていうのはあるからまあとはいえなんかまあ web は所詮 web やけどね自分自身が理解できないコンテキストだとやっぱりまあそれを雑に放り込むことしかできひんからいいか悪いかの判断できひんやいくらいいエンジニアが集まってるサイトでもさカスみたいな基地もあるわけやん今AIも多いしそう考えたらやっぱり良い情報とそうじゃない情報が判別できる ところの方がまあいいっちゃいいかな</p>
+<p><code>24:18</code> 意外とこうAI時代コンテキストが大事って言うけどコンテキストが大事イコールそのコンテキストの良し悪しを判断できる 面も結構大事かもしれんねまあこんな感じでAI時代ってなんかこのコンテキスト一つとっても純粋にコンテキストを貯めればいいとか、ただデータを渡せばいいってわけじゃないっていう部分も実はあるっていうね。意外と奥深いですね。まあAIは一日にしてならずやからな。そのAI自体、道間違わんようにするっていう意味では重要な点っていうのは何個かあるわけよ。そこに関してはLINEの勉強会の方でやってるんで、ぜひですね。</p>
+<p><code>24:57</code> QRコードから友達追加していただくか概要欄から友達追加していただいて勉強会の案内行くんでそれを参加ボタン押していただければ参加できるんでねぜひ来てくださいなるほど確かにちゃんと勉強しないとあかんポイントはあるといえばあるんですねうーんまあそうやななんか落とし穴が多いななんかこっち行ったらあかんこっち行ったら死ぬみたいな道が多すぎてで正解がないやんまだAI時代のでも僕から見たら落とし穴だらけやけどみんななんか並んで落とし穴に向かって行ってるから大丈夫かなと思っていや笑えへんなさよならって感じ</p>
+<p><code>25:31</code> 一番やばいのは正直あれよAIやらへんやつやからこのチャンネル見てる時点で大丈夫やできたサイト開いてみますかっこよかっこよかっこよこの動画撮ってる間にそんなサイトできたんすかやばいなえすごくないですかなんかAIは仕事のOSになるてか後ろ誰ですか</p>
+<p><code>26:03</code> AI1000人に決まってるやんマジでなんか1000人っぽくなってるいやそこの画像渡してへんからなえでもすごいですねフロンプトイルコンテキストチャットからホルダー直結分身エージェントかAIをたまに聞く相手から毎日一緒に仕事をする相棒へすごいてかYouTubeの文字起こしだけですよね情報はうん、すごいなすごいですね、これはさっきのコンテキスト、ホームページのプロの技のやつはまだ入ってないうん、入ってへん入ってなくてそれなんですね</p>
+<p><code>26:36</code> もうだから要はさ、AIが吸収しちゃったなそこまで最近は正直なんかその昔はさ、情報の多さとかで判定されとったと思うんやけど最近なんか良い情報をちゃんと分かって出してきてる感じがするちょっと天のジャックになるとなんかちょっとAIくさいですねデザインがまあねちょっとそこはもうAIくさいのやめてって言ったらAIくさくなくなるけどあーなるほどねこれがあれかいわゆるコンテキストのポイントかうん一応こっちがAIのその</p>
+<p><code>27:10</code> 達人の手順まとめやってこれいくかこれこれパス欲しいなってパスをパス?これパソコンのファイルの場所みたいなもんやなちょっとパスを教えてって言ってみてちょっと見てみよういいなこれいいなこれ勉強になるな普通に全然知らんからなこれねこれじゃあこれこのパスこれあの1000人のドキュメントホルダーのYouTubeホルダーのコレックスホームページデザインマスタープロセスっていうものだけどこれを振らしてちょっと怒ってみるか</p>
+<p><code>27:43</code> ちょっと待てビジュアルが良くない?ビジュアルが良くない?これこのホームページのマスターデザインみたいなのあるのでこれを見てこのカスみたいなホームページを改善してくださいカスみたいって言わないでいいですよちょっとそこは真似しなくていいせっかくなんでこのチャンネルも画像をここから使ってって言っとくか</p>
+<p><code>28:16</code> AI専任のビジュアルこれなんでいい感じにブラウザユースとかで画像を引っ張ってきて使ってください先頭にあるパスをまず入れる?なくてもいいけど明示的にやってあげた方がうまくいくんで結構僕は張りがちなくてもいくこと逆にあるんですか?</p>
+<p><code>28:48</code> なくてもいくことあるよ何を参照するとか決めてないから無理くないですか?無理なんやけどこのコーデックスっていうホルダーに同じやつ入っとるからこのコーデックスホルダーに入ってるやつは全部参照してもらえるとちょっとむずい話だねふわりと参照してくれるかガチで見るよって言ってるかの違いってこと?そうそうそうこれをファインダーで開くってあるんだけどこれ見たら一応ホームページデザインマスタープロセスMDってあるよここのホルダー内にあるやつは全部何も言わなくてもよく参照してくれるけど</p>
+<p><code>29:21</code> 今回は絶対呼んでくれよって意思を込めて買ったって逆に違うホルダーの場合は明示的にしないと無理ですよね無理無理ちなみに他のホルダー明示的にできるようにパス渡したらそのホルダーもいじる権限を勝手にこっちもいじっていいんかって思ったりするからそこだけ気を付けて他のホルダーぶっ壊れたりするちょっとこれもう一個質問なんですけどこっちのホルダーにアクセスするとするじゃないですか下のホルダーにアクセスする権限を与えるとその場合って</p>
+<p><code>29:53</code> この1個上のフォルダもアクセスできるんですか?実は全部アクセスできるよなこいつあのその渡してやったやつしかアクセスしひんっていう顔をしてるだけで権限としてはマジ関係なく必要だと思ったら間もアクセスできるしあの他のフォルダを参照させるんであればホンマにそのホルダー内で作業するとかは言わんようにするとかいろいろそういうのはテクニックがあるな</p>
+<p><code>30:28</code> そのあたりは使ってると分かってくるんだけどねフルアクセスでずっと意外とこれ壊す時ってタイミングがあってやったなっていうのが2,3回やるともう二度とやらんくなるねマスターデザインの指示を先に読みます並行して並行するならエージェントを並列しなさいよマスターデザインの前半から見る限り今のページはかっこいい絵を置いたかっこいい絵を置いただけで課題定義情報設計ブランド元素が弱い状態ですAIチャンネルの実ビジュアルを取り込みつつファーストビューで誰向けに何が得られる次何をするか分かる構成に寄せますなんかすごいぞほんまか?いやこんな雑にコンテキスト入れてやれるんかお前あ、あ、あ、いいけど</p>
+<p><code>31:13</code> うわ、おる、おるっすね実ビジュアルはYouTube上では赤背景の丸いAI専用アイコンと白い衣装、仮面のサムネ表現が中心でした生成したい渋い人物画像はブランドとずれているので外しチャンネル由来の赤黒白金の方向に作り直しますすごいとってきとる賢いなほんまにすごいなほんまにすごいなお前これ勝手にクリックしとくわねパクられてるっすねデータがほんまやな盗まれとるなこれさこれ自分のチャンネルやからいいけどさ人のチャンネルでこれ</p>
+<p><code>31:47</code> あかんな人のチャンネルでこれいけちゃうなこれいけちゃうなサムネを収集してくださいてかコンテキストも収集できるのかYouTubeかなAI1000人以外のチャンネルは久しぶりにAI1000人以外のチャンネルはこれでコンテキストを集めてみてAI1000人のチャンネルはちゃんと最後まで見る何か消したくなっても必ず音を最後まで音を消してね最後まで見る良い子の皆さんお約束です</p>
+<p><code>32:19</code> めちゃくちゃなこと言わんといて絶対に途中で切ってはいけない音なしでも最後まで見ておいてくださいあんまYouTuber言わんす切りたくなってもちゃんとつけといて音なしでもいいからイヤホンで出しておいてもいいから画面にはどっかに置いといて視聴維持をお願いします他のYouTuberはこれでOKですねコンテクスト集めて5万人超えてもまだそんなことないえ?いやいやいや登録者5万人ですよ早いものでありがとうございます</p>
+<p><code>32:51</code> 本当に早いものでこんな破天荒で下ネタばっか言って井出くんになんか下ネタ振られるから言いたくて言ってるわけじゃないよ絶対嘘っすよ触手ダンジョンやな僕言わせてないっすよちなみに知らんし触手ダンジョンなんかこれありえないななんかモニターが落ちてるこのモニターなんか最近落ちがちなよなちゃんとさっきまでのは撮れてるよかった</p>
+<p><code>33:24</code> よかったマジでなんか台本僕らないじゃないですかなんか動画の中で動画落ちて撮れてるよかったってあんまないっすねうんめっちゃリアルすぎるなんか出てきてるななんかめちゃくちゃやぞめちゃくちゃやな頑張れよまだ経過途中ってことですか賢いのよH1で広い幅確認する強すぎて右に切れCTAの確信にも弱いですここはレスポンシブの設計ミスなんで</p>
+<p><code>33:57</code> ちゃんとスクショって修正するような今のAIすごいよねこれでもなんかAIの限界に挑戦してもらってる感じがしますねこれね僕の感覚の話言っていいですか短い指示だったらいいけどこういう雑な達人の手順みたいなとりあえず詰め込みましたコンテキスト渡すと結構うまくいかへんこと多いうまくいかへんことが多いそう、上手くいくこともあるんやけど、マジで大体AIにやらせた方が上手くいくっていう。へぇー。もうちょっと見せるか。これ、デザイン系の話あるじゃないですか。ちょっとな多すぎるんだよなコンテキストとしてはこれガチガチなんでソースの方にもこのチェックみたいな、これ大事なんですけど</p>
+<p><code>34:42</code> ちょっとな感覚としてはこれ全部AIが意識するにはちょっと多すぎる感じがするな今の感覚人間もこれ渡されたらさ、うってなるやんこれ全部でいくんすかって言って体感これの何%ぐらいの小ささにしてたら行きそう?意外と10項目20項目ぐらいの感じなイメージやけど上手くいくのはまあまあこれでもいけるかもっていう最近賢いしなって思ってもらおうこれが私欲のコンテキストって呼んでるけど</p>
+<p><code>35:15</code> めちゃくちゃもう自分の仕事にとって重要なコンテキストであればこれぐらいあってもいける雑なコンテキストを雑に放り込むやったらAIもそういうこと分かっとるからAIがあった方がいいっていうのはあることも多いしかしだいぶ良くなってきてるかここやばいけどちょっとぐちゃぐちゃですねマジですまだ頑張って修正しとるよなんか贅沢な悩みなんですけどサムネイルからホームページ作ってるじゃないですかできることならサムネイルから人間だからそのAI1000人のイメージだけ取ってきて</p>
+<p><code>35:52</code> サムネの文字とかいらんからAI仙人の写真をかっこよくしてホームページデザインするみたいなのができたらいいなと思いましたサムネイルの文字いらんサムネイルを今雑に貼ってるけどそれはいらんとサムネイルの文字じゃなくてこの画像だけを特に動画とかもし必要だったら見てそれでちょっと作り直してもらってダサいぞダサいぞとか言わなくていいですよあ2回目スヤナとかダサいぞは言わない言わなくていいですちょっとYouTube用のテンションなんで</p>
+<p><code>36:26</code> なんかチャットGPTのアプリ普通のチャットGPTのやつだと画像作るのめっちゃ上手いんですよ同じOpenAIなのにCodexになったらなんか画像弱いなってちょっと思いましたねImage Gen2?Image Gen2って言うんですか?普通のチャットGPTで画像を作らすとマジで強くて今そうよなImage N2入ったからなあそっか勝手に入ってるってことですよね</p>
+<p><code>36:59</code> うんじゃあちょっとそれも使わせてもし必要であればこのブラウザを操作して画像を生成するということをYouTubeのサムネ画像をこのブラウザに貼り付けて画像を生成して抜き出してくれみたいな指示を出してそれをダウンロードしてここに持ってきてください 行ってみるかそういうこともできる意外と自由がたっす本当に うーんなんか珍しく仙人ぽい伝えるの動画のこれどんどんこうやって出していく柔軟な もうだいぶ</p>
+<p><code>37:39</code> そうねー いけるんかなだからこうやってなんかここまでいけんどこまでいけんのってずっと試しながらやって いるのがまあ仙人スタイルやなAI自体ってこうやってどこまでお前いけんねんっていうのを知っとくのが大切そうまあなんていうかな僕はちょっと地平を開拓する一歩かどうかって呼んでるけど一歩AIが新しいAI出てもここまでやれるっていうのを知っとくと他のなんかいろんなさ驚きやとかいろんな情報出してきてもさああなるほどこの情報は僕が知らん地平を開拓してる可能性がある</p>
+<p><code>38:16</code> かもうコーデックスが言ってるところをなんかよくわからんツールで別のツールで驚いてるだけやなっていうのが分かるから僕は結構こうやってAIを試し続ける使い方みたいなのをやってるねなんか切り抜かれてるあまりにも賢いな動画の11秒付近見とるけどこれ見ていいん?お前動画見てるんや動画見てるなすごいな可愛い感じでエグいこと言ったっすねって言われてる昨日の動画っすねさすがっすね</p>
+<p><code>38:49</code> すごいななんか賢くなりましたね本当にまるで人間みたいな挙動やね確かに半年前こんなんできなかったですねサムネ文字付き画像の参照を外しました人物写真が主役に見えるか確認しますどう考えても主役やろ主役でしかないやろこいつしか出てこへんのやろあとAIしか出てこへんねんそうですねそいつとモニターぐらいですねそいつに言うて思ったけどこいつしか出てこへんのやろすごいなそのまんまやな</p>
+<p><code>39:24</code> あーちっちゃくなった現場でAIを使い倒すすごいな画像作ってくれてるすごいなしかしデザイン下手くそやななんか最初の方が良かったじゃあ実際思いつく部分で言うとこの人間の後ろの背景いらないから違う背景に差し替えてとかもっと綺麗な仮面にしてとかそういうことを言うとデザイン作れるじゃないですかそっちをホームページに当てはめてもらうとかもできそうやなそれはそうやな</p>
+<p><code>39:57</code> 写真ちゃんとしたやつ普通に貼るべきやなそうっすねありますよねちゃんと画像生成かなんかで白抜きしてもらった綺麗な写真やるべきやなあまりにもボケっとしとるなこの顔はなんかあれですね確かに今話されてた背景を透過させた写真を上げた方が早いとかそれも小技ですねまあ小技やな発想の違いはなAIとのやっぱ思うにAIの脳みそってちょっと人間と違うんやなすごい賢い時とすげー馬鹿な時があるやな</p>
+<p><code>40:33</code> 多分やけどやっぱなんか画像の認識がちょっと人間の仕方と違う気がするな結構面白いなどんどんちゃんとした形になっていってるね今ずっと考えてるってこと?さっき見せると完成形が出てきたさっきもこういう処理して完成形に近づけてたかもしれない今回だいぶちゃんとしてきたなすごいなでもなんか</p>
+<p><code>41:06</code> だいぶ良くなったな文字の中身はコンテキストですよねYouTubeのすごいなすごいなこの一発目のユーザーの問題はAIツールを知らないじゃないなんか良くなってきてるだってまだカメラ回し始めてだいたい1時間ちょいなんですけどしかもいろんなお話をしている中で片手間で作ってるだけじゃないですかフロント4つか5つぐらいしか投げてないからな多分</p>
+<p><code>41:39</code> それでこんなになっててねだいぶすごいななんかこのAIが最初しくじったところから一個一個やっていく過程が見えていいなだいぶ良くなってきたな何もしかも何もフロント売ってへんっていうな自己改善してる人物写真自体の切り出しが少し左に余白を持ちすぎていて画面上で顔が右に寄ってます写真の切り出しを詰めて仮面と白パーカーが中央に来る素材に作り直しますすごいなこいつ作り直されたクソみたいな顔してるのは顔が微妙やっていう観点にはならないのかそんなことはない</p>
+<p><code>42:15</code> でも確かに顔の人相とかそういうのの判定って難しいよなこの写真がいい写りとかさ綺麗なさあれってさAIで判定しようなやつちょっとこれルベっとしたよこの顔仮面ついてるとむずいかもしれないですねあーむずそうなんかさなんかエロそうな顔してへん?なんかこのなんかエロそうな顔って何?いやなんかエロそうやなと思って気に入らへんエロいじゃないですかでも違う違う違うそういう話じゃないあそういう話じゃない</p>
+<p><code>42:47</code> エロくないよやばい今日パンツ履くの忘れてたそれはエロとかじゃないですね確かに今ノーパンなの?うん、魂がすごいな魂とか生々しいんでやめてくださいマジでほんまかアカン系の下ネタっすねアカン系か笑えない系の下ネタはダメです女性ファン減るやばい気をつけないと10%ぐらいいるんでね10%だったん?10%ぐらいいるっす確かまずの話11%ぐらいいるっす前最初5%やったのになそうですね</p>
+<p><code>43:20</code> 人生初めて来るか?春が1000人にお!それはあかん系の下ネタやん!その方があかん系の下ネタやん!あかん系やしやろ!ほんまにやめてくださいマジでだいぶあかん系の下ネタだなやめてくださいって僕が勝手に言ってるだけなんで勝手にやることにされて勝手にやめてくださいって言われる納得いかんなああできた失礼しましたでもなんかいい感じなんだな入ってくださいなちょっとここないなでもこれ他のホームページとか大手企業とかのちゃんとしてるコーポレートサイトを</p>
+<p><code>43:58</code> ブラウザユースで取ってきてもらって画像認識してもらってこれをベーススタイルに画像であーあーっすねあんま僕の独り言で非推奨非推奨だけどまあいいよねそういうのもねそういう価値観もある価値観もあるやり方としては発想としてはあるよねなるほど価値観としては価値観としてはある価値観としては一つのものの見方としてはあるよありがとう</p>
+<p><code>44:29</code> ありがとうなんかなさすがAIというご主張だけあるわなイエ君の発想は結構最近さすがやねインタビュアーを超えてきて融合し始めたなインタビュアーとしてあんまり良くない撮りすぎてだいぶ詳しいなって思って発想がちょっと千人似てきたような確かに僕はエンジニアとかでは全くないし鬼の文系やし初めてAIに触れたのも去年とかそのレベルでしたね</p>
+<p><code>45:04</code> コデックス僕まだ触ってないしでも思いつくのは思いつくか発想力が違うからそれって僕に才能あるっていうことですかなんか健三ずっと撮ってるわけやん動画AI使って自分の仕事を軽くしようと考えた量がその発想につながっているのかなと思うけどね僕一瞬才能かなと思ったけどシンプル努力の玉もねやったってこと?</p>
+<p><code>45:36</code> いやー努力っていうか努力できる才能もあるよなまあでもそうやってなんか頑張っていくとはざわりがやっぱ身についていくし正しい努力の仕方をすれば少なくとも僕が直で教えたような人は割とみんな身についてるそうですかAI力ってなんかそのツールを使うよりも発想力AIどこまでいけんでって考える力とか何をやらせたらいいねさっきのね井出くんのパッと出たそこら辺のホームページを参考にしたらいいじゃんみたいな発想がAIの力なんかなと思ってるんだけど</p>
+<p><code>46:16</code> あれは推奨できるかは価値観の一つとして価値観の一つとしてねもちろん推奨はしないけどそういう発想力が発想が出るかどうかって結構大切だよねその発想を極めるために必要なこと結構何個かあるんですけどそれは一応勉強会の方で話しておくしLINEの友達追加QRコードからねもしくは概要欄からしていただけたらと思います確かによく考えたら僕この動画で初めてブラウザユースって知ったんですよそのレベルやけどパッと思いついたので</p>
+<p><code>46:49</code> 確かにこれが融合するっていうことなのかそうかもねさっき僕が話した方法はいいかどうかは必須でしょあかんからでもホームページとかも結局最近流行ってんねんいいサイトのホームページの様子を抜き出してデザインMDっていうファイルに落とすのが実は流行ってまして多分世界的にはありとされてるはずです</p>
+<p><code>47:21</code> 結構そういうサイトとかツールもウェブかけるAIやってる人は知ってると思うけど流行っとるから使ってもいいやろうねちょっとYouTubeでいいとはもういいって言ってるようなもんに聞こえるかもしれんけど推奨してないですいいとは言ってないですデザインとかはもっとその衣装をそのままパクってる感じがあるんでちょっとかなって思うんですけど抽象化すると結構いろんな方法あるなと思ってYouTube始めたいっていう人が伸びてるYouTuberの文字起こし取ってきて自分のコンテキスト食わせてそれっぽくするとかそうやなぁそういうことをいろいろ できるなって青これは非推奨ですか</p>
+<p><code>48:01</code> いやー ai セミのチャンネル以外はもうねあれでやってもらっていいけど 1000人のチャンネルは文字起こしをとってくるんじゃなくて仮面つけてとってもらうためなああルールとしてうん 千里のチャンネルを参考にするんやったら仮面つけないと ng ですダメです全員演者は仮面つけてもらってねパンツ脱いでもらってね触手ダンジョンを進めるそれくらいは参考にしてもらわないとダメですねパンツ脱いでるか分からんしな今もまだブラックボックスなんでねほんま?シュレディンガーのパンツ</p>
+<p><code>48:33</code> マジで開けてみるまで分からないっすいやーでもかなりねくっきりしそうからね知るんすか?知ってんなーデカいんや知らんそれも知らんけど知らん?それも知らんけどお金しか知らんかったホームページとなってますホームページはなんかできたよおなんかねいいコピーになったね文章強いなこいつ一発回答でなく仕事のループをいいですね見た目の勢いだだけな簡単な順番がえー</p>
+<p><code>49:05</code> ははははははまずは一歩を見るそこから仕事の渡し方を変えるははははちょっと面白いなデザイン系の仕事をやられてる方はどういう手順でやってんだろうねみんな結構遊びでやってこれやから改善の仕様は結構あるなって思いましたね多分デザインのテンプレちゃんと渡してやって初級の内容っていうか何のためのホームページかを練ってこういう文言でって詰めていくやんそこちゃんと詰めたやつを渡すとだいぶ早くできるようになってると思う</p>
+<p><code>49:39</code> YouTubeの文字起こしだけ渡して適当に判定させたからなはい今日の動画はコーデックスの使い方ということでした基本的な操作から始まってちょっとなんか遊びで作らせてみたのを見てても面白かったかなと思いますがもしね今日の動画良かったらグッドマークとチャンネル登録とあとはねパンツ履いてない人はコメントの方よろしくお願いしますみんな履いてるって履いてへん?どうやろ井出くんは履いてないよないや履いてますよほんまに?Tバック?Tバック?</p>
+<p><code>50:11</code> Tバック持ってない持ってへんのTバック?持ってへんよなんでびっくりしてるんですかうわーにわかやなやっぱ何に対してのにわかそれはパンツ道まだまだやなAIと融合しててもパンツと融合できてないなパンツと融合僕履いてるんでパンツ多分僕の方が融合できててノーパンは多分融合できてないじゃあパンツと融合できてない人はいいねとチャンネル登録ねよろしくお願いしますマイノリティやなありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote） — CodexはAIエージェントの典型事例</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote） — 中間コンテキスト設計・マークダウン中間層の概念</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — 同カテゴリのCLI型AIエージェント・比較対象</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote） — ブラウザユース・コンピューターユースによる自動化</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote） — AI全般のまとめノート</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-708" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

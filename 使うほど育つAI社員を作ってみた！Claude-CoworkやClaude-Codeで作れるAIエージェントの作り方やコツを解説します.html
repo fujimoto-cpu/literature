@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します"/><meta name="twitter:description" content="📺 動画情報 使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-04-22 ・ ⏱️ 53分56秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CoworkまたはClaude Codeを使って「使えば使うほど育つAI社員（AIエージェント）」を構築する方法を、壁打ちによる要件定義からフォルダ設計・実際の立ち上げまでフルで実演した動画。 🗺️ 全体像 flowchart TD A[壁打ちで要件..."/><meta property="og:description" content="📺 動画情報 使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-04-22 ・ ⏱️ 53分56秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CoworkまたはClaude Codeを使って「使えば使うほど育つAI社員（AIエージェント）」を構築する方法を、壁打ちによる要件定義からフォルダ設計・実際の立ち上げまでフルで実演した動画。 🗺️ 全体像 flowchart TD A[壁打ちで要件..."/><meta property="og:image:alt" content="📺 動画情報 使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-04-22 ・ ⏱️ 53分56秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CoworkまたはClaude Codeを使って「使えば使うほど育つAI社員（AIエージェント）」を構築する方法を、壁打ちによる要件定義からフォルダ設計・実際の立ち上げまでフルで実演した動画。 🗺️ 全体像 flowchart TD A[壁打ちで要件..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/使うほど育つAI社員を作ってみた！Claude-CoworkやClaude-Codeで作れるAIエージェントの作り方やコツを解説します"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/使うほど育つAI社員を作ってみた！Claude-CoworkやClaude-Codeで作れるAIエージェントの作り方やコツを解説します"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-04-22 ・ ⏱️ 53分56秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CoworkまたはClaude Codeを使って「使えば使うほど育つAI社員（AIエージェント）」を構築する方法を、壁打ちによる要件定義からフォルダ設計・実際の立ち上げまでフルで実演した動画。 🗺️ 全体像 flowchart TD A[壁打ちで要件..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="使うほど育つAI社員を作ってみた！Claude-CoworkやClaude-Codeで作れるAIエージェントの作り方やコツを解説します"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2388"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2388" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します</a></div></nav><h1 class="article-title">使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-01T15:00:00.000Z">2026年5月02日</time><span>111 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>使うほど育つAI社員を作ってみた！Claude CoworkやClaude Codeで作れるAIエージェントの作り方やコツを解説します</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-04-22 ・ ⏱️ 53分56秒
+🔗 <a href="https://www.youtube.com/watch?v=0O1_1Uz4kL4" class="external">https://www.youtube.com/watch?v=0O1_1Uz4kL4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Claude CoworkまたはClaude Codeを使って「使えば使うほど育つAI社員（AIエージェント）」を構築する方法を、壁打ちによる要件定義からフォルダ設計・実際の立ち上げまでフルで実演した動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[壁打ちで要件を言語化] -->|ブレインストームスキル| B[設計書を作成]\n    B --> C[フォルダ構成を設計]\n    C -->|CLAUDE.md + soul.md + スキルズ| D[AI社員を起動]\n    D --> E[タスクを依頼]\n    E -->|学習ログ自動蓄積| F[次回は賢くなって応答]\n    F --> E&quot;">flowchart TD
+    A[壁打ちで要件を言語化] -->|ブレインストームスキル| B[設計書を作成]
+    B --> C[フォルダ構成を設計]
+    C -->|CLAUDE.md + soul.md + スキルズ| D[AI社員を起動]
+    D --> E[タスクを依頼]
+    E -->|学習ログ自動蓄積| F[次回は賢くなって応答]
+    F --> E
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. まず壁打ち — 要件が曖昧なままで作り始めない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「何を作りたいか」をAIに5〜10分ひたすら話しかけて要件定義を行う。壁打ちスキル（ブレインストームファシリテーター）を使うことで、作りたいものの方向性が質問形式で絞り込まれていく。曖昧なままでは「何でもできる」がゆえに「どれも中途半端」になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. CLAUDE.md は薄く保つ — 矛盾と肥大化がAIを混乱させる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>CLAUDE.mdには「何がどこにあるか」と「最低限の行動原則への参照マップ」だけを書く。1万行書くと矛盾が入り込み、AIが「前向きながら後ろ向け」のような指示で迷子になる。詳細はsoul.md・skills/・memory/などに分散させる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. soul.md で人格を固定する — 育てる対象は1人 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>soul.mdにパーソナリティ・コミュニケーションスタイル・仕事の進め方（例: Done is better than perfect）を書いておく。チャットを新規開くたびにCLAUDE.mdが呼ばれ、そこからsoul.mdを参照するため、毎回同じキャラクターとして動く。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 「育つ」仕組みはフックス（Hooks）で作る </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude Codeのフックス機能を使うと、ツール実行終了時・セッション終了時などのイベントを起点にスクリプトを自動実行できる。「タスク完了後にlearning.mdに学びを書き込む」などを自動化すると、指示しなくても情報が蓄積される。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 情報蓄積の質がAI社員の賢さを決める </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ログはログで残しつつ、CLAUDE.mdに渡すのはコンパクトにサマライズしたもの。コンテキストウィンドウの爆発を防ぐために「不要な情報を入れない・可能な限りサマライズ」が原則。溜めれば溜めるほどいいわけではなく、質のいい要約を蓄積する。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINのsoul.mdを作り直す</strong>
+現在のCLAUDE.md（persona/response-style）はそのままに、「仕事の進め方（Done is better than perfect）」「私（ゆりこ）のこと」を1枚のsoul.mdに集約してみる。CLAUDE.mdからの参照パスを追加するだけ。</p>
+<p><strong>② hooks設定でタスク完了後のlearning.md自動書き込みを試す</strong>
+今は手動で「終わったよ」と言ってタスク更新しているが、hooks機能でタスク完了 → 今日の学びを自動追記まで自動化できる。<code>.claude/settings.json</code>のhooksセクションに追記する。</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 同じことをクロードコードでやればクロードコードスムーズにいくと思うんで0、1みたいなところの準備が難しいと思ってて多分この動画の価値だと思うので皆さんこんにちは AIプログラミング講師の今西ですこのチャンネルではAIやAIコーディングまた業務効率化や自動化について分かりやすくお伝えしています今西さんはいいやなんかちょっとさっきいろいろ話してたね話しましたねどうしてもやりたくなっちゃったあの企画やっちゃう?今西さんがAIがどんどん育っていくみたいなのをこそっと教えてくれて</p>
+<p><code>00:34</code> ちょっと信じられないんですよね本当かと思って僕の今の環境を見せちゃうと社外費の情報が結構流出しちゃうのでそれ全部モザイクしてもちょっとつまらないじゃん全然何も分かんないみたいになっちゃうのでやるのはいいんだけどせっかくなら真っさらな状態でもし自分がAI社員を作るならとかあとはAI秘書を作るならもしくは自分のもう下辺としてソルジャーを作るならみたいな今にしても欲しそうですね</p>
+<p><code>01:06</code> そういう感じの切り口だったら面白いかなっていうのと例えば育てていくって感じだとたまごっちを育てるみたいな感じと世代によるかもしれないけどたまごっちを育てていく感覚でAIエージェントを育てていくみたいなその土台どうやって作るのみたいなところをやっていくってのはどうかな実演して見せてくるってことですか?ちょっとね全部見せるとかなり長くなってしまうと思うので今回その最初の入りこれも僕と同じように皆さんも真似てもらえたら最初の土台どういう風に考えていけばいいかどういう風に進めていけばいいのかっていうのはなんとなくわかる気がするのでその最初の入りの部分と</p>
+<p><code>01:43</code> 実際にちょっと動くところまでぐらいをお見せできたらいいかなと思うんだけどそんな感じでもいいAI新入社員ってことですかねAI新入社員の作り方AIたまごっちの作り方ちょっといろんな見方あるけれども多分皆さんが思う形後輩でも部下でも社長でも皆さんの上の社長でもいいし皆さんのメンターでもいいし皆さんの右腕でも皆さんの部下でもなんでもいいからAIでそういう人を代替するみたいな観点でかつそれを作るだけだったらGPTとかいろいろあったけれどもそうじゃなくてスキルであったりとか</p>
+<p><code>02:16</code> あとはエージェントという観点でクロードコーワーククロードコードこういったのを駆使してどうやって組織というか育っていく環境を作っていくかみたいななんかその最初の入りを皆さんにお見せできたらいいかなと思ったっていう話かないやちょっとぜひ見せていただきたいですということで今回はですねAI社員、AI卵地、AIソルジャーなんでもいいですけどもそういったものを作ってみるというですね本当に完全アドリブの企画をやっていこうかなと思ってますのでぜひ見てくださいということでAI社員を作っていくということでこれに正解があるわけではないです</p>
+<p><code>02:51</code> 個人的に思うのはクロードとかチャットGPTもめちゃくちゃ賢いから彼らと一緒に作りたいものを壁打ちしていけばそれなりにいいものができますよっていうところです僕に関してはどういう風にやってるかで言うとそれこそNotionというツールを使ってるんですNotion AI上であったりとかあとはOpenCrowというちょっと前に見せたミッチーといううちのスラックの中で動いてるAIエージェントがいるんだけれどもミッチーとかもOpenCrowで作ってたりとか結構そういう別軸で動いてたりはするんだけどもいきなりそれやるの結構ハードル高いのとちゃんと土台が整わってないといけないし</p>
+<p><code>03:24</code> 僕も今土台整える最中だったりするからまあさっきも話したように社外費の情報がバッと漏れるのが良くないので今回はゼロベースで皆さんがやっていくファーストステップとしてこういうのやっていったらいいんじゃないかみたいなところでお話ししていこうかなと思ってます今回はクロードコーワークかコードどっちか使っていこうかなというところで多くの人にとって資金が一番低いのは多分コーワークだと思うのでコーワークを使いながらお見せしていきますがクロードコードでも同じようなことができると思っていただけたら別になんかそこに差はないかなと思うので</p>
+<p><code>03:58</code> 今回は見やすさ重視でちょっとコーワークでやっていこうかなと思いますじゃあどうやっていっていくかってところなんだけれども僕の中でも何となくイメージはあるもののここはあえてクロードにいろいろとニュアンスコンテキストを伝えながら実際壁打ちしてその中でどういう形にするかっていうのを決めてそれを元に作っていこうかなと思いますでは普通にクロードとか開いてもらって壁打ちをしますと壁打ちなんだけども僕はブレインストームファシリテーターという自分が作ったこのスキルをちょっと使おうかなと思ってます使わなくてもいいけどね</p>
+<p><code>04:30</code> 以前紹介してくれた壁打ちスキルですねそう壁打ちスキルこれは別にね本当に壁打ちするためだけのスキルなんだけども要件を定めていくみたいなふわっとしているものであればあるほど最終的なアウトプットっていろんなパターンに分散しがちでもその要件が明確であればあるほど同じ方向というか方向性が明確に定まるので自分の思っている方向に着地しやすかったりしますそれこそ壁打ちしていくっていうイメージですということでとりあえずやりたいことを話していくやりたいことを話していく中で僕は今から音声入力ひたすらしていきますがこの中にも結構重要なこととかが入っているのでそれぜひ聞いといてほしいなと思っています</p>
+<p><code>05:02</code> ということでクロードコーワークやクロードコードを使っていわゆるエージェントですねAIエージェントを使って育っていくようなAI社員を作っていきたいなと本当に自分の秘書とも言えるしAI社員とも言えるし自分の部下とも言えるしそんな感じのAIをですね作っていきたいと普通のAIを例えばGPT図とかで作るのとは違って育っていくっていうのがポイントなのできちんと育つような仕組みを整えていきたいなと思っています個人的にはいろいろなエージェントスキルを装備させたいなと思っている中でエージェントスキル図とか含めてなんかいろいろと精度のいいものアウトプットの素晴らしいものを作っていくためにはガイドラインというか基準をきちんと定める必要があると思うのでこの基準を更新していける</p>
+<p><code>05:44</code> 要はマニュアルを更新していけるような仕組みであったりとかあとはもちろんこのAI社員とはいえど僕は人間と同様の扱い扱いって言ってる時点で人間と同様じゃないかもしれないけれども人間の同じように接していきたいからこそちゃんと人格みたいなところよくソウル.mdとかファイルあると思うんだけどそういう形で人格的なところパーソナリティの部分もきちんと入れ込みたいなと思ってますあとやっぱり同じように例えばフォルダを作ってその中でいろいろとやっていく中で今までのやり取りとか今までのコンテキスト今までの履歴今までのメモリ</p>
+<p><code>06:20</code> そういったところをうまく管理できるような座組みを整えたいなというふうに思っていますなのでこの話をもとにどういうフォルダ構成どういう設計どういうフィロソフィーどういう哲学的なところどういう改善ループを回していくような仕組みを作れば素晴らしいAI社員素晴らしいAIたまごっちができるのかこの点について壁打ちしたいですちょっといつもより長いよね本当はもう2、3倍ぐらい喋れるけどちょっとね動画の尺が長くなってもなんかこいつたちずーっと喋ってるなと思われるかもしれないのでこれぐらいに留めておきました前もちょっとお話したか</p>
+<p><code>06:52</code> ジェイクに話したか分かんないんだけどもこういう何かやりたい時に伝えることとしては僕今ベラベラ喋ってたと思うんだけどひたすら喋るのが大事で今多分2、3分ぐらいしか喋ってないんだけどできれば少なくとも5分理想は10分くらい喋るといいのかなっていう感覚なのでJ.K.もそれを意識して何か作るってなったらひたすらこういうのしたいああいうのしたいこういう仕組みあったらいいなこういうことできたらいいなこういう環境を作りたいなみたいなのを伝えていくといいかなと思いますではこれでやっていこうと思いますこれ興味深いですねソウル.mdってのがあるわけですこれは確かオープンクローとかにも入ってたんだけど</p>
+<p><code>07:27</code> さっき言った僕のAIエージェント僕が組織に今入れてるミッチーというAIエージェントオープンクローというものでできていてオープンクローはめっちゃXとかでわーっと話題になったものですそのオープンクローとかもそうだし他のやつもそうだと思うんだけどもソウル.mdみたいなこれはソウルって魂だよねそういうのを定めるようなものがあったりそういうファイルを用意しておこうねみたいな結局エージェントはファイルを読みに行くわけですよエージェントはファイルを読みに行ってこういうことだったらなんてコンテキストを入れていくメモリーとして扱っていくからこそ例えばエージェントの指示書みたいなものとしてcloud.mdとかagents.mdというようなマークダウンファイルもあれば</p>
+<p><code>08:03</code> そうじゃなくて人格を定めるためのsoul.mdを入れたりとかあとは自分の僕に対する情報としてuser.mdを入れたりとかいろんなものをマークダウンファイルでまとめていくっていうのがエージェントをうまく動かす上では非常に大事ですとちょっとなんかいろいろあるんだけどもちょっと僕のなんかいろいろ出ちゃってるので全領域としましょう育っていくの革新はどちらに近いですかということでスケール蓄積型新しいタスクを覚えるためスケールファイルが増えていく品質改善型同じタスクの精度がフィードバック上がっていくこれ全部ですねコンテキスト自分のことをどんどん深く理解していくっていう意味では育っていくしスケールが増えていくっていうのはそうだし</p>
+<p><code>08:36</code> タスクの精度が上がっていくっていうのはそうなので全部込みで作りましょうこうやってちゃんと整理していくっていうか要件定義を行うことも作る上で重要なわけですこういう試行錯誤がめちゃくちゃ大事いつもは思っちゃうんですけど今井さんの壁打ちシステムまた再度この回でも配布していただけませんかJクリには渡さないよいやいやだってこれみんな使いたいですよJクリには渡さないけどこれの動画見てくださっている方にこの壁打ちスキルは全然配布するのでこれいつも通りYouTubeの概要欄に貼っておきますのでぜひそちら見てもらえたらこの壁打ちスキル使えるかなと思います</p>
+<p><code>09:09</code> ありがとうございますこの仕組みの利用者は誰ですかここ結構大事だよね見てあげると自分だけの右腕なのか自分プラス社内メンバーみたいなチーム全体なのかとかいろいろと僕で言うとCode for Bizというスクールをやっていてその受講生向けも含めてなのかというところなんだけど一旦いきなり大きくやろうとすると破綻する可能性があるからこれも大事でまずはちっちゃく始めてみるそれをちっちゃく始めてみてうまくいったら大きくしていくという拡張性を持たせていくという考えを持った方がうまくいく確率が上がるのでまず今回で言うと僕本人のみが使うみたいな感じかな実行環境はTerminal Cloud Cowork</p>
+<p><code>09:45</code> DIYベースで日常的に使うというところで今回はねコーワークというところでやっていこうかなと思いますはいなるほど社員研修ですよね最初は今地さんにベタ好きでそうそうそうそう徐々にみんなに拾えていくとそうまずは自分で使いやすいものを作らないと他の人にとっても使いやすいものができるかそういうわけじゃないと思うのではいなのでコーワークだとファイルシステムへのアクセスとスキル読み込みがいけるのでフォルダ構成の設計がそのままみたいないや本当に成長していくんですねそれをね作っていきたいよねスキルやメモリの更新はどういうトリガーで行いたいですか?自分が主導で更新ステータスこれ覚えてるって毎回言わなきゃいけないのめんどくさいよね</p>
+<p><code>10:18</code> AI自身が提案タスク完了後にAIはここから学び取って記録しますか?と聞く自動記録プラス定期レビュープラスログは自動蓄積週1で自分がレビュー承認これかこれかな?2、3かな?AI自身が提案自動記録人っぽいのは3ですかねね3だよねこれにしようかAI社員に求める要素優先度を順に並べてくださいアウトプットの演出コンテキスト理解ちゃんと自分を理解してるみたいなの結構大事かなそんな機能あるんですか優先度順並べる自立性指示がなくても動けることも大事だし何をどれだけ学んだか見えること</p>
+<p><code>10:54</code> これは別にそんな重要じゃないなアウトプットの演出は大事だけど自立性の方が大事かなこんな感じにしとこうかこれデフォルトの機能ですか?クロードの?そう、クロードのデフォルトの機能でその選択肢によっては一つだけ選ぶもの、複数選ぶもの優先度の順番ごとに並べるものみたいな感じかないや、こんなに壁打ちしたらそりゃいいもんできるわけそう、どんどんどんどん決まっていくじゃんこの仕様がどうなるんだろうみたいな感じでクロードに接続できませんでしたちょっとね、これでここでリロードしてあげると出てきたこれがこうか、これのここ3番だったよね3番のコンテキストアウトプット</p>
+<p><code>11:28</code> これで実行しようとするとさてどうなるか優先順位が明確ですとコンテキスト理解自立性アウトポット品質成長とかしか全部を実現しようとするとまあ欲張りすぎて結局どれも中途半端になってしまうみたいな感じになるのでまず優先順位決めてどこから整えていくかみたいなところをやっぱり決めた方がいいよねって感じですそうするとこうやってほらどんどん明確になってくる質問に答えると最初だったらうわーっとAI社員みたいななんやねんみたいな何を実現したいねんっていう状態だからそれがやっぱり3分しか話さないと明確じゃないだからどんどん話して自分のやりたいことを伝えると</p>
+<p><code>12:04</code> ちゃんとこの方向性がクリアになってくるってところもあります人格の設計はどういうイメージですか業務別にペルソナを作るのかベース人格プラスモード切り替えなのかみたいなんだけども今回は一貫したキャラクターがいいかなと思っているのでこういう風にしようかなと卵地的な感覚で言うかね人によってキャラが変わる卵地ちょっと嫌ですよねそうだから確かにこれはさっきの戻ると業務別に複数ペルソナルだとこれ組織を作るみたいなところがあると思うので組織を作るとかスキル単位でエージェントを作るってなったらそういうのはいいと思うんだけども</p>
+<p><code>12:36</code> 基本的にはメインは1人みたいな感じがいいと思うのでイメージとしては僕とやりとりするAIエージェントは基本的に1人ですとなので人格は一人なんだけれども実際に各業務を行うってなった時にはその業務単位と言うとあれだけれども業務に適した人格みたいなのが別途いるような感じの要はオーケストレーションと言うとあれだけれども一人が中心になってその他を束ねているみたいな形で僕とのやりとりは基本一人そういう感じがいいかなこういう風にニュアンスをちゃんとコンテキストとして入れ込んでいくとコンテキスト理解として特に蓄積したい情報は</p>
+<p><code>13:12</code> 例えばビジネス判断基準とかコミュニケーションスタイルワークフローナレッジとかじゃない?ワークフロー一覧のとかあるけどこの辺だよねっていう風にコンテキスト理解として特に蓄積していきたい情報みたいな人格の設計はみたいな感じでだからこれ皆さん僕はこういう風にやってるけれどもみんなは違うやり方みたいな全然あるじゃん要は僕が作りたいAI僕が作りたいAI社員と皆さんが作りたいものはまあ違うわけですよなのでここはもう皆さんが作りたいようにやっていけばいいと僕があくまでこうやってやってるのでという感じですかね</p>
+<p><code>13:48</code> クローズドットインを中心にフラットに一つのフォルダ内で完結させるフォルダ構成階層型のように役割別ディレクトリー、Gitリポジトリー役割別かなスキルズメモリナレッジフォルダ構成これ一つだとちょっとごちゃごちゃしそうな気もするんだけど一か二推奨の方法を教えてくださいそちらで進めましょうみたいな感じですねで最初のマイルストーンとして今週中にプロットタイプを動かすみたいなのがあるんだけども早めに動かしたいよみたいなこの辺はちょっと多分開発をすると思ってるからこういうスケジュール感で長く書いてるけど結局ねこのクロードに作ってもらったらその後クロード工学に渡せばできちゃうんで</p>
+<p><code>14:23</code> これで今から出たプロンプトもあと投げるだけみたいなプロンプトというよりも多分設計書が出るみたいな感じかな設計書が出るというよりも設計書が出るように最後出力してあげるみたいな感じがいいと思うんで結論から言うと階層をベースにクロード.mdをエントリーポイントにするハイブリッドが最適だと考えますまあいろいろ書いてくれてます理由は明確でクロードコーワークをクロードコードでも自動で読み込みみたいなことが書いてあるのでこんな感じで方向性定まりますここからどう進みましょうかこの方向でアウトプットに進みたい</p>
+<p><code>14:55</code> さらにフコボリしたいとかいろいろあるのでフォルダ構成設計書をまとめるとというので今こうやって作成してくれてAI社員かっこAIたまごっちゃんの設計書をマークなんで作成マーカーで作成されたらここでクロードワークとコードワークとかでコードで作ればいいので例えばここでAI卵チッとしてここで読み込んであげればOKと弊社では社員研修やセミナー登壇のほかAIネイティブな組織作りのための内製化支援などAI×教育領域で様々な支援を行っていますご興味のある方は概要欄に記載のフォームよりご連絡ください</p>
+<p><code>15:33</code> ということでできましたで1回さっき僕の情報結構バリバリ入ってたんでそうすると社外費というかそういう情報入ってるのか皆さんにお配りするという観点だとちょっと使いにくいかなと思ったので一旦修正加えさせてますここにバーッと出たんだけどこれだと見にくいので僕が作ってたstudio.imani.webですねこれ見てあげるとAI社員エイタマゴッチ設計書ということでフィロソフィーみたいなのね結構個人的に今後大事になってくるんじゃないかなと思っててフィロソフィーっていうのは</p>
+<p><code>16:06</code> いわゆる哲学的なところで最初の考え全部ベースとしてしたこうあるべきだこういう考えのもとみたいな何かしらの考えがベースにできてることって多いじゃん何にしてもっていう中でエージェントを設計する中での大元の根幹みたいなところだよねそれを最初に決めておいたりするといいかなとだからこのプロジェクトの本質はプロンプトエンジニアリングだけなく育成であるとかコンテキストスキル判断基準が蓄積されて使えば使うほど精度が上がっていく仕組みみたいなところとかが入ってたりこの設計原則だよねこのベースこの考えをもとにみたいな</p>
+<p><code>16:38</code> 例えばあなたは100個ルールがありますよりも5つの原則を守ってくださいって言ったら絶対5つの原則を守る方が楽じゃんだからやっぱりこの原則みたいなところとかをちゃんとガチッと固めて自分のポリシーじゃないけど自分の信念みたいなものを定めてそこから補正していく何かを作っていくって方が多分うまくいく確率は高いしこの中小度のレイヤー例えば作業タスクみたいなタスクってめっちゃ具体のレイヤーじゃんでももっと上のその抽象度の高いレイヤーで言うと今話したような設計とか哲学とか考えとかそういうところに近づいてくるのが理念とか</p>
+<p><code>17:11</code> なるのかなというふうに思ってますフィロソフィーということでコンテキストファーストみたいなこれ見てアウトプットの品質とはどれだけオーナーのことを分かっているかに依存するスキルより先にコンテキスト理解を育てる1.人格多モード窓口は常に1人のメイン人格業務に応じて専門モードに切り替わるが自動蓄積プラス人間承認断信的成長最初から完璧を目指さない今週のAI社員が先週のAI社員よりも確実に賢い状態を維持する結構設計原則が良くない?はいなかなか確かに育っていきそうな感じめっちゃしますねこれもやっぱり大事なのが僕はこういう設計原則いいなって思うけれども皆さんからしたらここはもうちょっとこうしたい</p>
+<p><code>17:49</code> それこそ例えばいろんな人格を持ったAIを雇いたいみたいな感じだったら一人格多モードじゃないよね多重人格ってちょっとゴヘあるけどいろんなやつを置くみたいなコロコロ切り替わるみたいなのが望まれるかもしれない卵っちょを育てていくみたいな感覚だと一人の人格を置いておいた方がいいのかなみたいな感じですとフォルダ構成もこんな感じでAIエンプロイみたいなところにcloud.mdこれ絶対最初に読まれる本当に一番最初の部分ですこのエントリーポイントって書いてあるけど一番最初に読まれる部分なので脳の目次って表現わかりやすいけれどもどういうのが入ってるんだろうねみたいなのが書かれるパイル</p>
+<p><code>18:24</code> さらにソウルってのがあってパーソナリティ、人格とかあとコミュニケーションスタイルワークプリンシップ仕事の進め方みたいな例えばなんかよくダンインスベターザンパーフェクトって聞いたことない?ダンインスベターザンパーフェクト聞いたことないFacebookのマーク・ザッカーバーグが言った言葉で完璧よりもまず完了させろみたいな要は完璧を目指してると仕事の進捗がめちゃくちゃ時間かかってずっと自分の中で持っちゃったりするけどまず完璧を作るんじゃなくて30点でも40点でも60点でもいいからまず完了させてフィードバックをもらえみたいな仕事のスタイルの話なんだけど例えばそういうやり方でいくのもあれだし</p>
+<p><code>18:57</code> ひたすら完璧にこだわるみたいなのもいいじゃん完了をまず最優先でスピード重視でいくのか質をひたすら磨いていくのを重視するのかみたいな仕事の進め方みたいなところもこの辺に根幹の部分を書いていく必要があるしあとナレッジとかもカンパニーこれは会社の情報とかソウルとナレッジはちょっと分かれているのでソウルは考え原則みたいな自分のこういう考えのもとこういう信念のもと自分は動いているんだそれで言うとそれこそAIなんかめっちゃすぐアウトプット出してくるけど間違えただけのこともあるめっちゃ自分で確認に確認繰り返していいの出すけど1時間かかるみたいなのもあるじゃないですか</p>
+<p><code>19:35</code> そこの仕事の進め方とかもここで指示できるってことですかねそう指示できるというよりも正確にはここにこういう風に書いておくことによってそこを読むようにしてあげたら毎回毎回例えば新しい依頼新しい依頼する時に新しいチャット新しいチャットになった時にこの新しいチャットを開くたびにこのクロード.mdが呼ばれてクロード.mdにはこういうソールにはこういうのが入っているよだからここを参考にしてねとかそういうのが書いてあるようにすればさっき言ったように同じ過ちを繰り返さないようにそれこそさっき言ったベースとして育っていくようなAI社員が作れていくはずこれがこういうのをやってもうまく機能するように最近のAIはなっていると</p>
+<p><code>20:11</code> なぜかというとクロードの4.6オーパスソネット特にオーパスあとはちょっとGPT5.45.4というよりもGPT5.3のコーデックスとかそういうエージェントモデルがめちゃくちゃ賢くなってきてるのでこういう構成をしてちゃんとそれが運用できるようになってきてるって感じかなでまたここにいろいろ書いてありますスキルズとかほらスキル入ってますメモリーもほらオーナーのフィードバックの履歴とか入れるとかタスクのログ入れるとかグロース成長の返礼とかいろいろ入ってますこの辺は何がいいのか悪いのかってちょっとやってみなきゃ分かんないしこれがうまく機能しないみたいな場合も全然ありますとなのでこの辺はね正直って皆晴れというか</p>
+<p><code>20:46</code> まずやってみるのもいいし一旦これいらないんじゃねえと思えばなくしてもいいかもしれないしただ一旦設計としてあんだけ壁打ちして作ったんだからこれで進めてみるっていうのは大事かなってのは思いますほらこれ見るとさ各レイヤーの役割でcloud.mdプロジェクトルートに置く最重要ファイル自動で読み込む部分なんだよねcloud.mdっていうのは全ファイルの内容を書くなど何がどこにあるか最低限の行動原則だけを入れるとやっぱりcloud.mdは薄く保つこれめっちゃ大事で前回話したかもしれないskill.mdとかもそうなんだけを入れるとやっぱり黒道と md はこれ薄く保つこれめっちゃ大事で 前回しかもスケール. md だもそうなんだけども書きすぎないとか大事はい cd 書がバードなれば1万行あります全部書いたから見ておいてね だとまあむずいじゃん水子なんか遠くに使いそうですそうトークン使うそうそのとおりめちゃくちゃあの読み込んで無駄にコンテキストウィンドウ増えちゃうみたいなところも あるし</p>
+<p><code>21:28</code> あとは1万行書いたらもしかしたら矛盾が入ってるかもしれないんだよ ようなが迷うようなことが書かれているかもしれない少ないと迷う可能性が多分減るしそもそも情報量が少ないから減るってのもそうだし変なことが書かれてないみたいな定まりそうですね例えばなんだけどめっちゃこれどう書かないけど1万行書いてあったら下手したらその中に前向きながら後ろ向けみたいなことが書いてあるかもしれないこれ書いてあった瞬間にAIって人間もそうだけどAI迷わない?前向きながら後ろ向けて無理じゃんっていうのが仮に入ってたらみたいな要はつまり前向いてねって書いてある1行があって後ろ向いてねっていうところが入ってたら</p>
+<p><code>22:02</code> どうすればいいのってごちゃごちゃするよねこういうのを避けるって意味でもそうだしAIが混乱しないようにするためにも可能な限り短く保つだからここに薄く保つってのが設計上の鉄則として書いてあると名前書いて行動原則参照マップ本当これぐらい書けないねみたいなところ書いてあるソウルのところは人格とかこういうレイヤーがいくつかあるよとっていう風に設計してくれてるのでひとまずこれできましたとなのでこれを元にここにこのファイル名なんだAIエンプロイデザインって書いてあるねAIエンプロイデザインって書いてあるのでAIエンプロイデザインとしてあげてこれでエクスポートしてあげましょう</p>
+<p><code>22:34</code> そうするとこれでマークナンファイル出力できるのでこのAIたまごっちの中に入れてあげるとということでこの中にAIたまごっちのフォルダの中にAIエンプロイデザインドってのを入れましたそしたら行きますここでコーワークでもコードでもどっちでもいいですがコーワーク使いましょうプロジェクトで作業のところをたまごっちそうAIたまごっちにしますとそしたらソレッドだとちょっとあれなんでオーパスにしてアットマークでこの先ほどアップロードしたファイルを読み込みますとこれをもとにクロードコーワーククロードが動くエージェントが動く環境フォルダ構成を設計してください</p>
+<p><code>23:11</code> AIエージェントが動くようなAI社員として動くようなフォルダを構成設計してくださいみたいな感じで進めますとこのタイミングでこれでそのまま進めればいいのでこのまま行きましょう実行しますそうするとスターティングアップ処理中ということで今右側にこの手順クロード.mdがあってみたいな感じですけどもここの中で先ほどのAIタモウチAIエンプロイデザインこれほらマーク団読み込みました読み込んでくれてますここで起動してみたいな感じですねなのでここから多分</p>
+<p><code>23:42</code> タスクリストみたいなのが出てくるはずということで設計書を読んだ上でわからないことがあるっぽいのはこのクロードコーワークの実際の動作環境に合わせたフォルダ構成を設計する前にいくつか質問させてくださいアスクユーザークエスチョンということで聞いてくれました実際にフォルダファイルを作成するフォルダの中に構築しますかそれとも設計書としてマークダウンで出力するだけでいいですかそんなわけないよね実践作成してとクロードコーバークの.クロードディレクトリーとの関係度をどう設計しますかコーバークネイティブとレコメンド書いたらこっちでいいですねAI社員の初期人格や業務何が決まっていることはありますか</p>
+<p><code>24:16</code> 設計書の例そのまま使うまだ未定確かに初期人格どうしようまだ未定かなどうしよう設計書の例例ってどうなってたかなこれ人格選べるわけです人格を決めるみたいなここだよねでも多分書いてなかった気がするんだよね好きにできるんですそうこの辺とかこれを多分やろうとしてるから今の業務に合わせてみたいなまだ未定とかにしておきましょうかこの辺がわかりやすくなってるねデザイン前多分こんな感じじゃなかったこういうビビったり修正 がちょっとずつねあのクロードコードクロードコーワーク黒とチャット入って いってるってのが非常に使い勝手の良い部分かなと思いますこれ今回こう開くだ から右上の進行状況とか見れるんですよ</p>
+<p><code>24:56</code> そうまだこれ考え中だからそのフェーズに は至ってないけれどもたこの後実際にディレクトリを作るとなったら設計入り ますというドゥライトでペドゥライトおおすげえ既存のクロード構成を確認中コーワークネイティブ統合のフォルダを設計するAI玉越フォルダにこれを作るAI社員エントリーポイントを統合みたいないろいろと出てくるのでこれを待てばいいという感じですということでざーっと10分くらい作ってくれたのかな既存のクロードスケール読み取り線これを踏まえていく方針でAI玉越フォルダ自体をAI社員のプロジェクトルールで設計</p>
+<p><code>25:28</code> クロード.mでこのフォルダ直下に配属みたいなのが書いてあります一気に構築していきますということでこういうの作ってくれましたとスキルズウィークリーデビューレビューシュージーレビューとかのやつかないろいろ作ってくれてますねでクロード.mdがということでこのフォルダをクロードコーワークで開くとAI社員が起動しますということで見た感じ入ってないのでAIたまごっちのやつ多分ね書き出されてないとありがとうございますありがとうございますフォルダの中身見たらフォルダの中に何も入っていないようでしたAIたまごっちのフォルダの中に</p>
+<p><code>26:00</code> 新しく新規ファイルフォルダとか作成されていないようでしたので再度ご確認お願いしますみたいな感じでちょっと入れておきますとなんかねクロードコードワークは確かの仮想環境みたいな一旦その別途切り分けた環境内でやっていくみたいな感じだったので直々のところに一旦入れてないって感じかなできてるけどまだ入れてないそうできてるけどちょっと別の環境って感じかなちょっとややこしいんだけどそういう意味でクロードコードでやった方が分かりやすかったかもしれないなと思いますコードなら直接的なわけですそうクロードコードは別に環境を切り分けずにそのままこの中をいじるので</p>
+<p><code>26:34</code> ファイルは全て作成されていますので確認結果を求めますそういうところもあってクロードコードの方がトークン使わないんですかねうーんかな考えられるのはクロードフォルダがフォルダクロード.mdファイルやフォルダを教えていただけますかお手元のフォルダで見えているなのでこれで例えばこのAI玉ごっちっていうのをここでPWDでこのパス違うところに作成されているのかなでスキルだと勘違いされたのかフォルダ内を想定してましたがどこに入れてるんですかね</p>
+<p><code>27:06</code> 隠しフォルダーかでも.cloudの中のって書いてあるけど.cloudの中のcloud.mdすらないんだよねここで-aで見てあげるとこれしかないのでファイルが正しく同期されているか確認しますねまず作成したファイルをお見せしますちゃんと作ってんぞと作ってくれてると作ってくれてはいると作ってくれてるのは分かったんだけど見えない場合コマンドシフトドットを押すと隠しファイルも見えますってことですけどいやでも多分ねそれじゃない気がするんだよね</p>
+<p><code>27:38</code> 普通にコマンドシフトドット違いますねもし見えてない場合はファインダーで押すと隠しファイルんーではないので見えるはずですなぜかここのファイルを指定したのになんかここがマウントされてないここが設定されてないのかなコンワーク設定した時にここでAIたまごっちって選択したからできるはずなのにこれじゃないなこれかこれかここでAIたまごっちってことだ</p>
+<p><code>28:12</code> 設定してるのでいやもう一度ご確認くださいあの入ってないです隠し ファイル含めて入ってないですきちんとai タマゴッチフォルダーの中に入っ てますか作業プロダーの中に入っていないのでなあんたの別の隔離した仮想環境上に 作成しているとかじゃないんですかっていうのがおっ ソウル欲しいなぁもしダメだったらちょっとクロードコード の方で進めようかなと思います同じことをスクリーンショットで確認させてください シンキングたホラー見て勝手におおおお最新の機能です</p>
+<p><code>28:43</code> コンピュータユーズでやってくれてるけどこんなのわざわざやらなくていいんだよな最新のコンピュータユーズというないって言ってんだろと信じてくれよとそのくせして重いし遅いしなんでクロードコアワークなんかバカだななんでだろうな全然できるはずなのになんかどっか違うところに入ってるのかなちょっとハズレを引きましたねちょっと停止しますこれで可能性がない別の方法を試しますということではい別の方を試してくださいお願いしますでマウント構成が上がりました経由で書き込みを反映されるはずですということで</p>
+<p><code>29:18</code> なんかおかしいんですよねちゃんとバーチャルなんとか経由って書いてあるのでおかしいですねとこの切り分けた環境には多分あるんだけれどもこの中に入ってないマウントの仕組み上私のサンドボックスから直接お手元のフォルダに書き込めないようです方針をフォルダ構成をZIPにもまとめてお渡ししますので展開していただく形にしますちょっと方針変えてくれたみたいですねマウンタの仕組み上直接お手元のフォルダには書き込めないようですって言われるんだけど全然コーワーク書き込めるはずなんだけどな今までやってたよね</p>
+<p><code>29:49</code> しょっちゅうやってくれてましたよねだからちょっとなんかよくわかんないなと思いつつ一旦このZIPファイルを作ってくれるみたいなので少し待ちたいなと思いますがこれ別に同じことをクロードコードでやればクロードコード多分スムーズにいくと思うんでこのサンドボックスっていう実験環境みたいなものがあってよくサンドボックスという表現をするんですけど仮想環境としてこれ分けてるんだよね本番関係とはわけでサンドボックス関係みたいなのがあってそこで多分やってるのでこの本番の実際のフォルダに紐づいてないこのフォルダに紐づけることこれマウントって言うんだけどもマウントの仕組み上どうのこうのと言ってるんだけどこれ別に今までもやってたからなーって感じなんだよね</p>
+<p><code>30:24</code> なんでちょっと多分ジップ化してダウンロードすればいいという形になるので少し待とうかなと思います弊社では一緒に働いてくださる仲間を募集しております正社員業務委託インターン問わず絶賛募集中ですAI×教育事業ですねより大きく成長させていくために一緒にAIそして教育に熱を持って臨んでいける方取り組んでいける方を探しておりますご興味のある方はですね概要欄に記載のフォームよりご応募ください皆様のご応募お待ちしております</p>
+<p><code>31:01</code> いわゆるZIPファイルにしてくれるということでZIPファイルにしてもらってAIエンプロイセットアップというのができたのでそれで進めていこうかなという設計者のデイワンにあたる書き込むところからみたいな言ってましたでちょっとさっきコーワークもしかしたらできないかもなと思ったのでクロードコードで勝手にたまごっち2みたいなたまごっち2というフォルダ作って一応こっちで進めてたりしたのでそっちは見てあげるとこれこうやってAIエンプロイみたいな作ってくれてるのでコーワークじゃなくてクロードコードでできるなら</p>
+<p><code>31:33</code> クラウドコーブでよかったなと 今更ながら若干後悔してますで aiエンプロイセットアップっていう のはこれそのまま配布すればいいかも なと思っててaiエンプロイセットアップという のができましたちょっとわかんないけどとりあえず 進めてみましょうかI社員をセットアップしたいですちょっとわかんないこれで始めていいのかわかんないんだけどもちょっと一応これこのまま開くとあれなんでこのAIエンプロイセットアップポチッとしてカーソルと呼ばれるようなAIコードエディターで開くとこんな感じでこうか</p>
+<p><code>32:06</code> ここでほらこうやっていろいろまとまってるよねさっき言ってたやつがスキルズとかソウルとかコミュニケーションスタイルとか勝手に書いてくれてるよねそうですねパーソナリティとかなんかこれも書いてくれてるねなんか伝えた方がいいコンテキストがあれば教えてくださいこんな感じでクロードコードの方もできてちょっと工学科の方はAI社員のセットアップっていうので今のフォルダ状態を確認させてくださいフォルダの中身を確認しました骨格しっかりできてますみたいな以下の情報をいただけると一気に仕上げられますということでこの一言を入れればセットアップしてくれるみたいですね</p>
+<p><code>32:40</code> AI社員に日本をつけるとしたらどんなイメージですか?J君ってしようとしたけどやめとこうちょっとなんか何ですかそれちょっと嫌ですか?ローカルにJ君ちょっと僕のエージェント使ってミッチーにしとこうミッチー会社事業について教えてくださいITウェブ系ですAI社に任せたいもの資料作成、データセレクト、分析も全部ですね口調をフレンドリーこんな感じで設定していくとノードコードの方はこっちできててこういう風にできてるのでなどのプレイスホルダーの情報を実際に埋め込んでいけばってあるので実際に入れなければいけない情報をどんどん質問形式で伝えていってほしいです</p>
+<p><code>33:17</code> それを元に埋めていってほしいですみたいな感じにしてあげるとこれでストップしていけるわけですねそうそうそうそうできた道がえる社の僕の会社道がえるっていう会社なので事業内はもう少し自宅開発がメインとかにしておきますか一旦適当にほぼ一人少人数こんな感じかなミッチーという名前フレンドリーなキャラクター善良益化はもう少しだけ会社のことを教えてもらえたらより精度の高いAI社員に知らがります必要な情報を揃えましたこれ今いろいろ過程を見てもらってるんですけどもこういう風にしていくと何か作っている感がわかるじゃないですか多分多くの人って</p>
+<p><code>33:50</code> 0、1みたいなところの準備が難しいと思っててこれこういう風にやっていくんだよってのをお見せできてるってのが多分この動画の価値だと思うのでこういう風にやっていくんだなみたいなところを覚えてほしいですとこれがどう動くかみたいなのは結局改善しなければいけないのでやっぱり最初に作るみたいなのはもうAIが優秀なので最初の土台本当にベータ版土台みたいなのは簡単に作れますとそれを踏まえてもっといいものを作るっていうところが非常に大事で</p>
+<p><code>34:21</code> それこそ育てていくっていうのが大事なのでこのファイルフォルダ構成このファイルだとうまくいかないなってなったらそれを変えていくみたいなっていうのをやっていけばいいかなと思います今こうやってどんどんどんどんこうやってほら見てパーソナリティMDとかコミュニケーションスタイル.MDとかカンパニーAMDとかをさっきの情報を元に更新してくれてるみたいなはいっていう風にしてあげればよくてであとはAI社員の名前何にしますかAI社員の名前はミッチーですあなたの名前私の名前はイマニューですAI社員との関係性は優秀な右腕三方タイプAですAI社員の性格口調はめちゃくちゃポジティブで</p>
+<p><code>34:58</code> 何事にもポジティブで明るく前向きでフランクなカジュアルな感じです口調はカジュアルのため口で絵文字は使ってくださいAI社員に一番求める性格特性はスピード重視、クリエイティブ、積極的なところ一番って言ってるのにいっぱい入れすぎたないやこれで作っていくわけですねそうこっちもどんどんどんどんできてるとこれがどんどんさっきのファイルに書き出さ れていっているんですかそう今これかファイルを更新してくれてるはずこっち どうだろうななんかさっき更新してくれるあみっちに なってるねこれとか入ってるこれ専属の家しキック気心知れた同僚相棒 ドルマちょっとまあいいやこういう風に</p>
+<p><code>35:35</code> やってねを買いたいみたいな特に何かある わけではないですこれこの後は普通に指示していけば動いて いくのかな一応見てあげるとこの名 sベースとなるcloud.mdここ見るとこうやって見てあげるとこうやってあなたは誰行動原則指示を受けたらまず関連するこれを確認してねみたいなこういう行動のベースとなるもの参照マップでここにこういうの入ってるよああいうの入ってるよってのが入ってるんだこれベースのところだよこれこういうのをちゃんと指示書をcloud.mdをきちんと作っておくとうまく動くんじゃないかなとほら見てください</p>
+<p><code>36:07</code> こういうふうにミッチの基本設定が入っているのでみたいな感じで出てきますとそしたらちょっとスレッド新しくしようかなこれで言うとクロードコーワークの方が例えばいきましょう今AIの本当に受託開発みたいなのをやりたいなと思っています具体的にはAIコーディングとかで小さな会社中小企業冷裁企業の業務効率化改善みたいなのはAIとAIコーディングを使えばサクッと本当に短時間短期間でしかも安くできるかなと思っていてなのでAIを作るというよりも</p>
+<p><code>36:40</code> AIを活用した組織に変革していく業務を改善していくみたいなところで様々な中小零細企業の自宅開発を受け入れたいなというふうに思っていますその自宅開発をやる上での市場リサーチみたいな市場調査とかあとどういう形でやっていくというどういう価格帯でやっていくというみたいな事業戦略の提案みたいなのをお願いしたいですっていうふうにやっていきましょうそうするとここで事故しますどうなるか見ましょうスターティングアップ処理中ということでこれマスタラの状態ね見ておいてねシンキングでやっていくと今におさん面白い構想ですねみたいな感じで</p>
+<p><code>37:12</code> learning.mdworkprinciplesとかcompany.mdとかこうやって読んでくれてるの分かります?はいはいはいテイジョンもこれ最初読んでくれてるみたいな面白い構想ですねAI自宅開発まさに今の時世にマッチしたビジネスだと思いますしっかりとやらせるまずいくつか提案させて確認させてくださいみたいなでこれをターゲットする業種は問わない現時で使えるのは2,3人で対応可能成果物のイメージとしてはスカイアベースの方向性事業戦略ドキュメントはい一旦これ成果物は事業戦略ドキュメントにしてすいにでも始めたいみたいな感じにして答えていくとこっちのクロードコードの方も見ておくとこっちまた質問されてます</p>
+<p><code>37:45</code> これは会社名は株式会社道があるです事業内容はAIの自宅開発ですね自宅開発チーム体制は1人2,3人ですミッションビジョンなしですよく使うのはスラックノーションそういったものを使ってますあとクロードとかですね確かにどんどん情報を入れて育っていったわけですねどんどん情報を与えていってるって感じかな今これ市場調査をしつつ了解です方向性がクリアになりましたここで見ていくとここの読んでくれてるんだよねなのでこれをもとにlearning.mdとかは</p>
+<p><code>38:19</code> 学びの蓄積みたいなの入れてるけどこれはちょっとまだ一旦いいとして市場リサーチ、ドキュメントの最終確認、品質チェックここが最後終わった後にちゃんと記録に残してくれるか記憶に残してくれるかみたいなのはちょっとやってみないと分かんないかな大パスだから若干遅いので少し待たなきゃなってところでそれさえできてれば今後もずっと入れ込んでいってくれるから育っていくわけですねそうそうそうそうだから結局コンテキストを残す記憶を残すってところがめちゃくちゃ大事だなとただそれを特定の業務が行われたらいい形になってこのフローをスキル化していくみたいな感じかなイメージ最初からスキル化するってのはもちろん一つの方法としてはあるんだけれどもうまく一回AIにやらせた一連の流れをスキル化するっていう</p>
+<p><code>39:02</code> 一回具体で一連のオペレーション一連のフローを作らせてそれをもとにそのフローをもとにスキル化していくっていう具体から抽象化していくみたいなのも一つのやり方としてお勧めかなというふうに思いますはいこうやって見てあげるとこんな感じでいろいろとやってくれてますとほらいろいろやってくれてるねうんうんで多分このコンテキストのところはこうやっていろいろとウェブサーチしてくれてDocsはこれはもともとAnthropicが用意してくれてたドキュメントスキルだねとかやってくれてますとでクロードコードの方を見ると</p>
+<p><code>39:34</code> 一番やってほしい仕事みたいなのがあるんでGIGIROCK BCDFあたりをやってほしいかなという風に思いますこれだけは譲れないというのは仕事としてはダンイズベターザンパーフェクトですかねスタンスとしては速さ重視とあとはアウトプットの見た目もきちんとやってほしい重視していますとあとは本当にやめてほしいところで言うと確かに長文すぎる回答とか冗長的なものはやめてほしいですとしましょうはいという風に伝えていくと情報が溜まっていくと事業戦略ドキュメントを作成中と両方こうやって進めるのが良かったねそうすると</p>
+<p><code>40:10</code> 確かに並行できるそう並行して進められるとファイルを作成しましたこれ動き見てるとやっぱりぶっちゃけクロードコードでやった方が早い確かに早い感じはあるしコワークよりも多分早いかな若干しかも今にしてもトークン消費少ないらしいですそうね確かそうだったんだよねクロードコーワークの方はデスクトップアプリ上コードもそうかなファーミナルでやるのが一番手っ取り早い早いかなって感じだよねこうやって見てあげるとスキル読み込みして調査ドキュメントか作ってくれてるね</p>
+<p><code>40:43</code> インストールドックパッケージドックスパッケージランローカリーとかいろいろ作ってくれてますクロードコードの方もこうやってスキル4つと好み設定を入れました4つファイルを同時に進行しますスキルファイルみたいなの入れてくれてますねちょっと待ちたいなと思いますこっちのクロードコードの方もできてAIエンプロイをクロードコーワークのプロジェクトとして開けばコーワークじゃなくても多分できるはずなんだよねなのでちょっとコードでやってみようかなと思ってコードでこのAI卵地2ってあるけどもこの中にAIエンプロイっていうのを作ってくれた</p>
+<p><code>41:17</code> これクロードコードが作ったやつですこの中で例えばさっきと同じようにコーワークと同じようなものこれ別ファイルなんだけれどもここでこっちに入れ込みますとクロードコード側ねそうするとほら見て未知ですってきた未知ですAI自宅開発の事業作業めちゃくちゃいいテーマですねポジティブにって確か言って確か言ってましたねまずはプロジェクトの背景を整理してから壁打ちしていきますってことこれ実はねクロードコードだからってのもあってここをスーパーパワーズブレインストーミングっていうおすすめスキルの動画の時にスーパーパワーズって紹介したの覚えてる?覚えてます</p>
+<p><code>41:50</code> それのブレストスキルがね多分今ね立ち上がろうとしてるんだよねなるほどそれが良ければいいし悪ければ悪いしって当たり前なんだけど悪ければ使うなって言えば学習しますもんねそうそうそう壁打ちとかはやらなくていいよみたいな感じで言えばいいかなそうするとこういう感じで上がってくるのでターゲットは絞らずみたいなこっちはねちょっとねインストーリング パッケージでございますこのなこのドックスパッケージての中インスタルする めっちゃ時間かってるねこれちょっとリロードすると多分住んでるんじゃないか 進んでなかったとするとこれで業種特化その他</p>
+<p><code>42:23</code> 業種が気になってますか a c e どうしましょうかというふうにも壁打ちスキルがどんどんどんどん進んでいくと人脈は特にないのでこれから開拓していくと今にもちょっとカタカナで入れてたから多分こうなってるこれ結局ちゃんと読んでくれてるよねやっぱこれ見るとクロードコーワークよりもクロードコードやってる方がなんかうまく進んでるなってあと早いよねテンポがはい最初の案件獲得チャンネルとしてここはまだ決めてないとデスクトークコーワークこれコーワーク近くと進んでるねコードはスキルのレベル感ある程度アプリでつけるこういう風に入れていってます</p>
+<p><code>42:58</code> デスクトップアプリのクロードコードはあんまり抵抗ないというか見やすいですね全然使いやすいよねだから別に気にする必要はあんまないかなと思うのでこの授業で最初のどれくらいの規模を売り上げたいですかBくらいにしておきましょうか一旦どういう風にどんどんこれを繰り返していくと一件あたり月単価を抑えて単価を高めにして少数のクライアントに深く入り込みしましょうかこれだよねこれはあれかミッチーはこれは多分あれかクロードコーワーク側で作ったやつだねはいはい</p>
+<p><code>43:30</code> ややこしいけどこれで今こうやってto do提案したいのは並行でリサーチを走らせますということでリアルな情報を集めてから提案したいので並行でリサーチを走らせますとコーワークよりもやっぱりこれ見てほらエージェントがさ起動してるの分かる?分かりますエージェントが中小企業AI導入の市場調査をするためのエージェントが立ち上がってこれで今進めてくるこっちはスキルを読み込みましたでは調査結果をもとに設計多分書いてくれてるのかなドキュメント多分やってくれてる事業戦略ドキュメントを作成してくれてるはずバリデート</p>
+<p><code>44:02</code> 全部終わったっぽい完成しましたどうですかね完成して終わったのでこれちょっとGoogleドライブで開いてみようと思いますドキュメントこんな感じ見て結構分かりやすい目次が僕色合い好きですね結構白になってるのかなおそらくでもわかりやすいかもねこれはね普通にアンセロピックのクロードのドキュメントスキルが効いてるかなとただこれだけだと多分更新されてない気がするんだよねこの情報が</p>
+<p><code>44:36</code> なのでこれきちんとこれを蓄積していく形でこのプロジェクトを蓄積していく形で入れてほしいです結局これだけで多分やっただけじゃん入江さんに入れてほしいですちょっと横がねきちんとこれを蓄積していたいので行きたいです ちょっとこうワークじゃない方がまあ悪くないはずなんだけどここにしなやってみた結果で苦労のコードで作ったが良さそうな気はするよね これもちょっと文明化少なすぎる今回作業プロジェクトのメモリーきちんと蓄積しますねこれ言わないといけないみたいなところがあるので</p>
+<p><code>45:11</code> これで言うとフックスみたいなのがあるんだけどクラウドのエージェントの中にフックスって何かというと何かのイベントを起点に起動するものみたいな感じなんだけど確かにちょっと僕もめちゃくちゃ詳しいわけじゃないんだけどこの何かのやりとりが一旦終わるたびに記憶に入れるみたいなそういうのもできるんじゃないかなっていう気はします要はコンテキストに蓄積していくみたいなのを終わるタイミングでやるみたいな最初から入れつつ読んだタイミングで覚えてるかって言うと忘れる可能性全然あるじゃんそれを自分のことで言ってると忘れちゃうみたいな3個くらい言われたけど最後の一つだけ忘れちゃうみたいなこと全然あると思うのでこういう風に今言わないといけないという状況だよね</p>
+<p><code>45:45</code> 言わないといけない状況であるけれどもcloud.mdにこういうの入れてねって書いてあるから言ったらやってくれるじゃんこれ今言ったらやってくれるっていう状態じゃあ言わなくてもやる状態をどう作れるかっていうのはcloud.mdに書くとかあとはFuxっていう機能があるのでFuxっていうフォルダの中にその設定を入れておくとか多分そういう工夫が必要という感じかなだからそれこそチャットも開くけどクロードコードのフックス機能で何かしらの処理が終わるたびにフォルダ内に情報を書き込むみたいなことはできるんでしょうかコンテキストを蓄積していくみたいなイメージですという風にしてあげるとここでできます</p>
+<p><code>46:20</code> まさにそのようなことだねツール実行前ツール終了後クロードオートの終了時とか通知発生時とかこのフックスにはいろんなフックのタイミングつまりイベントのタイミングがあってそのタイミングで何か処理していくってことが可能です処理のためにファイル書き込むみたいなことができたりするみたいな感じかなただスクリプトなのでプロンプトを起動できるかみたいなのはちょっと分かりにくいんだけどもでもできそうかななので書き込んでみたいなところも言おうと思えば言えるのかなという気もしつつちょっとこの辺は僕もまだ触りきれてない部分なので</p>
+<p><code>46:55</code> 特定のフォルダに書き込むみたいなフックス機能を使うというのは一つの手かなと思いますここもやっぱどんどんどんどん蓄積していってくれてるけれども意思決定ログを記録中とかいろいろやってくれてるけれども意思決定ログとか会社情報に新事業追加とかログを追加していってくれてるこれで一旦今このやり取りの情報が溜まっていくわけだよね次はそれを参照していくみたいなほらこういう風にいやすげーここもプロジェクトのここの中にこうやってほらAI自宅開発みたいなののログが溜まってるみたいな感じだよねだからカンパニーの情報も</p>
+<p><code>47:29</code> ここにまとまってるみたいな感じとかこういうのを目指していくみたいなさっきの情報が溜まっていくみたいなちょっとこの新入社員に勝てる気がしないですねどんどんどんどん溜まっていくから必要な情報だから重要なのはこれやるともう改善していくともうあと2,3時間どころじゃ済まないので一旦これぐらいで終わりにしようと思うんだけど今回はねまた続きもどっかでやりたいんだけど重要なのはちゃんと情報を蓄積していくサイクルがちゃんと自動で回る仕組みこれが一つあとはそれをちゃんと適切に処理されていて必要な情報が無駄な情報なく取り出されているっていう状態それことによってAI社員っていうのは全然作れる本当にこのフォルダの構成とあとこの仕組みだよねうまくいって最終的なアウトプットをどっかに蓄えていきコンテキストをちゃんと整えていく</p>
+<p><code>48:15</code> これを溜めれば溜めるほどいいってわけじゃなくてコンテキストが爆発してしまうので本当に不要な情報は入れないで可能な限りコンパクトなサマリサマライズされたものを入れていくってところの意識ともちろんログはログで残していくそれをちゃんと取っていく仕組みと溜めていく仕組みこれが自動で意識しなくても意図しなくてもなっていくっていうのがめちゃくちゃ大事かなと思いますそのためにクロードのフックスみたいな機能だったりとかあとは普通にクロード.mdとかをうまく駆使するとかそういうところを試していくことによってこのフォルダをどんどんどんどん育てていく</p>
+<p><code>48:47</code> 最初に言ったような卵っちみたいにどんどんどんどん関われば関わるほど育っていくみたいな感じポケモンかもしれない何でもいいんだけれども育てていくっていうことができるのかなっていう風に思ってますはいということでもうこれねちょっともっと育てるってなるともっと時間がかかるのでただ最初の入りをお見せしたのでだいぶイメージ空いたんじゃないかなと思いますいやだいぶ見分けましたいや今井さん今回こんな作ったファイルもまだ配布しませんかなるほどねいや全然いいけどこれはベータ版だと思ってぜひ使っていただきたいなと思っていてここから育てていく最初のフェーズなので</p>
+<p><code>49:20</code> これは僕の情報とか抜いて一番最初のZIPファイルこれ皆さんにお渡しするので僕みたいに一緒にクロードコーワークじゃなくてクロードコードでいいと思うのでクロードコードでどんどんどんどん作っていってもらえたらいいかなと思いますコーワークでもいいんだけれどもなのでベースのテンプレートセットアップテンプレートのフォルダーZIPファイルをYouTube概要欄に貼っておきますのでLINEにキーワードを入れてもらった方に配布しようと思うのでぜひそちら参考にしてもらえたらいいかなという風に思っています開いて今今野さんがやったようにこういうことやっていくんだよ教えていけばいいけど最初にセットアップして後は使って</p>
+<p><code>49:53</code> どんどんどんどん良くしていく育てていくっていうのをやっていただけたらいいんじゃないかなという風に思います今野さんLINE登録したら登録してくれた方に得点渡してるっておっしゃったと思うんですけどあーはいはいあれ何渡してるんですか何渡してたっけなんか10個ぐらい得点あるんだけど10個もそんな渡しちゃってるんですね非エンジニアの人がAIとかAIコーディングを学ぶとかにあたって必要そうかなみたいなものをドキュメントにまとめたりとか解説したりしているものLINE登録してくれた人にパイプしてるっていう感じかなLINE追加して得点もらえるだけですか得点をまず渡してるんだけれどもLINE登録してくれた人限定で</p>
+<p><code>50:27</code> 勉強会開催してたりとかAIとか特にAIコーディング系の勉強会とか今後ちょっとやっていきたいなと思ってるのは定期で質問とかをZoomとかYouTubeライブとかで受け付けるみたいなLINE登録者限定でやるみたいなそういうのもちょっとやっていきたいなみたいな思ってるじゃあこっそり登録者の勉強会参加しちゃおうかなJカーもっと学ばなきゃいけないからぜひLINE登録してもらえたら嬉しいし勉強会だけじゃなくて定期で僕がやってるスクールの案内もしたりとか基本的には得点を渡して勉強会とか興味あれば来てもらえたらなという風に思うし今2万人登録ぐらいかなLINE登録者結構いるんだけどそんなにいるんですねうるせえなと思ったらブロックしてもらえたらいいからとりあえず登録してもらえたらいいんじゃないかなと思いますなるほど今西さんそしたら恒例のコメント返信</p>
+<p><code>51:11</code> 僕が返信するコメントを選んでいいってことでちょっと嬉しいコメント読んでもいいですか?何?なんか嫌な感じするけど97848043登録しておくという方からいただいたコメントなんですけどJ君いい子そうだよねってコメントああ、そんなコメント来てたね。嬉しかったんで、今日はこれをと思って。何をコメントすればいいの?いやいや、ちょっといい子ってことを言ってほしくて。まあ、いい子か。はい。J君はJ君、いい子だと思う?いや、必死に勉強してるんで、いい子って言ってほしいですけど。なるほどね。まあ、いい子なんじゃないですか?</p>
+<p><code>51:43</code> いや、ありがとうございます。いい子だと思うんですよ。たまになんかJ君に対しての批判的なコメントも、ちらほら、ついたりしてはいますが、僕は別にそれは全くその通りだとは思ってないんでJ君がいるからこそ成り立っているチャンネルではあるんでそれは間違いなくいい子かどうかは置いておいてJ君がいないと成り立たないチャンネルではあるかなと思ってますもちろんね別にJ君がねいい話してるかとかいいツッコミしてるかって言うと別にそうは思わないんだけどそこはもっとレベルアップしてほしいしもっとJ君がレベルアップしたらこのチャンネルも良くなるし</p>
+<p><code>52:19</code> 視聴者の皆さんがちゃんと聞きたいことを代弁してJ君が僕に聞いてくれたら視聴者が知りたかったことを僕が話せるこれが一番いい形だけれどもラーメン屋だろなんだろみたいな変な無駄な質問ばっかりしてると視聴者の皆さんにとっていい形にならないからいい子かいい子じゃないかで言えば仕事関係なく言ったらいい子なのかもしれませんやったーただですよやっぱりもっとね質問とか問いかけ投げかけこれはまだね改善の余地しかないと思うんで</p>
+<p><code>52:54</code> そこは視聴者の皆さんも気長にお待ちいただけたらいいかなって思ってはいますがこんな感じでいいかなはいコメントいただけたら嬉しかったのでちょっと取り上げさせてもらいましたまあでもそういうねポジティブなコメントまあ結構ね皆さんも見てるかもしれませんがYouTubeにはポジティブネガティブなコメント両方混在していますもちろんネガティブなコメントはネガティブなコメントで素直に受け入れつつポジティブなコメントの方がもちろん人間としては嬉しいっていうのは僕もジェイクも変わらないのでぜひそういう何かしらのですねポジティブなコメント別にちょっとね30秒くらい時間いただけたら</p>
+<p><code>53:29</code> そこに書いてもらうだけでいいんですよなんでもいいんですよ思ったことあと気づき気づきを言語化してやっていくってなるとまとめてコメントしていただけるとやっぱりより学びにつながりますのでぜひ積極的にコメントいただけると嬉しいなと思ってますはいということで本日は以上になりますまた次回チャンネル登録よろしくお願いします</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts） — CLAUDE.mdフォルダ設計・hooksなどの詳細はこちら</li>
+<li><a href="./agent" class="internal" data-slug="agent">agent</a>（StructureNote/concepts） — AIエージェント設計思想の横断まとめ</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts） — 自動化フロー設計の参考</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote/concepts） — クラウドホスト型エージェント基盤との比較</li>
+<li><a href="./Claude-Coworkで「右腕」を育てたら、Gemini版より賢くなった。設計思想に「革新」が起きた理由。" class="internal alias" data-slug="Claude-Coworkで「右腕」を育てたら、Gemini版より賢くなった。設計思想に「革新」が起きた理由。">Claude Coworkで「右腕」を育てたら、Gemini版より賢くなった。設計思想に「革新」が起きた理由。</a>（LiteratureNote） — 同テーマのCowork設計思想</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-860" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>メモ管理は Obsidian in  Cursor が最強｜松濤Vimmer</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="メモ管理は Obsidian in  Cursor が最強｜松濤Vimmer"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="メモ管理は Obsidian in  Cursor が最強｜松濤Vimmer"/><meta name="twitter:description" content="はじめまして。松濤Vimmerと申します。 普段はWeb系の会社でフロントエンドエンジニア、デザイナー、PMなどしております。 早速ですが筆者が投稿した以下のツイートが反響を得ました。   メモ管理は Obsidian in  Cursor が最強。 Obsidianはmd ファイルとして一つ一つが独立して存在している。これらをcursor agent に読み込ませることでmcp みたいな運用ができる。具体的な運用方法は以下リプに載せる。 — 松濤Vimmer (@shotovim) December 16, 2024   投稿した当時はフォロワー10人ほどでしたが、元木さんをは"/><meta property="og:description" content="はじめまして。松濤Vimmerと申します。 普段はWeb系の会社でフロントエンドエンジニア、デザイナー、PMなどしております。 早速ですが筆者が投稿した以下のツイートが反響を得ました。   メモ管理は Obsidian in  Cursor が最強。 Obsidianはmd ファイルとして一つ一つが独立して存在している。これらをcursor agent に読み込ませることでmcp みたいな運用ができる。具体的な運用方法は以下リプに載せる。 — 松濤Vimmer (@shotovim) December 16, 2024   投稿した当時はフォロワー10人ほどでしたが、元木さんをは"/><meta property="og:image:alt" content="はじめまして。松濤Vimmerと申します。 普段はWeb系の会社でフロントエンドエンジニア、デザイナー、PMなどしております。 早速ですが筆者が投稿した以下のツイートが反響を得ました。   メモ管理は Obsidian in  Cursor が最強。 Obsidianはmd ファイルとして一つ一つが独立して存在している。これらをcursor agent に読み込ませることでmcp みたいな運用ができる。具体的な運用方法は以下リプに載せる。 — 松濤Vimmer (@shotovim) December 16, 2024   投稿した当時はフォロワー10人ほどでしたが、元木さんをは"/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/メモ管理は-Obsidian-in--Cursor-が最強｜松濤Vimmer"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/メモ管理は-Obsidian-in--Cursor-が最強｜松濤Vimmer"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="はじめまして。松濤Vimmerと申します。 普段はWeb系の会社でフロントエンドエンジニア、デザイナー、PMなどしております。 早速ですが筆者が投稿した以下のツイートが反響を得ました。   メモ管理は Obsidian in  Cursor が最強。 Obsidianはmd ファイルとして一つ一つが独立して存在している。これらをcursor agent に読み込ませることでmcp みたいな運用ができる。具体的な運用方法は以下リプに載せる。 — 松濤Vimmer (@shotovim) December 16, 2024   投稿した当時はフォロワー10人ほどでしたが、元木さんをは"/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="メモ管理は-Obsidian-in--Cursor-が最強｜松濤Vimmer"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2260"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2260" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>メモ管理は Obsidian in  Cursor が最強｜松濤Vimmer</a></div></nav><h1 class="article-title">メモ管理は Obsidian in  Cursor が最強｜松濤Vimmer</h1><p show-comma="true" class="content-meta"><time datetime="2025-12-30T15:00:00.000Z">2025年12月31日</time><span>29 min read</span></p><ul class="tags"><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/cursor" class="internal tag-link">cursor</a></li><li><a href="./tags/zettelkasten" class="internal tag-link">zettelkasten</a></li><li><a href="./tags/ai-knowledge-base" class="internal tag-link">ai-knowledge-base</a></li></ul></div></div><article class="popover-hint"><p><img src="./99_🖼️-picture/f827ce7a376a4b14d2acfcf9bd412c0b_MD5.png" width="auto" height="auto" alt/></p>
+<h2 id="メモ管理は-obsidian-in-cursor-が最強">メモ管理は Obsidian in Cursor が最強<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#メモ管理は-obsidian-in-cursor-が最強" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><a href="https://note.com/shotovim" class="external">松濤Vimmer<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>はじめまして。松濤Vimmerと申します。<br/>
+普段はWeb系の会社でフロントエンドエンジニア、デザイナー、PMなどしております。<br/>
+早速ですが筆者が投稿した以下のツイートが反響を得ました。</p>
+<p>投稿した当時はフォロワー10人ほどでしたが、元木さんをはじめ多くの方に拡散していただき8万インプレッションを超えることができました。</p>
+<p>そこでお礼の意味をこめてこのツイートをもう少し詳しくまとめた記事を書きたく今回このような形で執筆させていただきました。</p>
+<p>**お願い<br/>
+**<del>多くの方にリポストで拡散していただきたく、「リポストで無料」という形を取らせていただきました。何卒ご了承ください。</del></p>
+<p>無料公開に変更しました！是非最後までご一読ください。</p>
+<p>※以下内容で間違っている内容であったり、改善の余地があったりする場合は <a href="https://x.com/shotovim" class="external">https://x.com/shotovim<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> のアカウント宛てにメンション、メッセージなど送っていただきたいです。</p>
+<h2 id="私のobsidianについて">私のObsidianについて<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#私のobsidianについて" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h2 id="obsidian-の運用">Obsidian の運用<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#obsidian-の運用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/426393482c20be5491b64c1b452b89bb_MD5.png" width="auto" height="auto" alt/></p>
+<p>オレオレObsidian 構成図</p>
+<h3 id="ノートの管理について">ノートの管理について<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ノートの管理について" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>私はノートの管理を GitHub で行っています。同様に、モバイルとデスクトップ間の Obsidian の同期も GitHub を利用しています。Obsidian と GitHub の連携には、 <a href="https://github.com/Vinzent03/obsidian-git" class="external"><strong>obsidian-git</strong><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> を使用しています。</p>
+<p>以前は iCloud を使って管理・同期をしていましたが、以下の問題がありました。</p>
+<ul>
+<li>同期の速度が非常に遅い</li>
+<li>Mac と iPhone 間での同期しかできない</li>
+</ul>
+<p>また、私は GitHub をよく使うため、これらの理由から GitHub 管理に移行しました。</p>
+<p>GitHub を使うことで、モバイルでのメモの使用感が一段と良くなったように感じます。これは、モバイルで使用する際に Git からデータを pull することで、非常に高速に使用を開始できるからです（これは iCloud では実現できませんでした）。</p>
+<p>ただし、GitHub 管理にも問題点を感じています。</p>
+<ul>
+<li>画像ファイルを管理するとモバイル側で処理できない（タイムアウトになる）</li>
+<li>モバイル側の編集内容とデスクトップ側の編集内容が競合することがある（コンフリクトする）</li>
+</ul>
+<p>前者については解決しました（詳細は後ほど説明します）が、後者はまだ解決できていません。しかし、これらの問題点を考慮しても、GitHub 管理は優れた管理方法だと考えています。</p>
+<p><strong>画像の管理について</strong></p>
+<p>画像の管理は、AWSのS3を用いて全ての画像データをS3に保存しています。ObsidianとS3の連携には、 <a href="https://github.com/jvsteiner/s3-image-uploader" class="external"><strong>s3-image-uploader</strong><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> を使用しています。画像をS3に格納することで、モバイル同期時にタイムアウトする問題に対応しました。</p>
+<h3 id="kindle-について">Kindle について<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kindle-について" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>私はKindleで学んだことをハイライトし、そのハイライト部分をObsidianに出力しています。ObsidianとKindleの連携には、 <a href="https://github.com/hadynz/obsidian-kindle-plugin" class="external"><strong>Kindle Highlights</strong><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> を利用しています。記事では得られない多くの知識が本には含まれており、知識を蓄える上で非常に重宝しています。</p>
+<h3 id="ankiについて">Ankiについて<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ankiについて" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Ankiは分散学習が可能なフラッシュカードアプリです。<br/>
+私は長期的に覚えたいことをAnkiを使って記憶しています。Ankiの運用もObsidianをベースにしており、Obsidianでデッキを作成し、Ankiと同期させるという流れを取っています。ObsidianとAnkiの同期には、 <a href="https://github.com/ObsidianToAnki/Obsidian_to_Anki" class="external"><strong>Obsidian_to_Anki</strong><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> を使用しています。 <strong>Cursor</strong> を用いたAnkiのデッキ作成方法については、後ほど紹介します。</p>
+<h3 id="cursor-について">Cursor について<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#cursor-について" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>私は普段、メモはObsidianアプリを使用して取っています。しかし、Cursorを利用したい時や高度なVim操作を行いたい時には、Cursorを使用しています。Cursorの活用方法については、この後詳しく詳しく紹介しますので、ここでは割愛します。</p>
+<h2 id="obsidianのノート構成">Obsidianのノート構成<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#obsidianのノート構成" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>私のノートの構成は、Zettelkastenのフレームワークをカスタマイズしたものになっています。Zettelkastenについては、円谷さんの動画が非常にわかりやすいので、おすすめします。</p>
+<h3 id="構成図">構成図<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#構成図" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>.
+├── Zettelkasten/
+│   ├── FleetingNote/
+│   ├── IndexNote/
+│   ├── LiteratureNote/
+│   ├── PermanentNote/
+│   └── Zettelkastenの運用/
+├── Daily/
+├── MEMO(Thino)/
+└── Template/
+</code></pre>
+<ul>
+<li><strong>PermanentNote</strong> （最上位）
+<ul>
+<li><strong>LiteratureNote</strong></li>
+<li><strong>FleetingNote</strong></li>
+</ul>
+</li>
+<li><strong>Daily</strong></li>
+<li><strong>Memo</strong></li>
+<li><strong>IndexNote</strong></li>
+</ul>
+<p>各ノートの役割は次のとおりです。</p>
+<ul>
+<li><strong>PermanentNote（恒久ノート）</strong> ：最上位のノートで、保存用に使用します。 <strong>LiteratureNote</strong> や <strong>FleetingNote</strong> をもとに内容をまとめて作成します。</li>
+<li><strong>LiteratureNote（文献ノート）</strong> ：参考資料や文献からの情報をまとめたノートです。しかし現状では記事を溜め込む場所になっており、完全には機能していません。</li>
+<li><strong>FleetingNote（一時ノート）</strong> ：一時的な思考やアイデアを記録するノートです。大きな括りで何か少しまとめたいことを記録していますが、こちらも完全には機能していません。</li>
+<li><strong>Daily（デイリーノート）</strong> ：さらに細かいメモ（殴り書き）を記録します。</li>
+<li><strong>Memo（メモ）</strong> ：ふと思ったことを記録します。</li>
+<li><strong>IndexNote（索引ノート）</strong> ：目次や索引として機能するノートです。</li>
+</ul>
+<p><strong>PermanentNote</strong> はノート構成の最上位に位置し、 <strong>LiteratureNote</strong> や <strong>FleetingNote</strong> から内容を統合して作成します。</p>
+<p>また、 <strong>Daily</strong> と <strong>Memo</strong> は基本的に独立しており、適宜 <strong>LiteratureNote</strong> と結びつけるようにしています。</p>
+<h3 id="構成理由">構成理由<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#構成理由" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>私がメモを管理する際にタグを用いる理由は、メモを効率的に管理したいからです。プログラミングでは多種多様なアーキテクチャが存在し、適材適所で選定する必要があります。アーキテクチャを適用することで、多くのファイルの責務の理解が早まり、チームでの開発促進につながります。しかし、メモ管理においては、これらの複雑なアーキテクチャは不要だと考えています。その理由は以下の2点です。</p>
+<ul>
+<li>対象がチームではなく個人である</li>
+<li>それぞれのノート（メモ）は独立している</li>
+</ul>
+<p>これらの理由から、私は階層構造ではなく、タグを用いた管理方法を採用しました。ノートを探す最適な方法は検索であり、階層をたどるのは非効率だと考えています。</p>
+<p>私は2年前まではNotionのデータベースで階層構造による管理をしていました。しかし、無駄な階層を次々と増やした結果、見たいメモを見失ってしまう問題に直面しました。そこで、タグを用い、Zettelkastenのフレームワークに沿って、基本的にフラットな構造で管理することを決断しました。</p>
+<p>なお、Zettelkastenに馴染みがない方も多いと思われるので、以下では「メモ」＝LiteratureNote、FleetingNote、「ノート」＝PermanentNoteとして表記しています。</p>
+<h2 id="実践">実践<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#実践" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ここからが本題となります。</p>
+<h2 id="1-cursor-で-メモや記事-から-まとめノートを作成する">1. Cursor で メモや記事 から まとめノートを作成する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-cursor-で-メモや記事-から-まとめノートを作成する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ここでは、Cursorを使用してメモからまとめノートを作成する例を紹介します。具体的には、以下のパターンを想定しています。</p>
+<ul>
+<li>Web上でクリップした記事をまとめる</li>
+<li>Kindleのハイライトからまとめノートを作成する</li>
+<li>日頃メモしている内容をまとめる</li>
+</ul>
+<p>以下では、Web上でクリップした記事をまとめる例と、Kindleのハイライトをまとめる方法について紹介します。なお、メモをまとめる方法についても、大きなやり方の違いはありません。</p>
+<h3 id="web上でクリップした記事をまとめる">Web上でクリップした記事をまとめる<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#web上でクリップした記事をまとめる" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>1. Obsidian Web Clipper で まとめたい記事を保存する</strong><br/>
+<a href="https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf" class="external">Obsidian Web Clipper<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> というChrome 拡張を使用することで任意のWebページをObsidian上に保存することができます。<br/>
+これを用いて複数記事を用意します。</p>
+<p><img src="./99_🖼️-picture/323d7e7e55ae1a0e675519065249cc0a_MD5.png" width="auto" height="auto" alt/></p>
+<p>Obsidian Web Clipper で Web Clip する例</p>
+<p><strong>2. 用意された複数の記事をCursor Composer Agentで1つのファイルにまとめる</strong></p>
+<p>ファイルの指定方法には、直接指定する方法と、Agentに任せる方法があります。</p>
+<ul>
+<li><strong>直接指定</strong> ：ファイルが少ない場合に有効で、まとめたいファイルを確実に指定できます。</li>
+<li><strong>Agentに任せる</strong> ：ファイル数が多い場合に有効です。一方でコードベースで探索するためプロンプトの文言を調整しないと、ファイルの漏れなどが発生する可能性があるため注意が必要です。</li>
+</ul>
+<p>以下に、それぞれのパターンを挙げます。</p>
+<p>直接ファイルを指定した場合</p>
+<p><img src="./99_🖼️-picture/879287cddab895b5cf5a877d28f6eb88_MD5.png" width="auto" height="auto" alt/></p>
+<p>Cursor Agentに直接ファイルを指定してノートを作成した場合</p>
+<p>Agentに任せた場合<br/>
+成功例<br/>
+Reactという条件かつclippings タグがついたメモをすべて取得できている</p>
+<p><img src="./99_🖼️-picture/bc75777a3038eb225097fb8dac8842b6_MD5.png" width="auto" height="auto" alt/></p>
+<p>Cursor Agentに任せてノートを作成した場合(成功例)</p>
+<p>失敗例<br/>
+Reactという条件かつclippings タグがついたメモを1つしか取得できていない</p>
+<p><img src="./99_🖼️-picture/9e6ad82db6ff09c710e9e8ceab6b01be_MD5.png" width="auto" height="auto" alt/></p>
+<p>Cursor Agentに任せてノートを作成した場合(失敗例)</p>
+<p><strong>Agentに任せた場合</strong><br/>
+成功例<br/>
+「React」という条件かつ「clippings」タグがついたメモをすべて取得できている。</p>
+<p>失敗例：<br/>
+「React」という条件かつ「clippings」タグがついたメモを1つしか取得できていない。</p>
+<p>このように、Agentに任せる場合、出力が失敗することがあるので注意が必要です。</p>
+<p><strong>3. 出力されたファイルをアップデートする</strong></p>
+<p>ここまででやりたいことの80%は完了しましたが、もう少し内容に磨きをかけたいと思います。具体的なコードが欲しいので、内容を肉付けします。</p>
+<p><img src="./99_🖼️-picture/8c8126c5e8b542006dce18a86884158a_MD5.png" width="auto" height="auto" alt/></p>
+<p>生成されたノートに肉付け</p>
+<p><strong>4. ファイル同士を紐づける</strong></p>
+<p>これは任意の作業ですが、私はZettelkastenのフレームワークに基づいてノートを作成しているため、参考にしたメモを今回のノートと紐づける必要があります。以下のようなプロンプトを使用することで、今回のノートに参考にしたメモを紐づけることが可能になります。（変更内容が多くない場合は、自分で追加しても構いません）</p>
+<p><img src="./99_🖼️-picture/c9673219c0f823eabb5c43407f6401d9_MD5.png" width="auto" height="auto" alt/></p>
+<p>生成されたノートをメモと紐づけ</p>
+<p>このフローによって完成したノートがこちらです。</p>
+<p><img src="./99_🖼️-picture/1fdde8436eadc1cec7de310bff1a7cf0_MD5.png" width="auto" height="auto" alt/></p>
+<p>メモをまとめて完成したノート1</p>
+<p><img src="./99_🖼️-picture/ba97ea46a81576d91e63f7c4adf250dd_MD5.png" width="auto" height="auto" alt/></p>
+<p>メモをまとめて完成したノート2</p>
+<h3 id="kindleハイライトからまとめノートを作成する">Kindleハイライトからまとめノートを作成する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#kindleハイライトからまとめノートを作成する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>読書において、アウトプットが効果的であるというのが最近の通説です。読んだ内容を能動的にノートに書き出すことで、学んだことが整理されます。しかし、まとめノートをゼロから作成するのは腰が重く、何を書けばよいのか分からないことも多いでしょう。そこで、 <strong>Kindleハイライト</strong> と <strong>Cursor</strong> を組み合わせて活用します。</p>
+<ul>
+<li><strong>Obsidianプラグイン</strong> ：Kindle Highlights</li>
+<li><strong>Cursor</strong> ：Cursor Composer Agent</li>
+</ul>
+<p>こちらも先ほどの方法と大きくは変わらないため、異なる部分のみ紹介します。</p>
+<p><strong>1. Kindleでハイライトする</strong></p>
+<p>Kindleのアプリ内で、気になる箇所や重要なポイントをハイライトします。</p>
+<p><strong>2. Kindle Highlightsでハイライト内容をObsidianに取り込む</strong></p>
+<p>Kindle Highlightsプラグインを使用して、Kindleのハイライト内容をObsidianに取り込みます</p>
+<p><img src="./99_🖼️-picture/19f2577c0087faef0c64f6ff10e5f8f0_MD5.png" width="auto" height="auto" alt/></p>
+<p>Kindle Highlights の設定</p>
+<p>設定は簡単です。<br/>
+まず、出力したいメモの階層を設定し、Amazon のリージョン設定を行います。続いて、Amazon Kindle へのサインインなど初期設定を行うことで、Obsidian のサイドバーからワンクリックでハイライト内容を取り込むことが可能になります。<br/>
+取り込んだ結果は以下のようになります。</p>
+<p><img src="./99_🖼️-picture/e50f5da5c0ba0773c14750f722c7220f_MD5.png" width="auto" height="auto" alt/></p>
+<p>Kindle のハイライトを Obsidian に取り込んだ例</p>
+<p><strong>Cursor Compose Agent で生成する</strong></p>
+<p>Cursor Compose Agent を使って生成する方法は、先ほどの手順を参考にしてください。私は Kindle の内容をまとめる際、理解度チェック問題を作成する形でまとめています。ここではその例をお見せします。</p>
+<p><img src="./99_🖼️-picture/c9b64466164378adaab1fd121c3f8f05_MD5.png" width="auto" height="auto" alt/></p>
+<p>ハイライトを取り込んだメモから問題ノートを作成する例</p>
+<p><img src="./99_🖼️-picture/c6509e41294973ff9cb363004dd5ccb8_MD5.png" width="auto" height="auto" alt/></p>
+<p>問題ノートのプレビュー</p>
+<h2 id="2-cursor-でタグ付け">2. Cursor でタグ付け<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-cursor-でタグ付け" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ここでは、Cursor を用いて Obsidian ノート、メモにタグ付けする方法を紹介します。Obsidian では、各ノートにプロパティを設定することができます。プロパティを活用することで、ノート同士を紐づけたり、ファイルタイプを定義したりすることが可能です。特に、筆者はこのプロパティの中でもタグが非常に有用であると考えます。</p>
+<ul>
+<li>「tag:~~」 を用いた効率的な検索が可能になる</li>
+<li>フラットなノートの管理構造でも、タグを用いてカテゴリ分けができる</li>
+</ul>
+<p>これらの点から、タグは検索性と管理の面で優れていると感じています。</p>
+<p>一方で、タグ付けにはいくつかのデメリットも存在します。</p>
+<ul>
+<li>タグ付け自体が手間であり、大量のノート、メモに対して一貫性を保つのが難しい</li>
+<li>タグの種類が増えすぎると、管理が煩雑になり、目的のタグを見つけにくくなる</li>
+<li>統一されたタグ付けのルールや命名規則を設定しないと、同義のタグが乱立し、検索効率が低下する</li>
+</ul>
+<p>これらのデメリットを踏まえると、効率的なタグ付けを行うためには、事前にタグの設計や命名規則をしっかりと考えることが重要です。</p>
+<p>そこで筆者は以下のルールでタグ運用しています。(この運用方法は絶賛施行中であり、筆者のタグもリファクタリング完了していません。)</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">タグの設計と命名規則</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">1</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 一貫性のある命名</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">小文字統一：タグ名はすべて小文字で記述します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#meeting、#project-alpha</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">スペースの禁止：タグ名にスペースは使用せず、単語間の区切りにはハイフン（</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">）やアンダースコア（_）を使用します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#to-do、#research_notes</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">2</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. タグの種類の明確化</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">タグは内容タグを中心とし、状態タグや時間タグ、場所タグは使用禁止とします。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">◯</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">内容タグ：ノートの主題やトピックを表すタグ。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#python、#データ分析</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">×</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">状態タグ：ノートの進捗や状態を示すタグ。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#未整理、#要修正、#完了</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">時間タグ：日時や期間に関するタグ。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#2023、#Q1、#2023/10/01</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">場所タグ：場所やロケーションに関するタグ。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#東京、#オフィス</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 単数形と複数形の統一</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">基本は単数形：タグ名は基本的に単数形を使用します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#note（×#notes）、#task（×#tasks）</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">4</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 特殊文字の使用制限</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">禁止文字：タグ名にスペース、特殊記号、絵文字は使用しません。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">許可文字：ハイフン（</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">）、アンダースコア（_）、スラッシュ（</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">/</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">）のみ使用可能です。</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">5</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 新規タグ作成前の確認</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">既存タグの確認：新しいタグを作成する前に、同義または類似のタグがないか確認します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">目的：タグの重複や乱立を防ぎ、一貫性を保つため。</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">6</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 定期的なタグの見直し</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">タグクリーンアップ：定期的にタグの一覧を見直し、不要なタグや重複しているタグを整理します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">頻度：毎月30日</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">7</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. タグ命名のガイドライン</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">具体的かつ簡潔に：タグ名はノートの内容を的確に表す、具体的で簡潔なものにします。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#マーケティング戦略（○）、#戦略（×：曖昧）</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">略語の使用：一般的に認識されている略語のみ使用します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#AI（人工知能）、#UI（ユーザーインターフェース）</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 固有名詞の取り扱い</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">正式名称を使用：人物名や組織名、地名などの固有名詞は正式名称を使用します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">例：</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">#山田太郎、#株式会社テック</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">9</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. タグの複数付与</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">関連タグの併用：必要に応じて複数のタグをノートに付与します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ただし付与するタグの数は最大で5つまでとします。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">目的：多面的な検索を可能にし、ノートの発見性を高めるため。</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">10</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. タグ一覧の共有</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">ドキュメント化：使用しているタグの一覧とその説明をドキュメント化し、アクセス可能な場所に保管します。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">indexNote </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> タグ一覧 から閲覧可能です。</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">11</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">. 禁止タグ</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">デフォルトで存在するテンプレートの見出しである、</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> TODO</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> ROUTINE</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    -</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> daily</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">routineなど</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> JOURNAL</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">に関するタグに含んではいけない。</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">その他</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> STUDY</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">-</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> EXERCISE</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">は毎日行うものであるためタグから除外する。</span></span></code></pre></figure>
+<p>これらルールにより</p>
+<ul>
+<li>タグの種類が増えすぎると、管理が煩雑になり、目的のタグを見つけにくくなる</li>
+<li>統一されたタグ付けのルールや命名規則を設定しないと、同義のタグが乱立し、検索効率が低下する</li>
+</ul>
+<p>の問題への対応が可能になります。</p>
+<p>一方で先に上げたタグ付け自体が手間であり、大量のノートに対して一貫性を保つのが難しいという課題を解決するために、 <strong>Cursor Compose Agent</strong> が役立ちます。</p>
+<p>以下の例では、指定した期間のノートを Cursor Agent が探索し、各ノートの内容から適切なタグを割り当てる処理を行っています。このとき、タグ運用のルールを適用することで、一貫したタグを付与することができます。</p>
+<p><img src="./99_🖼️-picture/dc49655e2bde135b01b6246a613420f1_MD5.png" width="auto" height="auto" alt/></p>
+<p>タグルールに則ってタグ付けした例1</p>
+<p>〜省略〜</p>
+<p><img src="./99_🖼️-picture/00957c1f7ae63ac6f5ef9df28e9330ec_MD5.png" width="auto" height="auto" alt/></p>
+<p>タグルールに則ってタグ付けした例2</p>
+<p>この流れでタグ付けルールに従って、Cursor Agent が自動でタグを付与してくれます。<br/>
+これにより</p>
+<blockquote>
+<p>タグ付け自体が手間であり、大量のノートに対して一貫性を保つのが難しい</p>
+</blockquote>
+<p>といった問題への対処が可能になり、タグのメリットを最大限活かした運用が可能になります。</p>
+<h2 id="3-cursor-で-anki-デッキを作成する">3. Cursor で Anki デッキを作成する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-cursor-で-anki-デッキを作成する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ここでは Cursor を用いて Anki のデッキを作成する例を紹介します。<br/>
+例</p>
+<ul>
+<li>Duolingo で苦手な単語を Anki で学習する</li>
+<li>テスト内容を Anki で学習する<br/>
+このようなパターンを想定しています。</li>
+</ul>
+<p>筆者は Duolingo ユーザーなため「 Duolingo で苦手な単語を Anki で学習する 」について紹介します。</p>
+<p><strong>1 Duolingo から単語を取得</strong></p>
+<p><img src="./99_🖼️-picture/9979cea17df1a868e2d691e041409592_MD5.png" width="auto" height="auto" alt/></p>
+<p>Duolingo から単語をコピー</p>
+<p><strong>2 Cursor Chat でコピーした単語を Anki フォーマットに乗せる</strong><br/>
+筆者が使用している Anki フォーマットは以下です。こちらのフォーマットを基に Cursor でデッキを作成してもらいます。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="ruby" data-theme="github-light github-dark"><code data-language="ruby" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">START</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">基本 (裏表反転カード付き)</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">表面:</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{{韓国語}}</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">裏面</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">{{日本語}}</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">Tags:</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 韓国語</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">END</span></span></code></pre></figure>
+<p><img src="./99_🖼️-picture/5065192a008ec1d5086e40612ffd2c73_MD5.png" width="auto" height="auto" alt/></p>
+<p>Cursor Chat で単語をテンプレートに適用させる</p>
+<p><img src="./99_🖼️-picture/130fbf403f70406b6f6ae6e4e670649a_MD5.png" width="auto" height="auto" alt/></p>
+<p>単語にテンプレートを適用させた例</p>
+<p><strong>3 Obsidian_to_Anki で Anki と同期させ一意の ID と紐づける</strong><br/>
+Obisidian_to_Anki をサイドバーから実行することで ID が割り当てられます。</p>
+<p><img src="./99_🖼️-picture/b395a88f8972f6ff3c426a0c3d49ab23_MD5.png" width="auto" height="auto" alt/></p>
+<p>Obsidian_to_AnkiでそれぞれにIDが振った例</p>
+<p><img src="./99_🖼️-picture/cf3fd003185504d876fca2c2c2022934_MD5.png" width="auto" height="auto" alt/></p>
+<p>Ankiアプリ内で取り込まれていることを確認</p>
+<p>Obsidian で Anki のデッキを作ることで AI の恩恵を最大限受けることができます。いままで手作業で行っていた単語カード作成を自動で行うことができるのでおすすめです。</p>
+<h2 id="まとめ">まとめ<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#まとめ" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>今回は Cursor と Obsidian を用いてできる Tips を3つ紹介しました。<br/>
+筆者はCursor と Obsidian を組み合わせることで今回紹介した以外にも便利なことがたくさんできると考えています。<br/>
+一方で Cursor の現状として思うような出力にならないということが挙げられると思います。<br/>
+筆者は Obsidian in Cursor で重要なことはより Cursor が理解しやすいように<br/>
+作成したノートに必ず適切なタグをつけることだと考えています。<br/>
+統計を出したわけではあませんが体感、適切なタグをつけた方が Agent の<br/>
+出力結果の正確性が高い気がします。<br/>
+適切なタグを付与して便利なメモ管理生活を楽しみましょう。</p>
+<p><a href="https://note.com/topic/campaign" class="external"><img src="./99_🖼️-picture/b73a8430743934ed05aa4f6c6377ea44_MD5.webp" width="auto" height="auto" alt/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>メモ管理は Obsidian in Cursor が最強｜松濤Vimmer</p>
+<hr/>
+<h2 id="ai要約">AI要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>松濤VimmerによるObsidian×Cursorを組み合わせたメモ管理手法の解説記事。XでのバズをきっかけにObsidian in Cursorの具体的な運用方法を3つのTipsとして紹介。(1) Web Clipperで取り込んだ記事をCursor Agentでまとめノートに自動変換、(2) ノートに適切なタグを付与してAgentの検索精度を向上、(3) Kindle→Ankiへの学習カード連携。ObsidianのMarkdownファイルが独立して存在する特性を活かし、Cursor Agentに読み込ませることでMCPのような運用を実現する発想が核心。適切なタグ付けがAgent出力の正確性向上に重要だと強調している。</p>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./単なるメモから知的資産へ：Obsidian-in-Cursorで構築する知的生産システム｜松濤Vimmer" class="internal alias" data-slug="単なるメモから知的資産へ：Obsidian-in-Cursorで構築する知的生産システム｜松濤Vimmer">単なるメモから知的資産へ：Obsidian in Cursorで構築する知的生産システム｜松濤Vimmer</a>（LiteratureNote） — 本記事のアップデート・続編版</li>
+<li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal alias" data-slug="元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a>（LiteratureNote） — AI外部脳構築の別アプローチ（Claude Code版）</li>
+<li><a href="./Obsidian_プラグイン" class="internal alias" data-slug="Obsidian_プラグイン">Obsidian_プラグイン</a>（Zettelkasten直下） — Obsidianプラグイン全般</li>
+<li><a href="./Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開" class="internal alias" data-slug="Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開">Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開</a>（LiteratureNote） — コンテキストファイル設計の別手法</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-824" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#メモ管理は-obsidian-in-cursor-が最強" data-for="メモ管理は-obsidian-in-cursor-が最強">メモ管理は Obsidian in Cursor が最強</a></li><li class="depth-0"><a href="#私のobsidianについて" data-for="私のobsidianについて">私のObsidianについて</a></li><li class="depth-0"><a href="#obsidian-の運用" data-for="obsidian-の運用">Obsidian の運用</a></li><li class="depth-1"><a href="#ノートの管理について" data-for="ノートの管理について">ノートの管理について</a></li><li class="depth-1"><a href="#kindle-について" data-for="kindle-について">Kindle について</a></li><li class="depth-1"><a href="#ankiについて" data-for="ankiについて">Ankiについて</a></li><li class="depth-1"><a href="#cursor-について" data-for="cursor-について">Cursor について</a></li><li class="depth-0"><a href="#obsidianのノート構成" data-for="obsidianのノート構成">Obsidianのノート構成</a></li><li class="depth-1"><a href="#構成図" data-for="構成図">構成図</a></li><li class="depth-1"><a href="#構成理由" data-for="構成理由">構成理由</a></li><li class="depth-0"><a href="#実践" data-for="実践">実践</a></li><li class="depth-0"><a href="#1-cursor-で-メモや記事-から-まとめノートを作成する" data-for="1-cursor-で-メモや記事-から-まとめノートを作成する">1. Cursor で メモや記事 から まとめノートを作成する</a></li><li class="depth-1"><a href="#web上でクリップした記事をまとめる" data-for="web上でクリップした記事をまとめる">Web上でクリップした記事をまとめる</a></li><li class="depth-1"><a href="#kindleハイライトからまとめノートを作成する" data-for="kindleハイライトからまとめノートを作成する">Kindleハイライトからまとめノートを作成する</a></li><li class="depth-0"><a href="#2-cursor-でタグ付け" data-for="2-cursor-でタグ付け">2. Cursor でタグ付け</a></li><li class="depth-0"><a href="#3-cursor-で-anki-デッキを作成する" data-for="3-cursor-で-anki-デッキを作成する">3. Cursor で Anki デッキを作成する</a></li><li class="depth-0"><a href="#まとめ" data-for="まとめ">まとめ</a></li><li class="depth-0"><a href="#ai要約" data-for="ai要約">AI要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./Obsidian-×-Cursorで構築する「第二の脳」の作り方！ChatGPTの答えが凡庸だと感じるあなたへ" class="internal">Obsidian × Cursorで構築する「第二の脳」の作り方！ChatGPTの答えが凡庸だと感じるあなたへ</a></li><li><a href="./Obsidian-×ChatGPT_タスクの洗い出しを自動化するプロンプト" class="internal">Obsidian ×ChatGPT_タスクの洗い出しを自動化するプロンプト</a></li><li><a href="./Obsidian-と-Google-カレンダーを連携してシームレスなタスク管理を実現する｜松濤Vimmer" class="internal">Obsidian と Google カレンダーを連携してシームレスなタスク管理を実現する｜松濤Vimmer</a></li><li><a href="./単なるメモから知的資産へ：Obsidian-in-Cursorで構築する知的生産システム｜松濤Vimmer" class="internal">単なるメモから知的資産へ：Obsidian in Cursorで構築する知的生産システム｜松濤Vimmer</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

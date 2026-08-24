@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します"/><meta name="twitter:description" content="📺 動画情報 RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-08-02 ・ ⏱️ 38分40秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIには「知識カットオフ」「社内情報を知らない」「ハルシネーション」という3つの限界がある。RAG（Retrieval Augmented Generation＝検索拡張生成）は、質問に関連する資料を検索してからAIに渡すことでこの限界を補う仕組みだと解説する動画。 🗺️ 全体像 flowchart TD A[質問を受け取..."/><meta property="og:description" content="📺 動画情報 RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-08-02 ・ ⏱️ 38分40秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIには「知識カットオフ」「社内情報を知らない」「ハルシネーション」という3つの限界がある。RAG（Retrieval Augmented Generation＝検索拡張生成）は、質問に関連する資料を検索してからAIに渡すことでこの限界を補う仕組みだと解説する動画。 🗺️ 全体像 flowchart TD A[質問を受け取..."/><meta property="og:image:alt" content="📺 動画情報 RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-08-02 ・ ⏱️ 38分40秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIには「知識カットオフ」「社内情報を知らない」「ハルシネーション」という3つの限界がある。RAG（Retrieval Augmented Generation＝検索拡張生成）は、質問に関連する資料を検索してからAIに渡すことでこの限界を補う仕組みだと解説する動画。 🗺️ 全体像 flowchart TD A[質問を受け取..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-08-02 ・ ⏱️ 38分40秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIには「知識カットオフ」「社内情報を知らない」「ハルシネーション」という3つの限界がある。RAG（Retrieval Augmented Generation＝検索拡張生成）は、質問に関連する資料を検索してからAIに渡すことでこの限界を補う仕組みだと解説する動画。 🗺️ 全体像 flowchart TD A[質問を受け取..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-769"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-769" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します</a></div></nav><h1 class="article-title">RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-08T15:00:00.000Z">2026年8月09日</time><span>88 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/agent" class="internal tag-link">agent</a></li><li><a href="./tags/rag" class="internal tag-link">rag</a></li><li><a href="./tags/llm" class="internal tag-link">llm</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li><li><a href="./tags/vector-search" class="internal tag-link">vector-search</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>RAGの仕組み完全解説！AI時代に欠かせないRAGをAIのプロが解説します</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-08-02 ・ ⏱️ 38分40秒
+🔗 <a href="https://www.youtube.com/watch?v=T1X02ZSWCNs" class="external">https://www.youtube.com/watch?v=T1X02ZSWCNs<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AIには「知識カットオフ」「社内情報を知らない」「ハルシネーション」という3つの限界がある。RAG（Retrieval Augmented Generation＝検索拡張生成）は、質問に関連する資料を検索してからAIに渡すことでこの限界を補う仕組みだと解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[質問を受け取る] --> B[質問をベクトル化]\n    B --> C[登録済みチャンクのベクトルと比較]\n    C --> D[意味が近いチャンクを取得]\n    D --> E[元の文章+質問をAIに渡す]\n    E --> F[資料を踏まえて回答を生成]&quot;">flowchart TD
+    A[質問を受け取る] --> B[質問をベクトル化]
+    B --> C[登録済みチャンクのベクトルと比較]
+    C --> D[意味が近いチャンクを取得]
+    D --> E[元の文章+質問をAIに渡す]
+    E --> F[資料を踏まえて回答を生成]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. AIの3つの限界とRAGの役割 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>通常のAIモデルには「学習時点より新しい情報を知らない（ナレッジカットオフ）」「会社・組織の内部情報を知らない」「知らないことでもそれらしく答えてしまう（ハルシネーション）」という3つの限界がある。RAGはAIを賢くする技術ではなく、回答する前に根拠となる資料を渡す仕組み。試験でいうと「暗記で答える試験」ではなく「資料持ち込みの試験」に近い。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. ベクトル化と埋め込みモデル — 意味の近さを数値で判定 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>コンピューターは言葉のまま意味を理解できないため、文章を埋め込みモデル（エンベディング）で数値の並び「ベクトル」に変換する。意味が近い文章は座標上で近い位置になる。実際は100〜1000次元以上の高次元空間で計算されるが、考え方は2次元・3次元の座標と同じ。「休みを取りたい」と「有給休暇の申請方法」のようにキーワードが一致しなくても、意味が近ければ検索でヒットする（セマンティック検索）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. チャンク分割とメタデータ — 検索しやすい単位に切る </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>社内文書をそのままベクトル化すると単位が大きすぎるため、「チャンク」という付箋サイズに分割してからベクトル化する。各チャンクは「元の文章」「ベクトル（埋め込み）」「出典・ページ番号などのメタデータ」の3点セットで保存する。AIが最終的に読むのは元の文章であり、ベクトルは検索のためだけに使う。メタデータは回答の根拠表示や、部署・カテゴリでの検索の絞り込みにも使える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. キーワード検索×意味検索のハイブリッド、リランク </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>意味検索は言い換えに強いが、型番や製品名のような完全一致が重要な検索には弱い（QA398とQA397が数値的に近くなり誤って一致してしまう等）。そのためキーワード検索と意味検索を組み合わせる「ハイブリッド検索」が推奨される。さらに検索結果を使えそうな順に並べ替える「リランク」という技術もある。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. RAG ≠ ファインチューニング、RAGは万能ではない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ファインチューニングはモデル自体を特定分野に特化させて賢くする手法で、RAGはモデルを変えずに検索の仕組みを付与するもの。両者は別物。RAGを使っても誤りはゼロにならない（違う資料を選んでしまう・資料を読み違える等）。また、AIが自分でコマンドを打って調べていく「エージェンティックサーチ」もRAGとは異なる技術（ベクトルデータベースに保管された情報から取ってくるのがRAG）。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 社内向けAI推進の説明に「持ち込み試験」の例えを使う</strong>
+「RAGって何？」と聞かれたら、「暗記で答える試験」vs「資料持ち込みの試験」の例えがそのまま使える。品質表示タグ生成ツールやAI情報ハブの社内説明にも流用できる。</p>
+<p><strong>② 社内資料をAIに読ませたい相談が来たら、RAG構築の要否をまず見極める</strong>
+「社内資料を踏まえて回答してほしい」という要望が出たら、まずRAG構築が必要か（Notion検索・ファイル検索で十分か）を見極める。<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>やCodexにRAG構築を依頼する場合も、資料（チャンク化しやすいドキュメント）が整っていることが前提条件になる点を先に確認する。</p>
+<p><strong>③ <a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>構築の話が出たら「検索の仕組み」を先に確認する</strong>
+AIエージェントに社内知識を持たせたい相談では、まず「検索の仕組み（RAGかエージェンティックサーチか）」を確認する。<a href="./notebooklm" class="internal alias" data-slug="notebooklm">NotebookLM</a>的な「アップロード資料だけを根拠に回答する」体験がRAGの分かりやすい実例になる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> ラグっていうのはAIを賢く作り直すのではなくてこういったものを知っておくと社内資料を踏まえた上で回答してくれるようなAIに育っていく皆さんこんにちはAIプログラミング講師の今野です今野さんラグっての見たんですけどあれは何ですか?ラグ知らないの?全くラグ知らないでよくここまで来たねなんか必要なんですか?もちろん必要だよそれこそ企業内でAIを導入するとかってなった時にやっぱラグを導入したいみたいなのは結構多いかな</p>
+<p><code>00:36</code> 何かも分かってないんですけど勉強してもいいですか?そうねラグを知っておくとそれこそAIエージェントを構築していく時とかに便利だったりとか社内でそのAIを取り入れていくってなった時にはそのラグっていう技術が使えるとJ君のできることの幅が広がるっていうのは間違いないかなはい教えてくださいって言ったら無理って言われそうだから知らない視聴者の方に教えてもらおう視聴者の人にね多分ね見てる人知ってる人多いと思うんですよラグって言葉自体はただどういう仕組みなのかなとかそれこそ検索を拡張するためのものでしょうとかデータベースから情報を拾ってくるためのものでしょう</p>
+<p><code>01:11</code> みたいな認識の人も結構多いかなと思うので今回は資料を使ってラグってこんなもんだよみたいなのをなんとなくのイメージが湧くようにですねわかりやすくラグってこういう仕組みで成り立ってるんだよみたいなのを初心者向けにですねわかりやすく解説していこうかなと思いますはいということでやっていきましょうはいということでJ君今回もこのスライドを使ってやっていこうかなと思いますはいめちゃめちゃスライドオシャレですねこれあーこれ気づいちゃったこれね弊社のミッチガイルという会社のコーポレートロゴのカラーが結構グラデーションになっててそのグラデーションのベースとなっているカラーを元にこんな感じで作ってると</p>
+<p><code>01:49</code> なんでこれを使ってるかっていうとそれこそポップな色合いとかだと初学者の人からすると入りやすいというか硬い単色だけのものだとスッと入ってきにくいかなと思って本来であればスライドってたくさん色を使わない方がいいとは思うんだけれどもあえて今回ですねコーポレートカラーで資料を作ってみましたというか今後もこのカラーでやっていこうかなと思ってますこれいいですね僕まで結構クロードコードカラーがいいんですクロードのアンスロピックカラーがメインだったんだけどもやっぱりねうちは自分の会社は道があるなので見違えるカラーでやっていこうかなと思います</p>
+<p><code>02:23</code> ということでラグということでざっくりここに下に書いてあるんだけどもAIに社内資料を読み込ませて答えさせる仕組みの地図ということで書いてありますがいわゆる社内のチャットボット社内資料を理解したチャットボットみたいな話ってだいぶ前からあるんだけどなんか聞いたことない?いや社内向けのやつは知らないですねコーポレートサイトとかでAIに質問するみたいなパターンも知ってるんですけどノートブックALMは?それは今西さん習ったんでわかりますあんな感じなんだけれども社内資料とかアップロードしたものを元に</p>
+<p><code>02:56</code> AIが回答してくれるみたいなそれこそ別に最近出てきた技術ではなくてAIチャットボットって出てき始めてからずっとラグっていうのは技術としてあったものなので今更変わるんだけどでもAIエージェントを理解していくとかAIエージェントを構築していくってなった時にラグという技術を知ってるか知ってないかだとやっぱりだいぶ拡張性に差が出てきてしまうので今回は多分ラグっていう言葉を聞いたことある人は多いと思うんだけどもラグの仕組みというか細かな部分は知らない人も多いかなと思うので説明していこうかなと思っています今回はなぜ必要なのかとかどういう仕組みになっているのかどうやって探していくのかみたいな3ステップで理解を深めていこうかなと思いますはい3つの限界まず最初になんだけれどもAIには3つの限界があります1つ目学習した時点より新しい情報を知らない</p>
+<p><code>03:45</code> あーはいはいこれ何ていうか分かる?えー知恵遅れ知恵遅れおーなるほどね日本語で聞いましたかナレッジカットオフって言うんだよねナレッジカットオフ何月何日まで学習しましたってことはそれ以降の新しい情報は知りませんっていうよくある話だよねあーだから地味に3に聞いてんのに最新のジェミニー何?って言ったら2.5キロそうそうそうそうそういうこととか2つ目会社や組織の内部情報を知らないとこれはよくある話だよねジェミニーとかちゃんとGPTに聞いてもさ自分の会社の情報とかさ内部情報なんて知らないじゃん知ってちゃ困ります知ってちゃ困るよね本当にその通りだよね</p>
+<p><code>04:18</code> で3つ目知らないことでもそれらしく答えてしまうはいこれ何て言うでしょうかハルシネーションハルシネーションですそうですっていう3つの限界と書きましたがAIこの通常のモデルGPT5.6とかオーバース4.8とかそういうモデル自体は基本的にこの3つの限界特徴があるわけですはいはいはいで次正直AIって明らかに世界一の物知りじゃんだけど皆さんの会社のことJ君の会社のこと僕の会社のことは何も知らないわけです学習した知識要はAIが膨大にデータを学習しているけれども皆さんの会社の資料まだ読み込んでいないわけだよね</p>
+<p><code>04:54</code> ただ知らないのにそれらしく答えると例えばAIに会社の一級制度って何日まで多分1年くらいだと思います多分とか言わないそもそも1年くらいだと思いますみたいなよくあるじゃんしかも自信満々に言われますそう自信満々に言うよねやっぱりこれは根拠になる資料とかがなければAIは自信満々に間違えるわけだよこれがハルシネーションだよねでラグはそれに対して完璧を渡してから答えさせる仕組みなんだよねAIを賢くする技術とかっていうよりもAIが回答する前にこれ社内資料だよって必要な資料を渡した上で</p>
+<p><code>05:27</code> それ見て回答したら正確な回答を得られそうじゃない完璧ですもんねそう完璧だからねっていうのが簡単に言うとラグですとでその完璧誰がどうやって選ぶのかって話なんですけれどもこれもイメージとしては暗記で答える試験とかではなくて資料を持ち込んだ上で資料を見ながら答えられる試験みたいな感じなんかそう考えるとイメージわからない資料なしでぶつけ本番でやるとJ君の脳みそだけ使うじゃんそうですねでも資料を持ち込めたらJ君の脳みそプラス資料を見てここだって自分の分からないところを補いながら回答できる</p>
+<p><code>06:01</code> これがラグって感じAIと相性めっちゃ良さそうですAIはめちゃくちゃ賢い頭脳を持ってるよねでも必要な情報を渡してあげれば必要な資料があればより拡張して回答できるよねっていう試験のやり方が変わるっていうのはすごい分かりやすいものかなと思いますAIがどうやってユーザーから質問を受けてJ君から質問を受けて実際その資料を元に回答してるかっていうと大きく4段階ありますというところも押さえておきましょう例えばJ君が有給休暇の申請方法は?と聞いたとします質問を受け取ってラグを使ったりしなければ</p>
+<p><code>06:34</code> 要は社内のデータにアクセスできない状況だったらそのままポンとそれらしい答えを返すともっともらしい回答をしてしまうハルシネーションを起こすわけだよねでもラグがあると質問を受け取りました今回知りたいのは有給休暇の申請方法だねじゃあ既に蓄えている関連資料を探しましょうこれ見つかりました広報がこの資料を添えて実際にプロンプトとして投げるみたいなはいそうするとその資料プラス質問がプロンプトとして入ってきてじゃあそれを踏まえてどうすればいいんだっけってなるわけだよね要はAIに投げるプロンプトの前に一回検索が挟まる感じAIが実際に入ってきた質問に対してこれに対して検索かけますその検索と質問の内容を一緒にもらってそれならこうじゃないって回答して くれるっていうイメージなんだねはいどうなんともイメージは9よもしノートブックれるそうノートブックエレーム ノートブックエレームの裏側としてって感じだね要はこれちゃんと流れとしてはそのまま回数じゃなくて一回検索挟んで検索した資料プラス質問 ユーザーからの入力に対して生成するっていう流れを組んでるこれちょっと抑えてほしい</p>
+<p><code>07:38</code> 質問と資料をセットで渡すっていう感じになるので質問をJ君が有給休暇の申請方法は?と言ったらそれに対して回答するんじゃなくてまず一旦検索挟んでラグを使って資料を取ってきて資料プラス質問セットでコンテキストとして渡してあげるこれが大きいんだよねここまで人間がやるってことですか?違う勝手にそこはやってくれる質問投げたらそれに必要な情報をAI側正確に言うとラグの仕組みが検索してくれて必要な資料を取ってきて質問プラス資料をAIに渡してあげてるみたいな感じめちゃくちゃ助かるよね</p>
+<p><code>08:12</code> 質問だけだったらハルシネーション起こす資料も一回検索してそれと一緒にコンテキストに入ってきたらプロンプトとして入ってきたら回答しやすくないっていう話だよねっていうのがありますそもそもなんだけどもということでラグっていうのはリトリバルオーギュメンティットジェネレーションの略です検索で補完的な意味でジェネレーション生成なので検索を拡張した生成ということでねっていうので、Retrieval Augmented Generation、ラグというものになります。検索で情報を補い、それで回答を生成するという意味なんですね。そのまんまです。</p>
+<p><code>08:44</code> 質問します。資料を探す。そして資料を添えて答える。これが基本的なラグの仕組み、裏側ですと。じゃあ、資料はどうやって選ばれるのかと。資料を見つけるって言ったけど、資料どうやって選ばれるのかということで見ていけるかと思いますが、普通に検索した時に、よくある話なんだけど、例えば、休みを取りたいと検索したとしよう。そしたら実は有給休暇の申請方法.pdfっていう答えがあるのに文字一致しないじゃんこれ休みを取りたいっていうキーワードでは一致しないよねこれじゃダメなんですかいやこれ普通のキーワード検索の話これ別にラグとかじゃなくてキーワード検索の話</p>
+<p><code>09:20</code> でも休みを取りたいって検索したらこの下にある有給休暇の申請方法pdfが出てきてほしくない出てきてほしいですねでもキーワード一致しないじゃん休むの一文字くらいそう休むのところだけだから文字が一致せずに普通にキーワード検索一般的な検索みたいなのだと見逃しちゃうんだよねでそれがこの左側の同じ言葉を探すっていう一般的なキーワード検索よくブラウザ上でコマンドFとかコントロールFで検索するキーワード検索あるじゃんあーはいはいはいあれが一致したらピンポイントでこれだってわかるじゃん</p>
+<p><code>09:53</code> 文字が一致しないと見つからない場合これがキーワード検索もう一つがセマンティックサーチセマンティック検索ということでこれは近い意味を探すもの言葉が違うキーワードが違っても意味が近ければ見つかるみたいなものねさっきのとかセマンティック見つかってほしいけどそうそうそういうこと意味検索簡単に言って意味検索か言葉の検索かキーワード検索か意味検索できたらさっきのこの一つ前のスライドのこれって解決できそうだよねそうですねでただコンピューターね言葉のままだと比べられないんだよ要は猫とか犬って言葉を認識してるわけじゃないから</p>
+<p><code>10:27</code> このコンピューター基本数値しかつかないんだよねなので数値に変換してあげなければいけないというところがあります要はキーワード同じだったらいいんだけれどもそうじゃないからコンピューターが扱いやすいような形にしないと意味を読み取れないよみたいな感じですこれちょっと今から説明していきますここで重要なのがベクトル表現ですベクトルJ君分かる?ベクトル分からないです数学やらなかった高校かそこキャンセルしましたキャンセルしました飛ばしました飛ばしましたかなるほどなかなかの問題児だったようでベクトルという数値の羅列を入れたものですねこのベクトルというものをですね</p>
+<p><code>11:04</code> 扱っていきますとどういうことかというと文章が例えば休みを取りたいというのがあったら文章に対して埋め込みモデルというAIみたいなものがあるんだよねこの文章を数値に変換して数値に変換すると例えばなんだけれどもベクトルって書いてある0.850.75-0.2みたいなずらーっと数値が並んだような数値に変換できるんだよ意味をですか意味をというよりも正確に言うと文章を数値化するその数値の並びのことをベクトルって呼ぶんだよねはいはいはい難しそう</p>
+<p><code>11:35</code> そう難しそうじゃんそうするとベクトルに表現できるということはどっかの座標に点を置くことができるとこれはちょっとね後々やっていくからいいんだけども要は文章をそのまま扱えないんだよコンピューターって人間だったらさこれさ見てさわかるよねこの同じ言葉でなければ探せないっていうのは休みを取りたいでこのPDF探せそうじゃない探せそうですねこれは人間は意味を理解してるからだよねでもコンピューターはあくまで数値でしか使えないのでこれをそのまま理解することは難しいわけよなので数値に変換しましょうという考えが出てきますこの数値のことをベクトルとよく言うんだよねでこれ数値にした時に</p>
+<p><code>12:10</code> 重要なのはこの埋め込みモデルってところがちゃんと意味を成すと言うとあれだけども意味が近いもの同士同じような数値になるようなモデルだったらいいんだよねまあちょっと難しいなこの辺は一旦飛ばしましょうかでこれちょっと次のスライドに見せるんだけども似た意味は近所に住むと似た意味になったら結構近所近くになるよとどういうことかというと例えばなんだけども有給休暇の申請方法休みを取りたい時の手続き経費申請のやり方これって上二つが意味として近いよね近いですね</p>
+<p><code>12:42</code> これを仮に2次元要は縦と横XとY軸でプロットした時に例えばこんな感じになったとしましょうと要は経費生産のやり方が一番左の紫の点右にある2つのブルーの点このうちの左側が休みを取りたい時の手続きって言葉を数値化したものでその右側の一番右にあるものが有給休暇の申請方法っていう言葉だとした時に数値化した時に近いよねと近いって言葉意味が似てるんじゃないって判断するわけよ要は休みを取りたい時の手続きって検索した時にどれが近いかってなった時に</p>
+<p><code>13:17</code> この図で言うと有給休暇の申請方法っていう数値が一番近いよねめっちゃ近いですよこれまあそういう風にしてるんだけどもでもイメージとしてそういうことなので要は言葉だと僕たちは意味理解できるけどコンピューターは理解できないなのでベクトルという数値の形にしましょう数値に変換するためにさっきの埋め込みモデルっていうのを使うといわゆる何か言葉が入ってきたらそれを数値に変換してくれるための変換器が埋め込みモデルだったね簡単に言うと文章を数値化してくれるものみたいな感じです数値化した時にこの上二つは近いよねみたいななんかこういう風に数値化されたらさ</p>
+<p><code>13:50</code> 数値的に近いから意味似てるんだなみたいなニュアンスで捉えられそうじゃないわかりますねだからこれ数値化していくとコンピューターが扱いやすいよねって話だから休みを取りたい時の手続きというこの数値に近いものを取ってくれば意味として似たような情報だよねって判断してくれるまあそんな感じねそれがラグってことですかラグというかベクトルのそのラグの中の仕組みの重要な部分って感じかな近いほど似てると座標の距離がそのまま意味の近さになりますよっていうことで先ほどは2次元で表現しましたXとY軸で表現したんだけれども実際問題これ書いてあるように</p>
+<p><code>14:23</code> 実際は2次元で表現したのはXとY軸で表現すると分かりやすいからなんだよね数百か数千実際問題は100から1000とかもっとでかい次元なんだよだからこの数値の中に例えば先ほどの0.8、0.9みたいな2つの数字しか入ってなかったのがベクトルとしてもっと3つ、4つ、5つって数字のずらりずらりずらりずらーっとなってる形に変換されるのねでも1000個の軸なんてさもう人間が目に見えるものじゃないじゃん人間は基本的に2次元か3次元この3次元ってXYZ軸なのでこの空間のことを3次元って言うよね2次元ってこの絵の中のことを言うじゃん</p>
+<p><code>14:58</code> 考えたら恐ろしいなでもそれって考え方同じじゃない?2次元だろうが3次元だろうが結局3次元にした時も座標が近ければ意味が近いよねって考えられればいいよねなので100次元とか1000次元とかって人間からしたら数値の羅列でしかないから可視化はできないわけよ僕たち未練の3次元までだからでも1000次元ぐらいの数千次元みたいなものにしてあげるとその数千次元の中で近いものっていうのを判別していくことができる2次元だけだと表現力が弱いの分かる?分かりますな文章を2個の軸で表現するのか1000個で表現するのかって細かなチューニングができそうじゃないそうですね</p>
+<p><code>15:33</code> っていうので文章をベクトル化していくことによって今まではコンピューターが使えなかった文章の意味というものを数値に強引に落とし込んでるっていう感じなんだよね距離が近ければ意味も近いと計算の仕方とかも一旦もうどうでもいいですとりあえず文章を数値に変換するこのモデルがあるとなのでこの埋め込みモデルというものを使うと文章を変換してくれるって感じだよね変換したこのベクトルこれが数字になってて近ければ意味も近いよね弊社では社員研修やセミナー登壇のほかAIネイティブな組織作りのための内製化支援など</p>
+<p><code>16:09</code> AI×教育領域で様々な支援を行っていますご興味のある方は概要欄に記載のフォームよりご連絡くださいここはもうちょっと細かなところで言うと資料を付箋サイズに切るということで社内文章とか例えばあるじゃん社内文章をベクトルに表現するとなった時にバッと投げるっていうよりもこれをもうちょっと細かなサイズで区切るんだよね付箋サイズ?あくまで付箋っていう風にしてるんだけどチャンクという単位でまとまりを単位分割していくみたいなでそれを各付箋を座標に書いてあげるみたいな</p>
+<p><code>16:43</code> 要はこれ社内文章だとちょっとデカすぎるんだよ1個のドキュメントごとだとそうデカすぎバーっとあるものをベクトル化するとあれなので細かく分割してそれを数字で表現するベクトル表現してあげるみたいななので1枚の資料を扱いやすい単位に分けてあげるってのがその扱いやすい単位ってのがチャンクと呼ばれるものですでちょっとさっきの話だけれども座標ごと本棚に並べたんだけども要はドキュメントごとにバッと数値が出てますとなった時に休みを取りたいってのが入ってきたらそれに近いベクトルを引っ張ってくるみたいな感じだよね質問を書いてもその質問が1回ベクトル化されて数値化されます数値に近いものを選んでくるみたいな感じかな</p>
+<p><code>17:20</code> 本棚に並べる?まあ要はドキュメントがバーっとあるとするじゃん全て数値化したものが今この5つの棒だとしてくださいここのねあった時に5つの棒に対して休みは取りたいっていう数値入ってきましたベクトルでどれが近いかって言ったらこれ真ん中だよねと真ん中の数字が一番近いじゃんとこれ.9.0.9とか0.8って意味ねなので既にあるドキュメントの中で例えば経費のもの人事ロームとかいろんなものがある中でこの真ん中のベクトルが一番近いよねなのでこの情報を取り出そうみたいな感じになるわけちょっともうちょっと説明すると</p>
+<p><code>17:53</code> 社内ドキュメントがたくさんありますそれぞれのドキュメントが数値化されてます数値化されてるってことは比較ができるよね休みを取りたいっていうのを数値化しましたそうなった時にこの休みが取りたいっていうのを数値化した情報とすでに数値化してあるドキュメントどれが近いんだろう意味的にこれを比べるのにベクトルを使ってあげるとあベクトル的にこれ近いよねっていう風に判断できる近いものを同じ本棚にしまうみたいな感じです本棚から取ってあげるって感じかな要は休みを取りたいとなった時に真ん中の一番近いものが有給休暇申請方法ドキュメントだとした時にそれを取ってきてあげるみたいな感じになるってところかな</p>
+<p><code>18:27</code> というところで要は数値にして並べて比較するもんだよぐらいに思っておいていただけたらOKですはいで付箋1枚には3点セットが入っているということでこれドキュメントを例えばベクトルにするってなった時にこの文章があるじゃん例えば有給休暇入社6ヶ月経過後に投下を付与するみたいなあった時にこの文章をベクトル化してベクトル化したものだけあってもベクトル化したものを文章に戻すってのは難しいんだよなので元の文章チャンクという一区切りにしたもの意味のある単位でまとめたものとあとはそれを座標にしたもの</p>
+<p><code>19:00</code> つまりベクトルにしたものこれエンベリングって言うんだけどもエンベディングした数値とあとはこのドキュメントは就業規則の12ページ目のものだよとかっていうメタデータと呼ばれるものをよくセットにして求めていくことが多いよね要はこれを本棚に入れといたらまず本棚のどれが一番近いかなみたいな入ってきた情報に対してこれのどれが情報として近いかなっていうのはコンピューターは何でしか判断できないベクトル数値そうベクトル数値でしか判断できないなのでベクトルで近いものどれかっていうのを見つけてあげるとで例えばこれが近いって見つけたらそのベクトル近いものは元々の文章は</p>
+<p><code>19:33</code> 有給休暇入社6ヶ月後に10日を付与するっていう文章だよねみたいなそしたらその文章を取ってきてあげたらAIがそれを参照してやっていけるみたいなベクトルを参照するわけじゃないんだよねあくまで検索するときに数値になってた方が検索がしやすいんだよ検索するのがベクトルで意味は全然ベクトル関係ないの?うーん違うな意味は違うというよりも要は質問にAI回答するわけじゃん回答するときの情報としてこのベクトルの数値入ってても意味なくない?回答する?あ、そうですねわけわかんないですねこの数値もらってもさ</p>
+<p><code>20:05</code> え、これどうすればいいの?ってならないJ君が欲しいのって元の文章じゃない?そうですねこれJ君で考えようかJ君が例えば休み取りたいんですけどみたいな新人が休み取りたいんですけどって言われた時にJ君わからないとでもJ君がこうやって見た時に資料ありましたその資料には有給休暇は入社6ヶ月後計画後に10日を付与するって書いてあったとしますそしたらその情報を元にそれ伝えるじゃんJ君AIも同じでJ君と同じようにAIが欲しい情報は文章なんだよねそういうことですねでも文章欲しいんだけどもその文章がちゃんとユーザーから入ってきた質問に近いかどうかっていうのは文章同士では比較できない</p>
+<p><code>20:40</code> 近いかどうかっていうのはあくまで数値で比較するしかないなので意味が近いかどうかっていうのはあくまで数値の比較なんだよね数値近いからこんなことじゃねって言ってらっしゃるわけですねでこの数値近いこれこの付箋だなじゃあその文章って元々なんだったんだっけっていうのでその元々の文章をAIが読み取ってきてそれを元に回答するAIが検索する用の座標ってことですかそうAIが検索するように数値化してるっていうだけでAIが最後ユーザーに返す返答にはこの座標はいらなくないはいはいはいはいいらないですね</p>
+<p><code>21:13</code> そう文章だけあればいいよねっていう一応流れにはなってるよねとかあとは出典とかでよくメタデータとかって言うけども情報として例えばこれは2026年7月20日の情報だよとか何ページあるものだよとかこのPDFの中のものだよとかっていう情報をメタデータとして付与してあげるんだよねタグを付けるみたいな感じそうすると入れた情報に対して古いものを捨てるとかっていうその情報の整理がしやすいじゃん新しいものを取ってくるとかっていう風に元の文章プラスベクトル化したもの数値化したものプラスタグみたいなこれはメタデータと言うけどメタデータを一緒にガチャッと持っておくこれを本棚にたくさん登録されてるみたいなのがラグそうっていうのがざっくりとラグなんだよねだからいろいろごちゃごちゃ言ったけれども</p>
+<p><code>21:55</code> ユーザーから質問入ってきますそれをラグで検索するためにはこの文章どうなってなきゃいけないのJ君この文章がベクトルになってないそうベクトル数値になってないといけない数値になってたらコンピューターは検索して似たものを出せるそう意味として近しいものを比較できるわけだねこのベクトル入ってきたユーザーから入ってきた文章をベクトル化したものこれに近いものはこれだみたいな見つけることができるでもベクトル自体は別にAIが求めている情報じゃないよねJ君数値だけ渡されても困るよねJ君が欲しいのは元の文章だよねなので元の文章も一緒にここに保管されていると</p>
+<p><code>22:28</code> その元の文章を渡してあげるでもちろんこれって座標が近いのって1個だけじゃないと思うんだよ例えばユーザーから入ってきた休み取りたいとなった時に有給休暇の申請方法っていうドキュメントがあるかもしれないし休みの取り方っていうドキュメントがあるかもしれないし公欠する場合とかそういうドキュメントがあるかもしれないし全部座標として近そうじゃない?全部近そうですねってなったら座標として近いものをいくつかまとめて取ってきてその文章をAIに渡してあげるとコンテキストとして近しい情報を検索した内容を踏まえて回答してくれるなんかイメージ湧く?</p>
+<p><code>23:00</code> なんとなく湧いてますいいんじゃない?でもこれをどんな環境とかどこでやってるのかイメージできますこれどこでやってるのか一旦置いといていいよ今回は別に仕組みとしてベクトル的なところが重要だったりとか数値化するみたいなところだけ押さえてほしいのでこれは別にラグを構築するってなったらいわゆる開発していくってのと同じことなので別にクロードコードとかコーデックスに依頼すればラグの構築ってのはラグ構築するためのツールがあったりするからそういうのを使ってあげればいいって感じかなでさっきも言ったように出典タグみたいないわゆるメタデータみたいなのはこれ絞り込みにも効くんだよね要は役割として例えば回答の根拠を表示するために</p>
+<p><code>23:35</code> この情報は就業規則のPDFの12ページ目に記載されてますよみたいなよく引用みたいなのあったりするじゃんああいうのに使えたりとかあとは検索の絞り込みみたいなところで営業部みたいなのがたくずいてたら一旦さ膨大な資料からさ調べるよりさ営業部の話だったら営業部でフィルターかけたものから見たくない?そうですねっていう検索の絞り込みにもできるわけよ根拠としてメタデータが入ってたらじゃあこのPDFのこの情報ですよみたいなことも言えるしそれだけじゃなくて検索を絞り込むためのメタデータタグ的な役割もあるから一緒に数値と元の文章だけじゃなくて</p>
+<p><code>24:08</code> メタデータも入れておくといいよねっていう話なんだよねメタデータ大事ですねメタデータあると便利だよねって話で本文の置き場所にパターンってあるんだけどこれちょっとざっと流すんだけれどもさっき言った元の文章ってあるじゃん元の文章も一緒にまとめてあげるパターンと元の文章は別に置いて元の文章ここにあるよっていうIDだけ付与するパターンもあったりする元の文章は長かったりとか元の文章だけを別にまとめておくみたいなものも考え方としちゃったりするんだけど要は本棚の一つの本の中に本文も入れるパターンがパターンAそうじゃなくて本文は違うところに置いて本文ここにあるよという参照IDだけ付与するみたいなパターン</p>
+<p><code>24:43</code> はいはいっていうなんかいろんなパターンがあったりするんだけどもこの辺はちょっと一旦置いといて大丈夫ですはいスルーしちゃってくださいでさっきも言ったようにこれAIが読むのは数字じゃなくてあかんねん元の文章なんだよねベクトルはこの入ってきた質問に対してどれが一番近そうかっていうのを探すためだけに使うんだよでベクトル的にこれとこれとこれが近いってなったらそれを元にじゃあその元の文章何?っていうので元の文章を取ってきて元の文章をAIに入れ込んで音的素として入れ込んでAIが回答するっていう感じイメージはいた?はいできましたじゃあ質問です僕が例えばラグというかAIに</p>
+<p><code>25:16</code> テレアポの仕方っていうのを検索したとしますテレアポの仕方AIは一般的なものしか普通返しませんでも社内のテレアポの仕方が決まってますなった時にまずAIは何をしますか?テレアポの仕方っていうのをベクトルの数字にしてそう似てる数字のものを探すそういうことでその数字を ai がもらうのそれとも その数字を数字の ai がもらうのはその数字の元のなんでしっき言葉そうもたらくーしょそうすると検索するときにはベクトルで検索して ai がもらって コンテキストとし入れ込むのはあくまで元々のベクトル化する前の文章そしたらコンテキストとしてさ</p>
+<p><code>25:52</code> このドキュメントの情報が入ってくるじゃん確かに余計なあっちをいらない数字なんかいらないですもんでもさドキュメントを全部最初から入れたらさコンテキストが無駄に多くなるし全部入りきらないじゃんだから検索して必要なものだけピックして入れてあげるっていうのがラグなんだよね分かってきました結構本当に?はいっていうのがあるのでこれ重要なのはあくまでAIが読むのは元の文章ですとでこれも事前準備っていうところも質問の時これ一応2個考えると多く必要があってラグはちゃんと準備しておかなければいけないよと要は本棚ドキュメントみたいな資料があるわけじゃんこれ事前に準備しておかなきゃいけない</p>
+<p><code>26:24</code> 当たり前だけどこの資料バーっとあります例えば1個資料がありましたこれそのままデクトル化するんじゃなくてさっき言ったようにチャンクという付箋にこのように細かく切るわけでそしたらこの細かく切った物ごとにデクトル化してあげると座標に変換してあげると座標に変換したら元の文章と一緒に保存してあげるって感じね本棚にそう本棚に保存してあげるとでこれが資料の準備の段階ね今本題に登録されている状態ですでユーザーが質問した時には質問をまず座標に変換しますベクトル化してあげます数値になりました数値になったらもともと登録していた数値とどれが近いかっていうのを確認する</p>
+<p><code>26:58</code> で近い付箋これですだったらそれをポッと3つあったら3つポンと元の文章をAIに投げてあげるとそしたらAIがその元の文章を元に回答を生成してくれるっていう準備と質問側の大きく2つの流れがあるってところはなんとなくイメージが分くA社では一緒に働いてくださる仲間を募集しております正社員業務委託インターン問わず絶賛募集中ですAI×教育事業ですねより大きく成長させていくために一緒にAIそして教育に熱を持って臨んでいける方取り組んでいける方を探しております</p>
+<p><code>27:33</code> ご興味のある方はですね概要欄に記載のフォームよりご応募ください皆様のご応募お待ちしておりますじゃあここでまだちょっと深掘っていきたいんだけど意味検索だけで完璧なのか意味検索できたらもう完璧?要はベクトル化して近しいベクトルあったらこれ意味近いよねってなってそれ検索してくれば完璧?じゃないんですか?じゃないんですということで次意味検索にも弱点があります型番製品名って文字一致の方が良くない?確かに</p>
+<p><code>28:05</code> 分かる意味?はい型番とかだったら絶対一致してるかどうか大事じゃんこれがさ例えば0015っていう型番と0014数値として近いけど違うじゃん別問ですね別問じゃん型番あった時に文字が一致してるっていうのも大事だったりするんだよねこういう型番とか製品名とかピンポイントでキーワードを検索していく必要がある場合はこの言葉の意味みたいなの考えるわけじゃないじゃん一致してるかどうかだよねこれ座標に対して強くないってことですか?そう</p>
+<p><code>28:35</code> 座標に対して強くないっていうよりもその座標にしたところで近いかどうかが判断できないよね例えばQA398っていう型番数値化した時とさQA397数値化した時とさ全然違うのに近くなっちゃったりするわけじゃんそうです場合によってはこれ困らないっていう話だね困りますねなのでさっき言った休みとか休暇みたいなこれほぼ同じ意味だけれども言い換えたものだよねみたいなのは意味検索に強いんだよねでもピンポイントはこのキーワードが意味を成してるねみたいな例えばレブロンジェームズ</p>
+<p><code>29:07</code> 言葉をさ意味的なところの要素も強いんだけれどもキーワードで検索したい場合もあるし意味で検索したい場合もあるよねキーワードでも引っ張っていきたい意味として引っ張ってくるみたいなこともちょっと大事だったりする今の例えばよくないな型番とかがいいかな型番とかで考える方が一番いいかなと思いますキーワード検索と意味検索って話したんだけどこれはどっちかとかじゃなくて組み合わせるのがいいんだよねキーワード検索しつつ意味検索もすると両方それぞれ弱点があるわけじゃんキーワード検索はピンポイント一致とか完全一致とか強いけれどもそういう意味を理解できないよね</p>
+<p><code>29:40</code> 意味検索は逆にそういうキーワードでの一致度合いみたいなところを測れないよね両方組み合わせたハイブリッドの形がいいんじゃないって話ですそんなこともできるんですね当たり前じゃないですかっていうのがあるのでちょっとこれハイブリッド検索みたいなのもあるっていうのはちょっと頭の中に入れといてくださいこれはあくまで応用としてね意味検索の話をしました意味検索っていうのを使ってラグはやってるんだよとか伝えたけどもキーワード検索とか組み合わせたハイブリッド検索を含めてやっていった方が絶対いいよねって話ですあとはリランクっていう考え方も知っておいてほしくて検索した時にさっき言ったように</p>
+<p><code>30:12</code> この登録しているドキュメントの中から近いものを取ってくるわけじゃん近いものを取ってきた時にさこれさ本当に座標が近いものがピンポイントに合ってるかっていうとそれって数値化したものが本当に一番近ければ一番正しい情報かっていうとそういうわけじゃないんだよね場合によっては違うかもしれないなので一旦検索した後取ってきました情報8個ありますこうなった時にこれを本当にどれが使えるかっていうのを並び替えすることをよくリランクって言うんだよ使いそうな順に並び替えてあげる人間がいる話じゃないですよそうAIにやってもらう勝手にやってくる</p>
+<p><code>30:43</code> そういうのも技術としてあるぐらいこれちょっと応用編ねさっきのラグの検索の仕組みにこういうリランクとか入れてあげるとより検索性能が増すみたいな感じはいなので取ってきた情報に対して順位をつけてあげるみたいなざっくりとそんな感じかなあとよく言われるのがラグとファインチューニングって何が違うの?って言われるんだけどファインチューニング知ってる?いや、分かんないっす結論違いますとラグは入ってきたものに対してその場で調べて資料を渡して答えるっていうのがラグなんだよねさっき言った試験で分かりやすいよね持ち込みありの試験</p>
+<p><code>31:15</code> これがラグなんだよでもファインチューニングは自分の脳みそをさらにチューニングさせて賢くさせるモデル自体を進化させるみたいなのがファインチューニングですこれどういうことかっていうと例えばなんだけども医療分野にめちゃくちゃ特化した脳みそにしたいとか数学だけめちゃくちゃ強くさせたものとか例えばあのちょっと覚えてるかなJ君カーソルのモデルのコンポーザー2.5あーありましたねあれファインチューニングみたいな正確に言うと強化学習みたいなところなんだけども要はコーディングに特化した形でどんどんどんどんチューニングさせていってるんだねあれに近いというか</p>
+<p><code>31:47</code> はいはいあれ確か強化学習だった気もするんだけども要はモデルありますすでにAIの学習したモデルがありますそれに特定の情報をめっちゃ学習させて例えば一般的なモデルって英語とか強いじゃん日本語弱いじゃん日本語の情報だけたくさん与えて日本語に強くさせた日本語にファインチューニングさせたモデルとかもあったりするんだよへーじゃあ新しいモデルが次々に出るのはいわゆるこっちになったんですねんーまぁちょっと若干違うんだけれどもでもそういう風に何か特化のモデルを作るみたいな時がファインチューニングでそうじゃなくて</p>
+<p><code>32:19</code> ラグは別にそういうモデル自体を変化させるわけじゃなくてモデルは同じ状態で検索の仕組みを付与したのがラグというものなので両方とも賢くなるみたいな感じのイメージあるんだけれども全然違うよっていうのはちょっと頭の中に入れておいてほしいですはいでラグを使ったらじゃあ完璧なのかというとそういうわけではないので誤りはゼロにならないやってところも押さえておいてください検索で違う資料を選んでしまうこともあるし資料を読み違えることもあるしあくまでラグは検索を拡張して検索を補完して生成するというだけで万能ではないこれはちょっと頭の中に入れておかないとラグ使ったら完璧</p>
+<p><code>32:52</code> ラグ使ったらハルシネーション起きないというわけではないですまとめるとラグっていうのはAIを賢く作り直すのではなくて必要な時に必要な官兵を探して渡す仕組みこれがラグなのねこれの中にベクトルという数値化するという技術エンブリングとかって言ったりするんだけどもとかがあってそれを付与してあげることによって検索した上で回答するみたいなことができる感じですリサーチ機能とかだったりするじゃんチャットGPとかリサーチしてくれたりしない?サーチしてウェブサーチしてくれるみたいなあれと似たような感じではあるけどあれはあくまでウェブ上っていうところだよね</p>
+<p><code>33:26</code> そうじゃなくてもうすでにあるドキュメントを数値化してそこから見つけてあげるっていう本棚があってそこから探してあげるっていうのがラグっていう仕組みだよねっていうところでラグこれじゃあどうやって導入するのかっていうとそれこそラグ実装とかラグチャットGPTとか色々調べてあげるとラグを構築するための技術っていうのがいくつか出てますそういったものをクロードコードコーデックスとかに言ってあげるとじゃあそもそもこのラグを構築するためには必要なドキュメントをまず揃えなきゃいけないとかドキュメントが整ってないといけなかったりするわけだよねっていうラグを作るのにも結構下準備というか前準備はかなり必要だったりするんだけどこういったものを知っておくと検索に強いとか</p>
+<p><code>34:02</code> 社内資料を踏まえた上で回答してくれるようなAIに育っていくみたいな感じなのでラグというのはもう昔から言われている技術ではあるけれども改めてなんとなくのイメージでいいです別に今回完全に理解しようと思ってもらってないですなんとなくのイメージを持ってもらいたいがためにちょっとクワッとした表現を使ったりしてたんですけども重要なら数値化していくってところとか考え方としては抑えておいてほしいなっていうところですなんか今めっちゃイメージしてたんですけど企業とかのファイルっていうのかな作業してるディレクトリを選んでなんかこんなの気になるんだけどどこやっちゃったか忘れたよみたいな</p>
+<p><code>34:34</code> 例えば先月使った経費を調べてるんだけどどのファイルか忘れちゃったみたいに言ったらコワークとかそれこそ最近出たGPTのワーク機能とか調べてくれるじゃないですかあれはラグ使ってます?あれはラグではないですあれは多分多分というかエージェンティックサーチってエージェントが一個一個コマンド打ちながら情報を調べてってくれてるからラグとは違うラグはもう必ずチェクトルデータベースというものにデータベースの中に保管されているものがそこから取ってくる形になるのであれはラグではないですエージェンティックサーチとかエージェントがサーチしていくことをエージェンティックサーチって言うんだけども</p>
+<p><code>35:06</code> とかだったりするのでラグとは違いますラグはちゃんと構築しようとしないといけないんだよね本当プログラミング的にそうだからちゃんとドキュメントバーってありますそれをチャンクという単位で分割します数値化します数値化したものと元の文書とメタデータをデータベースに入れておきますこれでベクトルデータベースというものができてそこに対して検索をかけてあげるっていう仕組みを作らなきゃいけないのでなんかすでに今あるようなものはいろんなところ引っ張ってきてくれてるっていうのはだいたいエージェンティックサーチとかウェブサーチあとはメモリー機能とかそういうのがうまく機能してるっていうだけであって基本的にはラグの仕組みとかっていうわけではなく</p>
+<p><code>35:40</code> ラグの仕組みはノートブックエレメントはい、なるほどっていう感じですありがとうございますいもにさんLINE登録したら登録してくれた方に得点渡してるっておっしゃったと思うんですけどあー、はいはいあれ、何渡してるんですか?何渡してたっけ?なんか10個ぐらい得点あるんだけどえ、10個も?そんな渡しちゃってるんですね非エンジニアの人がAIとかAIコーディングを学ぶとかにあたって必要そうかなみたいなものをドキュメントにまとめたりとか解説したりしているものLINE登録してくれた人にタイプしてるっていう感じかなLINE追加して得点もらえるだけですか?得点をまずお渡ししてるんだけれどもLINE登録してくれた人限定で勉強会開催してたりとかAIとか特にAIコーディング系の勉強会とか今後ちょっとやっていきたいなと思ってるのは定期で質問とかをZoomとかYouTubeライブとかで受け付けるみたいな</p>
+<p><code>36:24</code> LINE登録者限定でやるみたいなそういうのもちょっとやっていきたいなみたいな思ってるじゃあこっそり登録して俺も勉強会参加しちゃおうかなJクはもっと学ばなきゃいけないからぜひLINE登録してもらえたら嬉しいし勉強会だけじゃなくて定期で僕がやってるスクールの案内もしたりとか基本的には特典を渡して勉強会とか興味あれば来てもらえたらなという風に思うし今2万人登録ぐらいかなLINE登録者結構いるんだけどそんなにいるんですねうるせーなーと思ったらブロックしてもらえたらいいからとりあえず登録してもらえたらいいんじゃないかなと思いますあーなるほどはい、初期のコメント返信コーナー来てて思います今日は山田太郎さんからのコメントです</p>
+<p><code>36:59</code> ありがとうございますループエンジニアリングの動画にいただきました少数派だと思いますがプロンプとエンジニアリングは今でも大事っていうのは私も同意です今西さんからその言葉聞けて嬉しかったですありがとうございますプロプターエンジニアリング今でもめちゃくちゃ大事だと思いますそれこそなんとかエンジニアリング何見たいですかみたいなやつで僕はハーネスエンジニアリング流れたいですねハーネスエンジニアリングね特に触れてないもんねジェイクも知らない領域だよね知らないですねこんなもんだよとしか今西さんから聞いてなくてまた僕のためって言うと</p>
+<p><code>37:34</code> 今嫌な目に見えたんで視聴者のためにハーネスエンジニアリングとかやっていければなと思います今いただいたコメントの話で言うとプロンプト自体はだいぶいらなくなってきているコンテキストが大事になってきていた時はあるんだけれども実際問題エージェントの指示書を作るとか何か細かなことをやっていく時にプロンプトはやっぱ大事だったりするのでこの辺はなくなったものではなくそれこそ最近新しいものが出てきたりループエンジニアリングの次にまた新しいものが出てきたりとかややこしいんだけれども別にこれ全部持っていく必要はなくてあくまで考え方その根っこにある考え方を抑えておけばいいんじゃないかなという風に思ってます</p>
+<p><code>38:09</code> はいということで本日は以上になりますぜひですね今回の動画を見てラグに関して気になることとかコメントとかあればまたこの知識について知りたいとか今回はこうやってスライドを使って説明しましたが場合によっては実際に実装しながらやっていくとかっていうのも考えていますのでそういったご希望とかあればですねぜひぜひコメントにお寄せいただけたらなと思いますということで本日は以上になりますまた次回チャンネル登録してね!</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./llm" class="internal" data-slug="llm">llm</a>（StructureNote/concept） — 埋め込みモデル・ベクトル化はLLMの基盤技術</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote/concept） — 社内資料をAIに読ませる文脈が直結</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote/concept） — AIエージェント構築時にRAGの知識が活きるという文脈</li>
+<li><a href="./notebooklm" class="internal" data-slug="notebooklm">notebooklm</a>（StructureNote/concept） — 動画内で「ラグの仕組みはノートブックLM」と言及</li>
+<li><a href="./2026-05-19-individual-to-organizational-knowledge-via-plugin" class="internal" data-slug="2026-05-19-individual-to-organizational-knowledge-via-plugin">2026-05-19-individual-to-organizational-knowledge-via-plugin</a>（StructureNote/synthesis） — 個人知識→組織知識という文脈がRAGの「社内情報を知らない」課題と重なる</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-304" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

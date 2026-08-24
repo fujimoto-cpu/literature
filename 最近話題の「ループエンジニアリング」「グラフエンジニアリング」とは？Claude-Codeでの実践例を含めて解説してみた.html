@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた"/><meta name="twitter:description" content="📺 動画情報 最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-08 ・ ⏱️ 30分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIの精度を上げる設計手法として最近話題の「ループエンジニアリング」（時間軸で実行→検証→改善を繰り返す設計）と「グラフエンジニアリング」（構造軸で複数AIをどう配置するか設計）を、クロードコードのサブエージェント実践例つきで解説する動画。 🗺️ 全体像 flowchart TD A[プロンプト/コ..."/><meta property="og:description" content="📺 動画情報 最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-08 ・ ⏱️ 30分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIの精度を上げる設計手法として最近話題の「ループエンジニアリング」（時間軸で実行→検証→改善を繰り返す設計）と「グラフエンジニアリング」（構造軸で複数AIをどう配置するか設計）を、クロードコードのサブエージェント実践例つきで解説する動画。 🗺️ 全体像 flowchart TD A[プロンプト/コ..."/><meta property="og:image:alt" content="📺 動画情報 最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-08 ・ ⏱️ 30分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIの精度を上げる設計手法として最近話題の「ループエンジニアリング」（時間軸で実行→検証→改善を繰り返す設計）と「グラフエンジニアリング」（構造軸で複数AIをどう配置するか設計）を、クロードコードのサブエージェント実践例つきで解説する動画。 🗺️ 全体像 flowchart TD A[プロンプト/コ..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude-Codeでの実践例を含めて解説してみた"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude-Codeでの実践例を含めて解説してみた"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-08 ・ ⏱️ 30分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 AIの精度を上げる設計手法として最近話題の「ループエンジニアリング」（時間軸で実行→検証→改善を繰り返す設計）と「グラフエンジニアリング」（構造軸で複数AIをどう配置するか設計）を、クロードコードのサブエージェント実践例つきで解説する動画。 🗺️ 全体像 flowchart TD A[プロンプト/コ..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude-Codeでの実践例を含めて解説してみた"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2559"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2559" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた</a></div></nav><h1 class="article-title">最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-08T15:00:00.000Z">2026年8月09日</time><span>64 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/llm" class="internal tag-link">llm</a></li><li><a href="./tags/workflow" class="internal tag-link">workflow</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>最近話題の「ループエンジニアリング」「グラフエンジニアリング」とは？Claude Codeでの実践例を含めて解説してみた</strong>
+🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-08 ・ ⏱️ 30分59秒
+🔗 <a href="https://www.youtube.com/watch?v=cehtaE2YCxc" class="external">https://www.youtube.com/watch?v=cehtaE2YCxc<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AIの精度を上げる設計手法として最近話題の「ループエンジニアリング」（時間軸で実行→検証→改善を繰り返す設計）と「グラフエンジニアリング」（構造軸で複数AIをどう配置するか設計）を、<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>のサブエージェント実践例つきで解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[プロンプト/コンテキスト/ハーネス設計] --> B[メインエージェントが成果物を作成]\n    B --> C[別AIの検証エージェントがチェック]\n    C -->|改善点を指摘| D[メインエージェントが修正]\n    D --> C\n    C -->|OKまたは上限回数到達| E[完成品]&quot;">flowchart TD
+    A[プロンプト/コンテキスト/ハーネス設計] --> B[メインエージェントが成果物を作成]
+    B --> C[別AIの検証エージェントがチェック]
+    C -->|改善点を指摘| D[メインエージェントが修正]
+    D --> C
+    C -->|OKまたは上限回数到達| E[完成品]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 用語の階層 — プロンプト→コンテキスト→ハーネス </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIへの指示文の作り方が「プロンプトエンジニアリング」、指示以外に会話履歴・ウェブ検索・ファイルなど「何をいつどれだけ読ませるか」を設計するのが「コンテキストエンジニアリング」。さらにAIが動く環境（実行基盤・権限管理まで）を丸ごと設計するのが「ハーネスエンジニアリング」。<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>がウェブ検索やファイル実行までできるのは、このハーネスが設計されているから。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. ループエンジニアリング — 時間軸で「実行→検証→改善」を回す </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>が何か実行し、その結果を検証し、改善案をもとにまた実行する、を繰り返す設計。Andrej Karpathy氏の「オートリサーチ」（機械学習モデルをAIが自律的に改善するプロジェクト）が話題になった例。人間の指示なしにAIが実験→改善を繰り返すことで精度が上がっていく。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. グラフエンジニアリング — 構造軸で複数AIの配置を設計 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>調査を複数の観点・複数のAIで分担させ、結果を集約し、足りなければまた調査させる、というようにどのフローでどこにAIを配置するかを設計する考え方。実質は昔からある「ワークフロー」と同じで、クロードデスクトップやChatGPTのウルトラ推論モードは既にこれを内部で自動生成している。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 検証は自分ではなく別のAIにやらせる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>言語モデルは自分が作ったものを甘く評価しがちなため、生成担当と検証担当を分けた方が精度が上がる。KAIST・カーネギーメロン大学・NVIDIAの研究では、フィードバックなしの自己修正はほとんど精度が改善しないが、別のAIが評価基準を持ってダメ出しすると（5回の修正で）94.7%まで精度が伸びた例が示されている。生成はSonnet、検証はOpus/Fableのような高性能モデルという分け方も紹介。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 弱点：コストと局所最適解 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>複数のAIモデルを使うためコスト・時間が増える。またスコアを単純に改善するだけだと、一度下がらないと辿り着けない領域（局所最適解）で止まりやすい。対策として複数のプロンプトを並列で進化させる手法もあるが、まだ確立した解法ではないと本人も述べている。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 制作物のセルフチェックを「別セッション」に分離する</strong>
+デザイン案・議事メモ・提案書などをCORINに作らせたら、同じセッションで「これで合ってる？」と聞くだけでは精度が上がらない（論文の「フィードバックなし修正」と同じ構造）。別チャットで「このデザイン、ダメ出しして」と検証だけを頼む一手間を、AI推進担当としての実践例として社内共有できる。</p>
+<p><strong>② サブエージェントの使い分けを社内AI事例に転用</strong>
+<code>reviewer</code> サブエージェント（レビュー専任・読み取り専用）はまさに動画の「検証エージェントを分ける」構造そのもの。品質表示タグ生成ツールなど社内向けAIツールに「作る担当」と「チェックする担当」を分けて組み込む提案は、AI推進の事例としてそのまま使える。</p>
+<p><strong>③ ループの上限回数を決めてから走らせる</strong>
+「無限に改善し続けられる」わけではなく、局所最適解にはまるリスクがある。修正ループを頼むときは「最大3回まで」のように上限を先に決めておくと、コストも時間も暴走しない。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちはニャンタです 本日は精度を上げるAIの組み方というテーマで話していこうと思います最近海外を中心にグラフエンジニアリングとかループエンジニアリングとか そういった言葉が飛び交ってるんですがこれ結局何だろうなというふうに思ってる人はいないでしょうかこういった話は基本的にAIの回答の質を向上させるというためにいろいろ行っているよという話になっていてもし皆さんが今AIに何かやらせていて精度が良くないなとかそういうふうに感じている場合はこれらの概念を少し理解してみると役に立つ部分もあるかと思います本日はそもそもこういった言葉って何なのかとか</p>
+<p><code>00:38</code> なぜ今これらが注目されているのかとかそこら辺について誰でも分かるように解説していきます最新の生成AIについて知りたいという人はぜひ見ていってもらえると思いますそれでは早速いきましょう最初にまず用語の整理ということでプロンプトエンジニアリング コンテキストエンジニアリング ハーネスエンジニアリングとかですねいろんな呼び方があるのでそれぞれどういったことを表しているのかというところを整理しておきましょう特に全部覚えたからといって何か意味があるわけじゃないんですけども皆さんがAIの情報を見たときにそれぞれどういう意味なのかっていうのが</p>
+<p><code>01:12</code> ざっくりでもイメージできると理解しやすくなると思いますまず最初にプロンプトエンジニアリングというものでこれは皆さんご存知かと思うんですがAIにどういう風な指示をするのかという話になっていて皆さんがプロンプトと呼ばれるAIへの指示文を考えてそれをAIのモデルに入れるとそうすると回答が得られるのでこのプロンプトをどういう風に作成すればより質が高い回答が得られるのかというところを頑張って試行錯誤するというところがプロンプトエンジニアリングになっていますこれはChatGPTがリリースされてから</p>
+<p><code>01:45</code> ずっと言われていることなのでどういったプロンプトがいいとかですねそういった話はすでに知っている人も多いかと思いますプロンプトエンジニアリングの後に出てきた概念としてコンテキストエンジニアリングというものがありますこれはAIのモデルに何をいつどれだけ読ませるのかというのを設計するというものになっていてプロンプトっていうのは皆さんの指示文なんですけどもAIはそれ以外にも会話履歴とかあとはウェブ検索とかですねそれをどうやって使えばいいのかとかあとはファイルとか資料とかですねそういったものも読み込めるようになったので</p>
+<p><code>02:18</code> それをいつどれぐらい読ませるのかというところを設計していくっていうのがコンテキストエンジニアリングになっていますChatGPTがリリースされた時はプロンプトエンジニアリングがメインだったんですがそこからAIが発達してAIエージェントと呼ばれる概念が普及してきましたAIエージェントはこのファイルを読み込んだりとかウェブ検索したりとかそういったことができるのでより与えられる情報が増えているのでそれをどういうふうに与えたらAIエージェントがうまく動いてくれるのかというところを考える必要があってこういった概念が出てきて一般化してきているという感じになっています</p>
+<p><code>02:53</code> その後に出てきたのがハーネスエンジニアリングというものになっていてこれはAIが動く環境を丸ごと設計するという話になっていますハーネスエンジニアリングといった時にどこまで指すのかっていうのは結構人によって違うかもしれませんが私が思っているところとしてはコンテキストエンジニアリングまではどういったツールがあるよとかファイルがあるよとかそういった情報をテキストとしてモデルに入れるところを考えているとこのハーネスエンジニアリングは実際ウェブ検索を使う時の実行する基盤とかファイルを実行する仕組みのところまで含めて指しているとその他AIをループさせるとかどういったファイルは読み込ませないとかですね</p>
+<p><code>03:34</code> そういったAIエージェントが動く上での周りの環境を全て指してるかなと思いますなのでクロードコードとか使うとウェブ検索したりとかファイルを実行したりとかそういったところまで全部やってくれると思うんですけどもそれはクロードコードのハーネスとしてこういったツールが実行できるように設計されているというイメージになっていますちょっとこのハーネスエンジニアリングが分かりにくいかなというふうに思うんですけども例えばAIが人間だとした時に何に対応してるのかってのを考えると分かりやすいと思うんですけどもまずモデルっていうのはその人の頭の良さになっています</p>
+<p><code>04:09</code> なので賢いモデルほど優秀なので同じ指示を与えたとしても早くて正確にこなせるというのがモデルの性質になっていますプロンプトエンジニアリングというのがその人にどういった指示をするのかっていうところで仕事の指示をするときに何かやっておいてほしいという場合にどう伝えるのかってのを考えるものになっていますなので皆さんが誰かに仕事を頼むときにちゃんとその人が分かるように伝えましょうというのがこのプロンプトエンジニアリングですとコンテキストエンジニアリングというのはその人に指示だけじゃなくてどういった資料とか情報を与えるのかっていうのを決めるものになっていますなのでどんだけ優秀なモデルで指示が的確だったとしても与える情報として必要なものがなかったりとか</p>
+<p><code>04:56</code> 逆に必要ない資料とかを上げすぎてしまうと指示を忘れてしまうので必要十分な情報を与えるためにどういった情報が必要でどういった情報が必要じゃないかというところを考えているのがコンテキストエンジニアリングになっていますハーネスエンジニアリングがその人が作業する環境を丸ごと指しています例えば皆さんも仕事するときにいい環境だったら作業効率が上がるかと思いますプログラマーの人だったらいいキーボードとかいいマウス使ってるとかですねいい椅子があるとか</p>
+<p><code>05:28</code> そういったところによって作業効率って変わりますよねAIも同じでどういった環境で動いているのかっていうところによって精度が変わってくるのでよくこのモデルの頭が良ければ全て解決するっていうふうに思いがちなんですけども現在はモデルが動く環境を含めてどう設計したらより精度が出るのかっていうところでいろんな研究が行われていますあとは権限管理というところでAIが勝手にファイルを削除したりとか大事な情報を外部に送ったりしないかとかそういったところも含めてどう環境を作っていけばいいのかというところで語られるのが多いかなというふうに思います</p>
+<p><code>06:04</code> なのでもし誰かがハーネスエンジニア人が得意ですっていう話をしてたら具体的にどういう環境を整備してなぜそれがいいというふうに言ってるんでしょうかみたいな感じで聞くとかなり知ってる人かなというふうに思われるかと思いますという感じでですねちょっと難しいんですけどもこういった概念がAIの進化とともに注目されてきていますさらに2つの概念が最近流行っていてループエンジニアリングというものとグラフエンジニアリングというものになっています人によってはこの2つの概念を上の3つと同じレイヤーで話している人もいるかなと思うんですけども</p>
+<p><code>06:41</code> 私はこの3つとはちょっと別のレイヤーかなというふうに思っていてこの2つはAIをどういうふうに動かすのかってところを設計しているものかなというふうに思いますここにも書いてあるんですけども上の3つはAIが動くための材料と環境を用意しているとこの2つに関してはどういうふうに動かすのかっていうのを考えているのがこちらの2つかなというふうに個人的には理解していますじゃあこの2つはどう違うのかっていうところでループエンジニアリングっていうのは時間軸でどう回すかっていうのを設計していてグラフエンジニアリングっていうのは構造軸でどう組むかを設計しているというものになっています</p>
+<p><code>07:19</code> どういうことかっていうとループって言ってるぐらいなのでAIが何か実行してその結果を検証して改善するというこのループを組んであげればAIが自動で何かを改善するということができたりします少し前に現在はアンソロピックにいらっしゃるアンドレイ・カーバシーさんという方がオートリサーチっていうプロジェクトを公表していて結構話題になっていましたこれは機械学習のモデルをAIで自律的に改善するようなそういった仕組みになっていて特に人間は指示をしなくてもAIが実験をしてその結果をもとに改善してというのをひたすら繰り返すことによって</p>
+<p><code>07:59</code> こんな感じで精度がどんどん良くなっていくとそういったことができますよってところを示したプロジェクトになっています具体的にどういうふうに改善したのかみたいなところに関しては過去のこちらの動画で解説してますので興味があったら見てみてくださいポイントとしてはこちらの図にあるようにAIが何か実行してそれを検証して改善するというところを繰り返しているところなのでこちらの実験だとAIがプログラムを書いてそれを実行するとどれぐらい正当率がいいのかっていうスコアが出ますとそのスコアが下がるようにするにはどうすればいいのかってところで</p>
+<p><code>08:34</code> 改善を行ってまた実行してスコアを出すという感じでループを回しているというそういったイメージになりますこちらのループエンジニアリングを組めば皆さんが普段やらせている何かしらの作業もより精度高くやらせるというところができたりするのでこの後ちょっと紹介していきます最も最近言われているのがグラフエンジニアリングでこれは構造的にAIをどういうふうに使ってタスクを行わせるのかっていうのを考えていくものになっています例えば何らかの調査レポートを作るって場合に単純にAIに何か調べてって言っても作ってくれるんですけどももっと質が高いレポートを作っていこうとすると</p>
+<p><code>09:12</code> 例えばいくつかの観点で分けて調べさせるとか複数のAIを使って調査をさせるとその後に調べた結果をまたAIを使って集約するとその結果まだ調査が足りないなって場合はまたもう1回調査するとかそんな感じでどういうフローでどこにどのようにAIを配置してタスクを行わせるのかっていうのを決めていくのがこのグラフエンジニアリングになっていますこのグラフの中にループエンジニアリングを入れて調査した結果を元に検証してまたもう1回調査するとか</p>
+<p><code>09:46</code> これをぐるぐる回せばこのグラフの中にループが入ってるみたいなそういったところもできたりします実はこのグラフエンジニアリングは普通にクロードデスクトップアプリとかChatGPTのデスクトップアプリにも組み込まれているんですがクロードデスクトップアプリだったらエフォートレベルをウルトラコードにすれば中の処理としてはワークフローを組んでくれるというものになっていて皆さんが入力した指示をもとにAIが勝手にこういったワークフローを組んでくれますChatGPTのアプリでもChatGPTワークの方でモデルの推論レベルをウルトラにすれば</p>
+<p><code>10:22</code> 同じようにAI側が勝手にワークフローを組んで処理を行ってくれるので実はそこまですごい新しい概念というよりはすでに簡単に使えるようなそういった概念になっていますただループエンジニアリングとかグラフエンジニアリングとかこういうことをやると精度が非常に高くなるんですけどもその分AIを何回も使うのでコストがすごく上がってしまいますなので個人的には組み込まれているウルトラコードとかでワークフローを作るっていうよりは自分でその場で指示を出しながら</p>
+<p><code>10:55</code> こういったフローを組んで精度を上げていくってところが普段使っている中では多いですおそらくこのチャンネル見てる人はかなり詳しい人も多いと思うのでここら辺やってるよって人もいると思うんですがまだやったことないとかどうすれば精度を上げられるんだろうとかそういう風に悩んでる場合は一度試してみてもいいかと思いますというところでハンレスエンジニアリングからループエンジニアリンググラフエンジニアリングというところを紹介してきました個人的に思うところとしてはこのグラフエンジニアリングとかは完全に昔からあったワークフローのことを</p>
+<p><code>11:27</code> 言ってるのかなと思うのでなんかすでに知ってるものを別の名前で言ってるんだなという感じがしていますDefeatが使ってこういうワークフローですね組んだことある人もいると思うんですがグラフといえばグラフだしワークフローといえばワークフローというところでアンソロピックもですねもともとエージェントとワークフロー型っていうところでこちらの2024年の記事で話していてこのワークフローっていうのはこういった構造的に言語モデルを使うというところで非常に似てるなというかほぼ同じかなと思うので昔からAI触っている人はワークフローのことかというふうに思っている人も多いかと思いますじゃあなぜ最近グラフエンジニアリングという形で盛り上がっているのかっていうと</p>
+<p><code>12:06</code> いくつか理由はあると思うんですが一つはグラフっていうと高度なことっぽくて注目が集まるというところかなと思います確かにグラフっていうとなんか一つの技術っぽくてワークフローよりもキャッチーなのかなというところは実際あるかと思いますもう一つは単純に精度が上がってきているというところで昔からワークフロー型でAIエージェントを組み込むってところはあったんですけども実際使ってみるとちょっとヘンテコなミスをしたりとかそんな感じでちょっとワークフローの中にエージェント組み込むと微妙だなみたいなところがあったんですが最近のAI賢いのでこういった形で連携させると</p>
+<p><code>12:44</code> 普通に一つのエージェント使うよりもかなりいい出力をしてくれるというところでやり始めてる人が多いのかなというふうに思います個人的には何かAIエージェントのアプリを作ったりする場合はこういうコンテキストエンジニアリングとかハーネスエンジニアリングとか知っておくといいのかなと思うんですが普通にAIを使う側の話で言うとそこまでがっつり勉強する必要はなくてループエンジニアリングとグラフエンジニアリングというところでAIを複数使って何かやらせるっていうところを抑えておけばそれで十分かなというふうに思います</p>
+<p><code>13:17</code> AIを複数使うっていうのがよくわからない人もいると思うので簡単にですねAI複数使うとどんな感じでいいのかみたいなところについて解説していきますまず複数の言語モデル使うって何?って人もいらっしゃると思うので簡単に先ほどのループエンジニアリングの中でどういう処理になるのかっていうのを説明します皆さんが何かAIに指示した時ってそのAIが実行して結果を返してくれるとただその結果が良くない場合ってのがあるのでそういった場合に使いますとなので何でもかんでもループ組めばいいって話じゃなくて精度が出ない場合に複数のAIを使って</p>
+<p><code>13:53</code> 精度を上げていくっていう話になっています精度を上げていくには必ず評価をする必要がありますできたものがいいのか悪いのかってのが分からないと改善の方向が分からないのでそれを評価する仕組みが必要になりますそれが検証と改善というところでこの検証に関しては何らかのプログラムを実行して機械的に合ってるか間違ってるかっていうのを評価させる方法とあとは言語モデルに検証させるっていう方法もあったりしますその結果をもとに次何をすればいいのかっていう改善案を言語モデルに考えさせてその改善案をもとに次の実行をするというところでループが組めるというイメージになっています</p>
+<p><code>14:34</code> このループエンジニアリングの肝になってくるところとしてはいくつかあるんですけどもその一つが検証をどうやってやるのかってところがありますプログラムとかだったらテストコードが通るのかとかそういうところで機械的に検証できるんですけれども例えば皆さんの仕事の中で何か議事録を作らせてその議事録をプログラムで自動で検証するっていうのは難しいですよねなので手っ取り早い方法としてはこの検証と改善をAIにやらせてそれを元に改善していくという方法になっていますなんかこういうふうに言うと</p>
+<p><code>15:07</code> わざわざAIを2つ使う必要あるんでしょうかというところは疑問かと思いますAIに作らせてAIで評価するんだったらなんかあんま変わんないんじゃないのというふうに思うと思うんですけども基本的に言語モデルは自分の作ったものを甘く評価しがちっていうのが性質としてあると言われていますなのでこちらの言語モデル1体だけで作らせて改善させると結構評価が甘くなってしまうのでこんな感じで分けると経験則的に良かったりするのでこういうふうに分けるのがおすすめですこの改善のポイントとかを適切に抽出するのが非常に大事なので例えばこちらのモデルだけ性能がいいモデルを使ったり</p>
+<p><code>15:44</code> FableとかOpusとか実行はSonnetを使うとかそんな感じで組むっていうのも一つコストの節約ってところでもいいんじゃないかなというふうに思いますというところで仕組みは分かったと思うので実際に言語モデル2つ使ってみてどんな感じになるのかっていうのを見てみましょうクロードコードの中でループを作って精度を上げていくっていう方法はいくつかアプローチがありますちょっと紛らわしいんですけどもクロードコードには標準でループコマンドっていうのがありますこれ見るとまさにループエンジニアリングかなっていう風に思いがちなんですが</p>
+<p><code>16:16</code> これは単純に定期的に実行するっていうものになっていて今回のAIが実行して結果を検証してまた実行するっていうそういうループをやろうとするとゴールコマンドの方が正しいアプローチになっていますじゃあこのゴールコマンドをどうやって使うのかっていうとこのスラッシュのゴールで達成したい条件をこんな感じで書いてあげればこの条件を満たすまで実行して評価してまた実行するという形でループが組めます細かい仕組みを言うとこれ中ではクロードの俳句のモデルが使われて評価を行ってループを回すような形になっていますただ個人的にはこれ使うんだったら自分でサブエージェントを使ってループを組んだ方が自由度も高くて</p>
+<p><code>17:01</code> より皆さんの仕事の中で使いやすいんじゃないかなというふうに思いますサブエージェントって何?っていう人もいらっしゃると思うので簡単に説明すると基本的に皆さんがクロードコードに話しかけるとメインエージェントと呼ばれるものが回答を生成していますメインエージェントっていうのはモデルの名前じゃなくて分類としてメインで皆さんと会話するようなAIのことを指しています例えばクロードコードを立ち上げてこんにちはっていうふうに打つとすぐに返答が返ってくるかと思いますこんな感じで返ってきましたとこれは皆さんが何か入力すると</p>
+<p><code>17:34</code> それに対してメインエージェントが返答を生成しているとこんな感じですねメインのエージェントとしてはFable5を今選んでいるのでFable5が今返答を生成していますクロードコードにはこのメインのエージェント以外にもサブエージェントと呼ばれる概念があってメインエージェントがサブエージェントを呼び出すとサブエージェントが何か作業して結果を返すみたいなそういったことができたりしますこれも結構触ってないとわからないかなと思うんですけども例えばこちらでメインのエージェントに対してサブエージェントを呼び出してって言えばこちらのメインエージェントがサブエージェントを呼び出して</p>
+<p><code>18:09</code> その結果を受け取ってユーザーに返すってことができたりします例えばこんな感じで元気ですかってサブエージェントに聞いてみてくださいという風にメインのエージェントに聞いてみますそうすると今サブエージェントを起動していてこのエージェント括弧ホリホリというのはサブエージェントに対して呼び出しを行っていると結果として元気です気分は快調ですというふうに返ってきたというところで裏側では別のAIのモデルを呼び出してその結果を返してメインエージェントが今返してくれているというところで返答が生成されているとそういった仕組みになっています</p>
+<p><code>18:43</code> ちょっとですねこれ文字だけなので裏側で何が起きているかっていうのはイメージしにくいんですけども図にするとこんな感じでメインのエージェントとそのメインのエージェントが呼び出しているサブエージェントがいますこのサブエージェントは一体だけじゃなくて複数のサブエージェントがエージェントを起動するってこともできたりするのでこの性質を使うと例えばいくつかの役割を与えてそれぞれのエージェントで何か指示をして結果をすべて返すというところもできたりしますじゃあこの仕組みを皆さんの仕事の中でどういうふうに使っていくのかというと</p>
+<p><code>19:15</code> 一例としてはこんな感じでループが組めます先ほどと同じ感じでメインエージェントとサブエージェントがいます皆さんが指示をするのはこのメインエージェントで例えば何か議事録とかですねそういったものをクロードコードに行って作らせますそうすると成果物ができるのでこれをサブエージェントにチェックしてもらうとチェックしてもらうとダメ出しリストとか採点が出てくるのでそれを元にメインエージェントで修正を行ってまた成果物を作ると理屈上はやろうと思えばずっと無限にループを回して品質を高めるってことができたりします</p>
+<p><code>19:51</code> ただこの仕組みにも弱点があってうまくいかないケースもあったりするんですがそれちょっと後で話します大半のケースでこういうふうにすると1回で言語モデル使うよりは精度が上がるので個人的にはおすすめですただ最近の動向としてCloud Opus 5ぐらい性能が高いモデルだとこのサブエージェントを使った検証はしなくてもいいですよというところが公式から言われてたりしますこちらでも書かれているようにプロンプトの中に検証指示が含まれている場合は削除してくださいというところでサブエージェントを使わなくても</p>
+<p><code>20:24</code> Cloud Opus 5ぐらいだと自分で検証するのでそういった指示はしなくてもいいというふうに言われていますこれは公式が言ってるので正しい部分もあるのかなというふうに思うんですが私がやってる中ではCloud Opus 5でも検証のサブエージェントっていうのはあんまり起動してくれないなってことが個人的にはあったので私はなんだかんだ言ってこのサブエージェントを使って検証するというステップはまだ使っていますここら辺サブエージェントめっちゃ使ってる人は使ってる感触とかで何か意見あったらコメントの方してもらえるとありがたいです一応そういった公式の推奨と</p>
+<p><code>20:57</code> 実際使ってみると違うという風に私が感じてるんですがそれ以外にもオーパス5を普段からそんな使えないよっていう人もいるかと思いますそういった場合ですねソネット5とかではこういう風に検証してあげると精度上がると思いますしサブエージェントとメインエージェントは別のAIのモデル使えるので少し前にも言ったんですがこちらのモデルだけOpusとかFable使って検証と評価の精度を上げるってこともできたりしますというところで実際にこちらのループを組んでいくんですが題材に関しては何でもよくて皆さんが普段からやらせているタスクに関しても</p>
+<p><code>21:31</code> 同じようにやることができるかと思います今回は最近私が本を書いているのでその中で画面繊維とかを全ていい感じに赤枠とかつけてドキュメント化してほしいなというケースでループを組んでみたいと思います皆さんも何か仕事の中でマニュアル作ってるよとかそういった場合にスクリーンショットを何枚か取ってそれをフォルダに入れてあとは操作マニュアルを作ってくださいという風に指示すればドキュメントを作ってくれたりするのでぜひやってみてほしいんですが今回ですねこちらでどれぐらいのいいマニュアルができるのかっていうのを試してみます今回検証エージェントを使った場合と使ってない場合でどう違うのかっていうのを見ていきたいので</p>
+<p><code>22:12</code> 2パターンで実験する必要がありますそれぞれのパターンが独立で動いてほしいのでそういった場合にGitWorks3っていうのが使えますここら辺もクロードコードにお願いすれば使ってくれるので興味がある人はやってみてほしいんですけどもこんな感じで今2つ開いていてそれぞれ同じような形でスクリーンショットの画像を3枚与えてマニュアルを作ってほしいですと赤枠の番号付きで分かりやすいマークダウンのドキュメントを作ってくださいとワークツリーを作って作業してという風に入れますちょっとちっちゃいですかね右側に関しては検証エージェントを使うので</p>
+<p><code>22:47</code> 作成後検証エージェントを起動してフィードバックループを最大3回回してくださいという風に指示しますこれ技術的には無限にループ回っちゃうこともあるのでループの上限を設定しておきますこちらでそれぞれですね指示をしてどう違うのかっていうのを見てみましょうちなみに両方ともモデルとしてはソネットを使ってますちょっと見にくいですねこちらのソネットですねソネットを使ってますというところでちょっとできるまで待ちましょうはい今ですね作成が完了しましただいたい10分から15分ぐらいかかったかなというふうに思います</p>
+<p><code>23:22</code> 左側が一発で作ったマニュアルで右側が検証エージェントを使って3回までループを回して作ったマニュアルになっていますでちょっと見てみるとまず手順1に関しては両方ともほとんど同じでただちょっとこの赤枠のところが単発のエージェントに関しては若干切れちゃってると右側の検証エージェントを入れた場合は枠は綺麗なんですけれども1の番号のこの位置がですねずれちゃってると手順2に関してはこんな感じでこちらもちょっと似てるんですが赤枠が単発の方は重なっていて検証エージェントはちゃんとできてますね</p>
+<p><code>23:58</code> 検証エージェントの方に関してはこんな感じで線もつけてくれてるというところで若干見やすいかなと思います手順3に関しては左側はまとめて書かれているというので345というところでこういう風にしましょうと検証エージェントの方に関しても同じような感じで書かれているとあとはやっぱり赤枠のところが検証エージェントの方がしっかりとできている感じがありますねというところでちょっと分かりにくくて申し訳ないんですけどもソネットのモデルで検証するという感じでぐるぐるループを回したんですが</p>
+<p><code>24:30</code> そうするとですね若干この図の感じとかも質が上がっていると私は普段使っている中でもやっぱり1回だけで何かやらせて作らせるよりも何回か検証させると結構 間違ってたりするので ai も人間と同じで作るよりも批判する方が簡単なので 経験的にもこのフローで品質を上げていくっていうのはかなりおすすめです といってもですねニャンタが適当に言ってるだけじゃねーかというふうに思った人 もいるかもしれないので最新の論文の結果も紹介しておきますこちら韓国のカイストっていう大学院とかカーネギーメロン大学とかあとはNVIDIAの方々が研究した論文になっていて</p>
+<p><code>25:09</code> AIが自分で自分の回答を修正することによって精度が上げられるのかっていうのを調べた研究になっています最近のAIは自分で考えることができるのでそれによって自分で作ったものを評価させて正しく間違いを修正できるのかっていうのを見ています結論としては何のフィードバックもなしに修正させるセルフリファインメントという方法だと多くのモデルはほとんど精度は改善しませんよと逆にどういう修正が必要かっていう観点をフィードバックさせた場合は精度が上がりますよっていうところが示されている研究になっています</p>
+<p><code>25:45</code> つまり皆さんがAI使っていて指示として何かやらせて最後に確認してくださいという風に入力してもあんまり意味ないよというところが分かりましたという論文になっていますこちらが自分で修正させた場合と評価用のAIを使ってフィードバックをさせて修正させた場合でどれぐらい精度が上がるのかっていうのを示している実験結果になっています左側が特に評価観点とかを与えずに自分で修正させた場合でこのTイコール1っていうのが1回やった場合でTイコール5ってのが何回もやった場合ですね</p>
+<p><code>26:20</code> ちょっとちっちゃいですかねこちらのデルタが1回目と5回目のサブになっていて多くのモデルでほとんど精度が上がってないというところが分かっていますなので単純に自分で作ったものを自分で評価させてもあんまり意味ないよってことですね右側が別のAIに採点基準とか渡してダメなところをフィードバックとして与えるとどうなるのかってのを調べている結果になっていてこれ5回やると精度がめちゃくちゃ上がってるというのがわかるかと思いますオーパス4.1とかだと98.4%ってところで修正させた時の伸び率がすごいですよね</p>
+<p><code>26:55</code> ただフィードバックもらえれば精度上がるよねっていうのはそりゃそうだろっていう風に思った人も多いと思いますこのフィードバックはある種正解の基準を知っているのでそれをフィードバックとして与えたら精度は上がるでしょっていうのはなんとなくイメージできるかなと思いますこの論文が面白いのはその評価基準を自分に持たせた場合と他のAIで採点した場合でどうなるのかっていうのも比較していてこちらの表の4になるんですが当然評価基準を持っているので精度がどんどん上がっていきますただ5回やったとしても75.8までしかスコアが上がっていませんと</p>
+<p><code>27:31</code> 一方でこの表3のところでジェミニ2.5プロで他のAIでフィードバックを与えた場合の結果見てみると94.7なのでつまり自分で評価基準を持つよりもそこからダメ出しされた方が精度の伸び幅が非常に大きいというところがわかります こちらですねつまりこれは ai は自分で作ったものを自分で正しく評価するってのが難しいというところがわかるので先ほど紹介したようにサブエージェントを使って、間違いを指摘してもらうような構造にした方が、精度が上がりやすいっていうのがわかります。ちょっと小難しい話なんですが、</p>
+<p><code>28:07</code> 皆さんがなんか精度出ないなという場合は、基本的に別のAIに評価基準を持たせて評価させるっていうのが、最先端の研究では良さそうというところを一つ押さえておくといいのかなと思います。あとポイントとしては、この論文は数学とか、そういったものだけじゃなくて小論文とかですねそういった自由記述のタスクも含んでいるのでより皆さんが普段仕事で扱うようなそういったデータに近いもので評価されているというところも一つポイントかなと思います検証エージェントを使う時の弱点についても簡単に紹介しておくと一つはまずコストがかかるというところで</p>
+<p><code>28:44</code> AIのモデルを複数使うのでその分料金と時間がかかってしまいますとこれはみんな想像はつくかなと思うんですがもう一つですね局所最適解になりやすいってところがあったりしますつまり特定の観点で精度を上げるってことはできるんですけども途中で下がらないとたどり着けないようなそういった帯域的な解があることがあってこういった場所には一度下がらないといけないのでループエンジニアリングの中で単純にスコアを改善するってだけだったらそこそこいいところで終わってしまうというところが結構起きたりします</p>
+<p><code>29:18</code> これの対策としては最初に一つのプロンプトじゃなくて複数のプロンプトを並列で作ってあげて別々に進化させるとかそういったやり方もあってですね結構そこらへん個人的にやってたんですけどもなかなか奥が深いなというところでそこは私もどうすれば自動的に最適なプロンプトとかを設計できるんだろうなってところはまだやり方は固まってないという感じになっていますなのでループエンジニアリング使うと何でも改善できそうだなというふうな気持ちになるんですが実際はですねうまくいかないことも結構あったりしますここらへんいろいろ実験したことある人は</p>
+<p><code>29:53</code> どういう風な感触を持っているでしょうか何か感想とかあったらぜひコメントの方で教えてください最後にお知らせです現在企業様向けにAI活用の相談窓口を設置しています自分の仕事のどこにAIを入れたらいいのかっていうのを一緒に考えてほしいとか社内でAIを使いこなせる人材を育てていきたいとかそもそも何から始めたらいいかわからないとかそういった企業様向けに課題の整理から研修開発まで状況に合わせてサポートしています興味のある方は概要欄のフォームから</p>
+<p><code>30:27</code> メールアドレスと簡単なアンケートを答えてもらえればと思います特にこちらから押し売りするってことはないので安心してお気軽にご連絡ください皆さんと一緒にAIで業務効率化できることを楽しみにしておりますそれでは本日の動画を終了したいと思いますこの動画が良かったなって思った人は高評価コメントチャンネル登録と最近ではスマートフォンからハイプボタンというのがあるのでこちらも押してもらえるとありがたいですそれではまた次回の動画でお会いしましょうバイバイ</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./ai-loop-engineering" class="internal" data-slug="ai-loop-engineering">ai-loop-engineering</a>（StructureNote）</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote）</li>
+<li><a href="./2026-06-20-loop-success-conditions" class="internal" data-slug="2026-06-20-loop-success-conditions">2026-06-20-loop-success-conditions</a>（StructureNote）</li>
+<li><a href="./2026-07-18-parallel-extract-adversarial-verify" class="internal" data-slug="2026-07-18-parallel-extract-adversarial-verify">2026-07-18-parallel-extract-adversarial-verify</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-907" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

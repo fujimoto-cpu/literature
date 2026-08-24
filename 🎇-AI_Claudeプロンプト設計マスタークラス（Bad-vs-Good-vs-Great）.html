@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>🎇 AI_Claudeプロンプト設計マスタークラス（Bad vs Good vs Great）</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="🎇 AI_Claudeプロンプト設計マスタークラス（Bad vs Good vs Great）"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="🎇 AI_Claudeプロンプト設計マスタークラス（Bad vs Good vs Great）"/><meta name="twitter:description" content="📷 Instagram投稿情報 @analytics_vidhya ・ 📅 2026-03-24 🔗 www.instagram.com/p/DWQTJZrkgWd/ 📝 キャプション Most people write prompts."/><meta property="og:description" content="📷 Instagram投稿情報 @analytics_vidhya ・ 📅 2026-03-24 🔗 www.instagram.com/p/DWQTJZrkgWd/ 📝 キャプション Most people write prompts."/><meta property="og:image:alt" content="📷 Instagram投稿情報 @analytics_vidhya ・ 📅 2026-03-24 🔗 www.instagram.com/p/DWQTJZrkgWd/ 📝 キャプション Most people write prompts."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/🎇-AI_Claudeプロンプト設計マスタークラス（Bad-vs-Good-vs-Great）"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/🎇-AI_Claudeプロンプト設計マスタークラス（Bad-vs-Good-vs-Great）"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📷 Instagram投稿情報 @analytics_vidhya ・ 📅 2026-03-24 🔗 www.instagram.com/p/DWQTJZrkgWd/ 📝 キャプション Most people write prompts."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="🎇-AI_Claudeプロンプト設計マスタークラス（Bad-vs-Good-vs-Great）"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-5169"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-5169" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>🎇 AI_Claudeプロンプト設計マスタークラス（Bad vs Good vs Great）</a></div></nav><h1 class="article-title">🎇 AI_Claudeプロンプト設計マスタークラス（Bad vs Good vs Great）</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-01T15:00:00.000Z">2026年5月02日</time><span>9 min read</span></p><ul class="tags"><li><a href="./tags/instagram" class="internal tag-link">instagram</a></li><li><a href="./tags/aitools" class="internal tag-link">aitools</a></li><li><a href="./tags/promptengineering" class="internal tag-link">promptengineering</a></li><li><a href="./tags/claude" class="internal tag-link">claude</a></li><li><a href="./tags/artificialintelligence" class="internal tag-link">artificialintelligence</a></li><li><a href="./tags/productivityhacks" class="internal tag-link">productivityhacks</a></li><li><a href="./tags/worksmarternotharder" class="internal tag-link">worksmarternotharder</a></li><li><a href="./tags/aiforbeginners" class="internal tag-link">aiforbeginners</a></li><li><a href="./tags/contentcreator" class="internal tag-link">contentcreator</a></li><li><a href="./tags/digitalmindset" class="internal tag-link">digitalmindset</a></li><li><a href="./tags/techstagram" class="internal tag-link">techstagram</a></li><li><a href="./tags/ailearning" class="internal tag-link">ailearning</a></li><li><a href="./tags/growthmindset" class="internal tag-link">growthmindset</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📷 Instagram投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@analytics_vidhya</strong> ・ 📅 2026-03-24
+🔗 <a href="https://www.instagram.com/p/DWQTJZrkgWd/" class="external">https://www.instagram.com/p/DWQTJZrkgWd/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<blockquote>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_1.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_2.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_3.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_4.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_5.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_6.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_7.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DWQTJZrkgWd_8.jpg" width="auto" height="auto" alt/></p>
+</blockquote>
+<h2 id="-キャプション">📝 キャプション<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-キャプション" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Most people write prompts. The best people engineer them.</p>
+<p>Here’s what separates a bad prompt from a great one:</p>
+<p>❌ “Write a LinkedIn post for me”
+→ Zero context. Generic output.</p>
+<p>✅ “Write a LinkedIn post from the POV of a 10-year HR veteran who just saw a résumé screened by AI in seconds. Use a hook that challenges convention, 3 punchy insights, end with a question. Audience: mid-level HR managers. Voice: candid, slightly contrarian. 180–220 words.”
+→ Now Claude has everything to nail it.</p>
+<p>The pattern? Role + Structure + Audience + Voice + Length.</p>
+<p>Apply this to any task: marketing strategy, business validation, competitor analysis and your outputs improve dramatically.</p>
+<p>The 3 rules I now live by:</p>
+<ol>
+<li>Context beats clarity every time</li>
+<li>Define the output format upfront</li>
+<li>Give Claude a role + goal, not just a task</li>
+</ol>
+<p>Save this. Your future self will thank you.</p>
+<p>What’s the best prompt you’ve written lately? Drop it below 👇</p>
+<p>[AI Tools, Data Science, Claude Code, Claude, AI, Analytics Vidhya, Claude prompts]</p>
+<p><a href="./tags/aitools" class="tag-link internal alias" data-slug="tags/aitools">aitools</a> <a href="./tags/promptengineering" class="tag-link internal alias" data-slug="tags/promptengineering">promptengineering</a> <a href="./tags/claude" class="tag-link internal alias" data-slug="tags/claude">claude</a> <a href="./tags/artificialintelligence" class="tag-link internal alias" data-slug="tags/artificialintelligence">artificialintelligence</a> <a href="./tags/productivityhacks" class="tag-link internal alias" data-slug="tags/productivityhacks">productivityhacks</a> <a href="./tags/worksmarternotharder" class="tag-link internal alias" data-slug="tags/worksmarternotharder">worksmarternotharder</a> <a href="./tags/aiforbeginners" class="tag-link internal alias" data-slug="tags/aiforbeginners">aiforbeginners</a> <a href="./tags/contentcreator" class="tag-link internal alias" data-slug="tags/contentcreator">contentcreator</a> <a href="./tags/digitalmindset" class="tag-link internal alias" data-slug="tags/digitalmindset">digitalmindset</a> <a href="./tags/techstagram" class="tag-link internal alias" data-slug="tags/techstagram">techstagram</a> <a href="./tags/ailearning" class="tag-link internal alias" data-slug="tags/ailearning">ailearning</a> <a href="./tags/growthmindset" class="tag-link internal alias" data-slug="tags/growthmindset">growthmindset</a></p>
+<hr/>
+<h2 id="-スライド内容">📸 スライド内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-スライド内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="スライド-1">スライド 1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>The Claude Prompt Masterclass</strong>
+<strong>Bad vs. Good vs. Great Claude Prompts</strong>
+See what separates a mediocre prompt from one that delivers outstanding results.</p>
+<hr/>
+<h3 id="スライド-2">スライド 2<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Example 1: LinkedIn Post</strong></p>
+<p><strong>Bad Prompt</strong>
+Write a Linkedin Post for me
+→ Zero context, Claude has no idea about your industry, audience, tone or goal.</p>
+<p><strong>Good Prompt</strong>
+Write a linkedin post about how AI is changing the hiring process. Make it professional and around 200 words.
+→ Clear task + tone + length, but lacks your POV, audience and desired outcome</p>
+<p><strong>Great Prompt</strong>
+Write a LinkedIn post from the POV of a 10-year HR veteran who just saw a resume screened by AI in seconds. Use a hook that challenges convention, 3 punchy insights, end with a question to drive comments. Audience: mid-level HR managers. Voice: candid, slightly contrarian. 180-220 words.”</p>
+<p>PROMPT BREAKDOWN:</p>
+<ul>
+<li>Role/POV: 10-yr HR veteran</li>
+<li>Hook: Challenges convention</li>
+<li>Structure: Hook → 3 insights → CTA question</li>
+<li>Audience: Mid-level HR managers</li>
+<li>Voice: Candid, contrarian</li>
+<li>Length: 180–220 words</li>
+</ul>
+<p>→ Role, structure, audience, voice goal + length. Claude has everything to nail it</p>
+<hr/>
+<h3 id="スライド-3">スライド 3<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Example 2: Business Idea Validation</strong></p>
+<p><strong>Bad Prompt</strong>
+Is my business idea good?
+→ No idea described, No framework, No Context, impossible to answer</p>
+<p><strong>Good Prompt</strong>
+I want to build an app that helps freelances track invoices. Is this a good idea? What are the risks?
+→ Idea is described. But now market context, stage or validation framework given.</p>
+<p><strong>Great Prompt</strong>
+Validate using the Mom test framework: a notion CRM for solo B2B consultants at $2k+/mo. I’m pre-revenue, technical, with 5 Linkedin connection in this niche. Give me: pain score(1-10), 3 riskiest assumptions, 3 validation experiments in 2 weeks, 2 competing alternatives</p>
+<p>PROMPT BREAKDOWN:</p>
+<ul>
+<li>Framework: Mom Test methodology</li>
+<li>Idea: Notion CRM for B2B consultants</li>
+<li>Stage: Pre-revenue</li>
+<li>Context: Technical founder, 5 warm leads</li>
+<li>Output: Pain score, assumptions, experiments, comps</li>
+</ul>
+<p>→ Named framework + specific context + stage + structured output = investor-grade validation</p>
+<hr/>
+<h3 id="スライド-4">スライド 4<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-4" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Example 3: Marketing Strategy</strong></p>
+<p><strong>Bad Prompt</strong>
+Give me a marketing strategy.
+→ No product, no audience, no budget, no goal. Output will be generic fluff.</p>
+<p><strong>Good Prompt</strong>
+Create a marketing strategy for my SaaS targeting small businesses. Focus on social media and content marketing.
+→ Product + channels defined. Missing ICP, budget, stage, and success metrics.</p>
+<p><strong>Great Prompt</strong>
+Build a 90-day GTM plan for a B2B SaaS (agency PM tool, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">99/</span><span class="mord mathnormal">m</span><span class="mord mathnormal">o</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal">u</span><span class="mord mathnormal">d</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span></span></span></span>0 organic only. ICP: 2–10 person creative agencies. Goal: 50 free trial signups. Include: week-by-week content calendar, top 3 channels with rationale, 1 viral hook strategy, KPIs per channel.</p>
+<p>PROMPT BREAKDOWN:</p>
+<ul>
+<li>Product+price: Agency PM SaaS, $99/mo</li>
+<li>Budget: $0 — organic only</li>
+<li>ICP: 2–10 person creative agencies</li>
+<li>Goal: 50 free trial signups in 90 days</li>
+<li>Output: Calendar, channels, hook, KPIs</li>
+</ul>
+<p>→ Budget + ICP + measurable goal + output format = a real strategy Claude can build.</p>
+<hr/>
+<h3 id="スライド-5">スライド 5<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-5" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Example 4: Lead Generation</strong></p>
+<p><strong>Bad Prompt</strong>
+Help me generate leads.
+→ No product, no target, no channel. Like asking GPS for directions with no destination.</p>
+<p><strong>Good Prompt</strong>
+Give me 5 ways to generate leads for my consulting business on LinkedIn.
+→ Channel + business + count. Missing ICP, offer, and conversion goal.</p>
+<p><strong>Great Prompt</strong>
+I’m a solo fractional CFO targeting bootstrapped SaaS founders at <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">500</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span></span>2M ARR. Write a 5-touch LinkedIn DM sequence icebreaker based on their content, problem-agitation for their stage, soft CTA for 15-min call, follow-up for non-responders. Tone: peer-to-peer, no buzzwords.</p>
+<p>PROMPT BREAKDOWN:</p>
+<ul>
+<li>Persona: Fractional CFO, solo</li>
+<li>ICP: Bootstrapped SaaS <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord">500</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">–</span></span></span></span>2M ARR</li>
+<li>Channel: LinkedIn DM</li>
+<li>Sequence: 5-touch: icebreaker, agitation, CTA, follow-up</li>
+<li>Tone: Peer-to-peer, no buzzwords</li>
+</ul>
+<p>→ Hyper-specific ICP + offer clarity + sequence structure + tone = a sequence that converts.</p>
+<hr/>
+<h3 id="スライド-6">スライド 6<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-6" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Example 5: Competitor Analysis</strong></p>
+<p><strong>Bad Prompt</strong>
+Analyze my competitors
+→ No industry, no competitors named, no framework, no goal. Completely open-ended.</p>
+<p><strong>Good Prompt</strong>
+Compare Notion and Coda as project management tools. What are the pros and cons of each?
+→ Named competitors + category. Missing your product, positioning, and strategic framing</p>
+<p><strong>Great Prompt</strong>
+I’m building a lightweight PM tool for solo freelancers. Teardown Notion, Coda, Basecamp: pricing model, top 3 UX complaints from G2/Trustpilot, messaging angle, and the gap they’re NOT solving for solopreneurs. Output: comparison table + whitespace opportunity section for my pitch deck.</p>
+<p>PROMPT BREAKDOWN:</p>
+<ul>
+<li>My product: Lightweight PM for solo freelancers</li>
+<li>Competitors: Notion, Coda, Basecamp</li>
+<li>Data: G2 / Trustpilot reviews</li>
+<li>Depth: Pricing, UX pain, messaging, gaps</li>
+<li>Output: Table + whitespace section for pitch deck</li>
+</ul>
+<p>→ Your context + named comps + data framing + output format = pitch-ready competitive intel.</p>
+<hr/>
+<h3 id="スライド-7">スライド 7<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-7" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Example 7: SaaS Idea Generation</strong>（※投稿内の番号のまま）</p>
+<p><strong>Bad Prompt</strong>
+Give me SaaS ideas
+→ No niche, no founder context, no constraints. You’ll get a useless braindump.</p>
+<p><strong>Good Prompt</strong>
+Give me 10 SaaS ideas in the HR tech space that could be built by a solo developer.
+→ Niche + builder + count. Missing your skills, pricing model, and validation lens.</p>
+<p><strong>Great Prompt</strong>
+Full-stack dev (React + Node), 3yr B2B SaaS. Generate 5 micro-SaaS ideas for underserved ops roles (RevOps, DevOps, FinOps) at Series A startups. Each must: solve >2hrs/week pain, buildable solo in &lt;3mo, support <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">49–</span></span></span></span>149/mo pricing, have an unfair distribution angle. Score each: market size, build difficulty, distribution clarity (1–10).</p>
+<p>PROMPT BREAKDOWN:</p>
+<ul>
+<li>Skills: React + Node, 3yr B2B SaaS</li>
+<li>ICP: Ops roles at Series A startups</li>
+<li>Constraints: Solo build &lt;3mo, <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">49–</span></span></span></span>149/mo</li>
+<li>Pain bar: >2hrs/week workflow pain</li>
+<li>Moat: Unfair distribution channel</li>
+<li>Scoring: Market, difficulty, distribution (1–10)</li>
+</ul>
+<p>→ Skills + ICP + build constraints + scoring = ideas you can actually execute tomorrow.</p>
+<hr/>
+<h3 id="スライド-8">スライド 8<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-8" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>THE 3 RULES OF GREAT PROMPTS</strong>
+<strong>Prompt like a pro.</strong></p>
+<p>01 — <strong>Context</strong> beats clarity every time
+02 — Define the <strong>output format</strong> upfront
+03 — Give Claude a <strong>role + goal,</strong> not just a task</p>
+<p><strong>Save this. Share it. Prompt Better</strong></p>
+<hr/>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>「プロンプトを書く人」と「プロンプトを設計する人」の違いを7つの実例で徹底解説。Role + Structure + Audience + Voice + Lengthの5要素が鍵。</strong></p>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🧩 フレームワーク — プロンプト設計の5要素 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>優れたプロンプトに共通するのは「Role（役割）+ Structure（構成）+ Audience（対象）+ Voice（口調）+ Length（文字数）」の明示。単にタスクを投げるのではなく、Claudeが出力すべき内容・形式・文体まで定義することで、汎用的な回答を超えた実行可能な成果物が得られる。LinkedInポスト・マーケティング戦略・競合分析など、どのタスクにも適用できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📋 3つのルール — プロのプロンプト原則 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<ol>
+<li><strong>Context beats clarity every time</strong>（明確さより文脈が勝つ）</li>
+<li><strong>Define the output format upfront</strong>（アウトプット形式を先に定義する）</li>
+<li><strong>Give Claude a role + goal, not just a task</strong>（タスクだけでなく役割＋目標を与える）
+この3原則を守るだけで、同じタスクでも出力品質が劇的に変わる。</li>
+</ol>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 提案書・企画書をClaudeに書かせるとき</strong>
+「マーケター5年目の視点で」「読者：クライアント担当者」「トーン：自信あり・やや挑戦的」「A4 1枚分・箇条書き3点」まで指定する。明日の企画書から試してみて。</p>
+<p><strong>② 競合分析や案件リサーチに</strong>
+「私のプロダクトは〇〇。競合X・Y・Zを価格・UX課題・ポジショニングで比較して。出力はピッチデック用比較表＋ホワイトスペース」のように出力形式まで決め打ちする。</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>プロンプトエンジニアリングはクリエイティブ制作にも直結する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>デザイン指示・コピー依頼・ブランドブリーフの生成など、クリエイティブ業務でも「Role（例：老舗ラグジュアリーブランドのACD）＋Audience（例：25-35歳の女性）＋Format（例：キャッチコピー3案）」のフレームは即効性がある。CORINへの指示出しにもこのフレームを適用すると、アウトプットの質が上がる。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a> — プロンプト設計の実践場、スキル・コマンド設計に直結</li>
+<li><a href="./プロンプトエンジニアリング" class="internal alias" data-slug="プロンプトエンジニアリング">プロンプトエンジニアリング</a> — 上位概念</li>
+</ul>
+<hr/>
+<p><a href="./Instagram" class="internal" data-slug="Instagram">Instagram</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-2145" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-キャプション" data-for="-キャプション">📝 キャプション</a></li><li class="depth-0"><a href="#-スライド内容" data-for="-スライド内容">📸 スライド内容</a></li><li class="depth-1"><a href="#スライド-1" data-for="スライド-1">スライド 1</a></li><li class="depth-1"><a href="#スライド-2" data-for="スライド-2">スライド 2</a></li><li class="depth-1"><a href="#スライド-3" data-for="スライド-3">スライド 3</a></li><li class="depth-1"><a href="#スライド-4" data-for="スライド-4">スライド 4</a></li><li class="depth-1"><a href="#スライド-5" data-for="スライド-5">スライド 5</a></li><li class="depth-1"><a href="#スライド-6" data-for="スライド-6">スライド 6</a></li><li class="depth-1"><a href="#スライド-7" data-for="スライド-7">スライド 7</a></li><li class="depth-1"><a href="#スライド-8" data-for="スライド-8">スライド 8</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

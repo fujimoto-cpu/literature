@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【AI】Claude Code入門 - 新しいデザインのつくり方 アイデアを動くUIに変えよう</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【AI】Claude Code入門 - 新しいデザインのつくり方 アイデアを動くUIに変えよう"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【AI】Claude Code入門 - 新しいデザインのつくり方 アイデアを動くUIに変えよう"/><meta name="twitter:description" content="🎬 動画情報 【AI】Claude Code入門 - 新しいデザインのつくり方 | アイデアを”動くUI”に変えよう 🎙️ BONO-カイクン ・ 📅 2026-05-14 ・ ⏱️ 35分4秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 UIデザインコミュニティ「BONO」のカイクンが、非エンジニア・デザイナー向けに claude-code のインストールから動くToDoアプリの生成まで、ステップバイステップで解説するチュートリアル動画。 🗺️ 全体像 flowchart TD A[Cursorまたはターミナルを開く] --> B[イン..."/><meta property="og:description" content="🎬 動画情報 【AI】Claude Code入門 - 新しいデザインのつくり方 | アイデアを”動くUI”に変えよう 🎙️ BONO-カイクン ・ 📅 2026-05-14 ・ ⏱️ 35分4秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 UIデザインコミュニティ「BONO」のカイクンが、非エンジニア・デザイナー向けに claude-code のインストールから動くToDoアプリの生成まで、ステップバイステップで解説するチュートリアル動画。 🗺️ 全体像 flowchart TD A[Cursorまたはターミナルを開く] --> B[イン..."/><meta property="og:image:alt" content="🎬 動画情報 【AI】Claude Code入門 - 新しいデザインのつくり方 | アイデアを”動くUI”に変えよう 🎙️ BONO-カイクン ・ 📅 2026-05-14 ・ ⏱️ 35分4秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 UIデザインコミュニティ「BONO」のカイクンが、非エンジニア・デザイナー向けに claude-code のインストールから動くToDoアプリの生成まで、ステップバイステップで解説するチュートリアル動画。 🗺️ 全体像 flowchart TD A[Cursorまたはターミナルを開く] --> B[イン..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【AI】Claude-Code入門---新しいデザインのつくり方-アイデアを動くUIに変えよう"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【AI】Claude-Code入門---新しいデザインのつくり方-アイデアを動くUIに変えよう"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="🎬 動画情報 【AI】Claude Code入門 - 新しいデザインのつくり方 | アイデアを”動くUI”に変えよう 🎙️ BONO-カイクン ・ 📅 2026-05-14 ・ ⏱️ 35分4秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 UIデザインコミュニティ「BONO」のカイクンが、非エンジニア・デザイナー向けに claude-code のインストールから動くToDoアプリの生成まで、ステップバイステップで解説するチュートリアル動画。 🗺️ 全体像 flowchart TD A[Cursorまたはターミナルを開く] --> B[イン..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【AI】Claude-Code入門---新しいデザインのつくり方-アイデアを動くUIに変えよう"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1462"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1462" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【AI】Claude Code入門   新しいデザインのつくり方 アイデアを動くUIに変えよう</a></div></nav><h1 class="article-title">【AI】Claude Code入門 - 新しいデザインのつくり方 アイデアを動くUIに変えよう</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-16T15:00:00.000Z">2026年5月17日</time><span>65 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/ui-design" class="internal tag-link">ui-design</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🎬 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【AI】Claude Code入門 - 新しいデザインのつくり方 | アイデアを”動くUI”に変えよう</strong>
+🎙️ BONO-カイクン ・ 📅 2026-05-14 ・ ⏱️ 35分4秒
+🔗 <a href="https://www.youtube.com/watch?v=aWaAe2VQrTw" class="external">https://www.youtube.com/watch?v=aWaAe2VQrTw<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【AI】Claude-Code入門---新しいデザインのつくり方-アイデアを動くUIに変えよう.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>UIデザインコミュニティ「BONO」のカイクンが、非エンジニア・デザイナー向けに <a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a> のインストールから動くToDoアプリの生成まで、ステップバイステップで解説するチュートリアル動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Cursorまたはターミナルを開く] --> B[インストールコマンドを実行]\n    B --> C[Claudeアカウントでログイン]\n    C --> D[claude コマンドで起動確認]\n    D --> E[仕様書MDファイルを作成]\n    E --> F[ドラッグ&amp;ドロップで指示を渡す]\n    F --> G[ToDoアプリが自動生成される]\n    G --> H[スクリーンショットで修正指示]&quot;">flowchart TD
+    A[Cursorまたはターミナルを開く] --> B[インストールコマンドを実行]
+    B --> C[Claudeアカウントでログイン]
+    C --> D[claude コマンドで起動確認]
+    D --> E[仕様書MDファイルを作成]
+    E --> F[ドラッグ&amp;ドロップで指示を渡す]
+    F --> G[ToDoアプリが自動生成される]
+    G --> H[スクリーンショットで修正指示]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. インストールは4ステップ — ターミナルにコマンドを貼るだけ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Cursor（またはTerminal.app）を開き、AnthropicのQuickStartページのコマンドをコピペ→エンター。成功すると「Claude Code Successfully Installed」と表示される。その後 <code>claude</code> コマンドを打ってログインし、推奨設定でセットアップ完了。有料プラン（月$17・約3000円）が必要。「登録したら即解約予約して1ヶ月だけ試す」方法が紹介されている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 曖昧な指示より仕様書を渡す — MDファイルをドラッグ&amp;ドロップ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「ToDoアプリ作って」とだけ言うと確定要素が多すぎて意図しないものができる。ユーザー像・課題・体験のゴール・必要な機能・UIの方向性をMDファイルに書いてドラッグ&amp;ドロップで渡すと精度が上がる。長文を直接チャット欄に貼るとバグが起きやすいため、ファイル経由が推奨。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 修正はスクショ貼りで直感的に — 言葉で説明しにくい部分も対応 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「この部分の色を変えたい」など指示しづらい時は、画面をスクショ（Command+Shift+4）してコマンドVで貼り付け→「ここの色を黒に」と指示できる。ただし画像付き指示はトークン消費が多いため使い所を選ぶこと。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 基本操作6種 — 覚えておくと格段に使いやすくなる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①プロンプト送信（エンターで即送信・改行はOption+Enter）②停止（Escキー）③ファイル指定（@マークまたはドラッグ&amp;ドロップ）④編集承認（Yes/このセッション中はYes/No）⑤モードの切り替え（Shift+Tab：Accept Edits On / Plan Mode / Auto）⑥スラッシュコマンド（/status /clear /skills等）</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. Plan Modeを活用 — 実行前に計画を確認できる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Shift+Tabで「Plan Mode On」に切り替えると、実行するかわりに詳細な計画を先に提示してくれる。「これで合ってる？」を確認してから実装に進める。カイクン曰く「めちゃくちゃ使う」機能。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 今日の夜にインストールを完了させる</strong>
+Cursor既に入れてるなら残りはコマンド貼るだけ。QuickStartページを開いて、ターミナルにコマンド1行コピペ→claudeアカウントでログインの2ステップだけ。明日の朝には使える状態にしておく。</p>
+<p><strong>② AI導入推進の実演に使える</strong>
+「非エンジニアでも35分でToDoアプリが動く」という事実は社内AI推進の説得材料になる。次の社内勉強会でこの動画のフローをそのまま見せるか、自分でやってみたビフォーアフターをデモする。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> クロードコードって知ってますか?これコードって書いてるんですけどデザインにももちろん使えるし企画とか自動化とかそういうのにも使えるツールで世界中でめちゃくちゃ導入が進んでいます国内だとグッドパッチっていうですねUIデザインで有名な会社ここが導入をしまして全社員に使わせてアプリを200個ぐらい作ったみたいなサービス作ったみたいなのが話題になったりとかADPリストというデザインコミュニティを運営している代表の方もFigmaだけじゃなくてクロードコードを使ってですね動くプロトタイプそのままコードとしてもシリーズができる</p>
+<p><code>00:35</code> そういうものを使いながらデザインをしていくってことがめちゃくちゃ重要であると言っていたりしますそんなクロードコードなんだけども結構ハードルが高いんですよね使うハードルがなのでこの動画ではそのクロードコードの導入から1回デザインを生成するところまで一緒にやっていくそういうチュートリアルになっています非エンジニアの方とかデザイナーとかもやっていただけるようになるべく簡単にちゃんと説明をしてですねやっていこうかなと思いますので今日からクロードコードとかAI使って作りたいとかデザインやってみたい取り入れたいという人はぜひご覧くださいはい始める前にこの動画の全体像をお伝えしていきます</p>
+<p><code>01:16</code> この順番でやっていきますまずセットアップですねやっていきますクロードコードインストールしなきゃいけないんでそれをやりますセットアップが完成したらもうねすぐ作ってみましょうとりあえずね動かしてみましょうというわけでToDoサービスを作り最後に基本操作っていうのがね6項目ぐらい覚えておいた方がいいのがあるのでそれを紹介して使って全体的には終わりという流れになります動画のゴールとしてはクロードコードをねいつでも使えるようにまずしますと次に実際に動かせるToDoサービスこれ作ることによって</p>
+<p><code>01:49</code> 自分でも作れるんだという状態ここに持っていくこれが動画のゴールになってますここからクロードコードのインストールを一緒にやっていきましょうインストールなんですけど4ステップでやっていきますまずカーサーを開きますもしくはターミナルでもいいかもしれませんインストールのコマンドってやつがあるのでそれを入れてそうするとログインを要求されますのでログインしたらここまでで一応クロードコードを使えるようになりますその後に一応使えてるかなっていう確認の動作テストして</p>
+<p><code>02:27</code> インストールの完了ここまで4ステップでやっていきたいと思いますまずクロードコードをどこで使うのかという話なんですけどこの動画ではCursorですね今表示しているこのエディターのアプリケーションこれを使って実演してお伝えしていこうかなと思っていますのでコードについて自信がない方とかはこのエディターですねCursorになれながらやっていった方がですねバイブコーディングとか多分やりやすいかなと思ってますまだですねCursor入れてない方は</p>
+<p><code>03:00</code> cursor.com検索していただければですねこういうページが出てきますんでダウンロードっていうところを押していただくとちょっと英語でね馴染みない方もいるかもしれませんがデスクトップのアプリ入れられることができますのでこれを押していただいてアプリケーションをインストールしていただければと思いますそしたらねカーサーねこれ開いてもらえればと思うんですけどもどのプロジェクトから始めていただいても大丈夫ですまずはオープンプロジェクトを押していただいてこれフォルダがプロジェクトみたいな感じになっているので</p>
+<p><code>03:35</code> どこでも大丈夫ですドキュメント書類とかデスクトップでもいいと思いますフォルダ作っていただいて作業をするですね今回のクロードコーナーチュートリアルフォルダ作っていただいてそこで作業してもらえればと思っておりますとちょっと私の場合だとすでに作っているのでクロードコードYouTubeっていうフォルダを開いてここで作業をしていこうかなと思います開くとこんな感じになってるかなと思うんですがクロードコードっていうのはターミナルで動くものなんですねカーサーこういうエディターでもですねターミナルを開くことができます</p>
+<p><code>04:09</code> このちょっと画面だとちっちゃいかもしれないですけど右上ですねここに下に黒いバーがあるようなアイコンがあると思うのでこれをクリックしていただくとこういうですね出力デバッグコンソールターミナルポートって書いてあるものが表示されるかなと思います僕の画面だと今ちょっとここにバーンって開いたんですけど多分皆さん初期設定はこの下からビョーンって出てくるんじゃないかなと思いますビョーンってね出てくるかなと思いますこれのターミナルっていうところを押していただければそこがターミナルなのでここで作業をしていきます</p>
+<p><code>04:45</code> ここで今回はクロードコードっていうのは作業ができるようになるわけなんですよここはちょっととっつきにくいんですけどターミナルっていうコマンドラインインターフェースって言われるCLIって言われるんですけど別で言うとですねMacだとTerminalっていうのが実はどのMacでもデフォルトで入ってましてですねここでも作業することはできますクロードコードのまあどちらでもね好きな方を使っていただきたいんですがその作業場所ですねこれ今開いてるフォルダにリンクしたところでクロードコードを開いてあげた方が</p>
+<p><code>05:18</code> 良かったりとかするんですよねはいじゃあ早速次ステップ2ですねクロードコードインストールをしていきましょうめちゃくちゃ簡単ですそういう風にインストールをすればいいのかなみたいな思うと思うんですけど検索してみましょうクロードコードインストールっていう風に検索をしてみると一番上に多分クイックスタートってやつが出てくると思いますここをクリックしていただくとですねクロード側がこういうクイックスタートする方法っていうのを綺麗にまとめてくれています教科書作ってくれてるんですよねドキュメント作ってくれてるみたいな感じで言うんですけど</p>
+<p><code>05:51</code> なのでこのステップに従ってやっていけばそれでも入れられるんですよただここはエンジニアの方向けなので一応解説をするとですねとはいえ書いてある内容が意味わかんないと思うんですよ皆さん最初特にターミナルでコマンドプロンプトが開かれているコマンドプロンプトみたいなターミナルガイドをご覧くださいみたいなみたいな感じになると思うんですよね今回はこの動画に沿ってやっていけばいいので多分全然問題ないかなと思っているんですけどステップ1クロードコードをインストールするっていうここやっていくんですけども</p>
+<p><code>06:24</code> 簡単ですインストールってこれもうすでにあるじゃないですかレコメンディットっておすすめって書いてあるのMacOS僕ちょっとMacなんでこれ使うんですけどこの謎のやつをターミナルで入れてエンター押せばインストールできるよってこれ書いてありますそういう日本語は書いてないんだけどターミナルってこれ実行してねっていうこれ意味なんですよWindowsの方とかもPowerShell CMD僕Windowsをほとんど使ったことないのでちょっとごめんなさい</p>
+<p><code>06:54</code> 分かんないんですけどこれもちょっとAIに聞いてください自分のパソコンがパワーシェルだのかCMDだのかちょっと分かんないけど分かんない方はねこの方とかもターミナルで多分これを実行するとおそらくインストールできるであろうということが書かれているというところがあるのでまずこれをね自分の該当するパソコンですねOSですねこれをコピーしてくださいここにコピーのボタンがあるんでね僕はMacなんで一番上にコピーしますこれコピーしてくださいねコピーしましたそしたらまたカーサーに戻ってくださいカーサーに戻りますこれターミナルで実行するんですよターミナルにコピーペーストしますコマンドV押してあげるとさっきコピーしたやつが出るんで、これでもペストしたらエンターを押していただく。これでおそらくクロードコードインストールが始まるかなと思います。</p>
+<p><code>07:40</code> そうするとですね、こんな感じでセッティングアップって設定してますみたいな感じで出て、クロードコードサクセスフリーインストールドイエーイみたいな感じで出てきます。これでクロードコードのインストールが完了しましたよということが分かります多分すんなり行く人の方が多いんじゃないかと思うんですけどインストールする過程で何々を入れますかみたいな出てきたら基本的にOKで進めていいんじゃないかなと思いますやばい奴を入れさせられることは</p>
+<p><code>08:15</code> おそらくクロードが作ってるのでないと思うんですけど不安な場合はここに出てきた多分英語で出ちゃうかもしれないんですけどコピーしてさっきみたいにAIに聞いてもらえれば分かりやすく説明してとか言えば説明してくれると思うのでそっちにしてちょっとやっていくっていうのももちろん取ることはできるのでそういう風にちょっとインストールまでやっていただければと思いますはいでまずインストールできましたそしたら次のステップですね次ねこれログインしなきゃいけないんですよこのクロードってアンソロピックっていう会社が作ってるんですけどそのクロードっていう元のサービスがあってクロードのアカウントを持ってない方は</p>
+<p><code>08:49</code> クロードのアカウントを作る必要性があるんですけどもログインをする方法とかもさっきのドキュメントに書いてありますと何やるかっていうとクロードコマンドでインタラクティブセッションを開始するみたいな感じで書いてあるのでここにクロードって打つように書いてあるのでこれクロードっていうのを打ちましょうこれもコピーしてもらって大丈夫さっきコピーしたこれをコマンドVで貼り付けますとエンターですねそうすると多分こんな感じのが出るかな多少違うかもしれませんけど</p>
+<p><code>09:22</code> Let’s get started! 始めましょう!Choose your style! みたいな感じで出てくるとこれ1,2,3,4,5,6,7って出てると思うんですけども矢印キーでこうやって選択することができますとどういうテイストで文字を表示しますかっていうのを選べるみたいな感じみたいですね自分が一番可愛いなと思うものを選んでもらえればと思うんですけどとりあえず何でもよかったらオートで大丈夫だと思います1に合わせたらエンターを押してもらえれば次に進みますクロードキャンビーユーストビズヨークロードサブスクリプションで出てるのでここからさっきのログインが求められています</p>
+<p><code>09:58</code> 一応1,2,3でタクシー出てるんですけど多分この動画見てる方ほとんど1だと思います一番上がクロードのアカウント使って登録する使い始める2番目はアンソロピックって大元の会社ですねコンソールアカウントみたいな開発用のアカウントで使ってやりますみたいな3つ目はサードパーティーなんで別のAmazonなんとか使ってるやつと連携してクロードコード使いますみたいな感じなんで難しいんですよ2と3ってやつは大体の人は1なんでこれ1でエンター押していただければいいかなと思います</p>
+<p><code>10:35</code> そうするとおそらくブラウザが開いてログインしてくださいねみたいな画面が多分出ると思いますそこまでやるんですけどここで1個説明しなきゃいけないことがありましてこのクロードコードですね実は無料で使えないんですよとてつもなく残念なお知らせなんですけどプロマックスチームプランみたいな書いてあるんですけどじゃないと使えないんですねこれアンソロピッククロードってサービスの銀プランの画面に来てますけどクロードコードっていうものがこのプロプランですね課金したプラン以上じゃないと今使えなくなってしまっているので無料のプランだとおそらく今使えなくなっ ちゃってるんですよねすよねなのでクロードコードを使っていこうとなると課金をしなきゃいけないなみたいな感じになって</p>
+<p><code>11:21</code> 月額17ドルなんでだいたい3000円いかないかいくぐらいかな払うことになりますここだけお知らせをしておきます個人的に言うと1回使っておいた方が多分このAI時代めちゃくちゃみんなクロードコードって言ってるんで1ヶ月だけでもすぐ解約すればいいと思うので登録してすぐ解約すれば1ヶ月後にはもう継続せずに解約されるので使ってみたい方は課金してすぐサブスクリプションを停止してその状態で1ヶ月使ってみるといいかなと思ってますというわけでじゃあちょっと</p>
+<p><code>11:54</code> ログインやっていきましょうかこれ1番を選びましょうかねこれエンター押しましょうそうするとですねこういう風にブラウザでおそらくが開かれてですね僕はもうクロードでログインしているんですよこのブラウザでなので認証しますよみたいなっていう画面が出てます英語で書かれているので何に書いてるか分からないかもしれないですけどこういうことOKですよパーミッション得られますよみたいなとかがあるのでこれで認証ボタンなんですけどこれを押していただくとクロードコードとさっきのクロードのアカウントですねが連携するという感じになります</p>
+<p><code>12:29</code> 僕の場合はオーソライズという認証のボタンを押せば終わるんですけどここでアカウント作ってない方はアカウント作ってまた認証しなきゃいけないしログインしてない方はログイン求められるのでログインをすると多分まだこの認証の画面出てくるかなと思いますはいじゃあ認証を押していきましょうはい認証を押すこんな感じでBuild something great 偉大なすげえもの作ろうぜみたいな感じのメッセージが出てきて認証完了とはいというわけでもうここにまでやったらもうこれは閉じていいよって書いてるんでここの画面いらないです</p>
+<p><code>13:01</code> それでも閉じてさっきのカーサーの画面に戻るとはいこういう風になんとかっていうアカウントでログインしてますねって言ったらログインもサクセスフル成功しましたよつってエンター押してねみたいな感じでやってんでエンター押しますとそうするとここはお知らせですねクラウドも間違いを犯しますとかっていう風に書いてあるのでこれはOKはいわかりましたよってエンター押していただくとセッティングですねコードの立ち上げのセッティングどうしますかねみたいなことを聞かれているんですけど僕ら何もわからないかなと思うので僕もわからないです</p>
+<p><code>13:33</code> レコメンデットって書いてあるのでねおすすめですねはいもうお店行ったらねおすすめ頼むと思うんでおすすめでエンター押していただくとはいおめでとうございますこんな感じでウェルカムバックタクミン僕の場合ウェルカムバックですねウェルカムとかなんですかね初めての方ははいクロードコードが立ち上がりましたと立ち上がる時にね毎回この赤い線の中にこのクロードコードエイリアみたいななんていうかわかんないですけどこいつがねピコーンって出てくるんでこの画面が出たらクロードコードが今このターミナルで動いてますよっていう状態になってますここまでやってみることでクロードコードのインストールと使える状態になっておりますという感じです</p>
+<p><code>14:12</code> じゃあちゃんと動くかどうかねちょっと確かめていきたいのでこのクロードコードでちょっと試し打ちしていきましょうかもうここね説明しますとここがチャット欄なんですよこの後使い方説明しますけどなのでここにいろいろ打っていただければ普通にチャットGPTとかそういう感じと一緒のようなことができますなので例えばおはよう今日の天気は何かなみたいな多分天気が分からないですけどって感じで適当にやるとこれエージェントなんでクロードっておはようございますみたいな天気情報にはアクセスできませんみたいな感じで返ってくると</p>
+<p><code>14:46</code> っていう感じでこのターミナルってところでクロードコードが起動しているのでこういうふうにもこのチャット欄みたいな感じ使えて会話ができるとなんか打って返答が 帰ってきたらちゃんとこのターミナルでクロードコードが起動が成功してますよっていうのが証明されているのでこれをちょっと皆さんもやってみていただけるとクロードコードちゃんと動いてるなっていうのがわかるかなと思います仮にちょっとここでエラーが出た場合はそのエラーの指示に従っていくのが基本なのでエラーの内容がもしわからない場合はこのエラーの文言が多分ここに出ます</p>
+<p><code>15:19</code> なのでこれをコピーしていただいてちょっとAIに別の聞いていただいて利用していくもしかするとちょっとここで課金してない方はあなた課金してないんで動きませんみたいなとか出てるかもしれませんみたいな感じでクロードコードのインストールがここまで来ると完了になります次に実際インストールできたんで作ってみましょう今回はプロンプト用意してますので概要欄にあるそれをコピペして貼っ付けていただければ同じようなものが見せるものも作れると思いますのでどういう風に作っていけばいいのか作れるのかという感覚まで持っていきましょう</p>
+<p><code>15:53</code> 基本的にこのターミナルでまたクロードに指示をしてやっていくんですけどもポイントなのがいきなり何とか作ってくださいみたいな指示しないんですよ今回でいうとTODOアプリをねちょっと簡単なものを作っていきたいんですけどもTODOアプリ作ってって書いても実際にそれでやってみると確定要素が多すぎるので意図したものが作れないわけじゃないですかなのでどういう風にやっていくといいのかっていうのもちょっとだけ説明というか入れつつ進めていきたいと思います今回ですねこういうプロンプトを用意をしているのですが</p>
+<p><code>16:29</code> これの概要欄に置いておこうかなと思います大事なのはですね計画を立てるとかどういうものを作りたいのかという目的とかっていうのを定義をして与えてあげれば与えるほど精度が高まっていくわけなんですね例えばユーザーが誰なのかとか課題が何かとかこの体験のゴールって何か体験のゴールとは何かとかどういう時に誰がいつどんな状況で使うのかとかねもっと具体的なものでいくと必要な機能とかUIの方向性とかこういうものを与えれば与えるほど</p>
+<p><code>17:02</code> 何を作ったらいいのかっていうのが伝わるわけですからやっぱり実装というかね組み込みやすいわけですよクロードコードが実装する上でもね今日はこのやり方とかまではすごく突っ込んでいったりはしないですけど今後僕がやっているものではユーザー像をどうやって定義するのかとかユーザー体験どうやって定義するのかとかねUIの方向性とかというところはボノでもやっているしやっていくところになっているのでもし興味がある方いたらぜひボノのアップデートお待ちしていただけたらと思います今回はですね</p>
+<p><code>17:36</code> AIと一緒にちょっと雑に詰めましてここにある内容で作っていこうかなと思いますToDoアプリなんですけども次にやるのはこれですよっていうのがもう一つパッと分かるようなそういうトゥードゥアプリっぽいスマホ向けのウェブサービスに作っていこうかなというような内容がここに書かれておりますなので今回はこれをコピーしていただいてですねこのクロードコードのここに貼っ付けてくださいってやるとですね僕のこのカーサーのターミナルのここだと</p>
+<p><code>18:12</code> なんか結構長文をコピーするとこのクローズコード自体が動かなくなるっていうなんかバグみたいなのがよく発生するんですよね今発生したんですけどそういう方もいるかもしれないのでチャットだけでやるっていうよりかはドキュメントに書いていく方がいいんですよねドキュメントを作りましょう名前なんでもいいですto do up pjみたいな感じで作りましょうか.mdっていうマークダウンって呼ばれるファイルなんですよこれ作ってください名前は何でもいいんでそうするとこれクリックをするとこのCursorのファイルが開きますとここにコピペしてください</p>
+<p><code>18:51</code> そうするとこういう感じでバッと出ますとコマンドSしないと保存されないのでコマンドSで保存をしてくださいっていう風に一旦ドキュメントにまとめましてこれをここにドラッグ&amp;ドロップしてこれを実装してくださいみたいな感じでベッて投げると何かしらできます動画の冒頭に見せたようなTODOアプリみたいなものがいるかって言われると多分指定してないので色とかできない気がするんですけどこの仕様に沿ったTODOサービスみたいなものは</p>
+<p><code>19:27</code> 今作ってくれているのでそうすると設計を読みまして要点だけまとめますって言って一応確認した上で作ってますよみたいなことを言ってくれているのでこのままちょっと待ちますかとやるとですね実装が完了してこういうファイルを作成しましたという風に出ていますちょっと技術的な話を若干すると今回プロンプトにですねindex.htmlとかのスタイルcssで作ってみたいな感じでやっているので難しい技術を使わずにプロトタイプと言いますか組んでくる形になっています</p>
+<p><code>20:01</code> なのでhtmlってやつを開けば動くって書いてあるのでコマンドを押しながらクリックこれをブラウザで開くとこのindex.htmlってやつこれをブラウザで開くと多分どういう内容になっているかが分かるので右クリックしていただいてですねreveal in finderってやつがあるのでこれをクリックしてくださいMacの方はこういう風にこのHTMLのファイルの位置を表示してくれますとWindowsでもおそらく同様のものがあるんじゃないかなと思いますこれをダブルクリックすると</p>
+<p><code>20:35</code> こんな感じでブラウザを持ってきましたがこういうものができているみたいですねこれは動くのかな野菜を買いに行くっていうタスクを入れてみましょうか動きますねこんな感じでタスクの追加とかができて多分優先的なタスクっていうのが常に上に表示されるのでパッと見てわかるみたいなものになっていると5つぐらい追加して多分この星を押すとこの今ピン止めできるみたいな一番上にっていうToDoアプリみたいな感じのものになっているみたいですね</p>
+<p><code>21:10</code> こっち押すと完了になるとはいはいはいみたいな感じで完了のやつもクリックすると開くことができるでまた追加もできますよみたいな感じのものが生まれてますこのデザインとか機能がいいかどうかはちょっと置いておきますけど簡単にですね機能の検証とか体験がどういう風に具体的に作ってみるとなるのかっていうのはもう今ものの4,5分3分ぐらいでできるわけじゃないですかこれをフィグマで雑に作ろうにしてもめちゃくちゃ時間かかりますよね</p>
+<p><code>21:42</code> ただこれをAIでやらせると意図してないところもいっぱいありますけどなんとなく全体像を掴むことがこんだけざっくりしててもできちゃうわけですよねこれがクロードコードを使う理由でもあるしこういう風にバイブコーディングとかしてデザインにつなげていく使っていくっていうのがめっちゃ重要な理由の具体例でございますここまでちょっといただけるとちゃんと作れるんだなクロードコードでっていうのが分かるかなと思いますどういう風にやっていけるのかっていうのも実演をしてみたいと思います簡単な機能追加ってわけじゃないんですけど</p>
+<p><code>22:15</code> この背景の色ここ今グレーになっているのでこれちょっと白色に変えたいと思いますという時は普通に打っていただければいいと思うんですけど書く時に具体的に書けば書くほどちゃんと正確に理解をしてやっていただける感じになります具体の色をグレーから白に変えたいですとかでも全然いいんですけど多分これできますが今日は全てと切り替わっても白にしてほしいですとかつ</p>
+<p><code>22:52</code> これで打ってみましょうかこれでいくと多分白にしていただけるんじゃないかなと思いますやると白になりましたって言ってるのでこれちょっとHTMLなら多分リロードしないとですね変えられないのでこれはリロードしてみるとこういう風に白色に変わりましたとその分この辺のねタスクのカード感とかがちょっと薄れてしまったのでしまったなと思ったらやっぱり戻してくださいとかってやると一旦簡単なやつとかはサクッと</p>
+<p><code>23:25</code> 戻していただけたりするのでいろいろ試しにねこういうパターンとかこうしたらどうなるかなとかっていうのをガンガン作っていけるのでせず試すことができるかなと思います元通りって言われたのでもう一回リロードすると元通り変わらずねグレーになりましたとここを変えたいみたいな指示しづらい時とかあると思うんですよそういう時はスクリーンショット貼っていただくとですね簡単に指示することができたりします例えばここの色を変えたいときはスクリーンショットを取りますとこれコピーペーで溜まっていくスクリーンショットの</p>
+<p><code>23:57</code> 今取り方したのでコマンドV押すとここにイメージハッシュ01ってのができますとこれが今ここでスクショ撮った画像が貼っ付けられているのでこの部分の色濃い黒にしてくださいみたいなこうやってやるとそのタスクをしてくれることも可能ですおそらくちょっとトークンの消費が若干激しいと思います画像を読み込む方がそういうところはあるので使い方次第なんですけど難しい方とかこういう風に画像を使った指示の出し方とかも全然できますのでやってみてもらえたらなと思います</p>
+<p><code>24:31</code> そうすると黒に変わりましたねボタンの色と連動してたんでちょっと変な感じになってますけどみたいな感じで修正することももちろんできますあとはもう自分のやり方とか発想とか次第でやっていくことでどんどん機能を追加したりとかデザインのパターン作ったりとかそういうことがAR使ってできるという感じです使い方をねちょっと軽く触れていきたいと思いますいつほどですね基本的な操作についてお伝えをしていきますプロンプトを送る停止するチャットファイルを扱う編集の省略</p>
+<p><code>25:03</code> モードの切り替えスラッシュコマンドこれ全部すごい基礎的なものなので絶対使うようになりますまずプロンプトを送るからねやっていきたいと思うんですけどこれさっきやりましたねここにもう書けばプロンプトだよって感じで書けば音ができますよっていうところになってますこのチャット欄がですね皆さんが普段使ってるようなUIではないんですよこのコマンドラインツールってやつはなので開業とかができないのとエンター押すとその場で強制的に送ってしまいますっていう癖があるので気をつけないといけません</p>
+<p><code>25:37</code> 開業をしたい時オプションAltを押しながらですねエンターを押すと開業することができますオプションを押しながらエンターを押すとこんな感じで開業することができるのでこういう風に開業したいなって時はこれなんかできますという感じです次に停止するですね間違えてさっきみたいにエンターを押しちゃった時とかにまだまだまだまだまだなる時あるじゃないですかその時のやり方をお伝えするんですけど例えばなんかこう開業したいなーって言って開業できたらいいんだけど慣れてないと送っちゃったみたいになるじゃないですか止められるんですよこうやってどうやってやるかというと送って稼働している時にエスケープキーですねエスケープキーを押すと</p>
+<p><code>26:22</code> こういう風に戻すことが取り消すことができます送信したものをファイルを扱うですね何かというとファイルを指定して作業をしたりとかそのファイルにまとめて要望を書いてこれを参照して作業をしてくださいとかっていう時とか結構あると思うんですねそういう時にこれ便利なんですけどもちょっと今僕のこのファイルだと何のファイルもないのでちょっとファイルを作ってみたいと思います一方にtest.mdこれ.mdってマークダウンファイルっていうやつの拡張子なんだけどを作ってみたいな感じでお願いするとですね</p>
+<p><code>27:00</code> はいこれクロードコードですねこの開いているフォルダの中で動いているのでこのフォルダの中でいろいろ作成とか編集とかの作業をしてくれます今秒速でテストMDを作りましたみたいな感じでいくとここが今増えていますよねなので今これ作ってくれたんです例えばテストMDを参照してみたいな感じで書き換えるときがあるじゃないですかここに書いてますけどきっとひとかこのアットマークですねこのアットマークを押すといろんなファイルとか指定するリストが出てくるので</p>
+<p><code>27:34</code> 指定するものを選ぶことができますこれやり方の1個目ねファイルを指定するやり方の1個目ですこの右側に表示しているこれこれを指定したいんじゃって時はこれをドラッグ&amp;ドロップしていただければこういう風にパスが出ますこれ慣れるまで大変だと思うんですけどこのファイルっていうのをなんとかっていうフォルダの開拓みってフォルダのドキュメントってフォルダの01ボの事業ってフォルダのなんとかってフォルダのテスト.mdですみたいな感じで認識するんですよ</p>
+<p><code>28:08</code> このファイルってやつをなのでこのパスがバーって出るんですけどこれでこのファイルっていう風に表現することができているのでこれを参照してとかって言って参照して中身を教えてとか聞いてみましょうかそうすると多分テストは書いてないんでなんかハッシュテストって書いてありますっていう返答が来るんじゃないかなと思いますはい来ましたねテスト.mdの中身は以下の通りですハッシュテストって書いてあるこれをクリックして確認をすると確かにそれしか書いてありませんと3行しかデータがないという感じなんでこういう風に指定して</p>
+<p><code>28:42</code> フォルダとかファイルとか指定ができる指示のねっていうやり方があります次が編集の承認なんですねちょっといろいろやっちゃったんで画面が変わってるんですけど今この指示書.mdっていうですねこれを作りましてこのhelloを追加してほしいっていう風にお願いしたんですねそしたらいろいろ確認してファイルは空でhelloを追加しますっていう時にoverwrite fileみたいな感じで聞かれているわけなんですよね</p>
+<p><code>29:14</code> 上書きしていいこのファイルっていうこれ確認なんですねクロードコードを使っているとファイルの編集をしたりとか削除をしたりとかいろいろなコマンドを叩くときにこのクロードちゃんと確認を取ってくれますとそうするとこういう画面が出てくるんですねなのでこういう時はビビらずにそういうものを確認してくれてるんだなと思ってもらえればよくてだいたいこのイエスかこのセッションではずっとイエスかダメですっていうのをこの3択が出てきます基本的にそんなに</p>
+<p><code>29:47</code> やばいことをされることってないので基本的にイエスを押しててもいいんですけど意味がわからないと怖いと思うんですよなのでちょっとやばそうだなと思った時とかは他のAIクロードとか起動してこっちで聞いてからどういう意味なんですかって聞いてからイエスかノーとか選ぶとかね風にしていただけるといいかなと思いますこれが編集の承認です次モードの切り替えですここにカーソルが当たっている時ですねでシフトとタブ同時押しですそうすると今ここに紫のアクセプトエディッツオンみたいな感じで出てきたと</p>
+<p><code>30:25</code> Shiftプラスタブを押すとくるくる回るよっていうこれ循環するよってこのモードの切り替えがねっていう意味なんですけどなのでShiftタブをもう一回押すと次はプランモードオンみたいな感じになりますともう一回押すとオートになりますと最後だと何もないよっていう状態これをShiftタブを同常視するとずっと切り替えることができますとAccept Edits Onって何かっていうとさっき確認がありましたよね編集しますかみたいなあれをもう一切聞かずに作業していいよっていうモードですで次がプランモードで</p>
+<p><code>31:00</code> これは僕の別のチュートリアルやった方とかはカーサーではあったと思うんですけども実行はせずにその実行をお願いした内容に対しての計画を詳細にまず立ててくれるっていうモードになってます僕めちゃくちゃ使います最後がオートモードで入れた内容に対して自動で判定してくれるっていうモードになってますこの3タイプとデフォルトの普通のモードっていうのを切り替えることができます最後スラッシュコマンドですねこれちょっと分かりづらいんですけど</p>
+<p><code>31:33</code> 覚えておくとあれかってなるやつなんですけど途中でいろいろやり始めて慣れていくと何かというとクロードコードが持っているいろんな機能アクションみたいなやつを呼び出すことができるそういうやつになってますチャット欄にスラッシュって半角で押してあげるとこういうふうに下にいろいろ出てきます僕も全然わかってないものいっぱい9割5分ぐらい僕わかんないですけどいろんな機能があるだけなんですよこのクロードコードの中にね例えばステータスってやつがあるんですけど右側にですねこれが何なのかって英語で書いてあるけど</p>
+<p><code>32:07</code> これを今のクロードのステータスバージョンとかそういうのを出しますよっていうモードでこれステータスって打ってエンターでもいいしこの下に出ている候補が樹脂キーですねこれ選べるのでこれでもう選んで青色になってますよね画面だとちょっと小さいかもしれないですけどエンターって押していただくとこういう風にステータスっていうこれねアクションスラッシュコマンド打ったんでステータスが表示されていますよっていうところですねこれの状態からどうやって戻したらええねんってあるんですけどここにEscape to Cancelって書いてあるんで</p>
+<p><code>32:43</code> これもさっきの停止と一緒で戻したいなと思ったらEscapeキーを押してあげれば戻りますちゃんとこういうアクションを出すのがこのスラッシュコマンドになってます機能としてSkillsってやつがあったりとかするんですよねそういうのを呼び出す時にスラッシュコマンドでSkillsの名前を打つと実行されるとかっていうのがあるんですけどそういう時に結構使ったりしますというわけでクロードコードのインストールから実際に使ってみるところをやっていきましたおそらくこれで導入はできると思うんですけどどういう風に開発をするのかとか</p>
+<p><code>33:18</code> 体験のパターン作っていくのかみたいなところはやっぱりちょっとまだイメージがつきづらいと思いますそういう動画も無料分もやりたいんですけど本格的に僕がやっているボノでですね展開してそのAIかけるデザインを使った新しいワークフローみたいなところの解説とチュートリアルトレーニングの内容ここをどんどん作って2026年やっていきたいなと思ってますはいとか言ってたらもうね半年終わろうとしてますけどというわけでクロードコードこれで導入する人が増えてデザイン使ったりとか他の自分の仕事に使ってみる方増えていただけるとめちゃくちゃ嬉しいなと思っておりますこの動画良かったなって方いたらコメントで感想お待ちしております</p>
+<p><code>33:57</code> ぜひよろしくお願いしますそれではまた次の動画でお会いしましょう動画を見てくださってありがとうございました僕がやっているボノというですねUIとUXデザインのコミュニティというものがありますそこではメンバー限定のコンテンツとコミュニティの質問とかフィードバックっていうのをやっておりますコンテンツでは僕がビジュアルを作る前からどうやったらユーザーさんに届けるのかっていうところからねデザインをするっていうフローをすべて公開する実践的なコンテンツをやっていたりとか自分でお題を解いてそれをチャレンジできるような身につけた知識を実践アウトプットできるようなコンテンツを用意していますコミュニティの方では質問にキャリアだったりとか自分の作ったもののフィードバックだったりとか</p>
+<p><code>34:38</code> 本当に何でもお答えするっていうものをやっております概要欄からボノについてはチェックできますのでUIデザインとかUXデザインに興味のある方はぜひチェックしてみてください</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a> — Claude Codeの詳細概念ページ</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a> — AIを活用した制作ワークフロー全般</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a> — AIエージェントの設計思想・動作原理</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a> — 自動化・効率化に関する概念</li>
+<li><a href="./design" class="internal" data-slug="design">design</a> — デザインプロセス全般</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-534" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

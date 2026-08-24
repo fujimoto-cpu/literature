@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説"/><meta name="twitter:description" content="📺 動画情報 Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説 🎙️ いけともch ・ 📅 2026-04-14 ・ ⏱️ 47分41秒 🔗 www.youtube.com/watch 📝 要約 🎯 claude-managed-agents（Anthropic）を使ってAIエージェントを本番環境に投入するための5つの仕組みと、管理画面での実装手順を47分かけて実演解説した動画。 🗺️ 全体像 flowchart TD A[課題: 本番でエージェントを使えない] -->|5つの壁| B{Managed Agents..."/><meta property="og:description" content="📺 動画情報 Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説 🎙️ いけともch ・ 📅 2026-04-14 ・ ⏱️ 47分41秒 🔗 www.youtube.com/watch 📝 要約 🎯 claude-managed-agents（Anthropic）を使ってAIエージェントを本番環境に投入するための5つの仕組みと、管理画面での実装手順を47分かけて実演解説した動画。 🗺️ 全体像 flowchart TD A[課題: 本番でエージェントを使えない] -->|5つの壁| B{Managed Agents..."/><meta property="og:image:alt" content="📺 動画情報 Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説 🎙️ いけともch ・ 📅 2026-04-14 ・ ⏱️ 47分41秒 🔗 www.youtube.com/watch 📝 要約 🎯 claude-managed-agents（Anthropic）を使ってAIエージェントを本番環境に投入するための5つの仕組みと、管理画面での実装手順を47分かけて実演解説した動画。 🗺️ 全体像 flowchart TD A[課題: 本番でエージェントを使えない] -->|5つの壁| B{Managed Agents..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-Managed-Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-Managed-Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説 🎙️ いけともch ・ 📅 2026-04-14 ・ ⏱️ 47分41秒 🔗 www.youtube.com/watch 📝 要約 🎯 claude-managed-agents（Anthropic）を使ってAIエージェントを本番環境に投入するための5つの仕組みと、管理画面での実装手順を47分かけて実演解説した動画。 🗺️ 全体像 flowchart TD A[課題: 本番でエージェントを使えない] -->|5つの壁| B{Managed Agents..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-Managed-Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-291"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-291" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説</a></div></nav><h1 class="article-title">Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説</h1><p show-comma="true" class="content-meta"><time datetime="2026-04-14T15:00:00.000Z">2026年4月15日</time><span>82 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/claude-managed-agents" class="internal tag-link">claude-managed-agents</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Claude Managed Agentsの使い方！セキュアな開発を可能にするClaude新機能を徹底解説</strong>
+🎙️ いけともch ・ 📅 2026-04-14 ・ ⏱️ 47分41秒
+🔗 <a href="https://www.youtube.com/watch?v=mIZbfbKhY4U" class="external">https://www.youtube.com/watch?v=mIZbfbKhY4U<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（Anthropic）を使ってAIエージェントを本番環境に投入するための5つの仕組みと、管理画面での実装手順を47分かけて実演解説した動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[課題: 本番でエージェントを使えない] -->|5つの壁| B{Managed Agentsで解決}\n    B --> C[Agent\\nモデル/プロンプト/スキル定義]\n    B --> D[Environment\\n実行環境・ネットワーク制限]\n    B --> E[Session\\nAgent＋Environment＝1仕事単位]\n    B --> F[Memory\\nセッション内/セッション間の記憶]\n    B --> G[Vault\\n認証情報をエージェントから完全隔離]\n    E --> H[外部連携: GAS or Slack Bot]\n    H --> I[Claude Console管理画面でPDCA]&quot;">flowchart TD
+    A[課題: 本番でエージェントを使えない] -->|5つの壁| B{Managed Agentsで解決}
+    B --> C[Agent\nモデル/プロンプト/スキル定義]
+    B --> D[Environment\n実行環境・ネットワーク制限]
+    B --> E[Session\nAgent＋Environment＝1仕事単位]
+    B --> F[Memory\nセッション内/セッション間の記憶]
+    B --> G[Vault\n認証情報をエージェントから完全隔離]
+    E --> H[外部連携: GAS or Slack Bot]
+    H --> I[Claude Console管理画面でPDCA]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. AIエージェントの本番投入を阻む5つの壁 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>企業がAIエージェントをPOCから本番に移行する際、①運用基盤（ハーネス構築）②記憶管理 ③認証情報の安全管理 ④監視・可視化 ⑤コスト予測の5つが壁になる。<a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>はこれらをインフラ層として一括で解決する。個人アカウント・法人アカウントどちらでも使える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Vault — 「鍵を知らないエージェント」でセキュリティを確保 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>従来のエージェントはAPIキーなどの認証情報を自身が保持するため、プロンプトインジェクション攻撃で鍵が盗まれるリスクがあった。Vaultは鍵の保管庫をエージェントから完全分離する仕組み。エージェントは鍵を知らないまま<a href="./notion" class="internal" data-slug="notion">notion</a> MCPなどの外部ツールを使える。鍵がない泥棒は盗めない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Session単位のデバッグとPDCAサイクル </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Agent＋Environmentの組み合わせが1セッション。セッションごとにトークン数・コスト・処理ログが可視化され、エラー箇所を特定しやすい。<code>Ask Claude</code> 機能でセッション情報を読んだ状態でClaudeに改善策を質問→プロンプトに即反映できる。コスト感覚を養いながらPDCAを回せるのが最大の学習効果。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 外部ツールからの呼び出し — GASかSlack Bot </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>管理画面の外からエージェントを使うにはAPI経由でエージェントIDを指定して呼び出す。Google Workspaceなら**Google Apps Script（GAS）**で実装可能（追加ツール不要）。Slackの場合はGoogle Cloud Runなど中継サーバーが必要。メンション→GAS→Managed Agents→Slack返信の流れを実演。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① Slack AIアシスタントのPoC構築</strong>
+GASはコネクトのGoogle Workspaceで使えるため、追加コストゼロでSlack連携エージェントを作れる。まず明日の朝、Claude ConsoleにログインしてクイックスタートでAgentを1つ作り、GASとつなぐ最小構成を試す。</p>
+<p><strong>② セッションのコスト管理を習慣にする</strong>
+1セッションでトークン何万使ったか確認する習慣を最初からつける。無駄な処理（DBへの重複書き込み等）が見えるので、エージェント設計力が上がる。Claude ProプランはTokenが見えにくいので、Managed Agentsで感覚をつかむのが早道。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> こんにちは、エゲトマです。今回はクロードマネージドエージェントに関して具体的な使い方であったり、価値仕組みをご紹介したいと思います。これを知ることによって、AIエージェントを本番環境で本当に使う第一歩を大きく開けると思うので、ぜひ学んでいきましょう。最初はこのクロードマネージドエージェントが何を解決するものなのか、具体的な仕組みがどうなっているのか、その後に実際に画面を通してこういうふうに作っていくのよというのをご紹介させてもらい、また作ったエージェントはどういうふうに呼び出していくのかこれの概念であったりとか大枠の方向性も伝えつつこれはやることによってどんなふうな学びであったりとか価値があるのか</p>
+<p><code>00:35</code> 特にAIエージェントを使っていきたいと思っている我々のようなAI業界の人間においてはこれを通してこういう価値があるという感覚があるのでこれをご紹介していきたいと思いますこのチャンネルはAIエージェント時代に活躍するスキルやノウハウを学ぶというテーマで実践に目指した様々なAI活用ノウハウや毎週日曜15時のAIニュースを発信しているのでぜひチャンネル登録をよろしくお願いしますまた2時間で学べるオンラインイベントを多数やっておりまして5月にはクロードコードを使った業務自動化に関して2日に分けて概念を理解しつつ2日目には実際にクロードコードを使って作っていく</p>
+<p><code>01:10</code> こういう内容であったりExcelの自動化エージェントアプリを使ってみようめんどくさい作業を解決できるツールを作ってみようマラソンを覚えようという感じでいろんなイベントやっているのでもしよかったらご参加ください概要欄にありますとりあえずまずはこのクロードマネージドエージェントがどういうものをどんな課題を解決するものなのかをご紹介したいと思いますさあもともとどういう背景があるかというと今AIエージェント特に企業においては例えばチャットを使っていいプロンプトできたねとちょっとしたPOCのプログラムを作ってみたりしてうまくできたねデモは成功うまくできそうだなが</p>
+<p><code>01:44</code> しかしながらこれを本番に持っていこうと果たして本番の運用は大丈夫かセキュリティ的にどうなのか管理はどうするのかみたいな感じになってしまって本番環境で使うという風になった時にめちゃくちゃハードルがあるこういう事情があるわけですねここで大きく5つの課題があるというところでして基盤を作る長時間のタスクをしっかり対応するセキュリティ面で鍵であったりとか認証情報を守るあとは運用していく時にしっかり監視をするあとはどのぐらいコストをかるかであったりとか予測ができるこういったものに関してしっかりシステムの担当がいたりとか</p>
+<p><code>02:19</code> エンジニアがいればこういうのやってくれるわけなんですけれどもなかなかそういう体制がなくこれらが怖いのでなんとなく作れたとしても実際に本番で使うのは非常に怖いよねというのがあるんですがこれらをクロードマネージドエージェントを使うことによってかなり大きく改善できるよというのがこのサービスの解決する課題と価値になります具体的に1回ご紹介すると1つ目が運用基盤ですねAIエージェントをチャットツールで使ったりとかちょっとしたAPI使ってくるみたいな感じでちょい利用はめちゃくちゃ簡単なんですがじゃあ実際に本番環境に出して実装しようと思うようなAIを使っていこうと思うと</p>
+<p><code>02:56</code> このAIが暴走しないようにしたりとか情報を変な風に持ち出さないようにしたりとか外部からの攻撃をガードするとかこういったものをしっかり作る必要があるわけですね最近こういった内容はハーネスエンジニアリングハーネスというのは手綱って意味でして馬に手綱をつけるようにAIエージェントにしっかり手綱をつけてそういう環境を作っていこうというもので注目をされているわけなんですけれどもこれを しっかりやろうと思うとやっぱり本格的にエンジニアにお願いしたりとか作る必要があってすごい大変でしたと ところがこのクロードマネージドエージェントは、まさにこういった管理を仕組みによって担保することにより、非常に安心して使いやすい環境を提供できるというのが一つ目の価値になります。</p>
+<p><code>03:38</code> 二つ目、AIエージェントを使おうと思うと、このエージェントには必要な情報であったりとか、記憶を管理する必要があるわけですね。この記憶の管理に関して自分で作ると一つのAIには対応できる要領に限度があるのでそれをちゃんと解決する仕組みを作りしっかりマネージをするような感じでそういう構造を作らなくちゃいけないわけなんですけどこれを作るのも大変でしたねとここに関してこれをクロードがしっかりと対応する仕組みを用意してくれて対応することができるので自分が頑張らなくても簡単に解決できるよとまた3つ目認証情報でして</p>
+<p><code>04:15</code> AIエージェントが仕事をしようと思うと様々なツールの認証情報を持つ必要があるわけですね例えばGmailを読みに行くとかSalesforceを読みに行くとかSlackで書き込むとかこういうことをする場合にはエージェントがその鍵を持っておいて使うことができるようになるのが必要なわけなんですけどこれができてしまうのでエージェントに対して悪意ある人間が何らかのハッキング的なことをしていきエージェントが知っているこの鍵を盗もうとするこういうリスクがあるというのが問題になっているわけですねこれをこのクロードマネージメントエージェントは</p>
+<p><code>04:49</code> 実際にその考えるAIと鍵の部分を完全に分けることによって解消するとこういう仕組みもあることにより認証情報を安全に管理できるこういうこともできるようになっていますまた4つ目一つ一つのAIエージェントが仕事をガンガンするわけなんですけどAIに任して本当にどのぐらいちゃんとできているのか成功しているのか結果はどうなっているのか過程はどうかみたいなことはちゃんと仕組みを作らないと中身がわからないわけですねなんとなく仕組み作ってしまうとなんかうまく動いてるかもしれないけど果たしてどうなんだろうという風になってしまっておりブラックボックス化してしまうわけなんですが</p>
+<p><code>05:24</code> クロードマネージドエージェントは非常に詳細にやってる内容が一個一個わかるので確認もできますししっかり追っておけば途中で介入するみたいなこともできるんですねさらに5つ目これまでだとトークンがどれぐらいかかるのかつまりAIのコストがどれくらいかかるのかみたいなことが予測ができなかったりとかどれくらい活用できるかってことがわからないという状況があったわけなんですけれどもこれに関してもこのクロードマネージドエージェントを使うことによってどれくらいコストがかかりそうかみたいなことがしっかり一件一件わかりますし管理をしていきながらどのぐらいのコストで運用できるかってことがわかると</p>
+<p><code>05:59</code> このように実際に本番でAIエージェントを使おうと思った場合にはなんとなくちょっとエージェントを作るだけであればそんなに難しくはないんですけどこれを企業であったりとかより実践的に使おうと思っていた場合に様々な課題があったものを解決する仕組みがクロードマネージドエージェントAIエージェントを本番環境であったりしっかり実践に投入するために作られた仕組みになっているわけですしかもこれをですね本当にクロードのアカウント法人でも個人でも持っていれば非常に手軽に使うことができるよという意味で画期的なAIエージェント本格的な仕組みになっているという風になっているわけですね</p>
+<p><code>06:36</code> じゃあもうちょっと具体的に今どういう課題があってどんな価値があるかというのをご紹介したんですがそこを仕組みとしてどう担保するのかご紹介したいと思います大きく5つのポイントがありましてエージェントそれから環境であるエンバイロメントそれからこの2つを組み合わせた1個1個の仕事の範囲であるセッションまたセッションにおけるメモリーの管理さらには鍵を管理する仕組みであるVoltという5つの仕組みがありましてこれを使うことによって先ほどの価値というところをクロードマネージドエージェントは非常に使いやすい形で活用できるようになっていますさあ1つ目はエージェントですね</p>
+<p><code>07:12</code> このエージェントはですねどのモデルを設定するのかであったりとかプロンプトを設定したりとかあとは様々なスキルとかツールを設定して使うことができるようにできます後ほど具体的な画面でもご紹介しますけれども今画面出しちゃおうかなこれ実際のクロードマネージドエージェントの例なんですけれどもエージェントの中にはプロンプトをこんな風に設定してやってもらうことも設定できますし下側に行くとどんな風なツールが使えるのかこの場合はスパベースというツールが使えますねであったりちょっと下見にくいんですがスキルと書いてありましてスキルを設定してあげることもできます</p>
+<p><code>07:47</code> 2つ目に環境ですねエンバイロメントこの環境というのはクロードが仕事をする場所のことですエージェントが仕事をする場所のことですエージェントがいてそのエージェントがどの環境で仕事するのかこれが別々の概念にありまして組み合わせることができるわけですねこれとある設定の環境の例なんですけれどもネットワーキングで特定のとこしか設定しちゃいけないよというのもあればどこでもいけるよというネットワークの設定であったりあとはこの環境で何が使えるのかという設定であったりとかメタデータとしてキーバリューセットで</p>
+<p><code>08:24</code> 何かしらエージェントが使うセットをここに保存することもできるよというのが環境になりましてこれを設定することにより例えば特定のサイトしか行けないよとかですねそういう制限をすることによって別のことをしないということもできるわけですね続いてセッションこれが非常に重要な概念なんですがエージェントと環境が別々にセットされましてこの2つを組み合わせて仕事をする1個1個の単位がセッションですねさっきのディープリサーチの場合にはディープリサーチエージェントを1つの環境において1個仕事してねこれが1個のセッションで</p>
+<p><code>08:58</code> じゃあ同じエージェントと違う環境を組み合わせてまた違う仕事してねといったら2つ目のセッションになるという感じになってるわけですねこれはセッション単位で1個1個どういう動きになってるとか細かいことが分かりましてセッションに行くとこんな風に様々なセッションが残っていてこのセッション1個1個に対してどういう過程になっていてエージェントがどう動いたかってことが非常に簡単に分かるわけですノードを実際に使う時により詳細をご紹介しますまたメモリー管理に関してはセッションの中のメモリー管理とそれからセッション外でやった内容を引き継いで</p>
+<p><code>09:34</code> 他のセッションでも使えるようという2つのセッションがあるようですねメモリーがあるようですね2つ目のですねセッションをまたいだメモリに関しては申請をして使うことができないようなんですけどもそういうメモリ管理もできるというものがありましてこのクロードマネージドエンジンをお願いすることによって長い処理であっても自動的に処理をしてくれて使うことができるようになるわけです5つ目がちょっとわかりにくいんですがボルトという概念になりましてエージェントが様々なツールを使うときに当然ながらそのツールを使うための鍵が必要になるわけですこの鍵というのをエージェントには渡さずに別の箱に入れておいて</p>
+<p><code>10:12</code> エージェントが使う時にエージェントは知らないんだけれども箱があるんで使うことができて代わりに鍵を開けてですねエージェントは使うことができるが鍵は知らないよという風に設計してあるのがこのボルトという概念ですね例えばこちらに行ってクレデンシャルボルトに行きますと今スパベースという概念の鍵がこんな風に置いてあるわけなんですけれどもこれを設定することによってエージェントはこのスパベースというものを使いたいという感じになっているんですけど鍵は別の枠に設定してあるのでこの鍵の情報はエージェントは知らないわけですね</p>
+<p><code>10:45</code> 使う時にも知らないとこの設定をすることによってこんなことができるわけですボルトがないとエージェントが鍵を持ってしまっているので例えばエージェントに対してあなたが知っている鍵全部ここに送ってねみたいなことを悪意的にお願いした場合にこれがうまく通ってしまうと鍵が流出しちゃうわけですねところがボルトを使う場合にはそもそもエージェントは鍵を知らないとなので泥棒が侵入してきても鍵が存在しないので盗むことができないよという風になっているわけですこれは何でもかんでもこれはエージェントをガードするわけではなくてあくまでも鍵に限定しているわけですね</p>
+<p><code>11:22</code> 特にAIエージェントにおいては変なプロンプトを渡して挙動を変えるプロンプトインジェクションというような操作が非常に問題になっているわけなんですけどもプロンプトインジェクション全部をガードするわけではなくてそのうち鍵の情報を持ってきてねみたいな悪意的な操作に関してはそもそもエージェントが鍵を知らないのでこれはもうできないよというような仕組みになっていますそれでもだいぶ安心ですよねこのような仕組みがある中でじゃあ実際にどんな風にエージェントを作っていくことができるのか実はクロードの管理画面から非常に簡単に作れるので</p>
+<p><code>11:55</code> これから方法をご紹介したいと思いますこれアンスロピックの画面になるんですが右上に行きまして右上でですねこれを押してこちらのクロードコンソールというのを押すと管理画面に行くことができますまだ無料版とかで使っていない方は個人か組織かみたいなことを設定することができるのでこれ選んでもらってこれは個人ですねに行くといくらぐらい設定するのかそれからクレジットカードの情報を入力して設定することによってこの管理画面を使うことができるようになりますさあ実際管理画面に行きまして</p>
+<p><code>12:28</code> 今管理画面にいるわけなんですけどこの左側のマネージドエージェントを使うことによって簡単にエージェントを作っていくことができますクイックスタートを使うとこの左側のチャットでどういうエージェントを作ってどんな風な環境を作ってどういう風にセッションやるのかみたいなことを順に試すことができるので最初はこれを使うと分かりやすいんじゃないかなと思います例えばウェブからキーワードに基づいて情報を検索しその検索した内容を回答するシンプルなエージェントを作りたいこれ非常にいいのがですねこのマネージドエージェントを作るためのエージェントみたいなものが画面に入っていまして</p>
+<p><code>13:08</code> エージェントを作ることもできますし一個一個のセッションに関して分析をしたりすることもできるのでこのエンジニアではなくてもエージェントを改善したり作ることが非常にしやすいようになっていますさあ今英語になっちゃったんでシステムプロンプトは日本語にして後から直しやすいようにという風に言いますと日本語に変えてくれてプロンプトが作られるので後からこれを改善しやすいわけですねさあOKですとCreate this agentを押すと一つ目のエージェントを作ることができました</p>
+<p><code>13:41</code> このエージェントにはエージェントIDというものが付いていまして実際そのこの後で言う外の環境からエージェントにお願いする時にはそのエージェントのIDが必要になります続いてConfigure Environmentで環境を作成する用途いうのを押すと環境を定義することができます環境とはエージェントのツールが実行されるコンテナの設定テンプレートですとちょっと難しいこと書いてありますが自分用の環境を作ることができる用途いうことを言っているわけですね今話し出して間違えてクリックしちゃいまして既に作成済みの環境を使うにしちゃったわけなんですけどない場合にはゼロから作ることができまして</p>
+<p><code>14:17</code> 後で環境を作っていきたいと思いますやっぱり新規で作ると油断してボタン間違えたら押しちゃいましたねさあ新しい環境を作成しますとこのエージェントはウェブ検索を使うためインターネットで必要ですねという感じで吉田にクロードが考えてくれてセッションを作ってくれるエンバイロメントを作ってくれましたさあこの2つエージェントとそれから環境が出ると初めてセッションという感じで仕事をお願いすることができますエージェントをどの仕事場において仕事をするのか</p>
+<p><code>14:51</code> これが1個の依頼の単位なわけですねさあNext Start Sessionと押すとこの2つを組み合わせた形で仕事を依頼することができましてテストランと押すと今Web Search Agentというものが新しくさっきできたわけなんですけどWeb Search AgentですねWeb Search Agent Environmentという環境に置いた中で今ここに作業場ができてテストシステムが始まりましたこれ依頼するとですねこの中身に関してはクロードのチャットみたいな感じのような形で</p>
+<p><code>15:27</code> エージェントがスタートして起動するわけなんですけれどもデバッグというところを見るとこんな感じで細かくセッションがスタートしてその後に今ユーザーがこんな入力しましたねとこの後にモデルがスタートしていき試行していてエージェントがどんな風に1回回答したかどんなツールでウェブ検索をしてどういう風なインプットがあったかみたいなのは全部こんな風に分かりますトランスクリプトを押すとこの細かい内容ではなくて大枠の動き我々が普段チャットで見ているような</p>
+<p><code>16:00</code> エージェントの動きAIの動きは分かりましてどんな風な感じになっているのかってことを確認することができます今エージェントが多分ですね回答を作ってくれましたねこんな感じでメッセージ2024年の生成AI最新トレンド2024年は全く最新じゃないんですけどねみたいな内容が懐かしいですねO1とかね懐かしいみたいな内容が返ってきましてこれで一つのセッションが今スタートしていて管理ができるわけですさあもう一回セッションの形に見て左側から行きますと今のセッションはこの上のやつですね</p>
+<p><code>16:33</code> Web Search Agentが動いてますよとクリックするとさっきと同じ画面に行きましてデバッグ画面とトランスクリプト画面でどういう回答があったかという風にここで確認することができます右上でですねSend Interruptと止めることができまして今止めたとまたこのSendイベントを押しとくと下にチャットが出ましてチャットで2025年も教えてという風に依頼すると2025年の内容がこれまでユーザーが送って</p>
+<p><code>17:06</code> エージェントが対話するという感じでこのセッションの中ではいざ何度もやり取りをしてやり取りをすることができるわけですねさあ注目したいのは上側でして上を見るとどのぐらい動いているのかそれからどのぐらいトークン使っているのか今回のは左側がインプットで46.1なんで4.6万ですね右が2000トークンぐらいを使っているわけなんですけどどれぐらい使っているかがわかりますこの動いている時間に応じてコストとしてはですねクロードの動いている時間に対してコストが1時間あたり0.08ドルかな10円ぐらいですかねかかり</p>
+<p><code>17:42</code> それとは別にトークン費用かかるよという感じでこの2つがお金がかかる計算になるわけですね3分なんで1時間の1分の1で0.5円ぐらいかかりつつトークンに関しては今18万インプットの4000出力なんでクロードソネットだとインプットが100万トークンあたり3ドルなので8万だと8%なんで0.2ドルぐらいアウトプットが100万とかで15ドルなんで</p>
+<p><code>18:16</code> みたいな計算をしてコストを出すことができるんですねこんな風に一件一件ですねコストが分かりましてどんな風になっているのかってことが確認ができるというのがセッションになりますさあここで苦痛しますと今クイックスタートをしたんですけどもエージェントを1個作りましてエンバイロメントを1個作りましてセッションをスタートしたという状況になりました一個一個見ていくとまずエージェントウェブサーチエージェントですねクリックして右側のエディットを押すとこんな風に中身が見えるわけなんですけどこれ編集はですね右側のガイデットエディットを押すとこんな感じでまた左側にチャットが出まして右側のプロンプト自分で直すこともできますしAIにお願いしながら直すこともできます</p>
+<p><code>18:57</code> 環境に行きますとこのウェブサーチエージェントを作ったわけなんですけどエディットを押すとさっきのネットワーキングでどこでもいいですよというのかLimitedでどこまで許すのかMCPサーバーネットワークOKかパッケージマネージャーがネットワークするのでOKかあとはホストどこに対してアクセシーのかとの設定ができますまたパッケージとして様々なツール何を導入するかを設定することができたりメタデータとしてAIが知りたいようなパスワードみたいなことを設定することもできるような感じになっています</p>
+<p><code>19:31</code> この2つを組み合わせるセッションというのはさっきの左側のシャットで実行しましたがNew Sessionを押すとここでエージェントを何にするかWeb Search Agent環境をどれにするかさっきは聞かなかったんですけどCredential Vaultとして鍵を使いたい場合にはどの鍵を使うかというセットがここでセットすることができましてこれをセットしていってテストとかって実行するとこのCreate Sessionができてテストセッションとしてあるエージェントがある環境で作るテストセッションができて</p>
+<p><code>20:04</code> チャットを送るとこのエージェントを作ることができるよという風になったんですねさあクレデンシャルボルトが何かというとこれは基本的にはmcpサーバーの鍵を預かる枠になっていますnewboltと押しまして例えば何にしようかな例えばこのテストでできそうなノーションにしようかなノーションと押しまして保存しますノーションを作るとここでadcredentialとしてサーバーを追加することができるわけなんですけれども下側でクロードが対応しているものが出てくるのでNotionを選択しConnectと押すと結構簡単にですねこれはNotionの管理画面というか確認画面が出てきていまして、確認画面でNotionのID、パスワードでOKと押すと、この鍵がVoltという鍵の保管庫に保存されるわけです。</p>
+<p><code>20:55</code> 今、続行してNotionのMCPを保存しまして、保存するとこんな感じでNotionが使うことができるようになっておりました。さあ次にエージェントに行きましてこのエージェントにこのNotionが使えるようにしていくというのをしていきたいと思いますエージェントに行きましてこれじゃ分かりづらいんですけどエージェントがMCPを使うためにはこっちで鍵を持つつエージェントにはそのMCPを使う設定をする必要がありますこれも非常に簡単でしてGuided Editに行きNotionのMCPを使えるようにして</p>
+<p><code>21:35</code> という風にお願いをするとこの右側にですねこんな感じでYAMLという表記形式でこのエージェントの定義がされているわけなんですけどこんな感じであっという間に追加してくれて今MCPサーバーとしてNotionが使えるようになりましたさあこれがハマりポイントなんですけどこれはですねこの段階では保存されていなくてですね右上の保存と押さないと保存されませんで今保存されているとこれで保存ができましたさあセッションに行きまして新しいエージェントを使っていきますWebSearchエージェントさっき追加しましたね</p>
+<p><code>22:08</code> WebSearchで次にクレデンシャルNotionを設定して接続するとさっきまではNotionの鍵がなかったのでMCPを設定しても鍵がなかったらもちろん使えないわけなんですがここでNotionから最新のAI情報を持ってきてというふうにお願いをすると今、AIエージェントにNotionを使うというMCPが設定されており、この鍵のボルトもこのセッションの中に入っているので使うことができるわけですね。上を見てみるとWebSearchAgentでWebSearchAgent Envという環境があって、Notionというボルトが設定されているよと。</p>
+<p><code>22:49</code> こんな感じで一つのセッションにはエージェントと環境、これがミニマムセットですね。あとは必要なボルトを追加することによって1個のセッションができるよと。こんな感じになっています今ノーション使えるのでノーションサーチしてくれていてどんな情報があるかなってことをこんな風に確認してくれておりノーションから最新の改変情報として様々な情報を出してくるわけですねちょっとお客さん情報があるので後からマスクしておきますけどもこんな風な感じでセッションでMHCPを使うことができますよという状況になりますさあこのエージェントですね作っていくわけなんですけど</p>
+<p><code>23:27</code> 実際面白いのは何かというとこのエージェントやっぱり最初のバージョンだけではなくてどんどん良くしていきたいですねここで非常に面白いのがセッション単位でクロードに質問ができるんですねなのでここでAskクロードとそこになりましてもっと回答方法をユーザーが見やすいようにしたいがどんな風なプロンプトに改善するといいと思う?どうすると今立ち上げているクロードはセッションの情報を見ているので1回やったセッションを踏まえて今回のエージェントをどんな風に活用するかっていうことが相談ができるわけですこれコピーしましてエージェントに行き</p>
+<p><code>24:06</code> この段階ではエージェントは直ってないわけなんですがこっちのガイデッドエディットに行って以下を踏まえてシステムプロンプを直してという風に持ってないわけなんですが、こっちのガイデッドエディットに行って、以下を踏まえて、システムプロンプを直して、という風に持っていくと、今回のセッションを踏まえて、改善すべき内容であった、Notionの中で関係ない情報を持ってこないでねとか、大事な情報を出してねという風に改善することができて、新しいバージョンのエージェントができ、セーブすると、ここで保存されるわけですね。こんな風にですねこの管理画面を使っていきながら一個一個のセッションを追っていって</p>
+<p><code>24:39</code> どんな風に動いているのかをチェックすることができそのセッションごとにクロードに聞きながらどう動いているのかであったりとかどんな風な活用になっているのかってことを確認することができエージェントを作る方にもセッションの方にもクロードのサポートがついているのでそこで聞いていきながらどんどんアップデートをしたりダメな要因を探っていくことができるとこんな風になっているのでかなりPDCAを回しやすい感じになっているんですね非常に面白いですよねということで実際にクロードマネージドエージェントを使ってエージェントを作るエージェント、エンバイロメント、クレデンシャル</p>
+<p><code>25:12</code> これを組み合わせたセッションを作るというのをやっていましたさあじゃあ作ったエージェントってどうやって呼び出すんでしたっけという話があるわけなんですけど実はこれはですねクロードのアンソロピックに対してAPIというのを経由してエージェントIDやそれからエンバイロメントIDクレデンシャルIDを設定して呼び出すという仕組みを外部で作ることになりますクロードはAIエージェントが使うエージェント環境鍵の管理を提供してくれてるわけなんですけど管理画面で使うことはできるわけなんですが基本的には多分管理画面ではなくて</p>
+<p><code>25:45</code> これを社内のチャットツールであったりとかSNSから呼び出していくあとはメールベースでメールが来たらエージェントにお願いするみたいにしていくわけですよね例えばGoogleチャットの場合にはこういう感じになりましてGoogleチャットのスペースであるボットにアットマークメンションを付けたらそのメッションを管理した上でAppScriptであったりとかGASを使ってこのチャットでアットマークがあった場合はGASからアンスロピックのクロードマネージドエージェントを呼び出し結果返ってきたら返すこんな風な仕組みをGoogleワークスペース上の</p>
+<p><code>26:18</code> GASであったりとかに作ってあげることによって接続ができるわけです実際どんな感じかというとこんな感じでクロードエージェントボットをあるスペースに入れてアットマークするとタスク受け付けましたねとでクロードマネージドエージェントで動いている内容がこんな風に返ってきておりこの裏側で行くとこのアットマークメンションを受けて一度ガスが動いてガスGoogleアップスクリプトからクロードマネージドエージェントに行きで行った内容がこのクロードマネージドエージェントのこっちに来ましてこういう動きを持って回答ができており</p>
+<p><code>26:53</code> この回答内容がこのチャットに流れているっていうそういう流れになってますね仕組みとしてはさあこの内容はですねちょっとがっつりサブチャンネルの方でさっき開けまして1時間ぐらいで実際ゼロから仕組み作ってるというのを上げてますのでもし興味があったらサブチャンネルご覧くださいこれがケース1ですねなのでGoogle系の導入入ってる会社はアンソロピックのマネージドエージェントとあとGoogleアップスクリプトがあればこの仕組み実装することができるのでそれ以外にいらないというところでかなり使いやすい仕組みになるんじゃないかなと思っています</p>
+<p><code>27:26</code> 2つ目スラックですねスラックの場合にはスラックとスラックとつなぐための何かのプログラム今回の場合はGoogle Cloudなんと書いてあるんですがこれAWSのAzureでも何でもいいんでスラックから送られたいを一度受けてアンスロピックのマネージドエージェントに送る仕組み これが何か必要ですね送ったら同じようにアンスロピックのマネージドエージェントに依頼が行ってこれが戻っていってスラックに返せようという風な動きになるというこういう仕組みが必要になります こちら実際使ってるんでどういう動きになるのか実際にご覧いただければと思いますスラックの画面なんですがスラックの方で</p>
+<p><code>28:04</code> どうしようかなクロードの何がすごいの?と質問するとさっきのGoogle Cloud Runのプログラムが一旦こんな感じで返してくれてましてこの返した内容が実際セッションに行くのかというと今これは立ち上がりましてちょうどさっきのスラックの依頼を受けてスタートをするわけですねクロードのマネージドエージェント何がすごいの?とシンキングして通常の調査フローでまだ吸えますよと</p>
+<p><code>28:37</code> こっちのエージェントでは論点を設定ししっかり検索しそれを1回レポートを作って批判的に見てもう1回返すみたいな感じになってましてそういうスキルも読み込んで実行する感じになりますでどんどんこんな風にですね進んでいくわけなんですけどここでですね非常に面白いのがこの動き結構細かくこんな風に見れますしどこでどんなことやってるのかであったりとか上側でこうトークンが見えるわけですねなのでエージェントを使いながらどの処理にどのぐらいトークンかかっていてそのトークンって果たして必要なんだっけみたいなことはですね</p>
+<p><code>29:13</code> これをやりながら見ていくと結構考える習慣になるので1回やってみてもらって回答結果を見てこれいるなとかいらないなとかみたいなことを考えていく習慣を最初の頃はつけていくといわゆるAIエージェントマネージャーのようにAIエージェントの仕事をお願いしてるんだけど果たしてこれ効率的にできたのかなと無駄なストーリーないかなと途中過程で変なことがないかなみたいなことを結構クリアにこれで追うことができるのでこれが非常に面白いですねウェブサーチやっていてリードやっていてせっかくなんで終わるまで見てればいいかなと思うんですけどスキル読み込んでます</p>
+<p><code>29:46</code> ちなみにスキルはですね説明はしてなかったんですけど左側にスキルというのがありましてこのスキルの部分でAddスキルで自分が作っているスキルをアップロードができますスキルアップロードするとこんな感じでスキルIDが付くのでこのスキルIDを使いたいですよという風にエージェントの管理画面でお願いするとこうしたスキルがあるわけなんですけどこのYAMLの中でスキルをこんな風に入れてくれるんですねこれもですねこれ基本覚え率じゃなくてこのアップロードしたスキルID使ってねというだけなんで作るのは非常に簡単です</p>
+<p><code>30:19</code> セッションに行きまして今情報収集完了しており記事を執筆しますねという感じになってましてこのエージェントは記事を執筆したら一回それをファイルに保存してスパベースで僕のデータベースに結果を保存しつつ回答結果を返すと回答結果出たらそれがGoogleクラウドラン経由でスラックに戻るっていう今この下側が実行されてまして僕がメンションしたら一応このメンション結果がGoogleクラウドランのプログラムに送られて下に行きましたと</p>
+<p><code>30:50</code> 今これ実行中ですね終わったら結果を取得してスラックに返すっていうそういう流れになっているのでその流れが今途中で進んでいるよという状況になりますでこれを最初はですねあのスパ ベースに保存しようと思ったんですけど保存形式にエラーがあって 何回もトライしてるんでちゃくちゃこのトークン無駄に増えちゃったりとかそういうのを受けてもっとスムーズにする方法を右側のチャットで聞いてAskFloatで聞いてプロンプトを直すであったりとか結果で出た内容にスパベースに保存しましたとかいらない回答があるんでそういうの無しにしてねとか</p>
+<p><code>31:24</code> あとはスパベースの保存とユーザーに出すのを二重で出力しちゃったりしてものすごい無駄にトークンが発生しているもうやめてねとかこのあたりはですねいい感じにやっていくというのを取り組んでいくのがやるっていう風な感じになりますねさあ間もなく終わりますかねリザルトが出ましてトランスクリプトがあって今これは保存してくれてる感じですねスターベースに保存してくれていて</p>
+<p><code>31:57</code> Execute SQLって書いてあるので保存する処理をしますよというのがありこれ一個一個の途中の過程に対してトークンが書いてあるんでこれを見ながらなんか無駄してないかなとか大丈夫かなみたいなことを把握できるわけですねこれはあれだな一回ライトしてリードしてるからなんか無駄に発生してる気もするよなとかって思った場合に聞くわけですねこれ終わったら聞きますけども今これウェブサーチして一回文章の原稿の素案を作り</p>
+<p><code>32:28</code> 実際にライトしてるわけなんですけど読み込みでもう一回使ってんなって感じだしこれをもっと効率的にできないのかなっていうのはこれから引こうかなと思ってますあとはサーベイスに保存する際には当然保存する分量の情報が必要なんでそれなりにトークンがかかっちゃうわけなんですけどこれもなんかもっと効率化できないのかなみたいなことはログを追ってればですね何にどれくらいかかってるかっていうのはなんとなくはわかるんでこれを見ていきながらなんか無駄してるところありそうな気がするというのを考えて直していくっていう</p>
+<p><code>33:03</code> のが重要ですよねエラー出てますねエラー出てるでここら辺なんかもですね見ていきながらなんでこれエラー出てるのかなみたいなことを考えてだから右側で聞いたりしてね詳細の要因を把握していき次のセッションではこれが起こらないようにエージェントを変えるとかスキルを変えるとかいろいろと変える余地があるわけですよねめちゃくちゃ保存が実行されてるななんかあんまりうまくいってない感じがするなこれっていうこともこのログからわかるんで</p>
+<p><code>33:46</code> 挙動が終えていいわけですよねなんでこれ今回うまくいってなかったのかなみたいなことがわかるわけですもうちょっと本当はね上手くいってほしかったですけどねこれもリアルな感じなんでこれもねバージョン今もうエージェント10ぐらいなんで結構直してちゃんと保存できたなみたいになってるかなと思ったんですけどそうでもないですねこれなんでエラー出てんだろうな謎これ気になってきますよねすごいなんか後から聞きますけどね</p>
+<p><code>34:19</code> この右側でねそれではまた。これなんかあれだなうまくいかない感じがするな何回もSQLで実行してるしななんでなんだろうあーなるほどなんかうまくいってないと</p>
+<p><code>34:55</code> エージェントが判断して今処理してくれましたねこれ見てみると75万トークン使ってるとこの処理によってまあまあこうまずいことしちゃってるわけですよねこんな風にやっていくとですねどういう風にトークン使ってるかわかるんでこれを見ながら明らかに今回この保存がおかしいというのがわかるわけなんで今回もしょうがないんで1回最後までエージェントにお願いするわけなんですけどこのセッションの様子を見て次にうまくなるような方法をここで考えて改善していくってことが非常にしやすい仕組みになっているのでこれがいいですね</p>
+<p><code>35:29</code> すごい学びになると多分なんか設定する方法が間違ってるんでしょうねきっとね保存する方法がねうまくいったかなよかったよかった</p>
+<p><code>36:07</code> で回答返ってきまして今この回答結果返ってきたのでこれがどうなってるかっていうとスラック側で回答が戻ってきてるよとこんな感じなんですねこんな感じで返ってきますよとさあちょっとせっかくなんでなんでこれがダメだったかを確認していきましょうちょっと予想外エラーが出たんでスパベーセのSQLでめちゃくちゃエラー出てるがこのエラー原因と今後直すためにはどうしようか教えてこれができるのがいいですよねセッションに対してエージェントがこれで確認してくれると</p>
+<p><code>36:44</code> そうなんだエグゼキュートSQLですごいたくさん処理されてるけどこれはなんでなの?ものすごいトークンも消費してるけど</p>
+<p><code>37:19</code> 一旦この部分ですねスキルの中の修正すべき内容っていうのは確認できるわけですよねさあ今回6回呼ばれてますけどなんで呼んでるのかってことで確認をしておりスパベースMCP経由では残念ながらできないんだななるほどねなるほど</p>
+<p><code>38:11</code> スキルは直すのでそれはそれとしてはいこれをコピーしまして</p>
+<p><code>39:13</code> エージェントに行きディープリサーチエージェントで設定しまして以下を踏まえてスパベースmcp経由の保存を最適化する方法をプロンプトに入れて失礼間違えた間違えた保存してないから別に問題なくセッションでセッションの情報消えちゃったかなこれでいけるか</p>
+<p><code>39:48</code> 変なIDが出ちゃってましたね以下を踏まえてリアルなですね以下を踏まえてスパベースのSQL保存を最適化する指示を追加してと言ってこれを依頼することによってこの右側のシステムプロンプト側に対してどっかに入れてくれると一応これステップにこんな風になってるんでどこに入ってるかっていうのはちゃんと知っておいた方がいいかなと思い</p>
+<p><code>40:28</code> まだ200秒ぐらいなんでね大したことないからまあこの中に入れてもいいかなと長くなりすぎたらスキルで切り出して直さなきゃいけないかなっていう感じになるわけなんですけど一旦まあいいかなっていう感じでこれを直してバージョンを10にするとで出来上がったらまた試すという感じでこんな風にぐるぐる回していくっていうのがこのマネージドエージェントを使っていってぐるぐる回す流れですねちょっと長いからこれ動画どうしようかなこのままそうかなリアルな感じですね本当にこのように直すんだねきっと</p>
+<p><code>41:02</code> ステップ5とステップ6に追加しますこれねなるほど重複してる気がするので超深くないよねこの2つね明らかにこの2つがね同じようなこと書いてある気がするんで共通のSKL構築ルールを一箇所に戻りますね。まあ、こっちはマシですよね、プロンプト的には。まだしもね。ま、要するにマークダウンでね、項目を切り出してもらってやったらいいからね。</p>
+<p><code>42:00</code> ステップが上の方がいい気がするまあいいかこれででセーブしてこれでバージョン10になったんでおしまいよとこんな感じで直していくのが実際の流れになりまして皆さんに導入して私自身もこれやってる感じですねさあこんな風に作成と運用を通じた学びや価値ですねをご紹介したいと思います2つ動きからかなと思っていて1つはAIエージェントの挙動がよくわかるとさっきまさにやりましたけど動いていくうちに何やってるのかなってことがすごい細く分かるわけです</p>
+<p><code>42:33</code> さっきで言うと明らかにそんなにデータベースを操作すること必要ないはずなのになんでこんなに時間かってやってんの?というのを分かるわけですすごくいいのは右側のクロードを出すことによってそこで聞けるので挙動を理解した上で改善する方法であったりとかハマりポイントなんかもどんどん分かってくるわけですねこれめちゃくちゃいい2つ目に運用のコストが上がるのめちゃくちゃいいです例えばさっきのセッションにおいては明らかにSQLのミスみたいなところで何十万トークンも発生していて今さっきのやつだけでもこんな感じで83万トークンですかねインプット3ドルだから2.5ドルぐらい</p>
+<p><code>43:12</code> 400円ぐらいこれがかかっててマジかみたいな感覚ですよねなんですけどこれをちゃんと肌身に感じてコストを上げてやることによって自分自身がこれからエージェントを本番でやろうと思った場合にこのコスト感覚がすごいつくわけです普段って使い放題でクロードのプロプランとかマックスプラン使っちゃってると多少雑でもあんまり関係ないからええやんなっちゃうわけですよねところがこれがセッション単位でお金がかかると本格化しまして無駄に100円とか200円毎回と同じじゃないですかそこでコストを見ながらさっきの挙動も含めて最適解を出していくという感覚が身につくんでこれがめちゃくちゃいいですね</p>
+<p><code>43:48</code> ところで正直僕自身もですねクロードはマックスプランですし別にそっちでやってもいいわけなんですけどスラックとか外部からクラウドで動かしたいエージェントは積極的に作っていきコストをちゃんと見て動きを見ながら何がダメなのかハマっているのかこれをちゃんと真面目にやることによって中の動きが分かりますしコスト感覚出るのでこういうのをちゃんとやっていくと別の動画でご紹介しているAIエージェントマネージャーとやったりとかそういう仕事の知見になるかなと思いますしこれから実際作っていけでものすごい力がつくわけですよねこのツール自体は仕組みとしても企業でも使える仕組みでもありますし</p>
+<p><code>44:26</code> 作っていく過程で学びが明らかにあるというのがわかっているのでぜひ皆さんも積極的に使ってもらえると面白いんじゃないかなと思っていますということで最後に簡簡単に告知をさせてください。2時間で分かる実践イベントをガンガンやってまして、5月16、17はいよいよクロードコードを使った業務自動化やっていきたいと思います。この動画でもすごいやってましたが、本当にこういうマニアックというか地道なことを毎日やっていて、どんどん自分の仕組みも作っていますし、ここでやられた要点を2日に分けてしっかりご紹介したいと思います。それ以外にもExcel作業の自動化であったりとか、エージェントアプリを無料で使えるものをご紹介する</p>
+<p><code>45:02</code> やってみようというイベントであったりGoogle AIスタジオでツール作成これも何十と作ってますねマナスを使った活用ですマナスも結構使っていてこういうふうに僕は使ってますよみたいなことも含めてご紹介する回をどんどんやっていこうと思うのでもしよかったらご参加いただけると幸いです実際これ参加することによって本当にその場で感動して達成できるであったりとか金額に見合う価値があった実際に行動が変わったこんな方多数いますのでぜひご期待をまたこういうイベントではなくてがっつり並走して教えてほしいという方向けにはAI活用支援版のライズアップというコンセプトで</p>
+<p><code>45:38</code> ストイシアンというサービスをやっていますこのストイシアンでは実際にコーチが毎週ワンオンワンをして目標設定をしてそこに向けてやり方を伝えていきながら一緒に並走するというのをやっていまして2、3ヶ月をかけてフロードコードをがっつり覚えて仕組み作っていくであったり企業であればコパイロットを覚えてコパイロットで業務効率化をどうするのかこんなことをですねガンガン回していくような仕組みをやっているのでもし興味があったら概要欄にあるのでぜひ使ってみてくださいLINE登録いただけると色の特典がありまして今日の資料はですねクロードマネージドエッジの中でCMAとアルファベット小文字3文字でCMAと入力してもらうと資料を送りますので</p>
+<p><code>46:16</code> もしよかったらご活用くださいまた毎週のAIニュースなんかのメールマガもありますのでぜひ登録してくださいこれで本日は以上になりましていやまさかね自分が作ったディープリサーチエージェントがあんなにスパイスでハマってるとかねあれをちゃんとやってね一個一個見ながら確認するのが重要かなと思っており多分あれもうまくいかないケースもあればうまくいくケースもありまして細かいセッションを最初はちゃんと追っておいてなんでこんなにこれコストを買っているのかなというのに見ながら思いを馳せながら考えていくと多分そこですごい力つくわけですよねそんなことをやっていきながら</p>
+<p><code>46:49</code> いろんな知見を得ていくと他のところにも応用が効くんじゃないかなと思いますし過程を知ることによってエージェントの理解であったりとかそれから各ツールであったりとかエージェントが使っているいろんな仕組みが深まっていきできることが広がっていくのかなと思うのでそういうことを身につける習慣としても今回のサービスはすごいいいんじゃないかなと思うのでぜひ使いたいという方はセキュリティに使ってみてもらってただし毎回コストかかるんで結構未然にも気になるからねやる必要があるわけなんですけどそれが僕はいいと思いますけどねでもそのくらい金払って学ばないと本気にならないわけなんでバンバントークンを燃やして</p>
+<p><code>47:21</code> 自分のエネルギーを得ていくと学びを得ていくというのがいいんじゃないかなと思ってますということでまたお会いしましょう池友です今回はご視聴ありがとうございましたこのチャンネルではAIエージェント時代に活躍するための実践的なスキルやノウハウ最新の情報をどんどん発信していますぜひチャンネル登録して一緒に学んでいきましょう</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./Notionで時間を集計する" class="internal alias" data-slug="Notionで時間を集計する">Notionで時間を集計する</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_適切な文章が思いつかないとき" class="internal alias" data-slug="AIプロンプト例_適切な文章が思いつかないとき">AIプロンプト例_適切な文章が思いつかないとき</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-132" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

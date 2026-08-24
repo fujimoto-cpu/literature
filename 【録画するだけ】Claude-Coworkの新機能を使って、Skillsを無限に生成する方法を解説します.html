@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します"/><meta name="twitter:description" content="📺 動画情報 【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します 🎙️ ClaudeCodeチャンネル ・ 📅 2026-07-22 ・ ⏱️ 20分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Coworkに追加された「録画してスキルを教える」新機能を解説する動画。画面操作と音声説明を録画するだけでClaudeがその一連の作業をスキルに自動変換できるようになった。 🗺️ 全体像 flowchart TD A[+ボタンから「スキルを記録する」を選択] --> B[画面操作・クリック..."/><meta property="og:description" content="📺 動画情報 【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します 🎙️ ClaudeCodeチャンネル ・ 📅 2026-07-22 ・ ⏱️ 20分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Coworkに追加された「録画してスキルを教える」新機能を解説する動画。画面操作と音声説明を録画するだけでClaudeがその一連の作業をスキルに自動変換できるようになった。 🗺️ 全体像 flowchart TD A[+ボタンから「スキルを記録する」を選択] --> B[画面操作・クリック..."/><meta property="og:image:alt" content="📺 動画情報 【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します 🎙️ ClaudeCodeチャンネル ・ 📅 2026-07-22 ・ ⏱️ 20分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Coworkに追加された「録画してスキルを教える」新機能を解説する動画。画面操作と音声説明を録画するだけでClaudeがその一連の作業をスキルに自動変換できるようになった。 🗺️ 全体像 flowchart TD A[+ボタンから「スキルを記録する」を選択] --> B[画面操作・クリック..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【録画するだけ】Claude-Coworkの新機能を使って、Skillsを無限に生成する方法を解説します"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【録画するだけ】Claude-Coworkの新機能を使って、Skillsを無限に生成する方法を解説します"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します 🎙️ ClaudeCodeチャンネル ・ 📅 2026-07-22 ・ ⏱️ 20分59秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Coworkに追加された「録画してスキルを教える」新機能を解説する動画。画面操作と音声説明を録画するだけでClaudeがその一連の作業をスキルに自動変換できるようになった。 🗺️ 全体像 flowchart TD A[+ボタンから「スキルを記録する」を選択] --> B[画面操作・クリック..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【録画するだけ】Claude-Coworkの新機能を使って、Skillsを無限に生成する方法を解説します"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1848"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1848" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します</a></div></nav><h1 class="article-title">【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-24T15:00:00.000Z">2026年7月25日</time><span>47 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【録画するだけ】Claude Coworkの新機能を使って、Skillsを無限に生成する方法を解説します</strong>
+🎙️ ClaudeCodeチャンネル ・ 📅 2026-07-22 ・ ⏱️ 20分59秒
+🔗 <a href="https://www.youtube.com/watch?v=drfzwJjrA00" class="external">https://www.youtube.com/watch?v=drfzwJjrA00<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Claude Coworkに追加された「録画してスキルを教える」新機能を解説する動画。画面操作と音声説明を録画するだけでClaudeがその一連の作業をスキルに自動変換できるようになった。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[+ボタンから「スキルを記録する」を選択] --> B[画面操作・クリック・音声説明を録画]\n    B --> C[Claudeが操作ステップを逐次記録]\n    C --> D[録画終了後スキルの下書きを自動生成]\n    D --> E[スキルをパッケージ化して保存]\n    E --> F[次回から同じ作業を再実行可能]&quot;">flowchart TD
+    A[+ボタンから「スキルを記録する」を選択] --> B[画面操作・クリック・音声説明を録画]
+    B --> C[Claudeが操作ステップを逐次記録]
+    C --> D[録画終了後スキルの下書きを自動生成]
+    D --> E[スキルをパッケージ化して保存]
+    E --> F[次回から同じ作業を再実行可能]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 録画するだけでスキル化できる — 言語化の壁がなくなる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>従来のスキル作成は「自分でAIに指示→うまくいったらスキル化」という手順で、複雑な作業ほど手順を言葉で説明するのが難しかった。今回のアップデートでは、画面の操作・クリック・タイピング・音声説明をそのまま録画するだけでClaudeがその一連の流れを手順書（スキル）に変換してくれる。「百聞は一見にしかず」で、映像の方が言葉より圧倒的に説明しやすいという発想がベースになっている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 使い方は「+ボタン→スキルを記録」→録画→終了の3ステップ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claudeアプリのホーム画面でチャット/コワークを切り替え、コワーク側でプラスボタンを押し「スキルを記録する」を選択すると録画が始まる。マイクはシステム/MacBook等から選べる。作業が終わったら停止ボタンを押すと、Claudeが録画内容から「スキルの下書き」を自動生成し、パッケージ化して提示する。動画内ではXの投稿へのリプライ生成（外部要約AIで要約→投稿）を実演し、35ステップ超の操作を正確に記録・スキル化できていた。ただし録画後に必ず「保存」を押さないとスキルが消える点は要注意（動画内でも実際に保存し忘れて消える場面があった）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 先行したのはOpenAI Codexの「Record &amp; Replay」 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>同種の機能はOpenAIのCodexが2026年6月18日に「Record &amp; Replay」として先に発表しており、Claudeは約1ヶ月遅れで「Record a Skill」として追いついた形。Pro/Max/Teamプランで利用可能で、無料プランでは使えない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 向いている作業の見極め基準 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①同じ手順を何度も繰り返す作業（来月・来週・過去に何度もやっている）、②操作が目に見える作業（コンピュータユース前提）、③人に見せられる画面であること（パスコード・個人情報・社外秘資料の操作は不向き）、④エラー時に後から直せること、の4条件で判断すると良いと述べている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. スキル作成時は高性能モデルを使う </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>スキルは後々何度も使い回す資産になるため、作成時は安いモデルで済ませず高いモデルを使うべきと述べている。作れるジャンルは経理・レポート作成・メール対応・データ整理・マーケティング・情報収集・採用など全業務に及ぶという。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 繰り返し作業の録画候補を1つ選んで試す</strong>
+KONNEKTで週に2回以上繰り返している定型作業（Notion転記・Slack定型連絡・見積書作成等）を1つ選び、Claude Cowork側で画面録画しながらスキル化を試してみる。</p>
+<p><strong>② 高モデルでスキル作成する既存運用と合わせる</strong>
+CORINのスキル作成もOpus等の高性能モデルで行う方針（<code>.claude/rules/skill-creation.md</code>「プランを先に出す」運用）と合致するので、録画によるスキル生成後も一度プランをレビューしてから確定させる流れにする。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> どうもクロードコードチャンネルの河村です今回なんですけどもこちらのスライドにある通りクロードにスキルを教えるこれがですね録画して話すだけになったよというところで皆さんのスキル作成だったりとか皆さんの業務効率化がかなり楽になったよという速報動画を撮らさせていただきたいなと思っておりますなんとですねクロードから新しいアップデートが入りましてそれが今日の話なんですけどもそれのですね最新情報を皆さんにお届けするために今動画を撮っておりますじゃあまずその公式の発表から見ていこうかなと思っておりまして</p>
+<p><code>00:37</code> クロードと検索いただいて一番上に出てくるこちらですねクロードコワークの新機能クロードにスキルを教えるということで今回ですねクロードコードではなくクロードコワークの方の新機能になりますこちら軽く読んでいきますとタスクを実行しながら画面を録画し作業中に説明を加えていくとクロードがそれをスキルに変換して再実行できるようにしますとクロードデスクトップアプリのプラスメニューにあるスキルを録画からアクセスできますプロプラン、マックスプラン、チームプランで利用可能ですということで無料プランの方は難しいんですけど課金されている方であれば全員が使えるような状態でございますこれどういうものかっていうと</p>
+<p><code>01:12</code> これまでスキルを作成する時って例えばメールを取得してその内容を要約して返信本を作る返信したらスラックに通知を送るみたいな一連の作業をスキルに落とし込む時って1回自分でAIに指示していってうまくいったらスキルにしてたじゃないですかでもこれだと自分の言語化能力というか今お伝えしたワークフローはめちゃくちゃ簡単なんですけどこれがもっと難しいスキルになってくるとどう伝えたらいいのかって分かんないじゃないですかそういう時ってこれ人間に説明する時も一緒なんですけど言葉よりも映像とか画像を見せた方が早いじゃないですか</p>
+<p><code>01:49</code> 普通に100分は一見にしかずというぐらいですからやっぱね映像を見せて説明したいとそういう時にわざわざ画面収録とって送ってたら映像として認識しづらいっていうところとかそれを読み込むのにめちゃくちゃ時間かかって激読もタスクになるということで本来向いていませんでした。じゃあ1枚ずつ画像を送るのかっていうとそれもそれでしんどいじゃあ喋るわっていうところで結構どっちつかずの状況だったんですけどこのクロードの内部に録画モードをですね入れてそのままスキルを作成するとこまでの機能を入れてくれたことによってここがだいぶはかどりまして録画した画面を見せるだけで</p>
+<p><code>02:27</code> その一連の動きをスキルにしてくれるなのでこれどっちかというとコンピューターユーズとか使うときに便利なものになります実際にカーすることで動くじゃないですかこれを追うんでスラックを立ち上げてとかメールを立ち上げてみたいなところも記憶してくれて記録してくれてその流れに沿うようにスキルにしてくれるマニュアルを作ってくれるんでかなりですねスキルの作成が楽になるとぶっちゃけこのAI時代これからのAI時代を生き抜くためにはまず大前提としてこのスキルっていうのは絶対に抑えておかないといけないんですよ今ねループエンジニアリングとかグラフエンジニアリングとかちょっと難しいワードとか結構続出しているんですけども</p>
+<p><code>03:06</code> 多くの人はクロード.mdスキルmcpプラグインそれちょっとしたハーネス環境周りをしっかり整えるだけでかなり上位層というかAI使いこなせる側に回れますとこのスキルをしっかり作っていくためにどうしたらいいかって言ったらこの機能をしっかり使っていくというところでございましてぜひ皆さんこちら今回の動画見ていただいて使いこなす側に回っていただけたらなと思っております今回皆さんにですね特別にプレゼントを用意いたしましたそれがですねこちらのGitHubの資料になりまして書物としてこのまま読んでいけるものになりますしこちらスライド資料見る1枚まとめ資料見るプレゼントキットを受け取るっていうところを押していただくとこんな感じでスライドを受け取れますし</p>
+<p><code>03:47</code> 1枚資料としてスマホでもパーッと見れるような内容になってますしまたねプレゼントキットとして超実例的な事例集今回の録画してスキルを作るっていう時にどういうものをスキルにできるのかとかどういうものをスキルにしたらいいのかっていうところをまとめたものだったりあとはそれをブラッシュアップするためのプロンプト教えたスキルを後から改善修正鍛えるためのプロンプト100選あとはフルカスタム可能でアプリ開発専用プロンプト100選これなんでアプリ開発って思うかもしれませんがこれ動画の後半にですねクロード実はもう一つアップデートを出してましてそれに使うためのプロンプトになります</p>
+<p><code>04:20</code> なのでぜひね今回のプレゼントすべて受け取っていただいて最新のクロードを使い倒していただけたらなと思っております受け取り方法は概要欄の公式LINEもしくはこちらのQRコードからLINE登録いただいてプレゼントを受け取ってください動画の途中ですが少しだけちょっとお時間をください改めまして株式会社N1マーケティング統括のヒューガと言います今回はですねちょっととあるね告知をさせてください7月27日の月曜日からですね8月の2日の日曜日までですねAIエージェント×SNS自動化について3日間にわたってみっちり解説していきますこちら無料でご招待いたします</p>
+<p><code>04:53</code> 僕らですねAI収益カラオだったりとかクロードコードチャンネルとかAIエージェントチャンネルとかその他ですねインスタグラムも合わせるとですね総フォロワー数はですね20万人以上を超えておりますYouTubeに関してはですねクロードコードチャンネルとか3ヶ月で1万人を超える実績を出したりとかSNSに関してはですね日本トップレベルのノウハウを持っておりますさらにですねAIエージェントを活用してですねもともとですね月100万以上かかっていたコストもですねほぼゼロにすることができたりとかそんなですねAIエージェントとSNSを掛け合わせた自動化に関するノウハウについてですねかなり知見が溜まってきたということで今回この動画を見ている方限定で</p>
+<p><code>05:26</code> この3日間のセミナーにご招待させていただこうかなというふうに思いますセミナーの参加特典もですねかなり豪華なものをご用意しておりますこちらも概要欄にある特設サイトを見ていただければ確認できるのでそちらを見ていただければと思うんですがこちらの募集期間はですね8月の2日の最終日までとなっておりますこちらの参加方法に関しては概要欄にある特設サイトからオープンチャットに入っていただいてその中でですね当日Zoomのリンクが送られますZoomの参加人数限りがありますのでぜひお早めに申し込んで待機していただければなというふうに思います今回ですね3日間のセミナーで本当に全てを詰め込んでぶつけるつもりなのでぜひですねAIエージェントを使ってSNSを効率的に運用していきたい方</p>
+<p><code>06:02</code> ご自身のビジネスにSNSを活用していきたい方AIをもっともっと活用していきたい方ぜひご参加いただければなというふうに思いますはいということでじゃあスライドを使って解説していきたいと思いますでもねある程度もうXの投稿見せて実際に解説したんで解説パートは軽くお見せする流れでいいかなと思いますまずねやっぱスキル教えるっていうのは新人にレジ打ちを教える場面を想像してほしいんですけどマニュアルを1から書くっていうのはめんどくさいと実際にやってみせながら喋るそうすることでちゃんと教えられますよねと</p>
+<p><code>06:36</code> それがですねAIも一緒でちゃんと自分の動かしている画面を見せた方がどう見ても理解度的には早いしこっちも教えやすいですよねっていうところでございますそれがね今回のアップデートになります何がじゃあ変わったのかっていうとやっぱ録画するだけで手順書ができるってところそして後で人間が読んで直せるっていうところもう一つ注目ポイントとしては実はこのスキルオープンAIももうすでに出してるんですよしかも結構前になのでクロードがようやく追いついたというような感じになっております先行したのはオープンAIのコーデックスですね2026年6月18日に発表されました名前がリコード&amp;リプライ今ね多くの人が使ってると思いますが実はコーデックスでも使えるよっていうところは覚えておいてください</p>
+<p><code>07:15</code> 1ヶ月後クロードがやっと追いついたと名前はリコードアスキルっていうところでございますじゃあどういうところでこの機能を使っていけばいいのかっていうところなんですけども来月も同じ手順を踏みそうだなっていうところは必ず入れる来月じゃなくても来週もしくは明日とか同じ手順やるなとかもしくは過去に何度も何度も同じことしてるなそういう時はやった方がいいですそしてもう一つそれって人に見せられますかってところですね今回録画をするので例えばパスコードを打たないといけないとか個人情報を入れないといけないとか会社の大事な資料を入れないといけない</p>
+<p><code>07:49</code> そういうのは向いてないんで基本的に人に見せられる画面であるかどうかこれがOKであれば使うって感じです後から直せますかっていうところで今回コンピュータユーザーを前提にしてるんで変なエラーが起きると変なとこ押して例えばプロンプトンインジェクションとかで危険な行為をする可能性がなきにしもあらずなのでそれって後から直せますかっていうところでこれでOKっていうのであれば使っていただくのがいいかなと思います実際の使い方なんですがクロードのアプリを立ち上げまして左のですねホームボタンを押してくださいその後このチャットとコワーク切り替えられるんで</p>
+<p><code>08:24</code> コワーク側にした後このプラスボタンを押してスキルを記録するっていうのを押しますそしたらレコードはスキルあなたの画面をクリックしたりタイピングしたりあと声で録音していきますとこれマイク選べましてシステムかMacBookか今指しているDJIに行くかみたいなのを選べます基本システムでいいと思いますこの感じで喋ってると音声が動いてるんでこれで動いてるのであればそのまま始めればいいかなと思いますこれなんと録音もできるのでめちゃくちゃ便利ですよねじゃあ一旦スタートリコーディングをしてみましょうそしたら今録画が始まりました</p>
+<p><code>08:57</code> こんな感じでコンピューターユーズの感じですよねで今これ喋ってるのが記録されるんで変なスキルにならないかなってちょっと心配してるんですけどもじゃあどういうことしようかなって今考えたんですけど皆さんの画面でお見せできるのは例えばXを開いてこういえばここにクロードって打つじゃないですかででは適当に今回のこれ開いて返信をポストってとこにリリースAIやってみましょうか投稿を要約してくれるAIなんですけどこれを送ることで何分か待っていただくとですね</p>
+<p><code>09:31</code> 投稿の内容を要約したものを出してくれるとこれね動画でもちゃんと要約してくれるんで結構便利なAIなんでぜひ使ってほしいですねこれ待ってる間にですねちょっとねこの下の画面見てみましょうかってとこでキャプチャリングっていう今録画してますよって出てましてあと35ステップ今これ今35ステップ踏んだんですよ嘘でしょそんな踏みました僕これじゃあちょっと通知をしてみますかしたら36ステップに増えましたなんでやっぱちゃんと踏んでますね僕なんで録画する時はある程度自分が何をするか決めておいてどういう手順を踏んでいくかっていうところは覚えておいた方がいいかなというところで</p>
+<p><code>10:07</code> リリースAI届きましたこれクリックしてリンク開いていきましょうそしたらこんな感じで記事を作ってくれましたこれで一旦終了にしましょうこれ押すとここに戻ってきましてはいこんな感じでクラウドが処理してくれますこれ結構良くないですかI recorded a demonstration of a desktop workflow fップワークフォーyoutube ランプロなんかあなたがやったやつ 記録したよって言ってると思いますすいません英語本当に苦手なんでじゃあこれねあとは待つだけですね をすごい読み込まれたツールスキルを使用しましたランスキルっていうものを使ってますねやっぱクロードコワークなんで見やすいですよ ね</p>
+<p><code>10:44</code> 今何をしてるかとかしかも今MAXプランの方がFable5使えると思いますがクロードコードよりもクロードコワークの方が確か8月ぐらいまで使用する量が多いはずなんでクロードコワークの方が今はお得だし分かりやすい使いやすいってところでおすすめしてます進行状況録画からスキルの下書きを作成中ですとスキルをパッケージ化して送付しますとこれだけでもスキル作れるめっちゃ楽ですよスキルってやっぱ苦手意識ある人多かったと思うんですよ作るのに何したらいいんやろとかどうしたらいいんやろ録画するだけでいいんですよ</p>
+<p><code>11:16</code> ちなみにスキルを作成するときはなるべく高いモデルの方がいいですなんでかというと後から使い回す大事なものになってくるんでここを適当におざなりで作ってしまうと後から本当に変なマニュアルみたいなのを読み込むことになるんでここはいいスキルを作るためにいいモデルを使っていくようにしましょうっていうところでなんとスキルが出来上がりましたXのポストにリリースAI宛てのリプライを送りリリースAIが生成する要約ノートを取得して届けるスキルすごい完璧ですよ皆さんユーザーがこのポストをリリースで要約してリリースAIで要約</p>
+<p><code>11:49</code> Xのポストの要約ノートを作ってこの投稿を要約記事にしてといった時にXのポストURLを渡して要約を頼んだ時あるいは今Chromeで開いているポストの要約を頼んだ時に必ず使うとすごいスキルの内容完璧ですねじゃあ今出来上がりましたんで実際やってみますかこのポストをリリースで要約して伝えるだけでOKっぽいので新規立ち上げてじゃあこのポストっていう対象のやつ探していきますかじゃあここでついでにねもう1個クロードの発表があるって言ったと思うんですけどそれがこちらなんですよ</p>
+<p><code>12:21</code> クロードデブスっていうところが発表したこれですクロードコードオンデスクトップですねiOSシミュレーターと連携するようになりましたとiOSアプリをビルドして実行するとシミュレーターが会話のすぐ隣のパネルで開きます今日からパブリックベータ版として利用可能ですということでこんな感じでアプリを作るときに右側にこんな感じでiOSのシミュレーターを置いてくれるんですよなのでスマホアプリ作成していきたいなとか別にスマホアプリってね自分専用でもいいと思うんですよ例えば今のメモアプリここの機能欲しいなって時にAIで作るとかそういう個人開発とかでもいいと思うんでこれ使っていただきたいんですけども</p>
+<p><code>12:56</code> 現在ねクロードコードで利用可能でMacOSのみのXコードが必要なんでWindows版の方は使えないんですがこちらねMac版の方はやってみてくださいじゃあこのリンクを送りますかフェイブル5もいらないと思うんでソネット5にしてこのまま送っていきたいと思います8月5日までですね使用量2倍じゃあ送ります申し訳ないんですけどスキルが保存されてなかったっぽいんで皆さんちょっとこれは気をつけてくださいスキルを保存これを押すってことを忘れないようにしてくださいなんで今ないよそんなスキルって言われたんでじゃあもう1回送っていきたいと思います複数のChromeブラウザが接続されていますというところで</p>
+<p><code>13:34</code> すでにログイン済みのもう一本のブラウザーを使うこれですねキャプチャしてるっぽいですねすごい今リプランにリリースAI要約してて勝手に入ってますねこの僕が右の緑のあれなんですけどポスト送信しましたこの赤い矢印がクロードですねすごくないですか送信されてるできましたねちゃんとポストを送信返信しましたが表示され返信数も468から469に増え自分のリプライがスレッドに投稿されたのを確認できましたリリースエアからの返信を待ちますとすげえちゃんとスキルになってますよ</p>
+<p><code>14:07</code> 全然エラーも入ってないこれぐらいね手動でやれやって感じなんですけどスキル使わなくてもっていう感じでまあうまくいきましたよという形でまあ本来はねもっと複雑なスキルになるかなと思いますし今回皆さんに分かりやすく伝えるためにこんな感じにしましたが実際できましたよとすごいですよねこれなので改めて向いてる作業としてはやっぱ何度も同じ手順で発生したりとか操作として目に見えること後から直せること社外に出しても問題ないことですねさっきの作業とかむしろそれですよねリリースAIとか僕結構使うんで何度も同じ手順ですよと</p>
+<p><code>14:40</code> 操作として目に見えますよねリリースAI要約してって送ると後から直せるというところでそれもちゃんとやってますしログインは自分でやってるんで扱う情報も問題ないというところでこういったところを選んでいただくのがいいかなと今回プレゼントの中に超実例的な事例集100選持ってきております例えば経理周りだと請求書PDFの自動作成とか今月分の請求書を作る手順を見せる案件一覧のExcelから今月の項目だけ抜き出しいつものテンプレートに金額と品目を差し込んでファイル名を取引先名アンダーバー年月にしてPDFで書き出すこれを見せれば作れますよと</p>
+<p><code>15:16</code> 他にも交通系ICカード履歴からの経費入力とかあとフリーMCPとかあるんでそこで連携して取ってくるとかそういうのもできますとなので今までこう手作業でスキルを作っていたのがクロードコワークを使って録画して喋るだけでOKになったとこれめちゃくちゃいいですよねしかもね作業のジャンルも先ほど経理とか喋りましたけどレポート作成メール対応データ整理マーケースns暮らし学習収集情報収集採用人、もう全てのジャンルでいけるんでもう本当に皆さん使ってほしいです実例の他にもいろんなプレゼント用意してましてこちらブラッシュアッププロンプト、中身見ていくと</p>
+<p><code>15:50</code> 例えば抜け漏れ例外ケースを追加する場合とか日付表記入れの対応追加とか添付ファイルなしのケースを追加したりとか金額欄が空欄のケースの場合を追加するとか複数依頼が同時に来た場合の扱いを追加しておくとかそういうブラッシュアップのためのプロンプトを100選用意しておりますそして先ほど紹介したアプリ開発これもですねプロンプト用意しております例えば個人カフェ開業LP一式とかこれスマホアプリっていうよりかはLPなんでちょっと違うんですけど名刺管理人脈代帳アプリとかねいろんなプロンプト用意しているんでぜひねこちら使ってアプリ作ってみるのもいいかなと思います</p>
+<p><code>16:24</code> ぜひね今回のプレゼント受け取っていただいて実際にスキル作ったりアプリ作ったりしてみてはいかがでしょうかということで概要欄の公式ラインもしくはこちらのQRコードからLINE登録いただいてプレゼントを受け取るようにしていってくださいクロードコードチャンネルを見ているそこのあなた毎日AIを使ってるけど本当にこの使い方で合っているのかと考えている人多いんではないでしょうか実際の業務に最適なAIの具体的な使い方こちらは変わるコーチに相談しましょうカワルコーチは弊社のAIコンサルタントがマンツーマンで伴奏するAIコモンサービスです</p>
+<p><code>17:02</code> 定例ミーティングやチャット相談を通じて何から始めるべきかどの業務にAIを使っていくのかどうやって社内にAIを浸透させるのかそれらを一緒に整理し実行まで支援しますしかもこれらをたったの月5万円から提供しています忙しくてAIを学ぶ時間がないという方こそ今の使い方が最適なのかっていうのを一旦診断してもらうということが大事です概要欄からまずは無料で相談できます忘れないうちに今すぐお申し込みしましょう</p>
+<p><code>17:36</code> ということで今回はね短めだったんですけども実際にクロードコワークを使って録画してスキルを作るっていう手順をね皆さんにお見せしていきましたただこれができるからといってやっぱり自分が何のスキルを作るのかとか自分のどこに生かすのかっていうところを知るのが一番大事かなと思っておりますやっぱり使わないスキルを作っても意味がないので自分が本当に使えるスキルっていうところを選定するここにね時間をかけていただくのもいいかなと思いますもしね分からないとか</p>
+<p><code>18:09</code> 自分って何の作業してるんだろうって時は例えばAIと壁打ちしていろいろ質問してもらったりとかAIの会話ログとかを参照してこのやりとり多いですよこれスキルにしましょうかっていう風に提案をしてもらってそれをスキルにするっていうのもありかなと思いますのでいろんな方法あると思いますそちらの方を試していただけたらなと思いますアプリもね最初に言った通り別にApp Storeとかに出さなくていいんですよ自分専用のアプリ作るっていうのもいいと思いますので自分の業務効率化とかにそういう風に使っていただけたらなと思いますということでね今回の動画めちゃくちゃ良かったよとか</p>
+<p><code>18:42</code> ダメになったよとか実際やってみたいなと思った方は高評価押していただきたいですしあとはこの動画への感想とか質問というのを募集しておりますのでコメントしていただけたらなと思いますまたこのクロードコードチャンネルでは最新情報だけじゃなくて他にもいろんな業務効率化の方法とか我々の知見いろいろ発信してますのでぜひチャンネル登録していただいて過去の動画や明日からの動画楽しみにしていただけたらなと思っておりますさらに現在我々株式会社N1という会社がこのねこのクロードコードチャンネル 運用してますがsnsとaiめちゃくちゃ得意ですというところでここの ノウハウを皆さんに無料でお届けするその3daysセミナーっていう のを開催しようとしております</p>
+<p><code>19:25</code> 今予約期間中でして8月2日からの 開催になっております8月1日までの予約なので急ぎ目で入っていただけ たらなと思っておりまして内容としては3日間に分けてセミナー開催して いきますと3日目とかは3回くらい開催するんで問題なく皆さん参加できるかなと 思います全然1日でもいいと思います参加するのなんでちょっと気になるよって方は もうぜひ参加してほしいです参加方法は概要欄にオープンチャット貼ってますので そこから参加する形になります何度も言い方ですから我々 sns かける ai めちゃくちゃ得意ですやっぱり今の時代 sns と ai 使えないっていう のは本当に大損って言ってもいいぐらい</p>
+<p><code>20:04</code> 他社との競争に負けてしまうっていうところなんでぜひね無料なので学びに来てほしいなっていうところとあと無料特典20個以上用意してるんですよ我々の知見とか全て集めたプレゼント用意してるんでそちらの受け取りを目当てに全然参加してもらってもいいので概要欄のオープンチャットでお待ちしております内容についてはねオープンチャット入った後とかでいろいろ告知が入ると思いますので興味ある方は概要欄から登録くださいまた他にもいろんな法人サービスや通信向けのサービス等もしておりますので興味ある方は概要欄にホームページとか</p>
+<p><code>20:37</code> LPとかいろいろ貼ってますんで見ていただけたらなと思っておりますということで本日の動画は以上になりますがぜひ皆さんスキルバンバン作っていきましょう結構楽しいんでまずは使ってみるプレゼント受け取って使ってみるっていうところをやっていただけたらなと思いますということで本日の動画は以上ですありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./2026-06-29-manual-skill-design-problem" class="internal" data-slug="2026-06-29-manual-skill-design-problem">2026-06-29-manual-skill-design-problem</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./2026-07-05-manual-skills-die-use-always-on-dispatcher" class="internal" data-slug="2026-07-05-manual-skills-die-use-always-on-dispatcher">2026-07-05-manual-skills-die-use-always-on-dispatcher</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote）</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-715" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

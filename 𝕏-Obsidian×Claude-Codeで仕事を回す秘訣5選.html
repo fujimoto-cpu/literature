@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 Obsidian×Claude Codeで仕事を回す秘訣5選</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 Obsidian×Claude Codeで仕事を回す秘訣5選"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 Obsidian×Claude Codeで仕事を回す秘訣5選"/><meta name="twitter:description" content="𝕏 投稿情報 @ObsidianOtaku · 📅 2026-05-13 🔗 元の投稿 📄 リンク先X Article 📝 投稿内容（X Article 全文） Obsidian×Claude Codeで仕事を回す秘訣5選 【徹底解説】Obsidian×Claude Codeで仕事を回す秘訣5選 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · May 13 Follow 1 11 98 112K 『リサーチもコンテンツもクライアント対応も経理も全部自分でやっててしんどい』 『AIで自動化して楽になりたい…といいつつも現場業務を回すのに精一杯で..."/><meta property="og:description" content="𝕏 投稿情報 @ObsidianOtaku · 📅 2026-05-13 🔗 元の投稿 📄 リンク先X Article 📝 投稿内容（X Article 全文） Obsidian×Claude Codeで仕事を回す秘訣5選 【徹底解説】Obsidian×Claude Codeで仕事を回す秘訣5選 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · May 13 Follow 1 11 98 112K 『リサーチもコンテンツもクライアント対応も経理も全部自分でやっててしんどい』 『AIで自動化して楽になりたい…といいつつも現場業務を回すのに精一杯で..."/><meta property="og:image:alt" content="𝕏 投稿情報 @ObsidianOtaku · 📅 2026-05-13 🔗 元の投稿 📄 リンク先X Article 📝 投稿内容（X Article 全文） Obsidian×Claude Codeで仕事を回す秘訣5選 【徹底解説】Obsidian×Claude Codeで仕事を回す秘訣5選 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · May 13 Follow 1 11 98 112K 『リサーチもコンテンツもクライアント対応も経理も全部自分でやっててしんどい』 『AIで自動化して楽になりたい…といいつつも現場業務を回すのに精一杯で..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Obsidian×Claude-Codeで仕事を回す秘訣5選"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Obsidian×Claude-Codeで仕事を回す秘訣5選"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 @ObsidianOtaku · 📅 2026-05-13 🔗 元の投稿 📄 リンク先X Article 📝 投稿内容（X Article 全文） Obsidian×Claude Codeで仕事を回す秘訣5選 【徹底解説】Obsidian×Claude Codeで仕事を回す秘訣5選 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · May 13 Follow 1 11 98 112K 『リサーチもコンテンツもクライアント対応も経理も全部自分でやっててしんどい』 『AIで自動化して楽になりたい…といいつつも現場業務を回すのに精一杯で..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-Obsidian×Claude-Codeで仕事を回す秘訣5選"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3766"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3766" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 Obsidian×Claude Codeで仕事を回す秘訣5選</a></div></nav><h1 class="article-title">𝕏 Obsidian×Claude Codeで仕事を回す秘訣5選</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-12T15:00:00.000Z">2026年5月13日</time><span>48 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/x-article" class="internal tag-link">x-article</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@ObsidianOtaku</strong> · 📅 2026-05-13
+🔗 <a href="https://x.com/ObsidianOtaku/status/2054441378541895951" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 <a href="https://x.com/i/article/2054418883717812224" class="external">リンク先X Article<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容x-article-全文">📝 投稿内容（X Article 全文）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容x-article-全文" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Obsidian×Claude Codeで仕事を回す秘訣5選</strong></p>
+<p>【徹底解説】Obsidian×Claude Codeで仕事を回す秘訣5選
+東大Obsidianオタク｜仕事で使える第2の脳構築
+@ObsidianOtaku
+·
+May 13
+Follow
+1
+11
+98
+112K
+『リサーチもコンテンツもクライアント対応も経理も全部自分でやっててしんどい』
+『AIで自動化して楽になりたい…といいつつも現場業務を回すのに精一杯で時間が取れない』
+『今の案件数で精一杯。1件取ったら確実に何かが破綻する…』
+一人社長や現場責任者からこういう声をよくもらいます。AIでコストカットして浮いた時間をもっと別の場所に投資したいと思っていても現実問題そううまくはいかないものです。
+AIだけでこの目標を達成するのは難しく、その原因の一つがAIの実行結果が一般的なものになってしまうというものがあります。
+Claude CodeやChatGPTを使っていてこういった景観があるのではないでしょうか。
+Claude Code は便利そうだけど自分の仕事にフィットして使えてない
+リサーチ、コンテンツ、クライアント対応、経理を全部自分でこなしてカレンダーが詰まる
+なんだかんだAIを「使った感」で終わってしまっている
+今回の記事ではAI自分の普段の仕事に馴染ませて、あなたの仕事を圧倒的に楽にする秘訣を紹介します。例の如くObsidianが大活躍します。
+前回の記事はフォロワー0人時点で初投稿ながら17万インプレッションを叩き出しました！今回はその続編の位置付けです：
+東大Obsidianオタク｜仕事で使える第2の脳構築
+@ObsidianOtaku
+·
+May 11
+Article
+【保存版】勝手に賢くなるObsidianの作り方大全
+『先週ブックマークした記事、今週も読まないまま月曜が来た』
+『ChatGPTに毎回同じ説明しないとちゃんと動いてくれない』
+『AIがそれっぽい回答しかしてくれなくてしんどい』…
+2
+25
+242
+181K
+ぜひ学んで自分のものにしてください！
+この記事を最後まで読めば、毎朝起きたら Obsidian の中に「今日のリサーチブリーフ」「コンテンツ下書き」「クライアントコールの事前ブリーフ」が既に置かれている状態を、5 つのシステムだけで組み立てる方法が分かります。
+海外でのObsidian活用が大注目されていたのでその情報をベースに日本人の仕事向けに置き換えて具体例を交えながら解説をします。
+タイトルは「How I Turned My Obsidian Vault Into a Full Business Operating System Using Claude Code」。Obsidian Vault を Claude Code で事業オペレーティングシステムに変えた、と訳すと内容がそのまま伝わります。
+出典はこちら
+<a href="https://x.com/cyrilXBT/status/2053291096076145097" class="external">https://x.com/cyrilXBT/status/2053291096076145097<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+① 毎日のルーティン作業が起きた時点で完了している世界線
+具体的に想像してみてください。コミュニティなどでメルマガ運用やなどの仕事をやっているとしましょう。
+平日の朝6時、あなたが起きる前にあなたのスマホ（Slack, LINE, Telegram等）に通知が届きます。「リサーチブリーフ 3 本とコンテンツ下書き 1 本がセットされています」という1行です。
+Obsidian を開くと、GENERATED フォルダの中に確かに 4 つのファイルが新しく着地している。
+朝起きてすぐにあなたは Morning Briefing を読みます。今日の優先事項 3 つ、昨日からの未処理 2 つ、正午までに下す判断 1 つ整理されて並んでいる状態。チェックするのに5分程度ですみます。
+朝 6 時 15 分。昨日 QUEUE に投げた「DRAFT-今週のニュースレター.md」が下書きとして既にできあがっています。8 分で編集を加えて、配信予約を済ませる。
+朝 8 時。9 時のクライアントコールに向けて事前ブリーフを開きます。
+先週の議事録、開発中の deliverable、前回約束した次までの宿題、コールの最後に必ず言うべき1つの確認事項、全部が1ページに整理されています。あなたは 5 分で読み込み、9 時のコールに準備万端で入る。
+これが事業 OS が回っている朝です。Obsidian がストレージではなく、あなたの参謀本部になっている状態と言っていいです。
+著者は元記事の冒頭で、はっきりこう書いています。
+Research runs automatically. Content drafts itself. Projects update their own status. Weekly reviews write themselves. Client briefs generate before every call. The morning briefing is waiting when I open my laptop.
+リサーチは自動で走り、コンテンツは自分で下書きを書き、プロジェクトは自分でステータスを更新し、週次レビューは自分で書かれ、クライアントブリーフは毎コール前に生成され、朝のブリーフィングはラップトップを開けば既に置かれている。著者が「ノートアプリではない、フルの事業オペレーティングシステムだ」と宣言する根拠です。
+ここまで読んで「自分には無理」と感じたなら、それは仕組みの不在のせいです。多くの 1 人事業が、同じ場所で止まっているからです。
+②なぜほとんどの1人事業がツールに飲まれて時間を失うのか
+著者は半年前まで、Vault が「死蔵庫」だったと書いています。雑多に情報が入って収拾がつかなくなったゴミ箱状態みたいなものですね。
+Six months ago my Obsidian vault was a graveyard. 3,000 notes. Two years of captures. A folder structure I had reorganized four times and still could not navigate in under 30 seconds.
+半年前は私の Obsidian Vault は墓場だった、3,000 ノート、2 年間のキャプチャ、4 回再構成したフォルダ構造、それでも 30 秒以内に目的のノートに辿り着けなかった。
+この経験、刺さる人は多いと思います。あなたも、ChatGPT を契約し、Claude Code を入れ、N8N アカウントを作り、Notion を試し、結局どれも継続できずに自分の手で全業務をこなしている、その状態にいないでしょうか。
+問題は「ツールの数」ではありません。「ツールが連携する設計」がないことです。
+1 人事業が時間を失う構造を分解すると、3 つに集約されます。
+1つ目：
+ツールを集めることと連携の設計が別物 だという認識の欠如です。ChatGPT も Claude Code も Notion も、それぞれ単独では強力です。でも別のタブで開いている限り、それは仕事を回す参謀ではなく、相談相手で止まります。
+2つ目：
+共有記憶層の不在 です。多くの 1 人事業は「ツールごとに別の記憶」を持っています。クライアント情報は SaaS A、リサーチは Notion、コンテンツ下書きはローカル Word、経理はスプレッドシート。AI に聞くたびに、毎回ゼロから状況を説明し直しているのは、共有記憶層がないからです。
+3つ目：
+戻ってこさせる装置の不在 です。あなたが思い出して開かない限り、ツールは黙ったままです。「7 時にコンテンツドラフトが届く」「30 分前にクライアントブリーフが届く」のように、システム側から話しかけてくる仕組みがないと、結局全部自分で開きに行くことになります。
+知識は構造化されて初めて資産になる、と私は普段から繰り返しています。同じ原則がツール連携にも当てはまります。整理することと、AI が読める形に業務を設計することは、別の仕事だと一度切り分けてください。
+では、構造の欠如をどう構造で埋めるのか。海外で 117,452 人が読んだ設計図は、8 つのフォルダから始まります。
+③Obsidianを仕事の参謀本部に変える8フォルダ構造
+設計の出発点は、Vault のフォルダ構造を「人間が見て分かる」ではなく「AI が読んで動ける」前提に組み替えることです。
+著者が公開した構造はこうなっています。
+markdown
+00 - INBOX/        (未処理キャプチャの着地点)
+01 - PROJECTS/     (クライアントと社内プロジェクト)
+02 - AREAS/        (継続テーマ: コンテンツ 経理 健康 学習)
+03 - RESOURCES/    (リサーチ素材 テンプレ 参照)
+04 - SYSTEM/       (CLAUDE.md + skills/ + workflows/ + logs/)
+05 - DAILY/        (日次ノート YYYY-MM-DD.md)
+06 - GENERATED/    (AIの自律出力 briefings drafts reports syntheses)
+07 - QUEUE/        (AIに処理させる仕事ファイル)
+08 - ARCHIVE/      (完了プロジェクトと古いコンテンツ)
+このうち、最初に押さえるべきは GENERATED と QUEUE の 2 つです。著者自身も、ここが事業オペレーションの核だと明言しています。
+The GENERATED and QUEUE folders are the operational core. QUEUE is how you assign tasks to the system without initiating a Claude session.
+GENERATED と QUEUE が事業オペレーションの核、QUEUE は Claude セッションを起動せずにシステムに仕事を割り当てる方法です。
+整理すると、QUEUE は仕事を投げる箱、GENERATED は仕事が返ってくる箱です。事業の入出力端子と表現すれば、感覚としては近いと思います。
+例えばリサーチを依頼したい時は、QUEUE フォルダに「RESEARCH-2025年ECトレンド.md」というファイルを 1 行だけ書いて置く。これだけで N8N が拾い、Claude が読み、結果が GENERATED/briefings に着地します。
+コンテンツ下書きを依頼したい時は「DRAFT-newsletter-週次まとめ.md」と置く。翌朝には GENERATED/drafts に下書きが届く。
+GENERATED フォルダ内は手で編集しない、というルールが大事です。あれは AI の出力着地点であって、人間の編集領域ではない。使いたければコピーして別フォルダに置けばいい。境界を引いておかないと、Vault は再び「死蔵庫」に戻ります。
+Obsidian が選ばれる理由も、ここで効いてきます。
+著者は Notion と Roam を 3 つの観点で比較しています。第 1 に速度、ファイルシステム直接アクセスは API より速い。第 2 に信頼性、API レート制限もサーバーダウンタイムも認証エラーもない。第 3 に所有性、あなたの Vault は永続的にあなたのもの、サブスクが切れても消えない。
+これは Notion や Roam が劣っているという話ではありません。Obsidian だけが Claude Code から直接ファイルシステムとして読める、という性質が、事業 OS の前提条件として効くという話です。
+フォルダができたら、次は AI 側に「この Vault で何を、どう判断するか」を教えます。それを書く 1 枚のファイルが、事業全体の判断軸を決めます。
+④Master CLAUDE.mdは事業の憲法
+04 - SYSTEM/ フォルダの直下に置く 1 枚の CLAUDE.md。これが事業 OS の中で最も重要なファイルです。著者の表現を借りるとこうなります。
+The CLAUDE.md file in your 04 - SYSTEM folder is the constitution of your business operating system.
+04 - SYSTEM フォルダの CLAUDE.md ファイルは、あなたの事業オペレーティングシステムの憲法です。
+設定ファイルではなく、憲法。原文ですでに “constitution” と書かれている、強い意味づけです。事業 OS の中で動く全エージェント、全ワークフロー、全自動プロセスが、何かを始める前に必ずこのファイルを読みます。あなたの業務、あなたの基準、現在の優先事項、自律動作時のルール、その全部を 1 枚に集約する文書です。
+著者が公開した 10 セクションのテンプレートを日本語に置き換えるとこうなります。
+markdown</p>
+<h2 id="オーナー">オーナー<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#オーナー" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[あなたの名前、事業名、何をやっていて、誰に届けているか]</p>
+<h2 id="業務文脈">業務文脈<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#業務文脈" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>タイプ: [1人事業/コンサル/創業者など]
+収益モデル: [何で売上が立つか]
+体制: [1人/外注/協業の構造]
+ステージ: [初期/成長期/確立期]</p>
+<h2 id="vault構造">Vault構造<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vault構造" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[各フォルダの目的を1行ずつ]</p>
+<h2 id="アクティブクライアント">アクティブクライアント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#アクティブクライアント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[現在の案件と関係性のステータス]</p>
+<h2 id="アクティブプロジェクト">アクティブプロジェクト<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#アクティブプロジェクト" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[現在のプロジェクトと次のマイルストーン]</p>
+<h2 id="コンテンツ運用">コンテンツ運用<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#コンテンツ運用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>配信頻度とプラットフォーム
+ボイス: [どう書くか 何を絶対書かないか]
+現在のコンテンツ柱: [主テーマ領域]</p>
+<h2 id="売上目標">売上目標<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#売上目標" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>月次目標: [数字]
+現在のMRR: [毎月更新]
+主要指標: [一番見ている数字]</p>
+<h2 id="自動運用ルール">自動運用ルール<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#自動運用ルール" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>明示的な確認なくファイルを削除しない</li>
+<li>私のレビューなくコミュニケーションを送らない</li>
+<li>私の名前で約束やデッドラインを設定しない</li>
+<li>生成ファイルはYYYY-MM-DDで日付スタンプを付ける</li>
+<li>迷ったらGENERATEDに置いてレビュー待ちにする</li>
+<li>全ての書き込み操作はSYSTEM/logs/operations.mdに記録</li>
+</ul>
+<h2 id="品質基準">品質基準<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#品質基準" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[各カテゴリで「良い出力」はどういうものか]</p>
+<h2 id="今週のフォーカス">今週のフォーカス<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#今週のフォーカス" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>[毎週月曜に更新、今週何が最重要か]
+10 セクションの中で、著者が「最も重要な部分」と断言しているのは最後の Current Weekly Focus です。原文を引用するとこうです。
+The Current Weekly Focus section is the most important part to keep updated. Update it every Monday morning. It weights every Claude decision toward what actually matters this week rather than operating from stale priorities.
+今週のフォーカスのセクションは更新を続ける上で最も重要、毎週月曜の朝に更新する、それが Claude の全判断を「今週本当に重要なこと」に重みづけし、古い優先順位で動くのを防ぐ。
+ここが「事業の憲法」と呼ぶ理由です。同じ Claude Code でも、CLAUDE.md の中身、特に「今週のフォーカス」の鮮度で、5 つのシステム全体の判断質が変わります。AI の問題ではなく、参謀に渡す指示書の問題です。
+そして、勘違いしないでほしいのですが、ここまでで「完全自動」ではありません。著者も冷静に書いています。同じ著者の前回の記事から引用される有名な一文があります。
+A stale CLAUDE.md produces stale answers.
+更新されない CLAUDE.md は古い回答しか返さない。
+だからあなたが手で握る時間は、月曜朝の 5 分だけです。CLAUDE.md の「アクティブクライアント」「アクティブプロジェクト」「今週のフォーカス」を 5 分で更新するだけ。残りはシステムが動きます。
+憲法ができたら、それを読んで動く参謀を 5 人配置します。ここからが事業 OS の本体です。
+⑤事業を回す5人の参謀(リサーチ コンテンツ クライアント 自己マネジメント 経理)
+5 つのシステムは、5 人の参謀と思って読んでください。それぞれが特定の業務領域を担当し、Vault の共有記憶 (CLAUDE.md とフォルダ全体) を読みながら独立して動きます。
+AIエージェントはシステムというより「AI社員」とか「同僚」と思い込んだ方がいいです。
+1 人目はリサーチ参謀です。
+著者が一番時間を節約できたシステム、と書いています。04 - SYSTEM/skills/deep-research.md にスキルファイルを置き、QUEUE に「RESEARCH-[topic].md」を投下する。n8nやAIエージェントワークフローが朝 5 時に QUEUE を読み、各ファイルを Claude API で処理し、GENERATED/briefings/ に「1 文の本質的な気づき」「多くの人が見落とす角度」「3 つの具体例」「2-3 個の数字や引用」「ランク付けされた 3 つのコンテンツ角度」を書き出します。朝 6 時、Telegram にリサーチブリーフの数が通知され、あなたは出社前にそれを読みます。
+2 人目はコンテンツ参謀です。
+代表ワークフローは Morning Content Brief。N8N が朝 6 時に走り、過去 7 日間の日次ノート、最新のリサーチブリーフ、CLAUDE.md のコンテンツ柱、最近公開した記事を全部読んで、3 つの今日のコンテンツ角度を返します。各角度にはフック、最適な形式、追加リサーチの要否が添えられている。気に入った角度を 1 つ選ぶか、QUEUE に「DRAFT-[content type]-[topic].md」を投げれば、翌朝 GENERATED/drafts/ に下書きが届きます。著者の数字を借りるとこうです。
+My first drafts now require under 10 minutes of editing for 75% of pieces.
+下書きの 75% は編集 10 分以内で配信できる状態になる。CLAUDE.md に細かいボイスプロファイルを書き込んであるからこそ、ドラフトが「あなたの文体」で出てきます。
+3 人目はクライアント参謀です：
+最も日々の感覚を変える参謀かもしれません。代表ワークフローは Pre-Call Brief。クライアントコールの 30 分前にn8Nnが起動し、01 - PROJECTS/[クライアント名]/ フォルダ全体、過去 3 回の議事録、開発中の deliverable、未対応のタスク、コミュニケーション履歴を全部読み込み、1 ページのブリーフを GENERATED に置きます。
+「現在の関係性ステータス」「未完了の deliverable と現状」「前回のコールで約束したこと」「プロジェクト状況からの推奨アジェンダ」「コール終了前に必ず言うべき 1 つの確認事項」。著者の言葉では「これを作ってから、私はクライアントコールに準備不足で入ったことが一度もない」。他にも Project Status Updater (クライアントフォルダ内のファイルが変更されるたびにステータスを更新)、Deliverable Tracker (日次ノートに「DELIVERED:」と書くと Airtable が同期)、Invoice Reminder (毎月 25 日に未払いリテーナーの請求書ドラフトを生成) が動きます。
+4 人目は自己マネジメント参謀です。
+代表ワークフローは Weekly Review。毎週日曜 20 時にn8nが起動し、過去 7 日分の日次ノート、全プロジェクトのステータス更新、全コンテンツのパフォーマンス、その週の GENERATED 出力を全部読み、5 項目のシンセシスを返します。
+「何が前進したかとその具体的な原因」「何が動かなかったか正直な理由」「その週全体に現れたパターン 1 つ」「来週の優先事項 3 つ」「個人的な気づき 1 つ」。著者の数字を引用するとこうです。「週次レビューは以前は 45 分の手作業のノート読みと振り返りが必要だった、今はシステムが合成した内容を読むのに 10 分とシステムが拾い損ねた内容を足すのに 5 分で済む」。45 分が 15 分。同じ参謀が Daily Note の自動生成 (前日 23 時に翌日のノートを準備)、Decision Journal (日次ノートに「DECISION:」と書くと 90 日後に振り返り通知が来る) も担当します。
+5 人目は経理参謀です。
+代表ワークフローは Revenue Tracker。日次ノートに「RECEIVED: $5,000 from クライアントA for 月次リテーナー」と 1 行書くだけで、N8N が拾い、02 - AREAS/finances/revenue.md の月次総額を更新し、Airtable のクライアント支払い記録も同時に更新します。
+月初には Monthly Financial Brief が GENERATED/financial/ に着地する。月次目標との差分、前月との比較、クライアント別売上、経費サマリー、四半期の予実差。著者の表現では「税金の時期になってから事業の数字を知るのではなく、毎月知る」。
+5 人の参謀が全員 Vault の同じ CLAUDE.md とフォルダを読みながら動いている、この構造が事業 OS の本体です。記憶のない AI は便利な道具で終わりますが、共有記憶を持つ AI 群は事業を回す参謀本部になります。
+ここは記事とは違う私の意見ですが、元記事ではn8nが適用されていますが現時点ではn8nよりもClaude CodeのSkillsやAIエージェントメインのワークフローの方がワークする感覚があります。
+実際私たちの普段の運用環境ではn8nではなくClaude CodeやCodex、pythonスクリプト等を組み合わせたワークフローシステムを構築しており、かなり高精度に自動化が実現できています。さらにn8nよりも圧倒的に修正が効きやすく品質管理コストも低いので圧倒的におすすめです❗️
+⑥参謀を動かす自動化レイヤー5つのワークフロー型
+5 人の参謀を実際に動かすのは、5 つのワークフローです。
+ワークフロー型は次の 5 つです。
+1 つ目は Cron ワークフロー、時間で起動するタイプです。Morning Briefing が朝 6 時、Weekly Review が日曜 20 時、Monthly Financial Brief が月初に動きます。一番最初に組むべきタイプ。これだけで毎朝の体験が変わります。
+Claude Code Skill として書くと、Morning Briefing は次のような Markdown 1 枚になります。<code>04 - SYSTEM/skills/morning-brief.md</code> に置きます。
+markdown</p>
+<h1 id="morning-brief">morning-brief<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#morning-brief" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="trigger">Trigger<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trigger" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>macOS launchd で毎朝6時。または手動で
+“Run morning-brief”。</p>
+<h2 id="context-required">Context Required<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#context-required" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>04 - SYSTEM/CLAUDE.md (今週のフォーカス と アクティブプロジェクト)</li>
+<li>05 - DAILY/ から過去7日分</li>
+<li>06 - GENERATED/briefings/ から最新のリサーチブリーフ3本</li>
+</ul>
+<h2 id="process">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>CLAUDE.md の「今週のフォーカス」を読む</li>
+<li>過去7日の日次ノートを横断して、未処理の判断と継続テーマを抽出</li>
+<li>直近のリサーチブリーフから、今日に直接関係するものを1-2件選ぶ</li>
+<li>今日の優先事項を3つに絞る。各点に「なぜ今日か」の理由をつける</li>
+<li>正午までに下す判断を1つ特定する</li>
+</ol>
+<h2 id="output-format">Output Format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#output-format" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>保存先: 06 - GENERATED/briefings/[YYYY-MM-DD]-morning.md</p>
+<p>TODAY’S PRIORITIES (3つ): 各点に1行ずつ、根拠1行
+OPEN LOOPS (昨日から持ち越し): 最大2つ
+DECISION BEFORE NOON: 1つ。判断基準と選択肢
+RELATED RESEARCH: リサーチブリーフへのwikilink</p>
+<h2 id="quality-standard">Quality Standard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quality-standard" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>3つの優先事項が「今週のフォーカス」と無関係なら、組み直す。
+日々の作業リストではなく、今日この日にしか下せない判断を返すこと。
+起動側は <code>~/Library/LaunchAgents/</code> に plist を 1 枚置きます。
+xml
+<key>StartCalendarInterval</key>
+<dict>
+<key>Hour</key><integer>6</integer>
+<key>Minute</key><integer>0</integer>
+</dict>
+<key>ProgramArguments</key>
+<array>
+<string>/usr/local/bin/claude</string>
+<string>—skill</string>
+<string>morning-brief</string>
+</array>
+2 つ目は File Watch ワークフロー、Vault 内のファイルが作成 / 変更されたら起動するタイプです。QUEUE Processor が QUEUE フォルダを監視、Project Updater がクライアントフォルダを監視します。Cron の次の優先度。QUEUE が動き始めると、何でも仕事をシステムに投げられるようになります。
+QUEUE Processor を Claude Code Skill として書くと、<code>04 - SYSTEM/skills/queue-processor.md</code> はこうなります。
+markdown</p>
+<h1 id="queue-processor">queue-processor<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#queue-processor" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="trigger-1">Trigger<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trigger-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>07 - QUEUE/ にファイルが追加されたら起動。
+fswatch で監視するか、手動で
+“Process queue file [filename]“。</p>
+<h2 id="context-required-1">Context Required<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#context-required-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>04 - SYSTEM/CLAUDE.md (全セクション)</li>
+<li>渡されたファイル名のプレフィクスで処理を分岐</li>
+</ul>
+<h2 id="process-1">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ファイル名で分岐する。</p>
+<ul>
+<li>RESEARCH-[topic].md → deep-research スキルに委任</li>
+<li>DRAFT-[type]-[topic].md → content-draft スキルに委任</li>
+<li>TASK-[name].md → 内容を読み、適切なスキルに委任 or 直接実行</li>
+</ul>
+<p>委任後、QUEUE の元ファイルを 08 - ARCHIVE/queue/[YYYY-MM-DD]/ に移動する。</p>
+<h2 id="output-format-1">Output Format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#output-format-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>委任先スキルが GENERATED/ の対応サブフォルダに出力する。
+queue-processor 自身は処理ログだけ 04 - SYSTEM/logs/operations.md に
+1行 append する。</p>
+<p>LOG ENTRY: [timestamp] processed [filename] → [delegated skill]</p>
+<h2 id="quality-standard-1">Quality Standard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quality-standard-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>未対応プレフィクスを発見したら、処理せず GENERATED/inbox-review/ に
+flag だけ立てて私に通知する。
+無理に推測実行しない。
+監視側は fswatch ワンライナーで足ります。
+bash
+fswatch -0 “<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mord mathnormal">A</span><span class="mord mathnormal">UL</span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">/07</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">Q</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord mathnormal" style="margin-right:0.10903em;">U</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mord">&quot;∣</span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span><span class="mord mathnormal">hi</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">ere</span><span class="mord mathnormal">a</span><span class="mord mathnormal">d</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord">&quot;&quot;</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">oc</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal">u</span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">−</span><span class="mord mathnormal">s</span><span class="mord mathnormal">ki</span><span class="mord mathnormal" style="margin-right:0.03588em;">llq</span><span class="mord mathnormal">u</span><span class="mord mathnormal">e</span><span class="mord mathnormal">u</span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mord mathnormal" style="margin-right:0.02778em;">rocessor</span><span class="mord">&quot;</span></span></span></span>event”
+done
+3 つ目は Event ワークフロー、外部イベントで起動するタイプです。カレンダーイベントが Pre-Call Brief を発火させる、Stripe webhook が売上ログを発火させる、というように外部システムと繋がります。
+Pre-Call Brief を Claude Code Skill として書くと、<code>04 - SYSTEM/skills/pre-call-brief.md</code> はこうなります。
+markdown</p>
+<h1 id="pre-call-brief">pre-call-brief<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#pre-call-brief" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="trigger-2">Trigger<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trigger-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>macOS Calendar イベントの30分前通知から起動。
+カレンダーイベントタイトルの “[CLIENT]” タグでクライアント名を渡す。
+または手動で “Generate pre-call brief for [client-name]“。</p>
+<h2 id="context-required-2">Context Required<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#context-required-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>04 - SYSTEM/CLAUDE.md (アクティブクライアント セクション)</li>
+<li>01 - PROJECTS/[client-name]/ 配下を全て</li>
+<li>過去3回の議事録 (01 - PROJECTS/[client-name]/02-notes/ から日付降順3本)</li>
+<li>コミュニケーション履歴 (01 - PROJECTS/[client-name]/04-communications/)</li>
+</ul>
+<h2 id="process-2">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>クライアントフォルダの 00-overview.md を読み、現在の関係性を把握</li>
+<li>直近3議事録から、未完了の deliverable と前回約束したことを抽出</li>
+<li>02-notes/ と 03-deliverables/ から、現在進行中の作業ステータスを確認</li>
+<li>プロジェクト全体から「今日のコールで触れるべきアジェンダ」を3つ起こす</li>
+<li>コール終了前に必ず確認すべき1つを特定する</li>
+</ol>
+<h2 id="output-format-2">Output Format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#output-format-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>保存先: 06 - GENERATED/briefings/[YYYY-MM-DD]-precall-[client].md</p>
+<p>RELATIONSHIP STATUS: 現在の関係性の1行
+OPEN DELIVERABLES: 未完了deliverableのリストと現状
+LAST CALL PROMISES: 前回約束したことのリスト
+SUGGESTED AGENDA: 3つの推奨アジェンダ
+BEFORE HANGING UP: コール終了前に必ず言う1つ</p>
+<h2 id="quality-standard-2">Quality Standard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quality-standard-2" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>「関係性ステータス」が前回ブリーフと全く同じ表現なら、再考する。
+クライアントの状況は毎回少しずつ変わる。変化を捉えていない brief は失敗。
+4 つ目は Aggregation ワークフロー、複数のソースからデータを集めてレポートを生成するタイプです。Performance Analyzer が複数のプラットフォームからコンテンツ実績を集める、Financial Brief が複数の経理データソースを集約する、といった用途。
+Weekly Review を Claude Code Skill として書くと、<code>04 - SYSTEM/skills/weekly-review.md</code> はこうなります。
+markdown</p>
+<h1 id="weekly-review">weekly-review<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#weekly-review" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="trigger-3">Trigger<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#trigger-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>launchd で毎週日曜20時。または手動で “Run weekly review”。</p>
+<h2 id="context-required-3">Context Required<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#context-required-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>04 - SYSTEM/CLAUDE.md (全セクション)</li>
+<li>05 - DAILY/ から過去7日分の日次ノート</li>
+<li>01 - PROJECTS/*/00-overview.md の全更新履歴</li>
+<li>06 - GENERATED/[過去7日分]/ の全アウトプット</li>
+<li>02 - AREAS/content/performance/ の今週のデータ
+(Glob で <code>02 - AREAS/content/performance/*[YYYY-WW]*.md</code> を収集)</li>
+</ul>
+<h2 id="process-3">Process<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#process-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ol>
+<li>過去7日の日次ノートを読み、書かれた DECISION / DELIVERED / RECEIVED を集計</li>
+<li>各プロジェクトの overview の更新箇所を diff で抽出</li>
+<li>GENERATED 出力を「使われたもの / 放置されたもの」に分類</li>
+<li>コンテンツパフォーマンス上位3点と下位3点を特定</li>
+<li>5項目のシンセシスを書く</li>
+</ol>
+<h2 id="output-format-3">Output Format<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#output-format-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>保存先: 06 - GENERATED/syntheses/[YYYY-MM-DD]-weekly.md</p>
+<p>WHAT MOVED FORWARD: 前進したこととその具体的な原因
+WHAT DID NOT MOVE: 動かなかったことと正直な理由
+PATTERN OF THE WEEK: 1週間全体に現れた1つのパターン
+NEXT WEEK PRIORITIES (3つ): 来週の優先事項ランキング付き
+PERSONAL INSIGHT: 今週の日次ノートから抽出した個人的な気づき1つ</p>
+<h2 id="quality-standard-3">Quality Standard<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#quality-standard-3" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>“全体的に良かった” のような曖昧な合成は失敗。
+個別の出来事と固有名詞 (クライアント名、プロジェクト名、判断名) を残す。
+私の発言と矛盾する点があれば、率直に指摘して返すこと。
+5 つ目は Notification ワークフロー、完了通知を返すタイプです。Telegram にブリーフ準備完了の通知、メールでレビュー要のものを通知。あなたのスマホに「準備できました」が届く仕組み。
+ここは Skill ファイルではなく、Claude Code の <code>~/.claude/settings.json</code> に hooks を 1 つ書くだけで済みます。
+json
+{
+“hooks”: {
+“PostToolUse”: [
+{
+“matcher”: “Write”,
+“hooks”: [
+{
+“type”: “command”,
+“command”: “if [[ “$CLAUDE_FILE_PATH” == <em>/06\ -\ GENERATED/</em> ]]; then osascript -e ‘display notification “GENERATEDに新しいファイルが届きました” with title “Vault”’; fi”
+}
+]
+}
+]
+}
+}
+Slackなどと連携していきたい場合は、各 Skill の Process 末尾に curl コマンドを 1 行入れます。Skill 自身が通知まで完結する形が、Vault 内で記憶設計を閉じる本アカウントの好みです。
+5 つ全部をまとめると、Vault の中ではこういう連動になります。
+markdown
+[毎朝6時]              morning-brief.md      → GENERATED/briefings/
+[QUEUE変更時]          queue-processor.md    → 各 Skill に委任
+[カレンダー30分前]      pre-call-brief.md     → GENERATED/briefings/
+[毎週日曜20時]         weekly-review.md      → GENERATED/syntheses/
+[全Skill完了時]        settings.json hooks   → macOS通知
+5 つの Skill ファイルが全部 <code>04 - SYSTEM/skills/</code> 配下に Markdown 1 枚として置かれ、CLAUDE.md と同じ Vault の中で記憶として残ります。外部 SaaS のノードグラフに業務ロジックを散らさないのが、本アカウントが Skills 中心を選ぶ理由です。
+最初は Cron だけで十分です。
+著者も明言しています。Cron が組めれば、朝のブリーフィングと週次レビューが動き始めます。QUEUE Processor は次のステップ。Event と Aggregation は必要になってから足せばいい。
+元記事ではn8nワークフローが解説されていますが、昨今のAIエージェントの進化を踏まえるとClaude Code skillsなどのエージェント前提の設計で作った方が今後のAIの波に乗れると思います。なのでここではn8nではなくClaude Codeのskillsとして情報を再構築してます。もしn8nでやってみたいという方は元記事からテンプレートを参照できるのでぜひ確認してみてください。
+ここまでで Vault と CLAUDE.md と 5 参謀と自動化レイヤーが揃いました。次は、これらを 30 日続けたとき、90 日続けたときに何が起きるか、です。
+⑦開始1ヶ月から1年後までの変化
+30 日後の平日朝はこうなります。
+6 時、スマホが Telegram の通知音で鳴る。リサーチブリーフ 3 本と昨日 QUEUE に投げたコンテンツドラフトが準備完了の通知です。
+6 時 5 分、Morning Briefing をベッドの上で読みます。今日の優先事項 3 つ、昨日からの未処理 2 つ、正午までに下す判断 1 つ。
+6 時 15 分、コンテンツドラフトを編集します。8 分で配信予約まで完了。
+8 時、9 時のクライアントコール用の Pre-Call Brief が既に届いています。5 分で読了。30 分手作業で準備するよりも、自分が把握できる範囲が明らかに広い。
+日中、アイデアやタスクや気づきを日次ノートに書き殴ります。システム側が裏で全部処理してくれます。
+17 時、その日の振り返りを 3 行だけ書く。「前進したこと」「詰まったこと」「下した判断」。
+これが 30 日後の日常です。
+90 日後、つまり 3 ヶ月続けると、質感が変わってきます。原文では、現在のテーマについて質問したとき、8 週間前に書いて忘れていたノートを AI が引っ張り出してくると書かれています。あなたの脳が無意識に取り組んでいた論点を、AI が先に言語化して返してくる。あなた専用の参謀から、あなたよりあなたの仕事を知っている参謀へ、格上げされる地点です。
+12 ヶ月後、著者の言葉が一番強くなる章です。
+By month twelve you have a business operating system that knows your business as well as you do. And runs it better than you would alone.
+12 ヶ月後、あなたは事業オペレーティングシステムを手にしている、それはあなたと同じくらい事業を知っていて、あなた 1 人でやるよりも上手く回す。
+3 ヶ月後、競合があなたの今ブックマークしている記事を、あなたの参謀本部は既に過去 100 件のクライアント文脈と接続して読んでいる。この差は努力では埋まらず、始めた時期でしか埋まりません。
+ここで「半年も続かない自信がある」と感じた人へ、1 つだけ書いておきます。著者が推奨するのは、半年続ける覚悟ではなく、今週末に最初の 1 システムだけ立てることです。
+⑧まずはMorning BriefとContent Draft Agentだけ立てましょう
+ここまで読んだあなたがまずやることは、たった 2 つです。
+1 つ目：
+Vault に 8 つのフォルダを作ります。00 - INBOX、01 - PROJECTS、02 - AREAS、03 - RESOURCES、04 - SYSTEM、05 - DAILY、06 - GENERATED、07 - QUEUE、08 - ARCHIVE。Mac のターミナルで mkdir を 9 回打つ、それだけです。
+2 つ目：
+04 - SYSTEM/CLAUDE.md を 10 セクションのテンプレートで作って 15 分で書きます。完璧でなくていい、今週のフォーカスだけ書ければ Claude が動き始めます。
+これで Morning Briefing と Content Draft Agent を立てる準備が整います。Cron で朝 6 時に Claude を呼んで「CLAUDE.md と過去 7 日の DAILY を読んで GENERATED/briefings/today.md に今日の優先事項 3 つを書け」と指示する、これが Morning Briefing。QUEUE フォルダを監視して、DRAFT- で始まるファイルが置かれたら Claude に下書きを書かせて GENERATED/drafts/ に出力する、これが Content Draft Agent。
+著者の推奨ペースはこうです。今週末に最初の 1 システムを立てる。来週 1 つ追加。再来週 1 つ追加。2 ヶ月で 5 システム全部稼働。
+事業 OS は今夜の 30 分から始まります。あとはやりながら進化していく経験を積んで成長していくのみです。
+整理ではなく業務設計を、今日から始めていきましょう！
+まとめ
+1 人事業がツールに飲まれる根本原因は、ツールを集めることと連携の設計が別物だから
+Obsidian は plain text Markdown だから Claude Code が直接読み書きできる。これが Notion や Roam にはない速度、信頼性、所有性の根拠
+Vault 8 フォルダのうち、QUEUE は仕事を投げる箱、GENERATED は仕事が返ってくる箱。事業の入出力端子として機能する
+Master CLAUDE.md は設定ファイルではなく事業の憲法。10 セクションのテンプレを毎週月曜 5 分で更新するだけで判断の鮮度が保たれる
+5 つのシステム (リサーチ コンテンツ クライアント 自己マネジメント 経理) は 5 人の参謀。それぞれ Vault の共有記憶を読んで動く
+自動化レイヤーはAIエージェントを中心とした5つのワークフロー型 (Cron File Watch Event Aggregation Notification)。最初は Cron の Morning Briefing 1 本だけで十分
+3 ヶ月で AI が過去 Vault を横断してワークし始め、12 ヶ月で AI が事業を本人と同等以上に知る。この差は努力では埋まらず、始めた時期でしか埋まらない
+この記事が少しでも参考になった方へ。
+東大ObsidianオタクはObsidianとAIを組み合わせて自分自身やチームの分身を作る取り組みを研究しているチームです。AIエージェントと組み合わせてあらゆる仕事の品質を向上させるための手法を実践しています。
+■ AI記憶設計の実装パターンの公開
+■ Obsidian活用のトレンドとノウハウ解説
+■ 独自構築した今日から使えるObsidian設計情報のシェア
+それではまた次の記事でお会いしましょう❗️</p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>海外117,452人が読んだ「<a href="./Obsidian" class="internal" data-slug="Obsidian">Obsidian</a> Vault を <a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a> で事業OSに変える」記事を日本語で完全解説。一人事業がツールに飲まれる根本原因は「連携設計の不在」。8フォルダ構造＋Master CLAUDE.md＋5つの参謀システムで、朝起きたら仕事が進んでいる状態をつくる。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. ツールを集めることと連携設計は別物 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ChatGPT・Claude・Notionを個別に使っているだけでは「相談相手」止まり。一人事業が時間を失う構造は3つに集約される。①ツール連携設計の欠如、②共有記憶層の不在（ツールごとに別記憶でAIに毎回ゼロから説明）、③「戻ってこさせる装置」の不在（思い出して開かない限りツールは黙ったまま）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Vault 8フォルダ構造 — 人間ではなくAIが読める前提で設計 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>00-INBOX</code>（未処理着地点）、<code>01-PROJECTS</code>、<code>02-AREAS</code>、<code>03-RESOURCES</code>、<code>04-SYSTEM</code>（CLAUDE.md＋skills/）、<code>05-DAILY</code>、<code>06-GENERATED</code>（AIの自律出力）、<code>07-QUEUE</code>（AIへの仕事投入箱）、<code>08-ARCHIVE</code>の9フォルダ。QUEUE＝仕事を投げる箱、GENERATED＝仕事が返ってくる箱。GENERATEDは手で編集しないルールが重要。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Master CLAUDE.md は「事業の憲法」 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>04-SYSTEM/CLAUDE.md</code>の1枚に、オーナー情報・業務文脈・Vault構造・アクティブクライアント・コンテンツ運用・売上目標・自動運用ルール・品質基準・今週のフォーカスを10セクションで記述。全AIエージェントはこのファイルを読んでから動く。「今週のフォーカス」を毎週月曜5分で更新するだけで全判断の鮮度が保たれる。「更新されないCLAUDE.mdは古い回答しか返さない」。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 5つの参謀システム（各SkillファイルをMarkdown1枚で実装） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>リサーチ参謀（QUEUE投下→朝6時に briefings着地）、コンテンツ参謀（Morning Content Briefで今日の角度3つ→DRAFT投下で翌朝下書き）、クライアント参謀（コール30分前にPre-Call Brief自動生成）、自己マネジメント参謀（毎週日曜20時に週次レビュー自動生成・45分→15分）、経理参謀（日次ノートに「RECEIVED:」1行で月次売上自動更新）。著者はn8nよりClaude Code Skills・<a href="./ai-workflow" class="internal alias" data-slug="ai-workflow">AIワークフロー</a>中心設計を推奨。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 自動化レイヤー5型 — 最初はCronの1本だけで十分 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Cron（時間起動：朝6時Morning Briefing・日曜20時Weekly Review）、File Watch（QUEUEフォルダ監視・fswatch）、Event（カレンダー30分前通知→Pre-Call Brief）、Aggregation（複数ソース集約レポート）、Notification（GENERATED書込み時にmacOS通知）。全Skillが<code>04-SYSTEM/skills/</code>にMarkdown1枚で管理され、外部SaaSに業務ロジックを散らさない設計。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINとVaultはすでにこの設計を実装済み</strong>
+CLAUDE.md＝憲法、.claude/skills/＝参謀、/ohayoスキル＝Morning Briefingがすでに動いている。「死蔵庫」を避けるためGENERATEDに相当するnotesフォルダを手で編集しない運用を徹底するとさらに効く。</p>
+<p><strong>② KONNEKT AI推進提案のロジックに使える</strong>
+「ツールではなく連携設計の不在」という言語化は、18名展開で「なぜClaude Codeだけ入れても変わらないのか」を説明する際に刺さるフレームワーク。</p>
+</div>
+</blockquote>
+<h2 id="️-記事内画像">🖼️ 記事内画像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-記事内画像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_02.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_03.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_04.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_05.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_06.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_07.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_08.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_09.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_11.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_12.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_13.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2054418883717812224_14.jpg" width="auto" height="auto" alt/></p>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — 本記事の中心ツール。Vault内ファイルを直接読み書きできる特性が事業OS設計の前提</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote） — 5つの自動化ワークフロー型（Cron/FileWatch/Event/Aggregation/Notification）の実装パターン</li>
+<li><a href="./obsidian-ai" class="internal" data-slug="obsidian-ai">obsidian-ai</a>（PermanentNote） — ObsidianとAIの組み合わせ設計の知識ベース</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（PermanentNote） — 共有記憶層・Vault設計の理論的背景</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（PermanentNote） — Cron/launchd/fswatchによる自動化レイヤー実装</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1467" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-1"><a href="#-投稿内容x-article-全文" data-for="-投稿内容x-article-全文">📝 投稿内容（X Article 全文）</a></li><li class="depth-1"><a href="#オーナー" data-for="オーナー">オーナー</a></li><li class="depth-1"><a href="#業務文脈" data-for="業務文脈">業務文脈</a></li><li class="depth-1"><a href="#vault構造" data-for="vault構造">Vault構造</a></li><li class="depth-1"><a href="#アクティブクライアント" data-for="アクティブクライアント">アクティブクライアント</a></li><li class="depth-1"><a href="#アクティブプロジェクト" data-for="アクティブプロジェクト">アクティブプロジェクト</a></li><li class="depth-1"><a href="#コンテンツ運用" data-for="コンテンツ運用">コンテンツ運用</a></li><li class="depth-1"><a href="#売上目標" data-for="売上目標">売上目標</a></li><li class="depth-1"><a href="#自動運用ルール" data-for="自動運用ルール">自動運用ルール</a></li><li class="depth-1"><a href="#品質基準" data-for="品質基準">品質基準</a></li><li class="depth-1"><a href="#今週のフォーカス" data-for="今週のフォーカス">今週のフォーカス</a></li><li class="depth-0"><a href="#morning-brief" data-for="morning-brief">morning-brief</a></li><li class="depth-1"><a href="#trigger" data-for="trigger">Trigger</a></li><li class="depth-1"><a href="#context-required" data-for="context-required">Context Required</a></li><li class="depth-1"><a href="#process" data-for="process">Process</a></li><li class="depth-1"><a href="#output-format" data-for="output-format">Output Format</a></li><li class="depth-1"><a href="#quality-standard" data-for="quality-standard">Quality Standard</a></li><li class="depth-0"><a href="#queue-processor" data-for="queue-processor">queue-processor</a></li><li class="depth-1"><a href="#trigger-1" data-for="trigger-1">Trigger</a></li><li class="depth-1"><a href="#context-required-1" data-for="context-required-1">Context Required</a></li><li class="depth-1"><a href="#process-1" data-for="process-1">Process</a></li><li class="depth-1"><a href="#output-format-1" data-for="output-format-1">Output Format</a></li><li class="depth-1"><a href="#quality-standard-1" data-for="quality-standard-1">Quality Standard</a></li><li class="depth-0"><a href="#pre-call-brief" data-for="pre-call-brief">pre-call-brief</a></li><li class="depth-1"><a href="#trigger-2" data-for="trigger-2">Trigger</a></li><li class="depth-1"><a href="#context-required-2" data-for="context-required-2">Context Required</a></li><li class="depth-1"><a href="#process-2" data-for="process-2">Process</a></li><li class="depth-1"><a href="#output-format-2" data-for="output-format-2">Output Format</a></li><li class="depth-1"><a href="#quality-standard-2" data-for="quality-standard-2">Quality Standard</a></li><li class="depth-0"><a href="#weekly-review" data-for="weekly-review">weekly-review</a></li><li class="depth-1"><a href="#trigger-3" data-for="trigger-3">Trigger</a></li><li class="depth-1"><a href="#context-required-3" data-for="context-required-3">Context Required</a></li><li class="depth-1"><a href="#process-3" data-for="process-3">Process</a></li><li class="depth-1"><a href="#output-format-3" data-for="output-format-3">Output Format</a></li><li class="depth-1"><a href="#quality-standard-3" data-for="quality-standard-3">Quality Standard</a></li><li class="depth-1"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-2"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-1"><a href="#️-記事内画像" data-for="️-記事内画像">🖼️ 記事内画像</a></li><li class="depth-1"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

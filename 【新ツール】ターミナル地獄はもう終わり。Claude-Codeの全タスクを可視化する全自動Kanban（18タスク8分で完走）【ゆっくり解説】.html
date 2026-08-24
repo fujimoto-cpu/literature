@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】"/><meta name="twitter:description" content="📺 動画情報 【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】 🎙️ ゆっくりテックウォッチ ・ 📅 2026-04-15 ・ ⏱️ 8分39秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Codeのタスク実行状況をリアルタイムでブラウザ可視化するOSSツール「Claude Task Viewer」の紹介動画。18タスクを8分18秒で全自動完走させながら、カンバン表示・サブエージェント3並列レビュー・依存グラフの威力を実演する。 🗺️ 全..."/><meta property="og:description" content="📺 動画情報 【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】 🎙️ ゆっくりテックウォッチ ・ 📅 2026-04-15 ・ ⏱️ 8分39秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Codeのタスク実行状況をリアルタイムでブラウザ可視化するOSSツール「Claude Task Viewer」の紹介動画。18タスクを8分18秒で全自動完走させながら、カンバン表示・サブエージェント3並列レビュー・依存グラフの威力を実演する。 🗺️ 全..."/><meta property="og:image:alt" content="📺 動画情報 【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】 🎙️ ゆっくりテックウォッチ ・ 📅 2026-04-15 ・ ⏱️ 8分39秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Codeのタスク実行状況をリアルタイムでブラウザ可視化するOSSツール「Claude Task Viewer」の紹介動画。18タスクを8分18秒で全自動完走させながら、カンバン表示・サブエージェント3並列レビュー・依存グラフの威力を実演する。 🗺️ 全..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【新ツール】ターミナル地獄はもう終わり。Claude-Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【新ツール】ターミナル地獄はもう終わり。Claude-Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】 🎙️ ゆっくりテックウォッチ ・ 📅 2026-04-15 ・ ⏱️ 8分39秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Codeのタスク実行状況をリアルタイムでブラウザ可視化するOSSツール「Claude Task Viewer」の紹介動画。18タスクを8分18秒で全自動完走させながら、カンバン表示・サブエージェント3並列レビュー・依存グラフの威力を実演する。 🗺️ 全..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【新ツール】ターミナル地獄はもう終わり。Claude-Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1712"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1712" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】</a></div></nav><h1 class="article-title">【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】</h1><p show-comma="true" class="content-meta"><time datetime="2026-04-14T15:00:00.000Z">2026年4月15日</time><span>21 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/agent" class="internal tag-link">agent</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/task-management" class="internal tag-link">task-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【新ツール】ターミナル地獄はもう終わり。Claude Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】</strong>
+🎙️ ゆっくりテックウォッチ ・ 📅 2026-04-15 ・ ⏱️ 8分39秒
+🔗 <a href="https://www.youtube.com/watch?v=naH3_LLaU0I" class="external">https://www.youtube.com/watch?v=naH3_LLaU0I<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【新ツール】ターミナル地獄はもう終わり。Claude-Codeの全タスクを可視化する全自動Kanban（18タスク8分で完走）【ゆっくり解説】.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>のタスク実行状況をリアルタイムでブラウザ可視化するOSSツール「Claude Task Viewer」の紹介動画。18タスクを8分18秒で全自動完走させながら、カンバン表示・サブエージェント3並列レビュー・依存グラフの威力を実演する。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[要件書を作成&lt;br>18タスク＋依存関係を明記] -->|Claude Codeに渡す| B[タスク自動登録&lt;br>Pending列に18枚のカード]\n    B --> C[第1波: セットアップ系&lt;br>4タスク｜58秒〜1分22秒]\n    C --> D[第2波: API実装＋テスト&lt;br>テストファースト開発]\n    D --> E[第3波: エラー処理・フロント・OpenAPI定義&lt;br>依存グラフで順次解放]\n    E --> F[サブエージェント3並列レビュー&lt;br>コーディング規約/セキュリティ/パフォーマンス]\n    F -->|3枚ほぼ同時に完了列へ| G[レビュー統合・修正・ドキュメント作成]\n    G --> H[全18タスク完走&lt;br>8分18秒・失敗ゼロ]&quot;">flowchart TD
+    A[要件書を作成&lt;br>18タスク＋依存関係を明記] -->|Claude Codeに渡す| B[タスク自動登録&lt;br>Pending列に18枚のカード]
+    B --> C[第1波: セットアップ系&lt;br>4タスク｜58秒〜1分22秒]
+    C --> D[第2波: API実装＋テスト&lt;br>テストファースト開発]
+    D --> E[第3波: エラー処理・フロント・OpenAPI定義&lt;br>依存グラフで順次解放]
+    E --> F[サブエージェント3並列レビュー&lt;br>コーディング規約/セキュリティ/パフォーマンス]
+    F -->|3枚ほぼ同時に完了列へ| G[レビュー統合・修正・ドキュメント作成]
+    G --> H[全18タスク完走&lt;br>8分18秒・失敗ゼロ]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Claude Task Viewer — 「観測優先」という逆転発想 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>L1ADさんが公開するOSS。普通のタスク管理ツール（Trello等）は人間がカードを動かすが、このツールは人間が一切触らず、<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>がタスク状態を持ってブラウザに映し出す。「Observation over Control（観測優先）」の思想で、表示と実態が絶対にずれない設計。起動は <code>npx claude-task-viewer</code> の一発のみで、設定ゼロで全セッションを自動検出する。公開3週間で500スターに到達し、スターをつけた人の10%がコピーして実際に触っている（通常OSSの1〜3%と比べ異例の熱量）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. カンバン表示でAIの思考が「見える」 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>タスクはPending / In Progress / Done の3列で表示され、依存関係が解消されたカードが順次In Progressに移動する様子をリアルタイムで観察できる。ガントチャート表示に切り替えると各タスクの所要時間がバーチャート風に並ぶ。完了通知はデスクトップ通知（ベルアイコンでオン/オフ切替）、完了音あり。7日以上更新がないセッションは自動アーカイブ。キーボードショートカット（<code>?</code>でヘルプ、<code>D</code>でタスク削除）も完備。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 要件書の書き方がカギ——タスク＋依存関係を明記する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「TODOアプリをTDD（テスト駆動開発）で作り、最後にコードレビューまで行う」という要件書を<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>に渡すと、18タスクを自動分解して依存グラフ付きで登録する。各カードには依存先タスク番号が明記され、どのタスクが終われば次が解放されるか一目でわかる。テストファーストの実装（失敗するテストを先に書いてから実装する）も依存グラフで自動的に守られる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. サブエージェント3並列レビュー——同時に3つの視点でチェック </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>1つのメッセージで3つのサブエージェントを同時に起動し、「コーディング規約」「セキュリティ」「パフォーマンス」の3観点を並列チェックする。カンバン上では11・12・13番のカードが同時にIn Progressへ移動し、約6分半後にほぼ同時に完了列へ着地。サブエージェントは互いに独立した別の「頭」なので3つ並列でも干渉しない。「見えないAIの思考がちゃんと見える」という体験がこのツールの真骨頂。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 明日の朝、npx claude-task-viewerを試す</strong>
+ターミナルで <code>npx claude-task-viewer</code> を打てばすぐ動く。セットアップ不要。<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>で何か作業するとき（会社のAI推進資料作成でも可）に一緒に起動しておくだけでOK。</p>
+<p><strong>② 要件書テンプレを1本作っておく</strong>
+動画概要欄に18タスク自動分解の要件書プロンプトが公開されている（<a href="https://www.youtube.com/watch?v=naH3_LLaU0I" class="external">https://www.youtube.com/watch?v=naH3_LLaU0I<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> の概要欄）。コピペしてClaude Codeに渡すだけで全自動Kanbanが動く。社内AI推進のデモ素材としても使えるので今週中に試す。</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> え、誰も触ってないのに勝手にチケットが移動してる。これが、監督なしのコーディング現場ってやつだぜ。裏でクロードコードが18個のタスクを勝手に片付けてるんだ。勝手に18個も。一体どうやって観測してるのよ。その秘密兵器が今日紹介するクロードタスクビューアーだぜ。8分18秒で全部終わる様子を最後まで見せる。使い方から、要求書の書き方、サブエージェント並列レビューの実演まで、全部入りだぜ。ゆっくりしていってね。レイムはクロードコードを動かしてるとき今何をしてるかわからなくなったことないかあるわ</p>
+<p><code>00:32</code> ターミナルでいろんな出力が流れて気づいたら何が進んでるか全然わかんなくなるのよね特にサブエージェントを4つとか並列で走らせるともう手が付けられないよな4並列なんてもう誰が何やってるかさっぱりよそれにコーヒー入れに行ってる間に何が終わったかわからなくなるのよわかるぞスクロールバー戻してこれっていつのログだっけってうなるんだぜ結局またターミナルに張り付いてメデオは泣き合いけないのよねそれじゃあせっかくAIに任せた意味が半分なくなるよな実際この問題を経験したエンジニアがブログに書いてたんだ4人のエージェントを同時に回してたけどターミナルには何が起きてるか全く映らなかったってな</p>
+<p><code>01:06</code> うわぁそれわかるタスクリストがフラットに並ぶだけで依存関係もグループ分けもなくてステータスごとにカードを分けて依存グラフが見えて完了したら通知が来るそんな道具が欲しいよな確かにそういう道具があったら長時間タスクも安心して任せられるのに実はなそれをシンプルに解決する道具がすでにあるんだぜえっもうあるの?それ教えてよそれがさっき紹介したクロードタスクビューアーL1ADさんが公開してるOSSだぜえっとタスク管理ツールならトレロとかもあるじゃない何が違うの?</p>
+<p><code>01:38</code> 実はな普通のタスク管理ツールとは思想が真逆なんだ真逆?どういうこと?普通は人間がカードを動かすだろでもこのツールは人間は一切触らないクロードコードが全部動かすんだえっ人間は動かさないのそれじゃタスク管理になんないじゃないそこが逆転発想の面白いところでなオブザベーションオーバーコントロールという思想なんだぜオブザベーション観測優先ってことそうだクロードコードがタスクの状態を持ってて人間はブラウザで眺めるだけだから表示と実態が絶対にずれないX2のツールはずれるの考えてみろ人間がカードを動かしてる間にAIが裏で別の作業を進めてたら画面と現実が食い違うだろだから状態をAIに任せきりにするのが正解なんだぜなるほどねAIエージェント時代のタスク管理って確かにそうなるかもしれないわ</p>
+<p><code>02:21</code> 仕組みはシンプルでクロードコードがタスクを書き出すディレクトリを監視して変更があったらブラウザにすぐ通知するんだだからリアルタイムで動くのねしかも起動はNPX、クロードタスクビューアーの一発設定ゼロで全セッションを自動検出するんだぜえっそれだけなのに3週間で500スター集めたって本当本当だぜスターをつけた人のうち10人に1人が自分の環境にコピーして触ってる普通のOSSは1から3%だから相当な熱量だ他にはどんな機能があるの看板、表示と、ガンと、表示が切り替えられるんだガンと、表示にすると各タスクの所要時間がバーチャート風に並んで見える</p>
+<p><code>02:56</code> 後から振り返るのに便利そうね後目を離してても官僚を知らせてくれる仕組みがあるデスクトップ通知に加えてベルアイコンでオンオフ切り替えできるんだぜコーヒー飲みながらでも安心ねそれから7日以上更新がないセッションは自動でアーカイブされるサイドバーがごちゃごちゃしないのねキーボードショートカットも揃ってるクエスチョンマークでヘルプDキーでタスク削除だそれは期待しちゃうわねじゃあ実際に動かしてみせてよ任せとけ今日はTODOアプリを作らせてみせるぜ用意したのはこの要求書だトゥードゥアプリをテスト駆動開発で作って最後にコードレビューまでやらせるぜ</p>
+<p><code>03:31</code> コードレビューもやらせるってどういうこと実装が終わったら書いたコードを別のAIに見せてチェックさせるんだ自分で書いて自分でレビューさせるってこと別の頭で見直すから自己流の盲点を潰せるってわけだぜ18タスクもあるのタスク同士の依存関係も全部明記してあるこれをクロードコードにそのまま渡すぜクロードコードが要件を読んでタスクを一気に登録してくる圧巻版のペンディング列にカードが一気に出てきたこれが18枚だしかも各カードに依存先のタスク番号が書いてあってどれがどれをブロックしてるか一目でわかるんだなるほどどのタスクが終われば次が解放されるかカードを見るだけで終えるのね</p>
+<p><code>04:04</code> これで準備完了だぜここからクロードコードが動き出す8分18秒で本当に全部終わるのちゃんと見ててくれよな結構面白いぞまず第一波だぜセットアップ系のタスクが動き出したぜプロジェクト初期カリント設定DBスキーマシードスクリプトこの4つが58秒から1分22秒で次々に完了するはやっもう4つ終わったわほらペンディング列が減って完了列が増えていくだろ波みたいに動くのね見ててすごく気持ちいいわ次は第二波だぜ</p>
+<p><code>04:36</code> APIテストとAPI実装だテスト駆動開発だから先にテストを書いてから実装に入るぜえ、まだ何もないのにテストって書けるの失敗するテストを先に書いてそれを通すように実装するんだだから実装漏れが起きにくいあテストが先なのねテストファーストで進めるから最小限の実装でテストを通す合計1分41秒で両方終わるぜテストまで書いてその速さ普通の人間じゃ無理ねここからが第3波エラーハンドリングの理学多フロントテスト、フロント実装、オープンAPI定義の作成が続くぜ4つもまだ残ってるのね</p>
+<p><code>05:09</code> ここで注目してほしいのはタスクの開放順序だ前のタスクが終わると次のカードが開放されてインプログレスへ動き出すだろあっ本当だわカードが順番に開放されていくのねこれがタスク依存グラフの威力だぜクロードコードは依存関係を読んでどけたタスクから順にきちんと手をつけてるなるほどね無駄なく次々と進んでる感じ第3波の終わりでここまで4分31秒もう10個のタスクが完了してるえ10個まだ前半なのに半分以上終わってるの次が今日一番の見どころだぜサブエージェント3並列レビューの登場だサブエージェント</p>
+<p><code>05:40</code> しかも並列で3つサブエージェントってのはクロードコードが裏で呼び出す専門の小さなAIのことだぜ本体とは別の頭で動くから3つ並列でも互いに邪魔しないんだコーディング規約、セキュリティ、パフォーマンスの3観点を同時にチェックさせるんだサブエージェントの並列起動はこうやる1つのメッセージで3つのエージェントを同時に呼ぶんだ3つ同時に依頼するのね見ろ看板にも11番12番13番のカードが同時にインプログレス列へ移動したあっ3枚同時に黄色く光ってる3つのレビュー処理が裏で同時に走ってるぜ</p>
+<p><code>06:13</code> みんな頑張ってるのねなんだか応援したくなるわおよそ6分半サブエージェントたちは黙々と働くそしてあっ3枚がほぼ同時に動いた同時着地だぜコーディングセキュリティパフォーマンスのレビューが3つとも約1秒で完了列へ飛んできた33枚のカードがほぼ同時に。これが動画で見たかった瞬間だぜ。クロードコードの並列処理がそのまま看板に映し出されてる。見えないAIの思考がちゃんと見えてるってこういうことね。レビュー統合と修正対応も続けて進んでる。あと5タスクで完走だぜ。最後まで見届けましょうよ。レビュー結果を統合して緊急と交流セントの修正。</p>
+<p><code>06:50</code> そしてドキュメント作成だ。16番17番18番のタスクね来るぜ来るぜあっ18番が完了列へ完走だぜ18タスク全部完了列に並んだやったー全部で8分18秒本当に終わったわ8分18秒で18タスク完走失敗ゼロしかもサブエージェント3並列レビュー付きだぜこれだけ観測できると放置して他のことしててもちゃんと戻れるわねこれがあればクロードコードを回しながら別の作業もできるな席を立っても完了したらすぐに気づけるトゥードゥアプリのようなシンプルなアプリだけじゃなくもっと長期のプロジェクトでも使えるぜ複数のクロードコードセッションを同時に回しても全部一覧で見えるってことね</p>
+<p><code>07:26</code> これからのAIコーディングはこういう観測ツールが標準になるかもな人間がAIを信頼して任せるための新しい鍵ね完了通知はデスクトップに飛んでくるし完了音はトトミのチャイムで優しいんだぜこのクロードタスクビューアー公開からたった3週間で500スターに到達したんだ3週間で500スターも今悪い時ツールも続々登場してるAIエージェント化しかっていう新ジャンルの幕開けだぜAIと人間の新しい付き合い方ね見守るっていう新しい役割今すぐ試したい人はターミナルでNPX、クロードタスクビューアー手打つだけで動くぜちなみに今回使った18タスク自動分解の要件書プロンプとは</p>
+<p><code>08:01</code> ノート記事にまとめてあるぜ概要欄のリンクから飛べるから自分の環境でこの魔法の看板を試してみてね要件書をコピペしてクロードコードに渡すだけで君も18タスク感想の体験ができるぜこの動画が参考になったら高評価とチャンネル登録をよろしくなそれじゃまた次の動画で会おう。次回もゆっくりしていってね。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts） — <a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>本体の概念ページ。タスク可視化ツールの母体</li>
+<li><a href="./agent" class="internal" data-slug="agent">agent</a>（StructureNote/concepts） — サブエージェント並列実行の思想的バックグラウンド</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts） — 全自動Kanbanが体現する自動化の思想</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote/concepts） — クラウド版AIエージェント基盤。ローカルのTask Viewerと補完関係</li>
+<li><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote/concepts） — タスク可視化による生産性向上の文脈</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-650" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./初心者でもこの動画だけでターミナルの基礎がわかります！AI時代に知っていると差がつくターミナルの使い方を教えます" class="internal">初心者でもこの動画だけでターミナルの基礎がわかります！AI時代に知っていると差がつくターミナルの使い方を教えます</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

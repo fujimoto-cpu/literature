@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 Obsidian×Claude×N8N 3層業務OSの自動化全手順</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 Obsidian×Claude×N8N 3層業務OSの自動化全手順"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 Obsidian×Claude×N8N 3層業務OSの自動化全手順"/><meta name="twitter:description" content="𝕏 投稿情報（X記事） @obsidianstudio9 · 📅 2026-06-10 🔗 元の投稿 📄 X記事「【保存版】Obsidian × Claude × N8N で自動化する全手順」（本文 18,404 字・画像 15 枚） 📝 投稿内容 【保存版】Obsidian × Claude × N8N で自動化する全手順 りゅう@Obsidianガチ勢 @obsidianstudio9 · Jun 10 Follow 3 6 78 14K Claude×ObsidianにN8Nを取り込むのは完全に盲点だった。これを知らずに使ってる人、かなり損します。実は海外ではいま、Vault..."/><meta property="og:description" content="𝕏 投稿情報（X記事） @obsidianstudio9 · 📅 2026-06-10 🔗 元の投稿 📄 X記事「【保存版】Obsidian × Claude × N8N で自動化する全手順」（本文 18,404 字・画像 15 枚） 📝 投稿内容 【保存版】Obsidian × Claude × N8N で自動化する全手順 りゅう@Obsidianガチ勢 @obsidianstudio9 · Jun 10 Follow 3 6 78 14K Claude×ObsidianにN8Nを取り込むのは完全に盲点だった。これを知らずに使ってる人、かなり損します。実は海外ではいま、Vault..."/><meta property="og:image:alt" content="𝕏 投稿情報（X記事） @obsidianstudio9 · 📅 2026-06-10 🔗 元の投稿 📄 X記事「【保存版】Obsidian × Claude × N8N で自動化する全手順」（本文 18,404 字・画像 15 枚） 📝 投稿内容 【保存版】Obsidian × Claude × N8N で自動化する全手順 りゅう@Obsidianガチ勢 @obsidianstudio9 · Jun 10 Follow 3 6 78 14K Claude×ObsidianにN8Nを取り込むのは完全に盲点だった。これを知らずに使ってる人、かなり損します。実は海外ではいま、Vault..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Obsidian×Claude×N8N-3層業務OSの自動化全手順"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Obsidian×Claude×N8N-3層業務OSの自動化全手順"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報（X記事） @obsidianstudio9 · 📅 2026-06-10 🔗 元の投稿 📄 X記事「【保存版】Obsidian × Claude × N8N で自動化する全手順」（本文 18,404 字・画像 15 枚） 📝 投稿内容 【保存版】Obsidian × Claude × N8N で自動化する全手順 りゅう@Obsidianガチ勢 @obsidianstudio9 · Jun 10 Follow 3 6 78 14K Claude×ObsidianにN8Nを取り込むのは完全に盲点だった。これを知らずに使ってる人、かなり損します。実は海外ではいま、Vault..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-Obsidian×Claude×N8N-3層業務OSの自動化全手順"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3768"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3768" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 Obsidian×Claude×N8N 3層業務OSの自動化全手順</a></div></nav><h1 class="article-title">𝕏 Obsidian×Claude×N8N 3層業務OSの自動化全手順</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-09T15:00:00.000Z">2026年6月10日</time><span>47 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/x-article" class="internal tag-link">x-article</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/自動化" class="internal tag-link">自動化</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報（X記事） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@obsidianstudio9</strong> · 📅 2026-06-10
+🔗 <a href="https://x.com/obsidianstudio9/status/2064566152270135673" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 X記事「【保存版】Obsidian × Claude × N8N で自動化する全手順」（本文 18,404 字・画像 15 枚）</p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>【保存版】Obsidian × Claude × N8N で自動化する全手順
+りゅう@Obsidianガチ勢
+@obsidianstudio9
+·
+Jun 10
+Follow
+3
+6
+78
+14K
+Claude×ObsidianにN8Nを取り込むのは完全に盲点だった。これを知らずに使ってる人、かなり損します。実は海外ではいま、Vault が事業を運転する時代に入っています。@cyrilXBT が公開した Obsidian × Claude × N8N の3層業務OSは、これまでの常識を覆します。コピペで動かせる手順を全部書きます。
+こんな悩み、ありませんか？
+案件の状況を更新するだけで午前中が終わる
+メモは溜まっているのに、必要なときに見つからない
+朝の客先訪問前、過去のやり取りを掘り返すのに30分
+月末の経理処理で、月の振り返りができないまま翌月に突入
+リサーチして読んで満足、書く前に力尽きる
+知識労働者は1日のうち平均で4〜6時間を「事業を進める仕事」ではなく「事業を後退させない仕事」に取られていると言われます。日本の年間労働時間は1,611時間ですが、そのうち事務調整・状況更新・情報探索に消えている割合は、感覚としても無視できない大きさです。
+そして日本の時間あたり生産性はOECD加盟38カ国中32位、時間あたり5,543円。海外平均との差は3倍以上。この差は能力ではなく、業務の組み立て方の差だと、海外の自動化実装者は口を揃えて言っています。
+Karpathy は2025年にこう書いています。
+The problem isn’t a lack of information — it’s that raw information doesn’t scale.
+（情報が足りないのではない。生のままの情報がスケールしない、それが問題だ）
+cyrilXBT の長文は、そのスケール問題を「Obsidian × Claude × N8N の3層」で解く実装手順そのものです。元記事はこちら 👉 <a href="https://x.com/cyrilXBT/status/2054379666316693719" class="external">https://x.com/cyrilXBT/status/2054379666316693719<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+今回はこの内容を、日本のソロ事業主・1人会社・少人数チーム向けに翻訳ではなく再構成します。同じ素材を、日本の朝の風景と日本の業務フローに溶かす形で。徹底的に噛み砕いて日本語で解説していきます👇</p>
+<ol>
+<li>ナレッジ管理が「業務代行」に進化した転換点 — Karpathy から cyrilXBT へ
+Obsidian × AI の本流は、2025年に静かに2段ジャンプしました。
+第1ジャンプは Karpathy の「LLM as compiler &amp; librarian」。Karpathy は raw articles / papers / notes を「ソースコード」、LLM を「コンパイラ」、生成されるwiki を「実行可能ファイル」と見立てました。Obsidian は単なるメモ帳ではなく、AI が読んで再構成する素材庫になる、という発想の転換です。
+ここで重要なのは「ライブラリアン」のほうです。Karpathy はこう続けます。
+Instead of using traditional RAG systems, the LLM acts as a full-time research librarian — actively compiling, linting, and interlinking Markdown files.
+LLM が司書として常駐し、Vault のメモを能動的に編成し、矛盾を検出し、リンクを張り直す。これがあると Vault は「使うほど精度が上がる」状態に入ります。
+第2ジャンプが cyrilXBT の業務OS化。Karpathy が静的な3層（raw / wiki / reports）を示したのに対し、cyrilXBT は実行レイヤーまで降ろしました。
+具体的には、Obsidian の上に N8N の自動化レイヤーと、Claude Code の MCP 接続を重ねて、「メモが溜まる」から「タスクが進む」に変質させた。Obsidian は素材庫から業務OS の OS 部分になったわけです。
+Greg Isenberg（Late Checkout 創業者、フォロワー約50万）はこの構造をひと言でまとめています。
+how to use obsidian + claude code to build a 24/7 personal operating system
+「自分のための、24時間動くOS」。これが2025年後半から2026年にかけて、海外発信界隈の共通語になりました。
+Tiago Forte の「Second Brain（第2の脳）」はあくまで個人の蓄積でした。cyrilXBT が「Business Operating System」と呼んだのは、その先。蓄積を超えて、事業を動かすOS に進化した、という宣言です。
+Karpathy が「設計図」を描き、cyrilXBT が「自動運転の実装図」まで降ろした。本記事はその実装図を、日本の業務文脈に合わせて再配線するための地図です。</li>
+<li>業務OS の3層アーキテクチャ — Knowledge / Intelligence / Automation
+cyrilXBT の業務OS は、明確に3層で構成されています。順番に分解します。
+Layer 1: Knowledge（保存層）= Obsidian
+すべての業務情報を Markdown のローカルファイルで保存する層です。Obsidian は単なるエディタですが、ローカル Markdown という選択が決定的に効きます。
+Obsidian CEO の Steph Ango はこう言い切っています。
+local-first, markdown-native knowledge management
+ローカル優先、Markdown ネイティブ。サブスクが切れても読める。サービスが終了しても残る。10年後にも開ける。これは「自分の事業データをプラットフォームに人質に取られない」という、業務OSの大前提です。
+Evernote がかつてのノート最大手から滑り落ちた話を覚えている方も多いと思います。クラウド完全依存、サーバー閉鎖リスク、プラットフォームロック。多くのパワーユーザーが Obsidian に移ったのは、業務データを自分の管轄に取り戻すためでした。
+Layer 2: Intelligence（思考層）= Claude Code via MCP
+ここが Karpathy の言う「ライブラリアン」の住む層です。Claude Code が MCP（Model Context Protocol）経由で Obsidian の Vault を読み、考え、書き戻す。
+MCPは「AI システムの USB-C」とよく例えられます。GitHub の stars は81,000を超え、OpenAI / Google / Microsoft / AWS / Meta が公式サポート。日本でも freee / kintone / LINE / Chatwork / Backlog が MCP サーバーを提供しはじめています。つまり、業務システムと AI を繋ぐ標準規格として実質決着が付いた状態。
+Claude Code はこの MCP を介して Vault を「常時アクセス可能な作業領域」として扱います。ユーザーがチャットを開かなくても、Vault の Markdown を読み、追記し、再構成する。常駐司書としての性格がここで生まれます。
+Layer 3: Automation（実行層）= N8N
+最後の層が N8N。これが「スケジューラ兼神経系」として動きます。
+N8N は2025年の JavaScript Rising Stars で1位（+112,000 stars/年）、Fortune 500 の25%が採用、合計150,000 stars 超え。ノーコード自動化の事実上の業界標準になりつつあります。日本のノーコード市場も2026年に1,330億円規模で、年率17.1%で伸びています。
+役割分担はシンプルです。
+思考しているのは Claude
+実行しているのは N8N
+保存しているのは Obsidian
+3つを1つに混ぜると壊れますが、層を分けると拡張がきく。これが cyrilXBT 構成の肝です。Christopher Alarcon という Solo Founder は同じ構造を月$100で組んで、「コンテンツ再利用 → リード取得 → リサーチ自動化 → 公開承認」のパイプラインを回しています。
+非同期コミュニケーションの効果は2025年の研究でも裏付けられていて、リモート環境で「生産性向上の羅針盤」と呼ばれるようになりました。3層に分けた瞬間、業務は同期から非同期に切り替わります。</li>
+<li>Vault フォルダ構造 — GENERATED と QUEUE が「非同期ループ」を作る
+3層を組んだら、次は Obsidian の中身です。フォルダ構造は cyrilXBT の指定にほぼ準じて、こうなります。
+Business Vault/
+├── 00 - INBOX/          ← その日の思いつきを放り込む場所
+├── 01 - CLIENTS/        ← クライアント別フォルダ
+├── 02 - PROJECTS/       ← 案件・プロジェクト別
+├── 03 - OPERATIONS/     ← 経理・契約・社内運用
+├── 04 - CONTENT/        ← 投稿・記事・配信物
+├── 05 - RESEARCH/       ← リサーチ素材
+├── 06 - PEOPLE/         ← 関係者・取引先
+├── 07 - SYSTEM/         ← CLAUDE.md・ログ・設定
+├── 08 - GENERATED/      ← ★ AIが書き出した成果物
+├── 09 - QUEUE/          ← ★ AIへの依頼ファイル置き場
+└── 10 - ARCHIVE/        ← 凍結・終了
+注目してほしいのは GENERATED と QUEUE の2つ。ここが業務OSの心臓部です。
+普通のメモアプリは「自分が書く / 自分が読む」の同期ループしか持っていません。一方この2フォルダは、自分とシステムの非同期ループを作ります。
+QUEUE は「やってほしいことを置く場所」。客先訪問の事前ブリーフが欲しい、投稿の下書きが欲しい、競合のニュースを朝までにまとめておいてほしい。そういう依頼を、自分の都合のいいタイミングで放り込む。
+GENERATED は「やった結果が降ってくる場所」。N8N が定期的に QUEUE を覗き、Claude に渡し、結果を GENERATED に書き出す。自分は朝に受け取って、必要なら確認するだけ。
+cyrilXBT 本人がこう書いています。
+You capture tasks when they occur to you. The system executes them when it runs. You review results when it is convenient.
+タスクは思いついた瞬間に捕まえる。システムは自分のスケジュールで動く。結果は自分の都合のいいときに見る。3者が一切お互いを待たない。
+この発想は、日本のメモ管理本にはほとんど登場しないものです。日本では「メモは見返すもの」「振り返るもの」が主流で、「メモは処理してもらうもの」という発想がほぼ存在しない。ここに業務OSの本質的な飛距離があります。
+Noah Vuong というブロガーは491個のPermanent Notesを Vault に置き、Claude Pro €20/月で「2分で Newsletter ドラフト完成」「2分で SOP 完成」を実現しています。低投資・高ROIの典型例。
+逆に cyrilXBT 自身、半年前は2,000ノートを溜めただけで何も見つからない「ノート地獄」状態だったと振り返っています。
+Six months ago my Obsidian vault had 2,000 notes and I could not find anything. I rebuilt the entire structure in one afternoon using this exact system. I have not lost a single idea since.
+午後1回分の構造再構築で、それ以来1つのアイデアも失っていない。蓄積は構造がないと負債になる。先に骨を入れる、というのが cyrilXBT のメッセージです。</li>
+<li>CLAUDE.md は「業務憲法」である — テンプレと Weekly Focus の威力
+3層と Vault 構造が組めたら、次がいちばん効くやつです。
+07 - SYSTEM/ フォルダに CLAUDE.md を置きます。これは自分の事業ルールを全部 Markdown 化した、いわば業務憲法。すべての自動化ワークフローは、何をする前にこのファイルを読みます。
+Anthropic 公式が出した「Claude Code Best Practices」でも、CLAUDE.md は context そのもの だと位置付けられています。雑に書かれた CLAUDE.md からは雑な出力しか出てこないし、精密に書かれた CLAUDE.md は、Claude を「自社の業務を熟知した担当者」に近づける。
+Anthropic 社内の Data Infrastructure チームは、リポジトリの CLAUDE.md に「データパイプラインの保守ルール」を集約して、新機能実装・テーブル依存関係の把握・ドキュメント生成まで Claude に任せています。従来「データカタログ」と呼ばれていたツールが、CLAUDE.md 一枚で置き換わった、という社内事例です。
+ベーステンプレはこう書けます。</li>
+</ol>
+<h1 id="business-operating-system--claudemd">Business Operating System — CLAUDE.md<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#business-operating-system--claudemd" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h2 id="事業の定義">事業の定義<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#事業の定義" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>事業名: 〇〇</li>
+<li>提供価値: 〇〇</li>
+<li>顧客像: 〇〇</li>
+<li>収益モデル: 〇〇</li>
+<li>フェーズ: 立ち上げ / 成長 / 安定</li>
+</ul>
+<h2 id="アクティブクライアント">アクティブクライアント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#アクティブクライアント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>{クライアント名}: {契約形態} / 現状: {状態} / 次のアクション: {具体}</li>
+<li>{以下、案件ごとに}</li>
+</ul>
+<h2 id="アクティブ案件">アクティブ案件<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#アクティブ案件" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>{案件名}: 概要 / 現状 / 締切 / 次のマイルストーン</li>
+<li>{以下、案件ごとに}</li>
+</ul>
+<h2 id="文体トーン">文体・トーン<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#文体トーン" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>書き方: 〇〇調、〇〇な雰囲気</li>
+<li>絶対に使わない表現: 〇〇 / 〇〇</li>
+<li>CTA の型: 〇〇</li>
+</ul>
+<h2 id="収益目標">収益目標<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#収益目標" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>月次目標: {金額}</li>
+<li>現状 MRR: {毎月更新}</li>
+<li>注視している主要指標: {1つだけ書く}</li>
+</ul>
+<h2 id="投稿運用">投稿運用<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#投稿運用" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>配信頻度: {例: 平日3本}</li>
+<li>コンテンツ柱: {主軸テーマ3〜5個}</li>
+<li>フォーマット: {長文 / 短文 / 図解 など}</li>
+</ul>
+<h2 id="運用ルール">運用ルール<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#運用ルール" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>ファイルを削除しない。タイムスタンプ付きでアーカイブする</li>
+<li>顧客向け文面は人間レビューなしで送らない</li>
+<li>生成ファイルは YYYY-MM-DD でタイムスタンプ</li>
+<li>すべての書き込み操作を SYSTEM/logs/operations.md にログ</li>
+<li>不確実なときは GENERATED に置いてフラグを立てる</li>
+<li>金銭・契約・関係性・評判が絡むものは必ず人間にエスカレ</li>
+</ul>
+<h2 id="今週のフォーカス">今週のフォーカス<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#今週のフォーカス" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>{毎週月曜の朝に更新する。今週いちばん大事なこと}
+最後の「今週のフォーカス」セクションが、いちばん効きます。
+月曜の朝に2分かけて「今週いちばん大事なこと」を書き換える。それだけで、その週に動くすべての自動ワークフローが現在の優先順位に沿った出力を返すようになります。朝のブリーフの粒度、コンテンツ提案の角度、リサーチの掘り方、全部が今週のテーマに寄っていく。
+Karpathy の「ライブラリアン」概念がここに重なります。CLAUDE.md は、Claude というライブラリアンに渡す「館内ガイド」。これがないと司書は「一般論で並べたメモ」しか返してくれない。これがあると「あなたの事業のためにキュレーションされたメモ」を返してくる。
+5. 6つの業務システム（前半）— 法人案件運用の3システム
+ここから本丸の6システムです。cyrilXBT は順に6つを並べていますが、日本の事業主の運用優先度に合わせて、ここでは法人案件運用群と個人発信運用群の2つに分けて並べ直します。
+法人案件運用群は3つ。クライアントを抱えている人、案件で動いている人、お金が複数の口座を行き来する人にとって、いちばん早く効くはずです。
+システム1: Client Intelligence（クライアント情報層）
+役割は2つあります。
+ひとつ目は 客先訪問30分前の事前ブリーフ自動生成。N8N が Google Calendar を見て、訪問予定の30分前に発火します。Claude が 01 - CLIENTS/{クライアント名}/ を全部読んで、ブリーフを GENERATED に書き出してくれます。
+プロンプトはこんな形です。
+01 - CLIENTS/{クライアント名}/ の中身を全部読んでください。
+以下を5分で読める粒度で1枚にまとめてください:</p>
+<ul>
+<li>関係性の経緯（重要な出来事と判断を時系列で）</li>
+<li>現在のエンゲージメント状況</li>
+<li>未対応の約束（こちらが提示したまま動いていないこと）</li>
+<li>直近のやり取り（日時 / 媒体 / 主旨）</li>
+<li>先方が大事にしていること</li>
+<li>今回の打ち合わせの推奨アジェンダ 3点</li>
+<li>今回必ず伝えること 1点
+保存先: 08 - GENERATED/briefings/{日付}-{クライアント名}-precall.md
+「客先に向かう電車で目を通す5分の事前ブリーフ」を、自動で前日の23時に作っておく。これだけで、商談の密度が変わります。
+ふたつ目は コミュニケーション・ロガー。日次メモに「{クライアント名}と{要件}でやり取り」と書いたら、Claude が要点を抽出して 01 - CLIENTS/{クライアント名}/communications/ に追記する。
+書くのは1回。整理は自動。
+システム2: Project Operations（案件運用層）
+役割は 朝の案件パルス。毎朝6時、N8N が 02 - PROJECTS/ を全部覗いて、状況サマリを GENERATED に置きます。
+02 - PROJECTS/ の全ファイルから「完了していない」案件を読んでください。
+各案件について以下を出してください:</li>
+<li>案件名 / クライアント</li>
+<li>現在のフェーズ</li>
+<li>昨日完了したこと（昨日の日次メモから抽出）</li>
+<li>いま詰まっていること</li>
+<li>次にやることと担当者</li>
+<li>締切までの残り日数
+以下のいずれかに該当する案件にはフラグを立ててください:</li>
+<li>締切まで7日以内で未完タスクあり</li>
+<li>同じステータスのまま5日以上動いていない</li>
+<li>詰まりがあるのに解決策が書かれていない
+保存先: 08 - GENERATED/briefings/{日付}-project-pulse.md
+朝の4分で全案件の状態が把握できる。これがあるとないとでは、案件の遅延検知速度が決定的に変わります。
+加えて 完了マーカーによる自動更新。日次メモに DONE: {案件名} — {成果物} と書けば、Claude が該当案件のタスクリストを自動で更新します。書くのは1回。更新は自動。
+システム3: Financial Operations（財務運用層）
+入金記録の <code>RECEIVED: ¥{金額} — {クライアント} — {内容}</code> という1行を日次メモに書く運用にする。あとは N8N が毎月1日に動いて、その月の財務サマリを GENERATED に書き出します。
+{先月} の全日次メモから RECEIVED 行を抽出してください。
+03 - OPERATIONS/finances/expenses/ から経費記録を読んでください。
+CLAUDE.md から月次目標を読んでください。
+財務サマリを出してください:</li>
+<li>売上 vs 目標（パーセンテージ）</li>
+<li>前月比較</li>
+<li>クライアント別売上内訳</li>
+<li>主な経費カテゴリ</li>
+<li>純損益</li>
+<li>このパターンが続いた場合の翌月予測
+保存先: 08 - GENERATED/reports/{日付}-financial-brief.md
+それから毎月25日に 請求リマインダー。継続案件の入金状況を見て、未入金のクライアント宛て請求書ドラフトを GENERATED に置く。自分は承認するだけ。
+Anthropic 自社のエンジニアは Claude Code 経由でタスクの60%を回し、平均50%の生産性向上を達成しています。大学レベル相当の複雑タスクでは12倍の速度向上、というデータも出ています。法人案件運用の3システムは、まさにここに刺さる領域です。</li>
+</ul>
+<ol start="6">
+<li>6つの業務システム（後半）— 個人発信運用の3システム
+後半の3つは、発信・リサーチ・振り返りに効くやつです。発信を続けている人、情報を扱う仕事をしている人、自分の意思決定の質を上げたい人向け。
+システム4: Content Production（コンテンツ生産層）
+毎朝、3つが動きます。
+朝のコンテンツブリーフ。直近48時間のリサーチブリーフ、自分の日次メモのアイデア、コンテンツカレンダー、CLAUDE.md のコンテンツ柱を全部読んで、その日に書ける角度を3本出してくれる。
+以下を読んでください:</li>
+<li>08 - GENERATED/briefings/ の直近48時間のリサーチブリーフ</li>
+<li>直近の日次メモに書き留めたアイデア</li>
+<li>03 - OPERATIONS/content/calendar.md の予定トピック</li>
+<li>CLAUDE.md のコンテンツ柱
+以下を出してください:</li>
+</ol>
+<ul>
+<li>今日書ける3つの角度（バズ可能性順）</li>
+<li>各角度のフック案</li>
+<li>各角度に合うフォーマット</li>
+<li>各角度に追加リサーチが必要かどうか
+保存先: 08 - GENERATED/briefings/{日付}-content-brief.md
+ドラフトエンジン。QUEUE に DRAFT-{形式}-{テーマ}.md を置けば、Claude が CLAUDE.md の文体プロファイルを適用して初稿を GENERATED/drafts に書く。80%のケースで10分以下の編集で出せる初稿が出てきます。
+Noah Vuong は491ノートを使って「2分で Newsletter ドラフト」を実現していますが、これは型ができればソロでも届く水準です。
+パフォーマンス分析。毎週月曜、先週のコンテンツ実績を分析して、来週のフォーカスを提案する。「伸びた3本」「保存された3本」「伸びなかった3本」と、それを分けた要素を1枚で出す。
+システム5: Research and Intelligence（リサーチ・情報層）
+朝の情報ブリーフ。設定したソースから過去24時間の動きを取って、3つに整理する。
+重要な動きトップ3とその意味
+これが事業にとって作る機会1点
+これが事業にとって作るリスク1点
+推奨アクション（あれば）
+ニュース全部に目を通す時間を、3点要約4分に圧縮する仕組みです。
+リサーチキュー。QUEUE に RESEARCH-{トピック}.md を投げ込むと、Claude が外部検索と Vault 内既存知識を照合してブリーフを GENERATED に出す。深夜に投げて朝に受け取る使い方が王道です。
+MindStudio という AI 教育プラットフォームが「500の参考資料 + 6ヶ月の日報 + 80人の CRM 連絡先」を Vault に溜めていって、「10回使ったら秘書レベル、20回使ったら参謀レベル」の AI 相棒に育てた、というレポートを出しています。リサーチ層の蓄積は、6ヶ月で精度が指数的に上がる場所です。
+システム6: Performance and Review（振り返り層）
+週次レビュー。毎週日曜の夜8時、過去7日の日次メモ・案件状況・コンテンツ成績・財務・全ブリーフを読んで、1枚にまとめる。
+前進したことと、その原因
+動かなかったことと、正直な理由
+1週間で見えたパターン
+来週の優先事項を3つ、レバレッジ順
+1週間のパターンから見える、自分への気づき
+「動かなかった理由を正直に書く」を仕組みに入れているのが秀逸です。人間は1週間後には自分が何でつまずいたか忘れますが、システムは忘れません。
+四半期レビューは、3ヶ月分の週次レビューを読んで戦略的に振り返るやつ。「四半期レビューに丸1日かかっていたのが、20分の読書に変わった」と cyrilXBT は書いています。
+Christopher Alarcon が月$100でこの6システムを回して 週10時間以上の時短 を実現しているのは、6システムが互いに素材を提供し合う設計だからです。1個入れただけでも効くけれど、6個揃うとシステム間で素材が回り始める。ここが業務OSの臨界点です。</li>
+</ul>
+<ol start="7">
+<li>自動化レイヤー — N8N の3トリガーで全部を繋ぐ
+ここまでの仕組みは、N8N が3種類のトリガーで動かします。
+Cronトリガー — 時間で発火するやつ。朝6時のブリーフィング、日曜夜8時の週次レビュー、毎月1日の月次レポート、25日の請求リマインダー。スケジュールが決まっているものはここ。
+File Watchトリガー — Vault のフォルダ変化で発火するやつ。QUEUE に新しいファイルが置かれたらキュー処理ワークフローが動く。案件フォルダの更新を見て、関連する案件マスタを書き換える。「ユーザーが書いた瞬間にシステムが動く」型はここ。
+Webhookトリガー — 外部イベントで発火するやつ。Stripe で新規入金があったら売上トラッカーが更新される。Google Calendar に新しい予定が入ったら客先ブリーフが起動する。「外で起きたことを Vault に取り込む」型はここ。
+すべての N8N ワークフローは、共通の骨格を持ちます。
+Trigger
+→ CLAUDE.md を読む
+→ 関連する Vault コンテンツを読む
+→ コンパイルしたコンテキストで Claude API を呼ぶ
+→ 結果を Vault に書き出す
+→ 通知を送る（Telegram / Slack / メール）
+→ 操作ログに追記
+肝は、Claude API 呼び出しのシステムコンテキストに、必ず CLAUDE.md の中身を含めること。これがあるとないとで、出力の業務特化度が完全に変わります。
+N8N は2025年に Fortune 500 の25%が採用するレベルまで普及し、日本のノーコード市場も17%/年で伸びている。$5/月の自前ホスティングで無制限のワークフロー実行ができるので、コスト面でもボトルネックになりません。
+n8n 公式のテンプレート集には「Gmail + Google Calendar + 天気API → Claude API → Telegram 朝6時送信」の Morning Brief テンプレが既にあって、コピペで動かせます。</li>
+</ol>
+<h1 id="n8n-workflow概念">n8n workflow（概念）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#n8n-workflow概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>trigger: cron(“0 6 * * *”)  # 朝6時
+nodes:</p>
+<ul>
+<li>read_file: 07 - SYSTEM/CLAUDE.md</li>
+<li>read_folder: 02 - PROJECTS/*/overview.md</li>
+<li>read_folder: 01 - CLIENTS/*/recent.md</li>
+<li>http_request: Claude API（POST messages）
+system_prompt: CLAUDE.md content
+user_prompt: morning brief request</li>
+<li>write_file: 08 - GENERATED/briefings/{date}-morning.md</li>
+<li>telegram_send: brief summary（5行）</li>
+<li>append_file: 07 - SYSTEM/logs/operations.md
+Claus Witt という開発者は、もう一段踏み込んで「Vault 自体が Claude に管理される」状態を作っています。ノートを追加するたび、Claude が MCP 経由でタグを振り、リンクを張り、カテゴリを更新する。運用の心理的負荷ゼロ で Vault が育っていく状態です。</li>
+</ul>
+<ol start="8">
+<li>業務OS が回り始めた朝の風景 — 日本の知識労働者編
+理屈はわかった。じゃあ実際、入れた人の1日はどう変わるのか。
+cyrilXBT は「火曜日の朝」の風景を書いていますが、日本の知識労働者向けに具体化するとこんな感じです。
+5:58 AM — スマホが Telegram の通知で4件、Vault の出力が届きました、と教えてくれる。案件パルス、コンテンツブリーフ、情報ブリーフ、昨夜投げたリサーチの結果。
+6:10 AM — リビングで案件パルスを4分で読む。2案件は順調、1案件は状態更新が滞っている。出社前に1本だけメッセージを打てばいい、と判断できる。
+6:15 AM — コンテンツブリーフを開く。今日の角度3本のうち1本を選んで、QUEUE フォルダの DRAFT ファイルに「これで進めて」と1行書き足す。後はシステムが書く。
+8:45 AM — 9時のクライアント打ち合わせ。8:30に自動で出ていた事前ブリーフを電車内で5分読む。先方が前回最後に話していたこと、こちらが約束したまま動いていない件、今回触れるべき1点が全部書いてある。読まずに行くより、確実に密度が3倍違う。
+日中 — 思いつき、案件の進捗、入金、すべて日次メモに1行ずつ書く。DONE: RECEIVED: などの簡単な記号で書くだけ。整理はシステムが夜にやる。
+4:00 PM — 朝にキューに投げた記事の初稿が GENERATED/drafts に届いている。8分編集してスケジュール投稿。
+10:30 PM — 寝る前にリサーチ依頼を2件 QUEUE に投げる。明日の朝までに処理される。自分は寝る。
+Anthropic の自社調査では、Claude を活用するエンジニアが平均50%の生産性向上を出していて、複雑タスクでは12倍の速度向上が出ています。非同期コミュニケーションも、2025年研究で「リモート環境の生産性向上の羅針盤」と位置付けられました。
+朝の体験がここまで違うのは、業務OSが「自分が動いていない時間」も働いているからです。睡眠が業務時間に変わるのではなく、業務時間が思考に集中できる時間に圧縮される。これが業務OS化のいちばん体感しやすい変化です。</li>
+<li>複利効果 — 6ヶ月後、Vault が「分身」として運転を始める
+業務OSの本当の価値は、入れた週ではなく、半年後に出ます。
+毎日のクライアント記録が事前ブリーフを濃くする。コンテンツのパフォーマンスデータがコンテンツブリーフの精度を上げる。リサーチブリーフが翌週の情報ブリーフの背景知識になる。週次レビューが四半期レビューの素材になる。
+システムが複利で蓄積する。
+cyrilXBT 本人がこう書いています。
+Six months ago my Obsidian vault had 2,000 notes… I have not lost a single idea since.
+半年前は2,000ノートで何も見つからなかった。それ以来、1つのアイデアも失っていない。
+MindStudio の事例では、500ソース・80のCRM連絡先・6ヶ月の日報が Vault に溜まった時点で、10回使うと秘書レベル、20回使うと参謀レベル の AI アシスタントに進化したと報告されています。Vault が「あなた専用の AI」になる。
+McKinsey の白書では、Agentic AI を企業導入した場合の長期生産性向上ポテンシャルが $4.4 trillion（440兆円規模） と試算されています。39%の企業が積極スケール段階に入っている一方で、80%は「成果を感じていない」。差分は導入の戦略性で、その入り口がまさに CLAUDE.md と Vault 業務OS です。
+6ヶ月運用した Vault は、人間社員が数年かけて学ぶレベルの事業文脈の深さを持ちます。
+朝のブリーフィングが、自分の実際のリズムに合わせて微調整される
+リサーチが、過去のリサーチを土台に積み上がる
+コンテンツが、自分の読者にとって何が刺さるかを学習し続ける
+週次レビューが、四半期レビューの精度を上げる
+これは「ツールを使う」とは別の次元の関係です。ツールは使い捨て、システムは育つ。
+そして6ヶ月後、Vault は文字どおり自分の分身として運転を始めます。自分が書いたメモが、自分が決めた判断ルールに沿って、自分が忘れた事実を引っ張り出して、自分の文体で出力を返してくる。メモが代行になる、と書いたのはここのことです。
+Christopher Alarcon は「1回作ったシステムが毎日自動で収益を生成している」と書いていますが、これは6ヶ月のラインを超えた人だけが体感できる景色です。</li>
+<li>今週末から始める実装ロードマップ +
+ここまで読んで「いつから始めるか」が次の問題です。結論は、今週末です。
+理由は2つ。1つ目は、業務OSは入れた瞬間に効くものではなく、入れてから半年後に最大化するから。早く始めたぶんだけ、複利が早く立ち上がる。2つ目は、ノーコード自動化市場が17%/年で拡大していて、業務OSが一般化する局面に入っているから。乗り遅れる前に組んだほうがいい。
+Week 1: 骨を入れる
+CLAUDE.md と Morning Briefing ワークフローだけ作ります。フォルダ構造は最小限（00-INBOX / 02-PROJECTS / 07-SYSTEM / 08-GENERATED / 09-QUEUE）。N8N は無料で立ち上げる。ここまで2〜3時間。
+Week 2-4: 1週間に1システム足す
+Project Operations → Client Intelligence → Content Production の順がおすすめです。法人案件が多い人なら Client を先に。発信が主軸の人なら Content を先に。1システムあたり1〜2時間で組めます。
+Month 2: 残り3システム + N8N の Webhook 連携
+Financial Operations、Research、Performance Review を入れて、Stripe や Google Calendar の Webhook を繋ぐ。ここまでくると業務OSとして完成形。
+Month 2 以降: 構造を磨く
+cyrilXBT の失敗談を反面教師にしましょう。彼は半年前、構造なきまま2,000ノートを溜め込んで「ノート地獄」に陥っていました。構造のない蓄積は負債 です。逆に、Markdown + ローカルストレージという土台を選んだことで、Evernote の衰退で起きた「データ人質状態」も避けられる。ローカル主権 + AI 司書 + 自動化神経系 の3点セットは、長期に効きます。
+McKinsey の調査で「生成AI 導入企業の80%が成果を感じていない」と出ているのは、入れただけで運用設計をしていない企業の話です。Vault 業務OS は、運用設計そのものを言語化する装置でもある。差は半年で出ます。
+まとめ —「メモを溜めるだけ」を卒業する
+業務OSは、メモ管理の進化形ではありません。メモを書く前提が、根本から変わるものです。
+書く目的は「あとで自分が読み返す」ではなく「システムが処理する素材を渡す」になります。読む目的は「思い出す」ではなく「すでに整理されたものを受け取る」になります。
+Karpathy が「LLM as compiler &amp; librarian」と呼んだとき、彼は新しいツールの紹介ではなく、知識労働の組み立て方の転換を宣言していました。cyrilXBT が「Business Operating System」と呼んだとき、彼はそれを個人事業のレベルまで降ろした最初の人です。
+「Vault が事業を運転する時代」は、もうこの数ヶ月のうちに、海外発信界隈では常識になりました。日本で本気で組んでいる人は、まだ多くありません。だからこそ、今週末から始めると、半年後にいちばん効きます。
+「メモを溜めるだけ」を卒業する。これが、Obsidian × Claude × N8N の3層業務OSが約束する到達点です。
+最もハードルが低く、最もリターンが大きい選択肢の1つだと、自分は思います。
+この記事が少しでも参考になった方へ
+@obsidianstudio9 / りゅう@Obsidianガチ勢 では、Obsidian で「第2の脳」を構築するためのナレッジ設計を毎日発信しています👇
+表層ではなく本質にフォーカスした情報を、できるだけ海外の1次情報を当たって日本語化する形でお届けしています。中の人はコンテキスト総量100億字規模で Obsidian を運用中。
+普段の発信内容は
+Obsidian × AI の実践的構築法
+海外の PKM 最新手法
+プラグイン活用と運用Tips
+Karpathy式ナレッジベースのような、設計思想レベルの解説
+「メモを溜めるだけ」で終わらせない。「使えば使うほど賢くなるナレッジシステム」の作り方を、これからもまとめていきます。
+思考と情報を永久にローカル資産化したい方は、ぜひフォローしてチェックしてみてくださいｚ 有益だと思います！
+参考・引用
+cyrilXBT (@cyrilXBT) (2026) <a href="https://x.com/cyrilXBT/status/2054379666316693719" class="external">How to Build an Obsidian Vault That Runs Your Entire Business While You Sleep<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — 本記事の元ネタ・全体構造の出典
+cyrilXBT (@cyrilXBT) (2026) <a href="https://x.com/cyrilXBT/status/2058402610198073445" class="external">Six months ago my Obsidian vault had 2,000 notes…<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Vault 再構成 before-after の証言
+Greg Isenberg (@gregisenberg) (2025-11) <a href="https://x.com/gregisenberg/status/2026036464287412412" class="external">24/7 personal operating system tutorial<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Markdown + Linking + Tool stack の3要素
+Andrej Karpathy (2025-2026) <a href="https://github.com/karpathy" class="external">LLM Knowledge Base concept (GitHub)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — LLM as compiler &amp; librarian の概念出典
+Anthropic (2025) <a href="https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf" class="external">How Anthropic teams use Claude Code (PDF)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — CLAUDE.md による業務憲法化の社内実例
+Noah Vuong (2025) <a href="https://noahvnct.substack.com/p/how-to-build-your-ai-second-brain" class="external">How to Build Your AI Second Brain Using Obsidian + Claude Code<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — 491 Permanent Notes + €20/月で2分ドラフト
+Christopher Alarcon (2025) <a href="https://christopheralarcon.com/blog/ai-stack-for-solo-founders" class="external">Best AI Stack for Solo Founders | Claude Code, n8n, Obsidian<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Solo Founder $100/月スタック
+MindStudio (2025) <a href="https://www.mindstudio.ai/blog/ai-second-brain-obsidian-vault-folder-architecture" class="external">AI Second Brain Architecture: 7 Folders That Make Your Obsidian Vault Actually Intelligent<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — 500ソース + 6ヶ月で AI 解像度上昇
+MindStudio (2025-2026) <a href="https://www.mindstudio.ai/blog/karpathy-llm-knowledge-base-compiler-analogy" class="external">Karpathy’s LLM Knowledge Base Architecture<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Karpathy 概念の整理
+n8n (2025-2026) <a href="https://n8n.io/workflows/4385-ai-powered-calendar-and-meeting-digest-with-gmail-and-gpt-4oclaude-daily-brief/" class="external">AI-powered calendar &amp; meeting digest with Gmail and Claude — daily brief<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Morning Brief 実装テンプレ
+Claus Witt (2025-2026) <a href="https://blog.clauswitt.com/building-a-self-managing-obsidian-vault-with-claude-code-automation/" class="external">Building a Self-Managing Obsidian Vault with Claude Code Automation<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — MCP 自動タグ・リンク生成
+Forte Labs <a href="https://www.buildingasecondbrain.com/" class="external">Building a Second Brain<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Tiago Forte「Second Brain vs Business OS」
+Anthropic <a href="https://code.claude.com/docs/en/best-practices" class="external">Best Practices for Claude Code<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — CLAUDE.md = context
+Obsidian (2025-2026) <a href="https://www.youtube.com/watch?v=x_0FybNDMNc" class="external">Steph Ango Philosophy Interview (YouTube)<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> — Local-First 哲学</li>
+</ol>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>@cyrilXBT 発の「Obsidian × Claude × N8N の3層業務OS」を、日本のソロ事業主・少人数チーム向けに再構成した実装手順記事（約18,000字）。Vault＝記憶層、Claude＝思考層、N8N＝自動実行層という分担で、案件更新・情報探索・経理などの「事業を後退させない仕事」を自動化する。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3層業務OSの構造 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Obsidian（記憶・文脈の正本）× Claude（判断・生成）× N8N（トリガー駆動の自動実行）。「Vaultが事業を運転する」発想で、コピペで動く手順を全文掲載。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>課題設定：raw informationはスケールしない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Karpathyの「生の情報はスケールしない」を引用し、知識労働者が1日4〜6時間を“事業を後退させない仕事”に取られている構造をN8N自動化で解く。</p>
+</div>
+</blockquote>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① corin運用との差分チェックに最適</strong>
+corinは既に「Obsidian×Claude」の2層が完成している。この記事のN8N層（トリガー駆動自動化）は、リモートトリガー/cronでやっている部分の代替・拡張候補。差分だけ拾うのが効率的。</p>
+</div>
+</blockquote>
+<h2 id="️-記事内画像">🖼️ 記事内画像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-記事内画像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_02.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_03.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_04.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_05.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_06.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_07.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_08.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_09.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_11.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_12.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_13.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_14.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2060253389330718720_15.jpg" width="auto" height="auto" alt/></p>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1468" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-1"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#business-operating-system--claudemd" data-for="business-operating-system--claudemd">Business Operating System — CLAUDE.md</a></li><li class="depth-1"><a href="#事業の定義" data-for="事業の定義">事業の定義</a></li><li class="depth-1"><a href="#アクティブクライアント" data-for="アクティブクライアント">アクティブクライアント</a></li><li class="depth-1"><a href="#アクティブ案件" data-for="アクティブ案件">アクティブ案件</a></li><li class="depth-1"><a href="#文体トーン" data-for="文体トーン">文体・トーン</a></li><li class="depth-1"><a href="#収益目標" data-for="収益目標">収益目標</a></li><li class="depth-1"><a href="#投稿運用" data-for="投稿運用">投稿運用</a></li><li class="depth-1"><a href="#運用ルール" data-for="運用ルール">運用ルール</a></li><li class="depth-1"><a href="#今週のフォーカス" data-for="今週のフォーカス">今週のフォーカス</a></li><li class="depth-0"><a href="#n8n-workflow概念" data-for="n8n-workflow概念">n8n workflow（概念）</a></li><li class="depth-1"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-2"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-1"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-1"><a href="#️-記事内画像" data-for="️-記事内画像">🖼️ 記事内画像</a></li><li class="depth-1"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】"/><meta name="twitter:description" content="📺 動画情報 Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】 🎙️ KEITO【AI&amp;WEB ch】 ・ 📅 2026-05-29 ・ ⏱️ 41分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Opus 4.8と同時リリースのDynamic Workflows機能により、1回の指示だけでAIが自動的にサブエージェントを複数生成・並列実行してくれる。ゲーム・LP・動画編集ツール・音声入力アプリまで幅広い複雑タスクに威力を発揮する。 🗺️ 全体像 fl..."/><meta property="og:description" content="📺 動画情報 Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】 🎙️ KEITO【AI&amp;WEB ch】 ・ 📅 2026-05-29 ・ ⏱️ 41分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Opus 4.8と同時リリースのDynamic Workflows機能により、1回の指示だけでAIが自動的にサブエージェントを複数生成・並列実行してくれる。ゲーム・LP・動画編集ツール・音声入力アプリまで幅広い複雑タスクに威力を発揮する。 🗺️ 全体像 fl..."/><meta property="og:image:alt" content="📺 動画情報 Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】 🎙️ KEITO【AI&amp;WEB ch】 ・ 📅 2026-05-29 ・ ⏱️ 41分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Opus 4.8と同時リリースのDynamic Workflows機能により、1回の指示だけでAIが自動的にサブエージェントを複数生成・並列実行してくれる。ゲーム・LP・動画編集ツール・音声入力アプリまで幅広い複雑タスクに威力を発揮する。 🗺️ 全体像 fl..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-Opus-4.8の『Dynamic-Workflows』って機能が素晴らしい！使い方を解説【徹底検証】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-Opus-4.8の『Dynamic-Workflows』って機能が素晴らしい！使い方を解説【徹底検証】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】 🎙️ KEITO【AI&amp;WEB ch】 ・ 📅 2026-05-29 ・ ⏱️ 41分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Opus 4.8と同時リリースのDynamic Workflows機能により、1回の指示だけでAIが自動的にサブエージェントを複数生成・並列実行してくれる。ゲーム・LP・動画編集ツール・音声入力アプリまで幅広い複雑タスクに威力を発揮する。 🗺️ 全体像 fl..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-Opus-4.8の『Dynamic-Workflows』って機能が素晴らしい！使い方を解説【徹底検証】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-293"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-293" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】</a></div></nav><h1 class="article-title">Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-30T15:00:00.000Z">2026年5月31日</time><span>70 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/dynamic-workflows" class="internal tag-link">dynamic-workflows</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Claude Opus 4.8の『Dynamic Workflows』って機能が素晴らしい！使い方を解説【徹底検証】</strong>
+🎙️ KEITO【AI&amp;WEB ch】 ・ 📅 2026-05-29 ・ ⏱️ 41分10秒
+🔗 <a href="https://www.youtube.com/watch?v=xxjb6SWxrZs" class="external">https://www.youtube.com/watch?v=xxjb6SWxrZs<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Claude Opus 4.8と同時リリースのDynamic Workflows機能により、1回の指示だけでAIが自動的にサブエージェントを複数生成・並列実行してくれる。ゲーム・LP・動画編集ツール・音声入力アプリまで幅広い複雑タスクに威力を発揮する。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[ユーザーが1回指示] --> B[Dynamic Workflowsが起動]\n    B --> C[AIがタスクを自動分解]\n    C --> D[複数のサブエージェントを自動生成]\n    D --> E1[サブエージェントA]\n    D --> E2[サブエージェントB]\n    D --> E3[サブエージェントC]\n    E1 --> F[並列バックグラウンド実行]\n    E2 --> F\n    E3 --> F\n    F --> G[結果を集約してユーザーに報告]&quot;">flowchart TD
+    A[ユーザーが1回指示] --> B[Dynamic Workflowsが起動]
+    B --> C[AIがタスクを自動分解]
+    C --> D[複数のサブエージェントを自動生成]
+    D --> E1[サブエージェントA]
+    D --> E2[サブエージェントB]
+    D --> E3[サブエージェントC]
+    E1 --> F[並列バックグラウンド実行]
+    E2 --> F
+    E3 --> F
+    F --> G[結果を集約してユーザーに報告]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Dynamic Workflows とは — 1指示でサブエージェントを自動生成・並列実行 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude Opus 4.8に搭載された新機能。1回の指示を投げるだけで、AIが自動的に必要なサブエージェントを「ポコポコ」生成し、それぞれが独立してバックグラウンドで作業を進めてくれる。従来は人間が「文字起こし担当」「編集担当」「QA担当」などサブエージェントを1つずつ手動設計する必要があったが、Dynamic Workflowsはその設計もAIに任せられる。<code>/workflow</code> コマンドで作成済みワークフローを確認でき、実際に15個ものサブエージェントが自動生成されているケースも確認された。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 起動方法 — <code>/effort</code> コマンドと自然言語の2通り</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude Codeのターミナルで <code>/effort</code> コマンドを入力すると、Low / Medium / High / X-High / Ultra Code の5段階が選べる。<strong>Ultra Code</strong> を選択すると常にDynamic Workflowsが有効になる。もう1つの方法は、プロンプトに「ワークフローで作業して」と自然言語で明示すること。複雑なタスクにはUltra Code、単純タスクはMediumやHighを使い分けるのがコスト的に正解。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. /goal コマンドとの組み合わせが最強 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Dynamic Workflowsと <code>goal</code> コマンドの相性が抜群。<code>/goal</code> を使うと、AIが質問なしで目的に向かって淡々と作業を進め続ける。途中でAIに「これどうする？」と止められずにゴールまで自走してくれるため、複雑なタスクの「中断ロス」がなくなる。特にゲーム制作・LP作成・ディープリサーチなど、多工程が必要なタスクで絶大な効果を発揮する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 適したユースケースと使い分け </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>Dynamic Workflowsが向くタスク</strong>：ディープリサーチ（標準装備）・ゲーム制作・LP作成・動画編集ツール制作・音声入力アプリ開発・家計簿アプリ・拡張機能制作など、複雑で多工程なタスク全般。<strong>従来型エージェントチームが向くタスク</strong>：再現性・安定性が求められる定型業務（同じワークフローを毎回確実に動かしたい場合）。Dynamic Workflowsは「毎回少し変わる複雑タスク」、従来型は「毎回同じ手順の安定タスク」という使い分けが基本。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. コスト管理に注意 — Ultra Codeはトークン消費大 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Opus 4.8はコストが高く、Ultra Code + Dynamic Workflowsを多用すると週間制限の20%を1日で使うペースになる場合も。単純作業にUltra Codeを使わないこと、エフォート設定を案件に合わせて調整することが必須。セキュリティプラグイン（<code>/plugin install security-guidance@claude-plugin-official</code>）も同時にリリースされており、開発時は必ずインストール推奨。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINスキル・ワークフロー設計にDynamic Workflowsを活用する</strong>
+新しいスキル（例：/brand-analysis、/wiki-ingest の改良）を作る時、「ワークフローで実装して」と一言添えるだけでサブエージェント設計をAIに丸投げできる。自分でエージェント構成を考える時間が大幅に削減できる。明日のCORIN開発セッションで試してみる。</p>
+<p><strong>② ディープリサーチには Dynamic Workflows が標準装備</strong>
+kemio抹茶やArmillaryの競合調査など、多角的リサーチが必要な場面で <code>/effort</code> → Ultra Code に切り替えるだけで、複数エージェントが並列で調査してくれる。LP制作など成果物への直接アウトプットも一発で依頼可能。</p>
+<p><strong>③ Ultra Codeはコストが高い — 使い分けのルールを決める</strong>
+単純なファイル編集やメモ追記はMedium/High固定。LP・ゲーム・アプリなど「複雑な成果物制作」のときだけUltra Codeをオンにするルールを設ける。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいこんにちはケイトですこのチャンネルは生成AIの最新情報や活用事例を紹介していますぜひチャンネル登録のほうでお願いいたしますそして今回のテーマはクロードのアンソロピックが最新モデルを発表しましたそちらがですねクロードオーパス4.8になっているんですがこの4.8はですねもちろんものすごく賢くなっているという部分はあるんですけどその他にも同時に新しい機能としてダイナミックワークフローという機能がですね追加されてこれがですね結構いい感じでしたのでいろんな検証パターンで使ってみましたので</p>
+<p><code>00:35</code> その生成結果をですね皆さんに共有していきたいと思いますそしてこのダイナミックワークフローの一番いい使い方みたいのもですねもうすでに出てきてますのでそのあたりもですね一緒に解説していけたらと思ってますはいちなみにこのチャンネルではこんな感じのAIの最新情報や活用事例を紹介してますのでチャンネル登録やおすすめのない方はチャンネル登録のほうをお願いいたしますあとケイトのメルマガとしてですねニュースレターサービスとしてサブスタックもやってますのでぜひですね購読のほどお願いいたしますそれでは本題に入っていきましょうはいということでですね今回はですね</p>
+<p><code>01:07</code> こちらのクロードオーパス4.8のダイナミックワークフローを使って作ったスライド資料でねやっていきたいと思いますクロードダイナミックワークフローズの実演&amp;仕組み解説自律的に計画し並列実行するミトス級AIの衝撃ということでなんかいい感じにね作ってくれましたねはいこれでやっていきたいんですがまずですね新しいモデルがですねクロードに出てきましたというところですねはいクロードオーパス4.8ですねクロードオーパス4.8が新しく追加されましたでですねこのクロードオーパス4.8を使うにはまずねアップデートしないといけないですね</p>
+<p><code>01:44</code> 今これデスクトップアプリのクロードを使ってるんですけどアップデートしてください多分ですね左下にアップデートしてくださいみたいなの出てきてると思いますのでアップデートをするとOpus 4.8を使うことができますそしてですねクロードコードの方ですかねクロードコードの方ターミナルとかで使うクロードコードの方ももう使えるようになってましたその時もですねクロードコードの方もアップデートする必要がありますのでクロードアップデートと入力してこちらエンター押せばですねアップデートすることができます</p>
+<p><code>02:16</code> バージョン2.1.156が今日時点のバージョンになってますねこれでクロードオーパス4.8が使えるようになりますこれまだ4.8になってないって方はですねスラッシュコマンドを入力してモデルって入力してあげればこれはいここのデフォルトが4.8になってますのでこうなってればOKですねその他のソネットとかを使いたい場合はここで選択すればOKですとりあえずデフォルトのモデルがオーパス4.8になってますのでアップデートすれば4.8になりますそしてですねこのオーパス4.8は何が進化したのかと言いますと</p>
+<p><code>02:52</code> こちらベンチマークにはなってるんですけどこんな感じみたいですただこの辺はね僕が語るよりも数字を信じてくださいっていうところですかねコーディングのタスクやターミナルでのエージェントのタスクコンピューターユーズコンピューターを使うコンピューターを操作するっていうところがですね4.7よりパワーアップしましたよとなんか当たり前な感じのことですね5.5と比べてもエージェンティックターミナル以外はスコアが高いという状態ですね要するに性能がねものすごく上がったというところですね僕もですね使ってみたんですけど上がったのかな</p>
+<p><code>03:24</code> あんまり分かんなかったっていうところが正直な話ですかねただ後ほど紹介するダイナミックワークフローってやつは間違いなく便利ですねそれを使ってあらゆるタスクというか複雑なタスクはこなしていった方がいいんだろうなというのは思ったのでそっちの方がね今すぐ上手いことAIエージェントを活用するという時に必要になってくる要素なのかなって思ってますそしてですねこのOPAS 4.8って性能が高くなったっていうところもあるんですけど一番ねSNSとかで注目されている要素は嘘をつかなくなったという意見がですねかなり多いですねここはね僕もなんとなく感じるかなって思いましたね</p>
+<p><code>04:04</code> このAI特有の根拠のないなんていうかもうこうですみたいな決めつけられてしまうみたいなシーンがね結構少なくなったんじゃないかなと思いますね最近でもねあるニュースでさ悩みを相談したらどこどこに連絡するべきですとそうしてくださいみたいな感じでねあたかもそれが絶対的な正解みたいな感じで返答してしまってその当人はその通りに動いたらちょっと大きな事件になってしまったみたいなねシーンがありましたけどそういうのが少なくなってくるような調整をしてるんじゃないかなと個人的には思ってますね</p>
+<p><code>04:38</code> 一般使いではそんな感じの変化になってくるんだろうなと思うんですけどどちらかというとですねプログラムのタスクとかそういう部分でかなりこの辺の嘘をつかなくなったっていうところがですね効いてくるのかなと思いますねここにも書いてありますけど分からないことは分からないと素直に報告し勝手な推測でのコード実行を防ぎますと一般使いでもね分からないことは分からないと言ってくれるようになってるんじゃないかなと思いますこの辺の感覚は少し使ってみればねすぐ感じるところなのかなと思ってますはいというのがですねOPAS 4.8の基本的な進化になってるんですが今回のメインはですね僕はねやっぱりこれダイナミックワークフローってやつ</p>
+<p><code>05:16</code> これがね結構いい感じなんですよこれ何かと言いますと1回の指示を投げるだけで勝手に自動的にサブエージェント各々のタスクごとのAIが生まれてポコポコと生まれてその各々のタスクをしてくれるサブエージェントが各々で作ったワークフローを進めていってくれるという究極進化ですよね今までもサブエージェントっていう単体の機能はありました自分で作ってましたね僕も</p>
+<p><code>05:48</code> 例えば動画編集をするスキルを作った時にそのスキルで必要なサブエージェントってどういうサブエージェントかなっていうのを考えて例えば文字起こしをするサブエージェントと動画カットだけをしていくサブエージェントそして文字起こしの検証をしていく誤字脱字がないかを確認するためのサブエージェントって自分で考えて一つずつサブエージェントを作っていってそれを一つのチームにまとめ上げるためにスキルの方でエージェントチームとして振る舞ってもらうように設計していったりっていう作り方を今まで自分で僕がやってたんですけど</p>
+<p><code>06:25</code> このダイナミックワークフローは一つのタスクをお願いすると例えば動画を編集してってお願いするとそのまんまそれに必要なサブエージェントをまず作ってくれるそしてそのサブエージェントごとのタスクも作っていってくれておのおのでバックグラウンドでおのおので作業をこなしていってくれてそれが終わったら僕に報告をしてくれるっていう流れがですねこれできるようになってるんですよこれはねかなり使えるでしょ使えるというか使い勝手が良くなってんじゃないかなと思いますね結局毎回何かのタスクをお願いする時ってサブエージェントとかも作った上で</p>
+<p><code>07:00</code> 何かに集約させていわゆるエージェントチーム的な感じで集約させて使っていくってことが僕は多かったのでこのダイナミックワークフローってやつを使えばそんなこともうする必要はないとする必要がなくなるのかなと思いますそんな感じのがダイナミックワークフローっていう機能なんですけど先ほど紹介したエージェントチームとの違いはこんな感じですねこの後ですね実際にこのダイナミックワークフローの使い方と検証結果をお話ししていきたいんですけどその便利さを皆さんに伝えていきたいんですけどかといって全てがダイナミックワークフローになってくるみたいな話でもなさそうだなって個人的には思ってますね</p>
+<p><code>07:37</code> 先ほど私が説明した内容からすると一つのタスクをお願いすれば自動的にサブエージェントを作ってくれてサブエージェントごとのワークフローも作ってくれるっていう流れになるのでそのままやりたいことだけ指示すればエージェントチームと同じような流れで作業をお願いすることができるっていうものになってるんですけどエージェントチームの場合は自分で細かく調整して自分が必要だと思ったところだけのワークフローをですね組み立てるっていうことができるのでやっぱりね最終的には本当に再現性が高いワークフローを作りたいっていう場合は</p>
+<p><code>08:12</code> 従来型の方がですね良かったりするんですよね僕の場合は先ほどの例で言うと動画編集をするスキルを作っててその中にエージェントチームを入れてるんですけどもうそれでね安定してるんですよね安定して動画の編集を行ってくれるのでその安定感っていうのはなくしたくないですよね一方でこのダイナミックワークフローで動画の編集をお願いって言っても何回かやれば成功すると思うんですけどもう一発で成功してほしい安定感が欲しいみたいな部分はあると思うのでそういう場合はやっぱり従来型の方がいいのかなって思ってますのでこの辺りは使い分けなのかなって思ってますね</p>
+<p><code>08:47</code> 分かりやすく説明するとこれ後でやりますけどディープリサーチ情報収集ですね情報収集に関してはダイナミックワークフローを使うのが最も適していると思いますねそのねディープリサーチに関してはこのダイナミックワークフローが標準で搭載されているみたいですのでその使い方がめちゃくちゃねいいと思いますねその他にもいくつかですねこのダイナミックワークフローが適している使い方みたいのはあると思いますのでその辺は皆さんの感覚でね使い分けていけばいいのかなって思ってますはいそしたらですね次に実際にこのダイナミックワークフローの使い方と検証をですねしていきたいんですけど使い方はですね非常に簡単でして</p>
+<p><code>09:24</code> スラッシュエフォートっていうねコマンドがありますクロードコードにはスラッシュエフォートっていうコマンドがあるのでそこでウルトラコードってやつにすればダイナミックワークフローを標準で使ってくれるようになりますはいでは実際にやってみたいと思います真ん中にあるのがターミナルですねターミナルなんですけどクロードコードを立ち上げます立ち上げてもらってスラッシュエフォートとね入力してあげるとこんな感じの画面が出てきますのでこれ何かと言いますとAIが考える時間の調整ですねローだと一番短い</p>
+<p><code>09:58</code> なので回答速度はめちゃくちゃ速くなりますねただ考える時間推論する時間が短くなりますとミディアムハイといくほどどんどん深く考えてくれるようになります一般使いでいくと私はXハイを使ってますね常にXハイを使っているというところですねただ今回のダイナミックエフォートをフル活用していきたいって場合はウルトラコードってやつをですね使うとですね標準でワークフローがつきますそしてこのUIなんかすごそうですよね</p>
+<p><code>10:29</code> なんかめちゃくちゃすごそうなUIでウルトラコードを選択することができますこの状態にするとダイナミックワークフローをですね常に起動した状態になりますもう一つ方法がありましてこのエフォートの設定をウルトラコードじゃなくて全然他のねX-HIGHとかのエフォートの設定にしてもダイナミックワークフローを使う方法はありましてそれどういう方法かと言いますと自然言語でワークフローで作業をしてとこのワークフローっていうワードをですね入れてあげてそれを言及してあげれば</p>
+<p><code>11:04</code> ワークフローを作った上で作業をしてくれるみたいですなのでこの2つのパターンでダイナミックワークフローを起動することができますということでですね今回はもうフルフルでいきたいのでこのエフォートの設定をウルトラコードにしてやっていきたいとおもいます でここからですね実際の検証をしていきたいんですけどやっぱりねこれわかりやすい検証はですね ゲームですかねゲームを作ってみるっていうところだと思いますので結構思い出すくなりそうですが</p>
+<p><code>11:35</code> 今から指示をしていきたいと思いますそしてこのままねダイナミックエフォートを使うときの最強のコツをですね一つ紹介したいんですけどこのダイナミックエフォートってAIが自動的にタスクの整理をしてくれてAIエージェントを作ってくれてワークフローの構築までしてくれるのでほぼほぼ人間がやることはないんですよだから特にもう質問をしてほしくないです質問をしてほしくなくてそのまんま直行でゴールに向かって</p>
+<p><code>12:10</code> 生成物に向かって直行してってほしいんですよねもうAIたちで自分たちで考えてくれっていうことをお願いしたいのでそんな時に使えるコマンドがですねありましてそれがゴールコマンドってやつですねこのゴールコマンドを使うことによってもう自分が伝えた目的に向かってもう自動的にAIが作業をずっと淡々としてくれるようになりますこのゴールコマンドとダイナミックワークフローの相性がですねもうめちゃくちゃいいと思いますのでどう考えてもいいので</p>
+<p><code>12:42</code> このゴールコマンドと一緒に使っていくっていうのがおすすめですそれがね一つの使い方のコツになっているのかなと思ってますではですねじゃあ実際に指示を出していきたいんですけどゲームを作っていきたいと思います音声入力で指示していきますベクトルスクロールアクションゲームの最高傑作を作ってくださいなるべくリアルなものにするためにGPTイメージ2で画像生成をしてプレイアブルキャラクター、敵、フィールド、アイテム、武器など必要なアセットをすべて作成してからベクトルスクロールアクションゲームの実装をしてください</p>
+<p><code>13:17</code> すぐにプレイできるようにしたいので完成したらデプロイまで進めていってくださいお願いしますはいといった形で指示をしていきましょうこれでもう完成するはずですで今回GPTイメージ2で画像生成してって言ってますけど僕のクロードコードの中にはOpenAIのAPIキーをですねセットしてますどっかに入れてるのでそれをうまく見つけ出してくれてやってくれると思いますのでもうこれで送信していきたいと思いますということでこれめちゃくちゃ時間かかりますので20分くらいかかると思ってますので</p>
+<p><code>13:53</code> これこのまま待っていきたいと思うんですがこのねワークフローエージェントはですね一つ面白いところを見ることができまして実際に作られたワークフローダイナミックワークフローのサブエージェントたちを覗き見することがですねこれできるんですよその映像をですね見せてから別の検証結果の紹介をですねしていきたいと思いますはいということでとりあえずまず今はですねオープンAIのAPIキーを探してますねどこにあるのか探してますねそこもどこにあるか伝えとけばよかったですね</p>
+<p><code>14:27</code> 見つけてくれましたねOKですOKですこれね今気づいたんですけどこの画像生成のアセットを探すとか画像生成をするみたいなところもサブエージェントでこなしてほしかったですねなんでこれ追加で指示しちゃいますか追加の指示もこれできますので画像生成のアセットを作るとか画像生成のスキルを探すとかもその辺も全部サブエージェントに任せちゃっていいからねだから最初にワークフローを構築していった方がいいんじゃない?みたいな形でちょっとね途中経過ですけど、よくやりを入れていきたいと思います。</p>
+<p><code>15:05</code> はい、ということでですね、まだワークフローは作られてないんですけど、最初にですね、アセット生成基盤の準備とスモークテストということで、GPT Image 2の実際構築するにあたって、これができるのかをテストしておきますということで、かなり気使える感じで進めていってくれてますね。確かにそうですねこれができないと話にならないみたいなところをまず潰しにかかってくれてますねこれがかなりねグッドなポイントなんじゃないかなと思いますはいということでですね今いろいろ作業をしてくれてるみたいで</p>
+<p><code>15:38</code> ワークフローエージェントもですね作ってくれたみたいですのでスラッシュワークフローで確認してみましたそしたらネオンアサルトQAっていうのとアセットファンドリーっていう2つのワークフローかなワークフローを作ってくれててその中にこう見てみるとこんだけ6つのエージェントを作ってくれてますレビュー用のエージェントですかねこっちはでもう1個の方が15個のエージェントを作ってくれてますねはいこんな感じで15個のエージェントを作ってくれてて</p>
+<p><code>16:10</code> もう1つ1つの作業は終わってるっぽいですね終わってるっぽくて見てみるとこんな感じになんかやり取りがされてたというですねはい1つ1つのエージェントでの作業がねここで行われててそれが全て集約されてこれはもう完成したのかなまだですねまだっぽいですねまだですね裏側で作業が行われてるみたいですなのでもうしばらく待っていきたいと思いますはいではですね完成したみたいですのでこちらですね実際にプレイしてみましょう</p>
+<p><code>16:44</code> 今回ローカル上でデプロイしました完成したのがこちらですはいタイトル画面はね結構いい感じですねネオンアサルトっていうことでシューティングゲームになったのかなはいじゃあスタートしていきましょうスペースでジャンプねはいはいはいはいやばいやばいやばい何何何あOKOKはいはいはいはいちょちょちょ分かんない分かんないあこれダッシュがあるんですねでジャンプであOKですOKですはいOKですOKですOKですでこれボスも作ってるみたいですのであ回復アイテムもあるボスまでね行きたいと思います</p>
+<p><code>17:16</code> 頑張ってなになに難しい見えない穴がある結構難しいですねわかんないわかんないOKOKすごいねこれクオリティめちゃくちゃ高いなんかアイテムとかさしっかりあってちゃんとこの当たってる判定がすごく正確な気がしますねこれどのくらい難しいのかわかんないですけどあ、死んだなるほどめちゃくちゃ難しいんですけどどうしよう</p>
+<p><code>17:51</code> ボスまで行きたいなちょっとねこれ操作慣れないとさ難しいよここで倒すはいOKOKOKやばい体力が左上に体力があるOKでこれねうまいことOKOKOKOKボタン配置が難しいパソコンのゲームに慣れてないんで</p>
+<p><code>18:23</code> はいはいOKでやばいやばいやばい死ぬってやばいやばいやばいやばい回復アイテムが欲しいなOKOKOK回復アイテムがねもうそろそろ来ないとさ死んでしまうんですけどどうしようあいつに当たらずに倒したいOKあ何今のCボタンで必殺技</p>
+<p><code>18:57</code> 必殺技みたいのがありましたねこれなんか穴がありそうだなこれなんか落ちるとかもあるんですよねジャンプしていきたいと思うあ回復アイテムがあるんであれ取りたいですねOK回復したうわーめちゃくちゃ敵いるやばい若足よしよしよしよしよしよしこいつはなんか何もしてこないこのなんかこのアイテムなんだこれよくわかんないなスコアかなあーめちゃくちゃ回復があるから取りたいなジャンプで一気にいって</p>
+<p><code>19:37</code> OKOKですね全回復したっぽいですね必殺技ゲージも溜まってるからこれボスだこれボスこれボスなんで必殺技やってのちょい分かんない分かんない分かんないもう連打連打連打連打でいいかななるほどはいこんな感じになりましたねいやすごいなこれめちゃくちゃクオリティ高くないですかキャラクターも本格的だし敵キャラクターも本格的でしたね</p>
+<p><code>20:10</code> ボスもいてっていうアイテムとかもねこれまあ多分画像生成からやってもらってるからここまでのクオリティができてるんだと思いますねで司令とこの背景と奥行きみたいなところもさこれよくできてますねこのぐらいのクオリティのものが本当にあの1回の指示だけで完成しましたっていうところですねこれでオーパス4.8のダイナミックワークフローの凄さはね十分伝わったんじゃないかなって思いますねはいちなみにさっきのゲームは動画がアップロードされた後に時間があればオンライン上にもアップロードしてみたいと思いますので</p>
+<p><code>20:46</code> ぜひですね皆さん遊んでみてください概要欄に掲載しておきますということでですね他にもいくつかの検証をですね同時並行で進めてましたのでいろいろ作ってみたものをですね紹介していきたいと思いますはいということでまず一つ目ですね一つ目はですねこちらもですねワークフローエージェントを使ってXにあった指示をですねそのままコピペでやってみたやつですかね車のレースゲームを作ってくださいみたいなやつですかねF1のレースゲームを作ってくださいとはい行ってみたやつです</p>
+<p><code>21:20</code> はいその結果こうなりましたすごいという感じですねF1ゲームですね</p>
+<p><code>21:56</code> ファミコンみたいですねこんな感じのゲームも一発のシリーズですね一発でできましたはいでは他にも検証してみたやつはですねまずこんな感じですね今回検証したダイナミックワークフローの検証結果をまとめたウェブサイトをざっくりと作ってもらいましたこんな感じでたくさんのプロジェクトを作りましたということでこういうLPとかもですねかなり綺麗に作ってくれますねその中でまず一つ目作ったのはOPAS 4.8を説明するためのウェブスライド資料ですねはいこんな感じのWebスライド資料を作ってみましたかなりいい感じですねダイナミックワークフローということで</p>
+<p><code>22:38</code> アニメーションとかもいい感じについてこういうWebのHTMLの資料作成って意外といいかもしれないですね動きとかアニメーションとかもきれいについてすごくいいんじゃないかなって思いましたこのあたりは4.7とかでも結構うまくできてた部分ではあるのでそんなに変化はないと思いますけど4.8もいい感じにできますというところですね次ですねリズムスイカ音ゲームスイカゲームのリズムゲーム版ですねこれねやってみたら結構面白かったんですよ</p>
+<p><code>23:13</code> ちょっとやってみますはいっていうのが基本的な流れなんですけどこれね失敗するとあのぷよぷよみたいにね邪魔なやつが出てくるんですよ</p>
+<p><code>23:45</code> そういうルールもねつけてみましたあこんな感じでほら邪魔なやつが出てくるんですよねはいこんな感じでこれ面白いなと思いましたねこれ待って普通に面白いんですけど</p>
+<p><code>24:21</code> このぷよぷよの邪魔者が入ってくるっていうゲーム性がまたいいかもしれないですねっていう感じですねいやこれは面白い面白いすごく面白いですねはいこんな感じのゲームもですねできました一発のCGでねできましたというところですそして次ですね次のやつはですねサブスタックっていうですねメルマガ最新サービスをね最近私始めてるんですけどこの中でいろんなねメルマガAI活用とかSNSに関するようなこととかね発信してるんですけどここのですねダッシュボードってすごい見づらいんですよね</p>
+<p><code>25:00</code> そのダッシュボードを見やすくするための拡張機能をですね作ってみました実際にダッシュボードはですねこんな感じになってるんですけど見づらいのでここに拡張機能を作ってみたものを入れてみたいと思います拡張機能作りみたいのもどういう風になるのかが気になるっていうところですねでは導入してみましたのでアナリティクスレポートっていうのを見てみたいと思いますそしたらなるほどねこんな感じで見れるというねいいですね今日リアルタイムのクリック率とか開封率みたいのを見ることができるみたいなものがですね</p>
+<p><code>25:37</code> 簡単に作ることができましたねなるほどこれCSVにエクスポートすることもできるとこういうのができるんですねいいですねこんなのもですね簡単に作ることができました1回の指示で実用性高いものをですね作ることができましたはいじゃあ次はですねこちらAI SVG StudioっていうところでSVGの画像を作ってくれるってやつですねでAPIキーでクロードをですねセットすれば使えるという想定になりますなのでここにAPIキーを入力していきたいと思いますはいということで入力して保存しました</p>
+<p><code>26:09</code> これで使うことができるみたいです例えばロケットみたいな感じに入力して色も決めて赤色オレンジ色にして生成ボタンを押すと今作ってる風のUIが出てきてこんな感じになるんですねすごいねこれめちゃくちゃいいじゃんこれをダウンロードすることができるとダウンロードすることができて実際にパソコン上で確認することができますとこれ超いいじゃんSVGジェネレーターですね</p>
+<p><code>26:41</code> こんなのが出来上がりましたもっと複雑なものカレーライスとどうなるか分かんないですけどカレーライスシンプルすぎるなこれ単色っていう風にしてるので多色にしてみるとどうなるかなこんな感じでちょっと時間がかかりますねこっちの場合はおおだいぶいいじゃんめちゃくちゃリアル</p>
+<p><code>27:14</code> すごいですね熱帯魚作ってみましょうか色お任せにすればよかったな熱帯魚なるほどねなんか微妙だけどまあこんなもんか笑ってる芝犬笑ってる芝犬を作ってみましょうなるほどまあまあまあいいんじゃないかなと思いますねでこれOpus 4.8を使ってますのでOpus 4.8のSVGの描画力っていうのはこんな雰囲気なのかなと思いますはいじゃあ次ですね</p>
+<p><code>27:48</code> 次Macの音声入力アプリを作ってみましたOpus 4.8のダイナミックワークフローを活用して作ってみましたこれをね自分のパソコン上にインストールしてみたいと思いますはいでは自作したMacの音声入力アプリをですねインストールしました自作したアプリのインストールの仕方がよくわからなくてクロードコードをねインストールさせましたはいそしたらですね小さくですねここにマイクアイコンがあるんですけどここでね使えるみたいですねはいこんな感じでおーなんかすごいぞ</p>
+<p><code>28:20</code> あ、あ、あ、はいこんにちはあ、すごいこんな感じで音声入力がしっかりとできてますねなんか若干遅いな若干遅いけどこんな感じでできるんですね音声入力ができるとあとはコントロールコマンドスペースで立ち上げることができるとこんな感じで立ち上げて音声入力をすることができるんですねできたらそのまんまテキストエディターへ入力するっていうこともできるのかなその辺はなんかもう手動でやっていかないといけないのか</p>
+<p><code>29:03</code> こういう風になるほどですね成形モードビジネスメールモードカジュアルモードとか色々と作ってくれてますねただですねちょっと僕がアプリの作り方がわからなすぎてこれ以上あんまりやりたくないですねただある程度ねこのMac用のアプリの作成を勉強しているある程度勉強したって方はですねこれクロードオーパスで僕でもこんなものが作れてしまうわけなんで少し勉強すればもっと本格的なものができるんじゃないかなって思いましたというところですね</p>
+<p><code>29:35</code> ちょっと個人的にもこれちょっと勉強したいですね今後もうちょっと勉強して自分のオリジナルアプリとか作っていこうかなって思いましたはいじゃあ次ですね次はふわっと家計簿ってやつ家計簿アプリを作ってくださいと言ったらこんな感じでねできましたねすごいダッシュボードとかもかなり綺麗にできますねうんいいですねしかもねなんか面白い機能を追加してくれって言ったらさ面白くてまずこれカメラでOCRで読み込むということもできますと手動入力もできます面白い機能として</p>
+<p><code>30:09</code> こんな感じでご褒美リストということで今月ご褒美として21万6000円使いまーすっていうねこんな感じのフラペチーノが332回分買いまーすと気になってたスニーカーが買いまーすみたいなねこんな感じの欲しいものリストを追加してそこの達成度みたいのをですね測るみたいのがこうね追加されましたねこの機能めちゃくちゃいいじゃんと思いましたねはいあとはチャレンジモードということで何かを我慢する</p>
+<p><code>30:40</code> 外食ゼロチャレンジとかでポイントがあったりとか1日3000円生活みたいなねポイントがついてくみたいなのもねつけてくれましたねこの辺りのなんか配慮というかアイデアみたいのはかなりいいなと思いましたね特に指示とかしてないんですけどアイデア力みたいなのが強いなと思いましたただデザイン面は微妙ですよねこの絵文字を使ってくるっていうのがすごくAIっぽいというかこういうのをもうちょっと調整したいですよねこの辺りプロンプトでうまいことやれると思うので全然問題ないんですけど</p>
+<p><code>31:15</code> とりあえずアイデア力みたいなのがすごくいいなと思いましたね素晴らしいですねこれ家計簿アプリとかも自分で全然作れちゃうんじゃないかなと思いましたねこの辺もいつかスマホアプリとかで作ってみようかなって思いましたはいじゃあ次ですね次動画編集アプリこれいけんのかないけたらすごいけどねとりあえず作れましたっていうところで適当に動画アップロードしてみますかじゃあさっきのシーンですねSVGのやつを検証してるシーンのこの動画ですね結構噛んじゃったり生成時間の余白があったりっていうのがありますので</p>
+<p><code>31:52</code> この辺をねうまいことカットしてくれれば成功ですがまず無音部分のカットっていうのがこんな感じでねあるんですねフィラーバードも削除してくれるとかありますテロップもつけてくれるとなんてこったテロップ本当につけてくれるのフォントサイズも調整できますと本当にこれできたらめちゃくちゃいいですけどねじゃあ自動編集を実行してみましょうまず音声抽出をしてくれますウィスパーモデルを読み込み中</p>
+<p><code>32:25</code> これAPIキーとか特に設定してないけど大丈夫なのかなどっかで設定するみたいのってどこにもなさそうな感じがしたんですけど特にね何も設定してないですね今のところはいということでできたみたいですこれめちゃくちゃ時間かかりましたね20分くらいかかりましたはいということでできたみたいですので再生してみましょうか元の尺262秒編集後88秒になってます削減率66%テロップ42個 効果音57個ちょっとなんかこれ不安だなこれも失敗しても流しますね 再生します</p>
+<p><code>33:06</code> 今作ってる風のUIが出てきてこんな感じになるんですね赤色こんな感じになるんですねすごいねこれめちゃくちゃいいじゃんこれをダウンロードすることができるとダウンロードすることができて実際にパソコン上で確認することができますとこれ超いいじゃんSVGジェネレーターですねこんなのが出来上がりましたもっと複雑なものもっと複雑なものがいいカレーライスどうなるかわかんないですけどカレーライス</p>
+<p><code>33:37</code> シンプルすぎるなこれ単色っていう風にしてるので多色にしてみるとどうなるかなちょっと時間がかかりますねこっちのおおだいぶいいじゃんめちゃくちゃいいなすごいですね熱帯魚色お任せにちょっと待ってまあまあまあまあテロップ入れるのはねギリ許そう効率的にはなってると思いますねただ何だろう効果音効果音邪魔すぎるな効果音がいらないな</p>
+<p><code>34:11</code> 効果音なしの方がいいですねこれあとテロップはいいとしてももうちょっと小刻みに行きたいですよねあと注目度が高い部分のテロップの付け方とかその辺はもうちょっと調整が必要かなと思いましたねただ1回の指示だけでここまでのものができる動画の編集をすることができるツールを作ることができるならばあとはね繰り返し修正してねブラッシュアップしていけばいいだけですのでいいんじゃないですかね僕はですねこれまあいけるだろうなと思ったので今のこの最初のパターンからどんどん修正していって</p>
+<p><code>34:48</code> 動画編集の効率化ツールをねこれ作ってみようかなって思いましたというところです皆さんもね動画編集やってる方はこれ一回作ってもらえれば効率化するんじゃないかなって思いますはいそしたらですね次ですね次はリサーチですねリサーチがですねこのダイナミックワークフローってすごく得意なんですよ今回は量子コンピューター株のリサーチをしてもらった結果をですねスライド資料にまとめてもらいましたと今のこのイオンQってやつこれがねめちゃくちゃ上がってるんですよ僕は50%ぐらい上がりましたかねめちゃくちゃ上がってるんですよ</p>
+<p><code>35:22</code> あとこのリゲッティってやつとかねあとこのD-Waveってやつこの3つがねすごい有名なんですけどこの辺りのことを調べてくれとディープリサーチをしてもらった上でwebのスライド資料にしてもらったってやつですねでこれ見たところで分かる人は分かる分かんない人は分かんないという話だと思うんですけどこのリサーチの仕方とかがですね今回のダイナミックワークフローはすごく得意でなぜかと言いますとこの動画の冒頭の方でもさらっと言いましたけどクロードコードにですねディープリサーチっていうですね</p>
+<p><code>35:55</code> 機能があるんですよディープリサーチっていう機能がありますこれがですねダイナミックワークフローを使ったディープリサーチになってるんですよなのでこのディープリサーチコマンドはですね標準でダイナミックワークフローが動きますいろんなエージェントがいろんな場所でいろんな視点でリサーチをしてからそれを最後にまとめたものを出してくれるっていう流れになってるってことですねディープリサーチは非常にねこのダイナミックワークフローと相性がいい使い方になってるんじゃないかなって思いますはいそしたら次ですね</p>
+<p><code>36:27</code> 次はLP作成ですねクロードコード代行サービスLPっていうのを作ってもらいました日本人が見やすい形で遊び心もあるようなウェブサイトにしてくれと言ったらこうなりましたね遊び心はあるな確かになんていうんだろうこれこんなのもありますねまあまあ綺麗にはできてるんですけどやっぱりねどちらかというとプロンプトの方が大事っていうのは変わらずありますねAIっぽさっていうのはどうしてもね</p>
+<p><code>37:00</code> 出てくるので安定感みたいなところはねすごく増したなっていう風に個人的には思ってますあとはスキルとかをですねうまくうまいこと作ってあとクロードのさクロードデザインってやつそれで自分のブランドアセットみたいのを作っちゃってからLPとか作らせればもうちょっとねマシなものになりそうですねいいですねそしたら次ですね次はダイナミックワークフローポータルっていうのはこれですねこれのことですねたくさんのサンプル事例をですね自分で作ったんですけど</p>
+<p><code>37:35</code> それをまとめるためのウェブサイトを作ってくれって言ったんですよねそしたらこんな感じでまとめてくれたので今回はこれを使っていろいろ紹介させていただきましたっていうところですねというのがですねサンプルの事例になりますそしてですね最後にこれ全然また関係ないんですけど同時にリリースされたのかなちょっと前にリリースされたプラグインがありましてこれですねセキュリティ用のプラグインですねクロードコード標準でセキュリティプラグインをですね出してくれたみたいでこれですね皆さん絶対インストールした方がいいですねこれのインストールの仕方をですね</p>
+<p><code>38:07</code> ちょっと紹介したいと思いますインストールの仕方はクロードをまず立ち上げてくださいクロードをですね立ち上げてはいこちらですねこちらスラッシュプラグインインストールセキュリティガイダンスアットクロード-プラグイン-オフィシャルこのコードをですねそのままペタッと貼り付ければインストールすることができるしもしくはスラッシュプラグインからそれを検索してもらうという形ですかねこれでですね開発とかの脆弱性とかを検知修正をしてくれるようになるみたいですので必須のプラグインになるんじゃないかなと思ってます</p>
+<p><code>38:41</code> そしてですね最後に今回のオーパス4.8のコストと不適切な使い方みたいな部分をですね最後に話していきたいんですけどまずねコスト部分ですねコスト部分はねめちゃくちゃ高いですねめちゃくちゃ高いので注意してください僕はですねマックスプランの一番高いやつに課金してるのでまあね対してまだまだ大丈夫ですけど今日1日で20%ぐらい使っちゃいましたねこの1週間</p>
+<p><code>39:13</code> 週間制限で20%使っちゃったのでこのペースで使っていくと1週間も持たないなっていう感じですねなので開発業務とかでもあんまりねOPAS 4.8を使って今回のダイナミックワークフローを多用してると結構トークン数使っちゃうんだろうなという感覚ですねなのでこのエフォートでミディアムとかハイとかこのエフォートの設定をですね調整していくっていうのは必要かなと思いましたそしてですね単純作業ですね単純作業はダイナミックワークフローを使う必要ありませんので</p>
+<p><code>39:49</code> そこはねかなり注意が必要ですよねクロードコード上で単純作業を行うときにわざわざウルトラコードのモードにしない方がいいと思いますねウルトラコードのモードにしておくと単純作業でも毎回ダイナミックワークフローが動いてしまうのでそこはね注意が必要だと思いますこの辺ね気をつけながら複雑なタスクはですね今回紹介したダイナミックワークフローを活用していけばいいのかなって思いましたはいということで今回はですねOPAS 4.8そして新しい機能としてダイナミックワークフローズをね紹介させていただきました</p>
+<p><code>40:22</code> ということで以上になりますこの動画がいいと思いましたらグッドボタンとチャンネル登録ぜひお願いいたしますそしてお仕事のご依頼は私のYouTubeチャンネルのこちらのお問い合わせをお見からお願いいたします全国でセミナーや研修AIスキルやワークフローの構築などをやらせてもらってます興味がある方は遠慮なくお問い合わせくださいそしてメルマガも最近始めましたのでぜひですね購読のほどお願いいたしますメルマガ内ではより細かいAI活用やみんなのAI活用をまとめたりあとはSNSとかYouTubeの話とかをねさせてもらってます興味がある方は購読ボタンから購読お願いいたします</p>
+<p><code>40:56</code> ということで以上になります最後までありがとうございましたご視聴ありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）— Dynamic WorkflowsはClaude Codeの /effort Ultra Codeで起動</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote）— サブエージェントの自動生成・並列実行の仕組み</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）— 動的ワークフロー構築・エージェントチームとの使い分け</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote）— 複雑タスクの自動化・1指示でのフルスタック開発</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote）— Anthropicのマネージドエージェント機能との関連</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-133" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

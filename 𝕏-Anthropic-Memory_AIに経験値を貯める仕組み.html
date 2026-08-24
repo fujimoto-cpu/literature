@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 Anthropic Memory_AIに経験値を貯める仕組み</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 Anthropic Memory_AIに経験値を貯める仕組み"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 Anthropic Memory_AIに経験値を貯める仕組み"/><meta name="twitter:description" content="𝕏 投稿情報 おさぼり @1osabori · 📅 2026-05-16 🔗 元の投稿（12つ目） 🧵 スレッド冒頭 📝 全17ツイート（冒頭+前提+1〜17） 🎬 添付動画（Anthropic公式発表のハイライト） 📝 投稿内容 🧵 スレッド冒頭 Anthropic公式が「AIに経験値を貯めて進化させる方法」暴露してて、普通に革命起きてるんやがwww もはや英語圏のClaude Code勢だけ先に別ゲー始まってるし、今までのAIとはレベル違うで… 日本語でまとめたから時間あるとき読んで⤵︎ 数ヶ月後一気に広がりそうやから、先に知りたい人はブクマ推奨 【まず前提の用語だけ押さ..."/><meta property="og:description" content="𝕏 投稿情報 おさぼり @1osabori · 📅 2026-05-16 🔗 元の投稿（12つ目） 🧵 スレッド冒頭 📝 全17ツイート（冒頭+前提+1〜17） 🎬 添付動画（Anthropic公式発表のハイライト） 📝 投稿内容 🧵 スレッド冒頭 Anthropic公式が「AIに経験値を貯めて進化させる方法」暴露してて、普通に革命起きてるんやがwww もはや英語圏のClaude Code勢だけ先に別ゲー始まってるし、今までのAIとはレベル違うで… 日本語でまとめたから時間あるとき読んで⤵︎ 数ヶ月後一気に広がりそうやから、先に知りたい人はブクマ推奨 【まず前提の用語だけ押さ..."/><meta property="og:image:alt" content="𝕏 投稿情報 おさぼり @1osabori · 📅 2026-05-16 🔗 元の投稿（12つ目） 🧵 スレッド冒頭 📝 全17ツイート（冒頭+前提+1〜17） 🎬 添付動画（Anthropic公式発表のハイライト） 📝 投稿内容 🧵 スレッド冒頭 Anthropic公式が「AIに経験値を貯めて進化させる方法」暴露してて、普通に革命起きてるんやがwww もはや英語圏のClaude Code勢だけ先に別ゲー始まってるし、今までのAIとはレベル違うで… 日本語でまとめたから時間あるとき読んで⤵︎ 数ヶ月後一気に広がりそうやから、先に知りたい人はブクマ推奨 【まず前提の用語だけ押さ..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Anthropic-Memory_AIに経験値を貯める仕組み"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Anthropic-Memory_AIに経験値を貯める仕組み"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 おさぼり @1osabori · 📅 2026-05-16 🔗 元の投稿（12つ目） 🧵 スレッド冒頭 📝 全17ツイート（冒頭+前提+1〜17） 🎬 添付動画（Anthropic公式発表のハイライト） 📝 投稿内容 🧵 スレッド冒頭 Anthropic公式が「AIに経験値を貯めて進化させる方法」暴露してて、普通に革命起きてるんやがwww もはや英語圏のClaude Code勢だけ先に別ゲー始まってるし、今までのAIとはレベル違うで… 日本語でまとめたから時間あるとき読んで⤵︎ 数ヶ月後一気に広がりそうやから、先に知りたい人はブクマ推奨 【まず前提の用語だけ押さ..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-Anthropic-Memory_AIに経験値を貯める仕組み"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3027"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3027" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 Anthropic Memory_AIに経験値を貯める仕組み</a></div></nav><h1 class="article-title">𝕏 Anthropic Memory_AIに経験値を貯める仕組み</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-15T15:00:00.000Z">2026年5月16日</time><span>22 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/anthropic" class="internal tag-link">anthropic</a></li><li><a href="./tags/memory" class="internal tag-link">memory</a></li><li><a href="./tags/dreaming" class="internal tag-link">dreaming</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/agent-sdk" class="internal tag-link">agent-sdk</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>おさぼり @1osabori</strong> · 📅 2026-05-16
+🔗 <a href="https://x.com/1osabori/status/2055573354699248001" class="external">元の投稿（12つ目）<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+🧵 <a href="https://x.com/1osabori/status/2055573313859322019" class="external">スレッド冒頭<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📝 全17ツイート（冒頭+前提+1〜17）</p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-posts/1osabori_2055573313859322019_thumb.jpg" width="auto" height="auto" alt/></p>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🎬 添付動画（Anthropic公式発表のハイライト） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><video src="./99_🖼️-picture/x-posts/1osabori_2055573313859322019.mp4" controls></video></p>
+</div>
+</blockquote>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-スレッド冒頭">🧵 スレッド冒頭<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-スレッド冒頭" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Anthropic公式が「AIに経験値を貯めて進化させる方法」暴露してて、普通に革命起きてるんやがwww</p>
+<p>もはや英語圏の<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>勢だけ先に別ゲー始まってるし、今までのAIとはレベル違うで…</p>
+<p>日本語でまとめたから時間あるとき読んで⤵︎
+数ヶ月後一気に広がりそうやから、先に知りたい人はブクマ推奨</p>
+<hr/>
+<h3 id="まず前提の用語だけ押さえて">【まず前提の用語だけ押さえて】<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#まず前提の用語だけ押さえて" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>このスレッドに出てくる言葉、これだけ知ってればOK↓</p>
+<ul>
+<li><strong>Memory</strong> ＝AIが作業中に学んだことを保存して次回以降に使う仕組み</li>
+<li><strong>Managed Agents API</strong> ＝Anthropicが提供する、本番用エージェントを動かすAPI</li>
+<li><strong>Dreaming</strong> ＝複数エージェントの作業ログを見て、共通の失敗や成功パターンを自動で記憶に反映する新機能</li>
+<li><strong>Memory Store</strong> ＝AIが読み書きする記憶の保存場所</li>
+<li><strong>Permission Scope</strong> ＝記憶に対して「読むだけ」「読み書きOK」を分ける権限設定</li>
+<li><strong>Optimistic Concurrency</strong> ＝複数AIが同時に記憶を書き換えても、上書き事故を防ぐ仕組み</li>
+<li><strong>Version History</strong> ＝誰が・いつ・どんな記憶を更新したか全部追える履歴</li>
+</ul>
+<hr/>
+<h3 id="1つ目今回の発表の核心aiに経験値を貯めさせるが始まった">【1つ目】今回の発表の核心：「AIに経験値を貯めさせる」が始まった<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1つ目今回の発表の核心aiに経験値を貯めさせるが始まった" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>登壇したのはAnthropicのPlatform Team PM、Mahes</p>
+<p>これまでAnthropicはAIエージェント用にいろんな部品を出してきた↓</p>
+<ul>
+<li>MCP：外部ツールやデータに繋ぐ</li>
+<li>Claude Code：コード作業を任せる</li>
+<li>Agent SDK：エージェントを作る</li>
+<li>Skills：AIに新しい能力を追加する</li>
+</ul>
+<p>でも、まだ足りなかったものがある</p>
+<p>それが「Memory」
+つまりAIが作業経験から学び、次の仕事で賢くなる仕組み</p>
+<hr/>
+<h3 id="2つ目今までのaiは毎回ほぼ初対面だった">【2つ目】今までのAIは「毎回ほぼ初対面」だった<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2つ目今までのaiは毎回ほぼ初対面だった" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>普通のAIは、毎回プロンプトに全部説明しないといけない</p>
+<ul>
+<li>この案件では何が成功条件か</li>
+<li>前にどんなミスをしたか</li>
+<li>このコードベースの癖は何か</li>
+<li>どの手順がうまくいったか</li>
+<li>どの調査はもう終わっているか</li>
+</ul>
+<p>これを毎回人間が教える必要があった</p>
+<p>でもMemoryがあると、AI自身が作業しながら
+「これは次回も使える」
+「この失敗は覚えておくべき」
+「この環境ではこの手順が正解」
+みたいに経験を蓄積できる</p>
+<p>ここが今までのAIと根本的に違う</p>
+<hr/>
+<h3 id="3つ目memoryでaiが覚えられること">【3つ目】MemoryでAIが覚えられること<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3つ目memoryでaiが覚えられること" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Anthropicが想定してるMemoryの中身はかなり実務寄り</p>
+<p>AIが覚えるもの↓</p>
+<ul>
+<li>タスクの成功条件</li>
+<li>よくある失敗</li>
+<li>うまくいった戦略</li>
+<li>使っているコードベースの構造</li>
+<li>更新すべきファイルやアセット</li>
+<li>過去の調査結果</li>
+<li>他のAIエージェントが学んだこと</li>
+</ul>
+<p>つまり単なる「会話履歴」じゃない
+AIが現場で働いた経験を、次のAIや未来の自分に引き継ぐための仕組み</p>
+<p>これがあると、AIが使い捨て作業員から「育つメンバー」になる</p>
+<hr/>
+<h3 id="4つ目一番ヤバいのは他のaiから学べること">【4つ目】一番ヤバいのは「他のAIから学べる」こと<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4つ目一番ヤバいのは他のaiから学べること" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Mahesが特に興奮していたのがここ</p>
+<p>複数のAIエージェントが同じ環境で働いているとする</p>
+<p>例↓</p>
+<ul>
+<li>あるAIがコード修正</li>
+<li>別のAIが障害調査</li>
+<li>別のAIがテスト作成</li>
+<li>別のAIがドキュメント更新</li>
+</ul>
+<p>それぞれが別タスクをやりながら、同じMemory Storeに学びを残せる</p>
+<p>すると次のAIは
+「前のAIが何を調べたか」
+「どこで失敗したか」
+「何が原因だったか」
+を読んでから動ける</p>
+<p>これ、もはやAIチームに集合知が生まれてる状態</p>
+<hr/>
+<h3 id="5つ目すでに効果が出てる初回ミス90減">【5つ目】すでに効果が出てる：初回ミス90%減<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5つ目すでに効果が出てる初回ミス90減" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>AnthropicはManaged AgentsでMemoryをパブリックベータとして提供開始済み</p>
+<p>早期ユーザーの事例も出てた</p>
+<p>Rakutenの内部ナレッジエージェントでは、Memory導入によって「first pass mistakes」が90%減ったとのこと</p>
+<p>要するに↓</p>
+<ul>
+<li>前のAIがミスを記録</li>
+<li>次のAIがそれを読む</li>
+<li>同じミスを繰り返さない</li>
+<li>結果的にトークン効率も改善</li>
+<li>レイテンシも下がる</li>
+<li>コストも下がる</li>
+</ul>
+<p>AIが経験からミスを減らすフェーズに入ってる</p>
+<hr/>
+<h3 id="6つ目anthropicのmemoryはファイルシステムとして扱う">【6つ目】AnthropicのMemoryは「ファイルシステム」として扱う<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#6つ目anthropicのmemoryはファイルシステムとして扱う" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>ここが設計としてかなり面白い</p>
+<p>Memoryを特殊な黒箱DBとして扱うのではなく、Claudeからは「ファイルシステム」に見えるようにしている</p>
+<p>つまりClaudeは↓</p>
+<ul>
+<li>ファイルを読む</li>
+<li>ファイルを分ける</li>
+<li>フォルダ構造を整理する</li>
+<li>bashやgrepで検索する</li>
+<li>必要な内容を更新する</li>
+</ul>
+<p>という、Claude Codeで得意な動きと同じ感覚でMemoryを管理できる</p>
+<p>Anthropicの考え方は「モデルを縛るより、Claudeが得意な環境管理能力に任せた方が賢い」</p>
+<p>これがかなり重要</p>
+<hr/>
+<h3 id="7つ目opus-47はファイル型memoryが特に強い">【7つ目】Opus 4.7は「ファイル型Memory」が特に強い<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#7つ目opus-47はファイル型memoryが特に強い" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Mahesいわく、先月出たClaude Opus 4.7はファイルシステム型Memoryで最先端レベルに強い</p>
+<p>具体的には↓</p>
+<ul>
+<li>何を記憶すべきか判断する</li>
+<li>何は忘れていいか判断する</li>
+<li>どのファイルに分けるべきか決める</li>
+<li>Memoryの構造を整理する</li>
+<li>bashやgrepで必要な情報を探す</li>
+<li>作業しながら記憶を更新する</li>
+</ul>
+<p>つまりAIが自分で「これは経験値として残すべき」「これは一時的な情報だから不要」を判断し始めている</p>
+<p>プロンプトで全部指示する時代から、AIが自分で知識管理する時代に移ってる</p>
+<hr/>
+<h3 id="8つ目マルチエージェント時代にはmemory権限が必須">【8つ目】マルチエージェント時代にはMemory権限が必須<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#8つ目マルチエージェント時代にはmemory権限が必須" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Anthropic社内や大企業では、すでに数百〜数千のエージェントが並列で動く世界を想定している</p>
+<p>そうなるとMemoryにも権限管理が必要になる</p>
+<p>例↓</p>
+<ul>
+<li>組織全体のナレッジ：読み取り専用</li>
+<li>SLOや運用Runbook：読み取り専用</li>
+<li>チーム別の作業メモ：読み書きOK</li>
+<li>進行中タスクの作業Memory：頻繁に更新OK</li>
+</ul>
+<p>これがPermission Scope</p>
+<p>AIごとに「この記憶は読めるだけ」「この記憶は更新していい」を分けられる</p>
+<p>企業導入でめちゃくちゃ大事な部分</p>
+<hr/>
+<h3 id="9つ目複数aiが同時に記憶を書いても壊れない仕組み">【9つ目】複数AIが同時に記憶を書いても壊れない仕組み<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#9つ目複数aiが同時に記憶を書いても壊れない仕組み" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>数百のAIが同じMemoryを読むだけならまだいい</p>
+<p>問題は、同時に書き込むとき</p>
+<p>普通にやると↓</p>
+<ul>
+<li>AI AがMemoryを読む</li>
+<li>AI BもMemoryを読む</li>
+<li>AI Aが更新する</li>
+<li>AI Bが古い内容を元に上書きする</li>
+<li>AI Aの更新が消える</li>
+</ul>
+<p>みたいな事故が起きる</p>
+<p>AnthropicはこれをOptimistic Concurrencyで防いでいる</p>
+<p>ざっくり言うと、更新前に「自分が読んだ内容と今の内容が同じか」をハッシュで確認する。違っていたら上書きしない</p>
+<p>AIがチームで働くための地味だけど超重要な基盤</p>
+<hr/>
+<h3 id="10つ目企業利用で重要な誰が記憶を書いたか全部追える">【10つ目】企業利用で重要な「誰が記憶を書いたか全部追える」<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#10つ目企業利用で重要な誰が記憶を書いたか全部追える" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>本番運用で一番怖いのは、AIが勝手に変な記憶を書いて、そのまま未来のAIが信じること</p>
+<p>だからAnthropicはVersion Historyを重視している</p>
+<p>見られるもの↓</p>
+<ul>
+<li>いつMemoryが更新されたか</li>
+<li>どのAIエージェントが更新したか</li>
+<li>どのセッションで書かれたか</li>
+<li>どんな差分が入ったか</li>
+<li>過去の状態に何があったか</li>
+</ul>
+<p>つまりAIの記憶にも監査ログがある</p>
+<p>これがないと企業は怖くて使えない</p>
+<p>Memoryは便利なだけじゃなく、管理・監査・制御できる形で出してきてるのが強い</p>
+<hr/>
+<h3 id="11つ目そして新機能dreamingがヤバい">【11つ目】そして新機能「Dreaming」がヤバい<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#11つ目そして新機能dreamingがヤバい" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>ここからが本題</p>
+<p>AnthropicがResearch Previewで出した新機能がDreaming</p>
+<p>Dreamingとは何か↓</p>
+<p>複数エージェントの最近の作業ログや transcript を見て、共通する失敗・成功パターンを探し、Memoryを自動で整理・更新する非同期プロセス</p>
+<p>つまりAIが作業してる最中ではなく、裏側でまとめて振り返りをする</p>
+<p>人間でいうと「寝てる間に今日の経験を整理して、翌日ちょっと賢くなる」みたいな仕組み</p>
+<p>名前がDreamingなのもそのまま</p>
+<hr/>
+<h3 id="12つ目dreamingでタスク完了率6倍の事例">【12つ目】Dreamingでタスク完了率6倍の事例<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#12つ目dreamingでタスク完了率6倍の事例" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>早期テストではすでに強烈な結果が出ている</p>
+<p>HarveyというリーガルAI系の企業が、現実的な法律タスクのベンチマークでDreamingを使ったところ、あるシナリオでタスク完了率が6倍に上がった</p>
+<p>理由はシンプル</p>
+<p>1体のAIだけでは気づけないパターンを、Dreamingが複数セッション横断で発見するから</p>
+<ul>
+<li>みんな同じところで失敗してる</li>
+<li>ある手順だと成功しやすい</li>
+<li>この古いMemoryはもう間違ってる</li>
+<li>重複したメモが多すぎる</li>
+<li>この知識は検証済みとして残せる</li>
+</ul>
+<p>こういう整理を裏側で自動実行する</p>
+<hr/>
+<h3 id="13つ目dreamingは作業中のaiと別で動くのが強い">【13つ目】Dreamingは「作業中のAI」と別で動くのが強い<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#13つ目dreamingは作業中のaiと別で動くのが強い" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>DreamingはOut-of-band
+つまり、タスクを実行中のAIとは別プロセスで動く</p>
+<p>これが重要</p>
+<p>作業中のAIに「タスクもこなして、記憶も整理して、全体傾向も見て」とやらせると負担が重い</p>
+<p>でもDreamingなら↓</p>
+<ul>
+<li>作業AIは目の前のタスクに集中</li>
+<li>Dreamingは裏でログを分析</li>
+<li>共通パターンを発見</li>
+<li>Memoryを整理</li>
+<li>翌日のAIがその学習結果を使う</li>
+</ul>
+<p>しかもホットパスに入らないので、作業中のレイテンシを増やさない</p>
+<p>AIの現場作業と、AIの振り返りを分離している</p>
+<hr/>
+<h3 id="14つ目デモ障害対応aiが前の調査を引き継いだ話">【14つ目】デモ：障害対応AIが前の調査を引き継いだ話<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#14つ目デモ障害対応aiが前の調査を引き継いだ話" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>デモではSREエージェントが登場</p>
+<p>状況↓</p>
+<ul>
+<li>dispatch serviceでP1アラート発生</li>
+<li>1体目のSREエージェントが調査開始</li>
+<li>CPU使用率、トラフィック、最近のPRを確認</li>
+<li>調査結果をMemory Storeに記録</li>
+</ul>
+<p>数分後、同じアラートが再発</p>
+<p>今度は別のSREエージェントが起動する</p>
+<p>すると最初にMemoryを見て、「この調査はすでに実施済み」「原因候補はここ」「次はここを見るべき」と分かった状態で動ける</p>
+<p>結果、同じ調査を繰り返さずに済む</p>
+<p>これがAIチームの引き継ぎ</p>
+<hr/>
+<h3 id="15つ目dreamingデモ複数aiのログから60秒パターンを発見">【15つ目】Dreamingデモ：複数AIのログから「60秒パターン」を発見<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#15つ目dreamingデモ複数aiのログから60秒パターンを発見" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>さらにDreamingを走らせると、過去7日間の関連セッションを横断して分析した</p>
+<p>そこでDreamingが見つけたのが↓</p>
+<p>「dispatch latencyの問題は、上流CPUスパイクのちょうど60秒後に毎回起きている」</p>
+<p>個別のAIは、自分のセッションしか見ていないから気づけなかった</p>
+<p>でもDreamingは複数ログを横断して、「これ、リトライロジックが原因っぽい」とパターンを発見</p>
+<p>さらに↓</p>
+<ul>
+<li>重複メモを統合</li>
+<li>古い情報を削除</li>
+<li>現在も正しいMemoryを検証</li>
+<li>未来のAIが使いやすい形に整理</li>
+</ul>
+<p>完全にAI用の経験値整理システム</p>
+<hr/>
+<h3 id="16つ目これがaiに経験値を貯めて進化させる方法の正体">【16つ目】これが「AIに経験値を貯めて進化させる方法」の正体<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#16つ目これがaiに経験値を貯めて進化させる方法の正体" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>今回Anthropicが公開した内容を3点でまとめるとこう↓</p>
+<p><strong>① Memory</strong>
+AIが作業中に学んだことを、ファイルシステム型の記憶として保存する
+成功条件・失敗・環境知識・調査結果を未来のAIに引き継げる</p>
+<p><strong>② Multi-agent shared memory</strong>
+複数AIが同じMemoryを読み書きして、チーム全体で集合知を作る
+権限管理・並行制御・履歴管理まであるので企業利用できる</p>
+<p><strong>③ Dreaming</strong>
+複数AIの作業ログを裏側で分析し、共通ミス・成功パターン・古い記憶を自動整理する
+翌日のAIが昨日より賢くなる</p>
+<p>つまりこれ、「AIを使う」から「AIを育てる」に変わる話</p>
+<hr/>
+<h3 id="17つ目今後claude-code勢がさらに強くなる理由">【17つ目】今後Claude Code勢がさらに強くなる理由<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#17つ目今後claude-code勢がさらに強くなる理由" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Claude Codeを10個、15個同時に回す人はすでに出てきている</p>
+<p>ここにMemoryとDreamingが入るとどうなるか↓</p>
+<ul>
+<li>各Claude Codeが作業経験を残す</li>
+<li>別セッションがその経験を読む</li>
+<li>失敗パターンが共有される</li>
+<li>成功手順が蓄積される</li>
+<li>Dreamingが夜間にMemoryを整理する</li>
+<li>翌日のエージェント群が前日より賢くなる</li>
+</ul>
+<p>これ、普通に別ゲー</p>
+<p>今はまだResearch Preview感あるけど、数ヶ月後に「AIエージェントは記憶を持つのが当たり前」になったら、今の使い方はかなり古く見えるはず</p>
+<p>先に知ってるだけで実装設計が変わる内容やから、ブクマして何回か読み返す価値あるで🐼</p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AnthropicがManaged Agents向けに「Memory（ファイルシステム型の永続記憶）」と「Dreaming（複数エージェントのログを裏で横断分析しMemoryを自動整理する非同期プロセス）」を発表。Rakutenで初回ミス90%減、Harveyで法律タスク完了率6倍。「AIを使う」から「AIを育てる」へのパラダイムシフト。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Memory = AIの経験値システム（ファイルシステム型） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>黒箱DBではなくClaudeから「ファイル＋bash＋grep」で操作できる構造。Opus 4.7はこの記憶管理（何を残し何を捨てるか）が最先端。プロンプトで全指示する時代から、AIが自分で知識管理する時代へ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Dreaming = 寝てる間に賢くなる仕組み </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Out-of-bandで作業中AIと別プロセス動作。複数セッション横断でパターン抽出（「60秒後に毎回障害」など個別AIには見えない傾向を発見）、重複メモ統合、古い情報削除、Memory整理を自動実行。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>エンタープライズ装備が揃ってる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Permission Scope（読み取り専用/読み書きOK）、Optimistic Concurrency（同時書き込み事故防止のハッシュ確認）、Version History（誰がいつ何を更新したかの監査ログ）。企業導入に必要な「管理・監査・制御」を最初から実装。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>実例の数字が強い </p></div>
+                  
+                </div>
+<div class="callout-content">
+<ul>
+<li>Rakuten内部ナレッジAgent：first pass mistakes 90%減</li>
+<li>Harvey（リーガルAI）：タスク完了率6倍</li>
+<li>SREデモ：別エージェントが前回調査を引き継いで重複調査ゼロ化</li>
+</ul>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Claude Code勢の別ゲー化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>10〜15個のClaude Codeを並列運用する層が、Memory+Dreamingで「夜間に賢くなるAIチーム」を持てる。実装設計レベルで前提が変わる転換点。</p>
+</div>
+</blockquote>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINの memory/ 運用は今回の発表の先行実装そのもの</strong>
+ゆりこは既に <code>~/.claude/projects/.../memory/</code> で feedback / project / user / reference の4種類でファイルシステム型Memoryを運用済み。MEMORY.md インデックス + <code>.claude/rules/critical-mistakes.md</code> への昇格システムまである。今回のAnthropic発表は「CORINがやってきたことを公式仕様化した」と読める。</p>
+<p><strong>② 「Dreaming」相当を CORIN にも導入できる余地</strong>
+現状は「同じやらかし2回 → rules昇格」を手動運用。Dreaming的に複数セッションログから自動でパターン抽出→memory更新する仕組みは設計可能。<code>/done</code> 拡張で過去N回のログを横断分析し「同じ失敗3回検出 → rules昇格提案」を半自動化できる。<strong>これCORINロードマップに乗せる価値あり。</strong></p>
+<p><strong>③ AICOチーム拡大方針との相性◎</strong>
+<code>agent-teams-policy.md</code> の「抱えきれなくなったらチーム拡大」方針と一致。新規 sub-agent（reviewer/researcher/context-updater + 将来追加）を作る時、最初から共有Memory Store（＝ memory/ 配下）を設計しておけば、各エージェントの知見がCORIN本体に逆流する集合知システムになる。</p>
+<p><strong>④ Optimistic Concurrency の発想を /done に取り込む</strong>
+複数セッション並行運用で MEMORY.md を同時編集して上書き事故、というのは現状でも起こり得る（複数Claude Codeを並列で回した時）。<code>/done</code> 実行時に「自分が読んだバージョンと現在のバージョンが同じか」を確認するガードを入れると、Dreaming前段として効く。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a> — Memory機能の主実装先・Opus 4.7がファイル型Memoryで最強</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a> — Managed Agents API（今回の発表の主舞台）</li>
+<li><a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a> — マルチエージェントMemory共有の文脈</li>
+<li><a href="./knowledge-management" class="internal alias" data-slug="knowledge-management">ナレッジマネジメント</a> — AIのMemoryは組織のKMシステムに相当</li>
+<li><a href="./Agent-SDK" class="internal alias" data-slug="Agent-SDK">Agent SDK</a> — エージェント構築フレームワーク</li>
+<li><a href="./mcp" class="internal alias" data-slug="mcp">MCP</a> — 外部ツール接続規格（Anthropicエージェント基盤の一部）</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1106" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-1"><a href="#-スレッド冒頭" data-for="-スレッド冒頭">🧵 スレッド冒頭</a></li><li class="depth-1"><a href="#まず前提の用語だけ押さえて" data-for="まず前提の用語だけ押さえて">【まず前提の用語だけ押さえて】</a></li><li class="depth-1"><a href="#1つ目今回の発表の核心aiに経験値を貯めさせるが始まった" data-for="1つ目今回の発表の核心aiに経験値を貯めさせるが始まった">【1つ目】今回の発表の核心：「AIに経験値を貯めさせる」が始まった</a></li><li class="depth-1"><a href="#2つ目今までのaiは毎回ほぼ初対面だった" data-for="2つ目今までのaiは毎回ほぼ初対面だった">【2つ目】今までのAIは「毎回ほぼ初対面」だった</a></li><li class="depth-1"><a href="#3つ目memoryでaiが覚えられること" data-for="3つ目memoryでaiが覚えられること">【3つ目】MemoryでAIが覚えられること</a></li><li class="depth-1"><a href="#4つ目一番ヤバいのは他のaiから学べること" data-for="4つ目一番ヤバいのは他のaiから学べること">【4つ目】一番ヤバいのは「他のAIから学べる」こと</a></li><li class="depth-1"><a href="#5つ目すでに効果が出てる初回ミス90減" data-for="5つ目すでに効果が出てる初回ミス90減">【5つ目】すでに効果が出てる：初回ミス90%減</a></li><li class="depth-1"><a href="#6つ目anthropicのmemoryはファイルシステムとして扱う" data-for="6つ目anthropicのmemoryはファイルシステムとして扱う">【6つ目】AnthropicのMemoryは「ファイルシステム」として扱う</a></li><li class="depth-1"><a href="#7つ目opus-47はファイル型memoryが特に強い" data-for="7つ目opus-47はファイル型memoryが特に強い">【7つ目】Opus 4.7は「ファイル型Memory」が特に強い</a></li><li class="depth-1"><a href="#8つ目マルチエージェント時代にはmemory権限が必須" data-for="8つ目マルチエージェント時代にはmemory権限が必須">【8つ目】マルチエージェント時代にはMemory権限が必須</a></li><li class="depth-1"><a href="#9つ目複数aiが同時に記憶を書いても壊れない仕組み" data-for="9つ目複数aiが同時に記憶を書いても壊れない仕組み">【9つ目】複数AIが同時に記憶を書いても壊れない仕組み</a></li><li class="depth-1"><a href="#10つ目企業利用で重要な誰が記憶を書いたか全部追える" data-for="10つ目企業利用で重要な誰が記憶を書いたか全部追える">【10つ目】企業利用で重要な「誰が記憶を書いたか全部追える」</a></li><li class="depth-1"><a href="#11つ目そして新機能dreamingがヤバい" data-for="11つ目そして新機能dreamingがヤバい">【11つ目】そして新機能「Dreaming」がヤバい</a></li><li class="depth-1"><a href="#12つ目dreamingでタスク完了率6倍の事例" data-for="12つ目dreamingでタスク完了率6倍の事例">【12つ目】Dreamingでタスク完了率6倍の事例</a></li><li class="depth-1"><a href="#13つ目dreamingは作業中のaiと別で動くのが強い" data-for="13つ目dreamingは作業中のaiと別で動くのが強い">【13つ目】Dreamingは「作業中のAI」と別で動くのが強い</a></li><li class="depth-1"><a href="#14つ目デモ障害対応aiが前の調査を引き継いだ話" data-for="14つ目デモ障害対応aiが前の調査を引き継いだ話">【14つ目】デモ：障害対応AIが前の調査を引き継いだ話</a></li><li class="depth-1"><a href="#15つ目dreamingデモ複数aiのログから60秒パターンを発見" data-for="15つ目dreamingデモ複数aiのログから60秒パターンを発見">【15つ目】Dreamingデモ：複数AIのログから「60秒パターン」を発見</a></li><li class="depth-1"><a href="#16つ目これがaiに経験値を貯めて進化させる方法の正体" data-for="16つ目これがaiに経験値を貯めて進化させる方法の正体">【16つ目】これが「AIに経験値を貯めて進化させる方法」の正体</a></li><li class="depth-1"><a href="#17つ目今後claude-code勢がさらに強くなる理由" data-for="17つ目今後claude-code勢がさらに強くなる理由">【17つ目】今後Claude Code勢がさらに強くなる理由</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

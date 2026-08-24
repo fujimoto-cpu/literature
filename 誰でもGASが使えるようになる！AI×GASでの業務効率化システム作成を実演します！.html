@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！"/><meta name="twitter:description" content="📺 動画情報 誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-05-31 ・ ⏱️ 28分0秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Code（CLI）＋clasp（Google Apps Scriptのローカル↔クラウド同期ツール）を組み合わせて、Googleフォーム送信→見積書スプレッドシート自動生成→PDF化→Gmail送信 という業務自動化フローをゼロから28分で構築するライブコーディング動画。 🗺️ 全体像 flowcha..."/><meta property="og:description" content="📺 動画情報 誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-05-31 ・ ⏱️ 28分0秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Code（CLI）＋clasp（Google Apps Scriptのローカル↔クラウド同期ツール）を組み合わせて、Googleフォーム送信→見積書スプレッドシート自動生成→PDF化→Gmail送信 という業務自動化フローをゼロから28分で構築するライブコーディング動画。 🗺️ 全体像 flowcha..."/><meta property="og:image:alt" content="📺 動画情報 誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-05-31 ・ ⏱️ 28分0秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Code（CLI）＋clasp（Google Apps Scriptのローカル↔クラウド同期ツール）を組み合わせて、Googleフォーム送信→見積書スプレッドシート自動生成→PDF化→Gmail送信 という業務自動化フローをゼロから28分で構築するライブコーディング動画。 🗺️ 全体像 flowcha..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-05-31 ・ ⏱️ 28分0秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude Code（CLI）＋clasp（Google Apps Scriptのローカル↔クラウド同期ツール）を組み合わせて、Googleフォーム送信→見積書スプレッドシート自動生成→PDF化→Gmail送信 という業務自動化フローをゼロから28分で構築するライブコーディング動画。 🗺️ 全体像 flowcha..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2717"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2717" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！</a></div></nav><h1 class="article-title">誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-31T15:00:00.000Z">2026年6月01日</time><span>58 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/gas" class="internal tag-link">gas</a></li><li><a href="./tags/google-apps-script" class="internal tag-link">google-apps-script</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/workflow-automation" class="internal tag-link">workflow-automation</a></li><li><a href="./tags/clasp" class="internal tag-link">clasp</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>誰でもGASが使えるようになる！AI×GASでの業務効率化システム作成を実演します！</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-05-31 ・ ⏱️ 28分0秒
+🔗 <a href="https://www.youtube.com/watch?v=aLzV8Y2_eoU" class="external">https://www.youtube.com/watch?v=aLzV8Y2_eoU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>（CLI）＋clasp（Google Apps Scriptのローカル↔クラウド同期ツール）を組み合わせて、Googleフォーム送信→見積書スプレッドシート自動生成→PDF化→Gmail送信 という業務自動化フローをゼロから28分で構築するライブコーディング動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Googleフォーム\\n顧客が情報入力] -->|フォーム送信トリガー| B[GAS スクリプト発動]\n    B --> C[スプレッドシートテンプレートに値を流し込み]\n    C --> D[見積書をPDF化]\n    D --> E[Gmailで顧客に自動送信]\n    F[Claude Code CLI] -->|clasp push| G[GAS クラウドエディタに反映]\n    F -.->|コード生成・修正| B&quot;">flowchart TD
+    A[Googleフォーム\n顧客が情報入力] -->|フォーム送信トリガー| B[GAS スクリプト発動]
+    B --> C[スプレッドシートテンプレートに値を流し込み]
+    C --> D[見積書をPDF化]
+    D --> E[Gmailで顧客に自動送信]
+    F[Claude Code CLI] -->|clasp push| G[GAS クラウドエディタに反映]
+    F -.->|コード生成・修正| B
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. clasp — ローカルとGASクラウドをつなぐブリッジ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>claspはローカルのコードをGoogleのクラウドエディタに同期するCLIツール。通常GASはブラウザのエディタにコードを貼り付ける必要があるが、claspを使うとターミナルから <code>clasp push</code> で一発同期できる。<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>・Cursor・Codexなど任意のAIコーディングツールと組み合わせることで「AIがコードを書く→そのままGASに反映」という流れが実現する。<code>clasp clone</code>・<code>clasp push</code>・<code>clasp pull</code> がメインコマンド。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. コンテナバインドスクリプト — フォームと紐付いたGASの作り方 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>GASには「スタンドアロン（Googleドライブから単独で開く）」と「コンテナバインド（スプレッドシート・フォームから開く）」の2種類がある。フォーム送信をトリガーにしたい場合はコンテナバインドスクリプトが必須。Googleフォームの「スクリプトエディタ」から開いたGASがこれに該当し、<code>onFormSubmit</code> トリガーでフォーム送信イベントを捕捉できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Claude CodeのPlanモード活用 — 設計→コード生成→自動実行の流れ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Planモードで「Googleフォーム送信→見積書PDF送付の自動化」と入力すると、構成案（フォームとスプレッドシートの作り方・トリガー設定・メール送信先の確認）を提示してくれる。承認後に「Yes, use Auto Mode」でコード全自動生成が走る。ボイスモードで日本語入力することも可能（<code>/config language</code> で日本語設定が必要）。clasp pushコマンドも自動で実行してくれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. セットアップ関数の実行 — GASの初期セットアップとGoogleサービスの権限承認 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>生成されたコードの <code>setup()</code> 関数をGASエディタで実行すると、スプレッドシートテンプレート・出力フォルダ・フォームのひな形が自動生成される。初回は「Googleドライブへのアクセス権限」「Gmail送信権限」などの承認ダイアログが出るが、1回承認すれば以降は不要。エラーが発生した場合はGASの「実行数」タブでログを確認し、エラー文をそのままClaude Codeに貼り付けて修正を依頼する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 完成系の動作 — フォーム送信からPDF送信まで約数秒 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>公開設定したGoogleフォームに顧客情報・商品・数量を入力して送信すると、スプレッドシートに見積書が自動生成され、PDFが添付されたメールが顧客アドレスに届く。拡張は「フォルダIDを渡して特定フォルダに保存」「メール文面を変更」「商品マスタをスプレッドシートで管理」など全てClaude Codeへの追加指示で対応可能。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 見積書・品質表示・提出物の自動生成に即応用できる</strong>
+Googleフォームに案件情報を入れたら見積書PDFがクライアントに自動送信される仕組みを、KONNEKT案件の受付フローに導入できる。品質表示タグ生成ツール（青木さん依頼）でも同様のフォーム→GAS→PDF出力パターンが使える。明日、既存の品質表示スキルでGAS版の構成を検討してみる。</p>
+<p><strong>② clasp + Claude Code CLIをローカルにセットアップしておく</strong>
+<code>npm install -g @google/clasp</code> でインストール後、<code>clasp login</code> でGoogleアカウント連携。一度設定すれば以降はClaude CodeがGASコードの生成〜反映を全自動で行う。デスクトップアプリでも動作する。今週中にインストールして試す。</p>
+<p><strong>③ GASエラーはそのままClaude Codeに貼り付けるだけ</strong>
+GASエディタの「実行数」タブ→エラーログをコピー→Claude Codeに貼り付けて「このエラーを直して」と言うだけで修正コードが生成されclasp pushまで自動で完了する。デバッグのハードルが極めて低い。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> すごいヤバい余裕でしょこれヤバいですねスプシとかと連携できるの現実的になんか色々使い勝手が思いつきますね皆さんこんにちはAIプログラミング講師の今西です今西さん先日のAI時代のガスの学び方の動画が大変好評でガスってどんなのなんだろうって僕も色々調べてたんですけど結構面白そうだなと思って今回なんかガスを使って何かしらツール作るところ見てみたいんですけど確かにGASでAIコーディングしてるのって動画で撮ってなかったかもね</p>
+<p><code>00:33</code> ちなみに何作りたいとかあるの?GASの生きるGASが活躍するとかどうかなと思ったら僕今Googleフォームで送られてきた内容をもとに見積書を手入力してるものがあってそれスプレッドシートの見積書なんですけどそれを自動化できるっていうのを見たんで余裕だねでもなんか無理だろと思ってここは言われちゃうんだと思ってめちゃ無理しちゃっていいですか?じゃあ見積書の送付までを一連の流れでやっていくみたいな感じかなはいJコのために作るのはちょっとあんま気が乗らないんですけど仕方ないのでやっていこうかなと思いますちなみにAIコーディング系のツール</p>
+<p><code>01:07</code> アンチグラビティとかクロードコードとかコーデックスとかどれ使ってほしいとかある?やっぱ流行りのクロードコードでいきますかOKじゃあクロードコードで今回はあえてデスクトップアプリではなくてCLIと呼ばれるようなターミナル上のクロードコードを使ってやっていくっていうのでお見せしていきたいなと思いますじゃあGAS早速やっていこうと思うんですけれどもGASということでGoogleドライブとかGoogleスプレッドシートGoogleフォームとかそういうのをうまく連携してみたいなところでいろいろと使っていきますとそれこそクロードとかチャットGPTとかでコーディングしたりしたら</p>
+<p><code>01:43</code> そのままペッと貼り付けてやっていくみたいなそういう作業が必要だったりするんですけどターミナル上から実行するとクラスプというですねサービスを使うことによってうまくGASのエディターGASのコードとこの手元のコードを連携することができるのねどういうことかというと多分1回GASを説明した時に覚えてるかなと思うんだけどもここで開いてここにエディターが出てきますとこんな感じでこのエディターにコードを貼り付けていくみたいな形なんでこれ結局クラウド上のエディターなんだよねつまりインターネット上にあるから別に手元とは別々な環境ですとここにじゃあコード一個一個</p>
+<p><code>02:15</code> ペッペッペッって貼っていくかっていうとめんどくさいじゃん今の時代分かりづらいしそうなんで手元のターミナルとかデスクトップアプリとかでいろいろ開発しながらそのコードをこっちに反映させるみたいなことができます自動でってことですかそうそうそれがクラスプと呼ばれるものでクラスプでコマンドラインインターフェースを使用するということでコマンドラインアップススクリプトプロジェクトっていうのがあるのねここにクロードプラグインとかあったりするからクラスプもだいぶクロードコードとかに寄ってきてるのかなと思うんだけどクロードコードCLIサポートとか書いてあるのでだいぶ知らぬ間にクロードコードの CLIとかサポートしてるっぽいの</p>
+<p><code>02:53</code> ほらえーすごいですね知らなかったこれはスラッシュプラグインインストール Googleクラスプとかで使えるっぽいのでこれ使ってやっていこうかなちょっと今回初めてです今まで普通にクラスプを使ってただけなんだけどこれ使ってあげると良さそうなのでやっていこうかなと思いますちなみにそれ使ったらデスクトップアプリでもできるんですか?できるんじゃない?普通にデスクトップアプリでもできるよ別にできないとかじゃないからデスクトップアプリとかでできないじゃなくて今回は練習も兼ねてというか皆さんおそらくデスクトップアプリ使ってる人多いと思うんだけれどもそうじゃなくて僕の方でこのターミナルでのやり方をお見せすることによってこっちにも慣れてもらおうっていうので</p>
+<p><code>03:25</code> こっちで空いてやるって感じかななので別に全然こっちでもできますでここでCloud YouTubeというフォルダの中の20260507の中のGASというフォルダの中ね。このターミナルのこの辺の操作が分からない人は、ターミナルの動画以前出しているので、そちら見ていただけたらなと思います。で、ここで、スラッシュプラグイン、インストール、Googleクラスプということで、先ほども話したように、このローカルな環境と、こちらのGoogle Apps Script、GASの環境を接続するためにクラスプというものを使いますと。で、これでここをポチッと実行します。そうするとGoogleクラスプとなったので</p>
+<p><code>04:00</code> これで実行しますNot find in any marketplaceないと出てきたのでプラグインインストールマニュアルインストレーションなんか出てきたなRun the following command in cloud code to installって書いてきてるのでプラグインインストールだからスラッシュプラグインでインストール at googleスラッシュクラスプNotionとか出てくるんだよね何なんだろうこれNotion Enhancedなんとかって出てきてなんかちょっと若干違うんだよねこれが</p>
+<p><code>04:31</code> なんかよくわかんないのが出てきてますとInstall at GoogleGoogleってのが出てきてないよねちょっとこれ見ますマニュアルインストレーションクロードこれをポチッとしてこれでいいかなでもこれあれか1回抜けてCtrl Cで抜けてこれでMCP Add Claspとしてあげるとローカルアディットってなってるので多分追加されたのかなで追加されましたここでインストールアズプラグインということでここでできるのかなないってなってるね</p>
+<p><code>05:03</code> ないってなってるので一旦このまま進めちゃおうかなと思います一旦クロードmcp add claspって出たのでここでスラッシュmcpとしてあげた時にclaspってあるよねちゃんとmcpとしてはコネクティットされてるので一旦これで問題ないかなという風には思いますでこれで一旦claspというものをインストールしたんだけれどもこの状態で先ほど言ってたものを作ろうかなと思います今までであればクロードのチャットでいろいろと指示しながらやっていくみたいなここで設計書を作ってからみたいな話をしてたと思うんだよそのやり方でもいいし</p>
+<p><code>05:34</code> クロードコードから直接やっていっても全く問題ないかなってのは思うんだけどJ君的にどっちがいい?クロードチャットで要件定義を作るかクロードコードで最初からやっちゃうか今日はコードでいっちゃいますかそのままいく?はいいいねそれでいったらちょっとあんま使ってないけどボイスモードとか使っていくかこれでGoogle Apps Scriptのコードをクラスプを経由して書いたら欲しいなと思います具体的には今回はGoogleフォームで作ったフォーム入力してもらったらお客さんにそこで書いてもらった内容をもとにスプレッドシートにある見積書テンプレートに情報が入力されて</p>
+<p><code>06:09</code> その見積書がPDFになってGmailで送信されるみたいなそんな感じのものをイメージしてますということで今からリスニングしてるのに何かなってないなノースピーチディテクティットなんと入ってなかったモイスモード今からいろいろと話していこうかなというふうに思いますディクテーションランゲージイングリッシュになってるんだこれなんでだコンフィグなのでここでランゲージでイングリッシュになってるなぜやだいぶ前に日本語にしたはずだなこれで多分戻って</p>
+<p><code>06:40</code> 今からですねGoogle Apps Scriptについて話していこうかなと思いますGoogle Apps Scriptしか読み取れてないよね多分これ英語だからだと思うのでここで多分こういう場合はexitしてあげるとでもう1回cloudで戻ってあげますああああテストですテストですこれで英語なってるなぜかconfig languageおなぜだここでconfigのlanguaージでここで日本語としましょうかでエンターを変わったねこれでで日本語になりましたさっきなってなかったのかなテストテスト今これテストレーステストレースを入ったねちゃんと日本語に変わったら入りましたということでgoogle appスクリプトをクラスプ経由で書いてほしいです具体的に何してほしいかというと</p>
+<p><code>07:26</code> Googleフォームでお客さんから情報を入力してもらってその内容をもとに見積書を作って見積書はスプレッドシートテンプレートがあってスプレッドシートテンプレートに情報が入ってその情報をもとに見積書ができますその見積書をPDF化してGmailで送信するみたいな一連の流れを組みたいですGoogle Apps Scriptで今スプレッドシートもGoogleフォームも何もない状態ですできればそうだなGoogleフォームと連携されたコンテナバインドスクリプトを作成してそこでいろいろとトリガーとかを設定してやっていきたいなというふうに思っていますもう一度伝えるとお客さんがGoogleフォームに情報を入力します</p>
+<p><code>08:07</code> そしたらその情報をもとにスプレッドシートに見積書が作成されてその見積書がpdf化されてgmailで送信されるそんな感じの流れを想定しています今回扱う商品は一旦ダミーで大丈夫ですダミーデータでというかフォームの入力内容とかも一旦仮置きで大丈夫ですっていう感じかな大丈夫?大丈夫ですこれJ君のやりたいことだってる?はい一個だけ質問したいんですけどコンテナバインドスクリプトって何ですか?おーいい質問だねコンテナバインドスクリプトっていうのはGoogle Apps Scriptはですね大きく2つ作り方がありますとそれがこのGoogle Driveからポーンと開いて</p>
+<p><code>08:43</code> こうやって開くパターンここからさっき見たエディターが開きますこれはスプレッドシートと連携されていないんだよね要はスプレッドシートとかGoogleドキュメントとかGoogleフォームと連携されていないスクリプトスクリプトってプログラムのことなんだけどスクリプトです一方でさっきのスプレッドシートを開いてここからGoogle Apps Script開いてましたこれはスプレッドシートとも事前に連携されたコンテナバインド接続されたスクリプトということでコンテナバインドスクリプトといいますこれをGoogleフォームと連携することによってGoogleフォームのトリガーいわゆるGoogleフォームが送信されたらみたいなことができたりするのでGoogleフォームと連携されたみたいなものをちょっと言ってあげたら</p>
+<p><code>09:19</code> なんでGoogleフォーム送信後に何々をしたりとかあるじゃんGoogleフォームに関するイベントを取ってきてそれを元に何かしらの処理を走らせたいガスの処理を走らせたいっていうのであればこのGoogleフォームとコンテナバインドスクリプトつまりGoogleフォームをここで例えば作成してこの右上のところで開くそうするとこのGoogleフォームと連携されたコンテナバインドされたスクリプトが開くよっていう感じでここで行ってみますオートモードでもいいんだけれどもここでプランモードにしてあげるときちんと計画を立ててくれるかなという感じですクラスプっていうのをこれカタカナにしてたので</p>
+<p><code>09:52</code> ここちょっと一旦エスケープで止めてクラスプをきちんとクラスプを使用しますみたいな感じで言ってあげるの方が正確かなと多分クラスプって何座やってるの分かってるとは思うけどねクラスプってあれですね入れ棒を引っ掛けるカタケと同じ名前ですなんでそんなに知ってない初めて聞いたわなんでこれでクラスプを入ってあげるとここでクラスプコマンドがいろいろ動いてみたいな感じですと弊社では社員研修や セミナー登壇のほか ai ネイティブな組織づくりのための内政官支援など a 書ける教育領域で様々な支援を行っていますご興味のある方は概要欄に記載の フォームよりご連絡くださいまあこういうふうに環境の状態が把握でき ましたクラスパー認証済みですこの手元のやつと自分のGoogleアカウント連携させたのかわからないのでこのクラスパー使う上で</p>
+<p><code>10:43</code> その上でも僕何回か使ってたのでクラスパー認証済みで使用可能ってなってましたこれはまあまあまあまあ一回クラスパーインストールして設定すればいいという感じダメだったら多分こういう風にしてくださいとかって言われるのでその指示の通りにやっていけばOKですと作業ディレクトリは空です設計に入ればいくつか確認させてくださいということでプロジェクトの構成方法はどちらが良いですかってあるんですけどもフォームとスプレッドシートを別々に手動で作成フォーム単体内部でテンプレート自動生成とかってあるんですけどもここでフォームとひも付くコンテナバインドスクリプトを生成スプレッドシートテンプレートはセットアップ関数で自動生成コマンド一発でほぼ完結しましたので</p>
+<p><code>11:17</code> 一旦この通りにしちゃいましょうかでこれもJavaScriptだよこれも推奨基本的にこれTypeScriptのやつは古いので選ばなくていいですJavaScriptベースでいいですこの辺はクラスプでもともとJavaScriptの派生系みたいなタイプスクリプトがあってこれを使った書き方もあったんだけれどもJavaScriptでいったんは大丈夫ですPDF送信先のメールアドレスどう決めますかフォームのメールアドレス回答欄に送るということでこれでいいかなと思いますで送信と楽しみですちょっとどんなのができるのか基本的にGASって裏側のコードだから表に出るような何かではないから変化が分かりにくい部分ではあるかなと思います</p>
+<p><code>11:51</code> 推奨とかでいろいろ壁打ちとかしていくときにガスで使うといいよって言われてもなんか普通の言語とちょっと違うイメージがあるんですよ環境が違うからって言うんですか?ちょっと若干違うかもしれない要はローカル環境上で完結するものではなくてそういうGoogleが用意したエディター上に書いていくっていうのがあるのでそういう意味では違うかなって感じかなそれで使ったことなかったのでめっちゃ楽しみですそんな難しくないよスプレッドシートコピーは送信後どう扱いますか?ということでこれはPDFだけ残すでいいかなとトリガーはコードで自動設定とかあるっぽいのでこれでシールドの設定でもいいかなとプログラムにトリガーっていうのをセットできて</p>
+<p><code>12:25</code> 例えばフォームが送信されたらスプレッドシートが作成されたら何々されたらっていうのをそういうトリガーというものを設定することができますそうすると回答を踏まえて実装プランを書き起こしますということでプランモードでやってるのでいろいろと進めてくれてるっていう感じかなはいということで計画が出てきましたずらーっとちょっと長いな思ったよりお客様がGoogleフォームに情報を入力するとその回答をもとにスプレッドシートのテンプレートへ値を流し込みいつもより小PDF化しGmailでお客様に送信すると一連のフローをGoogle Apps Scriptで実現したいと</p>
+<p><code>13:00</code> 現状は作業ディレクトリーが空でGoogleフォームスプレッドシートスクリプトのいずれも存在しないいろいろと書いてありますね流れ見るとGoogleフォームでトリガースクリプトみたいなこんな感じの流れですとちょっとねこの辺はよくわからんだろうけどいろいろ書いてあります設計がでなんか概ね特に最初の部分とか見て問題なければコードの部分は一旦いらないです最初の部分とか見て問題なければここでYes and Use Auto Modeということで自動モードでオートモードで勝手に作ってもらえる感じにすればいいかなと思いますここ待ちですか?待ちですクリエイタースクリプトということで</p>
+<p><code>13:32</code> 今こんな感じで作ってくれてるかなここに見てあげるとクラスプというコマンドができてクラスプクリエイトスクリプトスクリプトファイルを作りますよフォームで見積書作成フォームみたいなの作りますよとかなんかいろいろやってくれてますクリエイトニュードキュメントクリエイトニュースクリプトみたいなどんどんどんどんやってくれてる拾ってくれてこういうファイル作成するよねみたいなところで進めていってくれてる感じですではちょっと待ちたいなと思いますということでできました意外と時間かからなかったですねファイルすべてAppscriptプロジェクトへということでこれGoogleフォームのあるこれ一回開いてみましょう</p>
+<p><code>14:07</code> できてたでAppscriptプロジェクトほら勝手にスクリプト入ってますねそう勝手に入っているこんな感じで入ってますとで2つフォームとGoogle Apps Scriptのプロジェクトができましたターミナルでクラスプオープンスクリプトまあこれ開きますってあったらもう開いた見ちゃったんでいいですお客様で実施って書いてあるね関数選択でセットアップを選び実行初回は同意紙が出てくるので承認してください見積書PDFフォルダが作成されみたいな感じで出てきますどうのこうのですみたいなこれやってみますかここでセットアップを選びってあるのでここのsetup.jsのセットアップを選びます</p>
+<p><code>14:40</code> じゃあGASの実行これGAS関数というのがあるねここにその中でsetup.jsというGoogle Apps Scriptのファイルの中にセットアップという関数がありますこれを実行してあげるとこれで承認が必要ですって出てきますそしたらチェック入れますこれをプログラム側で実行していいんですかGoogleドライブの全てのファイルの参照編集削除作成していいんですかとかっていうのをチェック入れて続行してあげるとそうするとエラーが発生しましたって出てきましたちょっとリロードしますもう1回1回止めてご利用のGoogleアカウントへのアクセスを許可する必要があります再試行してください</p>
+<p><code>15:14</code> もう一度これでちゃんと僕のアカウントになっているのを確認して実行しますお出てきた実行開始の多分今ねフォームとか作ってくれてるテンプレ作成みたいなの出てきたここで作成してくれてるんですね裏側で作成これログなんだよねこれ下ログを取ってくれていて見てあげるとやってる感ありますねプログラミングを確かにただこれ貼ってるだけだけどこれ見積もり書みたいなの作ってくれて出力フォルダも作ってくれてるね見積もりフォルダみたいなの作ってるよねPDFこれも今適当なところに作っちゃってるんだ大元のところに</p>
+<p><code>15:45</code> マイドライブの一番直下のところに作ってくれてるから特定のフォルダ指定すればこの中に作ってとかっていうこともできるのでそこは別に問題ないかなとさっきのやつほら見て中身入ってますねそう中身入ってるさっき空だったのにさっき空だったのにセットアップ関数を実行したことによってGoogleフォーム勝手に作ってくれましたであともう一個がこれかエディットURLこれは編集エラーだからこれと同じかなっていう感じになりましたどう?ちょっとやってみたいですやってみたい?これどうなるかだけどここでダミー回答送信かメールアドレスに入れたPDFが届けば動作確認OKとやってみますか</p>
+<p><code>16:18</code> じゃあここでステメアド使いますかステメアドそんな機能あるんですかそうこういうのがあってメールを作成じゃないなアドレスこれかあなたのアドレスとか出てきたのでこんなのが出てきたのでこれをアドレスコピーしますとであとは受信メールを表示とかあるんだけどもこれねこれが僕のアドレスでJ株式会社Jマサヒロで入れて商品はこれで数量は10個でって感じで入れますと</p>
+<p><code>16:50</code> いや高かったらどうしようこれでもあれか送信できないのかな公開設定でプレビューだからできないのかだから公開設定を管理するでここで公開にしてリンコしてる全員にしてこうか公開でコピーしますこれ貼り付けますとそしたらここで先のJ株式会社JマサヒロでこれBで15個とかにしてこれ送信しましょうはい送信できましたで時間経ってここに何か出てきたら完了だけどまあそんな簡単にいくかどうかって話したらねさすがにいかないと思うけど</p>
+<p><code>17:23</code> いやエラー出てくる可能性全然あります一旦回答は入ってるよね普通おでもほら見て作られてますね作られてるほらJ株式会社オンジュールJマサヒロさんでもメールが届いてないかなアドレスのこの受信メール表示でメール届いてないと多分ここでうまくいってないっぽいですねPDFは作られたけどって感じかななのでこういう場合はPDFは作成されていましたがメールが届いていないようですどのように確認すればいいでしょうかそちらで確認することはできますか</p>
+<p><code>17:56</code> はいで多分届いてないので多分ねここのこれガスじゃんでここの左側の実行数とかって見てあげるとここで完了とかあるじゃんこれがさっき実行したものでここにエラーってなってないんだけどほらエラーってこれが本当ですねなってるんだよねここをちょっと覚えておいて実行するとこにログが入ってるからこうやってトリガーでオンフォームサブミットフォーム送信されたら起動するみたいな感じなんだけどこれで見てあげると中にログが入っててエラーが起きてるとこれ貼ればいいんだけど本当はそっちの方がいいですねそうただここでクラスプ側で</p>
+<p><code>18:29</code> 実行ログを確認できますということで見てあげると必要で今は使えませんが持った手柄の実行ログちょっと見れるのかなどうだろう多分今コードを書いてるのかもしれない一旦ここはこうやってできたらいろいろあるのでここでこのままコピーしたつけてあげたら一旦いいかなと思います今多分原因切り分け用のみたいなのが書いてあるんだけど実行数を確認と出てくるよねこの通りにやっていければ一旦OKですただここでエラーはこのように出てました先ほどの実行時ですっていうのでほいと貼ってあげます基本的にはどのタイミングで発生したいらのかみたいなところとかも</p>
+<p><code>19:04</code> きちんと伝えてあげたら問題なく解決に向かうかなと思いますA社では一緒に働いてくださる仲間を募集しております正社員業務委託インターン問わず絶賛募集中ですAI×教育事業ですねより大きく成長させていくために一緒にAIそして教育に熱を持って望んでいける方取り組んでいける方を探しておりますご興味のある方はですね概要欄に記載のフォームよりご応募ください皆様のご応募お待ちしておりますなんか原因がわかったっぽくてやってくれてるんだけど</p>
+<p><code>19:41</code> このクラスププッシュっていうコマンドを実行してくれてるんだよ今クラウドフォードがクラスププッシュってこの今手元で動いてるファイルとか編集されたファイルあるじゃんこれをこっちに反映するためのものをプッシュっていう更新のためのコマンドクラスプの中にプッシュとかプルとかクラスプクローンとかいろいろコマンドあるんだけどこれは基本的に手元の今ローカル上つまり自分のPC上で動いているファイルとか作成したファイルを編集してるじゃんこっちこっち編集されてないそれを反映するためにクラスププッシュっていうコマンドがありますよく開発環境と本番環境みたいなやつですかとは違うかな</p>
+<p><code>20:14</code> ローカルとリモートっていうところの違いかなで中もいろいろと書いてあるのでここでさっきみたいにセンドテストメールトゥセルクみたいなのがあるので実行で許可するとあるのでここでリロードしてエディターでさっきのこれの中ファイル増えたりしてるんだよね1個でここの中の書いてあるようにSendTestMailToSelfメイラーのところかなこれかなSendTestMailToSelfってのがあるので自分自身メール送るみたいな感じかなこれ実行してみると権限確認で新たにメールを送信するみたいなところの権限とかが</p>
+<p><code>20:47</code> 出てくるので次へとしてこれで続行としてあげますガス結構権限とか言われますか?そうだね権限は多いだって勝手にメール送信されたりとかさ勝手にさスプレッドシート返信されたら困るじゃん編集されたら困るじゃんで送信完了だってちょっとメール見てあげるとこんな感じで一番上に自分ってきてこれはテスト送信ですっていうメールが送られてるじゃんあーちゃんと送れてますねでテスト送信できましたでメール見てあげるとこんな感じで一番上に自分的てこれはテスト送信ですってメールが送られてるじゃんちゃんと送れてますねテスト送信できましたメールを送れることを確認できたのでそしたらGmail送信OKその後にフォームから本番送信を再度やってくださいとなってますなのでもう一度見積書作成フォームからメールを送信しましょうとさっきと違うのにしたいのでJJJ株式会社</p>
+<p><code>21:25</code> ワンチャンありそうですJ高博さっきのでこれかこちらを入れて商品をCにして数量を2とかにしますで先ほどそのまま見てたら今何も入ってないよね何もじゃない1個さっきのしか入ってないよねこれ送信しますそうするとまずこの見積書が作られるとでPDFが作られてその上でメールが送られるっていう2段構えになってるかなと思いますほら作られてでここでこっち見て更新してあげるとおおー</p>
+<p><code>21:59</code> しかもちゃんとメールっぽい書式でお見積もり書でPDF添付されていや早いしすごいですねこれっていう感じどうですかいややばいこれやばいですねスプシとかと連携できるの現実的になんかいろいろ使い勝手が思いつきますねうんガスねめっちゃ便利なんだよねだからずっと僕はガスを教えてるしYouTubeとかYouTubeでも一番教えてるんだけどそれはやっぱりこんだけ便利だからってのはあるよねだって環境構築とかも特にしてないじゃんガスGoogle Appsケルトだけで使えればいいわけだからメールの承認とかで見ててめんどくさいなと思ったけど1回やっちゃえばもう終わりです1回やっちゃえば終わりだから</p>
+<p><code>22:31</code> あとはメールの見積書が送信されるたびにやってくれるみたいな感じかなガスアツめちゃくちゃいいしこれもっと拡張していくってなったらそれこそ見積書の内容変えるフォームの内容変えるとか別にクロードコードに指示すればいいじゃんあとはそうだなメールの文章を変えるもそうだしいろいろと変更点は全然あると思うんだけども変更すればできるしさっき言ったようにこのフォルダー内に作ってほしいというのはフォルダーのIDとかを伝えてあげたらURLを伝えてあげたらそのフォルダーの中に全部作ってくれたりするからマイドライブの大元の中に作られるみたいなこともないしこの辺は全然工夫次第でやっていくことができると</p>
+<p><code>23:06</code> 要はこれちょっと分かりにくかったかもしれないんだけれども結局今このフォルダー開くと何入ってるかっていうとこういうのが入ってるんだよねこれ今ちょっとカーソルで開いてるんだけどエディターなんか見覚えあるっていうかそうこれ見てあげるとほらここで左側にこうやっていろいろファイルあるじゃんでclasp.jsonでclaspの設定ファイルでこれらが自分のPC上にあるわけだよねローカル上にでこのローカル上にあるファイルを先ほどのここに反映してるわけじゃん全く同じものそう全く同じものを反映してるでこのGoogle Apps Script上の環境クラウド上の環境とこの手元の環境をつなぐためのものがclasp</p>
+<p><code>23:42</code> でつないだ上でそれを反映するこっちのローカルからリモートに反映させるためのコマンドがclasp push逆にこっちから引っ張ってくることもできるそんな感じになってるので今回はめっちゃざっくりとした使い方しかお見せしてないんだけれどもこんな感じでクラスポを使えばクロードコードで作ったものをそのまま反映することができる使わないと普通にクロードからとか毎回コピペしなきゃいけないんだよねこの環境に超めんどくさいじゃんこの環境にこのクロードコードとかカーソルとかコーデックスで作ったファイルを諸々プッシュする反映するためにクラスプってのがあるって感じかな</p>
+<p><code>24:16</code> いもにさんLINE登録したら登録してくれた方に得点渡してるっておっしゃったと思うんですけどあーはいはいあれ何渡してるんですか何渡してたっけなんか10個ぐらい得点あるんだけどえ10個もそんな渡しちゃってるんですね非エンジニアの人がAIとかAIコーディングを学ぶとかにあたって必要そうかなみたいなものをドキュメントにまとめたりとか解説したりしているものLINE登録してくれた人にパイプしてるっていう感じかなLINE追加して得点もらえるだけですか?得点をまずお渡ししてるんだけれどもLINE登録してくれた人限定で勉強会開催してたりとかAIとか特にAIコーディング系の勉強会とか</p>
+<p><code>24:49</code> 今後ちょっとやっていきたいなと思ってるのは定期で質問とかをZoomとかYouTubeライブとかで受け付けるみたいなLINE登録者限定でやるみたいなそういうのもちょっとやっていきたいなみたいな思ってるじゃあこっそり登録して俺も勉強会参加しちゃおうかなJコはもっと学ばなきゃいけないからぜひLINE登録してもらえたら嬉しいし勉強会だけじゃなくて定期で僕がやってるスクールの案内もしたりとか基本的には特典を渡して勉強会とか興味あれば来てもらえたらなという風に思うし今2万人登録ぐらいかなLINE登録者結構いるんだけどそんなにいるんですねうるせーなーと思ったらブロックしてもらえたらいいからとりあえず登録してもらえたらいいんじゃないかなと思います</p>
+<p><code>25:24</code> あーなるほどてな感じでJ君が望んでいた見積書のフォーム送信からの見積書PDF送付できましたこれ見返して僕も自分で使う見積書作ってみると思いますぜひこんな感じでですね結構簡単にGoogle Apps Script作れるしGoogle Apps Scriptを云々と言うよりもクラスプ使うとめっちゃ便利だったりするのでクラスプとクロードコードというかクラスプとAIコーディングの相性がめっちゃいいのでこの辺り使ってもらえるといいんじゃないかなという風に思いますはいありがとうございますコメント返信コーナーいきたいと思います</p>
+<p><code>25:56</code> 今日のコメントはですねクロードデザインの動画にかけるさんからいただいたコメントですありがとうございますクロードデザインとGoogle Stitchどっちがいいのか悩むなるほどですどうですかちなみに僕はペンシルも入れて迷っちゃいますあー確かにペンシルクロードデザインスティッチどれでもいいんじゃないですかって思うんですけどスティッチもいいですよね普通にスティッチもいいなと思うんでどれでもいいかなと思いますクロード使ってるなら普通にクロードデザイン使えるしGoogle使ってるならGoogle Stitchも確か無料とかで使えるしどっちでもいいかなっていう感じはしていて</p>
+<p><code>26:30</code> ただデザイン的な観点で言うとやっぱりGoogleの出すデザインは今のところどれもいいデザインなんだけど似たようなデザインになりがちだったりするかなっていうのは思うのでスティッチ使うとだいぶ良くなるかスティッチ使うのでもありかなとは思いますけど機能的な観点で言うとクロードデザインの方がだいぶ使いやすいのかなとかってのは思ったりこの辺もどっちの進化を望むのかどっちを使うのかどっちもどっちかなって感じはしますね僕はクロードデザインかペンシル使うけれどもGoogleをほぼ使ってないというどちらかというとGoogleを使う理由があんまりないというのが</p>
+<p><code>27:03</code> 正直なところでただクロードを契約しなくてGoogleを使っているというのであればGoogle Stitchがいいと思うしっていうところかなあとは別にね仕様の何か決まってるわけじゃないからクロードデザインは一応トークンの証言あるけれどもあんま決まってるわけじゃないからでもこうやってみていいデザイン採用すればいいんじゃないっていうのが個人的な意見ですはいありがとうございますということで今回はちょっといつもと違ってガスですねガスの実装というところでお見せしていきましたがそれ以外にもいろいろとやっていくことはできるかなというふうに思うので例えばPythonでデータ分析してみるとかなんかいろいろと</p>
+<p><code>27:34</code> この実装実演周りもですねどんどん増やしていきたいなと思っているのでこういうのしたいこういうの見たいこういうの作ってなどあればぜひコメントにお寄せいただけたらなというふうに思いますチャンネル登録していない方はぜひ登録いただけたら嬉しいですということで本日は以上になりますまた次回</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）— Claude Code CLIをGAS開発に使う手法の詳細</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）— AIを使った業務自動化ワークフローの体系</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote）— 業務自動化パターン全般</li>
+<li><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote）— 生産性向上ツール・手法</li>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-961" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

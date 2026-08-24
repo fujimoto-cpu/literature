@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します"/><meta name="twitter:description" content="📺 動画情報 AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-19 ・ ⏱️ 34分17秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「プロンプト→コンテキスト→ハーネス→ループ」の順で進化してきたAI活用の重要概念を解説し、ループエンジニアリング＝AIエージェントが人間の介入なしに自律的に回り続ける仕組み（トリガー・実行・検証・完了条件）を設計する考え方を紹介する動画。 🗺️ 全体像 flowchart TD..."/><meta property="og:description" content="📺 動画情報 AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-19 ・ ⏱️ 34分17秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「プロンプト→コンテキスト→ハーネス→ループ」の順で進化してきたAI活用の重要概念を解説し、ループエンジニアリング＝AIエージェントが人間の介入なしに自律的に回り続ける仕組み（トリガー・実行・検証・完了条件）を設計する考え方を紹介する動画。 🗺️ 全体像 flowchart TD..."/><meta property="og:image:alt" content="📺 動画情報 AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-19 ・ ⏱️ 34分17秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「プロンプト→コンテキスト→ハーネス→ループ」の順で進化してきたAI活用の重要概念を解説し、ループエンジニアリング＝AIエージェントが人間の介入なしに自律的に回り続ける仕組み（トリガー・実行・検証・完了条件）を設計する考え方を紹介する動画。 🗺️ 全体像 flowchart TD..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-19 ・ ⏱️ 34分17秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「プロンプト→コンテキスト→ハーネス→ループ」の順で進化してきたAI活用の重要概念を解説し、ループエンジニアリング＝AIエージェントが人間の介入なしに自律的に回り続ける仕組み（トリガー・実行・検証・完了条件）を設計する考え方を紹介する動画。 🗺️ 全体像 flowchart TD..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-156"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-156" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します</a></div></nav><h1 class="article-title">AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-19T15:00:00.000Z">2026年7月20日</time><span>78 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>AIで効率化したいなら絶対に知っておくべきループエンジニアリングを徹底解説！最新のプロが語るAI活用の概念を解説します</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-19 ・ ⏱️ 34分17秒
+🔗 <a href="https://www.youtube.com/watch?v=CNoHQV2JxTI" class="external">https://www.youtube.com/watch?v=CNoHQV2JxTI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>「プロンプト→コンテキスト→ハーネス→ループ」の順で進化してきたAI活用の重要概念を解説し、<a href="./ai-loop-engineering" class="internal alias" data-slug="ai-loop-engineering">ループエンジニアリング</a>＝AIエージェントが人間の介入なしに自律的に回り続ける仕組み（トリガー・実行・検証・完了条件）を設計する考え方を紹介する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[プロンプトエンジニアリング] -->|一発アウトプットの質を上げる| B[コンテキストエンジニアリング]\n    B -->|渡す情報を整理する| C[ハーネスエンジニアリング]\n    C -->|エージェントが動く環境を作る| D[ループエンジニアリング]\n    D -->|人間なしで回り続く仕組みを設計| E[トリガー→実行→検証→完了/エスカレーション]&quot;">flowchart TD
+    A[プロンプトエンジニアリング] -->|一発アウトプットの質を上げる| B[コンテキストエンジニアリング]
+    B -->|渡す情報を整理する| C[ハーネスエンジニアリング]
+    C -->|エージェントが動く環境を作る| D[ループエンジニアリング]
+    D -->|人間なしで回り続く仕組みを設計| E[トリガー→実行→検証→完了/エスカレーション]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. ループエンジニアリングとは何か </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>2026年6月、元OpenClaw開発者ピーター・シュタインバーガーの「エージェントにプロンプトを打つのはやめよう、プロンプトを打つループを設計しよう」という投稿が発端。Googleのアディ・オスマニ、Anthropicの<a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>開発者ボリス・チェルニーらが同調し広まった概念で、<a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>が人間を介さず勝手に回り続ける仕組みそのものを設計することを指す。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. ループを構成する7つの要素 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>トリガー（起動条件）／インプット（何の情報を見るか）／ステート（今の状態・記憶をどう持つか）／アクション（何を実行するか）／ベリフィケーション（完了条件を満たしたか検証）／エスカレーション（判断できない時に人間へ確認を求める条件）／完了・停止条件。この7つを決めることで、AIが「勝手に回って、勝手に止まる・人に聞く」状態を作れる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. プロンプト→コンテキスト→ハーネス→ループの関係 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>プロンプトエンジニアリングは一発の指示の質を上げる技術、コンテキストエンジニアリングはAIに渡す判断材料（背景・過去ログ・ルール）を整える技術、ハーネスエンジニアリングはエージェントが動きやすい環境（権限・ツール連携・スキル・メモリ）を作る技術。ループエンジニアリングはこの3つの土台の上に成り立つ「一連の仕事の流れそのものを設計する」考え方で、どれか一つが不要になるわけではない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 便利さはミスも増幅する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ループが回り続けるからこそ、確認せず先に進む・気づかないうちにAPIコストを消費し続ける・検証不足で見当違いのアウトプットを出し続ける、といったミスも増幅される。「完了は主張であって証明ではない」＝検証されて初めて完了、という姿勢と、いきなり完全自動化を狙わず小さく整理してから始める姿勢が重要。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 今動かしてる無人スキルを「7要素」で棚卸しする</strong>
+nightly-vault-build・watch-inbox・nudgeなど無人稼働中のスキルで、トリガー／ステート／完了条件／エスカレーション条件の4つが明文化されているか一度チェックしてみる。曖昧なまま回っている仕組みがあれば、そこがミス増幅リスクの穴。</p>
+<p><strong>② 新しいスキルを作る時は完了条件を先に決める</strong>
+「とりあえず自動化」ではなく、どこまで行けば完了か・どこでゆりこに確認を求めるかを最初に1行で言語化してから設計に入る。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 友達で新しい外に考え方が出てきているめっちゃ頑張ってる風の何もしてないバカ みたいな4日 皆さんこんにちは ai プログラミング講師の今にですよりさんはい最近 x とでループエンジニアリング見たんですけどなんだそれとなっている エンジニアリングですよわかんないですよねコンテキストエンジニアリングとか今地さんが言ってたのを覚えててループエンジニアリングはまだ聞いてなかったなと思ったんでそうね本当に最近出てきた概念だし今までの流れに対して</p>
+<p><code>00:33</code> 順当に来た概念だなみたいなところではあるかないやって言われるの目に見えてるけど教えてくださいもちろんいいですよ今日いいんですか?もちろんループエンジニアリングについてはちゃんとお伝えしようかなというかJ君ちなみに何々エンジニアリングで言うと何が知ってる?プランプとコンテキスト黒いですよねいいんじゃない?プロンプトコンテキストで次ハーネスエンジニアリングがあってその次ループエンジニアリングって一応流れになってるのでそのあたりの流れ含めてちょっと今日は紹介していこうかなと思うんでループエンジニアリングって何なのかみたいなところこれもねバズワードみたいなプロンプトエンジニアリングじゃなくてコンテキストエンジニアリングだみたいなところからの</p>
+<p><code>01:09</code> ちょっとしたパワーワード的な流行りしたりある中でのワーディングみたいなところはあるんだけど個人的には確かにその通りかなと思う部分もあるので賛否というかなんかちょっと反対意見とかまだ早いんじゃないかみたいなそういうことを言ってる人もいるんだけれども今回はこのループエンジニアリングっていうのはそもそもなんでこの話が始まってみたいなところを含めて伝えていこうかなと思いますがそれでもいいですかはいお願いしますということで今日はループエンジニアリングについてお話ししていこうかなと思いますはいということで今日もスライドを用いながら説明していこうかなと思いますはいということでAIが動く仕事の流れを設計する考え方</p>
+<p><code>01:42</code> ループエンジニアリングとはということで話しに行こうかなと思います最初にクエスチョンとありますが毎回お願いしてるのになぜ忙しいこれ要はAIに聞けば答え返ってくるしAIいろいろと出力してくれるじゃんでもなんか忙しくない?確かに結局ずっと僕AIに聞いて考えてそうそうそう時間忙しいですねチェックしてみたいな結局さこの流れの中に絶対人間入ってくるじゃんだからもちろん今までよりもめっちゃ楽になってるよねできなかったことできるようになってるよねそれに今までよりも明らかに生産量増えてるよねでもなんか忙しくない?</p>
+<p><code>02:15</code> 忙しいですその通りでその通りでって言ってかまあごめんめちゃくちゃ忙しいし忙しさ消えてないよねとこれやっぱりAIに聞きます結果見ます判断しますまた依頼しますこの輪を結局誰がやってるかっていうと人間そう人間がやってるわけだよねなった時にこの聞いてとか結果見て判断してっていうこのサイクルを考えた時に基本どこにも大体の場合人間が滞在してるよねっていうのが今の現状で多くの人がそうですよねでそんな中きっかけとして海外の一歩の投稿ということでピーターシュタインバーガーって人知ってる?どうですかちょっと雑魚バーガー</p>
+<p><code>02:48</code> 知らないの?知らないですよオープンクロー作った人オープンクローってあのカニのあれ作った人がピーターシュタインバーガーって人で今オープンエア入ったけどねその人が6月にこんな投稿しましたと下にバーっと書いてたんだけどもなんていうとエージェントにプロンプトを打つのはやめようとプロンプトを打つループを設計しようって言ったんですよでここから起点にポンポンポンポンと他の人たちもどんどんこの話をし始めたみたいなところなんでね今のピーターさんのピーターがシュタインバーガーさどっちで言えばいいか わかんないけどこの人が投稿したのをきっかけにこの投稿が600か700万ぐらいインプレッションいって結構拡散されたんだよそこからアディ・オスマニっていう人Googleの人なんだけどもこの人がループエンジニアリングという風に名付けて</p>
+<p><code>03:34</code> ブログかなんか投稿したんだよねこれに加えてまたアンセロピックのクロードコードを開発している人だったかなボリス・チェルニーさんだと思うんだけども同じような考え方を発信して結構同調してみたいな感じでここから一つの投稿からポンポンポンと本当に開発このAIの最先端を行く人たちがいやそうだよねこれループエンジニアリングって名付けようループエンジニアリングそうだよね自分も同じ考えみたいな感じでバッと盛り上がってそこからいろんなメディアというかいろんな人が取り上げてループエンジニアリングっていうのがNEXTとかいろんなところで出てくるようになってきたっていうのがざっくりときっかけなんだよね</p>
+<p><code>04:07</code> 2026年6月ってめっちゃ最近の話じゃないですかそうめちゃくちゃ最近の話だから今この撮影日時点7月1日ですけれども実際にねこの6月なんでもう本当キンキンの話って感じかなでこれ何なのかっていうとこれ時代の流れをちょっと振り返ってみましょうみたいなところで書いてるんだけどなんとかエンジニアリングの一番の始まりはプロンプトエンジニアリングその次コンテキストエンジニアリングでJ君はここまで知ってたよねで実はその次にはエージェント周りでハーネスエンジニアリングっていうものがあってでその後ループエンジニアリングが来たんだよねでこれはやっぱりプロンプトから始まったちゃんとの変遷があって</p>
+<p><code>04:44</code> それこそ技術がどんどん進化していってAIが進化しているこの成長の過程に伴って重要な考え方技術概念っていうのが変わってきたよねっていうのを表しているとも言えるわけね僕大丈夫ですか?ハーネス飛ばしてループなのって一旦飛ばしていいかな結局ハーネスってAIエージェントが動く環境をどう作っていくかみたいな動きやすい環境をどう作っていくか例えばメモリどうするのかとかどういう風にスキル構築していくのかとか諸々のエージェントが動く環境を設計していくことをハーネスエンジニアリングって言うんだよねなのでこれ一旦飛ばしても全然大丈夫っていう感じです</p>
+<p><code>05:17</code> この全体像はこんな感じっていうのを抑えた上で次のスライドなんだけれども新しいプロンプト術みたいなものではないってことは前提として抑えておいてほしいそうなんですね今まではプロンプトエンジニアリングとかで一回の指示をどうのこうのみたいな一発アウトプットを良くしていこうみたいなあったと思うんだけどこれはもう指示文とかプロンプトの話じゃないんだよねもっと大きなAIとかAIエージェントを使っていく上でこのAIエージェントが勝手に動く仕組みこの一連のループをどう設計していくかみたいな話になってくるんだよねいつどのタイミングでAIエージェントが動いて何を見てどういう基準をもとに</p>
+<p><code>05:52</code> どういう風にアクションしていくのかみたいなところをこのループいわゆる何か実行して検証してみたいなところの流れをもとにループエンジニアリングみたいなのが出てきたってわけなんだけどもこのスライドで伝えたいところとしてはプロンプトテクニックとかプロンプト道のコーナーではもう全くないっていうところねそこはちょっとまず最初に押さえておいてほしい点ですこれもさっきのところで言うと下からプロンプトコンテキストハーネスそしてループとなってるんだけどもどちらかというとプロンプトエンジニアリングっていうのは一発のアウトプットというかどうプロンプトを指示文を工夫することによっていいアウトプットを出すかみたいな話</p>
+<p><code>06:26</code> でコンテキストはJ君コンテキストってなんだっけコンテキストは情報ですよね情報ね背景情報背景とか目的AIに渡す情報だよねこのAIに渡す情報をどう整理しましょうか机の上にある情報をどうやって並べましょうかみたいなところでカーネスは作業する場所このAIがここで作業するとなった時にその環境をどう作っていこうかみたいなところループはこの検証できるこの勝手に回っていくサイクルをどう設計していく要はAIが動きますでこれ検証しますよかったらそのまま回りますもう1回次行きます逆にこの条件に当てはまらなかったら人間にじゃあ確認依頼求めようみたいな</p>
+<p><code>07:00</code> 勝手に回っていったら良くないみたいなこの設計をどうしていくかみたいなのがループエンジニアリングの簡単に言うとループできたら確かに最強じゃないですか最強じゃないですかエージェントが動きやすい仕組みを作りましたってのがハーネスエンジニアリングその次のループエンジニアリングはいわゆるこの勝手に動き回る勝手に動くのはずっと動いてるわけじゃなくて何かあったら動き始めるとかそういうことなんか外の起点を例えば支持分があったみたいなプロモークとか入ってきたみたいなのそうだしそうじゃなくて例えば外の何かしらの変化値が変わったら動き始めてでこれでくるくる回って条件満たしたから止まるなのか条件満たしたからこっち行くなのかそういう勝手に動いていくくるくる回っていくサイクルループを回していくこの設計をどうしていこうかこれを作るのが大事なんだよループエンジニアリングと呼ぼうかざっくりそんな感じだね</p>
+<p><code>07:44</code> そう言われてみたら今野さんのミッチーくんAIエージェントめちゃめちゃループしてますよねそうだねいわゆるAIエージェント常駐型のAIエージェントとかはループもあるしまだハーネスの部分なのかなというか間違って言うとハーネスエンジニアリング的なところでじゃあどうやってあのAIエージェントうちで言うとミッチーというエージェントがいるんですけどこのミッチーにどうやってスキルを持たせるかどうやってメモリを持たせるかどうやって情報を探させるかとかその作業土台を整えてるっていう感じに近いからまだハーネスエンジニアリングなのかなっていうところもちろん一部はループ的なところもあって</p>
+<p><code>08:18</code> あるイベントをきっかけにして勝手に動いてもしOKだったらそのまま進んで停止しておくみたいなダメだったら人間に何か通知飛ばすとかそういうところもあるかもしれないなと思うよねざっくりとねで改めてなんだけれどもプロンプトはこれも1回の指示をどれだけ的確にポンと一発投げてはいいいアウトプット出ましたっていうのがいわゆるプロンプトエンジニアリングなのでAAの1回1発アウトプットこんなしアウトプットを可能な限りクオリティを高めていくっていうのがトランプとエンジニアリングいわゆる指示書の部分だよね次がコンテキストということで判断材料を整えていく</p>
+<p><code>08:51</code> これはよく僕が言ってるようにAIと対話しながら情報を渡していこうね音声入力で必要な情報を渡していこうねって話だと思うんだけどもまさにこれでAIが判断するために見る材料というかこれをちゃんと整えておきましょうねコンテキストないといいアウトプット出ないよねみたいな話は多分J君には何度も伝えてるよねそれが例えば必要な資料だったりとか顧客情報ルールあとは過去のログ過去こういう風な動きをしたから次こうしてほしいとか過去の情報あった方が次の新たな一手打つ時にその情報を参照していいアウトプット出そうじゃないとかそういう風にいいアウトプットを出すために必要な情報って</p>
+<p><code>09:27</code> どういう風に設計してどういう形で持っておけばいいのかっていうのがまるっとコンテキストでありコンテキストエンジニアリングだったわけねで次がハーネスということでこれはAIエージェントだねAIというのはもっと言うとAIエージェントが自律的に動くための環境この環境をどう作っていくかみたいなところでそれこそ権限を渡したりとか検証できるようにしたりとかログを出力しましょうとかレビューしていくような仕組みを作りましょう外部と外と連携できるようなツールを連携していきましょうとかツールが使えるようにしましょうとかスキルを整えていきましょうとかこれは結構ハーネスエンジニアリングってざっくり言うと</p>
+<p><code>10:01</code> AIエージェントが動く環境なんだけれども人によって定義とかちょっと変わったりするのでざっくりとそのエージェントが動きやすい環境をどう設計していくのかエージェントを育てやすい育成しやすい環境をどう作っていくかみたいなのがハーネスエンジニアリングで僕自身はこキル、エージェントスキルだったりメモリとかこういったところが特に重要なんじゃないかなとかそういうふうには僕自身は思っているという感じです弊社では社員研修やセミナー登壇のほかAIネイティブな組織作りのための内製化支援などAI×教育領域で様々な支援を行っていますご興味のある方は概要欄に記載のフォームよりご連絡ください</p>
+<p><code>10:39</code> 今回がループエンジニアリングとこれが仕事を回して確かめると書いてあるんだけどもイメージ何かしらのきっかけで動きますステップ1書いてある通り何かしらのきっかけってのは例えば何か値が変わりましたフォームが送信されましたもしくはユーザーが何か入力しましたそこでユーザーがスラックでメッセージを送りましたとか何かを起点にきっかけがあって動きますそしたらAIが動き始めて実行しますその実行した結果良ければそのまま進めるかもしれないし止まるかもしれないしダメだったら人間にヘルプを求めるのかこういう風に特定の条件を満たすまでひたすら実行して検証して実行して検証してっていう風に繰り返していくこの状態をこうやってループが勝手に回るような状態をどう作れるかっていうのがループエンジニアリングみたいな話なんだよね</p>
+<p><code>11:23</code> 毎回人が見てチェックして見て見て終わったねじゃあ人間確認しますみたいなじゃなくて完了条件をきちんと定めておいてひたすら動いてもらうイメージゴールコマンドあるじゃんあれに近いが欲しいんだよねあれはひたすら動かしておくためだけのものではあるんだけれども一番J君の身近な部分でイメージしやすいものとしてはクロードコードとコーデックスとかにあるゴールコマンドだよねこんな感じで実行して確かめてテストしてうまくいかなかったら改善してみたいなそのサイクルを回していくと満たしたら人間が最後最終確認するとかもしくは特定のラインでダメだったら</p>
+<p><code>11:58</code> 特定の条件に合致しなかったら人間が最終で承認するとかそういう風に基本人間いなくても回るようなこのループサイクルをどう作っていくかみたいなところ回すのは勝手に回るような仕組みを作ろうぜ人はあくまでこの回るような仕組みをどう設計していくかつまりどこで終わるのかどうしたらアラートを出すのか要は人間側にエスカレーションするのかとかそういう条件決めて最後に承認すればいいよねみたいなざっくりとループエンジニアリングはそんな感じですちょっと難しいかもしれないけどねということでさっきも伝えたようにループエンジニアリングっていうのはAI、AIエージェントが動く仕事の流れとか</p>
+<p><code>12:32</code> 一連の工程これを設計することをループエンジニアリングと呼ぶと言ってもいいんじゃないかなと思いますいつ動くのとかAIが何を見るの何をどういう情報を見てそしてそのAIエージェントが実行した結果どういう状況を満たせば完了なの場合によってはどこで人が承認しなければいけないのみたいなこの完了を検証できる勝手にくるくるくるくる回して検証していける条件を決めていくとかこうだったらこうだよねみたいなところの本当に何かタスクを任せる何かオペレーションを任せていく上でのこの全体のループサイクルを設計していくことがループエンジニアリングなんじゃないのみたいな</p>
+<p><code>13:07</code> もちろんこれはね大きく捉えるかもしれないし具体の業務でめっちゃ細かくこの一連の工程をぐるぐるぐるぐる回るように人間なしでAI主導で回していけるようにみたいなところも一つ含まれるかなっていうところねはいでこれは別になんか繰り返しひたすらやってもらうみたいなそれこそ空論と呼ばれるような定義実行の仕組みであったりとかプロンプトをボンボンボンボン投げてそういう風に毎週そのまま投げてみたいな繰り返すってわけじゃなくてどういうAIが状態でかつどういう完了条件どういう停止条件があってそれがちゃんと状況を満たしているかどうかをどうやって検証するのかそういうのを設計できている状態</p>
+<p><code>13:40</code> っていう感じかな? はい、ざっくりと。ループを構成する7つの要素これもざっくりループを構成する7つの要素と書いてあるんだけれども左側の起動と入力ってトリガーって、J君聞いたことない?トリガーはトリガーですよね。そうですね。 エヴァンゲリオンとか出てきた。そうね。何かしらの外側のイベントとかきっかけだよね。Webhookとか。あ、そうそうWebhookとか。そうそうそうそう。あとはGASとかでもよく出てくるトリガーみたいな。はいはいはい。 こうなんだけれども。あとはインプット、何かしらの入力が入ってきたらみたいな何かのイベントが大事だよねループを設計する上で</p>
+<p><code>14:12</code> ループがどうやって始まるのかとか何を起点に始まるのかっていうのがないといけないじゃんその軌道の部分をトリガーだったりインプットっていう風に呼んでますでそれが始まったらあとはAIエージェントが動いていく実行していく必要があるよね実行するだけじゃなくてやっぱりこのぐるぐるぐるぐる回していく上でこのAIエージェントが今どういう状態なのかとかどういう記憶を持っているのかとかそういった状態管理みたいなところが必要だからこそステートみたいなものも必要です英語で書いてあるんだけども要は実行していくために自分がどういうスチュエーション</p>
+<p><code>14:44</code> どういう情報を持っているどういう状況なのかっていうのを理解して実行していくみたいなところだよね実行してこれずっと実行してたらさただ勝手に無限にただひたすら実行実行実行実行実行ってなってるけど実行するってことは何かしら完了してほしい条件というかこのゴールがあるんでしょこのゴールがちゃんと定まってるのかこの確認基準だったり完了基準だったり逆に言うとアラートを上げる基準だったり停止する基準こういったのが定まってるかとでベリフィケーションって書いてあるのはいわゆる検証みたいなところだよね検証をどうやってやるのかもそうだしあとはエスカレーションということでこれいわゆる人間側に承認を求める条件みたいな</p>
+<p><code>15:19</code> いやこうこうこうだったらみたいなこうこうこういう条件だったらとかそういうのを定めていくのがやっぱ大事なんじゃないのみたいなじゃあそれこそこの7つを設定しておくというかこれさえ7つ決めとけばループエンジニアリングできてますか?ざっくりとね僕自身そんなループエンジニアリングだと思って設計してたわけじゃなくすごく端的に言うとAIが勝手に動くような仕組みを設計しようって話だよその中でAIが勝手に動くってことはぐるぐるぐるぐる動いてるってことだからループエンジニアリングだよねみたいな極端な話そう簡単に超簡易的だけど捉えても別におかしくはないかなと思っていてこの動く仕組みを作るために</p>
+<p><code>15:51</code> 何があったら動くのかどうやって動くのか動いてるエージェントはどういう状態なのかどういう記憶を持ってるのかかつそのエージェントが動いた先にいつ止まるのかどういう条件でこれをクリアとするのかみたいなところがやっぱり必要だから環境を用意して何かのイベントを起点にその環境で動いてであらかじめ決めておいた条件をもとに人間に最終承認を得たりもしくは止まったりそういったところを設計していくこういうあくまで7つの要素とかを含めて設計していくのがループですよループエンジニアングですよみたいな感じだよね</p>
+<p><code>16:22</code> でいつ動くか見るこれもさっき言ったところだね毎週決まった時刻に動くとか商談が終わったら動くとか問い合わせが増えたら動くとかじゃあどこで見るのとかメール見ます履歴見ますメモ見ますとかそれこそどういう情報を入れるのみたいな根的さみたいな部分も含めるよね動き出す条件とそれに伴う材料みたいなところで次がこの何を覚えて何をするかみたいなところでステイトってよく状態とかってこのプログラムとか開発領域で言うんだけれどもステイトっていうのは未対応保留対応済みですみたいなところを覚えておかなければいけないとかあるいはじゃあ過去のセッションとか過去のチャットから引き継いで</p>
+<p><code>16:55</code> 前回からの続きメモリ記憶的なところもちゃんとあった方がいいよねとか続きを覚えてた上で今ゼロスタート毎回してたらバカじゃん毎回毎回さじゃあ例えば第一章書きます終わりました第1章書きます終わりました第1章また書きますみたいなもう単なるバカじゃん第1章終わったってのを覚えていてその上で第2章いきます第2章この基準クリアしましたこのライティング的に多かった点数的に95点以上だよ大丈夫だじゃあ次第3章みたいななんかそういう感じにしておかないといけないよねみたいなでアクションとしてはこれは別にいろいろあるわけだからあくまでここに書いたのは適当というか</p>
+<p><code>17:29</code> 分類したり予約したり色々あるかもしれないよねっていうところですでじゃあこれさっき言ったようにどう確かめどこで止めるのかみたいなところでVerificationって書いてあるのは条件を満たすか判定する条件これ満たしてんの?満たしてないの?っていうこの部分を判定していくこれがAIがねこうやってこれ満たしてる満たしてないみたいな判断してこれちょっと判断難しいなーみたいなものが来たら人間に承認を求めるそうじゃなければ動くこの条件は大丈夫そうじゃあ次行って次行ってこれちょっと判断あやふやだからちょっと人間承認求めようかとかエスカレーション</p>
+<p><code>18:02</code> そうそうエスカレーション投げるよく冗長にエスカレーションするとかあるじゃんそういうさ自分で判断できないものを上に上げるみたいなところエスカレーションっていうよねそれと同じように結局AIがエスカレーション投げてくれるような状態を作れば勝手に動いててもいいじゃん確かに勝手にこうやってくるくるくるくる動いててもここでちゃんとおいもう気づかないうちそんなことやってみたいな状態だったらまずいと思うんだけどそうそうそう危ないところでよく聞いてくれたじゃんみたいないやなんかJ君とかあると思うんだけど悪いことやっちゃったなって言った時にずっと隠しておくのよくないじゃんやっぱそういう悪い状態とか</p>
+<p><code>18:34</code> 何かしら難しいところ何かしらあったらやっぱ承認求めたり確認求めたりとかするじゃん確かにワニさんの動画消しちゃった時とかそうそうねそういうの早めに言わないといけないじゃんっていう条件があったりしたらそういうのを元にエスカレーションしていくと逆にどこで終えていいんだよみたいなずっと動いてたらさ何もしてないのに動いてたらやばいじゃんなんか完了条件満たしてあげないとひたすら何かよくわかんないけどトークン消費してみたいなことになってしまうのでちゃんとこの回数とかって決めてもいいかもしれないしこの条件を満たしたらみたいなエルドその条件の設定ってあると思うんだけども回数なのか費用なのか</p>
+<p><code>19:06</code> もしくは特定の指標なのかわかんないけどそこをクリアしたらそれを元にストップさせるみたいなこういうのもやっぱ設計していけばAIがくるくるくるくる回って勝手に育っていく勝手に動いて自律的にやっていくような状態作れるよねみたいなもちろんその重要なのはそれ作ってこれ言葉では言うの簡単だけどさAIがちゃんとその検証基準を守ってくれるように動かすってめっちゃ難しそうじゃない?めちゃめちゃ難しそうですおそらくその反対コメントで見てないけれどもそんな簡単にいかないよみたいな意見があるのも分からなくもないよね</p>
+<p><code>19:37</code> だって条件はこうこうこうですって言ってさそれこそねJ君もエージェントを作ったりとかスキル作ったりとかした中で思ったようにいかないとか書いてあるのに言うこと聞かないみたいなのってない?めちゃめちゃ経験しましたそれがさこの状態でも起こるわけだからさ例えば完了条件決めましたとかピッて決めたけどなんかもう安心と思って見てたら全然完了条件満たしてないのに次進んでるみたいなはいはいはいことが起こるかもしれないから結局この部分でプロンプト的なテクニックプロンプトエンジニアリングみたいなことも必要だったりコンテキスト的なところも必要だったりいろいろと今までの流れを加味した上で</p>
+<p><code>20:09</code> 必要な部分っていうのはもちろんあるんだよねさっきコンテキストいいやと思ってたけどそういうわけじゃないです全部大事正直プロンプトもコンテキストもハーネスも今回のループも全部大事かなどちらかというとフェーズが違って それこそAIの進展技術発展そしてAIの成長によってそもそもプロント エンジニアリングが出た時ってAIエージェントの話ってなかった はずなんだよね確かにそんなにやっぱりこれAIエンジニアリングが出てきたっていうこのAIの成長、この進化に伴う形で新しい概念、考え方が出てきてるでもじゃあいらないかっていうとそういうわけじゃない</p>
+<p><code>20:42</code> プロンプトエンジニアリングも正直大事だしコンテキストエンジニアリングもめちゃくちゃ大事これはどこで大事なのかっていうのを理解しておく必要があるしプロンプトなんて今いらないとかっていう人もいるかもしれないけど確かにいらない部分は増えてきてるけれども実際問題プロンプターエンジニアリングができないと困るよねみたいなシーンはポチポチポチポチ出てきているので全部が正直必要その中で新しい概念としてループが出てきたって感じかなA社では一緒に働いてくださる仲間を募集しております正社員業務委託インターン問わず絶賛募集中ですAI×教育事業ですね</p>
+<p><code>21:15</code> より大きく成長させていくために一緒にAIそして教育に熱を持って望んでいける方取り組んでいける方を探しておりますご興味のある方はですね概要欄に記載のフォームよりご応募ください皆様のご応募お待ちしておりますでループ風の依頼って書いてあるんだけどこの辺はちょっと一回飛ばしていいかなそれこそこの綺麗な流れにしていく上ではやっぱり判断基準だったりとか完了の条件だったりとかどこで人間の確認を出すのかとかどの情報を読みに行けばいいのかとかこういう情報をきちんと設計しなきゃいけないなんかこれってさ</p>
+<p><code>21:48</code> 人間だったらまだその条件書いたら言葉を理解してちゃんと指示に従ってくれるかもしれないけど結局これもさ例えば専業ぐらいある指示書だったとした時にさその条件全部守れるかって言ったらさ無理じゃない?無理です僕は大丈夫だけどジェルリー君無理じゃん僕は無理ですね僕は無理だけど専業なんてあったらさ分からないじゃんミスるじゃん確かにミスりますねなった時にじゃあどれだけコンパクトにできるかとかちゃんと今のAIの能力を理解した上でこの関連をこういう風に指定したらちゃんと完了条件足したなってのを理解してくれるかとかどの情報を渡せばいいのかとか</p>
+<p><code>22:21</code> その情報の渡しやすい設計になってるか情報が渡しやすい形になってるかっていうのはコンテキストエンジニアリングだりハーネスエンジニアリングでもあるわけだよなのでこのループを回す上ではコンテキストもちゃんと整ってないといけないしループを回す上でやっぱりハーネスと呼ばれるAIエージドが動く環境自体も整ってないといけないからこういう流れが来てるっていう感じだよねはいでこれも問い合わせ対応の流れにつるみたいなところだけど例えばだけれども毎朝新着の問い合わせを集める本文と前回までの対応状況を見て分類して改善案と返信広報を作って必須項目を自動で確認して</p>
+<p><code>22:53</code> 最後に人間が承認していけることがこれ適当ねあくまで適当だけども何かしらそういう状況があった時に問い合わせ来ましたとか何かしらのトリガー起点でスタートしますじゃあ情報として本文とあとは前回までの対応状況とか取ってきます記憶的な部分とかだよねそれを元に分類してとかいろいろとあるわけじゃんっていうのを設計していきましょうっていうところかなこれもいいかな終時報告をとかどうだろうここに書いたけどもこの採用的なところで言うと例えば応募者の対応来ましたなんかやっていきますやってもらいますみたいなこれが例えば特定の条件</p>
+<p><code>23:25</code> 不合格っていう条件になるまでひたすら回してもらいますみたいなで最後最終面接のところだけ例えばこの条件まで持ってきたから人間に最後合否下してもらおうみたいなわかんないよ例えばこの1次から3次面接まであった時この一連の流れでじゃんなった時にこの流れの中で1次面接とか2次面接とか2次面接とか2次選考とか書類とか何かしらのその iq テスト みたいなやってもらうとしたらこの iqテストが例えばこの基準でこうこうこう いう状態だったら次に放送決めとけばいいそれ通りに入ってたら最終 面接まできます最終面接は最後に人間がしましょうねみたいな一連の苦労を考えた時にそれぞれの通過点とかそれぞれのこの流れの中で</p>
+<p><code>24:03</code> どういう条件を決めておくかみたいなところもちょっと採用とかで考えるとイメージしやすいんじゃないかなとは思ってます便利さはミスも増幅すると書いてあるんだけれども回り続けていくからこそもちろん間違いなくミスも繰り返される可能性があるさっき言ったよね本当は確認必要なのに確認せずに勝手に進んでるとかあとはもう勝手にずっと回っててうわめっちゃトークン消費してるじゃんAPIコスト高っみたいないやだないつの間にか破産しましたみたいなだからねはい検証不足って書いてある本当にこれは検証がきちんとできてなかったら意味ないしとかそもそもの内容を理解してないから変なアウトプットしか出なくて</p>
+<p><code>24:36</code> めっちゃ頑張ってる風の何もしてないバカみたいなちょっと言い方あれだけどねでもなんかそんな感じでめっちゃ頑張ってますみたいなでもなんかやってること全然トンチン噛んでみたいな状態になっちゃうそれこそ設計めっちゃ大事ですねそうね設計大事だし設計してもうまくいくか分からないからこそちゃんと最初テストしてうまく回るのかも確認しなければいけないし最初からこのループエンジニアリング作ろうとか思わない方がいいよね普通にまずループエンジニアリングだみたいなこの言葉に惑わされていろいろと考えるんじゃなくてやっぱり最初に必要なのはこのオペレーションをちゃんと分解して工程分解してここでこういう処理があってみたいな言語化していく</p>
+<p><code>25:12</code> そして基準を明確にしていく状況を明確にしていくってことだったりするのでこういったミスとかも間違いなくあると思うけれども本当にループエンジニアリングうんうん関係なくやっぱり自分の今何かAI化しようとしていることを効率化しようとしていることに対しての情報を整理していく整えていく理解していく言語化していくってところは今後もやっぱり必要だなって思ってますでこれも完了は主張であって証明ではないと書いてあるんですがいわゆる終わりましたじゃなくて検証されたらちゃんとそこでこの条件どうなったかって検証されて完了だよねそういうところも含めてこの設計とかね</p>
+<p><code>25:46</code> 僕も話してて今頭がごじゃごじゃしてきてるけどこのループエンジニアリングというもの自体は考え方としては複雑な感じはするけども結局AIが勝手に動いていくような仕組みを作ろうみたいなそのためには条件とか検証とかそういう検証していくための土台とかが必要だよねみたいなざっくりとそんな感じでございますということでさっき言ったよね小さく始めるのは整理からということでいきなり完全自動化とかループを作ろうじゃなくてまずは簡単なところからポンポンポンポン回っていくみたいな入ってきたらどんどんやっていくみたいなどんどんリスクの高いところに対して適応していくっていう感じかなと思いますこれの重要なところ</p>
+<p><code>26:19</code> いろいろ言ってきたところもあるんだけど人間の役割がどんどん上流に移ってるんだよね開発とかスキル作る時も設計こっちでやってあと勝手に作ってくれちゃうじゃん今も要件定義とかは基本的にこっちでやりつつもAIと一緒にやってみたいなのがあると思うんだけど今までこっちが手を動かすみたいなことが多かったのがそれよりもどういう流れでどういうフローでAIが動いていくのかそしてこの動きが滑らかになるためにはちゃんと動くためには自分の意図したように勝手に動いてもらうためにはそこの設計をしていかなければいけないその設計のためにはここに書いてあるどういう目的で</p>
+<p><code>26:51</code> どういう制約条件前提条件があって何を関連を基準とするのかどういうふうに評価していくのかそしてどのタイミングで承認するのかとかそういったところをきちんと設計していかなければいけないよねだからもうAI勝手に回るような仕組み作ればいいんだけどもその仕組みを作る設計していくっていうループを作っていく設計していくっていうのがやっぱこれから大事なんじゃないかっていうのでプロンプトコンテキストハーネスからのループエンジニアリングが出てきてるっていう感じかなはいということでもうループを組んだとしてもきちんと人間は判断をする立場としていなければいけないのでここはちゃんと人間の判断基準これだったら合格これだっ たら動くこれだったら通していいこれだったらダメこれだったら止めるこれだったら 人間に承認を得るそういうのをきちんと</p>
+<p><code>27:31</code> 決めていく必要があるので基準を作るって いうのはめちゃくちゃ大事だしルールを作るということも同じくらいないしも同じ でルール基準それを作っていくのやっぱり人間の役割ではあるしもちろんねこの基準 を作っていくところに ai を活用していくっていうのもあるんだけれども判断と いうところ意思決定でここはやっぱり人間のやっていかなければいけないところであり その判断する前の部分をきちんと設計してai エージェントが勝手に動いて くれるどんどんどんどん自分で自律的に動いてくれるような仕組みを作るこれが ループエンジニアリングっていうところなのかなっていうふうに思ってますただ これもこのループエンジニアリングみたいなのもだいたい同じような解釈で 悪者の人によってここが大事だここが</p>
+<p><code>28:07</code> アレだったっていうのは違う人もいると 思うのであくまで僕はこういうふうに考えてますよぐらいに思っていただけたら 一つの学びになるんじゃないかと思っていますはいという感じですが j 君どうなんかループエンジニアリングちょっと僕が一方的にバーッと説明したけど今の話聞いてどう感じた僕も毎月レポートを作ってるんですよ毎月クライアントに出すレポートを作ってそれをちょっとスキル化しようかなとか思ったところにさらにそのループエンジニアリング的な自動で動くみたいな仕組みを作ってそれこそAIエージェントっぽくしてみようってずっと考えてましたおおいいねいいね</p>
+<p><code>28:38</code> 本当に最初からさそれこそ今回Googleの開発者もクロードコードの開発者もあとはオープンクロードを作った人もっていうすご腕のエンジニア開発者の人たちがそういう発信をしてるわけだよねなった時にその人たちからするとすごい難易度の高い話かもしれないけれどもでも言ってることってさループって大事とか確かにそうだなっていう話だと思うね全部を取り入れようとかループエンジニアリングをやろうみたいなそういうモチベーションになる必要なくて確かにループエンジニアリングが生まれたこの流れであったりとか確かにこれ重要だよなっていうポイントに気づいてそれを踏まえてエージェントとやり取りしていけるかってことの方が</p>
+<p><code>29:15</code> よっぽど大事だと思うのでこれをもとにループエンジニアリングやってみようとは別にならなくてもいいかなっていうのが正直なところなんだよねどちらかというとこの内容を踏まえて確かになAIが何を起点に動くのかとか設計できてなかったなとか確かに前回の内容をもとにエージェントがきちんと動くような仕組みを作れてなかったなとか確かになんかうまくいいアウトプットが出なかったっていうのはきちんとこの基準が定まってなかったからなんだろうなとか勝手に動いてたのはちゃんとこの停止の条件を明文化できてなかったからなんだろうなとかそういう要所要所での学びが今回のこのループエンジニアリング</p>
+<p><code>29:47</code> というところにおいてあれば皆さんにとっていい内容だったんじゃないかなっていう風に勝手に思ってますてか今西さん僕それこそループエンジニアリング作る上で7つの要素のシートあったじゃないですかチートシートできたあれ見ながらトリガーとかインプットとか自分で設定していきたいんですけどこの資料また僕にももらえませんか視聴者の方には渡そうかなと思いますよねここちょうど27枚もう少し肉付けしたやつか肉付けできたらと思いますしドキュメントちょっと言葉でも説明できるやつあればいいかなと思っているのでこの資料プラスドキュメントとかかな</p>
+<p><code>30:22</code> できちんとしたいわゆるテキストドキュメントかな資料だけだと予定まとまってるだけだからこれをちょっと共有できたらいいかなと思ってるのでそうですねいつも通りYouTubeの概要欄に記載のキーワードを入力していただけたらそちらを受け取れるようにしておきますので是非視聴者の方は受け取っていただけたらなと思いますはいありがとうございます今日のコメント返信コーナー行こうと思います今日はですねコメンしようかなたかしbioneeさんよくコメントいただいてますはいありがとうございますありがとうございます仕事でこういうオレンジと黒を基調としたスライドを作ってますってコメントいただいてあー、いただいてましたね</p>
+<p><code>30:55</code> はい、やっぱ今井さんだけじゃないんだからこれも僕はアンセロピックカラーだからでも見やすいよね見やすい慣れてきたってのもあるけどアンセロピックカラーですごい使いやすいなと思っていて僕も黒とオレンジってあんまりイメージなかったんですけどアンセロピックが出てきてから意外とこの馴染んでる馴染んでるって分かりやすいですよねなんか普通にアンソロピックカラーってなんかちょっとすごいバイアスあるんだけど普通に資料としてだいたいさコーポレートブルーみたいなものとかさテック系だとさサファイアブルーみたいなエメラルドグリーンみたいなものとかさ結構そういう青系とかさ</p>
+<p><code>31:28</code> 緑系がやっぱりどうしてもテック系だと多かったりとかあとは白黒のモノクロベースみたいな結構多いなっていう中でこの差し色とかベースのカラーにこのオレンジというか持っていくっていうのはすごい良いなって思うよねでも気分転換に今度白とピンクとかやりませんか白とピンクやだなーそれ見た瞬間に違うかもって思う視聴者が増えそうだしでもいくつかパターン作りたいなと思ってこれがすごいしっくりいきすぎててこればっかちょっと使っちゃってるんだけど実際コーデックスのグラデーションカラーのものを作ったりとかあと青ベースのものを作ったりとか</p>
+<p><code>32:00</code> いくつかはしてるんだよねいくつかは作ってはいるもののなんかねこれがしっくりいきすぎてて本当はあと2色くらい新しいカラーリング設けたいなと思ってるんだけど今現状はなかなか出てこないなという感じです楽しみにしてますちょっとこれももっと僕の方で精査できたらこのスキルいずれ配布しようかなと思います資料作成ですか?資料作成めっちゃ使いたい僕のだとYouTubeになっちゃうからさあれだけどもう少し提案資料であったりとか実際の何かしらのサービス説明資料みたいなもっと汎用的なものじゃないけれども今回の僕みたいなYouTubeとか とかではなくそうしたのこの余白いらない者か 動画で全力で作るとか悪いと思うんですよでもね3時間以上かかるんじゃないか 宿がちょっと思えこの新しいお兄さんのオフィス言うこち いいんで</p>
+<p><code>32:45</code> ジェイクンが勝手に居心地よく思って くれてるだけだけど居心地いいけどねなんかそんな感じで資料作成のスキルも もっと良くしていきたいなと思ってるのとあとは図解スキルこの辺も極めていきたい なと思っているのでいずれそういったもの僕の中でちょっと中短から完成度のものは配布したくないなと思ってたのでいずれこの辺りが良くなってきたら配布していこうかなという風に思ってますのでぜひ今この最後の最後まで見てくださっている皆さんには期待しておいてもらえたらなという風に思いますはいありがとうございますはいということで本日はこんな感じでお伝えしていきましたがあそうだぜひプロンプトエンジニアリングとかコンテキストエンジニアリングとかハーネスエンジニアリングループエンジニアリング</p>
+<p><code>33:18</code> 今回ループエンジニアリングの概要みたいなの伝えましたが他の3つ含めて意外とこの3つ説明してないんですよね僕動画でそういえばって感じですよねと思うので今後の動画の企画の候補としてどれがいいかフロントエンジニアングだったらそれこそ一発出しのアウトプットを良くするためにどうやってやっていくのかコンテキストだったらどういう風にAIに渡すエージェントに渡す情報を設計していくべきなのかハーネスだったらAIエージェントですよねAIエージェントが動く環境をどうやって作っていくべきなのかみたいなところのぜひどの動画を上げてほしいのかをですねコメント欄に理由とともにいただけると</p>
+<p><code>33:51</code> ああそういう理由ねじゃあこういう風に伝えればいいかなみたいなその動画の内容を作っていく上でも参考になるのでぜひ理由プラスこのぜひ動画にしてほしいみたいな○○エンジニアリングについてコメントいただけたら嬉しいなという風に思ってますはいはいということで本日は以上になりますまた次回</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./ai-loop-engineering" class="internal" data-slug="ai-loop-engineering">ai-loop-engineering</a>（StructureNote・このLNのテーマそのもの）</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（StructureNote）</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-77" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

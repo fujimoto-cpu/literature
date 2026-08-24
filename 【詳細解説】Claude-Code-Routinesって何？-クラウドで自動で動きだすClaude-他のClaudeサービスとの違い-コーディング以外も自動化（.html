@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude 他のClaudeサービスとの違い コーディング以外も自動化（</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude 他のClaudeサービスとの違い コーディング以外も自動化（"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude 他のClaudeサービスとの違い コーディング以外も自動化（"/><meta name="twitter:description" content="📺 動画情報 【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude / 他のClaudeサービスとの違い / コーディング以外も自動化（日報もSlackチェックも） 🎙️ 安野貴博の自由研究 ・ 📅 2026-05-01 ・ ⏱️ 17分44秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code Routinesは「クラウド上でClaude Codeを自動スケジュール実行できるサービス」。5つの設定項目だけで定期ルーティン・Slack日報・会議前集計などを完全自動化できる。 🗺️ 全体像 flowc..."/><meta property="og:description" content="📺 動画情報 【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude / 他のClaudeサービスとの違い / コーディング以外も自動化（日報もSlackチェックも） 🎙️ 安野貴博の自由研究 ・ 📅 2026-05-01 ・ ⏱️ 17分44秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code Routinesは「クラウド上でClaude Codeを自動スケジュール実行できるサービス」。5つの設定項目だけで定期ルーティン・Slack日報・会議前集計などを完全自動化できる。 🗺️ 全体像 flowc..."/><meta property="og:image:alt" content="📺 動画情報 【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude / 他のClaudeサービスとの違い / コーディング以外も自動化（日報もSlackチェックも） 🎙️ 安野貴博の自由研究 ・ 📅 2026-05-01 ・ ⏱️ 17分44秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code Routinesは「クラウド上でClaude Codeを自動スケジュール実行できるサービス」。5つの設定項目だけで定期ルーティン・Slack日報・会議前集計などを完全自動化できる。 🗺️ 全体像 flowc..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【詳細解説】Claude-Code-Routinesって何？-クラウドで自動で動きだすClaude-他のClaudeサービスとの違い-コーディング以外も自動化（"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【詳細解説】Claude-Code-Routinesって何？-クラウドで自動で動きだすClaude-他のClaudeサービスとの違い-コーディング以外も自動化（"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude / 他のClaudeサービスとの違い / コーディング以外も自動化（日報もSlackチェックも） 🎙️ 安野貴博の自由研究 ・ 📅 2026-05-01 ・ ⏱️ 17分44秒 🔗 www.youtube.com/watch 📝 要約 🎯 Claude Code Routinesは「クラウド上でClaude Codeを自動スケジュール実行できるサービス」。5つの設定項目だけで定期ルーティン・Slack日報・会議前集計などを完全自動化できる。 🗺️ 全体像 flowc..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【詳細解説】Claude-Code-Routinesって何？-クラウドで自動で動きだすClaude-他のClaudeサービスとの違い-コーディング以外も自動化（"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1818"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1818" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude 他のClaudeサービスとの違い コーディング以外も自動化（</a></div></nav><h1 class="article-title">【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude 他のClaudeサービスとの違い コーディング以外も自動化（</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-05T15:00:00.000Z">2026年5月06日</time><span>34 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/routines" class="internal tag-link">routines</a></li><li><a href="./tags/workflow-automation" class="internal tag-link">workflow-automation</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【詳細解説】Claude Code Routinesって何？ クラウドで自動で動きだすClaude / 他のClaudeサービスとの違い / コーディング以外も自動化（日報もSlackチェックも）</strong>
+🎙️ 安野貴博の自由研究 ・ 📅 2026-05-01 ・ ⏱️ 17分44秒
+🔗 <a href="https://www.youtube.com/watch?v=nN1Vygxb_bY" class="external">https://www.youtube.com/watch?v=nN1Vygxb_bY<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Claude Code Routinesは「クラウド上でClaude Codeを自動スケジュール実行できるサービス」。5つの設定項目だけで定期ルーティン・Slack日報・会議前集計などを完全自動化できる。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Claude関連サービス全体] --> B[チャット型\\nClaude.ai / ChatGPT等]\n    A --> C[エージェント型]\n    C --> D[汎用型\\nCowork]\n    C --> E[コーディング用\\nClaude Code]\n    E --> F[PC上で動くClaude Code\\n手元ファイル読み書き]\n    E --> G[クラウドで動くClaude Code\\nブラウザ経由・並列実行]\n    G --> H[Claude Code Routines\\nスケジュール/API/GitHub\\nトリガーで自動実行]\n    H --> I[5設定項目\\nプロンプト/コネクタ\\nリポジトリ/トリガー/環境]&quot;">flowchart TD
+    A[Claude関連サービス全体] --> B[チャット型\nClaude.ai / ChatGPT等]
+    A --> C[エージェント型]
+    C --> D[汎用型\nCowork]
+    C --> E[コーディング用\nClaude Code]
+    E --> F[PC上で動くClaude Code\n手元ファイル読み書き]
+    E --> G[クラウドで動くClaude Code\nブラウザ経由・並列実行]
+    G --> H[Claude Code Routines\nスケジュール/API/GitHub\nトリガーで自動実行]
+    H --> I[5設定項目\nプロンプト/コネクタ\nリポジトリ/トリガー/環境]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. サービス全体の分類 — チャット型 vs エージェント型 vs コーディング型 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Anthropicのサービスは「チャット型（Claude.ai）」「汎用エージェント型（Cowork）」「コーディング用エージェント型（<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a>）」の3系統に分かれる。Claude Codeはさらに「PC上で動く版」と「クラウドで動く版」に分かれており、Routinesはそのクラウド版を自動実行できるようにしたもの。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 5つの設定項目だけで自動化が完成する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Routinesで必要な設定は①プロンプト（何をするか）②コネクタ（Slack・カレンダー・タスク管理等との連携）③リポジトリ（GitHubリポジトリの指定）④トリガー（スケジュール/API/GitHub）⑤環境（仮想マシンの設定・ネットワーク・環境変数・セットアップスクリプト）の5つのみ。これだけでManagedAgentを自前構築するよりはるかに低コストで自動化が実現できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 3種類のトリガー — スケジュール・API・GitHub </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>スケジュールは「毎週火曜9時に実行」などの定期実行。APIは専用URLと認証キーが発行され、外部サービスや手元PCからHTTPリクエストを送るだけでルーティンを起動できる。GitHubトリガーはPR発行・マージ・特定ブランチ名など実務上よく使う条件でフィルタリング可能。3つは組み合わせて使える。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 環境設定でセキュリティを担保できる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>仮想マシンのネットワークアクセスを「このサーバーのみ」に絞ることで、意図しない情報漏洩を防げる。環境変数もルーティンごとに独立して設定でき、APIキー等をセキュアに扱える。Coworkには存在しなかったこの粒度のセキュリティ設定が、Routinesの大きな優位点。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. コーディング以外の業務ルーティンにも使える </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Slackのその日の発言ログをまとめて日報チャンネルに投稿・Slackの全チャンネルを読んで自分宛の重要メンションを通知・定例会議前にKPIを集計してレポートを自動生成、などが実現可能。オフィスワーカーが日常的にやっている定型作業の多くをRoutinesに乗せられる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINのルーティン自動化への応用</strong>
+現在Claude Codeで手動実行しているohayo・eod・x-ai-trendsなどのスキルをRoutinesのスケジュールトリガーに移行すれば、完全無人で定期実行できる。まずSlack日報（/eodのSlack通知版）を試す。</p>
+<p><strong>② Slack監視の自動化</strong>
+コネクタ（Slack）＋スケジュールで「自分宛メンションを毎朝集約して通知」するルーティンを作れば、メッセージ見落としゼロになる。IP週次レポートやX監視も同様に移行候補。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 毎晩このタスクやってほしい変更提案が出たら自動でレビューしてほしいみたいなことを全部お膳立てして用意してくれているというものが今回のクロードコードルーティーンズこれだけこの5つだけ設定すれば勝手にですねクロードコードが何かをやり始めてくれるよって日報を自動化するとかミーティングの前準備とかも自動でこうまとめてレポートにして出しておくとかですね大量に出ているクロードをなんちゃら系のなんかすみ分けというかがわかるというものでございますどうもこんにちは、庵野孝博です。本日はクロードコードルーティーンズとはというお話をしたいと思います。</p>
+<p><code>00:35</code> このクロードコードルーティーンズなんですけれども、クロードを作っているアンソロピック社が最近発表した新しいサービスの名前でございまして、これはね、結構私的にはAIのモデルっていう意味ではそんなに関係ないんですが、このAIを実際に実務で使いこなすという観点だと、結構実用的に使えるサービスなんじゃないかなと思って、今日取り上げてみたいと思っておりますまずどういったものかということですが2026年の7月14日に発表されたモデルでこれはざっくり言うとクロードコードをクラウド上で実行しやすくなるような</p>
+<p><code>01:11</code> そういった機能ですパソコンがなくても自動実行できるよというものになってまして例えばクロードコードに毎晩このタスクやってほしいこういうようなプルリクエストが出たら変更提案が出たら自動でレビューしてほしいみたいなことをやりたかった方結構多いと思います多いんですがそれを実際にやるためには例えばパソコンを置いて自分のパソコンの中でクロードコードを定期的に実行させるようなことをしなくちゃいけなかったりあるいはサーバー上にちゃんとクロードコードを動かせるような環境を作って</p>
+<p><code>01:44</code> そこに対してアクセスできるような周りのクロードコードを使いこなすための機構を作る必要があったんですがそれをアンソロピック社が公式で全部お膳立てして用意してくれているというものが今回のクロードコードルーティーンズでございます最近ですねこのクロードコード系のコアークだとかマネージドエージェントだとかなんかアンソロピック社かなりAIモデルを使って社内の開発もすごい加速している感じがありましてこの1月くらいからどんどんどんどん新しいサービスが出まくっていてですね</p>
+<p><code>02:20</code> 多分あんまり追ってない方だといろんなものがあるんだけど何かどうなっているかよくわからんと思われると思うので簡単にですね分類してみました私の雑分類なので正確に言うとちょっと違うよっていうところがあるかもしれませんがちょっとご容赦くださいこれを見れば大量に出ているクロード語なんちゃら系のなんか住み分けというかがわかるというものでございますまず一番最初チャット型なのかエージェント型なのかというのが分かれていますチャット型は皆さんが使っているようなチャットGPT、クロード、あるいはジェミナイこういったようなものがウェブ上で使うものチャット型のものはあると思います</p>
+<p><code>03:00</code> ここから去年ぐらいからエージェント型と呼ばれるようなものがどんどん増えてきておりましてただ質問に回答するだけじゃなくてAIが他のソフトウェアを使いながら他のツールを使いながら代わりに仕事をしてくれるよというのがエージェント型のものですこのエージェント型のものの中でもかなりアンソルピック社はいろんなメニューを用意しておりましてその中でもまず分けられるとすると何用途なのかということですいろんな仕事全部に使えるよっていうエンジニアじゃなくても使いやすいよっていう</p>
+<p><code>03:34</code> 汎用型のエージェントとあとはコーディング用のエージェントこの2つが大きくありますが汎用型の方はコワークと呼ばれるものになっておりますアンソルピックのコワーク私も1月くらいかなにコアクってどういうものなのかっていうのを解説動画を出したことがあるのでそちらはぜひご覧いただければと思いますコーディング用のところコーディング用はイコールクロードコードなんですけれどもクロードコードの中でもいろんなメニューが実は用意されているんですよねこのいろんなメニューちょっと見ていくと</p>
+<p><code>04:09</code> パソコン上で動くものなのかあるいはクラウド上で動くものなのかこれがちょっと違いますまずパソコンで動くやつこれが一番クロードコードと呼ばれるときに皆さんが一番思いつくベーシックなやつなんじゃないかと思いますけれどもこれは手元のパソコンで例えば僕だったら僕のMacBookの上でクロードのアプリケーションが実行されておりましてこのアプリケーションがAIとしてはアンソルピック社のサーバー上と通信としてAPIで接続しているんですがこのクロードコードが動いている場所自体は自分のパソコンの上なので</p>
+<p><code>04:48</code> なので自分のパソコンの中にあるファイルを読み書きしたりだとか自分のパソコンのネットワークを使って他のサーバーと通信したりだとかそういう風なことができるわけですあとは自分のパソコンも結構思い通りに動かせるのでクロードコードが僕の代わりにアプリケーションをパソコンにインストールしたりとかそういったことも全部できるパソコン上の他のフォルダに入っているあるプログラムを実行させたりとかこの動く場所っていうのは基本的には自分のパソコンの中でしたこれが昨年の世界だったんですが</p>
+<p><code>05:23</code> その後ですねクラウド上で動くクロードコードっていうのも出てきましたクラウドで動くクロードコードって何かというとこのパソコンをいじってるやつがどこにいるのかっていうのがクラウド上に変わるんですよねパソコンからクラウド上のクロードコードにはウェブブラウザを使ってアクセスしたり制御したりするよっていうのがこれクラウドで動くクロードコードです今ねクロードのページに行くとこれプランにもあるんですけどコードっていう欄があってそれをクリックするとクラウド上のアンソルピックのサーバー上で実行されるクロードコードを使う画面に行くことができます</p>
+<p><code>06:03</code> これができたことによってクラウド上で動くクロードコードができたことによって手元でも作業するんだけど手元の作業は1個しかパソコンがないんですがクラウド上はたくさんの環境を同時並行で作ることができるのでAの作業やってBの作業やってCの作業やってDの作業やってちょっと面倒くさい複雑なタスクは自分の手元のパソコンでやってこれが同時並行で走ってるよみたいな感じでパソコンで動くクロードコードとクラウドで動くクロードコードウェブを使いながら同時並行で作業を進めるよというのが</p>
+<p><code>06:37</code> 去年の年末から今年の年始くらいかなにこういったクロードコードウェブを使えるねという話が盛り上がっていたのを覚えておりますただこのクロードコードウェブの課題といたしましては自分がこういうことをやりたいといううのをウェブブラウザ上で命令しないとあんまりですね、動いてくれないわけですよねこれ結構ね、このクロードコードウェブとクロードは大体似たような触り心地になってまして結局ブラウザ上で何かプロンプトを入れてですね話しかけて、こういうのを作りたいんだって言わないと</p>
+<p><code>07:12</code> 動いてくれないとなので、こことここがまた似てきたっていうのがちょっと面白いところなんですがでもこのクロードコードってもうかなり賢くてですねわざわざ自分がウェブサイトに行って何か打ち込まなくてもいろいろ動いてほしいなって思うことが多くなってきたんですよねその時にパソコンで動くクロードコードにはスケジュール機能みたいなのが付き始めててですねなんか10分ごとにこれやってとか1日ごとにこれやってみたいなのがちょっと試されてたんですが</p>
+<p><code>07:44</code> もっと向上的にルーティンワークとかをさせたいねみたいなそういったニーズがどんどんどんどん増えてきました増えてきた中でアンソロピックが用意したのがクロードマネージドエージェントというものでございましてこれはクロードコードを動かす環境の部品みたいなものを部品とそのサーバーをアンソロピック社が直接提供してあげるよというそういうものでございますなのでこのクロードマネージドエージェントというものをプロが使うと自由自在にこうなったらクロードコードが勝手に動いて</p>
+<p><code>08:21</code> こうしてくれるみたいな機能をどんどん追加することができるようになりましたできるようになったんですがこのクロードマネージドエージェント結構プログラミングをできる人向けサーバーとか詳しい人向けなところがありましてちょっと使うハードルが高かったんですよねちょっと使うハードルが高かった中で僕も実はクロードマネージドエージェンツみたいなものを自分で作らないといけないなと思った時にクロードマネージドエージェンツが出てきてこれはアンソロピック社が用意してくれたこれを使うと便利になるけどまだちょっとハードルが高いなと思っていた中で</p>
+<p><code>08:58</code> 今回4月の中旬に出てきたのがこのプロ向けの部品だけじゃなくてそれを極めて簡単に実現まで持っていけるクロードコードルーティーンズっていうやつが出てきましたこれどう簡単になったのかということをお話しするとこれだけこの5つだけ設定すれば勝手にですねクロードコードが何かをやり始めてくれるよとそういうものになってます5つっていうのは何かというと1個がプロンプトですクロードコードに君はこれやってくださいっていう渡すプロンプト2つ目がコネクタです</p>
+<p><code>09:31</code> クロードコード単体だけだとできること少ないんですけど例えばタスク管理ツールとつないだりあるいはチャットツールとつないだりメールとつないだりするとクロードコード側がまずチャットツールで何かを確認してその後カレンダーみたいな何か確認してその後タスク管理ツールにこれ追加するみたいなこともできるようになるのでこのコネクタっていうのはいろいろくっつけることになるかなと思います3つ目がリポジトリですクロードコードって開発用なので基本的にはGitHubのリポジトリと</p>
+<p><code>10:04</code> ひも付いているわけですけれどもこのリポジトリを指定することになります4つ目がトリガーですトリガーっていうのはクロードコードルーティーンズがどういう時に動き出すかこのプロンプトを持って動き出すかということで3つのトリガーがあります動き出すやり方が3つある1つ目はスケジュールです例えば何曜日の何時からはこのルーティーンをやってくださいとかあるいは毎月3日にはこれをやってくださいとかそういうスケジュールを組むことができます2つ目はAPIですAPIはルーティーンを作るとそのルーティーン専用のURLが発行されます</p>
+<p><code>10:41</code> あと合言葉みたいな認証キーもセットで発行されるんですけどこのURLに合言葉を入れてリクエストを送るとその対象となっているクロードコードルーティーンが起動するっていう流れになってますなのでこのAPIを接続すれば実はその外から何らかサーバーとか自分の手元のパソコンとかからそのAPIをコールすることによって結構いかようにでもこのルーティンを発火させることができるようになるというものです3つ目がGitHubがトリガーになっています</p>
+<p><code>11:14</code> これ開発用のものなのでGitHubと連携した動きをしたい時って結構あります例えばプルリクエストが発行された時とか何かがリリースされた時とかそういうタイミングで自動でクロードコードを走り出させることができますしかもフィルター機能結構充実していてAさんがこういうことをやった時に発火するよとかブランチ名がこうこうこういうルールだった時に発火するとかですね結構そういう実務上よく使うような条件でフィルタリングをすることができるようになりますこの3つですねスケジュールAPI GitHubのこの3つがトリガーとしてセットができるようになります5つ目が環境でございまして</p>
+<p><code>11:51</code> このクロードコードがどういうマシンの上でバーチャルマシンの上で動くのかということなんですけれども基本的にパソコン自分のところのパソコンにはこうこうこういうファイルがあってこういうソフトがインストールされててみたいなことが自分のパソコンだったらあるんですけどそれをそのような環境を持ってきたいことがあるわけですよねアンソロピック社が管理しているマネージドサーバーの中のこのルーティンを発火させる仮想環境みたいなものの中にこういうソフトウェアを入れたいとかこういうネットワークの設定したいとかそういうことができるわけですが</p>
+<p><code>12:25</code> これも一応こういったことはいくつか設定できるものがありまして例えばネットワークアクセスですこの仮想環境からはこのサイトは見れるようにしたいこのサイトは見れないようにしたいっていうのが設定できるようになってますなので例えば本当にこのルーティーンの中ではこのサイトしか見る必要がないこのサーバーとしか通信する必要がないってなったらもうそのサーバーだけをアクセスできるようにする他は全部アクセス拒否すれば他の変なサーバーに勝手に通信されることなくなるわけですこれねやっぱネットワークのアクセスってセキュリティ上というかガードレール上非常に大事で</p>
+<p><code>13:04</code> AIがクロードコードがいろいろ考えていろいろ試行錯誤しようとし始めるんですけどその時に何か意図しない挙動が生まれたりするんですよね意図しない挙動が生まれた時に勝手に漏洩したらダメな情報が漏洩しちゃうこととかあるわけですなのでそういったところに注意するというかそういったことが原理上起きないようにネットワークアクセスを絞るっていうそういう設定が入ったりもします2つ目が環境変数ですねそれぞれのパソコンというかバーチャルマシンごとに独自の変数を持っておくことができる</p>
+<p><code>13:38</code> そしてそれをクロードコードが参照しながら使うこととかってよくあるんですけどそれもですねセットができるようになっていますルーティンごとに違う環境変数を持っておくことができるている環境で動かせることができます 3つ目がセットアップスクリプトで一番最初にねそのセットアップスクリプトが実行されるのでこうこういう状況にバーチャルマシンを持っていくということも指定することができる ようになっていますなので例えばなんだろうな github リポジトリをプルしてきて そしてそれをですねセットアップスクリプトで初期化をするとかですねそういうことができるよというものですね</p>
+<p><code>14:14</code> これだけ設定すれば勝手にルーティーンがどんどん設定できて実行できるっていうのはマネージドエージェントと比べるとかなりやりやすくなりましたあと個人的にはコアークは汎用的に他の仕事とかでも使えるんでいいなと思いつつ結構この権限周りの設定とかネットワークアクセスとか環境変数とかそこら辺がかよいところに全然手が届かなかったのでなんか割とね欲しいなと思うところを網羅してくれているのが個人的にはいいなと思っておりますで最後これじゃあどういうことに使えるんですかということについてちょっとだけ触れたいなと思いますが</p>
+<p><code>14:54</code> もちろんプログラミングにも使えるんですけどプログラミング以外の普通の仕事をする時にもクロードルーティーンズって結構役に立ちますコアークは汎用で他の仕事に使う用なんですがぶっちゃけですねこのコーディング用のクロードコードルーティーンズを使いながら汎用的な仕事のルーティーンっていうのを作ることって結構できるなと思ってまして例えば分かりやすいところで言うと日報を自動化するとかこういうのもできます例えばスラックと接続しておいてその日が終わったらその日自分がスラック上でチャットツール上で発言した全部のログを持ってきて</p>
+<p><code>15:32</code> これをこういうフォーマットで日報にして吐き出してそれをまたスラックのあるチャンネルに毎日例えば0時にポストし続けるとかですねそういうこともできると思いますしあは大量にチャンネルがあって、自分が知ってないといけない情報なんだけれども、メンションが漏れていることとかあるじゃないですか。その時に一応全部のスラック読ませて、自分が知っておくべきことを発見したら自分に通知させるとか、そういうことも多分できると思います。あとはミーティングの前準備とかもそうですね。定例ミーティングの前に特定のサイトの利用状況を全部、</p>
+<p><code>16:09</code> KPIをまとめてきて指標をまとめてきてそれを毎週毎週定例で確認するみたいなそういうやり方のミーティングすることもあると思うんですけどそういう定例会議って毎回決められたものをスクショとか取ったりとかデータとか取ってきてまとめていくっていう作業あったりしますけどこういうものも定例ミーティングが毎週火曜日にあるんだったら火曜日の朝にこのルーティンをセットして自動でまとめてレポートにして出しておくとかですねそういったこともできると思うので皆さんいろんな会社でいろんな仕事をしていると思いますがオフィスワーカーの方であれば</p>
+<p><code>16:42</code> 意外とこのクロードルーティーン上に乗っけて自動化できる作業って結構あると思うので考えてみていただけるといいんじゃないでしょうか私もこれどんどんこれからどれくらい使えるのかっていうのを模索していく段階ですけれどもこの2週間くらいいくつかのルーティーンを走らせてみて結構いいなとしかも新しいものもどんどん追加しやすくなっていていいなと思うので今後も使ってみたいと思っておりますまだねこれベータ版ということで時々ねあんまりうまくトリガーが発火してない時とか個人的にはあったんですが</p>
+<p><code>17:18</code> 徐々に徐々にこなれていくんじゃないでしょうかはいということで本日はクロードコードルーティーンズについてお話ししてみました面白いなと思った方はチャンネル登録高評価をぜひよろしくお願い致しますではではチャンネル登録をお願いいたします。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_適切な文章が思いつかないとき" class="internal alias" data-slug="AIプロンプト例_適切な文章が思いつかないとき">AIプロンプト例_適切な文章が思いつかないとき</a>（PermanentNote）</li>
+<li><a href="./Vectorizer.AI" class="internal" data-slug="Vectorizer.AI">Vectorizer.AI</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-700" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

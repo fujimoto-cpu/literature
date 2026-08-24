@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 あなたのObsidianは死んでいる_AI記憶設計</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 あなたのObsidianは死んでいる_AI記憶設計"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 あなたのObsidianは死んでいる_AI記憶設計"/><meta name="twitter:description" content="𝕏 投稿情報（X記事） 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · 📅 2026-05-25 🔗 元の記事 📝 投稿内容（記事全文） 【保存版】あなたのObsidianは死んでいる 『商品企画レビューの前夜、3 ヶ月前にメモした重要な顧客 insight が見つからない』 『Claude に Vault 全体を渡しても、ノートの内容を要約しただけの回答しか返ってこない』 『500 ページのノートが手元にあるはずなのに、必要な瞬間に何一つ引き出せない』 普段AIコンサルをしている経営者の方からこういう声をよくいただきます。 最近Obsidia..."/><meta property="og:description" content="𝕏 投稿情報（X記事） 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · 📅 2026-05-25 🔗 元の記事 📝 投稿内容（記事全文） 【保存版】あなたのObsidianは死んでいる 『商品企画レビューの前夜、3 ヶ月前にメモした重要な顧客 insight が見つからない』 『Claude に Vault 全体を渡しても、ノートの内容を要約しただけの回答しか返ってこない』 『500 ページのノートが手元にあるはずなのに、必要な瞬間に何一つ引き出せない』 普段AIコンサルをしている経営者の方からこういう声をよくいただきます。 最近Obsidia..."/><meta property="og:image:alt" content="𝕏 投稿情報（X記事） 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · 📅 2026-05-25 🔗 元の記事 📝 投稿内容（記事全文） 【保存版】あなたのObsidianは死んでいる 『商品企画レビューの前夜、3 ヶ月前にメモした重要な顧客 insight が見つからない』 『Claude に Vault 全体を渡しても、ノートの内容を要約しただけの回答しか返ってこない』 『500 ページのノートが手元にあるはずなのに、必要な瞬間に何一つ引き出せない』 普段AIコンサルをしている経営者の方からこういう声をよくいただきます。 最近Obsidia..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-あなたのObsidianは死んでいる_AI記憶設計"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-あなたのObsidianは死んでいる_AI記憶設計"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報（X記事） 東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku · 📅 2026-05-25 🔗 元の記事 📝 投稿内容（記事全文） 【保存版】あなたのObsidianは死んでいる 『商品企画レビューの前夜、3 ヶ月前にメモした重要な顧客 insight が見つからない』 『Claude に Vault 全体を渡しても、ノートの内容を要約しただけの回答しか返ってこない』 『500 ページのノートが手元にあるはずなのに、必要な瞬間に何一つ引き出せない』 普段AIコンサルをしている経営者の方からこういう声をよくいただきます。 最近Obsidia..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-あなたのObsidianは死んでいる_AI記憶設計"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3990"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3990" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 あなたのObsidianは死んでいる_AI記憶設計</a></div></nav><h1 class="article-title">𝕏 あなたのObsidianは死んでいる_AI記憶設計</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-24T15:00:00.000Z">2026年5月25日</time><span>49 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/x-article" class="internal tag-link">x-article</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/ai記憶設計" class="internal tag-link">ai記憶設計</a></li><li><a href="./tags/second-brain" class="internal tag-link">second-brain</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報（X記事） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>東大Obsidianオタク｜仕事で使える第2の脳構築 @ObsidianOtaku</strong> · 📅 2026-05-25
+🔗 <a href="https://x.com/ObsidianOtaku/article/2058665087876165671" class="external">元の記事<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容記事全文">📝 投稿内容（記事全文）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容記事全文" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>【保存版】あなたのObsidianは死んでいる</strong></p>
+<p>『商品企画レビューの前夜、3 ヶ月前にメモした重要な顧客 insight が見つからない』
+『Claude に Vault 全体を渡しても、ノートの内容を要約しただけの回答しか返ってこない』
+『500 ページのノートが手元にあるはずなのに、必要な瞬間に何一つ引き出せない』
+普段AIコンサルをしている経営者の方からこういう声をよくいただきます。
+最近Obsidianを知り、りあえず情報ソースを色々入れ込んでみたが本当に効果が出てるか正直判断できない。しかも情報が大量に散乱して自分ではどこに何が配置されているか分からずいまいち全体像が掴めず不安。
+フォルダ構造は整えたはずなのに、新しいノートをどこに入れるか毎回迷う
+同じテーマで複数ノートを書いた覚えがあるのに、それらの間にリンクが貼られていない
+Claude に Vault を渡しても「過去 3 ヶ月の重要 insight」を新しい接続として返してくれない
+時間が経てば経つほどページ図鵜だけ増えて『電子ゴミの山』が誕生する
+整理されてない物置にどんどん物を詰め込んでどこに何があるのか適切に管理ができず収拾がつかない状況ですね。
+ObsidianはAIエージェントを活用する上で非常に有力なツールですが、導入すればすぐに効果が出るわけではなく、適切に運用設計を考えていないとこのように掃き溜め状態になってしまいます。
+今回はこういった悩みに対して解決策となる情報を整理して解説します。
+最近、海外で広く参照されている記事がありました。「Your Obsidian Vault Is Probably Wasting Your Intelligence」というタイトルの記事です。日本語にすると『あなたの Obsidian Vault はおそらく自分の知性を浪費している』
+今日はこれを日本語で噛み砕き、組んだ Vault が dead に向かう構造的理由と、Capture / Automation / Memory / Intelligence の 4 層で蘇生する道筋を、日本の業務文脈で動く形まで落として解説します。
+元記事はこちら：
+<a href="https://x.com/NainsiDwiv50980/status/2053498460918485092" class="external">https://x.com/NainsiDwiv50980/status/2053498460918485092<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+いやそもそも『Capture / Automation / Memory / Intelligence って何』という方にも分かるように噛み砕いて解説していくので、ご安心ください。今日から試せる最小サイズのアクションまで落とし込んで肥大化したObsidianの Vault が cognitive partner に蘇生する筋道を見ていきましょう。
+①商品企画レビュー前夜に500ページのノートから何ひとつ引き出せない
+冒頭の場面を、もう一度具体で見させてください。
+商品企画のレビュー会まで残り 12 時間。3 ヶ月前の顧客インタビューで、ある顧客が漏らした言葉を思い出します。「この機能、社内承認のときに毎回つまずく」と。あの声を明日の論点ペーパーに組み込めば、議論が一段深くなるはずです。
+Obsidian を開いて検索します。「社内承認」「つまずく」。ヒットしません。フォルダを開きます。Clients/Y社/Interviews/。確かにあの日のメモはあるはずなのに、ファイル名を覚えていません。10 分かけて遡り、結局見つからずに諦めます。
+別のアプローチを試します。Claude に Vault を文脈として渡し、「過去 3 ヶ月の Y 社関連メモから、社内承認に関連する顧客の声を 3 つ surface してほしい」と頼みます。返ってきた回答は、ノートを順番に要約しただけの 5 段落でした。新しい繋がりも、私が知らなかった気付きもなく、表層的なまとめが返ってきました。
+この瞬間、あなたは気づきます。私の Vault は dead だ、と。空っぽではありません。500 ページ確かに溜まっています。それなのに、必要な瞬間に何ひとつ引き出せません。半年で 500 ページ書いたのに、あなた自身の思考は何も繋がっていません。来期になっても、再来期になっても、私はこの Vault に向かって「過去のメモから気付きを出してくれ」と頼み続け、要約しか受け取らない自分しか想像できません。
+ここで一度立ち止まりましょう。なぜこうなるのか。これはあなたの使い方が悪いからではありません。組んだ Vault が dead に向かう構造的な理由があります。次の章で、その構造を言語化させてください。
+②整理し続けているのにVaultから何ひとつ繋がってこない構造的な理由
+元記事には、組んだ Vault が整理止まりに向かう構造的な理由を、こう言語化している箇所があります。
+People think the goal is organization. It isn’t. The goal is cognition.
+多くの人はVault の目的は整理だと思っています。違います。本来の目的は思考の補強です。
+ここで言う「整理」は、フォルダを丁寧に整え、タグを揃え、リンクを貼る作業のことです。Obsidian を入れた瞬間から、私たちは整理に時間を使い始めます。Clients フォルダ、Decisions フォルダ、Ideas フォルダを作り、命名規則を統一し、Daily Notes プラグインを設定します。これだけで土日が 1 つ消えます。そして「準備完了」と感じます。
+しかし、整理は手段ですらありません。組んだフォルダがそのままでは、思考は繋がらないからです。
+本来の目的とは、Vault が私たちのために行う 5 つの動作のことです。具体的にはこうなります。Vault は似たノート同士のパターンに気付かせます。アイデアを正しい瞬間に思い出させます。過去の主張同士の矛盾を表に出します。手動では繋げなかったメモ同士を結びます。必要な瞬間に過去の気付きを今に押し戻します。
+商品企画レビュー前夜の場面で言えば、「3 ヶ月前の顧客の社内承認に関する声」を私が思い出せなくても、Vault 側が「明日の論点ペーパーに、3 ヶ月前のあのメモが関連します」と push back してくる状態。これが思考が回っている状態です。
+大半の Vault は、この 5 つの動作が回らないまま、整理だけが完了しています。元記事は、その状態を「忘れられた野心の保管庫」と呼んでいます (Storage locker for forgotten ambition)。書いた時には大事に思ったメモが、誰にも (自分自身にすら) 引き出されないまま、ロッカーで埃をかぶります。
+ここで一度、自分の Vault が思考層側にいるか整理止まりかを診断してみましょう。次のチェックリストを使ってください。コピペして 1 項目ずつ Yes / No で答えるだけで、自分の Vault の現在地が見えます。
+markdown</p>
+<h1 id="眠った-vault-診断チェックリスト-yes-が-3-つ以上で整理止まり">眠った Vault 診断チェックリスト (Yes が 3 つ以上で整理止まり)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#眠った-vault-診断チェックリスト-yes-が-3-つ以上で整理止まり" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>ノートが 100 ページ以上溜まっているのに、3 ヶ月前のメモを取り出そうとして見つからなかった経験がある (Yes / No)</li>
+<li>フォルダ構造は整えたが、新しいノートを書く時にどこに入れるか毎回迷う (Yes / No)</li>
+<li>Claude や Codex に Vault 全体を渡しても、ノートの要約しか返ってこない (Yes / No)</li>
+<li>同じテーマで複数のノートを書いた覚えがあるが、それらの間にリンクが貼られていない (Yes / No)</li>
+<li>半年前に却下した方針や、過去に試して失敗したアプローチを、AI から再提案されている (Yes / No)</li>
+<li>朝のブリーフィングのプロンプトを投入したが、内容が「生産性の助言」「励まし」止まりで、本当の気付きが出てこない (Yes / No)</li>
+<li>フォルダ整理は完了した感があるが、自分の思考が積み上がっている感がない (Yes / No)</li>
+</ol>
+<p>ちなみに過去の私は、最初に組んだ Vault でこの 7 項目すべてに Yes でした。皆さんも 3 つ以上に当てはまるなら、それは皆さんの使い方の問題ではありません。整理止まりの設計をそのまま使い続けてきた構造的な結果です。
+ではどう蘇生するか。次の章で、責務を 4 つの層に分ける考え方に進みます。
+③Vaultを蘇生する4層は入口と夜の装置と記憶層と思考パートナー
+元記事には、Vault を思考が回る装置に変えるための 1 文があります。
+The only sustainable knowledge system is one that reduces friction close to zero.
+訳すと、こうなります。持続可能な記憶のシステムは、手間を限りなくゼロに近づけることでしか作れません。
+これが大事です。取り込み (情報を入れる) が手間なら、私たちは数週間で止めます。整理 (フォルダに振り分ける) が面倒なら、システムは数ヶ月で崩れます。引き出し (必要な瞬間にメモを呼び出す) が記憶力依存なら、必要な瞬間に何も引き出されません。「人間が頑張って続ける」前提で組んだシステムは、必ず整理止まりに陥ります。
+蘇生は、人間の規律に依存しない 4 層の責務分離で成立します。
+markdown</p>
+<h1 id="vault-を蘇生する-4-層">Vault を蘇生する 4 層<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vault-を蘇生する-4-層" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>[1] 入口 (取り込み層)
+役割: 情報を Vault に入れる手間をほぼゼロにする
+具体: Readwise / Telegram / Whisper / podcast クリッピング
+思想: 人間は読む / 聞く / 思いつくだけ、保存は装置が引き受ける
+[2] 夜の装置 (自動化層)
+役割: 入った情報を夜の間に振り分け / タグ付け / まとめる
+具体: cron + Codex / Claude のスケジュール実行 (最小は 1 つのスクリプト)
+思想: 朝起きたら昨日の取り込みがタグ済み、毎朝のブリーフィングまで終わっている
+[3] 記憶層 (永続文脈層)
+役割: 蓄積された全ノートを検索とリンクで navigate できる地図として保持する
+具体: Obsidian Vault (これは皆さんが既に組んでいる)
+思想: 自分の思考が時間軸で残る、検索とリンクで辿れる
+[4] 思考パートナー (知性層)
+役割: 文脈を持って一緒に考える AI として動く
+具体: Claude / Codex + CLAUDE.md + 朝のブリーフィング + 5 つの問い
+思想: AI を「文法の上手な検索エンジン」として使うのをやめ、一緒に考える相手として動かす
+先日扱った Obsidian の 5 フォルダ構造は記憶層に、CLAUDE.md の 21 の作法は思考パートナー層に、Codex 系統で紹介した夜間自動化の毎朝レビュープロンプトは夜の装置層に位置づきます。シリーズで積み上げてきた具体物が、この 4 層のどこに乗るかが見えると、これまでの記事の繋がりが立体的になるはずです。
+今までの記事を読んだ方は「組んだ」気でいるかもしれません。それは正しいです。ただし入口の手間をほぼゼロまで詰めていない、もしくは夜の装置が動いていない、もしくは思考パートナーとして Claude を使う 5 つの問いを投入していない、そのどれかが欠けていると、記憶層に積んだノートが思考として回り始めません。
+では各層の具体実装に進みます。まず入口から見ていきましょう。
+④取り込みの手間をほぼゼロにする4系統の入口
+取り込みを手間ゼロにするには、情報の入口を 4 系統に分け、それぞれに「人間は読む / 聞く / 思いつくだけ」で済む装置を置きます。元記事では Readwise / Telegram bots / Whisper / podcast クリッピングアプリが紹介されていますが、これは海外読者向けの例示です。日本の業務文脈ではどう置くかを 4 系統に翻訳します。
+markdown</p>
+<h1 id="系統-1-web-ハイライト系-readwise--pocket--instapaper--matter">系統 1: Web ハイライト系 (Readwise / Pocket / Instapaper / Matter)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系統-1-web-ハイライト系-readwise--pocket--instapaper--matter" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>業務シーン: マーケ PM が競合分析中に読んだ業界記事のハイライト
+入口テンプレ:</p>
+<ol>
+<li>Readwise (or Matter) でハイライトを引く (人間はハイライトを引くだけ)</li>
+<li>Readwise の Obsidian 連携プラグインが自動で Vault/inbox/highlights/ に書き戻す</li>
+<li>ファイル名は {YYYY-MM-DD}_{source-title}.md で自動命名
+手間チェック:</li>
+</ol>
+<ul>
+<li>ハイライトを引いた瞬間に Vault に届く (手動コピペ 0)</li>
+<li>引かなかったハイライトも記事 URL は保存されている (後から戻れる)
+markdown</li>
+</ul>
+<h1 id="系統-2-メッセージ系-imessage--line--slack-dm-自分宛">系統 2: メッセージ系 (iMessage / LINE / Slack DM 自分宛)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系統-2-メッセージ系-imessage--line--slack-dm-自分宛" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>業務シーン: 経営企画が思いついた論点 / クライアントとの電話直後のメモ
+入口テンプレ:</p>
+<ol>
+<li>iOS Shortcuts で「Vault inbox に送る」ワークフローを作る</li>
+<li>Slack DM 自分宛に書いた内容を、Slack の outgoing webhook → 自動転記スクリプトで
+Vault/inbox/messages/{YYYY-MM-DD}.md に追記</li>
+<li>思いついた瞬間に話しかける or 書くだけ (整理は装置側)
+手間チェック:</li>
+</ol>
+<ul>
+<li>移動中でも会議直後でも、3 秒以内に Vault に入る入口がある</li>
+<li>入力したメモは構造化せず、夜の装置層 (次章) で夜の間に振り分ける
+markdown</li>
+</ul>
+<h1 id="系統-3-音声系-audiopen--otterai--whisper">系統 3: 音声系 (AudioPen / Otter.ai / Whisper)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系統-3-音声系-audiopen--otterai--whisper" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>業務シーン: 商品企画 PM が顧客インタビュー直後、車内で口頭メモを 30 秒録音
+入口テンプレ:</p>
+<ol>
+<li>AudioPen (or Otter.ai) で 30 秒の口頭メモを録音</li>
+<li>文字起こし完成と同時に Markdown で書き出し → Vault/inbox/voice/{YYYY-MM-DD}.md</li>
+<li>インタビュー本体の録音は Otter.ai で全文書き起こし → Vault/inbox/interviews/ に置く
+手間チェック:</li>
+</ol>
+<ul>
+<li>思考が冷めないうちに 30 秒で口頭メモが Vault に入る</li>
+<li>インタビュー本体の文字起こしを「あとで聞き返す」必要がない (全文 Vault 入り)</li>
+</ul>
+<p>markdown</p>
+<h1 id="系統-4-podcast--動画系-snipd--airr--yomu--readwise">系統 4: Podcast / 動画系 (Snipd / Airr / Yomu / Readwise)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系統-4-podcast--動画系-snipd--airr--yomu--readwise" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>業務シーン: 事業開発が Snipd で podcast の重要箇所を 30 秒クリップ
+入口テンプレ:</p>
+<ol>
+<li>Snipd (or Airr) で podcast を聴きながら、刺さった瞬間に AirPods の Force Touch でクリップ</li>
+<li>クリップ箇所は自動で文字起こし + 1 段落要約 → Snipd の Obsidian 連携で Vault/inbox/podcasts/</li>
+<li>書籍のハイライトも Readwise / Audible Highlights で同じ仕組み
+手間チェック:</li>
+</ol>
+<ul>
+<li>「あとで戻ろう」と思った瞬間にクリップが Vault に入る (戻る前提を消す)</li>
+<li>「読書メモを書き起こす時間がない」が消える (Readwise が引き受ける)
+4 系統とも、人間の動作は「読む / 思いつく / 話す / 聞く」だけです。整理 / コピペ / 書き起こし / フォルダ振り分けは、すべて装置が引き受けます。これが「人間が規律で続ける」設計から「装置として仕組む」設計への切り替えです。
+業務ドメインが違う方は、上記の {マーケ PM / 経営企画 / 商品企画 / 事業開発} を自分の業務に置き換えてください。例えばコンサルなら系統 3 の「顧客インタビュー直後」は「クライアント打ち合わせ直後」に、リサーチャーなら系統 4 の「podcast」は「カンファレンス動画」に置き換わります。
+入口は揃いました。次は取り込まれた情報を夜の間に振り分ける夜の装置層です。
+⑤寝てる間にVaultが育つCodexスケジュール実行と最小スクリプト
+夜の装置層は、夜の間に取り込まれた情報を振り分け / タグ付け / まとめる装置です。元記事ではワークフロー自動化サービスが紹介されていますが、外部ツールを増やさず、Claude や Codex のスケジュール実行で同じことができます。すでに使っている AI が、夜の間に Vault を育てる装置になります。
+先日扱った毎朝レビューや週次レビューのプロンプト (シリーズで紹介済み) を思い出してください。あの自動化プロンプトは、この夜の装置層で動く位置にあります。本記事は最小構成として、1 つのスクリプトから始める想定で進めます。
+markdown</li>
+</ul>
+<h1 id="夜の装置-最小スクリプト-4-ステップ">夜の装置 最小スクリプト (4 ステップ)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#夜の装置-最小スクリプト-4-ステップ" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Step 1: inbox の監視</p>
+<ul>
+<li>Vault/inbox/ フォルダを監視 (新規ファイル検出)</li>
+<li>新規ファイルが入った瞬間に Step 2 へ
+Step 2: タグの自動付与</li>
+<li>新規ファイルの内容を Codex (or Claude) に渡す</li>
+<li>プロンプト: 「次のメモから 5 つのタグを抽出してください。
+タグの分類は (1) 案件名 (2) 関連概念 (3) 関連顧客
+(4) 関連プロセス (5) 緊急度 (high / medium / low) の 5 軸です」</li>
+<li>返ってきたタグをファイルの frontmatter に書き込む
+Step 3: 朝のブリーフィング生成 (cron: 毎朝 5:30)</li>
+<li>過去 24 時間に入った取り込み + 直近 7 日のノート</li>
+</ul>
+<ul>
+<li>直近 30 日の繰り返しテーマを Codex に渡す</li>
+</ul>
+<ul>
+<li>朝のブリーフィングのプロンプト (次章で全文) を実行</li>
+<li>結果を Vault/reports/daily-brief/{YYYY-MM-DD}.md に書き戻し
+Step 4: 通知 (オプション)</li>
+<li>朝のブリーフィング完成 → iOS push 通知 or メール送信</li>
+<li>朝起きたタイミングで Vault からの便りが届いている状態を作る</li>
+</ul>
+<p>cron は毎朝 5:30 が目安です。読者の起床時刻 30 分前に設定すれば、起きた瞬間に朝のブリーフィングが届いています。ローカルの Mac で動かせば、サーバー代もかかりません。Codex CLI を 1 行のシェルスクリプトで叩くだけです。
+ここで「スクリプトの cron 設定をやったことがない」という方は、最小構成として手動運用から始めても問題ありません。Step 2 と Step 3 は、Claude や Codex のターミナルで手動実行できます。最初は手動で OK、慣れたら cron でスケジュール実行に移します。重要なのは Vault が動き始めることであり、装置の完璧さではありません。
+夜の装置が回り始めれば、Vault は永続文脈層として育ち、Claude が思考パートナーとして動き出します。次の章で、その最も大事なプロンプト群に進みます。
+⑥CLAUDE.mdと朝のブリーフィングと5つの問いでClaudeが思考パートナーに変わる
+記憶層と思考パートナーが揃うと、元記事が「本当の転換」と呼んでいる体験が成立します。
+Then comes the real shift: The vault starts talking back. … You open your laptop and suddenly your own knowledge feels alive.
+訳すと、こうなります。本当の転換はここから始まります。Vault が話しかけてきます。laptop を開くと、自分の知識が生きて感じられます。
+この体験を作るために、Claude に文脈を渡す装置が 3 つあります。CLAUDE.md / 朝のブリーフィングのプロンプト / 5 つの問いのプロンプトです。
+まず CLAUDE.md です。先日扱った 21 の作法を完成版として置いている方は、それで十分です。ただ、ここまでで一度も置いていない方のために、最低限の 5 項目だけ示します。
+markdown</p>
+<h1 id="claudemd-必須-5-項目">CLAUDE.md 必須 5 項目<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#claudemd-必須-5-項目" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<ol>
+<li>私が誰か (Who you are)
+役割 / 業界 / 自社の文脈 (例: マーケ PM / B2B SaaS / 従業員 30 名)</li>
+<li>私が今何を作っているか (What you’re building)
+今期の事業目標 / プロダクト / 主要顧客
+(例: Q2 で新規プロダクト Z のローンチ、主要顧客は中堅金融 5 社)</li>
+<li>私が今集中している論点 (What you’re obsessed with)
+(例: 「中堅金融顧客のセキュリティ要件をどう満たすか」)</li>
+<li>私が今詰まっている課題 (What you’re struggling with)
+(例: 営業チームへのエンジニア同行をどこまで増やすかの判断)</li>
+<li>私が大事にする思考の好み (What kind of thinking you value)
+思考の好み / 文体 / 禁止表現
+(例: 結論先行 / 数字優先 / 推測と確定情報を分離 / 一般化された助言 NG)
+詳細を組み立てる場合は、先日扱った 21 の作法を Codex 用の AGENTS.md として併存させてください。CLAUDE.md と AGENTS.md は同じ Markdown ファイルとして両方の AI から読まれます。
+次が朝のブリーフィングのプロンプトです。これは前章の夜の装置 (Step 3) から呼ばれます。毎朝届く Vault からの便りを生成します。生産性の助言でも励ましでもなく、自分が無自覚に考え続けている論点を表に出すプロンプトです。
+markdown</li>
+</ol>
+<h1 id="朝のブリーフィング-プロンプト-毎朝-cron-で実行">朝のブリーフィング プロンプト (毎朝 cron で実行)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#朝のブリーフィング-プロンプト-毎朝-cron-で実行" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>あなたは私の思考パートナーです。CLAUDE.md に書かれた私の文脈
+(役割 / 事業目標 / 集中論点 / 詰まり / 思考の好み) を理解した上で、
+次の 3 カテゴリで朝のブリーフィングを作ってください。
+【入力】</p>
+<ul>
+<li>過去 24 時間に inbox/ に入った取り込み (web ハイライト / 音声 / メッセージ / podcast)</li>
+<li>直近 7 日のノート (notes/ 全体)</li>
+<li>直近 30 日で私が複数回戻っているテーマ</li>
+<li>未解決のまま放置している問い (notes/decisions/ や notes/open-questions/ 等)
+【出力 3 カテゴリ】</li>
+</ul>
+<ol>
+<li>繋がり (3 個まで)
+今日の取り込みと過去のノートを繋ぐ、私が無自覚な接続を 3 つ表に出してください。
+「A の取り込みと 3 ヶ月前の B のノートが、X という共通テーマで繋がります」の形で。</li>
+<li>繰り返しテーマ (2 個まで)
+過去 30 日のノートで私が繰り返し戻っているテーマを 2 つ identify してください。
+私自身は無自覚かもしれません。テーマ名 + 該当ノート 3-5 個 + 「なぜ繰り返し戻っているか」の仮説を添えてください。</li>
+<li>今日の問い (3 個まで)
+未解決のまま放置している問いのうち、今日着手する価値が最も高い 3 つを並べてください。
+それぞれに「なぜ今着手すべきか」の理由を 1 行で添えてください。
+【禁止事項】</li>
+</ol>
+<ul>
+<li>生産性の助言 / 励まし / 一般論</li>
+<li>私のノートに書かれていない補足情報 (推測しない)</li>
+<li>表層的な要約 (1 ノートあたり 1 段落の要約は不要)</li>
+</ul>
+<p>このプロンプトは {マーケ PM / 経営企画 / 商品企画} など、自分の業務ドメインに合わせて入力部分のフォルダパスを書き換えてください。
+最後が 5 つの問いのプロンプトです。朝のブリーフィングが受動的な配信なら、5 つの問いは能動的に問う時のプロンプトです。元記事は「大半の人は AI を文法の上手な検索エンジンとして使っている」と指摘しています。質問する、回答が返る、次に進む、では Vault は活きません。次の 5 つの問いを使い分けると、AI が思考パートナーとして動き始めます。
+markdown</p>
+<h1 id="vault-に問う-5-つのプロンプト">Vault に問う 5 つのプロンプト<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#vault-に問う-5-つのプロンプト" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<h1 id="q1-矛盾の発見">Q1 (矛盾の発見)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q1-矛盾の発見" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>過去 3 ヶ月で私が書いた {商品企画 PM} のノートを横断し、
+自分自身の主張で矛盾している箇所を 3 つ表に出してください。
+「A のノートでは X と書いているが、B のノートでは Y と書いている」の形で。</p>
+<h1 id="q2-繰り返しテーマの-identify">Q2 (繰り返しテーマの identify)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q2-繰り返しテーマの-identify" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>過去 6 ヶ月のノートで、私が繰り返し戻っているテーマを 3 つ identify してください。
+私自身は無自覚かもしれません。テーマ名 + 該当ノート 3-5 個を挙げてください。</p>
+<h1 id="q3-無意識に巡る問いの抽出">Q3 (無意識に巡る問いの抽出)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q3-無意識に巡る問いの抽出" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>私が無意識に巡り続けている問いを 5 つ表に出してください。
+{経営企画} ドメインのノートを中心に。
+「A のノートで疑問符が立ち、B のノートで再度同じ問いが立ち、C で仮説が出るが結論が出ていない」のパターンを探してください。</p>
+<h1 id="q4-忘れていた関連メモの引き出し">Q4 (忘れていた関連メモの引き出し)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q4-忘れていた関連メモの引き出し" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>3 ヶ月前以前のノートで、今週の {事業開発} 論点に関連するが、
+私が忘れているものを 3 つ表に出してください。
+ノートタイトル + 1 段落要約 + 「なぜ今関連するか」の理由付き。</p>
+<h1 id="q5-考え方の変遷の追跡">Q5 (考え方の変遷の追跡)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#q5-考え方の変遷の追跡" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>3 ヶ月前と現在で、私の {マーケ PM} に対する考え方がどう変わったか追跡してください。
+「3 ヶ月前のノートでは X と主張、現在のノートでは Y に変化、転換点となったのは Z の出来事」の形で。
+5 つの問いはそれぞれ業務ドメインを変えています。自分の業務に合わせて {商品企画 PM} {経営企画} などを置き換えてください。
+質問する、回答が返る、次に進む、の浅い使い方と、矛盾を表に出す / テーマを identify / 巡る問いの抽出 / 忘れていたメモの引き出し / 考え方の変遷の追跡、の深い使い方。同じ Claude でも、文脈 (Vault) を渡しているかと、聞き方が思考パートナー用かで、返ってくる気付きの質が別物になります。
+朝のブリーフィングと 5 つの問いが回り始めると、Vault は時間とともに強くなります。これが「文脈の蓄積こそ AI 時代の本当の競争優位」という発想に繋がります。
+⑦文脈の蓄積こそAI時代の本当の競争優位で6ヶ月後に追いつけなくなる
+元記事の中で、最も強い 1 文がこれです。
+This is the actual moat in the AI era. Not prompts. Not tools. Not models. Context.
+訳すと、こうなります。これが AI 時代の本当の競争優位です。プロンプトでもツールでもモデルでもなく、文脈です。
+なぜ文脈が競争優位なのか。プロンプトは誰でもコピペできます。ツール (Obsidian / Claude / Codex) も誰でも導入できます。モデル (Claude や GPT の最新版) は同じ API を皆が使えます。一方、私の 6 ヶ月分の深く繋がった個人知識は、誰にも真似できません。誰かが私の Vault を盗んでも、私の業務文脈・私の顧客文脈・私の判断履歴を持たない他人には機能しません。
+そして文脈は時間でしか積み上がりません。元記事は時間軸での質感差をこう描いています。
+At one month, the system feels useful. At three months, it starts feeling intelligent. At six months, it feels almost unfair.
+私の経験を重ねた具体描写で言い直すと、こうなります。
+1 ヶ月後、朝のブリーフィングが「自分が無自覚に考えていた論点を 3 つ提示する」体験が出始めます。Vault は 50 ページから 100 ページに育ち、繰り返しテーマが初めて identify されます。「使える」感覚です。
+3 ヶ月後、6 ヶ月前のノートと今週のノートが朝のブリーフィングで繋がります。Claude が「A のノートと先週の B のノートを繋ぐと X という気付きが見える」と push back し始めます。Vault は 200 ページに、朝のブリーフィングの質が「本当の気付き」レベルに到達します。「賢く感じる」感覚に変わります。
+6 ヶ月後、「別次元」の感覚になります。Claude が「3 ヶ月前のあなたの判断と今週の判断は矛盾しています。3 ヶ月前のメモには反証データもあります」と表に出してきます。半年前に却下した方針が、今週の文脈で再評価すべき理由を伴って戻ってきます。
+12 ヶ月後、Vault は 1,000 ページを超え、蓄積された文脈が「自分より自分を知る存在」レベルに到達します。これは元記事には書かれていない私の予想ですが、3 ヶ月で賢く感じる、6 ヶ月で別次元まで来た線を伸ばすと、12 ヶ月後はそうなる気がします。
+この時間軸を聞くと、もう 1 つの含意が見えます。6 ヶ月後に追いつけない人の構造です。今日始めた人は 6 ヶ月後に別次元の Vault を持ちます。半年後に始めた人は、その時点から 6 ヶ月遅れます。1 年後に始めた人は、1 年遅れます。ツールとモデルが同じでも、文脈の蓄積差は埋まらないまま広がります。
+ここで「では今すぐ完璧な Vault を組まないと」と焦りそうになります。違います。完璧な設定を待つ必要はありません。
+⑧完璧な設定を待たない今夜は5ノートと1つの質問から始める
+元記事の結びには、5 ノートから始める最小行動が示されています。
+You don’t need the perfect setup. You need momentum. Start with five notes. … ‘What patterns do you see that I’m missing?’
+訳すと、こうなります。完璧な設定は要りません。動き出しが必要です。5 ノートから始めてください。覚えておく価値のあるアイデア 5 つ、何度も戻ってくる問い 5 つ、失いたくない気付き 5 つ、のうちから 5 つを選んでください。Claude をそれらに繋いで聞いてください。「私が見えていないけど私のノートから見えるパターンは何ですか」。
+今夜 30 分で、この最小行動を動かせます。
+markdown</p>
+<h1 id="今夜-30-分で始める-5-ノート-day-1-手順">今夜 30 分で始める 5 ノート Day 1 手順<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#今夜-30-分で始める-5-ノート-day-1-手順" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>Step 1: 5 ノート選定 (10 分)</p>
+<ul>
+<li>Obsidian の既存ノートから、もしくは新規作成で、次の中から 5 つを選ぶ:
+A. 覚えておく価値のあるアイデア (今期の事業目標に関わるメモ)
+B. 何度も戻ってくる問い (3 回以上考えた論点)
+C. 失いたくない気付き (顧客 / 競合 / 業界の発見)</li>
+<li>ジャンルを混ぜて 5 つ (A から 2 / B から 2 / C から 1 等)
+Step 2: CLAUDE.md 最小版を投入 (10 分)</li>
+<li>Vault のルートに CLAUDE.md を置く (新規作成)</li>
+<li>次の 3 項目だけ書く:</li>
+</ul>
+<ol>
+<li>私が誰か (役割 / 業界 / 自社の文脈、1-2 行)</li>
+<li>私が今何を作っているか (今期の事業目標、1-2 行)</li>
+<li>私が今集中している論点 (今集中している論点、1-2 行)</li>
+</ol>
+<ul>
+<li>残り 2 項目 (詰まり / 思考の好み) は明日
+Step 3: Claude に 5 ノート + CLAUDE.md を渡し、1 問する (10 分)</li>
+<li>Claude Code もしくは Claude.ai で Vault フォルダを文脈として渡す</li>
+<li>質問: 「これらの 5 ノートと CLAUDE.md を文脈として、
+私が見えていないけど私のノートから見えるパターンを 3 つ表に出してください」</li>
+<li>返ってきた回答が、Vault が話しかけてくる最小体験
+Step 4 (任意): 驚いた回答があれば、明日へ</li>
+<li>驚いた回答が 1 つでもあれば、今夜の投資は成功</li>
+<li>明日: CLAUDE.md 残り 2 項目 + 朝のブリーフィングのプロンプト投入 + 入口系統 1 つ追加
+Step 3 で聞く 1 質問は、目的によって複数のテンプレを使い分けると、話しかけてくる体験が広がります。次の 5 つを試してみてください。
+markdown</li>
+</ul>
+<h1 id="今夜試す-5-つの問い-step-3-で使い分ける">今夜試す 5 つの問い (Step 3 で使い分ける)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#今夜試す-5-つの問い-step-3-で使い分ける" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>T1: 「これらの 5 ノートから、私が無意識に巡り続けている論点を 3 つ表に出してください」
+T2: 「これらの 5 ノートで、私自身の主張が矛盾している箇所はありますか」
+T3: 「これらの 5 ノートに共通する 1 つの根本テーマを 1 文で表現してください」
+T4: 「これらの 5 ノートから、私がまだ書いていないが書くべき 6 つ目のノートを提案してください」
+T5: 「3 ヶ月後にこれらの 5 ノートを読み返した時、最も価値が出るのはどれですか。理由付きで」
+もちろん、5 ノートで話しかけてくる体験が起きないこともあります。問題ありません。10 ノートで起きます。50 ノートで確実に起きます。重要なのは動き出しであって、完璧な設定ではありません。今夜 30 分の投資が、明日 30 分の継続を生み、1 週間後に 1 時間の朝のブリーフィング投入を呼びます。3 ヶ月後に Vault は「賢く感じる」感覚になり、6 ヶ月後に「別次元」に到達します。
+今夜の出発点は、5 ノート選定の 10 分だけです。
+ここまで読んでくれた方の中には、シリーズで Obsidian を組み始めて 1 年経った方も、これから初めて触る方もいると思います。どちらの方も、今夜の 5 ノート + 1 質問は同じ最小行動として動かせます。Vault が空っぽでも、500 ページでも、出発点は変わりません。
+まとめ
+大半の Vault は整理止まりに陥り、思考が回らないまま忘れられた野心の保管庫になっていく
+本来の目的は整理ではなく思考の補強 (繰り返しテーマの発見 / 必要な瞬間のメモの引き出し / 過去主張の矛盾の表出 / メモ同士の繋ぎ / 気付きの押し戻し の 5 動作)
+蘇生は 4 層の責務分離で成立する: 入口 (取り込みの手間ほぼゼロ) + 夜の装置 (Codex スケジュール実行) + 記憶層 (Obsidian) + 思考パートナー (Claude)
+CLAUDE.md は必須 (私が誰か / 今何を作っているか / 今集中している論点 / 今詰まっている課題 / 思考の好み の 5 項目)
+朝のブリーフィングと 5 つの問いで、AI を文法の上手な検索エンジンから思考パートナーにシフトさせる
+文脈の蓄積こそ AI 時代の本当の競争優位 (プロンプトでもツールでもモデルでもない)、1 ヶ月で使える / 3 ヶ月で賢く感じる / 6 ヶ月で別次元 に到達する
+完璧な設定を待たない。5 ノート + 1 質問 + CLAUDE.md 3 項目で、今夜 30 分から動かせる
+6 ヶ月後の「別次元」の感覚は、今夜 30 分で選んだ 5 ノートから始まります。明日からの朝のブリーフィングは、今夜の話しかけてくる体験を経てから組み立てれば十分です。私自身も最初は 5 ノートから始めました。今夜の Vault は dead でも、明日の朝には小さく動き始めています。
+AIエージェントの記憶設計に興味がある方へ。
+東大Obsidianオタク（ @ObsidianOtaku ）はObsidianとAIを組み合わせて自分自身やチームの分身を作る取り組みを研究しているチームです。
+AIエージェントと組み合わせてあらゆる仕事の品質を向上させるための手法を実践しています👇
+■ AI記憶設計の実装パターンの公開
+■ Obsidian活用のトレンドとノウハウ解説
+■ 独自構築した今日から使えるObsidian設計情報のシェア
+今後も実践的な情報を積極的に発信していきます！フォローをお願いします！</p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>500ページのノートがあっても必要な瞬間に引き出せない＝「死んでいるVault」。AIにVault全体を渡しても要約しか返らないのは、ノートが”検索・参照される構造”になっていないため。AIと組み合わせて自分やチームの分身を作るための記憶設計の実装パターンを解説。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>&quot;死んでいるVault&quot;の定義 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>情報は溜まっているのに必要な瞬間に引き出せない状態。蓄積≠活用。Karpathy式「ブクマで止めない」と同じ問題提起。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>AI記憶設計の実装パターン </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ノートをAIが参照・要約以上に”活用”できる構造に作り替える具体手法。チームの分身（エージェント）化まで射程。</p>
+</div>
+</blockquote>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① corin Vaultの健康診断軸に</strong>
+「死んでいるVault」のチェック観点は、weekly-deep-clean / wiki-lint の改善基準として使える。蓄積したLiteratureNoteを”引き出せる”状態に保つ指針。</p>
+<p><strong>② プロジェクトハブmd思想の補強</strong>
+<a href="./project_project_hub_md" class="internal" data-slug="project_project_hub_md">project_project_hub_md</a> の「文脈の単位＝ハブmd」設計は、まさにこの記事の”引き出せる構造”の実装。理論的裏付けとして引用可。</p>
+</div>
+</blockquote>
+<h2 id="️-記事内画像">🖼️ 記事内画像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-記事内画像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_02.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_03.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_04.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_05.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_06.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_07.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_08.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_09.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/ObsidianOtaku_2058665087876165671_10.jpg" width="auto" height="auto" alt/></p>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./project_project_hub_md" class="internal" data-slug="project_project_hub_md">project_project_hub_md</a></li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1578" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-1"><a href="#-投稿内容記事全文" data-for="-投稿内容記事全文">📝 投稿内容（記事全文）</a></li><li class="depth-0"><a href="#眠った-vault-診断チェックリスト-yes-が-3-つ以上で整理止まり" data-for="眠った-vault-診断チェックリスト-yes-が-3-つ以上で整理止まり">眠った Vault 診断チェックリスト (Yes が 3 つ以上で整理止まり)</a></li><li class="depth-0"><a href="#vault-を蘇生する-4-層" data-for="vault-を蘇生する-4-層">Vault を蘇生する 4 層</a></li><li class="depth-0"><a href="#系統-1-web-ハイライト系-readwise--pocket--instapaper--matter" data-for="系統-1-web-ハイライト系-readwise--pocket--instapaper--matter">系統 1: Web ハイライト系 (Readwise / Pocket / Instapaper / Matter)</a></li><li class="depth-0"><a href="#系統-2-メッセージ系-imessage--line--slack-dm-自分宛" data-for="系統-2-メッセージ系-imessage--line--slack-dm-自分宛">系統 2: メッセージ系 (iMessage / LINE / Slack DM 自分宛)</a></li><li class="depth-0"><a href="#系統-3-音声系-audiopen--otterai--whisper" data-for="系統-3-音声系-audiopen--otterai--whisper">系統 3: 音声系 (AudioPen / Otter.ai / Whisper)</a></li><li class="depth-0"><a href="#系統-4-podcast--動画系-snipd--airr--yomu--readwise" data-for="系統-4-podcast--動画系-snipd--airr--yomu--readwise">系統 4: Podcast / 動画系 (Snipd / Airr / Yomu / Readwise)</a></li><li class="depth-0"><a href="#夜の装置-最小スクリプト-4-ステップ" data-for="夜の装置-最小スクリプト-4-ステップ">夜の装置 最小スクリプト (4 ステップ)</a></li><li class="depth-0"><a href="#claudemd-必須-5-項目" data-for="claudemd-必須-5-項目">CLAUDE.md 必須 5 項目</a></li><li class="depth-0"><a href="#朝のブリーフィング-プロンプト-毎朝-cron-で実行" data-for="朝のブリーフィング-プロンプト-毎朝-cron-で実行">朝のブリーフィング プロンプト (毎朝 cron で実行)</a></li><li class="depth-0"><a href="#vault-に問う-5-つのプロンプト" data-for="vault-に問う-5-つのプロンプト">Vault に問う 5 つのプロンプト</a></li><li class="depth-0"><a href="#q1-矛盾の発見" data-for="q1-矛盾の発見">Q1 (矛盾の発見)</a></li><li class="depth-0"><a href="#q2-繰り返しテーマの-identify" data-for="q2-繰り返しテーマの-identify">Q2 (繰り返しテーマの identify)</a></li><li class="depth-0"><a href="#q3-無意識に巡る問いの抽出" data-for="q3-無意識に巡る問いの抽出">Q3 (無意識に巡る問いの抽出)</a></li><li class="depth-0"><a href="#q4-忘れていた関連メモの引き出し" data-for="q4-忘れていた関連メモの引き出し">Q4 (忘れていた関連メモの引き出し)</a></li><li class="depth-0"><a href="#q5-考え方の変遷の追跡" data-for="q5-考え方の変遷の追跡">Q5 (考え方の変遷の追跡)</a></li><li class="depth-0"><a href="#今夜-30-分で始める-5-ノート-day-1-手順" data-for="今夜-30-分で始める-5-ノート-day-1-手順">今夜 30 分で始める 5 ノート Day 1 手順</a></li><li class="depth-0"><a href="#今夜試す-5-つの問い-step-3-で使い分ける" data-for="今夜試す-5-つの問い-step-3-で使い分ける">今夜試す 5 つの問い (Step 3 で使い分ける)</a></li><li class="depth-1"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-2"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-1"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-1"><a href="#️-記事内画像" data-for="️-記事内画像">🖼️ 記事内画像</a></li><li class="depth-1"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！"/><meta name="twitter:description" content="📺 動画情報 AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-01 ・ ⏱️ 44分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AI時代のWebスクレイピングは「コードを書かない」時代へ。目的を伝えるだけでAIがページ構造を解析しコードを生成する一方、同じ場所から同じ形式で継続的にデータを取得したい用途では今もスクレイピングのコードが最適、という話。 🗺️ 全体像 flowchart TD A[何を取りたいか目的を伝える] --> B..."/><meta property="og:description" content="📺 動画情報 AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-01 ・ ⏱️ 44分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AI時代のWebスクレイピングは「コードを書かない」時代へ。目的を伝えるだけでAIがページ構造を解析しコードを生成する一方、同じ場所から同じ形式で継続的にデータを取得したい用途では今もスクレイピングのコードが最適、という話。 🗺️ 全体像 flowchart TD A[何を取りたいか目的を伝える] --> B..."/><meta property="og:image:alt" content="📺 動画情報 AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-01 ・ ⏱️ 44分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AI時代のWebスクレイピングは「コードを書かない」時代へ。目的を伝えるだけでAIがページ構造を解析しコードを生成する一方、同じ場所から同じ形式で継続的にデータを取得したい用途では今もスクレイピングのコードが最適、という話。 🗺️ 全体像 flowchart TD A[何を取りたいか目的を伝える] --> B..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！ 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-01 ・ ⏱️ 44分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AI時代のWebスクレイピングは「コードを書かない」時代へ。目的を伝えるだけでAIがページ構造を解析しコードを生成する一方、同じ場所から同じ形式で継続的にデータを取得したい用途では今もスクレイピングのコードが最適、という話。 🗺️ 全体像 flowchart TD A[何を取りたいか目的を伝える] --> B..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-154"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-154" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！</a></div></nav><h1 class="article-title">AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-04T15:00:00.000Z">2026年7月05日</time><span>94 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/web-scraping" class="internal tag-link">web-scraping</a></li><li><a href="./tags/python" class="internal tag-link">python</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>AIでのWebスクレイピングを実演！AI時代のスクレイピングはこの動画で学べます！</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-07-01 ・ ⏱️ 44分26秒
+🔗 <a href="https://www.youtube.com/watch?v=KBqXwZ1LtqA" class="external">https://www.youtube.com/watch?v=KBqXwZ1LtqA<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AI時代のWebスクレイピングは「コードを書かない」時代へ。目的を伝えるだけでAIがページ構造を解析しコードを生成する一方、同じ場所から同じ形式で継続的にデータを取得したい用途では今もスクレイピングのコードが最適、という話。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[何を取りたいか目的を伝える] --> B[AIがページ構造を把握]\n    B --> C[AIが要素を判別]\n    C --> D[AIがスクレイピングコードを生成]\n    D --> E[人間が結果を確認]\n    E --> F[定期実行・業務システムに組み込み]&quot;">flowchart TD
+    A[何を取りたいか目的を伝える] --> B[AIがページ構造を把握]
+    B --> C[AIが要素を判別]
+    C --> D[AIがスクレイピングコードを生成]
+    D --> E[人間が結果を確認]
+    E --> F[定期実行・業務システムに組み込み]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. AIリサーチとスクレイピングは別物 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIリサーチは「今知りたい」を一発で解決する用途。競合の売上やサービス探しなど、毎回聞くほどでもない情報向き。一方スクレイピングは「同じ場所から同じ形式で継続的に」取ってきたい用途（株価・新着記事・在庫など）に向く。AIは都度判断するため出力がブレるが、プログラムは同じ入力に対して同じ処理・同じ出力を返す。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. AI時代はコードを書かずにスクレイピングできる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>従来はHTMLの構造を人間が読み取り、検証ツール（開発者ツール）でCSSセレクター（コピーセレクター）を特定してコードを書く必要があった。今はURLと「何を取ってきたいか」という目的だけAIに伝えれば、AIがページ構造を把握し要素を判別してPythonコードを自動生成してくれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Codexでの実演フロー </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Codex（チャット機能）にURLを渡し「まずページ構造を把握して」「全商品の商品名・評価・価格・割引価格・在庫数をCSVで出力するスクレイピングコードをPythonで書いて」と目的を伝えるだけで、ブラウザ操作でページ構造を確認→テストコード作成→実サイトで検証（48件を確認）→CSV出力まで自走してくれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. ログイン・動的ページはPlaywright/Selenium </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ログインを挟むサイトや動的にJavaScriptで値が変わるサイトはPlaywrightやSeleniumでブラウザ操作を自動化する。reCAPTCHAがあると難易度は上がるが突破用ライブラリも存在する。Google認証は難しいことが多いため、可能ならメールアドレス認証のサイトの方がやりやすい。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. スクレイピング×AIの掛け算が最強 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>データを取ってくる部分はスクレイピング（同じ形式・同じ場所で安定）、取ってきたデータの分析・考察はAIに任せる、という役割分担がベスト。利用規約・robots.txtの確認は必須で、自社サイト以外への無断スクレイピングはグレー〜NGな場合が多い（動画内のデモは自作サイトで実施）。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 定期チェックしたい情報をスクレイピング化候補にする</strong>
+競合ブランドの新着・価格・在庫など「毎週同じ形式で見たい」情報があれば、AIリサーチで毎回聞くのをやめてスクレイピングコード化を検討する。明日、対象サイトのURLと「何を・どの形式で取りたいか」を一度<a href="./claude-code" class="internal alias" data-slug="claude-code">クロードコード</a>かCodexに投げてみる。</p>
+<p><strong>② コードを書く前に「目的」だけ伝える練習をする</strong>
+要素の指定（CSSセレクター等）は自分でやらず、「このページから何を取ってきてほしいか」を明確に言語化してAIに渡す。プロンプトの主語を「要素」から「目的」に変える意識を持つ。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> おおーちゃんと合ってますね当たり前だろこれで終わりとかじゃなくてちゃんとプログラムが書いてあるわけなので知ってるか知らないかって知らないって罪だよいや罪ですね私皆さんこんにちはAIプログラミング講師の今井です今井さん今井さんのYouTubeを遡って見てたんですけど過去に紹介していたウェブスクレーピングAI時代の今だったらAIがリサーチしてくれたり自動でブラウザ操作してくれたりする中でいらないんじゃないかなと思ったんですけどどうなんですか?</p>
+<p><code>00:32</code> なるほどねそれはちょっと甘いね甘いですか?甘いWebスクレーティング自体は今全然使われていてリサーチとか確かにあとはWebブラウザを自動でねクロードインクロムとかコーデックスとか含めて自動で操作してくれちゃうんだけどそれとはちょっと分けて考えた方がいいかなってのは思ってます別物なんですか?別物というかWebページから情報を取ってくるということにおいては同じなんだけれどもただ役割が違うというか用途が違ったりするからPythonとかJavaScriptとかでプログラム書いてWebページからデータを取ってくるので</p>
+<p><code>01:05</code> ことをWebスクレーピングって言うんだけどもこれ自体は全然今でも使えるって感じかな今日ちょっとそんなWebスクレーピング僕にも教えて欲しいなと思いましたジェイクに?いや毎回ジェイクにじゃないですかジェイクに教えなきゃいけないいやお願いしますよ仕方ないですねでも確かに結構気になってる人いるかなと思っていてそれこそ僕がPythonとかGoogle Apps Scriptを教えてた時は多くの人がWebスクレーピングにめちゃくちゃ興味を持っていてその中で今って別に注目されているわけでもないし別に新しい技術ってわけではなかったけれどもウェブスクレーピングやっぱりウェブ上からデータを自動で取ってくるっていう需要は今も昔も変わらずあるわけで</p>
+<p><code>01:39</code> その中でこのAI時代にウェブスクレーピングってどうなの?みたいなところこれを今回僕なりに解釈してわかりやすくお伝えしていこうかなと思いますはい、ということでAI時代のウェブスクレーピング入門今回もですねクロードコードのスキルズでスライドを作りましたちょっと前にこれ作ってたやつなんだけども別に今回というよりもだいぶ前に作ってたやつなのでこんな感じにはなってますが最新版は下にテロップのスペースがあるのかそうここにねちゃんとテロップ入れるようにスペース入れてますYouTube用ですねそうです今回スクレーピングということでやっていきますがJ君そもそもスクレーピングって何かっていうのは何となくわかる?</p>
+<p><code>02:15</code> 今井さんの動画を早送りで見て情報を勝手に持ってきてくれるみたいなのを知ってますそんな感じウェブ上からスクレープ取ってくるデータをデータを抽出するような技術のことを言います例えばなんだけれども競合の情報チェックするとか求人情報チェックするとかこの企業がこの求人出してるってことはこういう人材欲しいんだってなるじゃんそしたら人材紹介会社がそこに電話かけるそのデータを取ってくるためにウェブスクリーピングとかってよく使われてたりするんだけど本当に便利で僕もよく使ったりしたし多くの人が学びたい技術ではあるから特に自動化とかに近い部分ではあるから</p>
+<p><code>02:49</code> 学んでいってた人が多かったかなという印象ですスクリーピングまずそもそも前提としてなんだけどもスクリーピングってもともとプログラムを書いてたんだよねでプログラムを書いてた時に人間がHTMLと呼ばれるこのウェブページの構造を読み取ってでそれを元にどこの要素かっていうのを探すんだよねどこの要素を見ればいいんだみたいないやどこから値を取ってくればいいんだみたいなのを探してあじゃあここだからこういう風に書こうみたいな感じでコードを書いてたんだどの情報を取ってくるかっていうのをさ例えばさこの左側のこれとかじゃなくてHTMLはコードで書かれてるから構造がわかりやすいのでこのHTMLとか見てタグの中に入ってる</p>
+<p><code>03:26</code> その中のまたこのタグの中に入ってるこの文字を取ってくるとかっていう要素を指定するというやり方が今までのやり方でしたとAIが出てきたことによって新しく何をしたいのかっていうのを目的伝えますそちらもAIが勝手に要素を判別してAIがコードを作るっていう流れになるんよねAIコーディングってさ普通にAIがコード書いてくれるじゃんだから最後のプログラムを書くっていうところに関してもできるしあとはクロードインクロムとかコーデックスのクローム拡張機能とか含めてブラウザを見てくれるようなAIも出てきてるわけだよねそこの要素とかも判別してくれるから</p>
+<p><code>03:59</code> AIに伝えたらAIが要素を識別してそれに合ったコードを作ってくれるわけなのでスクレーピングの作り方が変わってるよこれ実際後ほど実演で見せようかなと思ってるのでこんな感じだよってのは見ればなんかもうすぐできるじゃんなると思うので前提としてスクリーピングの作り方スクリーピングのコードの書き方が変わったってところはちょっと頭の中に入れてほしいかなコードを書かなくていいっていうのはさ僕がもうそれこそ2年前くらいから自分でコードを書かずにAIにコードを書かせてたわけだけどその時でも最初の頃はHTMLはHTMLこれで</p>
+<p><code>04:32</code> このウェブページのこの要素を取ってきてねみたいなのはこっちが指定してたAIが見ても分かんないから分かったけど人間の手が入ったブラウザを自動化してくれるよAIブラウザーオジドコ要はブラウザー操作とかさChrome拡張機能とかでさポチポチやってくれたりしてやってくれますねあれと連携すれば要素を読み取ってくれたりするからめちゃくちゃ簡単なんだよねっていうところちょっと頭の中に入れといてほしいですと今回のゴールとしてはAIリサイクルって情報取ってこれるしスクレーピングとの違いだったりとかあとGoogle Chromeの拡張機能でも便利なものもあったりするのでクロードインクロムとか</p>
+<p><code>05:03</code> そういったのもあるのでそういうのを含めてしてほしいなってところと要は選択肢目的に応じた選択肢を知っているかどうかっていうのが非常に大事ですとスクレーピングコードにする理由っていうところでそのAIとかAIリサーチAIのChrome拡張機能とかある中でなんでスクレーピングのコードを書かなきゃいけないのっていうところもそうだしAIにじゃあコードを作らせる考え方みたいな要はスクレーピングのコードを書かせるやり方みたいなところを含めても伝えていこうかなというふうに思ってます調べると取り続けるは違うよっていうところでまず差としてなんだけれどもAIリサーチとスクレーピングの違いとしてざっくりこう書いてあるんだよね</p>
+<p><code>05:38</code> J君よくやる?リサーチ系ってやりますよ例えば自分の事業でそれこそ競合がどれくらい売れてるかみたいな見れるサイトがあったりするんでそこをURLを渡してチャットGPTとかにこの人たちはどれくらい売れてますかみたいなことをやってますねなるほどそっちのやり方ね確かにそれもあるし例えば僕だったらこういうツール欲しいなとかこういう機能つけたいなこういうサービスないかなと思った時にサービスをリサーチしてもらうとかよくあるんだよ例えばなんだけれども海外のツールとかってやっぱり日本より安くて高機能なものって結構あるなと思ってクラウドサービスとか</p>
+<p><code>06:11</code> 日本のもので探すよりも海外のもので探したり僕別に英語にそんな苦手意識あるわけじゃないけどさ日本語と比べるとちょっと差を感じたりとかさそれこそAIがもう色々調べられるっていうのが分かってる上でさAIにパッと依頼したら例えば音声入力ソフトを探してとかさSNSの自動投稿とかできるようなサービス探してとか何かしらの目的に応じたサービスを探してほしい場合にクロードとかGPTとかに依頼してるとこういう場合ってさ毎回毎回取ってきたいじゃなくない?確かに一発でいいですよねそう一回知りたいとかさパッと送ってきたらそのレポート見てあーこうこうだなで終わりでさ</p>
+<p><code>06:45</code> もう一回さ音声認識ソフト探してなって言うことないじゃん確かにそうです逆にさっきの僕のは可能なら毎日とか毎週で取りたいんですけどそう毎週取りたいとかないじゃんはいでもさなんかJ君が多分やってるそのやり方ってさ特定のサイトでもリンク決まってるのでさそのサイトから取ってきてほしい情報を勝手にさ同じ場所から取ってきてほしいから毎回同じことを毎月目に僕やってるんでそうだよねってなった時に競合の情報とかをAIに判断させるとAIってさ出力が毎回ブレるっていう性質ない?あーなんか別の方法で出してきたりします今回はこのキャンバス機能でみたいな</p>
+<p><code>07:19</code> なるほどね確かにそれもあるし取ってくる情報が毎回毎回ピンポイントで同じかっていうのさこの都度取ってきて判断してるからあれ思ったのと違うみたいなあれ前回いい形で取ってきたのにあれなんか今回違うもちろんこれはプロンプトを分かりやすく書くことによって思ったような情報を取ってくるっていうのもAIでもできるんだよねただAIのリサーチってやってみて分かると思うんだけどもこのページ検索してみたいなやつやると検索してそっからAIが動いて理解して取ってきてで出力してってちょっと時間かかるじゃんかかりますっていう中でJ君がやりたいことは特定の周期で何かしら取っていきたいということにおいてはいいんだけれども</p>
+<p><code>07:55</code> 結局AIがリサーチしてみたいなところをやってるのと変わらないわけよね一方でっていうところでスクリーピングの右側のところ見ると毎日特定の場所から同じ値を取ってきた例えばさ毎日毎日値動きが変わるようなものとか値が変わるようなものもそうだし何かしらのメディアの新着記事とかって毎回変わるじゃん単位で情報が変わるようなものとかでも形式は新着記事ってずっと同じこれだけ取りたいとか株価この企業とこの企業とこの企業の株価だけ取りたいとか同じ形式で欲しくない?毎回さ</p>
+<p><code>08:26</code> 例えばドルで来て円で来てユーロで来てとかさ新着記事も取得の方法が毎回変わるってなんかちょっと嫌じゃん嫌です毎回同じ形式で出力してほしい保存したいそれをなんかうまく業務に活かしたいとかっていう場合はスクレーピングなんだよスクレーピングってのは基本的にはこのページのこの要素から取ってきてって決めることができるからウェブページの構造が変わらない限りは同じ場所から取ってきてくれるAIはその都度判断するじゃん一応これは賢くなってきてるからプロンプトで多少は制限できるもののAIが毎回アクセスして見て判断するから</p>
+<p><code>09:01</code> 見て判断するって100%同じ判断になるかというとなんないですねなんないじゃん確かにこれスキルの時に似た話がおーなんかそんなこと言ったっけスキルはプロンプトじゃなくてコードだからなるほどね間違わないとえ?やるじゃんいいこと言いましたやるじゃんすごいすごい似た話聞いたなと思ってすごいすごいいやそうそうそうほんとその通りでえーちょっとデイクさん進化してることえーめっちゃ嬉しいです感動しましたやったプログラムって基本的に同じ処理が走るんだよね同じところから取ってくるとかめっちゃ得意だAIって同じところから取ってきて</p>
+<p><code>09:35</code> 同じ処理して同じ出力をするって比較的苦手なのもちろんプロンプトで何か制御するみたいなことできるんだけども同じところから毎回同じ情報で取ってきて同じように処理されて同じアウトプットを出すみたいなのは圧倒的にプログラムが得意なのこれをちゃんとプログラムっていう性質を覚えておく必要があるAIは都度判断が入る思考が入るってなったらさ毎回人間の思考が入るのと同じでさ同じかっじかっていうと何回かに 1回見せたりさ何回かに1回違うフォーマットで 来たりさはいするじゃん確かにそうですねっていうことが発生するから1回限りだったら別にフォーマット とか気にしなくてもさ例えば取ってきた情報はじゃあ こういう風に出力してとかって</p>
+<p><code>10:09</code> 言ってさチャットで対話すればさ欲しい 形式でアップしてくれるじゃん毎日とかさ毎週ってなったらさもう決まったフォーマットで出して こいよって何回言えば分からないってなるのがAIなんだよね確かにそこでスクリーピングの価値があるわけですスクリーピングは本当にプログラムを使うことの価値だよね見てる方々にもスキルの動画もぜひ見てほしいんですけれどもプログラムっていうところを介在することによってプログラムは基本的には同じ処理が走るっていう特性があるからこそ同じ入力入れたら同じアウトプットが出るっていうところの特性を踏まえた上でこのスクリーピングとAIリサーチの違いってところは念頭に入れていただけるといいかなと思ってますこれもちょっとさっき言ってたところかな</p>
+<p><code>10:47</code> ざっくり調べたいとこだったらAIにリサーチさせればいい僕もツールとかサービスとかだったらAIにリサーチさせます今見ているページから抜き出したい場合はChromeの拡張機能でそういう拡張機能があったりあとはブラウザAIいわゆるクロードインクロムとかモデックスインクロムとか使えばいいんだけれどもこのサイトから何か情報を取ってきたり例えばこの全ての商品の価格とか取りたいみたいなこの辺の価格とかってよく変わるじゃんアーセンテージちなみに僕が業で作ったサイトなんだけどAmazonモドキューみたいな結構こういうところからデータを取っていきたいって需要あるじゃんありますね</p>
+<p><code>11:19</code> だからそれモドキューを作っておくじゃあこれのここからこういう値を取ってきてとかっていうのをした時にスクリーピングもちろんいいんだけども今回しかここからデータを取ってきませんよねつまり今見ているページがとりあえず抜きたいよ情報場合はわざわざコードを書くのが手間なのでこれだったらここにねインスタントデータスクレーパーっていうねスクレーピングのソフトというか拡張機能があってこれ使うとほらそんなことできるんですかそう例えば今こうやって取ってきてくれてるんだけどもピッとピッとしてあげて</p>
+<p><code>11:55</code> ポッと取ってくれるこんなすぐですかしかもそうこれはプログラムを見てるからだよねしかもExcelですぐ出せるんだこれExcelとかCSVとかで何度返しましたって言うんだけどあとInfinity Scrollみたいなのあるじゃんはいスクロールじゃないんだよなこれ次のページに行ってほしいからあれなんだけどこれ例えばスタートスクローリングするとスクロールすればするほどさ情報出てくるみたいなありますね遅延で表示してるんだけどだから最初読み込まれずにスクロールしたら読み込むみたいな全部読み込んじゃったらページ重くなっちゃうので最初の10個だけ読み込んでみたいなそういうのをページに搭載してるものあるんだけど</p>
+<p><code>12:28</code> そういうのもこのインフィニティスクロールみたいなのを押したらスクロールできる次のページみたいな感じになってるからちょっとできるかできなさそうなんだけども何かしらのさChrome拡張機能使えばいいわけだしあとは別にこれじゃなくてもここでクロード?いや僕そっちでその似たようなことやった時に大苦戦したっつってうまく抜いてExcelに出したくって頑張ってそのプロンプトチャット時期に投げて出来上がったものをクロードインクロームのここに投げて超頑張ってやったのに1時間ぐらいかけてやっと出せたものがさっきのあの</p>
+<p><code>13:00</code> インスタントデータスクリーパーの方が絶対良かったなと思って知ってるか知らないかって知らないって罪だよこれで例えばやっていくってこともできるんだけれども例えばハイクで今表示されている商品の値段評価とか商品名とかそういった情報を一覧で出力してください一覧でまとめてくださいみたいな形でねちなみにタイプレスもう一回契約したわこれ理由あってタイプレスの出力がまた良くなってきてるみたいなのを聞いたのとあと自分の作ってるやつボイスデック</p>
+<p><code>13:33</code> これもいいんだけれども自分で開発してる時間めんどくさくなってきたからちょっと今やってる場合じゃないと思ってもうできるってわかったしねこれで見るとこうやって取れるじゃん取ってきてくれたよねこういう風に一時的に取ってきたいのであればいいんだけど毎回毎回AI実行してるトークンを消費してるところも一つあるしこれぐらい簡単なものはないんだけれどもトークン消費してるよねみたいなところも一応頭の中に入れといてほしいかなっていうまあいいところです今地さん話も終わっちゃうんですけどえーやだ話も終わっちゃうんですけど何ですか?音声入力なの</p>
+<p><code>14:04</code> はい自作音声入力あったじゃないですかはいはいはい今地さんめんどくさいなら動画でやりませんか?いつかあー動画で作るってこと?そうですもうオーナーでできちゃってるからねまた修正というか回収するだけになっちゃうから無料タイプレスの作り方なるほどね要検討ですちょっと僕が欲しいだけですけど要検討させていただきますお願いします弊社では社員研修やセミナー登壇のほかAIネイティブな組織作りのための内製化支援などAI×教育領域で様々な支援を行っていますご興味のある方は概要欄に記載のフォームよりご連絡ください</p>
+<p><code>14:40</code> 同じ場所から継続的に取りたいAI優秀だからだいぶ同じように取ってくれるんだけども毎回毎回やってこなきゃいけない一応ねここでタスクとして登録したりすることもできるんだけれども正直同じ場所から取ってくるのであればスクリーピングでいいわけよAIで取ってくるってさ毎回毎回AIが判断しなければいけないしブレる可能性もあるしところも正直ありますとあとなんかJavaScriptの裏側で動的に動くようなページだとこれちょっとあんま気にしなくていいんだけどもPlay Liteと呼ばれるものセレニウムと呼ばれるもので自動化して例えばログインした後に取ってくるとか</p>
+<p><code>15:13</code> クリックした後に取ってくる情報とか動的に値が変わるサイトとかってのがあるんだけどもそういうのも結構上とほぼ同じだけれどもそういうプログラムを買い取っていくっていうのが一般的だったりはします一応AIで取れるんだけどね業務で使い続けたい例えばこれもこの同じ場所から継続的に取りたいっていうところと同じなんだけど業務で使い続けたい例えば毎日取りたいとか毎週取りたいみたいなのでいわゆる定期実行の仕組みが必要じゃんかつ定期実行して毎回毎回CSVで出力してそれを毎回スラックとかLINEに送信したいみたいなのがあった時にそれってやっぱりプログラムを書かなければいけないよね</p>
+<p><code>15:48</code> 毎回同じ場所から取ってきて毎回同じフォーマットに出力して毎回同じところに送信するこれ全部プログラムで一貫してできるからこういう業務で使う定期的に使うものに関してはやっぱりこのスクリーピングのコードとかというところが鍵みたいな感じかなそれこそあとはDB連携とかデータベースのデータ取ってきますそれを特定の自社のデータベースにどんどん毎日入れるみたいなそうするとログが取れるじゃないですかこの日のこの情報この日のこの情報っていう風にどんどん黙っていくからそれをもとに例えばだけれどもこの会社の商品の値動きをまとめるとかっていうのが</p>
+<p><code>16:22</code> データベースに入れていけば分析できるよねどうしたらいいの?結局データを取るとかそういうリサーチするみたいなところにおいてその先の目的って何だろうみたいなところによって手段はだいぶ変わってくるかなっていう感じです一時的な取得ならクローム拡張で十分だ今見せたよねはいそうですクローム拡張が向いているケースは1回だけ情報を抜き出したいとか表示中のページを表にしたいさっきあったよねインスタントスクリープあとはページ内容を要約したいページ内容を要約したいこれはどちらかというとクロードインクロームクロードインクロームとか最近だとジェミニー相談みたいなの出てきてるんだけどこれ動かせるわけじゃないんだよ確か</p>
+<p><code>16:56</code> こっち動かせるわけじゃなくてこの情報に対して聞けるぐらいだった気がするからあんま使ってないっていうかジェミニアはほぼ使ってないですその場で使うならコードを書かなくていいっていうのがクロム拡張すぐ使いたいみたいな毎回毎回コード書くのめんどくさいでしょ1000ページありますみたいな1000ページあってそれをやるってあったらコード書いた方がいいんだけども2,3ページとかだったらもうクロム拡張機能でポチポチ手動でやった方がいいよねそれこそJ君がさっきさ1時間かかってたんですよね実はプログラム書いてもらえないで 手動でやった方が良かったんじゃない?確かに 手動が早かったですよ</p>
+<p><code>17:28</code> そういうの結構あるからそういうのはケースバイケースで 考えていく必要があるよねただ継続運用に限界があるよみたいなところでここから先は仕組みが必要みたいなこれは別にちょっと言いたいかなスクレーピングってところに関しては同じ場所から取れるとかスクレーピングのコードを書けば 定期実行とかしやすいんですよプログラムだけであれば毎日9時に実行するとか何々.pyのPythonファイルね何々.jsJavaScriptファイルこれを毎朝9時とか1時間起きとかそういう風に実行するってのは</p>
+<p><code>18:01</code> 別にAIに限らずずっと昔からできたことだったから定期実行とかってのもしやすいしさっきも言ったように同じ形式で保存同じ形式で出力するってのがプログラム得意なので入れられたりあとはプログラムってことは業務システムとかに組み込みやすいよねっていうところなんだよねちなみにスクレーピングコードもやっぱりAIで書けるんですか?あっちに見よう!あっちに見よう! やっぱそうですあっちに見よう! やっぱそうです僕でもこれ聞いたらいけますから定規化などちょっと分からないけどまたまたAIにできないことはないって言うと大げさかもしれないけど本当に書けるから</p>
+<p><code>18:33</code> そこは特に気にする必要ないかなって感じだよねこれなんだよねAIに毎回取らせると出力ブレるんよ1回目商品名で書いたら2回目製品名で書いて3回目ネームみたいなあり得ますあり得るじゃんこうなります出力の安定性って大事じゃん同じフォーマットで出したいなってなった時にAIだと出力ぶれる例えばなんだけれどもAIを活用するってなったらAIをリサーチに活用するとかスクレーピングとかに活用するっていうのもスクレーピングしたデータに対してAIの見解を加えさせるっていうのはめちゃくちゃいいと思うどういうことかというと例えば競合のサイトを</p>
+<p><code>19:05</code> 結構頻繁に更新されるようなサイトだとしましょうなった時に毎日毎日スクレーピングでまず必要な情報を取っていきますこれはもう毎回同じフォーマットで取ってくるよね毎回同じフォーマットで取ってきたものに対してAIに分析させる要は取ってくるのはスクレーピングのコードでも取ってきたコードデータに対してAIに分析考察させるこれはAIを使った方がいいよねプログラムってさそんなことできないからデータを取ってくるはAIでその後取ってきた後の考察分析みたいなところをAIにさせてその分析結果を毎日スラックに投げさせるとかは</p>
+<p><code>19:43</code> もうスクレーピングのコードプラスAIのいいところだよねっていう風にちょっと役割違うよねさっき言ったAIに毎回取らせると出力がぶれるわけですよAIに毎回読ませるとコストが積み上がると別にねこのクロードインクロームに関しては今現状サブスクリプションのプラン内でできるわけだからいいんだけれども仮にクロードのAPIとか使うと何かしらの裏側でシステムに組み込むとかってなった時にこれどんどんどんどんコストが積み上がる可能性があるわけね少なくともトークン消費するじゃんその出力がブレるだけじゃなくてコストも積み上がる可能性があると</p>
+<p><code>20:15</code> 意外とチリツモでいきますよめちゃくちゃチリツモでいくよだから仮にAPIで実行するとかってなったらの話だけれどもコストが積み上がりますよプログラムは別にプログラムの環境代だけだから特にそんなかかるわけじゃないよねAIは考えるってのが大事分析とか要約考察させるってのが得意でコードは繰り返しなんか取ってくるみたいな同じことを同じようにやっていくなかとこれさっき言ったスキルの話でもそうだよねプログラムがあることによって同じ入力が入ってきたら基本的に同じ処理をして同じ出力になるこれも何度も今後も言うと思うけど</p>
+<p><code>20:49</code> プログラムはそういう特徴があるからめっちゃいいわけですだからこのAIは柔軟性があるし考察いわゆる思考的なところの脳みそを持っているからこの柔軟な脳みそプラス毎回同じ処理をしてくれるプログラムっていうところの掛け算これがスキルの素晴らしさ従来のスクレーピング従来のスクレーピング先ほど話したようにHTML見て検証ツール開いてCSSエレクターを探してコードを書くんだけどもこのページからデータを取っていきたいとなった時にスクリーピングは基本的に右クリックでここの検証とかを押してあげるとJ君も多分こういうの見たことあるんじゃないかな</p>
+<p><code>21:23</code> ないですないかこういう検証ツールっていうのがあってこれは開発者ツールと呼ばれるものでいわゆる開発ツール上でよく使うものなんだけどもちょっとこれ細かな説明に入っておくね左側変わるじゃんこうやって動かすとこれはそれぞれのここに書いてあるのは全部HTMLなんだよねhtml でコードが書かれています その中でボディタグって中に基本的にいろいろ入ってるんだけれども この中にこれヘッダーって書いてあるじゃんこれタグこれヘッダーのところだよね でメインって書いてあるじゃんでこうやって分かれてるよ ちょっと分かってきました</p>
+<p><code>21:55</code> 構造がねこうなってるわけよ あった時にこれ左上のここのポチッと押すとこの左に対して右が適用して分かるから わかりますこれ例えばここポチッと押すと この中にあるよってこうやってハイライトしてくれるわけよ そしたらハイライトしてピッと見てあげてほらここにこの名前入ってるよねとかここの中見てあげるとここに4.5って数値入ってるよねとかここに星入ってるよねとかこういうのをこうやって見てここにこういう情報入ってるんだってのをこの検証ツールとかで見ていく</p>
+<p><code>22:28</code> あんま気にしなくていいんだけども例えばだけれども値段のところこうやってポチッと押してあげるとここに入ってるねこの値取りだったらこれを右クリックするとコピーってのが出てきてここにコピーセレクターってのがあるコピーセレクターってのをやってあげるとこれちょっと僕が普段使ってるこれで見せるとほいこんな感じのがコピーセレクターJ君はわかるよねこれぐらい私はわけわかんないですセレクターっていうのは何かちょっとざっくりだけ言うねボディタグの中のメインタグの中の</p>
+<p><code>23:02</code> リブタグの中のリブタグの中のリブタグの中のリブタグの中のプロダクトグリッドというクラスの中のみたいな入れ子構造をたどっていく要はHTMLって基本的に構造でタグと呼ばれるもので囲まれているからどんどんこの代償構造というか何かの中に何かがあってみたいな こういう関係になってるんだけどねそれをたどっていけば一番上のさボディのところからたどっていけばさ欲しいこのプロダクトプライスってところまで見つかりそうじゃん地図みたいなそうなんかどんどんどんどんたどっていってたどっていったらいずれいくよね例えばさ木もさ下の根っこのところからさ</p>
+<p><code>23:36</code> 上にずっと行ってた時にさ枝が分かれてたら一番先の木は絶対どっかしら到達するじゃん到達しない枝なんてないじゃんこういう風に構造をたどっていけばその場所を指定することができるわけね他にもここに書いてあるXパスとか指定の仕方はあるんだけどよく使われるのはこのコピーセレクターCSSセレクターと呼ばれるものを使うんだよね要はこの場所の指定方法がいくつかあるよここに書いてあるCSSセレクターってのも基本的によく使うそしたらこの場所ってのが分かるじゃんこの場所ってわかったらこの場所から値を取ってきたっていうコードが入ってくるこのコードも別に使うプログラミング言語とか</p>
+<p><code>24:11</code> いわゆるライブラリーと呼ばれるものであって書き方は違うんだけどもでも基本的にスクレーピングの基本的な動作っていうのはどの場所からどの値を取ってくるここでさこの中のさタグで囲まれてるのがあるスパンっていうタグで囲まれてるじゃんこのタグの中身を取ってくるっていう普通にいわゆる値を取ってくるパターンもあればこのスパンタグのクラスって書いてあるんだよクラスの値を取ってくる属性とか言ったりする属性の値を取ってくるみたいなこともできるわけねなのでどの場所どのセレクターに対して</p>
+<p><code>24:43</code> どういう値を取っていきたいのかっていうのをセットでコードを書いてあげたらポチッと事故したらシャッと取ってくるっていうのがざっくり言うと従来のスクレーピングです初心者からするとどの要素をどう取っていけばいいのか分からないしかつこれね僕が作ったサイトだから結構シンプルに書かれてるよそんな複雑じゃないこれは複雑じゃないから取りやすい構造にはなっているところはちょっと頭の中に入れといてほしいんですが弊社では一緒に働いてくださる仲間を募集しております正社員業務委託インターン問わず絶賛募集中ですAI×教育事業ですね</p>
+<p><code>25:16</code> より大きく成長させていくために一緒にAIそして教育に熱を持って臨んでいける方取り組んでいける方を探しておりますご興味のある方はですね概要欄に記載のフォームよりご応募ください皆様のご応募お待ちしておりますAI時代のスクリーティングはこういう値を取っていきたいそしてURL投げますAIがページ構造を見ますAIが要素を判別しますAIがフォードを作って人間の結果を確認ということで人間は先ほど僕がこの要素探したじゃんそんなことをしなくて</p>
+<p><code>25:50</code> 何にしたいかどういう値を取っていきたいかだけ言えばいいんですよっていうのがAI時代のスクリーティングだよねもうAIには要素じゃなくて目的伝えましょうとこのURLの新着商品ページがこれとこれとこれとってきてねみたいな最終的にCSVで出力してねみたいなことを言ってあげるわけねこの辺はちょっとね細かな部分はちょっと良くてちょっと試しにそうだなこのサイトで仕方ないからじいくんにちょっと見せてあげようかなAIスクレーピング仕方ないからコーデックスでやろうと思いますコーデックスの動画は撮ったのでそちらをご覧いただけたらこの辺にもやるんですね</p>
+<p><code>26:23</code> この辺に置いておきますのでコーデックスの動画撮りましたのでこちらをご覧いただけたらと思いますコーデックスはこのプロジェクトと呼ばれるものとチャット一時的なものがあってこのチャットをちょっと使おうかなと思っています例えばなんだけれどもここでこんな感じで入れて音声入力入れますこちらのページから情報を取得したいなと思っていますまずはこのページのページ構造を把握してくださいブラウザ操作をするなどしてという風に伝えますこれでフルアクセスとかにしておいて一旦これで実行しましょう</p>
+<p><code>26:55</code> こういうちょっとURLを渡してあげて僕はよく5.5のエクストラハイを使うかハイを使うかしています情報を取得したいと思ってますみたいなところとかだと見てもらうと分かるんだけど情報をそのまま取得してきちゃいそうスクレーピング使うそうそうなのでちゃんと伝えた方がいいそのまま目的も伝えちゃおう目的としてはですね全ての商品をですね毎回毎回取ってくるようなスクレーピングのコードをPythonで書いてほしいなと思ってますなのでページの構造を把握した上で全ての商品の商品情報ですね</p>
+<p><code>27:29</code> 商品名や評価あとは価格あと割引してるので割引価格元値とか在庫あるのかないのか在庫もしなければ何点ぐらいあるのかみたいなところそういったのをCSV形式で最終的に出力してくれるようなスクレーピングのコードを書いてほしいなというふうに思いますというふうに伝えてあげますなるほどこれ目的だよねはいこれで送信しましょうURLを渡したのであとはコーデックスがURLの中身を見に行ってくれるとちなみになんで自前のウェブサイトをスクレーピングしてるんですか?いい質問するじゃないか</p>
+<p><code>28:04</code> スクレーピングっていろんな人がぶっちゃけ行ってるんだけれども自社のサイトをスクレーピングしてほしいと思う運営者って基本いない確かに嫌ですねアクセスがめっちゃかかるから基本的にデータを取ってくることは一回アクセスしてそこからデータを抽出するっていうことになるのでめっちゃアクセス増えるとアクセス過多になるプログラムでデータを自社のサイトのデータを取ってくるみたいなのは禁止されていることがほとんどダメと言われているところからも取ってきている人も多かったりするんだけどこれはちょっとスクリーピングで</p>
+<p><code>28:36</code> データを取ってきていい場所かどうかぜひ皆さんせっかくなので僕のチャンネルとか含めてAIを学んでいただいていると思うのでそれをチャットGPDとかクローとかに聞いてもらえたらなと思うんですけれども基本そういう形になっている表現あるだけで基本的には取得してきてほしくないわけだし禁止されているものが例えば僕が旧人情報サイトを取得していけないウェブスクレーピングしちゃいけないサイトなのに確かに大やけに大やけにしたらちょっとまずいじゃんだからデモサイトを作ってるっていう感じこれはもうずっとウェブスクレーピングの講座を僕がやってきた</p>
+<p><code>29:10</code> ユーデミーで一番最初に多分僕がウェブスクレーピングの講座をPythonで出してておそらく僕の知る限り一番最初じゃなかったとしても初期の頃2,3年ぐらいは僕の講座が一番見られてたんだけどウェブスクレーピングユーデミーの頃ねその時も僕はわざわざその時はAIなかったから自分で慣れないながらウェブページでそれっぽいのを作ってそれをスクレーピングさせましょうみたいなことをしてたのでちゃんとそこは実際のものとかを見せちゃうと実際はいけないのにみたいになるから技術としては素晴らしいけど若干グレーの部分もあったりするから</p>
+<p><code>29:44</code> ここは僕は自分のサイトで試しにやってるっていう感じかななので僕がどのサイトでもスクレーピングしていいって言ってたみたいなことは言わないようにとか言ってないしね実際言ってないしそこはちゃんとAIに相談というかちゃんと調べた上であのウェブスクリーピングしていただけたらなと思いますしっかりやってるとHTML構成を見回すということで在庫の詳細は一覧ページより詳細ページの方が流度が高いです勝手に言ってくれてるわけでしょ何もしてない対象ページ構造ブラウザとHTMLの関係で進捗書いてくれてるねこれめっちゃいいよね。わかりやすいし、サクサク動いてるのコーデックスいいよね。スクレーパーのパワーサーテストを先に作る。</p>
+<p><code>30:20</code> テスト作って実際にやって、48件と在庫詳細を検証する。48件ってここだよね。おお、全48件。多分見てくれてる。今これでドットパイ書いてくれた。ブラウザ操作してるってこと?ブラウザ操作してる。赤くなったりしてないから、操作してるってわかんない。あー確かに確かに。これ多分こうやってほら、右側で。中でブラウザ操作してる。そうそう右側開いてやってくれてるんだけどそういうことですねこのアプリ内のブラウザ開いて2ページ目に勝手になっているすごいですね反対テストが通りました次に実サイトに接続してCSVを生成し</p>
+<p><code>30:54</code> 件数と在庫切れ詳細が期待通り入るか確認します何もしてないよもう1個気になったんですけどこのCodexがブラウザを開けるのってやっぱり自分で持ってるからですか?ブラウザをスキルかな?とかが入ってるんだけど裏側でその機能があってブラウザを開くためのライブラリとか裏側に多分あると思うんだけどそういうのとか多分いろいろと使ってブラウザを開くスキルがあるからブラウザを開いて確認してみたいなところだよねちょっと悩んだんですけどクロードを使ってるとChromeが勝手に開かれるじゃないですかはいはいはい</p>
+<p><code>31:25</code> Chromeが結構重たいからお風呂入ってなかったら落ちてなんの進んでなかったみたいなはいはいはい完全自動でやってくれるというか落ちないんだったらこのCodexだとめっちゃ助かりますね最近はなんか僕も僕の周りもクロードコードから一気にコーデックスに乗り換えてるというかコーデックスの多分5.5が出たところが大きくてGPT5.5のモデルがめっちゃ良くてそれがコーデックスと相性良くてかつコーデックスのアプリもデスクトップアプリもこうやって進化してるめっちゃ使いやすくなっててなんかね最近クロードコードでもやりつつコーデックスでもやりつつで</p>
+<p><code>31:58</code> やっぱりコーデックスの方がいいなってところとあと多分この動画が公開される頃にはおそらくクロードの最新モデル4.8が出てるんだよ確かにタイミング的に多分出てて、というのは、クロードはよくあるのが、最新モデルが出る前、めっちゃ今の現行モデルのクオリティが落ちる。これ結構現象として良かった。それもあって、クロードのOpus 4.7がちょっとバカになったよね。だからこそクロードコードもバカになって使いにくくなってみたいなところで、結構コーデックスが映ってる。コーデックスがシンプルにいいのもあるし、クロードがバカになってるみたいな、この2つでって感じかな。</p>
+<p><code>32:34</code> なるほど。見たけどスプレッドシートに 手をまとめてくれてるよね40の件 助かりますねもう投げたらやってくれてるわけじゃん残り3点って書いてあるやつさこれ1個あったよねほらおおーちゃんとあってますねあったりめえだろ重要なのはこれで終わりとかじゃなくてちゃんとこれプログラムが書いてあるわけなので実行方法はこれ実行してあげるといいよね例えばこれを定期実行みたいなのもこれもAIに聞けばいいんだよねAIに聞けば定期実行してとかって いただけたりするとこういう風にこのコードを実行してくれるから定期実行のプログラム書ってくるもちろんこれ pc が起き上がっている状態じゃなく pc 上では起動しないけれどもできるわけ よねやばこれってどうしたらいいんだろうそれこそややいに聞けって話かも知れません</p>
+<p><code>33:22</code> せっかく今井さん動画あって出来上がった python とかフォルダディレクトリか何かに保存しておいてそこを選択してやってって言われてくれます定期実行じゃないとしたらこのコマンドこの実行方法って書いてあるこのコマンドを例えば下のさターミナルとかでさこれで実行してあげるとこれ今ちょっとインストールしてるんだけど一番これ48件から抽出順ほら始まったほら同じことしてますねそうほら取ってきてるってことはそのコマンドだけ覚えとけばいいんだもんね自分のPC上で定期実行したいのであれば</p>
+<p><code>33:57</code> 自分のPC止まってたら動かないじゃんなので自分のPC止まってたら動かないので起動してないスリープじゃない状態じゃないといけないとかまずあるんだよねスリープにしない方法とかもちろんあったりするんだけどだいたいローカルで定期実行するとかじゃなくてクラウド環境と呼ばれるようなどっかしらのサーバー上とかさ別の手元ではないインターネット上の環境にこのプログラムとかを置いてこれを定期実行させるみたいなことがよくあって自分のPCがさ動いてるか動いてないか関係ないじゃんクラウド上の環境でスクレーピングを行ってもらうでまぁ別にそのCSVをさそのままでもいいし</p>
+<p><code>34:31</code> もしくはスプレッドシートに吐き出してもらう色々やり方あると思うね見てあげるとこうやって見てさCSVを書き出しましたみたいなうわすごいターミナルでやるとなんかちょっとそれっぽいよねかっこよくつけますねやっぱっていうのではプログラムを実行させるみたいなことも別にできるよねって感じかなちなみにまじさんもう一個いっぱい質問あったりするんですよ何ですかいや僕がですね取ってきたいウェブサイトが簡易性みたいなとこなんですよあーなるほどねログインを挟まなきゃいけないのでその場合はスクレーピングが難しいんじゃない?っていうアドバイスを別の方にいただいて</p>
+<p><code>35:04</code> それもあってさっき言ったようにクロードインクロームで頑張ったりしたんですけどログインを挟む定期実行っていうのはスクレーピングできるんですか?ものによりますキャプチャが入ってるとちょっと難しいけどそうじゃないものだったら比較的行きやすいプレイライトとかセレニウムとかって呼ばれるようなものは本当にプログラム実行したら勝手にブラウザ開いてクリックしてみたいなことを自動化できるそもそもなんだけどプレイライトとかセレニウムってブラウザ操作自動化のためというよりはテストのために使うこと開発したシステムとかアプリケーションがちゃんと動くかどうかって人間がすべて一時ポチポチポチポチポチやる</p>
+<p><code>35:41</code> めんどくさくない?そうですねだから勝手にプログラムで自動でポチポチして動くか動かないかっていうのをテストする要はクリックがうまく動くのかとか検索機能をするのかとかクリックした時にエラー起きないかとかそういうのをポチポチ人間がやるんじゃなくてそういうプログラムを書いてテストしていくみたいな時にPlayLightとかSeleniumってのをよく使うのねそれを使ってあげると例えばこのユーザー名というところにユーザー名を入力してパスワードの中にパスワードを入れてこのボタンをクリックして次行くそういうのができたりするんだけども</p>
+<p><code>36:15</code> 先ほど話したようなリキャプチャとかなんかついてるとそういうボットだとリキャプチャとか突破するためのライブラリーとかもある海外とかにそういうボットとかだと疑われたとします突破できるようなライブラリとか確か海外にあるんだけれどもそういうのを使ったりすると100%ではないものの突破できる確率ってのは上がるんですねちなみにGoogle認証はどうですかGoogle認証もどうだろう同じブラウザ使ってたら大丈夫かもしれないでも結構後ろにリキャプチャとかあったりするからその辺は物によるってのもあるのでちょっとやってみないと分からない</p>
+<p><code>36:49</code> それは技術的に絶対できないかというとできないわけじゃないしだからそういう意味でGoogle系ちょっと難しいかもね。Google系はあれとしてメールアドレス認証に可能な限りした方がいい。そうした方がメールアドレスとパスワード入れてログインボタン押してみたいな感じだから、Googleとかよりもやりやすくなります。ところはあるよね。あとはこのGoogleのChromeを例えばそのまま開いてみたいな感じだからさ、自分のプロファイルが設定されてるからさ、場合によってはログイン不要みたいな感じだからやろうと思えばいい。要は自分のブラウザを開いてからさ、新規のシークレットブラウザだったらログインしなきゃいけないけど、自分のChromeのこのプロファイル開いてから</p>
+<p><code>37:23</code> そのままログイン状態が残ってるからそういう手間がなかったりするみたいなところもあるしそもそもログインが必要ない場合もあったりするからその辺は技術的に可能な部分もあったりするかなって感じかなこれこそAIに聞けたらいいそうそういう細かな部分とか気になる部分は多分多くの人持ってると思うんだけどもそれは本当にAIに聞いてどんどん解決していけばいいんじゃないかなみたいなところはありますということでAI定義実行まあまあおんぱないよねさっきから何度も伝えてるしAI時代人間が設計すること何取るの?なぜ取るの?どのページなの?どの項目?どの形式で?どう使うの?とか行動、どうのこうのよりも目的とか</p>
+<p><code>37:57</code> 設計がやっぱ大事だよね今回はめっちゃ簡単だったけれどもとりあえず取ってみたいなそれをどう処理してとかっていうところもきちんと伝えてあげたらもうあとはAIがやってくれます簡単にできるからこそ注意が必要というところでリオン規約とかロボット.txtっていうテキストファイルとかが入ったりするんだけどサイトにそういうの読み込んであげるとロボットに対してBotに対してのルールみたいなの書いてあるんですよこの辺はちょっと割愛しますただこういう簡単にできるけれども注意点もあるよっていうところはきちんと頭の中に入れといてほしいしそれこそ先ほどから話しているようなChatGPTとかクローンに聞けばいいよねっていう話</p>
+<p><code>38:30</code> AIを考えるコードを繰り返すとどう?なんとなくWebスクレーピングのAIリサーチとかの違いとかさクローン拡張系のとかさAI時代のWebスクレーピングのやり方みたいなの分かった?分かりましたスクレーピングはコードっていうのがめちゃめちゃ分かりましたちゃんとスクレーピングしてねコード書いてねって伝えるのが大事だなってどうですか?分かってますかね?分かっていることを期待しますということで本日はそんな感じでWebスクレーティング僕が今までそれこそAIについて発信する前にプログラミングについてずっと教えてた時に関してはスクレーティングとかExcel業務の自動化とか</p>
+<p><code>39:04</code> 効率化とかそういう自動化系は結構ニーズあったりしたし効率化系もニーズあったりしたから僕としてはかなり今までそういう内容をお伝えしてきたんですけれどもじゃあAI時代どうなの?結構気になってる人みたいじゃないかなということで取り上げさせてもらいましたありがとうございますいもにさんLINE登録したら登録してくれた方に特典渡してるっておっしゃったと思うんですけどあれ何渡してるんですか?何渡してたっけ?10個ぐらい特典あるんだけど10個?そんな渡しちゃってるんですね非エンジニアの人がAIとかAIコーディングを学ぶとかにあたって必要そうかなみたいなものを</p>
+<p><code>39:36</code> ドキュメントにまとめたりとか解説したりしているものLINE登録してくれた人にパイプしてるっていう感じかなLINE追加して得点もらえるだけです得点をまずお渡ししてるんだけれどもLINE登録してくれた人限定で勉強会開催してたりとかAIとか特にAIコーディング系の勉強会とか今後ちょっとやっていきたいなと思ってるのは定期で質問とかをZoomとかYouTubeライブとかで受け付けるみたいなLINE登録者限定でやるみたいなそういうのもちょっとやっていきたいなみたいな思ってるじゃあこっそり登録し俺も勉強会に参加しちゃおうかな自衛官もっと学ばなきゃいけないからぜひLINE登録してもらえたら嬉しいし</p>
+<p><code>40:09</code> 勉強会だけじゃなくて定期で僕がやってるスクールの案内もしたりとか基本的には得点を渡して勉強会とか興味あれば来てもらえたらなという風に思うし今2万人登録ぐらいかなLINE登録者結構いるんだけどそんなにいるんですねうるせえなと思ったらブロックしてもらえたらいいからとりあえず登録してもらえたらいいんじゃないかなと思いますなるほどコメント返信に行く前にただの質問なんですけど最近ボクシングジム行ってるらしいじゃないですかはいはいあれちょっと話聞きたくて今?今?せっかくなら動画になるほどね</p>
+<p><code>40:41</code> ボクシングジムというかボクシングとかを含めた12ラウンド3分×12ラウンド3分やって30秒休憩3分やって30秒休憩12ラウンドできるようなそういうジムがあって海外から来たのオーストラリアの方から来たやつで都の家の近くにあって 3分?きつくないですか?30秒しか休憩ないですか?1分20秒これやって 1分20秒これやってみたいな感じかもしくは特定のものを10回やったら次こっち5回やって こっち10回やってみたいなやってそれで3分みたいなのがあってあセット決まってるんですね そうそれに今週3とか行ってて</p>
+<p><code>41:16</code> それ週3朝やって月曜休みだから カーモクドーでやって月水金でパーソナルみたいな 別のも入ってるんですか筋トレはそんな汗かくとかじゃなくて ちゃんとその筋力つけるとか体作りみたいなところで ボクシングジムというかワークアウトジムみたいなところは もっとその代謝上げててかその肺活量上げて 朝からもそういうこと500-600kcalぐらい消費してみたいな 感じでやるってなんかその汗かくみたいな 汗かいて動ける体にするみたいなところでやってるっていうなんかAA関係ない話</p>
+<p><code>41:48</code> 大丈夫そう?ただ聞きたかったんですよなんかやたらコンディションいいっておっしゃってたんでぜひ皆さん朝運動めっちゃいいっす僕結構仕事終わってからの運動のタイプだったんですけどまあそれこそ朝力がねパワーがやっぱ出なかったりするからなんかなかなかその筋トレとかしても例えば重いもの持ち上げられなかったりとかするからあんま朝やりたいっていう気分じゃなかったんだけど朝やってからめっちゃ頭冴えるしちょっと夕方ぐらいになると眠くなるっていうのもあるんだけどもすごい冴えるから僕毎日日曜日だけ休むさすがに週7でやるのってトレーナーに言われて体休めるの大事</p>
+<p><code>42:22</code> 日曜だけ休んで週6は確実でパーソナルワークアウトパーソナルワークアウトをやってまして今やってからは結構体の調子というか頭の綺麗というかすっきりしてる感じはだいぶ違うなこれ首肩こりひどい人僕首肩こり10年プレイヤーなんですけど10年プレイヤーもうちょっと長いですね大学になってから多分PCとかされ始めて運動しなくなってから首肩こりめちゃくちゃひどくて首肩こりちょっと困ってたんだけど今もあるんだよね結構</p>
+<p><code>42:53</code> だけど朝やっぱ運動行って血行良くなると血の巡りが良くなるのと運動すると姿勢が良くなるんだよね朝筋力使ってその力が入るとかこうなるとかじゃなくてなんか姿勢が良くなるからまあそういうのでもなんかその首肩これ起きにくいというか軽減されたりするのでおすすめです本当にAI関係ない全く関係ない話を最後にしましょうありがとうございますじゃあこの辺に今日終わりたいと思いますはい今日はですねめっちゃ嬉しかったコメントを取り上げますとっきーさんからのコメントですはいAPIの動画にコメントいただきました分かりやすすぎるんだが</p>
+<p><code>43:26</code> ありがとうございましたってコメントいただいてありましたね結構最近いっぱいコメントいただける方が増えてきて嬉しいですねめっちゃありがたいですねなんかぜひこのWebスクリーピングのコメントもそういうコメント増えたらいいなと思うんですけどAPIに関しては結構ね僕もかなり説明の自信というかAPIわからないみたいな人たちも多い中でわかりやすく伝える自信っていうのは昔からあったのでこれは改めてすごいありがたいなと思いますねはいありがとうございますということでぜひぜひ先ほども話しましたがウェブスクレーピングに関してのコメント</p>
+<p><code>43:59</code> あとは別に興味ないかもしれませんが僕の生態系に関してのコメントなんでも大丈夫ですのでぜひお寄せいただけたら嬉しいなと思いますしまだチャンネル登録してないよという方は多分いないと思うんですけれどもぜひチャンネル登録していただけると嬉しいなと思いますということで本日は以上になりますまた次回</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./2026-06-29-browser-table-scraping-column-index" class="internal" data-slug="2026-06-29-browser-table-scraping-column-index">2026-06-29-browser-table-scraping-column-index</a>（StructureNote/syntheses）</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-76" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

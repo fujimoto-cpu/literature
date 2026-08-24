@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Custom Halftone Tutorial in Adobe Photoshop and Illustrator Graphic Design OpArt</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Custom Halftone Tutorial in Adobe Photoshop and Illustrator Graphic Design OpArt"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Custom Halftone Tutorial in Adobe Photoshop and Illustrator Graphic Design OpArt"/><meta name="twitter:description" content="📺 動画情報 Custom Halftone Tutorial in Adobe Photoshop and Illustrator | Graphic Design / OpArt 🎙️ Anthony Kirk Design ・ 📅 2021-03-29 ・ ⏱️ 18分32秒 🔗 www.youtube.com/watch 📝 要約 🎯 Adobe Illustratorで作ったカスタムラインワーク（グリッド／ジグザグ／ブレンド／ポーラーグリッド）を、Photoshopの「Curves（トーンカーブ）× ガウスブラー」で擬似ハーフトーンに変換し、人物ポートレートをOpArt..."/><meta property="og:description" content="📺 動画情報 Custom Halftone Tutorial in Adobe Photoshop and Illustrator | Graphic Design / OpArt 🎙️ Anthony Kirk Design ・ 📅 2021-03-29 ・ ⏱️ 18分32秒 🔗 www.youtube.com/watch 📝 要約 🎯 Adobe Illustratorで作ったカスタムラインワーク（グリッド／ジグザグ／ブレンド／ポーラーグリッド）を、Photoshopの「Curves（トーンカーブ）× ガウスブラー」で擬似ハーフトーンに変換し、人物ポートレートをOpArt..."/><meta property="og:image:alt" content="📺 動画情報 Custom Halftone Tutorial in Adobe Photoshop and Illustrator | Graphic Design / OpArt 🎙️ Anthony Kirk Design ・ 📅 2021-03-29 ・ ⏱️ 18分32秒 🔗 www.youtube.com/watch 📝 要約 🎯 Adobe Illustratorで作ったカスタムラインワーク（グリッド／ジグザグ／ブレンド／ポーラーグリッド）を、Photoshopの「Curves（トーンカーブ）× ガウスブラー」で擬似ハーフトーンに変換し、人物ポートレートをOpArt..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Custom-Halftone-Tutorial-in-Adobe-Photoshop-and-Illustrator-Graphic-Design-OpArt"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Custom-Halftone-Tutorial-in-Adobe-Photoshop-and-Illustrator-Graphic-Design-OpArt"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Custom Halftone Tutorial in Adobe Photoshop and Illustrator | Graphic Design / OpArt 🎙️ Anthony Kirk Design ・ 📅 2021-03-29 ・ ⏱️ 18分32秒 🔗 www.youtube.com/watch 📝 要約 🎯 Adobe Illustratorで作ったカスタムラインワーク（グリッド／ジグザグ／ブレンド／ポーラーグリッド）を、Photoshopの「Curves（トーンカーブ）× ガウスブラー」で擬似ハーフトーンに変換し、人物ポートレートをOpArt..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Custom-Halftone-Tutorial-in-Adobe-Photoshop-and-Illustrator-Graphic-Design-OpArt"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-342"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-342" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Custom Halftone Tutorial in Adobe Photoshop and Illustrator Graphic Design OpArt</a></div></nav><h1 class="article-title">Custom Halftone Tutorial in Adobe Photoshop and Illustrator Graphic Design OpArt</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-11T15:00:00.000Z">2026年7月12日</time><span>24 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/halftone" class="internal tag-link">halftone</a></li><li><a href="./tags/illustrator" class="internal tag-link">illustrator</a></li><li><a href="./tags/photoshop" class="internal tag-link">photoshop</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Custom Halftone Tutorial in Adobe Photoshop and Illustrator | Graphic Design / OpArt</strong>
+🎙️ Anthony Kirk Design ・ 📅 2021-03-29 ・ ⏱️ 18分32秒
+🔗 <a href="https://www.youtube.com/watch?v=CRlq4ykaJmA" class="external">https://www.youtube.com/watch?v=CRlq4ykaJmA<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./illustrator" class="internal alias" data-slug="illustrator">Adobe Illustrator</a>で作ったカスタムラインワーク（グリッド／ジグザグ／ブレンド／ポーラーグリッド）を、Photoshopの「Curves（トーンカーブ）× ガウスブラー」で擬似<a href="./ハーフトーン" class="internal alias" data-slug="ハーフトーン">ハーフトーン</a>に変換し、人物ポートレートをOpArt（オプティカルアート）調に仕上げるチュートリアル。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Illustratorでラインワーク制作] --> B[グリッド/ジグザグ/ブレンドで模様生成]\n    B --> C[ポーラーグリッドで放射状パターン追加]\n    C --> D[Photoshopに配置・ラスタライズ]\n    D --> E[ポートレート画像 + Curvesレイヤーで白黒コントラスト調整]\n    E --> F[ラインワークにガウスブラーをかける]\n    F --> G[Curvesでブラーを硬い黒白の境界に変換=擬似ハーフトーン]\n    G --> H[ブラシで手直し+ブレンドモードで質感追加]\n    H --> I[Liquifyで最終仕上げ]&quot;">flowchart TD
+    A[Illustratorでラインワーク制作] --> B[グリッド/ジグザグ/ブレンドで模様生成]
+    B --> C[ポーラーグリッドで放射状パターン追加]
+    C --> D[Photoshopに配置・ラスタライズ]
+    D --> E[ポートレート画像 + Curvesレイヤーで白黒コントラスト調整]
+    E --> F[ラインワークにガウスブラーをかける]
+    F --> G[Curvesでブラーを硬い黒白の境界に変換=擬似ハーフトーン]
+    G --> H[ブラシで手直し+ブレンドモードで質感追加]
+    H --> I[Liquifyで最終仕上げ]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Illustratorでラインワークの土台を作る — グリッド・ジグザグ・ブレンドで手描き感のあるパターンを生成 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>アートボードサイズ（1080×1350）に合わせてグリッドを設定（例：27pxグリッド）し、Lineツールで基本の横パターンを作成する。Effect > Distort &amp; Transform > Zigzagでジグザグ模様を作り、Ctrl+Alt+Bのブレンドツールで2本のラインの間を滑らかに補間して”波打つ”模様を作る。タイポグラフィもアウトライン化（Ctrl+Shift+O）してラインワークの一部として組み込む。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Offset Path＋Pathfinderで模様を増殖 — アクション登録で作業を自動化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Offset Pathをアクションに録音（F2キー割当）してワンクリックで模様を一定間隔で複製し、PathfinderパネルのUniteで1つのパスに結合する。ポーラーグリッドツール（同心円50・放射0）とReflectツール（O）を使えば放射状のハーフトーン風パターンも作れる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Curves（トーンカーブ）× ガウスブラーが擬似ハーフトーンの核心テクニック — 単純な黒シルエットが階調のあるドットに変わる仕組み </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>黒く塗った図形にガウスブラーをかけ、その上にCurvesアジャストメントレイヤーで黒白のコントラストを最大まで上げると、ブラーの”にじみ”がドットやラインの太さの変化として再現される。実際の印刷用ハーフトーン網点を使わずPhotoshopだけで擬似ハーフトーンを作る仕組みがこれ。カーブのハンドルを動かすとドットの太さ（アパチュア）や網点の”開き具合”を自在に調整できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. ブラシで手直し＋ブレンドモードで異素材感を追加 — Difference / Vivid Lightで干渉パターンを作る </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Curvesで自動生成したラインの一部をブラシ（黒＝追加、白＝除去）で手直しし、レターフォームや顔の重要なディテールを崩さないよう気をつける。同じレイヤーを複製して2pxオフセットし、ブレンドモードをDifferenceに変更すると細かい干渉模様ができ、さらにVivid Lightで重ねると質感が増す。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. Liquifyで最終仕上げ — 顔の一部だけ軽くワープさせて作品としての強さを出す </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Filter > LiquifyのForward Warpツールで顔の片側だけを軽く歪ませることで、単純な黒白パターンにアート性を加える。仕上げは「やりすぎない」程度の変形がポイント。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① Curves×ガウスブラーの擬似ハーフトーンをパッケージ・版下の背景テクスチャに試す</strong>
+BIGBANGやLAVANDAの版下で「網点処理したいけど印刷所のハーフトーン設定が分からない」という時、このCurves+ガウスブラーの手法ならPhotoshopだけでOpArt調の背景テクスチャが作れる。次回のデザイン作成で一度試してみる。</p>
+<p><strong>② Offset Path×アクション登録の時短ワザを他のパターン作業に流用</strong>
+F2キーにOffset Pathアクションを割り当てる方法は、宇宙パッケージやグラニーニット柄など繰り返しパターンを作る他の案件でも使える時短ワザ。次にパターン系デザインをやるとき、まずアクション登録から始める。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> Linework for Adobe Illustratorこんにちは。この動画では、自分のカスタムライン作りやイメージを使って簡単にラインを作ることを学びます。まず、基本的にどうやって作るかを理解する必要があります。次に、アドオビイルストレーターで合わせるラインを作ることを紹介します。最後に、アドオビフォトショップでの作り方を説明します。始めましょう。OK、リニア半色を生成するには、</p>
+<p><code>00:32</code> パラレルやパープンディキュアルのラインを使うことが簡単です。このラインは、線の幅が平らくなっていることを確保するために簡単に作成されています。ドット半色を作りたいなら、線の幅を逆に調整するべきです。このテクニックは、3倍の幅のラインで、半分の幅のラインで、線を幅に分けます。ソフトウェアのみんなに、この作業をしっかりとしてくれることを信じています。なので、この作業をどうやって行うかを、計算機に向けて見せることを教えます。このエフェクトを作成するには Photoshopのレイヤーディスクが…ここはナイフの印象を作成するのですがこのツールに深い深い深い紫を使って</p>
+<p><code>01:06</code> このプロセスの理解を学ぶのが必要ですスキップヘッドを押して作業開始と非常に簡単ですスキップに合った音のアジャストフィルターの仕様の示しをしていきますグレーのアジャストフィルターは0°に設定しますマイクでマイクでシェアしたものを使用しますヒストグラムに表示されているように、このレベルを100%黒から50%黒から100%白に変更します。今、レベルアジャストを追加した場合、レベルを100%黒から100%白に変更します。レベルを追加した場合、レベルを隠してしまいます。</p>
+<p><code>01:47</code> レベルとレベルの影響を見ることができます。グラディアントの種類を表示するヒストグラムがあります。左側に暗い色が表示されて、右側に明るい色が表示されています。スライダーの左側に色が表示されている色は、右側に色が表示されています。エリプスにエリプスを追加し、色を黒に変えます。100%黒であるので、エリプスにエリプスに影響はありません。しかし、エリプスにガージョン・ブラーを追加すると、エリプスにエリプスの種類を作成します。今、スライドに追加の値があるので、エリプスに影響を与えることができます。</p>
+<p><code>02:25</code> マスクを取り除くと、数の値の範囲が合わない時に、スライドの値が合うように見えます。スライドに変更すると、エリプスとグラディアントが同じように変形して、向かって向かって向かいます。このデフォルメーションをこのツートリアルで使用します。アドオビイルストレーターを使用したのは、1080×1350のアートボードです。ラインワークが同じ幅にあるために、27ピクセルのグリッドを設定します。この幅はアートボードのサイズに合わせて、完璧に動きます。</p>
+<p><code>03:01</code> グリッドを使用するためには、 画面を見ると、グリッドを選択します。画面を見ると、画面を見ると、スナップとグリッドの他のスナップがアクティブです。まずは、基本的な横のパターンを作ります。ラインツールをアクティブにすると、横のアクセスに限られいようにShiftを押します。下のキャッサーキーでAltを押すと、ラインをアートボードの下に重複に増やします。全てを選択し、ストロークの重さを27.4.3に設定します。このように、ラインはグリッドの厚さの3つ以上に高いようにしてください。では、簡単なウェイビーパターンを作りましょう。</p>
+<p><code>03:40</code> アートボードの上から2つのグリッドユニットを描くと同じように、下に同じように描きます。両方のユニットを選択し、エフェクト、ディストリート&amp;トランスフォーム、シグザックを選択します。グリッドユニットのサイズを変更します。リッドの数は10と、スムーズポイントを選択します。Ctrl-Alt-Bで2つの線の間にブレンドを作ります。ブレンドツールをクリックすると、ブレンドのスペースを定義することができます。</p>
+<p><code>04:14</code> そして、数値を40に調節します。デザインにレターを追加するために、タイプツールをアクティブにします。タイプを選択し、Ctrl-Shift-Oで表面に変更します。アートボードの大きさを最大限に切り替えるために、それぞれの比率を限らないように、アートボードの大きさを減らします。一度、アートボードの厚さを半分にします。そして、自分のロックレイヤーに貼っておきます。以前と同様に、全面のアートボードの全面の長さを作るシリーズを作ります。</p>
+<p><code>04:59</code> Direct Selectionを使用すると、ラインの終点を選択して、キーを使って、ラインと書写の形に合わせて、ラインと書写の形を調整しています。ここでは、コンシステントなパターンを作ることが重要です。このように、ネットフォームが正しく合っています。完成したら、オリジナルのネットフォームを隠して、</p>
+<p><code>05:42</code> 上の方に vertical lines を追加します。全てを選択し、ストレッチの重さを調整しますタイプを入れますタイプツールをアクティベートします文字を選択し、アイラインに変更し、アートボードの下から上に置いておきますストロークを入れ、テキストを他の層にコピーし、コントロール、シフト、Vを使って貼り付けます。新しい層が見えなくても、Windowに行ってActionsをプランに入れます。</p>
+<p><code>06:40</code> オフセットパートを簡単にオフセットすることができます。新しいアクションをクリックし、適切な名前を付け、F2に設定キーを設定します。オフセットパースとオブジェクトパースをクリックして、オフセットの値を同じようにグリッドスペースにすることを確認します。アクションの録音を終了するためにストップアイコンをクリックします。今、テキストを2回クリックする必要があります。オフセットパースだけを消すために、オリジナルの文字を消す必要があります。完成したら、パフを全て選択し、パースファインダーパネルにUniteをクリックします</p>
+<p><code>07:22</code> 新しいパフを選択したら、再びアクションをプレイしますアートボードから1つのグリッドユニットを描くことで、全てを選択し、クリップマスクを7とコントロールして、アートボードを通過することを除去することができます。オリジナルのテキストを隠して、全てのストロークウェイが正しいようにしてください。ライントールの左マウスボタンを押すと、ポラグリッドツールが表示されます。</p>
+<p><code>07:57</code> 選択して、アートボードにアップするときに、アートボードのダイアログボックスを押します。Grid Spacing Units x102の幅と高さを設定します。コンセントリックのサイクルを設定するため、コンセントリックの数を50と、ラディアルの数を0にします。Direct Selection Toolを使用して、サイクルの下の点を明るくして、Deleteを押します。ReflectをアクティブにするためにOを使用します。中心の周りをクリックして、ShiftとAltを押して同時にラインワークを重複にすることで、ラインワークを重複にすることができます。</p>
+<p><code>08:36</code> オブジェクトをオブジェクトに変更し、ラインワークを横に移動させるために、Grid Unitsの25をグリッドユニットにすることで、27を選択します。25度にします。アートワークを選択し、グリップして、シフトで90度に回して、選択ツールを使用します。次に、アートボードをXとYの両方の方向にセンターして、最後に、作品のクリップマスクを作り、ストロークウェイを調整します。</p>
+<p><code>09:32</code> フォトショップにクリップマスクがアクティブになっているので、まず、オブジェクト、ラストライズ、トランスパーラントを選択します。Photoshopで終わりましょう。RGBカラーモードで1080×1350のキャンバスを72dpiに設定しました。よりスムーズな結デザインをする場合は、DPIを上げるのが良いです。でも、RGBカラーモードで始めると、黒と白の間に良い値段を与えることができます。サンバレスのUnsplash.comで、</p>
+<p><code>10:05</code> この素晴らしいポートレートを描いています。概要欄にリンクがあります。あと、イルラストレートからクリップボードに基準の横線をコピーしました。ポートレートのレイアウトを再現して、 クーブのアジャストレイヤーを上に置いていきます。クーブは、イメージのコントラストを上げるために使用できますが、すでにヴィビッドなコントラストを使って、 シルエットを作ることができます。イメージのレイヤーの上に、 スマートオブジェクトを使って、 エンターを押してポジションを確認します。基本のレイヤーを完成するために、 トップのレイヤーのアジャストレイヤーを追加します。</p>
+<p><code>10:42</code> この場合、100を設定することはできるが、少し調整する必要があります。今から、その後のプロセスを見ることができます。ラインワークを選択し、フィルター、ブルー、そしてGaussian Blurを選択します。ブルーが1つのストロークの半分の重さであるので、グリッドユニットの1つのストロークの1つのストロークの1つのストロークの1つのストロークを使うことができます。これを達成するために、27、4、6と選択します。カーブアジャストの二つのハンドルを 表面の位置に近づけて調整しますこのように、最も濃厚な黒と白の値を 表示します</p>
+<p><code>11:16</code> 少しの光沢を上げて、 ラインワークの最も濃厚な値をキャンバスに表示します画像を選択して、 ガルジアンブラーを追加しますスマートオブジェクトの場合、 後でこの値を調整できます今は、画像がブラウザを追加した時に 簡単にアイデンティフィーアブラーを追加できますレイアウトアジャストを再開すると、半色が出るように見えます。今は、曲線のレイアウトを調整することができました。左のレイアウトを横に調整すると、線の厚さを調整します。右のレイアウトを横に調整すると、線の厚さを調整します。</p>
+<p><code>11:58</code> 反対側のハンドルを動かすと、線の厚さと厚さが一緒に伸びます。反対側のハンドルを動かすと、線の厚さと厚さが一緒に伸びます。画像と曲線の間に一層のレイヤーを追加することで、原作の部分を塗り出すことができます。ブラシトールをアクティブにすると、</p>
+<p><code>12:30</code> 黒の色を塗り、線の厚さに追加します。白の色を塗り、線の厚さに追加します。少しのアジャストを作ります。軽く描いてもいいですが、 硬い端についてはブラシを入れるかもしれません。イラストで残りのラインワークを 塗っておきます。上の層からブラシをコピーします。 オートを押して、一層の層につけます。完成したら、 層の見えを変えます。</p>
+<p><code>13:10</code> 次の線形に合わせることができるようにします。この線形は、カラフルに動いているので、次に進みます。今、この線形は、正確に同じ位置にあるので、効果はかなりないです。この線形の調整は、このようにすることによって、カラフルな線形を作ることができます。このような状態では、シルエットやネットフォームなど、シルエットや字形や、もっと細かくした形にすることができます。アンパサンドを加え、ブラーを入れ、カーブを調整します。</p>
+<p><code>14:01</code> ここでより多くの確率が欲しい場合は、 カーブのハンドルを押してキーを使ってください。イメージを再開します。 タイプをオフセットして、 線の作業によって、タイプを変更します。この方が少し効果があるので、 線の間の間隔が少し大きくなっています。しかし、タイポグラフィーの厚さによって、少し不穏な変化があります。この部品から、より厚い線を取り除くために、ブラシツールを使用します。</p>
+<p><code>14:56</code> 次に、ブラシをディアクティファイトして、Letterform Lineworkに変更します。この方法はすぐに使用できますが、この方法は、下の写真の重要なディテールに対して、Lineworkの方向に大きな変更を避けることをお勧めします。これを簡単に整理するためには、CtrlとTを使用します。このように、モデルの顔はハーフトーンのスタイルで変更されていません。左側のカーフェイスハンドルを調整することで、ドット半分のアプチュアを変更できます。このツイートリアルは、この半分のハーフトーンがスタイリングされる方法を紹介します。</p>
+<p><code>15:37</code> 私は、結果の一つだけを合わせて、全てを合わせています。新しいレイヤーを作成して、Alt、Shift、Ctrl、Eを使って、この新しいレイヤーに見えるレイヤーを アウト、シフト、コントロール、Eで混ぜます次に、何か面白い結果を作るために 何かのラインワークを使っています私はこのグループをディアクティブにするために ライフレイヤーを保存しますオプティカルアートは簡単な黒と白の形に見えます</p>
+<p><code>16:13</code> だからこのレイヤーはこのようにしますタイプを生成したラインワークを使って、Ctrl Jでアートワークを重ねて、2ピクセルのブラウンをレイヤーにコピーします。次に、このレイヤーのブレンドモードを違いを設定します。次に、新しいレイヤーを作り、アートワークを合わせます。最後に、以前にコピーされた層を隠して、ブレンドモードのメッシュレイヤーをヴィヴィッドライトに変更します。</p>
+<p><code>16:46</code> この3つの層を一つの層に変更します。このように、このように、このように、このように、このように、このように、このように、このように、また、一つの層にマッチします。このように好ピクセルストレッチを使って、少し変えます。マーキーキーを左側に押すと、一つの層にマーキーキーを見つけます。</p>
+<p><code>17:23</code> このように、パートの写真をクリックします。トランスフォームでCtrlとTを押し、選択の上の部分を押し、Shiftを押します。下にも同じようにします最後の作業はフィルターに上げて リクイフィーしますフォワードワープツールを使って 画面の一面をリクイフィーします</p>
+<p><code>18:00</code> このようにすることは 作業の中のどちらかにもとても重要な作品ですこの動画を見て楽しんでくださいこれで終わりですこのプロセスの可能性を見つけたら新しい作品を使ってみてください作品を作ることができるかどうか私の社交メディアにタグを書いてくださいアートワークをオンラインに投稿してくださいいいね、コメント、チャンネル登録をお願いしますまた次の動画でお会いしましょう</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./📷-lifedesignclub_ジャーナリング10の問い" class="internal alias" data-slug="📷-lifedesignclub_ジャーナリング10の問い">📷 lifedesignclub_ジャーナリング10の問い</a>（LiteratureNote）</li>
+<li><a href="./𝕏-Claude-Design発表—Opus4.7駆動のデザイン生成ツール" class="internal alias" data-slug="𝕏-Claude-Design発表—Opus4.7駆動のデザイン生成ツール">𝕏 Claude Design発表—Opus4.7駆動のデザイン生成ツール</a>（LiteratureNote）</li>
+<li><a href="./🫧-Claude-Designが最強の相棒に進化" class="internal alias" data-slug="🫧-Claude-Designが最強の相棒に進化">🫧 Claude Designが最強の相棒に進化</a>（LiteratureNote）</li>
+<li><a href="./🌌-lym.design.studio-CD分析" class="internal alias" data-slug="🌌-lym.design.studio-CD分析">🌌 lym.design.studio CD分析</a>（LiteratureNote）</li>
+<li><a href="./𝕏-（無題）-(kawai_design_3603)" class="internal alias" data-slug="𝕏-（無題）-(kawai_design_3603)">𝕏 （無題） (kawai_design_3603)</a>（LiteratureNote）</li>
+<li><a href="./ハーフトーン" class="internal alias" data-slug="ハーフトーン">ハーフトーン</a>（LiteratureNote）</li>
+<li><a href="./🌌-PS_ハーフトーン・網点加工" class="internal alias" data-slug="🌌-PS_ハーフトーン・網点加工">🌌 PS_ハーフトーン・網点加工</a>（LiteratureNote）</li>
+<li><a href="./🎇-AI_ハーフトーン・網点加工" class="internal alias" data-slug="🎇-AI_ハーフトーン・網点加工">🎇 AI_ハーフトーン・網点加工</a>（LiteratureNote）</li>
+<li><a href="./🌌-PS_【Illustrator】イラレの3Dとハーフトーンの組み合わせる表現方法" class="internal alias" data-slug="🌌-PS_【Illustrator】イラレの3Dとハーフトーンの組み合わせる表現方法">🌌 PS_【Illustrator】イラレの3Dとハーフトーンの組み合わせる表現方法</a>（LiteratureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-152" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./🎨-AI_Convert-photos,-vectors,-or-illustrations-into-cus" class="internal">🎨 AI_Convert photos, vectors, or illustrations into cus</a></li><li><a href="./🎨-AI_Live-editing-on-the-fly-Adjust-your-halftone-patte" class="internal">🎨 AI_Live-editing on the fly Adjust your halftone patte</a></li><li><a href="./📰-web_psgips_2023-02-13_カラーハーフトーンのかけ方" class="internal">📰 web_psgips_2023-02-13_カラーハーフトーンのかけ方</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

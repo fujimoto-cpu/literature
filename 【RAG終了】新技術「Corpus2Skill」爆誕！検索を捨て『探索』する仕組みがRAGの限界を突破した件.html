@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件"/><meta name="twitter:description" content="📺 動画情報 【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件 🎙️ IT・AI速報チャンネル【ずんだもん解説】 ・ 📅 2026-04-29 ・ ⏱️ 18分0秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 ラグもう全部古いのだえ?検索する時代は今日で終わりですな、嘘なのだ?正確には検索が探索に置き換わりますど、どういうことなのだ?今日紹介するのはコーパスツースキルという論文ですコーパスツースキルなのだ?ドンとリトリーブナビゲートというタイトル検索するな探索しろ手強き..."/><meta property="og:description" content="📺 動画情報 【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件 🎙️ IT・AI速報チャンネル【ずんだもん解説】 ・ 📅 2026-04-29 ・ ⏱️ 18分0秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 ラグもう全部古いのだえ?検索する時代は今日で終わりですな、嘘なのだ?正確には検索が探索に置き換わりますど、どういうことなのだ?今日紹介するのはコーパスツースキルという論文ですコーパスツースキルなのだ?ドンとリトリーブナビゲートというタイトル検索するな探索しろ手強き..."/><meta property="og:image:alt" content="📺 動画情報 【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件 🎙️ IT・AI速報チャンネル【ずんだもん解説】 ・ 📅 2026-04-29 ・ ⏱️ 18分0秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 ラグもう全部古いのだえ?検索する時代は今日で終わりですな、嘘なのだ?正確には検索が探索に置き換わりますど、どういうことなのだ?今日紹介するのはコーパスツースキルという論文ですコーパスツースキルなのだ?ドンとリトリーブナビゲートというタイトル検索するな探索しろ手強き..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件 🎙️ IT・AI速報チャンネル【ずんだもん解説】 ・ 📅 2026-04-29 ・ ⏱️ 18分0秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 ラグもう全部古いのだえ?検索する時代は今日で終わりですな、嘘なのだ?正確には検索が探索に置き換わりますど、どういうことなのだ?今日紹介するのはコーパスツースキルという論文ですコーパスツースキルなのだ?ドンとリトリーブナビゲートというタイトル検索するな探索しろ手強き..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1518"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1518" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件</a></div></nav><h1 class="article-title">【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-03T15:00:00.000Z">2026年6月04日</time><span>33 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li><li><a href="./tags/agent" class="internal tag-link">agent</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【RAG終了】新技術「Corpus2Skill」爆誕！検索を捨て『探索』する仕組みがRAGの限界を突破した件</strong>
+🎙️ IT・AI速報チャンネル【ずんだもん解説】 ・ 📅 2026-04-29 ・ ⏱️ 18分0秒
+🔗 <a href="https://www.youtube.com/watch?v=KR4aDP0Hyco" class="external">https://www.youtube.com/watch?v=KR4aDP0Hyco<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> ラグもう全部古いのだえ?検索する時代は今日で終わりですな、嘘なのだ?正確には検索が探索に置き換わりますど、どういうことなのだ?今日紹介するのはコーパスツースキルという論文ですコーパスツースキルなのだ?ドンとリトリーブナビゲートというタイトル検索するな探索しろ手強きすぎるのだこの一文に全てが詰まっています見ないとどんな損があるのだ?知らないと自社のラグは後半として時代遅れにせ、設計し直しなのだ</p>
+<p><code>00:32</code> 見れば新時代の設計思想が15分で手に入りますそれは絶対見た方がいいのだ本棚と懐中電灯の例えで完璧に解説しますねえメタン、AIに本棚って何の話なのだ今日、最後まで見れば腹落ちする話ですわかった、メタン先生についていくのだ良い心構えね、では本題に入りましょう本棚と懐中電灯、ワクワクしてきたのだ第一チャクター検索が壊れた日まずなぜ検索が壊れたかを見ます視界5%ってヤバすぎなのだそれが従来ラグの実態です</p>
+<p><code>01:05</code> ラグってそもそも何なのだリトリーバルオーグメンテッドジェネレーション検索で補強された生成のことですつまり枝豆でもわかるように言うとAIに社内文書を検索させて答えさせる仕組みですそれなら社内チャットボットでよく聞くのだそうもはやエンタープライズAIの王道です市場規模はどれくらいなのだ2025年で世界1兆円規模伸び盛りの分野です1兆円?大金庫なのだだからこそ致命的な欠陥は放置できないのですじゃあ何が問題なのだ?問題はAIが目隠しで本棚を探すで</p>
+<p><code>01:37</code> 懐中電灯と目次?すごい対比なのだ従来ラグは暗闇に懐中電灯を1本で本棚に挑むそ、それは絶対迷子なのだ近くの数冊だけ見て答えを推測するそれで答えが青分けないのだ実際複雑な質問では半分以上が誤答です半分外すなら使えないのだもう一つの致命傷は全体が見えないこと全体が見えないとどう困るのだ全社方針の要点はみたいな質問に答えられないそれ会議で絶対聞かれるやつなのだそう経営層が一番欲しい答えですなんで全体が見えないのだ</p>
+<p><code>02:11</code> ベクトル検索は上位経験しか拾わない仕様です経って大抵ごと過重なのだ10万件あっても見るのはボケ視界はゼロに近いそれは絶望的なのだ致命傷は合計で3つ存在します致命傷が3つってもう瀕死なのだ1つ目視界が狭い懐中電灯のことなのだそう金棒のチャンクしか拾えませんベクトル類似度って結局何なのだ田んぼの見た目が近いものを拾う仕組みです意味じゃなくて見た目意味も多少捉えますが本質は表層類似です2つ目構造を知らない本棚の地図が頭にないってこと</p>
+<p><code>02:44</code> え目次も見出しも知らずに探します本屋で目次を見ない人みたいなのだそう、人間ですら絶対やらない探し方です3つ目、外したら戻れないリトライできないのだそう、引いたチャンクが外れでもそれで生成1回だけのガチャで人生決まる感じなのだ穴勝ち間違いではないわね外れてもAIは外れたって気づくのだ気づきません、引いたものが正解だと信じます妄心なのだ、それでハルシネーションが出るのだそう、誤答の半分はこの構造由来と言われます結果、企業のラグ導入は壁にぶつかっています現場で起きてるのはどういう失敗なのだ</p>
+<p><code>03:18</code> 正解はあるのに見つけられないが日常茶飯事答えが社内にあるのに引けない悔しすぎるのだソースを示して解かれて沈黙するケースも多いソースが出ないと調子ぶち切れなのだ監査の場でも根拠提示は必須要件ですサイランカーで精度上げる手もあるのだありますただし上位経験の中身しか並べ替えられないそもそも候補に入ってなきゃゼロなのだそう本質的な問題は拾わないこと並べ替えでは救えないそこにコーパス2スキルが現れたのだそう論文タイトルは探索しろと命じます今までのラグを捨てる必要はあるのだ</p>
+<p><code>03:53</code> 捨てる必要はないただし主役は譲ることになる今まで頑張って作ったラグは広角なのだ技術の世代交代はいつもこの形をとります次の章でその正体を暴くのだ第2チャクターナビゲートという革命ここからが本題ナビゲートという革命です目次を渡すってシンプルだけどすごいのだ発想自体は単純けれど効果は絶大ですリトリーブって結局なんだったのだベクトル類似度で近そうな文書を引くことつまり枝豆でもわかるように言うと似た言葉が含まれる本を勘で引くだけです勘なのだ対してナビゲートはAI自身が見て考えて進むAIが司書になる感じなのだ強引だけど方向性としては合ってるかしら</p>
+<p><code>04:36</code> でもなんで今まで誰もやらなかったのだLLMの推論力が最近やっと十分強くなったから賢いAIが揃った今がやり時なのだそう、エージェント時代に最適化された設計ですもう少し正確に説明しましょうジャンルから絞ってくの人間と同じなのだそう、人間は図書館で本を探す動きそのもの積んだもんも、図書館では目次から見るのだその当たり前を、ようやくAIが手に入れた今までAIは目次を持ってなかったのだ持っていませんでした、それが致命的だったそりゃ精度低いの当然なのだコーパス2スキルの定義をもう一段深掘りします</p>
+<p><code>05:11</code> コーパスをスキルに上流すると書かれているスキルって、ゲームのスキルのスキル?近いです、エージェントが使える技になります知識が技に変わるって、燃えるのだ正確にはナビゲーション可能なスキルディレクトリ長っもう一回言ってほしいのだ歩いて回れる技の目録と思ってくださいそれなら一発で覚えられるのだ重要なのはAIに質を渡す発想転換そのものつまりAIが自動から能動になったのだそうまさにパッシブコンシューマーからの脱却です論文の原文も同じ言葉でキューラブを批判している</p>
+<p><code>05:44</code> 受け身の消費者って強烈な煽りなのだつまり研究者がちぎれというやつねメタン急に俗っぽいのだ強い言葉で書かれた論文は大抵本物ですアンソロピックもスキルズって機能出してたよねえ、クロードスキルズとコーパス2スキルの思想は近い知識を技に変えるのが了解トレンドなのだそう、2025年後半の最重要キーワードですスキルズってコードじゃなくて知識を技にするのだそう、実行可能な手順書をAIに渡す形式ですコーパス2スキルは本棚を手順書にしたのだ</p>
+<p><code>06:19</code> 穴がち間違いではないわね発想は完全に同系統じゃあコンパス2スキルを使うと何が嬉しいのだ精度向上コスト削減引用力強化の三拍子三拍子揃うとかありえないのだ通常はトレードオフコンパス2スキルはそれを破ったそれが革命の正体なのだナビゲートって人間の脳にも近い動きなのだ神経科学でも探索行動と呼ばれる動きですAIが人間の血の使い方に近づいたのだそう、知識を丸暗記する、のではなく、必要な時に取りに行く、段階にじゃあ、賢いAIほど効果が出るのだ?</p>
+<p><code>06:55</code> その通り、推論力が高いほど枝選びが上手になるクロード、オーパスとかGPT、5級なら最強コンボなのだ穴勝ち間違いではないわね、実験もそれを示します小さいAIだと効果薄いのだ?効果は出ますが、伸び性は大きいモデルが上です賢いAIたす整った本棚、夢のタッグなのだ事実です、次はその仕組みを解剖しましょう第3チャプター本棚の目視を作る仕組みここから本棚の目視の作り方を見ます4ステップだけ?意外とシンプルなのだシンプルさは強さの証です</p>
+<p><code>07:27</code> 1番目の切るって何を切るのだ?PDFやマニュアルなどの長文を見出し単位で切る本を見出しごとに分けるのと同じなのだそう扱いやすいサイズに整える前処理です1チャンクは何文字くらいなのだ?目安は400、800トークン、論理単位で区切ります意味の塊で切るのが大事なのだ機械的に切ると意味が飛び散ります2番目のまとめるあ、多分肝なのだその通りここで階層的な要約を作ります下の階層は詳しく上の階層はざっくり目次の見出しと本文の関係そのものなのだ</p>
+<p><code>08:00</code> 良い例えね階層が深いほど詳細になります要約は誰が作るのだLLM自身です下からを英才気的にまとめさせるAIが本棚の目次まで自作しちゃうのだそう構築フェーズだけは1回コストを払います3番目並べるでツリーにするのだそう要約をルートブランチリーフに整理ルートブランチ幹枝葉と思って構いません本棚棚本見出しのアレなのだおおむね合ってるけど正確にはもう少し抽象的ねそして4番目AIにその目次そのものを渡す</p>
+<p><code>08:35</code> AIに何を見せるのだルートの俯瞰要約と各ブランチの見出し目次表足すIDだけ本文は最後まで隠すのだそう必要な箇所だけIDで取りに行く方式全部読まなくていいからコンテキスト節約なのだそこエンジニア的に重要なポイントコンテキスト100万トークンでも目次は数千トークン?そうコーパス全体の0.1%以下に安くできる0.1%?激安すぎなのだAPI課金も応答速度も両方で大勝利ですAIはまずどこを開くのだ?質問を見て最も近そうなブランチを選ぶ</p>
+<p><code>09:09</code> そこから下に降りていくのだえ?サブブランチへさらに這い降ります間違えたら戻るのだそう、別のブランチへバックトラックできる戻れるって?従来ラグにはなかった機能なのだそう、これが視界の広さと並ぶ確信さらに複数ブランチの根拠を統合できる一冊じゃなく三冊横断して答えを作れるのだクロスブランチリーズニングトロン文に書かれていますAIが自分で考えながら本棚を歩いてるのだま穴勝ち間違いではないわね実装はめっちゃ難しそうなのだツリー構築さえ済めば推論側はツールユーズだけ</p>
+<p><code>09:44</code> ツールユーズ関数呼び出しの仕組みなのだそうナビゲートと2ブランチIDを渡して高くだけのAPIそれなら誰でも実装できるのだそう、参入障壁の低さも採用されやすい理由ツリー更新ってどうするのだ?文書追加された時差分の葉だけ追加し、上の要約を再生成すればOK全部作り直さなくていいのは嬉しいのだそう、増分メンテが効くのも実用上のポイントセキュリティはどうなのだ?アタンイでアクルをつければ権限元に目視を切り替え可能管理職には経営目次、現場には作業目次?</p>
+<p><code>10:18</code> そう、企業の権限管理と相性が抜群ですセキュリティ部署も大喜びなのだここまでが基本構造次は過去研究との比較ライバル論文との対決なのだえ、ここで決定的な違いを明確にしますライオンチャクター、ラクター、グラフラグとの決定的さ体制相手は3つラクター、グラフラグ、ラグシェーパーガチで強そうなライバルばっかなのだ一人ずつ決定的な違いを見ていきますまずラクター、スタンフォードの凶暴論文ラクターって何の役なのだリカーシブ・アブストラクティブ・プロセッシング・フォー・ツリーの頭文字再起的に要約を抽象化まさに兄貴分なのだ</p>
+<p><code>10:56</code> 2024年のアイクリアでバズった要約ツリーの代表格木を作るところは似てるのだそうラクターも改装要約のツリーを作りますじゃあ何が違うのだラクターはその木を裏方に隠してしまうせっかく作った地図をAIに見せないのだそう検索の精度を上げる下回り扱いそれはAIがかわいそうなのだコーパス2スキルは基礎のものをAIに渡すAIはここに何があるかを知った上で動けるラプターが受験勉強ならコーパス2スキルは持ち込み家なのだ強引だけど方向性としては合ってるかしら</p>
+<p><code>11:29</code> 性能差はどれくらい出るのだ後で結果を見せますが二桁ポイント差ですもはや古文扱いなのだ次はグラフラグマイクロソフトの大型プロジェクトグラフラグはグラフを作るのだそう延期機動士の関係を全部グラフ化登場人物の相関図みたいなのだ近いですそして関連クラスターごとに要約を作るそれの何が問題なのだ答えが要約の集約になりやすい点です原文の証拠が薄まっちゃうのだそうエンタープライズQAでは致命的になりがち原文を引用できないAIは信用されないのだコーカス2スキルは原文IDを最後まで握り続ける</p>
+<p><code>12:04</code> 証拠を見せながら答えるってことそうパクトチェックも一発で可能になりますグラフラグは何が得意なのだ前者の使用テーマはみたいな俯瞰質問は強いピンポイント質問は弱いのだそう原文のディテールが要約で削れるからコーパス2スキルは両方いけるのだそう俯瞰とディテールを両立する設計です最後はラグシェーパーエージェントを鍛える側のアプローチ鍛えると環境整える対局なのだえ思想がまるで反対ですラグシェーパーはどう鍛えるのだ技と邪魔な情報を混ぜた訓練データで鍛える</p>
+<p><code>12:36</code> ノイズに耐えるAI軍装を育てる感じなのだ強引だけど方向性としては合ってるかしらどっちが偉いのだ?学習コストはラグシェーパーが重いコーパス2スキルは軽いじゃあ財布に優しいのはコーパス2スキルなのだ概ね合ってるけど正確には用途しないね両方組み合わせるのもありなのだえ?論文も将来的な逃亡を示唆しています鍛えたAIタス整えた本棚最強コンボなのだここで3つの研究全てに共通する致命的な弱点を整理全部コーパス2スキルが解決した壁なのだそう論文の光景は3つ同時に超えた点です</p>
+<p><code>13:11</code> それは確かに革命なのだ一つだけでも快挙なのに三つ同時他の研究は何やってたのだ検索のフレームから抜け出せなかっただけ発想の壁がいかに重いかってことなのだリトリーブという言葉自体に受学されていたのです言葉を変えると世界が変わるのだそう論文タイトルがドンとリトリーブナビゲート戦線布告そのものなのだ言葉を 選ぶ力こそが一流研究者の証です他にもライバル候補はいるのだヒポラグや セルフラグも近いですが地図性能で負けますコーパス2スキルの独創状態なのだ 現時点ではそうですね来年には追悼が出るでしょうが今こそ先行者になるチャンスな のだその通り半年差は大きなアドバンテージ</p>
+<p><code>13:51</code> では結果を見ましょう 数字が物語ります第5着た衝撃の実験結果と3年もの 見合い実験はエンタープライズ向けレンチ ウィックスqaで実施ガチの実践データなのだ そう実用に耐えるかが問われるベンチです ウィックスってあのhp作成サービスのウィックスなのだ そう世界中のサポート問い合わせが対象 それはリアルすぎるのだ社内マニュアルが正しく引ける かが評価軸結果はどうだったのだ 全ベースラインに全指標で勝利89点、ぶっちぎりなのだレンス、リトリーバルから27ポイントの差をつけた</p>
+<p><code>14:24</code> 27点差って、もはや別競技なのだ全モデルラクターに対しても18ポイントを上回るライバルを叩き潰してるのだエージェンティック、ラブよりも13ポイント高いのが衝撃ですエージェンティック、ラブってもう強いやつなのだ近年の最強格、それを13ポイントの大差で塗りたもはや別次元なのだ原文の引用率も激増しました引用力プラス34%は反則なのだこれが企業利用で最も評価される性能ですなぜ引用が効くのだ?AIがどの文書の布段落かお答えられるから上司のソースは攻撃を全部さばけるのだ</p>
+<p><code>14:58</code> そう、社内導入の最大の壁を超えています金融、医療では特に効きそうなのだ規制業界では引用必須が常識ですから規制対応のラグ市場、一気に塗り替わるのだそう、ソックス法、引っ張対応の本命候補になりますコスト面はどうなのだ?推論時のトークン使用量も従来比4割減です精度上がってコスト下がる?神役でなのだそう、必要な派だけ読むので無駄がないのですここで独自考察を一つだけ言わせてくださいメタンの未来予測?聞きたいのだ正直、これに気づいた時、私も震えましたな、それは絶対重要なやつなのだ</p>
+<p><code>15:34</code> 3年後、ベクトル検索専業のラグベンダーは消えますラグベンダー消滅って強気すぎるのだ代わりにコーパス設計、新たな触手になるそれってどんな仕事なのだ?社内文書、AI用の目視に整える専門職ですなんか、図書館司書のAI版なのだ穴勝ち間違いではないわねここに気付けた人だけ、3年後に勝てます今すぐ目視設計の練習を始めるのだ賢い判断です波に乗れば誰でも変われます今からラブ構築の人、無駄になっちゃうのだベクトルDBは残りますただし、派の検索、役に降格</p>
+<p><code>16:07</code> 主役から脇役に転落、なのだ代わりに得るLMオーケストレーションが主役になるオーケストレーションって何なのだAIに段取りを組ませて複数ツールを高く設計AIが指揮者になるのだそうコーパス2スキルはその第一歩を示した論文ですここまでの話全部の点が線につながるのだそれが論文の真の総味です明日から何をすべきなのだ自社文書の目次構成を見直すことそれが第一歩AI時代の準備は人間の仕事から始まるのだ地味だけど最も価値が出る作業ですOSSで触れる実装はあるのだ</p>
+<p><code>16:41</code> 公式実装はGitHubで近日公開と論文に明記出たら全エンジニアが触るやつなのだそう年内にはエコシステムが立ち上がるでしょう個人開発者でも試せるのだええクロードスキル図とも組み合わせられる設計です個人ナレッジベースもコンパス2スキルで武装なのだ学習意欲のある個人ほど恩恵が大きい技術ですじゃあいつから始めるべきなのだ今です半年後には常識化しているはずですから今日から動いた人が3年もの勝者なのだそう、波が来てから動くのではもう遅い視聴者のみんなも今すぐ動くのだ</p>
+<p><code>17:14</code> 第6作ターンまとめでは今日のまとめです1つ目、検索じゃなく探索なのだ2つ目、AIに目次そのものを渡す3つ目、ライバル全員ぶっちぎりなのだ4つ目、勝者は文章構造化できる側です懐中伝統の時代は終わったのだここで視聴者の皆さんに委託の質問コメント欄、戦場にするのだあなたはエージェント強化派?コーパス設計派?コメントで意見を聞かせてほしいのだ面白い議論を待っていますこの動画が良かったら高評価、チャンネル登録をお願いするのだこのチャンネルでは最新のAIやIT技術について</p>
+<p><code>17:50</code> 分かりやすく解説していくのだこれからも最先端の情報を届けていくから楽しみにしててほしいのだそれではご視聴ありがとうございましたまたねなのだ</p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 動画要約（IT・AI速報チャンネル / 18分） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>テーマ</strong>: RAGの根本的欠陥を解決する新技術「Corpus2Skill」論文の解説</p>
+<p><strong>従来RAGの3つの致命傷</strong>:</p>
+<ol>
+<li><strong>視界が狭い</strong>（懐中電灯型）— ベクトル検索は上位N件しか拾えない。10万件あっても視界は0.1%以下</li>
+<li><strong>構造を知らない</strong> — 目次・見出しを無視した検索。本屋で目次を見ない人と同じ</li>
+<li><strong>外したら戻れない</strong> — 1回のガチャで生成。誤答の半分はこの構造由来</li>
+</ol>
+<p><strong>Corpus2Skillの革命（“Retrieve”ではなく”Navigate”）</strong>:</p>
+<ul>
+<li>文書全体から階層的な**目次ツリー（スキルディレクトリ）**を自動生成</li>
+<li>AIに目次そのものを渡す → AIが「どこに何があるか」を把握した上で能動的に探索</li>
+<li>間違えたら別ブランチへバックトラック可能（従来RAGにはなかった機能）</li>
+<li>コスト: コーパス全体の0.1%以下のトークンで目次を保持できる</li>
+</ul>
+<p><strong>実験結果</strong>: 全ベースライン（RAPTOR・GraphRAG・RAGShaper）に全指標で勝利。精度+27ポイント、引用力+34%、トークンコスト-40%の三拍子。</p>
+<p><strong>3年後予測（論者考察）</strong>: ベクトル検索専業RAGベンダーは消滅。代わりに「コーパス設計専門職」（AI向け目次を整えるスペシャリスト）が台頭。</p>
+<p><strong>ClaudeのSkillsとの接続</strong>: AnthropicのSkills機能と思想が同系統。「知識を実行可能な技に変換する」が2025年後半の最重要キーワード。</p>
+<p><strong>ゆりこへの応用</strong>: 社内ナレッジ管理・RAG導入検討時の設計思想として参照。Obsidian Zettelkastenのツリー構造もCorpus2Skillの思想と近い。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_適切な文章が思いつかないとき" class="internal alias" data-slug="AIプロンプト例_適切な文章が思いつかないとき">AIプロンプト例_適切な文章が思いつかないとき</a>（PermanentNote）</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote）</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote）</li>
+<li><a href="./2026-05-30-ai-era-creative-director" class="internal" data-slug="2026-05-30-ai-era-creative-director">2026-05-30-ai-era-creative-director</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-560" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./📄-2026-06-07_Corpus2Skillって何_やさしい解説" class="internal">📄 2026-06-07_Corpus2Skillって何_やさしい解説</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

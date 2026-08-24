@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み"/><meta name="twitter:description" content="📺 動画情報 AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-07-24 ・ ⏱️ 28分13秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIモデルを毎回自分で選び直す「乗り換え疲れ」を終わらせる仕組み。一番賢いモデル（Opus・フェイブル5等）を「上司AI」に据えて判断だけをさせ、実作業はOpenRouterのMCP経由で毎回オーディションした「契約社員AI」（GLM5.2・GPT5.5等）に振る。上司は絶対に手を動かさず、部下の「できました」報告も鵜呑み..."/><meta property="og:description" content="📺 動画情報 AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-07-24 ・ ⏱️ 28分13秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIモデルを毎回自分で選び直す「乗り換え疲れ」を終わらせる仕組み。一番賢いモデル（Opus・フェイブル5等）を「上司AI」に据えて判断だけをさせ、実作業はOpenRouterのMCP経由で毎回オーディションした「契約社員AI」（GLM5.2・GPT5.5等）に振る。上司は絶対に手を動かさず、部下の「できました」報告も鵜呑み..."/><meta property="og:image:alt" content="📺 動画情報 AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-07-24 ・ ⏱️ 28分13秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIモデルを毎回自分で選び直す「乗り換え疲れ」を終わらせる仕組み。一番賢いモデル（Opus・フェイブル5等）を「上司AI」に据えて判断だけをさせ、実作業はOpenRouterのMCP経由で毎回オーディションした「契約社員AI」（GLM5.2・GPT5.5等）に振る。上司は絶対に手を動かさず、部下の「できました」報告も鵜呑み..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み 🎙️ クウキデザイン | Kuuki Design ・ 📅 2026-07-24 ・ ⏱️ 28分13秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 AIモデルを毎回自分で選び直す「乗り換え疲れ」を終わらせる仕組み。一番賢いモデル（Opus・フェイブル5等）を「上司AI」に据えて判断だけをさせ、実作業はOpenRouterのMCP経由で毎回オーディションした「契約社員AI」（GLM5.2・GPT5.5等）に振る。上司は絶対に手を動かさず、部下の「できました」報告も鵜呑み..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-166"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-166" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み</a></div></nav><h1 class="article-title">AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-25T15:00:00.000Z">2026年7月26日</time><span>56 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み</strong>
+🎙️ クウキデザイン |  Kuuki Design ・ 📅 2026-07-24 ・ ⏱️ 28分13秒
+🔗 <a href="https://www.youtube.com/watch?v=GAa7tTPKZeI" class="external">https://www.youtube.com/watch?v=GAa7tTPKZeI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/AIの運用法がガラっと変わる：簡単に最新・最適を実現する仕組み.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AIモデルを毎回自分で選び直す「乗り換え疲れ」を終わらせる仕組み。一番賢いモデル（Opus・フェイブル5等）を「上司AI」に据えて判断だけをさせ、実作業はOpenRouterの<a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>経由で毎回オーディションした「契約社員AI」（GLM5.2・GPT5.5等）に振る。上司は絶対に手を動かさず、部下の「できました」報告も鵜呑みにせず必ず現物を読んで検品する。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[👤 発信者&lt;br>方針だけ渡す] --> B[🧠 上司AI&lt;br>最上位モデル固定]\n    B -->|オーディション| C[候補3〜4体をテスト]\n    C --> D[🏆 採用モデルに発注&lt;br>GLM5.2/GPT5.5等]\n    D --> E[成果物+完了報告]\n    E -->|報告は信じない| F[上司AIが現物を読む]\n    F --> G{合格?}\n    G -->|不備あり突き返す| D\n    G -->|合格| H[発信者へ納品]&quot;">flowchart TD
+    A[👤 発信者&lt;br>方針だけ渡す] --> B[🧠 上司AI&lt;br>最上位モデル固定]
+    B -->|オーディション| C[候補3〜4体をテスト]
+    C --> D[🏆 採用モデルに発注&lt;br>GLM5.2/GPT5.5等]
+    D --> E[成果物+完了報告]
+    E -->|報告は信じない| F[上司AIが現物を読む]
+    F --> G{合格?}
+    G -->|不備あり突き返す| D
+    G -->|合格| H[発信者へ納品]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 上司AIは「判断」だけ・実作業は絶対にしない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>上司には、これまで積み上げてきたハーネス（指示書・ツール連携・Obsidianに蓄積した価値観や文脈）を全部知っている自分のメインモデル（Opus・フェイブル5など最上位モデル）を据える。ルールは「自分で手を動かすな、実作業は必ず部下AIにやらせろ」。理由は2つ。①出力量が多い作業ほどコストがかかるので高いモデルは判断の1点だけに使う、②自分で書いたものを自分で検品すると見落としが起きる（作る役と確認する役を分けることでセカンドオピニオンとして機能する）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 仕事ごとに「採用面接（オーディション）」で最適モデルを選ぶ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>OpenRouterのMCP（6月25日対応）を使い、上司AIが同じ課題・同じ材料・同じ条件で候補モデルを3〜4体ピックアップしてテストし、採点して一番良かったモデルに本番を発注する。書き物の仕事ではGLM5.2が勝ち、コストはフェイブル5の約1/39・オーパス比でも約1/13で同等品質だった。コーディングの仕事では逆にGLM5.2が完走できず脱落し、GPT5.5が採用された（実費はフェイブル5の約1.7倍安）。同じモデルでも仕事の種類によって向き不向きが変わる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 「できました」報告は鵜呑みにしない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>上司AIには「部下AIの完了報告を信じるな、変更されたファイルを全部読め」という指示を必ず課している。実例では、GPT5.5が「テストが通りました」と報告してきたが、実際は壊れたコードのままでも通ってしまう無意味なテストだった。上司AIが現物を読んで見抜き、差し戻し。これを3〜4回繰り返して最終的に291件のテストが全部通った。報告書だけを読んでも嘘は見抜けず、実物を読んだ時だけ嘘が発覚する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 不備を見つけても上司AIが自分で直さない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>上司AIが自分で修正してしまうと「自分で手を動かすな」ルールを自ら破ることになる。AIには最速で解決しようとする癖があるので、不備は指摘して部下に突き返すだけに徹させる。作る・直すのは常に部下AI、上司AIは判断と差し戻しだけを行う。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「作る役」と「確認する役」を分ける発想をCORIN運用にも輸入する</strong>
+CORINが自分で作った資料を自分でファクトチェックすると見落としが出やすい。/fact-check や reviewer サブエージェントを「別の目」として必ず一段挟む今の運用は、この動画の”上司AI/部下AI分業”と同じ構造。社内AI推進の説明にこの言語化を使えそう。</p>
+<p><strong>② 「できました」報告を鵜呑みにしないをCEO視点の口癖にする</strong>
+CORINが「完了しました」と言うタスクほど、実際に生成ファイルを開いて中身を確認する癖をゆりこ自身も持つと事故が減る。critical-mistakes.md #5・#4.7 の考え方そのものが、実はこの動画の上司AIルールと同じ構造。</p>
+<p><strong>③ OpenRouter MCPの仕組み自体は今すぐ真似なくていい</strong>
+個人のAI運用ではモデル切り替えの手間よりも「1つのモデルとの積み上げ（ハーネス）」の方が価値が大きい段階。ただし将来コスト最適化したい局面（大量バッチ処理など）が出てきたら、この「採用面接」方式は検討候補として覚えておく。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> GBTがいい、いやクロードの方がいい、最近はGLMが安くて強い、こんなのはですね時間の無駄だし労力の無駄なんですよね。新しいモデルが出るたびにこういう話になりますよね。でその度に乗り換えるかどうかを自分で考えて試して設定をやり直す。これをですね毎回やってる人多いと思うんですよ。AI界隈には昔からですねこういう命題があったんですよ。なんで各社の一番いいAIを一箇所に集めて共同して一緒に働かせられないのか実際にですねGPTとクロードとGLMジェミニとか</p>
+<p><code>00:36</code> 得意なことがそれぞれ全然違うんですよねセンスとかですねやっぱり出力の傾向もかなり違いまして書類を書く仕事コードを書く仕事デザインを作る仕事仕事の種類が変われば向いているモデルも変わってくるこれがですねAI界隈での常識だったわけですつまり全然違うですね各社の全然違うモデルを混ぜられればその仕事に合った適材適所のモデルをその都度選べるってことなんですよクロードの弱いところは他のモデルが埋めてくれたりと全然違う考え方する例えばグロックとかですねがセカンドオピニオンをくれたりとかあとは全然コスト構造が違う安いモデルを使えたりとかあとはここぞという時にですね高級なモデルを使ったりとかですね選択の幅が本当に広がるわけです</p>
+<p><code>01:20</code> 要は組織として強くなるんですその多様な人材がいることによって組織としての選択肢が多くなるんですただしそれは今までできなかったんですただですね今回私この全然違うモデルを適材適所で配置するっていう仕組みを多分実現できたと思うんですねしかもどの仕事をどのモデルに渡すかどのモデルが適任かっていったですね判断の部分も私が雇った上司役のAIが自動的に毎回決めてくれるっていう仕組みなんですよ安くて強いモデルっていうのは前々からあったんですね</p>
+<p><code>01:58</code> 例えばGLM5.2とかディープシークV4とかですねとにかく安くて向いた仕事ならかなり強いんですねクロードオーパスだとかGPT5.5、5.6並みの性能が出売る格安のモデルっていうのが市場に今出てきてるじゃあ安くて強いなら使えばいいってなりますけれども今までそうはいかなかったんです引っかかっていったのは主にハーネスの部分なんですよハーネスっていうのはAIに仕事をさせるための周りの仕組みと指示書を全部ひっくるめたものなんですけれども</p>
+<p><code>02:30</code> 私のこのハーネスは半年かけて積み上げたものなんですね空気デザインのやり方を書いた指示書だとかあとは違うツール同士のつなぎ方だとかあとオブシディアンっていうですねメモを貯めておくアプリがあるんですけれどもそこに私の価値観とか考えとか哲学とかあといろんなですねデザインシステムとかそういった材料が全部入っているそこまでのアクセスの仕方とかですね全部そのハーネスの中に含まれているわけですねこれを全部クロードが読んでちゃんと動くという前提で私のワークフローは全部組んであるわけです例えばですね私がレポートを書いてくださいと一行だけ書いたとするじゃないですか</p>
+<p><code>03:06</code> そうしたらクロードは空気デザインの書式で空気デザインのこれまでの文脈を見て私の好みに合わせて書いてくるようになっているわけですねそれがハーネスの力なんですよただこの同じ一行の指示をですね外のモデルに渡しても動きません空気デザインのやり方文脈を何も知らないからなんですね指示書っていうのは結局そのモデルに向けて書いたものなんですよこう言えばこう動くというですね改善サイクルを回した末に作られた一行ずつ染み込ませるようにですね作ったものなんですねなので読む相手が変われば同じ文章でも受け取られ方とか挙動が変わります数同士の繋ぎ方とかも同じなんですなのでモデルをですね1体入れ替えるだけで周りのハーネスを全部書き直さなきゃならない。つまりですね、すごいまたコストと時間がかかるんですよ。</p>
+<p><code>03:56</code> 特に私みたいにAI組織とかいって、複数のエージェントとワークフローをゴリゴリに回しているような人だとですね、ワークフローごとに違う指示書があって、スキルがあって、で違う仕組みがあって、繋がりがあって、それをですね、全部書き直さなきゃいけない。でもその使えなかった安くて強いモデルGLMとかディープシークとかミニマックスとかですよねそれをですね使う方法が一つだけあることに気づいたんですよ私がずっとメインで使ってるクロード正社員のクロードに採用面接をやらせて</p>
+<p><code>04:31</code> 外のAIを雇えばいいって気づいたんですねどういうことかっていうといつも通り普通の企業の文脈で考えたんですよ外部から雇った契約社員とかですね外部のコンサルとかのために仕組みを作り直す企業ってないじゃないですか今いる正社員にこの会社のやり方とか仕切りとか哲学とかそういったものを教育させればいいじゃんと思ったんですよそういうことですねいろいろ調査リサーチを進めた結果これを実現する仕組みがあることに気づいてしまったんですよ私にとっての正社員がクロードなわけなんですけど</p>
+<p><code>05:07</code> ずっと一緒に働いてきて私の指示書もツール間のつなぎ方も私の仕事の癖も全部知ってます外にいるモデルは基本的には契約社員なわけですね優秀ですが空気デザインの事情は何も知らないモデル要は私が最初にやったのはですねこの私のやり方を全部知っているクロード正社員の行為モデルオーパスとかセーブルに採用面接を行う上司AIになってもらって私が投げた仕事に何が必要なのか材料はどこにあるのか出来上がりの基準はどこか</p>
+<p><code>05:40</code> そういったことをですね全部書かせて採用面接をしなさいそういう仕組みを作りましたこの上司AI会社のことを全て分かっている上司AIがこの外から来たAIに正しい指示とパラメーターを渡すこの仕事にいる文脈情報やり方基準とかですねそういったものを仕事のたんびに渡すようにしたんですよだから新しいモデルを入れ替えるたびに全部書き直しになるであろうハーネスの部分を</p>
+<p><code>06:14</code> 上司AIがその場で必要な形に成形して外部の社員に渡すそういうやり方でやってみたわけですねこの仕組みについてもうちょっと解説したいんですけれどもまず私がこの上司AIに仕事を投げるじゃないですかコーディングだとかあとは文章を書いてくださいとかそういったものですよねこの上司AIが外のAIモデルの候補を面接するんですよ同じ課題を同じ材料で同じ条件で最も向いてそうなモデルを3体か4体ピックアップして同じ課題を同じ材料で同じ条件で投げて</p>
+<p><code>06:53</code> テストするんです出てきたものを読み比べて今この仕事に一番向いているモデルを選んでそのモデルに該注するんですねいわゆる採用面接オーディションを行うわけですねこれによって雇われたAIモデルが契約社員として下請けとしてですね上司AIの指示の下仕事を行うわけですこれらのですねどのモデルをまず最初に3つか4つピックアップするのかとかあとは採用面接テストを書いてテストをしてテストの内容を確認して</p>
+<p><code>07:26</code> 出てきたものを採点して一番良かったAIモデルを採用するこの流れは全部上司AIが勝手にやってくれます私は何もしないんですねただ指示を渡すだけなんですよこれを実現する仕組みなんですけれどもこれ実はですね全然難しいことやってないんですよ誰でもできるんですよオープンラウダーっていうですねサービスがあるんですねいろんな会社のAIモデルにまとめてアクセスできる場所みたいなそういったですねプラットフォーマーなんですけれども6月25日にこのオープンラウダーがMCPに対応したんですねこのMCPを使ってですねオープンラウターに接続するんですよ</p>
+<p><code>08:06</code> 要は上司AIがオープンラウターのMCPを使ってオープンラウターにある数百とあるモデルこのリストにアクセスできるんです私はですね事前にこの上司AIにオーディションをやれ採用面接をやれという指示書を書いてあるんですよ採用面接の手順書通りに上司AIが最も今の仕事に適任なモデルをピックアップしてオープンラウダーのMCP経由で採用面接を行って最も点数が良かったモデルに仕事を投げるというところを自動化していますこのですね上司AIのオーディション採用面接用の指示書の全文はですね</p>
+<p><code>08:47</code> ノートで公開してますので詳しくは概要欄にリンクを貼っておきますので興味がある方は見てくださいなので私が実際にやったのは上司AIを一人立ててそれに採用面接をやってくださいという指示書を渡しただけなんですよオープンラウダーのMCPを使ってこの契約社員のリストから適材適所のモデルを選んで仕事をアサインしなさいそういう話をしているだけなんです何も難しいことはやってないんですこの上司AIにはいくつか守るべきルールを与えましたこのルールはですね</p>
+<p><code>09:21</code> コスパよく効率よく回すために必要な指示などで結構大事なものなんですねまず上司AIには一番賢いモデルを据えるんですよクロードの最上位モデルオーパスかフェイブル5みたいなモデルですね今使える中で一番高いモデル一番判断力の高いモデルを据えますこれが全てのスターティングポイントなんですけれども上司AIの仕事って判断そのものなんですね逆に言うと判断以外のことはしないんですよ例えば必要な候補をピックアップするそして広報テストしてそれで出てきた回答を採点するオーディションを開催するでその後部下AIが実際に仕事をやって出してきた成果物を見聞して</p>
+<p><code>10:04</code> で必要があれば突き返すとか嘘や不備を見つけたりとかそういったところでレビューとかですね判断とかを行うモデルがこのモデルになりますなのでこの上司AIの出来によってですね最終的な成果物の質とかですねあとは自動化の快適度とかにつながってきますのでここはですね最もやっぱり高いモデルを使っていただく必要があるということになります一番大事な仕事がここに集まってきてるんですねこの上司が判断を間違えるとその下にいる全員の成果物がですねそのまま素通りしていくしそもそも指示もですねまたハズレになったりするんで絶対にいいモデルを判断の席に座らせてください</p>
+<p><code>10:41</code> その上でこの上司AIには次のようなルールを課していますまず判断だけをしろ自分で手は絶対に動かすな実作業は必ず部下AIにやらせろこれはですね判断と指示は書く量が少ないから読む量は多いんですけれども書く量が少ないからなんですね広報を採点して指示を出して上がってきたものを読むやるのはそれだけなんですよAIの特徴として実際に手を動かす作業は書く量が多くなるんですね長い書類とか長いコードをやっぱり出力するじゃないですかでやっぱりですねこのアウトプットお金がかかるのはこっちのアウトプット側なんですよ</p>
+<p><code>11:17</code> だから長くて出力が大きいですねお金のかかる作業は全部安い部下AIに回しましょうっていう運用システムなんですねコードドを書く、書類を書く、そういうのは全部部下AIにやらせろという指示なんです。だから一番高いモデルは上司の責任だけ座らして、高いモデルは一番効果的な一箇所だけ使うわけですね。この上司AIは実際に手は動かしてないんで、コストは比較的軽く済むんですよ。この上司AIに実作業を禁じている、手作業を禁止しているのは、コスト以外の理由も実はあってですね</p>
+<p><code>11:53</code> 上司AIが自分で書類やコードを書き始めた瞬間その成果物を確認する役がこの組織からいなくなるんですよ作った本人が自分で確認する形になっちゃうんでこれだとですね間違いが見落とされてそのまま通ってしまうんでいわゆる上司AIはセカンドオピニオン役として保持するために実際に物は作らせないっていうのは非常に大事なことなんですよ作る役と確認する役は別々のAIに分ける上司AIには確認だけをやらせるというのは非常に大事になってきます次のルールがですね部下AIのできましたを鵜呑みにするな変更されたファイルを全部読めという指示ですね</p>
+<p><code>12:28</code> AIは平気で嘘の報告をするんですよできましたっていう言葉は当てになりません報告書を何度読んでも嘘は出てきませんので出てくるのは変更された実物を開いて読んだ時だけなんですねだから上司AIには報告を信じるんじゃなくて変更された提出された実物の方を一つ残らず開いて読めという指示を出していますこれはですねやっぱりAIならではのことで普通の企業だったら上司って部下からの成果物って一言一句なかなか確認ができないものなんですよ時間かかりすぎるしやっぱり自分がですねどうしてもボトルネックになってしまうんで</p>
+<p><code>13:05</code> ある程度のところで済ませることが多いんですけれどもAIの場合は一瞬で全ての成果物が読めてしまいますんでもう全部読めと言ってしまうのが正解の指示になります次の指示がですね不備を見つけても自分で勝手に直すな指摘して部下に突き返せ差し戻せ上司が自分で直したらまた手を動かすことになるんですよさっきの手を動かすなを上司自身が破ってしまいますのでAIってどうしてもですね最も早い方法で物事を解決しようとする癖があるんで上司AIの手直しをですね防ぐために絶対に突き返せる</p>
+<p><code>13:42</code> そういった指示が必要になるということですねでなんで上司が自分で手を動かしちゃいけないのかっていう理由はもうすでに散々言ってるのでもう繰り返しませんけれどもそういうことですでここから先はですね私が実際に実践してみた話になるんですけれども私がですねこの上司AIに性質の違う2つの仕事を渡したんですね書き物とあとコーディングですね結果がどうだったのかまず書き物をさせたんですね私のビジネスに必要な書類を書かせたんですけれども最初に候補を何体か立てて面接させました</p>
+<p><code>14:16</code> 採用されたのはGLM5.2安くて強いモデルですね他にもですねDeepSeek V4とかKimiとかいたんですけれども面接結果によるとGLM5.2の成果物が一番優れてたテスト段階では優れていたのでGLM5.2に任せることになりましたなんで勝ったのかもちろんですね私がその場採用面接のその場にいて見張ってたわけじゃないんで事後の報告書しかないんですけれどもこの時はフェイブルが上司AIをやってたんですけれどもこの上司AIが見ていたのはですね</p>
+<p><code>14:48</code> 渡した材料から要点を正しく拾えているかそして使うなといった言い回しを避けているかそして勝手な作り話を足していないか熱動をしていないかこの3つのモデルの中でGLMはそこが一番きれいに通ってたんですねちなみにDeepSeek V4 Proは私と大量にない話を熱動してきて即失格となってですねKimiの方はですねしり滅裂だったんで落ちましたとそんなこんなですねGLM5.2に書かせたんですけれども</p>
+<p><code>15:21</code> 出来上がりは私の感覚からするとですねオーパスと遜色ないレベルでできてきました実費がですね0.0183ドル同じ量をですね同じトークンの量をですねフェーブル5に書かせていたら0.72ドルかかる計算になりますおよそ39倍のコストの差が出ているということになりますおそらくオーパスと比べても13倍ぐらいの差が出てるはずです書類1枚で2000と言ってませんのでオープンルーターというですねサービスそのものがですね一応重量課金制なんで</p>
+<p><code>15:54</code> APIを叩いてですねモデルを走らせるというものでコスト気になる方結構いらっしゃると思うんですけれども私ですねここ数日ゴリゴリにオープンルーターで仕事を回させてるんですけれども正直ですね3ドル4ドルぐらいしかいかないんですよね最もお金がかかったのは画像生成ジェミニプロにですね画像生成させたことがあってその時に25セントぐらいかかったんですけれども普通の書類生成ぐらいでしたら本当に数セントもいかないっていうレベルなんで結構ガンガンガンガン使えるというようなコスト構造になってますもちろん高級なモデルを使った場合はその限りではありませんけれども</p>
+<p><code>16:28</code> 基本的にはオープンルーターの料金は非常に安いという風になってます次にコードですね私が今作っているアプリにバグが2件あったんで原因の診断と修正をやらせましたObsidianの中身をですね定期的に整理させるためのアプリだったんですけれどもで面白いことにここではGLM5.2は落ちましたずっと動いているのに答えが最後まで出てこなかったんですね時間だけかかって出し切れなかったんですよ何もあの意味のある出力がその最初のですね採用面接のテストは完了しているのにGLM5.2のところだけ終わった理由の欄が空っぽでした</p>
+<p><code>17:06</code> つまりですねテスト完了できなかったんですねなぜかでそんなこんなで採用されたのがGPT5.5当時のオープンAIの最上位モデルですね採点は5点満点で4.5点という採点でした候補の中で一番高い点でしたで面白いことで採用したGPT5.5実際に仕事をさせてみたらこの上司AIがいつもですね成果物を検査するんですけれどもそれがですね非常に有効に効いている場面がありましたこのGPT5.5最初にですね修正を出してきたんですねこの修正が効くことを証明するテストを書いて</p>
+<p><code>17:39</code> このテストが通りましたという風に報告してきたんですねでも上司AIは私の指示通りですねこの報告を鵜呑みにせず変更されたファイルを全部読み込んだんですねそしたらそのテストGPT-5.5が書いたテストは壊れたままの古いコードでもそのまま通ってしまうような代物だったんですよ要は何も証明できてないですね適当なテストだったんですねでそれが合格しましたみたいな印だけついてたっていう状況だったんですよなので何度も言いますけれどもこういった仕組みでですね</p>
+<p><code>18:12</code> 仕事をですねサブエージェントとかに丸投げするとき報告書は絶対に信じちゃいけないんですよね変更されたファイルそのものを開いて読ませる必要があるということなんですよでこの時ですね上司AIは自分で直さないでどこがおかしいのかを自動的にですに指摘してこのGPT5.5部下AIに突っ返しました突っ返した後の修正には別の不具合もありましたけれどもそれもですねこのボスAI女子AIが見つけてですねまたもう一度やり直して大体3回か4回ぐらいサイクルが回って最終的にですね291件のテストが全部取りました</p>
+<p><code>18:49</code> これがですね複数のエージェントを組み合わせて使うことの利点なのかなと思いますクロード1体で回していると自分の書いたものを自分で採点することになるんでやっぱり外の目が入るとですねそれがなくなったりとかですね外部のモデルがやったものをクロードに検品させるということによって要はセカンドオピニオンが生まれるということですね出てくるものが客観的に正しい方へ寄っていくそういった仕組みができるという利点があると思いますこのコーディングの仕事の実費はですね0.610ドル同じ仕事をフェーブル5にさせたら1.03ドルでしたね</p>
+<p><code>19:25</code> 差は1.7倍ですGPT5.5というですね高級モデルを今回使ったんで1.7倍という結果になったんですけれどもこの実験がですね何を意味しているのかっていうと上司AIがコストに関わらずこの仕事においてどのモデルが最も適材適所なのかだけを見て仕事を振ってるってことですねそこにですねこのモデルはコスパがいいからとかあとこのモデルは高級モデルだから今回やめとこうとかそういった意思は介在してないということですねとにかくこの与えられた仕事でテストを作ってそのテスト結果で最も適した回答を出してきたものを採用しているから</p>
+<p><code>20:02</code> このような結果になったということですそれでもですねセーブルとかオーパスを常時ぐるぐる回しているよりはですねかなり安くつくはずです1回のタスクぐらいだったら見ての通りですね数十セントぐらいの差なんですけれどもただAIの仕事って通常1回で終わらないじゃないですか。同じことを何十回何百回と回して、自動化するとさらにぐるぐる回りますよね。だからこの違いはですね、結構最終的には大きな差になっていくと思います。もちろんですね、確認している上司AIにもコストはかかってるんですよ。変更されたファイルを全部読ませてるわけですから。</p>
+<p><code>20:35</code> ただ何度も言いますけれども、上司がやるのは読んで短い指示を返すだけなんで、お金がかさむのは長い成果物を何度も書く部下の方なんですね。なかなかフェーブルとかオーパスよりも高いモデルは存在しないので最終的にはこの仕組みの方が適材適所そして最終的なコスパも良くなると言えると思いますこのように書き物で採用されたGLM5.2これがコードの仕事では落ちてしまったということで非常に面白い結果になりました同じモデルでも仕事が変われば向き不向きがやっぱり出るんですよね人間の会社と同じで文章が上手い人とコードが書ける人は別の人なんです</p>
+<p><code>21:12</code> だから仕事ごとに雇い直す意味があるんですよねこの仕組みを入れてから組み合わせの自由度と使えるモデルのバラエティがかなり広がりました昔こういう動画を出したんですけれども4チーム18体で全部ほとんどクロードでたまにジェミニとかですねオープンクロードとかそういったものを使ってますよっていう話だったんですけれども今はですね仕事によって顔ぶれが全然変わるというような状態になっていまして総勢で30体ぐらいコアで回ってるのが20体ぐらいですね要は昔はクロードほとんど一色だった組織がかなり多様なモデル構成に変わったという風になっています。ここまでやってみて、自分の仕事がどう変わったのかっていう話をしたいんですけれども、一番大きいのは私が覚えておくことがぐっと減ったことなんですよ。例えば、どのモデルが何に向いているかとか、どの仕事をどのモデルに任せるかとか、その見極めは丸ごともう上司AIに任せてるんです。</p>
+<p><code>22:06</code> もうAIモデルのキャッチアップが必要じゃないんですよどういうモデルがあってどのモデルがどういう仕事に向いてるかとかそういったこと全然気にしなくていいんですねそういった細かい知識は私が持ってなくても上司AIが勝手にその時の最新そして最適を見極めて選んでくれるんですよ新しいモデルが出たらランキングとかデータがオープンラウター上に存在しますのでそれを上司AIが勝手に参照してそして向いてそうなモデルをいくつかピックアップしてテストして</p>
+<p><code>22:38</code> 仕事を最終的にアサインしてくれるそれが全部自動でやってくれるという画期的な仕組みになってますその間私が決めるのはこういう仕事でこういう成果を出したいという方針だけなんですねこの仕組みの素晴らしいところ上司AIに仕事を投げるときにいろんなパラメータを投げてあげることもできるんですよ例えばこの仕事はちょっとコストを抑えめにしてとかあとはなるべく早く仕上げてとかあとはプライバシーを優先してこの仕事を実行してくれとかそういった指示を上司AIに投げるだけで</p>
+<p><code>23:14</code> 上司AIがどういうモデルをピックアップしてくるのかっていうのが変わるんですよなので皆さんはじゃあどのモデルがプライバシー的セキュリティ的に安全なのかとかあとはどのモデルが早いのかとかあとコスパがいいのかとかそんなことはもう全然調べなくていいんですよ上司AIが皆さんがそういう指示をすることによって勝手にやってくれるんです何度も言うんですけどこれって結構ここから先ゲームチェンジャー的な仕組みだと思うんですよね最終的にだから組織の回し方さえきちんとできていれば適材適所が成立するんですよ本当に普通の企業の弊社みたいなやっぱり組織の動かし方だけで</p>
+<p><code>23:57</code> もうこのAI運用が成立してしまうんです先日私AIを追いかけ続けるという感覚そのものがおかしいというですね話をさせていただいたんですけれどももうこのモデル乗り換えなくちゃいけないんじゃないかとかあのモデルを使った方がいいんじゃないかっていう判断ごと上司AIに渡せるんですねこの仕組みを使えば追いかけなくていい状態をこの仕組みが実際に作るわけです今ですね私のAI組織では見事に役割分担ができているんですよ私が方針を定めるそしてその方針をもとに正社員であるところのクロードが要件を出すそしてそのクロードが要件をいわゆる契約者に手を動かす</p>
+<p><code>24:36</code> ワーカーであるところの外部社員例えばGLM5.2にその要件を渡して書類を書かせるコードだったらGPT5.5がたまたま向いていた結果が良かったのでGPT5.5に渡してでGPT5.5が直すそれらのいろんなモデルが出してきた成果物を正社員であるところのクロードが研修して、必要があれば使いして、レビューして、最終的に私に戻してくる。それが全て自動で行われる。別々のAIが一つの組織の中で一緒に働くという仕組みがとうとう実現できたんです。</p>
+<p><code>25:15</code> 冒頭で一番いいAIを一箇所に集めて、コスパがいいもの、書き物が得意なAI、コーディングが得意なAIを一箇所に集めて働かせられないのかという命題を問いましたけど今回のこの仕組みである程度実現できたと思いますAIの組織と人間の組織の境目はこれからどんどん曖昧になっていくんですよ会社のやり方を真似てAIを運用すれば人間の組織で培ってきた知見がそのまま使えるんです私前からそう言ってきましたけれど本当に面白い形でですねAIを提供する側オープンブーターみたいな会社からもですね</p>
+<p><code>25:50</code> 人間の組織でやってきたことを可能にする仕組みが出てきているんです採用面接があって害虫があって上司が成果物を確認して差し戻すとどこの会社でもやっていることですけれども人間AIもそれ関係なくですねそういった仕組みを可能にするメカニズム仕組みがですねどんどんどんどん生まれてきているそれが今2026年後半の今の現時点での現実ということになります私の見立てなんですけれども人間企業的な仕組みをですね</p>
+<p><code>26:22</code> AIの運用に応用するというですね仕組みこういった仕組みはグローバル企業の管理手法をおそらく下敷きにして作られてるんですよこれから人間側として学ばなきゃいけないことっていうのは新しいモデルを学ぶとかそういった知識よりもそういった組織をどう設計してどう回すかなんですよでグローバル企業のやり方に最適化された仕組みがですね結構いっぱい出てきてるんでやっぱりグローバルの企業でどういう風な組織管理がされているのかどういった組織運用がされているのかとかそういったことをですね学ぶのが結構やっぱり有利なのかなと思いますそれがですね皆さんがAIを使って回す時に差がつく要因になってきます</p>
+<p><code>27:06</code> 空気デザインではですねグローバル企業の組織の回し方やAIを実際に導入するときに何が効くのか何が有効なのかこういう話をこれからも出していきますのでよかったらチャンネル登録もよろしくお願いいたしますまたはですね女子AIに渡す指示書私がどういう指示書を作ったのかどういった仕組みを作ったのかというですね詳細は全部ノートに置いてありますので自分でも試してみたい方はですね概要欄のリンクから覗いてみてくださいAIがですねこれからどれだけ増えても選択肢が増えてもですね結局のところこの人間とAIが共存する組織を運営するユーザーによってアウトプットの量と質が全く変わってくる</p>
+<p><code>27:44</code> こういった時代が訪れようとしていると思いますチャンネル登録をお願いいたします。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote）</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（StructureNote）</li>
+<li><a href="./2026-06-01-multi-agent-shared-brain" class="internal" data-slug="2026-06-01-multi-agent-shared-brain">2026-06-01-multi-agent-shared-brain</a>（StructureNote・synthesis）</li>
+<li><a href="./2026-07-05-model-split-spec-handoff" class="internal" data-slug="2026-07-05-model-split-spec-handoff">2026-07-05-model-split-spec-handoff</a>（StructureNote・synthesis）</li>
+<li><a href="./2026-07-05-audit-agent-factcheck-protocol" class="internal" data-slug="2026-07-05-audit-agent-factcheck-protocol">2026-07-05-audit-agent-factcheck-protocol</a>（StructureNote・synthesis）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-82" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

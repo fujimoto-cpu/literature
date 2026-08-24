@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】"/><meta name="twitter:description" content="📺 動画情報 Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-15 ・ ⏱️ 21分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Earth Contextaプラグインの第3弾運用編。Claude Coworkのスケジュールタスク機能を使って、ObsidianのVaultを毎日自動でセカンドブレインに取り込む仕組み..."/><meta property="og:description" content="📺 動画情報 Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-15 ・ ⏱️ 21分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Earth Contextaプラグインの第3弾運用編。Claude Coworkのスケジュールタスク機能を使って、ObsidianのVaultを毎日自動でセカンドブレインに取り込む仕組み..."/><meta property="og:image:alt" content="📺 動画情報 Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-15 ・ ⏱️ 21分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Earth Contextaプラグインの第3弾運用編。Claude Coworkのスケジュールタスク機能を使って、ObsidianのVaultを毎日自動でセカンドブレインに取り込む仕組み..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Obsidian-×-Claude-Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Obsidian-×-Claude-Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-15 ・ ⏱️ 21分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Earth Contextaプラグインの第3弾運用編。Claude Coworkのスケジュールタスク機能を使って、ObsidianのVaultを毎日自動でセカンドブレインに取り込む仕組み..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Obsidian-×-Claude-Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-673"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-673" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】</a></div></nav><h1 class="article-title">Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-02T15:00:00.000Z">2026年5月03日</time><span>43 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/second-brain" class="internal tag-link">second-brain</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Obsidian × Claude Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】</strong>
+🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-04-15 ・ ⏱️ 21分24秒
+🔗 <a href="https://www.youtube.com/watch?v=mSf4NPjeeMU" class="external">https://www.youtube.com/watch?v=mSf4NPjeeMU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/Obsidian-×-Claude-Coworkで毎日のノート整理をゼロにして自動的にセカンドブレインを育てる方法【arscontexta運用編】.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Earth Contextaプラグインの第3弾運用編。Claude Coworkのスケジュールタスク機能を使って、ObsidianのVaultを毎日自動でセカンドブレインに取り込む仕組みを4ステップで構築する方法。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[ステップ1: 準備\\nCoworkプロジェクト作成] --> B[ステップ2: PC側\\nClaude Codeでテンプレ書き換え]\n    B --> C[ステップ3: Cowork側\\nプロンプトを再カスタマイズ\\n→スケジュール登録]\n    C --> D[ステップ4: 初回実行\\n権限許可+タイムスタンプ記録]\n    D --> E[以降は毎日自動実行\\nPCが起動した瞬間に差分処理]&quot;">flowchart TD
+    A[ステップ1: 準備\nCoworkプロジェクト作成] --> B[ステップ2: PC側\nClaude Codeでテンプレ書き換え]
+    B --> C[ステップ3: Cowork側\nプロンプトを再カスタマイズ\n→スケジュール登録]
+    C --> D[ステップ4: 初回実行\n権限許可+タイムスタンプ記録]
+    D --> E[以降は毎日自動実行\nPCが起動した瞬間に差分処理]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 毎日の自動取り込み — Coworkスケジュールタスクが唯一の選択肢 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude Codeの他モード（Projects等）はセッション中しか動かないか、VaultのMDファイルを直接編集できないという制約がある。毎日決まった時間に自律実行でき、かつObsidianのファイルを直接読み書きできるのは<strong>Cowork（Claude Cowork）のスケジュールタスク機能のみ</strong>。PCが起動していなくても、起動した瞬間に「見逃し実行」として1回だけ追いかけ処理が走る設計になっている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 4ステップ構成 — コピペだけで完成する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>Step1</strong>: ObsidianのVaultルートフォルダをマウントしたCoworkプロジェクトを用意（既存でもOK）。<strong>Step2</strong>: GitHub GISTからbatchテンプレートをDLし、Claude Code（Claudia）に渡して自分のPC環境（Vaultパス・除外フォルダ）に書き換えてもらう。<strong>Step3</strong>: そのプロンプトをCoworkプロジェクト内でさらに書き換えてもらい、スケジュールタスク（毎日22時等）として登録。<strong>Step4</strong>: 「今すぐ実行」で権限許可＋初回タイムスタンプ記録。これで自動化完了。コードは一行も書かない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. タイムスタンプ方式 — 差分のみ処理で軽量 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>仕組みの核心は「処理した時刻を記録→次回はその時刻以降に作成・更新されたファイルだけを対象にする」差分処理方式。初回実行時は処理対象0件となるが、それが正常動作。以降は毎日の新規・更新ファイルのみEarth Contextaパイプライン（アトミックノート分解→グラフ接続→整合性チェック）に流れる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. Earth Contexta 3部作の完結 — 概念・マイグレ・運用がセット </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>第1弾（概念編）: Earth ContextaプラグインでObsidianノートが自動でつながる仕組みの解説。第2弾（マイグレーション編）: 過去の何百・何千ノートをAIに丸投げしてグラフ化。今回の第3弾（運用編）: 設定後を毎日手放しで回す自動化。3本セットで初めてセカンドブレインが「成長し続ける」状態になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① corinのZettelkastenにこの仕組みを適用する</strong>
+wiki-ingestスキルはすでに手動実行しているが、Coworkのスケジュールタスクに登録すれば毎日自動でingest処理が走る。明日、corinプロジェクトに「arscontexta_batch」タスクを登録してみる。</p>
+<p><strong>② テンプレDLは概要欄から</strong>
+GitHub GISTのURLは動画概要欄にある。Claude Codeに渡す2つのプロンプト（PC用書き換え依頼文・Cowork用書き換え依頼文）も概要欄にある。動画を止めながら順番にコピペするだけ。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいどうも井村直弥です。このチャンネルではこれまで2回 Earth Contexta というプラグインの話をしてきました。第1弾の概念編でObsidianにEarth Contextaを組み込んでノートが勝手に繋がっていく仕組みを紹介して、第2弾のマイグレーション編で過去ノートを丸ごとAIに丸投げしてグラフ化していく話をしました。両方ともセカンドブレインとしてObsidianを使うために非常に重要なお話をしてきたと思っています。今日はその続きになります。前の2本で作った設定、実はそのままだと運用的には支障がまだある状態です。具体的にはファイルはすべてインボックスに入れなくてはならなかったり、</p>
+<p><code>00:37</code> 既存フォルダにあるファイルはファイルごとに取り込むためのコマンドを打たなきゃいけなくなります。そんな面倒なことはしたくないですよね。毎回ノートを書くたびにコマンドを打たなきゃってついて回る設計って絶対やらなくなると思うんですね。この動画ではそういった面倒な日々の取り込み作業を全自動でクロードにお任せする方法をお伝えします最後までご覧いただければあなたのObsidianはあなたが作業しなくても勝手にセカンドブレインとして成長し続けるそんな仕組みを手に入れることができます最後までお付き合いくださいというわけで今日はこの毎日決まった時間に</p>
+<p><code>01:11</code> 自動で作成更新されたノートをセカンドブレインのマッピングに取り込む仕組みというのを新しく自分で組んでみたのでそのやり方を共有していきます先ほどもお伝えしましたが、私の第2弾までの動画までの状態だと、日々のファイルを取り込むためにはファイルごとに取り込むためのコマンドを打たないといけなくなります。この仕事をクロードコワークのスケジュールタスクに登録するだけで面倒な作業から解放されます。この動画ではその設定をステップバイステップで4ステップに分けて説明していきます。後半で実機を一緒に触る時間も用意しています。</p>
+<p><code>01:44</code> 目的はこの動画をご覧になっている方がセカンドブレインの自動化の仕組みを実際に使い始めることです難しいことではありません皆さんがやることはコピペだけです書き換えの判断は全部AI同士がやってくれるのでコードは一行も書きませんなのでこの動画を最後まで見ると私と同じ環境が手に入りますぜひ最後までお付き合いくださいこのチャンネルでは非エンジニアの方がクロードとオブシリアンを使って仕事の生産性を劇的に上げる方法を発信していますコードは書きませんでもAIはフル活用しますそんなスタイルに共感する方はぜひチャンネル登録お願いしますでは早速やっていきましょう</p>
+<p><code>02:18</code> ここからは何をやればこの仕組みが動くかという結論から先にお伝えしていきます流れはこのワンページの通りでステップ1は準備Obsidianがつながったコアークプロジェクトを一つ用意しますステップ2はPCで動かすということで私が用意した配布用のテンプレがありますのでそれを概要欄からダウンロードしてクロードコードに渡してあなたのPCで動く形に書き換えてもらいますステップ3はコアークで動かす準備をしてそのままスケジュール登録していくってことをやりますステップ2ではあなたの環境に最適化されたテンプレができるんですけれどもそれをさらにコアークで動くように再度カスタマイズしていくような形です</p>
+<p><code>02:57</code> 人間が何かすることはないのでプロンプトを貼ってクロードに指示するだけでその状態になりますそのプロンプトが出来上がったらそのままスケジュール登録を行っていくだけですステップ4は今すぐ実行ということで動作確認をしていきます初回のタイムスタンプを登録することと画面に出る権限ダイアログに常に許可というのを押していきますステップ4のタイムスタンプ以前の更新ファイルは取り込めないので前回の動画の仕組みを使って可能であれば対象のフォルダーを絞って再実行してみてくださいまずステップ1今日の作業の土台になるコアークプロジェクトを一つ用意します条件はシンプルでそのプロジェクトにObsidianのボルトのルートフォルダーが接続されていることこれだけです</p>
+<p><code>03:39</code> ここは状況に応じて2通りあると思ってましてすでにボルトをコアークにつないでいるプロジェクトがある方はそれをそのまま使ってください新しく作り直す必要はありません自動実行タスクは既存のプロジェクトの中に追加で1つ登録するだけで動きますまだボルトをコアークにつないでいない方はここで新しくプロジェクトを1つ作って接続するフォーダーにボルトのルートを選んでくださいプロジェクトの名前はEarth Context Dailyとかですねその辺ご自由に決めていただければというふうに思いますコアークプロジェクトの作り方そのものについては、このチャンネルのコアークプロジェクトの解説編ありますので、そちらをご覧いただければと思います。既存でも新規でもボルトがつながったプロジェクトが手元にあればステップ1は完了です。</p>
+<p><code>04:22</code> このプロジェクトはステップ3で自動実行タスクを保存する場所にもなるので、開いたまま次に進みます。ステップ2、ここからがコピペでAIに仕事を渡していく流れの本番になります。まず大前提として、Corearkに毎日走らせるシリーズのテンプレートを私の方で予め用意しています。これはObsidianのボルトの差分を見て、新しく書かれたものをアトミックノートに分解して既存のグラフにつないでさらに整合性をチェックするっていう処理の意識をどんな順番で何をやるかを全部書いた長めのプロンプトになってますこれをコアークに毎日走らせるのが今日のゴールになりますこのテンプレ本体は概要欄にGISTっていうリンクを貼っておりますのでそこからテンプレ本文を開いて右クリックでダウンロードしておいてください</p>
+<p><code>05:08</code> 中身は長いですが読まなくても大丈夫です。ただこの配布テンプレはそのままコアクに貼ってもまだ動きません。理由はシンプルで誰のボルトでも動くように汎用的に作ってあるのであなたの pc をどこにボルトがあるかとかどのフォルダを処理対象にしてどこを除外するかといったあなた個人の環境の情報が空欄になっているからです。ここを埋めるのがステップ2になります。この書き換えの作業をやるのが概要欄に置いてあるんですけれども一つ目の依頼文のプロンプトになります。そうするとクロードコードは手元のボルト構造を自分で読み取りに行って、あなたの環境に合わせて書き換えたあなたのPC用のプロンプトに更新してくれます。</p>
+<p><code>05:47</code> 一応ですね、プロンプトで依頼すれば基本書き換えてくれるのは間違いないんですけれども、例えば除外したフォルダーが他にないか修正してもらったプロンプトをやり取りしているチャット欄でそのまま聞いてみてください。クロードコードは自分が書いた除外リストを起点として、Obsidianのボルトの中身を改めて見直して漏れていた広報を保管してくれます新しいクロードを立ち上げる必要はなくて同じ会話の続きで1行聞くだけで十分ですこのクロードで修正してもらったプロンプトは次の工程で使いますのでしっかり確認しておいてくださいステップ3ということで</p>
+<p><code>06:21</code> ここからはステップ1で作ったコアワークプロジェクトの中で作業していきますそのプロジェクトの中で新しい会話ですねチャット欄を一つ開きますとそこに概要欄の2つ目の依頼文をコピーしてきます依頼文の末尾に前の工程で作ったクロードコードで修正したプロンプトですねそれをファイルのパスを貼ってもいいですしプロンプト自身を全部貼り付けても構いませんそれで修正の依頼をしますするとCoreアークはCoreアークで動く用のプロンプトに書き換えてくれますCoreアークが動いている環境のことを一番よく知っているのはCoreアーク自身なので</p>
+<p><code>06:57</code> 書き換えはコアクにやらせる方が最適かなというふうに考えていますコアク用のプロンプト修正してもらったらですねいよいよ登録になりますプロジェクトの右側に予定済みっていう名前のセクションがありますのでそこのプラスボタンを押していくと新しいタスクを作成っていうものが出てくるのでそれもクリックしていきますするとスケジュールタスクを作成っていうポップアップが出てくるのでそこに名前と説明とプロンプト小枠に修正してもらった最終版のプロンプトをそこに貼り付けて頻度は毎日っていうのを選んで</p>
+<p><code>07:31</code> 指定時間をあなたの好きな時間に設定してみるっていうことができればこのステップは完了になりますここまでできていると基本的に自動化は完了なんですけれども最後に1個だけ追加で作業が必要ですそれが今すぐ実行っていうボタンがあるのでそのボタンでまず1回目の処理を走らせるっていうことをやってくださいここには2つの目的があります1つ目が権限の承認ということでコアークが権限許可を求めてくるんですねそれに対して常に許可を選んでください1回許可すると以後はその許可求めてこなくなりますので</p>
+<p><code>08:06</code> 1回許可を実行しておく必要があります2つ目はタイムスタンプの初回登録ということで今回の仕組みっていうのは処理をした時間をですね記録していくやり方になりますので1回目のですね処理の時刻を記録しなきゃいけないんですね仕組みとしては1回タイムスランプを押されていればその時刻以降の全ての更新されたファイル作成されたファイルを処理対象として見てくれますのでそのための初回処理ということでご理解くださいですので初回は処理対象が0件という形になりますのでその点もあらかじめご理解の上進めていただければなというふうに思います</p>
+<p><code>08:44</code> この作業が完了しますと定期実行問題なく走るようになりますし意図的に今すぐ実行ボタンを押してもフリが同じように走りますので自動化した状態にもなってますし自動でもタスクを走らせることができるそんな状態になりますここまでまとめるとステップ1は準備としてプロジェクトをつなげるということですねステップ2はPC側でクロードコードでプロンプトを修正していくということステップ3は同様にコアアク側で動作できるようにプロンプトを修正してそのまま定期実行スケジュールタスクを登録していくということですね</p>
+<p><code>09:18</code> ステップ4として今すぐ実行ボタンを押して権限許可をしておくことと最初のタイムスタンプを記録させるということをここまで4つの工程すべてやれば問題なく自動化の仕組みは走ると思いますはいここで少しだけなぜこのやり方で成り立つのかっていうところを3点だけ補足させてください一つ目ですねクロード側で毎日決まった時間に勝手に処理を走らせるっていうことができるのが現状私がいろいろ調べた中ではコアークが一番安定的に動くのかなというふうに思いました他のモードとか機能は画面を開いてセッションが動かしている間しか動かないとか</p>
+<p><code>09:55</code> 自分のObsidianのVaultのファイルに直接編集できないとかですねいずれかの理由で日常運用には使えなかったという理由がありますで結論としてはコアーク一択になったということです2つ目として配布テンプレの中にObsidian Vault内のスキルを参照しに行くような記述が入っていますそれがですね今回の動作設計の裏側になります今回のやり方はコアークに助中スキルを入れるのではなくてプロンプト本部の中に手順そのものを書き込んでおくというスタイルになっています3つ目毎日の決まった時間にもしPCが立ち上がっていなくても大丈夫です</p>
+<p><code>10:32</code> コアークのスケジュール機能には見逃した実行を後で1回だけ追いかけて走らせてくれる仕組みが入っていますPCを立ち上げた瞬間にその日の分が1回だけ実行されるようになってますので万が一寝坊したとか外出しててもちゃんとその日の実行を後でやってくれるっていう形になりますのでこの辺分かっていれば問題ないかなというふうに思いますので実際にちょっとこれから画面セットアップ順番にやっていきますので不安な方は一緒に見てくださいよろしくお願いしますはいそれではですねデモの方をやっていきたいと思いますまず最初のステップとしてですねコアクの方に行きましてプロジェクトを作る必要があります</p>
+<p><code>11:09</code> 今すでにObsidianのVaultのディレクトリをマウントしているプロジェクトがあるんだったらそれを使ってもらえれば大丈夫です今回新しく作るバージョンで進んでいきたいと思いますNew Projectを押してもらって既存のフォルダとしてObsidianのVaultがあるという前提で今回進めていきたいと思いますのでこの3番目の既存フォルダを使用というところを押しますそうするとフォルダ選択が出ますのでこれを開きます私の場合今回デモ用のですねVaultはこのcloud-demoっていうのがあるので</p>
+<p><code>11:42</code> これを開きますそうするとフォルダーが選択されまして名前これ好きなものに変えてもらえばいいんですけど私の場合このまま進めますこの手順は今回は飛ばしますこの辺の書き方に関しては私の他のプロジェクトの説明動画ありますのでそちらの方をご覧になっていただければどのように書くべきかというところが説明されてますのでご覧くださいその他は特に何もないのでこのまま作成をしますそうすると今プロジェクト新しいものができましてクラウドデモっていうものになってますまずこれがステップ1になります</p>
+<p><code>12:15</code> テンプレートをまずダウンロードしていただく必要がありますので概要欄の方にこのGitHub GISTっていうウェブページのURL貼ってありますのでリンクからこのページを開いてくださいこのファイルですねearth.context.co.batch.template.mdって書いてありますのでこれをダウンロードするんですけれどもやり方はですねこのローって書いてあるこの右側のボタンを右クリックしてリンク先を別名で保存としますそうするとどこにダウンロードするかって書かれるのでこれ開いてデモの環境に入れていきますので</p>
+<p><code>12:50</code> トップディレクトリにそのまま入れちゃいます保存しますこのクラウドデモのディレクトリにですね今アースコンテキストコアークバッチテンプレート.テキストって形のテキストファイルでダウンロードされていますとこのままだとマグダウンとしてObsidianに認識されないので拡張子変えていきますMacの場合はEnterを押してもらってこの拡張子をMDって直してMDを使用を選択すると左側Obsidianのトップディレクトリのところに今回ダウンロードしたものがこのようにダウンロード見えるようになってますのでここを編集していきたいと思います</p>
+<p><code>13:28</code> このClaudianを使ってクロードに依頼していきますプロンプトのテンプレートに関しては概要欄貼ってありますのでそこからコピペしてきてくださいここに書いてある通りなので特に読み上げませんここにテンプレーファイルを貼るっていうこれ普通にCLIでやった時は貼らなきゃいけないんですけれどもClaudiaの場合はこれ選択しているとファイルのことだよっていうのが示されていることと一緒なのでここは削除して進めても構いませんこの状態でエンターを押していきます処理の方終わりまして、大体2分半ぐらい、私の方のこのデモ用のボルトがですね、そんなに大きくないので、このぐらいの時間で終わったかと思います。それで何がされたかっていうと、ここ書かれている通外リストがあのしっかりと書かれているかっていうのを確認してください今回の場合はアースコンテキスタの出力の内容とかですねあとエディタースキル設定とかでドットオブシディアンとかドットクロードとかそういう設定ファイル系は除外しますよとかですね</p>
+<p><code>14:28</code> アーカイブとか不要なものでここを見てちょっとこれ除外しないでほしいよみたいのがあればそれはまた指示して修正してもらってください逆にこの中に入るべきなのに入ってないとか思ったらもうちょっと調べてみたいなことをクロードに追加で指示するみたいなことをやってみてくださいはいこんな感じでまずですねこの目的はこの左側のプロンプトの内容を書き換えてもらうんですけれども副次的にですね自分のこのボルトの環境も把握できるのでこの辺もしっかり読んでもらった方が今後に役立つと思うのでという感じでした</p>
+<p><code>15:02</code> で次ですねClaudianで書き換えたこのプロンプトをさらにコアークに書き換えてもらうってところをやっていきますプロンプトのファイルを右クリックしてパスをコピーでこのシステムルートからっていうのをコピーしておきますはいその状態でクロードのプロジェクトの方に来てくださいここにまたプロンプトを貼っていきますプロンプトはこの概要欄に貼ってありますのでそれをそのままコピーしてくださいこの中でこのカッコで書かれているところですねここはパスを書かなきゃいけないので</p>
+<p><code>15:34</code> これは先ほどObsidianでコピーしたパスを貼っていきますはい今回はこんな感じですねはいでこれで始めましょう押していきますそうするとですねそんなに時間かからずにまた書き換えたものが出てきましたこれを開いてみますねそうするとちょっと細かくてこれ一行一行見る必要はないんですけれどもこのコワークで読み取れる形にしてくれているものになりますこのコピーを押しますコピーを押してバッテンを押してクロードデモのプロジェクトに戻ってきてですねこの予定済みってところのプラスボタンを押します</p>
+<p><code>16:09</code> ここで新しいタスクを作成っていうのを押してまずこのプロンプトのところにコピーしたやつを貼り付けちゃいますそうするとプロンプトが入ったことが分かりますのであとはここにタスクの名前とかを書いていくだけですねこんな感じでですね名前と説明ですね私の場合ちょっとデモ用なのでテストとかデモ用とかって入ってますけれどもこの辺はご自身の名前自由に書き換えてもらって大丈夫ですそれであと頻度ですねこれマニュアルだと手動実行しかないのでこれを毎日っていうのを選択しますこの時間はカーソルでこのように上下やってもらえれば時間が動きますので</p>
+<p><code>16:47</code> 例えばじゃあ22時に毎日やってほしいということであればこれでOKですこれで保存しますそうするとこの予定済みのところに今作ったですねスケジュールタスクがセットされたことがわかります毎日約22時に実行されますよということでこの緑マークのアクティブも示されているのでこれでOKですこの後初回実行していきますのでこのタスクをですねクリックしていきますはいそうするとこんな感じで今設定したばかりの手順ですねプロンプトがここにわーって書かれている状況ですプロジェクトとかフォルダーとかあと繰り返しこの辺でオンオフすれば</p>
+<p><code>17:24</code> 一時的に定期タスクをやめさせるってこともできますのでこの辺は運用上必要だったらやってくださいこの今すぐ実行を押してみますはいそうするとですねこの右側に履歴っていうのは出てきましたからこれを開きますそうすると今プロンプトを読んでですねコアアクが処理を開始してくれました初回実行時に許可を求められることはありますのでちょっと今回何度もテストをやっているので許可を求められなかったんですけれども許可のポップアップ出てくると思いますのでそれを常に許可っていうのをまずやってください</p>
+<p><code>17:58</code> 初回バッジも完了しましたっていうプロンプトが出てきて処理対象ゼロ件でこれは問題ありません初回バッジなのでこれで新しいバッチのテキストファイルができましたのでこの時間以降ですね今日の13時5分以降に処理を走らせたらその間にですねファイルの更新とか作成がされたものは全部処理対象としてリストアップされてアースコンテキスタの処理に組み込まれていくという形になりますはいですのでこのタスクの場合ですね22時にセットされてますんで今13時05分に実行しましたから</p>
+<p><code>18:32</code> あと9時間後ぐらいには処理がまた走るって形になりますそんな形でですねセットしてもらえればあなたのObsidianの環境で毎日Earth Contextのパイプラインが動くという形になりますので日々の更新したファイルとかを気にすることなく仕事の方に集中してもらえる環境ができるようになりますできるのかなというふうに思っております。ということでデモの一連は以上となります。ではスライドの方に戻ります。全体振り返っていきます。この作業をやる前っていうのは書いたファイルですとか、更新されたファイルごとに自分でコマンドを打ってグラフに組み込むっていう作業が必要だった状態です。</p>
+<p><code>19:12</code> その作業が面倒くさくなってやらなくなってしまうっていうちょっとリスクのある状態だったと思います。しかしこの設定が完了した状態であればCoreアクの毎日のタスクに登録してありますのでPCが起動しているその時間にタスク処理が発生すればですね勝手に処理が走ってもし起動してなければ起動した瞬間に後追いで処理が走るような状態になってます今日たどり着けたのはこの状態になってます今日一つだけ持ち帰れるコードを上げるならまず準備としてプロジェクトを作るというところからぜひやってみてください</p>
+<p><code>19:46</code> 今回ですね Earth Context and Brain にしていくっていうプラグインの説明を3回の動画にわたってしてきました第1弾が Earth Context の概念編ということでノートが勝手につながっていく仕組みというのはどういうことかっていう入り口の話と初期セットアップの話をしました第2弾がマイグレーション編ということで今までですね作ってきた何百何千と貯めてきた過去のノートを丸ごとAIに丸投げして処理してもらう、そういうことをお話ししました。今回が第3弾の運用編ということで、設定した後を毎日どう手放しで運用するかっていうところの話になります。概念セットアップとマイグレーションあと運用ということでこれで3部作完結になります</p>
+<p><code>20:30</code> 3つで1つの完成形になっているので概念だけマイグレーションだけでは片手落ちになるところを運用編で締めた形になりますまだ概要編とマイグレーション編を見ていない方は概要欄リンク置いておきますのでぜひご覧くださいということで最後になります概要欄に今日使った配布テンプレーへのリンクとAIに渡す依頼文を置いておきます順番にコピペしてAIに渡していけばあなたの環境で動くコアク用のプロンプトが手元で出来上がる形になります動画内では細かい部分読み上げていない部分ありますので</p>
+<p><code>21:05</code> 設定するときは概要欄を見ながら進めてみてくださいこれからコアクに登録できて最初の結果が出た方はぜひコメントで実装できましたということでご報告いただけると大変励みになりますチャンネル登録と高評価もよろしくお願いしますそれでは次のシリーズでまたお会いしましょうありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./1,064ノートのObsidianノートをClaude-Codeに丸投げして5時間でセカンドブレイン化してもらった方法【arscontexta】" class="internal alias" data-slug="1,064ノートのObsidianノートをClaude-Codeに丸投げして5時間でセカンドブレイン化してもらった方法【arscontexta】">1,064ノートのObsidianノートをClaude Codeに丸投げして5時間でセカンドブレイン化してもらった方法【arscontexta】</a> — 同シリーズ第2弾（マイグレーション編）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a> — AIツール全般のStructureNote</li>
+<li><a href="./obsidian-ai" class="internal" data-slug="obsidian-ai">obsidian-ai</a>（StructureNote/concepts） — Obsidian × AI活用の概念ページ</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts） — 自動化全般の概念ページ</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts） — Claude Codeの実装・活用知見</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-283" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./1,064ノートのObsidianノートをClaude-Codeに丸投げして5時間でセカンドブレイン化してもらった方法【arscontexta】" class="internal">1,064ノートのObsidianノートをClaude Codeに丸投げして5時間でセカンドブレイン化してもらった方法【arscontexta】</a></li><li><a href="./Obsidian-セカンドブレインの作り方｜ノートが勝手に繋がるClaudeプラグインの詳細解説と実装・運用方法【arscontexta（アースコンテキストタ）" class="internal">Obsidian セカンドブレインの作り方｜ノートが勝手に繋がるClaudeプラグインの詳細解説と実装・運用方法【arscontexta（アースコンテキストタ）</a></li><li><a href="./【おすすめメモツール】Claude-Cowork×Obsidian解説｜ChatGPTGeminiと別次元｜弁護士(法律事務所)にも｜Code(クロードコード)" class="internal">【おすすめメモツール】Claude Cowork×Obsidian解説｜ChatGPTGeminiと別次元｜弁護士(法律事務所)にも｜Code(クロードコード)</a></li><li><a href="./スマホ1台でObsidian-×-Claude-Codeを操る-─-ソファでも移動中でも止まらない-Remote-Control-活用術（非エンジニア向け）" class="internal">スマホ1台でObsidian × Claude Codeを操る ─ ソファでも移動中でも止まらない Remote Control 活用術（非エンジニア向け）</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

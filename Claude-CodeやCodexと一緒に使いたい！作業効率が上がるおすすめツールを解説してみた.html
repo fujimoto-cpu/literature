@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた"/><meta name="twitter:description" content="📺 動画情報 Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-01 ・ ⏱️ 33分6秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CodeやCodexと組み合わせて使うと作業効率が上がる無料ツール（VS Code拡張機能・Obsidian・音声認識アプリ・Raycast）を紹介する動画。 🗺️ 全体像 flowchart TD A[AIエージェントを起動] -->|ファイルを見やすく表示| B[VS Code + 拡..."/><meta property="og:description" content="📺 動画情報 Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-01 ・ ⏱️ 33分6秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CodeやCodexと組み合わせて使うと作業効率が上がる無料ツール（VS Code拡張機能・Obsidian・音声認識アプリ・Raycast）を紹介する動画。 🗺️ 全体像 flowchart TD A[AIエージェントを起動] -->|ファイルを見やすく表示| B[VS Code + 拡..."/><meta property="og:image:alt" content="📺 動画情報 Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-01 ・ ⏱️ 33分6秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CodeやCodexと組み合わせて使うと作業効率が上がる無料ツール（VS Code拡張機能・Obsidian・音声認識アプリ・Raycast）を紹介する動画。 🗺️ 全体像 flowchart TD A[AIエージェントを起動] -->|ファイルを見やすく表示| B[VS Code + 拡..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた 🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-01 ・ ⏱️ 33分6秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Claude CodeやCodexと組み合わせて使うと作業効率が上がる無料ツール（VS Code拡張機能・Obsidian・音声認識アプリ・Raycast）を紹介する動画。 🗺️ 全体像 flowchart TD A[AIエージェントを起動] -->|ファイルを見やすく表示| B[VS Code + 拡..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-271"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-271" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた</a></div></nav><h1 class="article-title">Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-05T15:00:00.000Z">2026年8月06日</time><span>67 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/chatgpt" class="internal tag-link">chatgpt</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Claude CodeやCodexと一緒に使いたい！作業効率が上がるおすすめツールを解説してみた</strong>
+🎙️ にゃんたのAIチャンネル ・ 📅 2026-08-01 ・ ⏱️ 33分6秒
+🔗 <a href="https://www.youtube.com/watch?v=NjXzO-b_ceg" class="external">https://www.youtube.com/watch?v=NjXzO-b_ceg<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>やCodexと組み合わせて使うと作業効率が上がる無料ツール（VS Code拡張機能・<a href="./obsidian" class="internal alias" data-slug="obsidian">Obsidian</a>・音声認識アプリ・Raycast）を紹介する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[AIエージェントを起動] -->|ファイルを見やすく表示| B[VS Code + 拡張機能]\n    B -->|文章を読みやすく整形| C[Obsidian Callouts]\n    C -->|指示を高速入力| D[音声認識アプリ]\n    D -->|細かい操作を効率化| E[Raycast]&quot;">flowchart TD
+    A[AIエージェントを起動] -->|ファイルを見やすく表示| B[VS Code + 拡張機能]
+    B -->|文章を読みやすく整形| C[Obsidian Callouts]
+    C -->|指示を高速入力| D[音声認識アプリ]
+    D -->|細かい操作を効率化| E[Raycast]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. VS Code拡張機能 — ファイルを見ながらAIを横で使う </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude CodeやCodexの拡張機能をVS Codeに入れると、ファイルの中身を見ながら横でAIに指示できる。おすすめはOffice Viewer（Excel/Word/PowerPoint/PDF/Markdownを綺麗に表示）・Material Icon Theme（拡張子ごとにアイコン表示）・Japanese Language Pack。ファイルを選択した状態でAIに「ここを直して」と言うと、選択部分だけを認識して修正してくれる。デスクトップアプリ（Claude Desktop/ChatGPTデスクトップ）よりファイルが見やすいので、ファイルを見ながらAIを使うならVS Code＋拡張機能としてのAI利用がおすすめという結論。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Obsidian Callouts — AIの出力を読みやすく変換する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Obsidianは高性能メモ帳アプリ。グラフビューは見栄えは良いが実用性はそこまでないという評価で、本当に便利なのは「Callouts」という記法。無機質な文章をAIにCalloutsで整形させると、注意書きなどが色分けされて非常に読みやすくなる。ObsidianのCEOがGitHubで公開している「Obsidian-Markdown」スキルをClaude Codeに入れれば、この変換を自動でやってくれる。HTMLで整形するより使用トークンが少ないのもポイント。Web Clipper拡張機能を使えば、Chromeで見ている記事をそのままObsidianに取り込める。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 音声認識アプリ — タイピングの5〜10倍速く指示できる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AquaVoice・Typeless・SuperWhisperなど音声認識アプリを使うと、長いプロンプトも喋るだけでAIに渡せる。有料ツールに抵抗があれば、Mac/Windows標準の音声入力機能や<a href="./ChatGPT" class="internal" data-slug="ChatGPT">ChatGPT</a>デスクトップアプリの文字起こし機能（他のアプリを使っている時でも裏で動く）で代替できる。本格運用するならHyperX SoloCastのような外部マイクを使うと精度が上がる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. Raycast — Snippets・ウィンドウ管理・Focus機能 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Raycastは「あらゆる操作にショートカットを与える」無料ツール（Mac中心、Windowsはベータ版）。①Snippets：よく使うプロンプト（例：翻訳指示）をキーワードで登録して呼び出せる。クリップボードの内容を変数として埋め込むことも可能。②Window Management：ウィンドウを左右半分・中央などに一瞬で移動でき、複数のClaude Code/ターミナルを並列で動かす時に便利。③Focus：AIの処理待ちの間にX/YouTubeを見て放置してしまう対策として、指定サイトを時間制限でブロックできる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① VS Code＋Office Viewer/Material Icon Themeを試す</strong>
+案件フォルダのExcel/PowerPoint/PDFをVS Code上でまとめて確認できるようにすると、ファイルを開き直す手間が減る。次に資料確認するタイミングで拡張機能だけ入れてみる。</p>
+<p><strong>② 音声入力でCORINへの指示を試す</strong>
+Mac標準の音声入力（設定→キーボード→音声入力）だけでも試せる。長いプロンプトを打つ場面（タスク分割の指示など）で一度使ってみると効果が分かりやすい。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいみなさんこんにちはにゃんたです 本日は私が毎日使っている便利なツールというテーマで話していこうと思います皆さんクロードコードとかコーデックスが使っていてファイルが見にくいなぁとか 同じプロンプト毎回打ってるなぁとかそういったことはないでしょうか私も毎日クロードコードとかコーデックス使ってるんですけども 使っていく中でこのツールを一緒に使うと作業効率が上がるなというツールがいくつかあったりします基本的に無料で使えるものが多いので本日はそういったツールの使い方とか何がいいのかというところについて誰でもわかるように紹介していきます最新の生成AIについて知りたいという人はぜひ見ていってもらえればと思います</p>
+<p><code>00:38</code> それでは早速いっていきましょう最初にまずクロードコードとかコーデックスとかそういったAIエージェントを使う上で最も定番のアプリを紹介します公式から出ているデスクトップアプリになっていてOpenAIの方は最近ChatGPTデスクトップアプリというのがリリースされていてAnthropicの方に関してはCloud Desktopというものがリリースされています両方とも自分のパソコンにアプリケーションをダウンロードして利用するというものになっていてMacの場合だとこんな感じでCloudのデスクトップアプリと</p>
+<p><code>01:13</code> ChatGPTのデスクトップアプリという形で利用することができますこちら入れてない人はまずはここから使ってみるのがいいかなというふうに思っていてこういうアプリ使うと単純にチャットするだけじゃなくてチャットGPTの場合は外部に自分が作ったサイトを公開したりとかあとはスケジューリング機能といって定期的に特定のタスクを実行したりとかそういったところがいくつかできたりしますクロードデスクトップの方に関しても同じような感じで自動の定期実行とかあとはディスパッチといってスマートフォンから接続して作業するとか</p>
+<p><code>01:46</code> そういったところもできたりしますこれですねChatGPTもクロードデスクトップの方も両方とも使えますのでここら辺が非常に便利なのでまだ使ってない人はまずはデスクトップアプリを入れてみていろいろいじってみるのがいいかと思いますこれらのアプリについては今後また動画で紹介しようかなと思うんですが個人的にですねこのアプリを結構使っていくといろいろとちょっと痒いところが出てくるかなというふうに思います特にファイルを見たりとかそういった場合に好きなアプリっていうのは個人的には使いにくかったりしますというところでファイルとかを見ながら</p>
+<p><code>02:21</code> 作業する場面って非常に多いと思うのでそういった場合に私がよく使っているのはVS Codeっていうツールになっていますこちらはエンジニアの人はみんな知ってるよっていうぐらいの有名なツールになっていてマイクロソフトから提供されているものになっています無料で誰でも利用できますので私もですね特に課金せずに利用しています中でGitHubコパイロットとかそういったものを使えたりするんですけども完全に私はファイルの中身を見たりとかVS Codeの中でクロードコードとか使えますのでその用途で利用していますこれなんか一見するとプログラムいろいろ書いてあって</p>
+<p><code>02:55</code> エンジニアじゃない人は敷居高いなというふうに思うかもしれないんですが全然そんなことはなくて単純に皆さんが仕事の中で使っているファイルとかそういったものを確認したりとかAIに何かファイルを作らせた時にその中身を見て修正したりとかそういったことが非常にやりやすいかなというふうに個人的には思います何がそんなにいいのかというところについて簡単に紹介していきますこちらですねVS Codeの方をこちらのサイトからダウンロードすると自分のパソコンにVisual Studio Codeというものがダウンロードできますのでこれ開くとですねこんな感じになっています</p>
+<p><code>03:28</code> この時点でちょっと厳しいなという方いらっしゃるかもしれませんが特に難しいことはなくて左側にフォルダーとかファイルが見えていると右側がそのファイルを開いた時の状態を表示するようなそういったスペースになっていますつまりですね普通にこんな感じで皆さんのパソコンにもフォルダがあってそこにファイルがあるっていう状態かと思うんですがそれが今左側のバーで整理されているというものになっていますこれそれぞれフォルダになっていてこちら開くとこのフォルダの中に入っているファイルが確認できますこちらをクリックするとこんな感じで中身を確認できると</p>
+<p><code>04:05</code> もちろん編集とかもここで太字にしたりとかそんな感じでも利用することができますただこのVS Codeを入れただけだったら今みたいな感じですぐには使えなくてこのVS Codeの中で利用できる拡張機能っていうのがあってですねそれを追加するとこんな感じで綺麗にファイルの中身を表示したりすることができます拡張機能ってなんだって人もいると思うんですが言葉の通りでこのVS Codeに機能を追加するために外部のアプリをインストールするというものになっていますこちらの左のサイドバーのエクステンションズってところから</p>
+<p><code>04:39</code> アプリを探してインストールすることができますこの拡張機能を私いくつか入れていてその中のおすすめとして皆さんが仕事の中で使うというところで言うとまずこのOffice Viewerっていうのが非常に良かったりしますこれはExcelとかWordとかPowerPointとかあとは先ほど見せたこのMarkdown形式のファイルとかそういったものを見やすく表示するようなそういった拡張機能になっていてMarkdownファイルを開くとこんな感じで非常に綺麗に文章を表示させることができますマークダウンは開発している人は使っているかもしれませんが</p>
+<p><code>05:12</code> そうじゃない人はですねPDFとかそういったものを使っているかと思いますこちらはPDFのファイルなんですがこんな感じでこちらも綺麗に表示させることができますというところでGoogleドキュメントとかExcelのファイルに関してもVS Code上で見て編集したりできるのでそれぞれのファイルを開かなくていいと結構このExcelとか開くときって重たかったりしてちょっと待つなみたいなところがあったりすると思うんですけどもこのVS Code上で全部見ながらファイルを確認できるので非常に便利ですなのでこのOffice Viewerっていうのは一つおすすめですあとはテンションが上がるっていうところで言うと</p>
+<p><code>05:49</code> マテリアルアイコンっていうのがあってこちらですねアイコンをきれいなデザインで表示させるというものになっていてこれインストールすると左上のファイル一覧見てみるとこんな感じでそれぞれの拡張子に応じてアイコンが出てくるので一目でフォルダーとかどういった拡張子のファイルなのかっていうのが確認できますこれも仕事で使う上でExcelとかPowerPointとかPDFとかいろいろごちゃごちゃになっている場合に一瞬で分かるので非常に便利かなと思いますその他拡張機能としてはJapanese Language Pack for Visual Studio CodeというのがあったりしますこれはVS Codeの表記を日本語にするっていうものになっていて</p>
+<p><code>06:30</code> どうしてもこれ英語でいろいろ表示されているのでそこに対してちょっと負荷が高いという風に感じられる方はこのJapanese Language Packっていうのを入れると英語が日本語になるのでとっつきやすいかなという風に思いますはいという感じでですね拡張機能いろいろとあるのでぜひ皆さんVS Codeをインストールしたら入れてみてほしいんですけども注意点としては拡張機能ですね本当にいろんな人が作ったやつが置いてあるのであんまり信頼度が低いものは入れない方がいいってところで何でもかんでも入れるんじゃなくて一つの基準としては</p>
+<p><code>07:02</code> この公式マークが付いているようなものとかあとはダウンロード数が出てくるのでこれが10万とか20万以上あったら人気でみんな使っているものなので比較的安全性は高いかなというふうに思いますということでですねこのVS Codeに拡張機能を入れるとかなり便利にファイルの中身を見たりできますのでぜひ使ってみてくださいAIとの活用という観点で話していくとVS Codeを使うとこのファイルの中身を見ながら横でAIを使うということができたりしますVS Codeの拡張機能としてCodexとかクロードコードっていうのがあってですね例えばこちらクロードコードというふうに検索すると一番最初に出てくるんですが</p>
+<p><code>07:41</code> こちらをインストールしますそうすると右側にクロードコードの拡張機能を利用するためのボタンが出てきます注意点としてはクロードコードっていくつか出てきますのでその際に必ずこのanthropic.comというものが公式になっているのでこちらをインストールするようにしてくださいこちらインストールするとこのクロードのウニマークが出てくるのでこちらクリックすると右側にクロードコードを起動することができますこれファイルを見ながら横でAIを使えるので例えばこれ読んでる中でちょっとおかしいなっていう点があったらこれをコピーして貼り付けると</p>
+<p><code>08:15</code> この部分を分かりやすくしてという風に指示をすることができますちょっとですねこのファイルを指定してあげるとより良いのでアットマークでこのファイル名を研修という風にするとこちら出てくるのでこれ選択すると今このファイルの中身と一緒にこの指示文が入力されて修正してくれるかと思います今編集されましたね中身を確認しながら修正したりできるので何か資料とか作っている場合はVS Codeで作業するのがおすすめですさらに細かいこと言うとこれ今Office Viewerっていう拡張機能で開いてるんですが</p>
+<p><code>08:50</code> 一旦ですね普通にマークダウンとして開くためにこちらのマークダウンエディターというのを押しますそうするとこんな感じで普通のマークダウン形式の表記で内容確認できるんですがその際にこれを選択するとその時点でこのクロードコードの方に選択した文章が入力として入っていますこれちょっと見にくいかもしれませんが2つの行が選択されてますところでこれ今10行目と11行目を選択しているのでそれがですね今AIの方に入力されているとなので先ほどファイル名指示したんですがこちらですね選ぶだけでこれ入っているのでこんな感じでこちらを短くしてっていう風に言うと選択したものが認識されてここを修正してくれますはいこんな感じですねというのでAIへのデータの受け渡しが非常に楽なので</p>
+<p><code>09:38</code> VS Code上でこのクロードコードの拡張機能を使っていくというのも非常に良いんじゃないかなという風に思います特に行を選択しなければこのファイルが入力として入っているので全体に対して何か指示をしたりとかそんな感じでも利用することができますクロードのデスクトップアプリでも一応同じような形でファイルを参照することができたりしますこちらで今開いているフォルダを設定してこんな感じでアットマークでデモという風に言ってはこちらのファイル指定できるのでこういう風に入力すればちゃんとですねファイルを参照して編集したりすることもできます</p>
+<p><code>10:13</code> 右上の方でこちらからファイルという風に言っては一応フォルダの構成とかこのファイルの中身を確認したりすることができるんですけども非常に個人的にはファイルの中身見にくいなというところがあったりしますここから広げればこんな感じで見れるんですけどもやっぱりVS Codeの方がファイルの方は見やすいかなというふうに思いますこんな感じで見れるのでやっぱデスクトップアプリと比べると仕事の中でファイルを見ながら何かAIで作業したいって場合は現状はVS Codeの方が優れてるなというふうに感じますデスクトップアプリに関してはAIのモデルを開発している会社が提供しているものなので</p>
+<p><code>10:51</code> 主役がAIのチャットとかそういったところになっているとなのでこのファイルの見やすさとか編集のしやすさとかそういったところはですね追加でついているような感じになっています大部分がこのセッションとかAIのモデルを使う上で便利な機能がついているような感じになっていますと一方でこのVS Codeに関してはプログラムファイルとかそういったものを編集するためのソフトになっていてそこに拡張機能としてAIが入っているようなそういった形になっているので何かのファイルとかを参照しながらAI使っていきたいという場合には</p>
+<p><code>11:22</code> AIは拡張機能として使うぐらいが個人的にはいいんじゃないかなと思ってますどんどんですね最近はAIが自律的に動いてくれるので人間はAIが作ったものを確認するようなそういった工程が増えていくのかなと思うので主体もAIじゃなくて成果物が見やすいかどうかって方が個人的には大事になってくるんじゃないかなと思いますこのデスクトップアプリに関しても今後進化していってもっとファイルが見やすいとかそんな感じになる可能性はあると思うんですが現状はまだVS Codeの方がいいかなというふうに思いますというところでですね</p>
+<p><code>11:56</code> ちょっと長くなってしまったんですがVS Codeの方まだ使ったことない人はぜひ使ってみてください続いて紹介するのがObsidianというソフトになっています皆さんObsidian聞いたことあるでしょうかこのチャンネル見てる人は知ってるよという人も多いかもしれませんが簡単に言うと高性能なメモ帳アプリみたいなそういったものになっていてこの書いたメモ同士をリンクでつなげるとかそんな感じにすると右側のグラフを作ってですねこのメモはこういう関係ですよとかそういったものを視覚的に分かりやすく確認したりすることができますこちら視覚的になんかすごいなってところで</p>
+<p><code>12:34</code> 結構SNSではバズってたりするんですけども個人的にはこのグラフは特に見た目はすごいんですけども実用性はそんなにないかなっていう風な印象があってそれよりもObsidian上で文章を表示させるための記法がいくつかあってそれを使うと文章を読みやすい形で表示させることができますこちらですねObsidianの公式ページになっていてCalloutsっていうところでいろんな書き方があってその書き方をするとこんな感じで背景の色を変えてわかりやすくしたりとか</p>
+<p><code>13:05</code> そんな感じで文章を表示できるんですねObsidianのこのCalloutsを使ってAIに文章をまとめさせると難しい文章でも分かりやすく変換させることができますこちらですね先ほどVS Codeで見ていた無機質な台本の原稿なんですがこのObsidianのCalloutを使って分かりやすく編集してもらうとこんな感じで所々にこういった注意書きとかそういったものが入ってたりして非常に見やすく文章を理解できるかなと思いますなので仕事の中で皆さんも難しい文章を読まないといけないとかそういった場合にですねこういうふうに変換してからそれを理解するようにすると助かるなって人もいるかと思うので</p>
+<p><code>13:46</code> そういった場合はこちらおすすめです使い方としてはObsidianのCEOの人がGitHubっていうプラットフォーム上で文章をObsidian形式で成形するようなそういったスキルを公開してくれていますこちらですねスキルとしていくつかあるんですがObsidian-Markdownというスキルがあってこちらを利用するとオブシディアン上で綺麗に表示させるようなそういった変換をしてくれますそもそもこのスキルどうやって入れたらいいのかわからないという場合はですねこちらの下の方に手順が書いてますのでこれをもうコピーしてクロードコードにお願いすれば</p>
+<p><code>14:22</code> 入れてくれるんじゃないかと思いますスキルの方を入れられたらクロードコードを立ち上げてこんな感じでObsidianのMarkdownというスキルを使って変換したい文章を参照するとそうするとこのスキルが使われて文章が変換されるのでその変換した文章をObsidianのアプリで開くとこういった綺麗な形で文章を確認できますこれ以外にも見やすくする方法としてはHTMLに変換して見やすく表示するみたいなこともできたりするんですけどもHTMLだと結構トークン数を利用するかなと思うので大量に文章を読むとか</p>
+<p><code>14:58</code> あとはクロードコードとかコーデックスの利用上限が結構気になるなって人はObsidianのコールアーツだったらおそらく結構単純なのでHTMLほどトークン消費は抑えられていいんじゃないかなという風に個人的には思いますObsidianの方にはVS Codeと同じような形で拡張機能っていうのがあって機能を後から追加することができますその拡張機能の便利なものの一つとしてObsidian Web Clipperっていうのがあってこちらを使うとChromeで開いている記事を画像とともに自分のObsidian上に</p>
+<p><code>15:32</code> 持ってくることができます例えばこういった記事を読んでいる時にObsidianのWeb Clipperを使いたいとその場合は拡張機能を入れると小さいんですが右上にWeb Clipperが出てくるのでこちらを押すとそうするとこんな感じで取得する文章が出てくるのでこれをObsidianに追加しますそうすると自分のObsidian上にこの文章を持ってこれるのでこれを先ほどのObsidianのこのスキルを使って読みやすく変換してあげるという風にすればちょっと気になった記事とかをどんどん保存してそれを変換して読んでいくという形にすると</p>
+<p><code>16:07</code> インプットが非常に効率化されるかなというふうに思うのでこちらも合わせて使ってみてくださいここら辺の活用に関しては以前の知識の構築っていう動画で紹介してますので詳しい使い方を知りたいという人はそちらの動画も見てみてくださいその他Obsidianにはグラフビューっていうのがあってドキュメント間でリンクを貼って関係性を確認するようなそういった機能があったりしますここら辺は視覚的にはすごいんですけどもそこまで個人的には見てないんですがObsidianの機能の一つの売りかなと思うので気になる人はこちらも見てみてください続いて紹介するAIを使う上で毎日使っているツールとしては音声認識アプリになっています</p>
+<p><code>16:47</code> まだタイピングでしかAIに指示をしたことないって人はいないでしょうかまだ触ったことないって人はですねぜひ使ってみてほしいんですがこれは皆さんが喋ったことを文字起こししてそれをAIに伝えるという時に使っているアプリになっていますタイピングでAIに指示するよりも本当に5倍とか10倍ぐらい早く指示を出せるのでAI使う際は音声認識アプリがないとちょっとやっていけないなとそれぐらい便利なツールになっています音声認識アプリはAquaVoice以外にもTypelessとかSuperWhisperとかいろんなツールがあると思いますそこら辺は特にどれ使ってもいいかなと思うんですが</p>
+<p><code>17:25</code> 私は昔からAquaVoiceっていうアプリを使っていて結構長く使ってるのでもう65万単語ぐらい音声認識でAIに指示を出しています例えばですねクロードコードを開いてこんな感じで何か入力する場合にAquaVoiceを起動しますHello Worldというプログラムを書いてそれを検証エージェントで検証して問題ないか確認してフィードバックをくださいこんな感じですねちょっと今無駄に検証エージェントを使ったんですけども普通に仕事している中で文章を変換したりとかプログラム書いたりとかそういった場合に</p>
+<p><code>18:00</code> サブエージェントを使ったりしながらタスクを行わせるんですけどもその際とかも結構指示の文章が長くなってしまうのでタイピングしているとだいぶ時間と労力がかかってしまいますこんな感じで音声認識だったらほぼミスなく文字起こししてAIに指示を送れるという感じなので非常に使い勝手が良かったりしますただこのAquaVoiceですね有料ってところが一つあってここがちょっとハードルがあるっていうのとおそらく会社で使っている場合はAquaVoiceっていうサービスに情報を入力するのはちょっと厳しいっていう人も多いかと思いますそういった場合はまずWindowsとかMacにもともと搭載されている音声認識の機能があるのでそちらを使ってみるといいと思います</p>
+<p><code>18:44</code> Windows 10以降の場合はこの音声認識が使えるっぽいのでWindows音声認識利用方法とか調べるとこちらのページ行くと思うのでこれでセットアップしてみてくださいそうすると確かWindowsキーとHボタンを一緒にに押すと音声認識ができるかと思います mac の場合も標準で搭載されている音声入力機能があるのでこちらをまずは使って みるというのが一番手っ取り早くて無料で使えるのでいいんじゃないかと思います アクアボイスとかよりも若干精度が低いのでそこは使い勝手が良くないところは あったりするかもしれませんが十分ですね</p>
+<p><code>19:20</code> この標準の音声入力機能でもタイピング するよりも早いのでいいんじゃないかなとという風に思いますChatGPTのデスクトップアプリ使っている場合はこちらに音声入力の機能が付いてますのでこちらを使ってみてもいいかと思います設定のところから音声のところに行くとここにですね音声入力をするホットキーの設定というのがあるのでこちらから音声入力の機能を設定できます何でもいいんですけどもこちら設定しておくとこれですね先ほどのホットキーを押している間は音声入力で文字起こしがされます</p>
+<p><code>19:53</code> しかもこれいいところはこのアプリの中だけじゃなくて普通にターミナルとか別のソフトを使っている場合でも後ろ側でChatGPTのデスクトップアプリが動いていれば文字起こしができますこんにちはこれ今文字起こしができていますかはいこんな感じでですね文字起こしができてそこそこ精度もいいのでMacとかWindowsの標準の文字起こしで精度が足りないって場合でChatGPTのデスクトップアプリ使っている場合はこちらの文字起こし機能を使ってみるのも</p>
+<p><code>20:25</code> いいんじゃないかと思います本格的に使う場合はマイクを使った方が精度いいので私が使っているマイクですねHyperX SoloCastというものなんですけどもこちらおすすめです今HyperX SoloCast2というのが出てるみたいなのでこちらの方が良さそうな気がしますが概要欄にリンクの方を貼っておくので興味があったらですねこれとマイクをつけるアームがあってそれを使うとめちゃくちゃ文字起こしの精度が上がるので興味がある人は見てみてください続いて紹介するのがRaycastと呼ばれるツールになっています皆さんRaycast聞いたことあるでしょうか</p>
+<p><code>21:01</code> おそらく今まで紹介したツールの中で一番知られてないかなと思うんですがこちらですねここにも書いてあるように全てのことに対してショートカットを与えようみたいなそんな感じで何かの入力をしたりとか画面操作したりとかファイルを探したりとかそういった細々したタスクを非常に簡単に行えるようなそういったツールになっていますなのでクロードコードとかコーデックス用ってよりは普通に生産性を上げるために使えるツールかなというふうに思うんですがこちらですね現在無料でも十分に使えるかと思いますもともとはMacしかなかったんですが</p>
+<p><code>21:36</code> 最近Windowsのベータ版が出てるので興味ある人はですねぜひ使ってみてくださいといっても何が便利なのかよくわからないと思いますので私が普段使ってる使い方について簡単に紹介します最初にまずこのRaycastを起動するためのホットキーみたいなのを設定しておきますどういうことかというとこんな感じで今Raycastを起動できるんですがこの起動するのに毎回ですねMacのローンチパッドからRaycastっていう風に調べてるとちょっと遅いのでこれを一瞬で開くというところを設定しておきます最初は普通にローンチパッドの方で</p>
+<p><code>22:12</code> Raycastっていう風に調べて起動してもいいかなと思うんですがこの状態でgeneralという風に検索するとこちらですねraycastのセッティングっていうのが出てきますこちら起動するとこんな感じでちょっと見にくいんですけどもraycastを起動する時のホットキーを設定できますこちらで皆さんの好きなコマンドを入力しておけばこのコマンドを実行するとRaycastの画面が開きますこんな感じですねまずはここをやってほしいというのでこれでRaycastを自由に起動することができるようになりますその上でRaycastを起動してどういった機能があるのかというところで</p>
+<p><code>22:49</code> いろいろ紹介していくんですがまず一つ目はSnipechという機能になっていますわかりやすい感じで言うと特定の文章を辞書登録しておいてそれを簡単に呼び出すというものになっていて例えば皆さん言語モデル使っている時に毎回入力しているようなそういったプロンプトってないでしょうか私はよく英語の論文とか記事を日本語訳して読むみたいなところやっているのでそういった文章を貼った後に日本語に翻訳してくださいという風な文章を結構打ったりしますそういった場合にはこのスニペッツ使うと特定のキーワードでプロンプトを呼び出せます</p>
+<p><code>23:25</code> こちら使うにはまずはレイキャストの方を起動してCreateという風にするとCreate Snippetsというのが出てくるのでこちらを起動しますそうするとこんな感じの画面になってここで名前とスニペッツとキーワードというところを入力していきます例えばTranslateという風にして翻訳しますよとスニペットとしては簡単な例で言うと添付した英語を分かりやすい日本語にしてくださいというところでちょっと画面が大きくできなくて申し訳ないんですがこんな感じで設定します</p>
+<p><code>23:58</code> こちらにキーワードですねこれはこのスニペットを呼び出すためのキーワードを設定しておきます例えばセミコロンでやることが多いんですがTRとかいう風に設定するとトランスレイトの2文字を取ってTRにしてこれでセーブスニペットを押しますそうすると例えばですねこちらの文章を日本語に翻訳したいなという場合はこちら貼り付けてセミコロンのTRという風に打つとこんな感じで今一瞬で変換されたのが分かると思いますがすぐにですねプロンプトを呼び出せますはいこんな感じですね</p>
+<p><code>24:31</code> なので複雑なプロンプトを使っている場合とかそういった場合にはこちらのスニペットで登録しておくとすぐに呼び出せて便利ですよというのが基本的な機能になっていますただこれだったらMacとかの辞書登録でいいじゃんみたいなところもあったりするんですけどもそれだけじゃなくてこれは変数とかを設定できたりとかいろいろありますちょっと私もまだ完全には使いこなせてないなってところはあったりするんですが例えば先ほどスニペットを作るときにこんな感じで設定してましたもうちょっとこれを変数を使ってコードにしようというので</p>
+<p><code>25:08</code> こちらでクリップボードというふうに設定するとクリップボードで選択したものがこちらに埋め込まれてスニペットが作成されますなので例えばこんな感じでこちらを日本語に翻訳してというところでSelected Translateという名前でセミコロンでSTという感じで設定しておきますそうするとクリップボードで選択したものですねそれがここに入ってスニペットが出てくるという感じになっていますちょっとよく分からないと思いますので一旦これセーブしてもう一回使いますと</p>
+<p><code>25:41</code> 例えばですね読んでてこれ分からないなという場合はこれを選択しますこちら今選択してコピーしますそうするとクリップボードにこの文章が入っているのでこの状態でスラッシュのSTという風に打つとこんな感じで先ほど選択したテキストがこんな感じで入っているというところで単純な辞書登録よりも変数機能を使うと自由自在に該当部分を抽出してコピーしてここでSTという風に打つとこんな感じで出てきます</p>
+<p><code>26:15</code> どうでしょうかめっちゃ地味なんだけどもちょっと嬉しいみたいなそんな機能になっていますクロードコードとかで何か開発してたりとかそういった場合にも選択してそれの説明をさせたりとかそういった時に非常に使えるかなと思うのでまずはこのスニペッツですね使ってみるといいと思います続いて紹介するのがウィンドウマネジメントという機能になっていますこちらですね先ほどのスニペッツよりもさらに地味な機能というところで分かる人には分かるという機能になっているのでぜひですね同じ感覚の人がいれば嬉しく思うんですが</p>
+<p><code>26:48</code> これ何ができるかっていうとウィンドウを管理するってところで例えばレイキャスト開いてRight Halfっていう風に打つとこんな感じでウィンドウマネジメントが出てきますこちらをクリックすると今分かったように右半分に今アクティブのウィンドウが移動しますLeft Halfっていう風に打つとこんな感じで左側に移動したりあとはCenter 3 Forceとかこんな感じで場所をですね簡単に移動できますこれの何がいいのかってところなんですがクロードコードとかコーデックスとかを使っていくと結構待ち時間が発生するので基本的には複数のクロードコードを立ち上げて</p>
+<p><code>27:26</code> それを並列で実行するとかそんな感じで使っている人が多いんじゃないかなというふうに思いますまだそういうふうに使ってない人はですねこれから使っていく上では並列で開発するってところが非常に多くなってくると思うのでぜひこのウィンドウマネジメントは抑えておいてほしいんですけども例えばこんな感じの黒いターミナルでクロードコードを立ち上げているという場合にこれをですね一瞬でこんな感じでターミナルの位置を自由に移動できるんですねこういうふうにすれば右側でチャットを開いて左側でクロードコードを起動してもいいですし</p>
+<p><code>27:59</code> もしくはチャットGPTのアプリを使いたいなというふうに思ったらこんな感じで右側にチャットGPTのアプリ左側にターミナルという感じでいろいろとですね配置を自由に変更できますこれあると何か指示を出した後にこれを移動させて自分の見えないところに飛ばしておいてまた別の作業をするとかそんな感じでですねこのウィンドウを非常に自由に操作できるというところが非常に便利だったりしますというところでそんな並列で使わないよって人もいるかもしれないのでちょっとほどほどにしたいんですが</p>
+<p><code>28:33</code> このウィンドウマネジメントですね単体だとRaycast起動してライトハーフとか打たないといけないんですがこれですねRaycastのセッティングのところでエクステンションズっていうのがあるのでこちらからショートカットキーを割り当てるというところができたりしますなので先ほど私が画面を移動させてたんですがそれはですねそれぞれの設定のところでウィンドウマネジメントの設定に対してホットキーを割り当てているので移動できているという感じになっていますこれもですね人によって便利なホットキーって変わっていると思いますので</p>
+<p><code>29:06</code> ぜひこちら使ってみたいという場合はRaycastでホットキーを割り当てるといいと思います続いて紹介するのがフォーカスと呼ばれる機能になっていますこちらですね ついついSNSを見ちゃうなという人には ぜひ使ってほしい機能になっています何ができるかっていうと 名前の通り集中するというもので特定のサイトを特定の時間開けないようにするっていう そういった機能になっていますクロードコードとかコーデックス使ってると結構あるあるなんですが待ってる時間が長いのでその間にXとかYouTubeとか見ちゃって結局エージェントを放置してしまうみたいな</p>
+<p><code>29:43</code> そんな経験皆さんはないでしょうか私はですねついついXの記事とか読んじゃってクロードコードの作業終わってるのに放置してしまうみたいなそんな状況があったのでこれはいかんってところでこのフォーカス機能を使ってXを見るのを制限して仕事に集中するというところをやってたりしますXが仕事みたいな人もいるかもしれませんがこれ使うにはですねフォーカスという風にするとスタートフォーカスセッションというのがあるのでこちらを押すとこんな感じで8時間はこのXをブロックするという風に今設定していますこの状態でXを開こうとするとレイキャストにブロックされます</p>
+<p><code>30:20</code> ここにスヌーズフォースリーミニッツっていう悪魔の言葉があるんですがこれを押すと3分間は見れてしまうというものになっていてこれは良くないなと思ったりするんですがこんな感じでSNSとか特定のサイトをブロックできるので無意識のうちに何か開いてしまうという場合はですねこのフォーカス機能を使って制限してみるというのがいいんじゃないかなと思います私はYouTuberなのでできればYouTubeはブロックしてほしくないというところがあったりしますが時間を決めて作業に集中するとかそんな感じでやるのが効率的で良さそうですよね</p>
+<p><code>30:56</code> 他にもですねレイキャストいろいろ機能あるんですがちょっと全部紹介してると長くなりすぎてしまうのでまた別の動画とかでも需要があれば紹介していこうと思います一応これですね有料版もあってAIの機能とかそういったものが付いてるものもあるんですが私は特にAIの機能は使わないので無料版でずっと使っています非常に便利なので興味がある人はぜひ使ってみてくださいというところで私が毎日使っているツールについていくつか紹介してきたんですが少しは参考になったでしょうか</p>
+<p><code>31:28</code> クロードコードとかコーデックスだけでも十分強力なんですがちょっとしたプロンプト入力するとか成果物を見やすくするとかそういった時に今回紹介しているツールを使うと使い勝手がさらに良くなりますのでまだ使ったことないというものがあったらですねぜひ一度試してみてください皆さんも普段使っているツールでこれいいよみたいなところがあればコメントの方で教えてください今回実はもうちょっとですねTMAXとかそこら辺も含めて紹介しようと思ったんですがちょっと喋りすぎてしまったので</p>
+<p><code>32:00</code> 反響があれば今後の動画で紹介していこうと思いますそれでは本日の動画を終了したいと思います最後にお知らせです今後企業様向けにAI活用相談窓口を設置する予定ですAIで業務効率化したいけれども何からやっていいかわからないとか自分たちの仕事内容を聞いて一緒にAIが使えるか考えてほしいとかあとは社内でAIが分かる人を育てていきたいとかそういう企業様向けに私が伴奏支援していく形を考えています私は生成AIが流行る前からAIとかデータ分析で業務効率化してきているので</p>
+<p><code>32:34</code> 幅広く皆さんのお力になれる部分があるかと思いますぜひ概要欄のリンクからフォームの方を入力してお気軽にご連絡ください皆さんと一緒にAIで業務効率化できるのを楽しみにしています以上で本日の動画を終了したいと思いますこの動画が良かったなって思った人は高評価コメントチャンネル登録と最近ではスマートフォンからハイプボタンというのがあるのでこちらも押してもらえるとありがたいですそれではまた次回の動画でお会いしましょうバイバイ</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./obsidian-ai" class="internal" data-slug="obsidian-ai">obsidian-ai</a>（StructureNote） — Obsidian×AIスキル活用の関連</p>
+</li>
+<li>
+<p><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote） — AIツール連携ワークフローの関連</p>
+</li>
+<li>
+<p><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote） — Raycast等の生産性ツールの関連</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-126" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

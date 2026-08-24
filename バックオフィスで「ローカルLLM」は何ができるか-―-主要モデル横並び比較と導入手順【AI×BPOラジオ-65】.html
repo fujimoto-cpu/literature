@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】"/><meta name="twitter:description" content="📺 動画情報 バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】 🎙️ 管理のプロ | AI×DXで、バックオフィスの生産性を最大化 ・ 📅 2026-06-29 ・ ⏱️ 28分56秒 🔗 www.youtube.com/watch 📝 要約 🎯 企業の機密情報を外に出さず、ネットが止まっても課金なく使える「自社の中だけで動くAI」＝ローカルLLMの選び方と導入手順を解説。要約・文書チェック・社内ナレッジ検索・個人情報マスキングの4用途はすでに実務レベルで使え、モデルは目的別（汎用ならQwen3、日本語×政府実績な..."/><meta property="og:description" content="📺 動画情報 バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】 🎙️ 管理のプロ | AI×DXで、バックオフィスの生産性を最大化 ・ 📅 2026-06-29 ・ ⏱️ 28分56秒 🔗 www.youtube.com/watch 📝 要約 🎯 企業の機密情報を外に出さず、ネットが止まっても課金なく使える「自社の中だけで動くAI」＝ローカルLLMの選び方と導入手順を解説。要約・文書チェック・社内ナレッジ検索・個人情報マスキングの4用途はすでに実務レベルで使え、モデルは目的別（汎用ならQwen3、日本語×政府実績な..."/><meta property="og:image:alt" content="📺 動画情報 バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】 🎙️ 管理のプロ | AI×DXで、バックオフィスの生産性を最大化 ・ 📅 2026-06-29 ・ ⏱️ 28分56秒 🔗 www.youtube.com/watch 📝 要約 🎯 企業の機密情報を外に出さず、ネットが止まっても課金なく使える「自社の中だけで動くAI」＝ローカルLLMの選び方と導入手順を解説。要約・文書チェック・社内ナレッジ検索・個人情報マスキングの4用途はすでに実務レベルで使え、モデルは目的別（汎用ならQwen3、日本語×政府実績な..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/バックオフィスで「ローカルLLM」は何ができるか-―-主要モデル横並び比較と導入手順【AI×BPOラジオ-65】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/バックオフィスで「ローカルLLM」は何ができるか-―-主要モデル横並び比較と導入手順【AI×BPOラジオ-65】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】 🎙️ 管理のプロ | AI×DXで、バックオフィスの生産性を最大化 ・ 📅 2026-06-29 ・ ⏱️ 28分56秒 🔗 www.youtube.com/watch 📝 要約 🎯 企業の機密情報を外に出さず、ネットが止まっても課金なく使える「自社の中だけで動くAI」＝ローカルLLMの選び方と導入手順を解説。要約・文書チェック・社内ナレッジ検索・個人情報マスキングの4用途はすでに実務レベルで使え、モデルは目的別（汎用ならQwen3、日本語×政府実績な..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="バックオフィスで「ローカルLLM」は何ができるか-―-主要モデル横並び比較と導入手順【AI×BPOラジオ-65】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2206"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2206" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】</a></div></nav><h1 class="article-title">バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-04T15:00:00.000Z">2026年7月05日</time><span>54 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li><li><a href="./tags/llm" class="internal tag-link">llm</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>バックオフィスで「ローカルLLM」は何ができるか ― 主要モデル横並び比較と導入手順【AI×BPOラジオ #65】</strong>
+🎙️ 管理のプロ | AI×DXで、バックオフィスの生産性を最大化 ・ 📅 2026-06-29 ・ ⏱️ 28分56秒
+🔗 <a href="https://www.youtube.com/watch?v=TPbS6JEkBF8" class="external">https://www.youtube.com/watch?v=TPbS6JEkBF8<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>企業の機密情報を外に出さず、ネットが止まっても課金なく使える「自社の中だけで動くAI」＝ローカルLLMの選び方と導入手順を解説。要約・文書チェック・社内ナレッジ検索・個人情報マスキングの4用途はすでに実務レベルで使え、モデルは目的別（汎用ならQwen3、日本語×政府実績ならつづみ2、業務文書ならStockmark、軽量端末ならサラシナ）に選ぶのが鉄則。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[業務棚卸し&lt;br>どこに適用するか] --> B[ローカル構成を選定&lt;br>Ollama/LM Studio/vLLM]\n    B --> C[社内文書をRAGで読ませる基盤構築]\n    C --> D[権限設計&lt;br>誰が何を見られるか]\n    D --> E[小さく試す→有効な部分から拡大]&quot;">flowchart TD
+    A[業務棚卸し&lt;br>どこに適用するか] --> B[ローカル構成を選定&lt;br>Ollama/LM Studio/vLLM]
+    B --> C[社内文書をRAGで読ませる基盤構築]
+    C --> D[権限設計&lt;br>誰が何を見られるか]
+    D --> E[小さく試す→有効な部分から拡大]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. ローカルLLMの正体 — クラウドとの違い </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>クラウドAI（ChatGPT・Gemini）は質問のたびに社外のデータセンターに送信して答えを返す「電話相談」型。ローカルLLMはAI本体を自社PC・サーバーにダウンロードし、質問も回答も一切社外に出さない「住み込み雇用」型。効果は3つ：①機密・個人情報を外に出さない、②ネット遮断や規制で止まっても動き続ける、③使い放題でも追加料金はかからず電気代のみ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 実務で使える4つの仕事・苦手な2つ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>今すぐ使えるのは①要約・議事録、②文書ドラフト・チェック（メール・規定突き合わせ）、③RAGによる社内ナレッジ検索（根拠付きで回答）、④個人情報マスキングの前処理。苦手なのは①最上位クラウドAIほどの賢さ・長文一貫性、②モデルによる日本語精度差。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 主要モデル横並び比較 — 目的別に選ぶ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Google Gemma 3（Apache 2.0商用無料・オープンモデル世界3位級・140言語対応で日本語も強い）／Microsoft Phi-4（MIT・3.8B〜14Bと軽量だが英語中心で日本語弱め）／NTT つづみ2（日本語特化・1GPUで動作・政府AI採用実績あり）とStockmark（100BモデルをMITで自社保有・GPT-4o相当の回答品質）／SoftBank サラシナ（軽量・端末向け）／Alibaba Qwen 3（Apache 2.0・サイズ豊富・日本語実用十分で迷ったら第一候補）。選定はライセンス確認が必須（「国産」を謳っても海外モデル土台のケースや、大きすぎて自社PC1台で動かないケースがある）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 動かし方とハードウェア目安 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>実行環境は4段階：検証はOllama（コマンド1行）、現場配布はLM Studio（GUI・2025年から商用無料）、その土台はGPU不要のllama.cpp、本番の同時アクセス対応はvLLM（Ollamaの十数倍の処理能力）。前面にOpen WebUIを置けば社内版ChatGPTのようなログイン・権限管理付きUIになる。量子化で賢さを9割以上保ったままメモリ約1/4に圧縮でき、目安は7Bで8GB GPU、30Bで16〜20GB、70Bで約40GB（Macは CPU/GPU共有メモリで大型モデルを動かしやすい）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 導入5ステップと4つの落とし穴 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>導入は①どこに適用するか業務棚卸し→②学習されないローカル構成選定→③社内文書をRAGで読ませる基盤構築→④権限設計→⑤小さく試して拡大、の5段階。事例：病院が退院時サマリー自動生成で年間2000万円相当のコスト削減、地銀がオフライン議事録ツールで作成時間4割削減。落とし穴は①圧縮しすぎると精度低下、②ローカルでもハルシネーションは消えない（RAGで根拠付けが必須）、③GPUサーバー費用・モデル更新などの運用コストと人材確保、④最重要＝社内に置いただけでは安全ではない（権限設計をサボると給料・人事情報までAIが答えてしまう。ガバナンス整備込みで初めて安全）。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「これAIに頼れるかも」の判断材料として保存</strong>
+現状ローカルLLMで実務レベルなのは「要約・議事録」「文書チェック」「社内ナレッジ検索」「マスキング」の4つだけ。KONNEKTのAI推進提案でも「ローカルLLM＝機密案件向けの選択肢」として、この4用途の切り口をそのまま企画の説明フレームに転用できる。</p>
+<p><strong>② 権限設計の視点をAI推進資料に一言添える</strong>
+「社内に置けば安全」という誤解への反論（権限設計をサボると給料・人事情報が漏れる）は、社内向けAI活用提案のリスク説明パートにそのまま使える一言。次にAI推進の資料を作る時に反映する。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 例えば外部の転載に電話するのがクラウドであって自社に住み込みで雇った担当者というのがローカルというような住み分けになります住み込みのある実際社外費の資料だったりとかもそうですねそして3つ目としてはどれだけ使っても追加料金がかからないということなので呼べば呼ぶほど課金されるようなクラウドとは違いましてかかってくるのは電気代だけということになりますそこの先手基準としてはシンプルと汎用系で迷ったらクエンの3ですねここはやっぱり機密が重くて国産だったり</p>
+<p><code>00:38</code> 今の定番のやり方ですと必要メモリが約4分の1になって賢さで言うと9割以上ピープできると思いますので目安で言うと7ビルつまり70億パラメータ権限設計をサボると本来見えちゃいけないような給料人事情報までAIが答えられてしまったりするので社内においても誰が皆さんこんにちは AIBPOラジオ第65回です</p>
+<p><code>01:32</code> AIDX担当の田中です管理のプロ代表の松村です今日はですね バックオフィスでローカルLLMは何ができるかというところを取り上げていきますざっくり言うとですね 自分のパソコンだったり社内のサーバーの中で動くようなAIのことを指してますのでこういったものがどのような形で使えていくかというところの技術を解説していければと思います我々も何度か取り上げさせていただいたテーマで本日は少し技術寄りの解説とさせていただければと思います</p>
+<p><code>02:07</code> 一言で言えば機密を外に出さずにネットや規制で止まっても動く自社に住み込みのAIというのをどう選んでどう動かしてそしてどう有効的に動かしていくかということを解説できればなと思っておりますこのテーマね展示会とかで結構僕らもね聞かれたテーマだったりやっぱりニーズがあるところだったのでちょっとね改めて復習がてらで解説していければいいかなと思いますそうですね本日の章は6つになります第1章としてそもそもローカルLMとは何かそして何ができて何が苦手なのか</p>
+<p><code>02:42</code> 3章として主要モデルの横並び比較そしてどう動かしていくのか導入の手順と活用事例そして最後に落とし穴やつも付きポイントという点で解説していきたいと思います見られている方はですね経営者の方はもちろんバックオフィスに実務で担当されている方を中心に想定しておりますのでぜひ最後までご覧いただければと思いますまたこの番組ですねAIが切るBPOラジオはAIとBPOバックオフィスの交差点を掘り去っている番組です毎日更新を基本的にしておりますので</p>
+<p><code>03:16</code> ぜひチャンネル登録のほどと高評価のところあとはですね気になったことがあればあの コメントのところを書いていただければと思いますのでぜひよろしくお願いします はいまあかなりねマニアックな領域なのであんまり他のチャンネルとかでまとまって ないテーマだと思います我々もねちょっと勉強用にまとめてみたっていうのもあり ますのでぜひ保存して何度も見返していただければなと入っておりますそうですねぜひお願いいたしますそして7月から始まる研修事業についても簡単に告知していきましょうかはいそうですね今ですね7月から想定している</p>
+<p><code>03:50</code> バックオフィスAI研修というものをですね法人向けにスタートしていきますこちらの研修はですねいわゆる経理だったりとかバックオフィスの基本的な知識のところからあとは実際のAI活用までですねレベル別で企業さんに向けた導入の支援とかをですねしていくようなプログラムになっておりますこちら受けていただくとですね現場の方が経理だったりとかそういった知識を改めてつけていくというところもありますし</p>
+<p><code>04:24</code> 一方ですねAIで何ができるかというところのですねキャッチアップから実際に手を動かして何かやるというところまで教えていけるようなプログラムになっています現場の方でですねやっぱりAIをもっと使っていきたいというところもあるかなと思いますし逆にですね現場の経理の方とかがより管理会計とかそういうところで学んでいきたいというご要望も結構ご相談としては多かったのでこのあたりはですね</p>
+<p><code>04:57</code> 結構質がいいものを弊社の方でも作れてきたのでこのあたりは実際スタートにあたってまた詳細を告知していきますがホームページの資料とかもあったりしますのでぜひダウンロードしていただければと思います概要欄にも記載しておきますのでぜひ資料ダウンロードしてくださいそしてこのAIBPラジオをご覧いただいたという方は最初モニターという形で割引とさせていただきますのでぜひ資料をご覧の上でお問い合わせいただければなと思いますはいお待ちしておりますでは第1章いきましょう</p>
+<p><code>05:32</code> はいはいではそもそもローカルLLMとは何かそしてクラウドAIとは何が違うのかという簡単な整理からさせていただければと思いますはいではこの図をご覧いただきたいんですが大前提からですね普段皆さんがお使いになられているチャットGPTやそしてジェミニというのはですねいわゆるクラウドに置かれているAIですよねはいはいはいそうですねクラウドというのはインターネット上に置かれているということですこれ質問を送るとその会社の巨大なデータセンターがありますのでそこにあるAIが答えを作ってくれて返してくれるとこれは分かりますよね</p>
+<p><code>06:06</code> 非常に便利ではあるんですが入力というのは一旦外に出ていくという考え方ですそうですよねすごい賢い相談相手に毎回電話しているようなイメージですよねそうですね電話いいですねまさにそれになります対してですねローカルLLMというのはAIの本体そのものを自分のパソコンや社内サーバーにダウンロードしてその中だけで動かすということなんですですので質問も答えも一切社外には出ていかないということです例えばであれば外部の転載に電話するのがクラウドであって自社に住み込みで雇った担当者というのがローカルというような住み分けになりますね</p>
+<p><code>06:43</code> なるほど住み込みなら実際社外費の資料だったりとかもその場で見せれたりするっていう外部に漏れないっていうのが一番安心な部分ですよねそうですねそこがやはり最大の価値になるかなと思いますちなみにLLMはですねLarge Language Modelの略で言うまでもないと思いますが大規模言語モデルの略となります要は文章を読んで書くAIの頭脳のことですよねこれを手元に置くと3つの効果があるかなと思います1つ目は機密や個人情報を外に出さないはい今言ったとおいそして二つ目はインターネットが止まっても規制で急にAIが使えなくなっても動き続けることができるこれ前回も</p>
+<p><code>07:24</code> 話しましたよね知性学で止まるっていう保険の話ですよねそうですねまさにそこになりますそして三つ目としてはどれだけ使っても追加料金がかからないということなので呼べば呼ぶほど課金されるようなクラウドとは違いましてかかってくるのは電気代だけということになりますよねうんうんうんなるほど止まらないし何か情報も漏れないしどんだけ使い倒してもそんな料金って変わらないっていうところですごいバックオフィスの相性とはやっぱりいいなって思いますよねいやもう非常にいいですよね</p>
+<p><code>07:56</code> ただ万能で何でもできるというわけではないのでその点次にですねお話ししていければなと思いますお願いしますロカルLMで今使えるような仕事っていうのをちょっと知りたいですそうですねでは何ができて何がまだ苦手なのかという点でこちらの図をご覧くださいとローカルLLMがですね今実務でちゃんと使える仕事というのは大きく分けて4つあるかなと思います4つなんですね1つ目がこちらの要約と議事録会議の文字を起こしまして</p>
+<p><code>08:30</code> それを要約していくような仕事ですそして2つ目として文書のドラフトとチェックメールや報告書の下書き規定との付き合わせだったりしますね3つ目としてが最も有効かなという点で社内ナレッジ検索これはラグという仕組みですよねこれが使えるんじゃないかと出ましたねラグ改めてラグって何ですかそうですねラグはですね先に社内の文章を検索してその中身を読み込ませてから答えさせるようなやり方になりますが自然言語で断片的に検索しても</p>
+<p><code>09:04</code> その関係性のある単語っていうのをまた断片的に探してくることができて曖昧な質問に対しても関連するような質問というのを的確に交付として表示してくれるようなそんな技術になっています例えばAIに社内マニュアルだったり過去の議事録というのを渡してですねこの中から探して根拠付きで答えてという風にやると出てくるとなるほどということなので丸暗記ではなくてですねその場で調べて答えを出してくれたりするので社外費の情報でも安全にしかも出典付きで扱えたりもしますね</p>
+<p><code>09:37</code> なるほど賢い新人に社内資料を全部読ませて質問できるようなイメージですよねまさにその通りですねそして4つ目としては個人情報のマスキング前処理マスキング前処理これはオープンエアのところでも話しましたが氏名や住所を自動で見つけてクロニーしてくるようなこれも塗る前の生データこそ外に出ないのでローカル向きにはなるんですよねなるほどいいですねこの4つの部分が使えると逆にまだ苦手なことってあったりするんですかそうですね苦手なこと2つあるかなと思います</p>
+<p><code>10:12</code> 1つ目は最上位のクラウドAIほどやはり賢さがまだ出にくいかなという点ですね手元でごく小さいモデルになりますので難しい推論だったり長い文章の一貫性を担保することというのは難しくてですねやはりクラウドだったりとかGPTの最上位モデルというのは投稿を呼ばないところはあるかなと思いますなるほどなるほど。そしてもう一つが日本語の精度差ですね。世界的なモデルであってもですね、日本語が苦手なものってまだありますので、ここは選び方で大きく変わってくるかなと。ということで、じゃあどれを選ぶのかということで、</p>
+<p><code>10:47</code> 本村さんこれお願いしていいですか? はい。了解です。ちょっとですね、こちら僕ら調べでもまとめさせていただいたものがこちらの主要ローカルエレームの横並び比較図ですのでぜひこのあたりですね保存しながら見ていただければと思いますはいいいですねこのいいですねわかりやすいじゃあですねまず代表のところをちょっと5つ紹介できればと思うんですけどまず google のジェンマー4ですねはいこちらもちょっとあの以前も取り入れさせていただいたかなと思うんですけどこちらはですね、2026年の4月に出た最新モデルでして、サイズはですね、小さい順にいくつも揃っていて、</p>
+<p><code>11:25</code> ライセンスがこちら、Apacheですね、Apache 2.0、つまり商用利用が自由という。世界のですね、オープンモデルの実力ランキングでも上位サイズが3位に入るほど賢いというところと、あと140以上のですね、言語を学んでいるので、日本語も配慮されているというところが特徴ですね。素晴らしい無料で商用に使えてそして世界3位クラスということですねこれはいいです強いですねそうですねバックオフィスといえばジャバンというところもですね以前の動画はすごく伸びたので</p>
+<p><code>11:59</code> かなり注目しているようなサービスですねはい次がですねマイクロソフトのファイさんというものでして最新はですねファイ4Kというところで小さいのでですね賢いのが売りですはい良質なデータだけでですね鍛えるような設計思想で3.8Bだったりとか14Bといった軽さライセンスはMITで使用可能OKというところでただですねマイクロソフト自身が英語中心で基本的に日本語とかは弱めと明記されているんですよね</p>
+<p><code>12:35</code> なので日本のバックオフィスがメインならここはちょっと注意というか部分が必要かなと思いますねそうですねマイクロソフト自体はこの間のマイクロソフトビルドでもローカルのAI出しましたがこれはですねSLMといいましてA4ですよねもう少し小さいスモールランゲージモデルなんかは出てきましたが代表的なローカルLMとマイクロソフトの製品といえばこちらということですねそうですね3つ目がですね国内勢になるんですけどもこちらがNTTのですね</p>
+<p><code>13:08</code> つづみ2というところこちらはですね日本語特化されてますしあとはですね高性能のGPUなので1枚で動く軽量さもありますのとあとはですね政府の全省庁向けのAIですね源内さんというところにも採用されておりますはいまたですねストックマークさんの100Bのモデルに関してはですねAIの中身そのものをMITライセンスで自社に持てて</p>
+<p><code>13:44</code> 業務の質問応答もですねGBT4Oですね4Qというところの報告だったりとかもありますパナソニックさんとかも使っていたりするそうなのですごくこちらも特徴かなと思いますあとはですね軽量なSBのこちらはSBインティティションのサラシナだったりとかあと4つ目がですねアリババさんのクエン</p>
+<p><code>14:17</code> 3というところでこれもですねアパチ2.0でサイズが豊富ですし日本語もすごい実用十分で迷ったらまずこれだと言われるようなところもあるので結構本命的なものですかねそうですね我々の界隈ではねジェンマ4とクエンを使ってね性比べしてるっていう感じでありますがエンタープライズの勇気ではまたちょっと違う戦い方になってるんでしょうねそうですね結構ですね数がすごく多いんですけどもそこの選定基準としては</p>
+<p><code>14:53</code> シンプルと汎用系で迷ったらクエンの3ですねここはやっぱり機密が重くて国産だったりあとは政府実績が欲しいという場合であればつずみつですね業務文書をですね自社に抱え込みておきたいというところであればストップマークですしとにかくですね軽くやっぱり端末で動かしていくというところだったらやっぱり自慢でしたりとかの小型やサラシのさんというところが良くて</p>
+<p><code>15:27</code> この4つでほぼカバーできるんじゃないかなと僕ら見たてでは思っていますそうですね選ぶときはライセンスとかでチェックされた方がいいかなと思いますね先ほどのApache 2.0だったりMITっていうのは商用も自由で安心ではなりますが中には会社の規模や売上で条件がつくものであったり国産と歌いつつですね海外モデルを土台にしているものなんかもあったりしますので例えば楽天さんの楽天AI 3.0なんかは性能は高いんですけれどもちょっとね一時期</p>
+<p><code>16:00</code> いやこれディープシークの上流モデルやないかみたいなツッコミとかもねいただいてた7000億パラメータ級とちょっと大きすぎるというのもあるので社内のPC1台で動かすというのは現実的じゃなかったりするんですですので名前や歌い文句だけじゃなくてですねライセンスを手元でちゃんと動くサイズなのかというのが重要な選定ポイントでして実際JEMAのデカめのサイズとかだとなかなか大きいGPUでも動かなくなって大変なことになったりするのでその点実際に動かしながら試してみるのがいいんじゃないかなというところです</p>
+<p><code>16:38</code> 中身と実際に現実的に動かせるのかというところが重要ですのでそこの基準で選ぶということですかねじゃあどうやって動かすのかという話なんですけどすごく簡単です動かすソフトウェアを入れればしっかり動きましていわゆる実行環境が用途別に4つございます一番手軽なのがオラマというサービスを使う形になりますこれコマンドを一行打つだけでモデルを取ってきて動かせるようなものになりまして社内検証としては入り口の定番としてお使いいただけるのかなと思います</p>
+<p><code>17:14</code> なるほど他にもLMスタジオというのは画面でポチポチ選べるアプリでしてエンジニーではない現場の人でも触れるので非常にいいかなとこれ2025年から仕事での商用利用というのも無料になりましたのでぜひ使ってくださいちなみにその土台として使われているのがラマCPPでこれはGPUがなくても動くエンジンとなっておりますそして本番で他人像に配るのであればVLMですねこれ同時アクセスをさばく力がオラバの十数倍もありますので一気に複数のPCに導入しようとなったら、こういったエンジンを使っていくと。</p>
+<p><code>17:52</code> なるほどですね。じゃあ検証はオラマさんを使って、現場に配るのであればLM Studioさんですね。そうですね。本番の大人数で使う際に関しては、VL、LMっていうところを選択していくということですよねそうですね まさにそうなりますそしてその前面にですね オープンウェブUIっていうものを置きますと社内でログインして使える 社内版チャットGPTみたいなそういう見た目も整えてくれたりしますのでCLIからアクセスしかできないと使いづらいと思いますので確かに</p>
+<p><code>18:26</code> LLMを動かすプラマだったりそしてその見た目を整えるオープンウェブUIを使っていただいて誰が何を見られるのかというのは権限管理だったりとかラグなんかにもラグとかもですねこういったところで組んでいきますのでこういった技術構成で使っていただけるかなと思いますなるほどちなみにハードに関してはどのくらいいるんですかねここからがポイントでしていわゆるこの量子化という圧縮技術を用いる形になります量子化というのはですねモデルの賢さをほぼ保ったまま</p>
+<p><code>19:01</code> データを軽くするような技術なんですね例えば高画質の写真というのを見た目はほぼ変えずにファイルサイズだけ小さくしていくというようなものになります今の定番のやり方ですと必要メモリが約4分の1になって賢さでいうと9割以上キープできるとやってますので目安でいうとですね7B7ビリオンつまり70億パラメーター級であれば8GBのGPUやそこそこのパソコンで動いてくるかなと思います70億パラメーターで8GBのGPU30B級でメモリ16から20GB</p>
+<p><code>19:38</code> 70Bでこれ大型になるんですけどもこれで40GBちょっとメモリで40GBだとそんなに普通のパーソナル家庭用コンピューターとちょっと難しいんですけどはいはいはいMacのようにですねメモリをCPUとGPUで共有する機種だと大きいモデルっていうのも比較的動かしやすいかなと思っておりますつまりもあれですよねいきなり高いサーバーとかを買わなくてもまずは一つの</p>
+<p><code>20:10</code> 一台で試せるというところであるってことですよねそうですねとはいえ例えばMacを使うの方だと最新チップのMacBook Proとかでまあ30 b でちょっとノロノロするかなっていう あーあらなという感じではなるほどまあ使え全く動かなくなるみたいな場合もあるとえええええ 上記ってまあやっぱりめちゃくちゃいいのを買わなきゃいけないっていうところあるんですね まああるに越したことはないですねうんということですはいはいそしてこの先具体的な導入の流れ5ステップでまとめてみましたのではいぜひお試し ください導入の流れとしては5つですね</p>
+<p><code>20:48</code> 実際ですね業務はやはり棚下ろししないといけないということなので1つ目こちらですどこにローカルLLを適用させるのか組み込んでいくのかそして2つ目としては学習されない外に出さないローカル構成を選ぶべきだとというところで前段で紹介した技術構成だったりを採用してくださいそして3つ目として社内文書をラグで読ませる土台を作りましょうということです4つ目として誰が何を見られるか権限周りを設計してくださいそして最終ステップとして小さく試して有効的であったところからまた順次拡大していきましょうというところです</p>
+<p><code>21:26</code> なるほど最近も結構取り上げましたけど業務棚卸しは何回もできるのでやっぱりまずはそこの業務棚卸し可視化が重要ということですねそうですねやはりそこも全てつながっているかなと思います実際に我々ではないんですが外部に出ている事例なんかもご紹介したいなと思いますが例えば那須関十字病院さんなんかは理工さんと組んでですね電子カルテから単院時サマリーというのを院内のAIで自動生成めっちゃ便利そうですね年間2000万のコスト削減に相当するというような報告がありましたそして患者データはですね絶対に外に出さないからローカルではあるかなと</p>
+<p><code>22:03</code> ローカルだからこそできる事例ですねそしてNTTデータ先端技術に関しては金融システムの設計書の整合性チェックというのをですねローカルエレルで自動化しそして機密を外に出さずレビュー工程を削減することに成功したとあとは地元フィナンシャルグループはオフライン完結の議事録ツールで作成時間を約4割削減していましてこれグラファーさんという会社ですね免許証など書類の個人情報を社外に出さずに自動でクロニーする技術を確立しているということです他にも様々ありまして</p>
+<p><code>22:37</code> 例えばNTTテクノクロスのマスキングツールはですねAIを併用して隠すべき個人情報の抽出制度というのを最大25ポイント引き上げることに成功したりなんかも事例としてはあったりしますなるほどですねやっぱりどの業界もちょっとセキュリティ的に厳しいような金融業界さんとイローっていうところが結構共通としてありましたねどれもやっぱり外に出せないっていうところがあるのでローカルという選択肢を取られてるんだなと思いましたしやっぱり同じように経理とか人事の書類契約書議事録とかそういったところはですね</p>
+<p><code>23:12</code> 結構やっぱりBPO先さんにすごい通じる部分が大きいなと思いますよねそうですねといえこういった事例もありながらもやはりつまずくポイントあるかなと思いますので次は松原さんそこの点解説お願いしますはいじゃあですねその落とし穴での点をですね4つの部分でちょっと繰り寄せさせていければと思うんですけど一つ目ですね軽くしすぎると精度が落ちるというような点になりますさっきのですね量子化に関してもやりすぎるとやっぱり賢さとか</p>
+<p><code>23:48</code> 日本語が崩れることもあるのでまずはですね安全面から始めて実際の業務で試して小さく始めてみるっていうのが鉄則になっています2つ目ですねハルシネーションでつまりですねAIがもっともらしい嘘を作るようなクスっていうのはローカルでもやっぱり消えないという点ですだからですねラグで根拠付きにして抑えていくという点が必ずやるべき点かなと思います3つ目ですね初期コストと運用の手間というところでやっぱりGPUのサーバーの費用だったり</p>
+<p><code>24:24</code> モデルの更新でしたりメンテナンスみたいなのはかかってくる部分ですのでこのあたりはですねやっぱり社内にそういう人がいなければ外部からやっぱりそういう専門人材を入れていくっていうところがコスト的には一番コスパがいいかなとは思いますよね4つ目がですね一番大事かなと思うんですけども社内において安全っていうところではないという点ですよねこれがですね前回の64回の回の見えすぎた問題と全く同じなんですけど</p>
+<p><code>24:59</code> 権限設計をですねサボると本来見えちゃいけないような給料人事の情報までですねAIが答えられてしまったりするので社内においても誰がどの文章をですね参照できるかっていうのをちゃんと切ったり用語を残すそこまでやって初めて安全になります国が出しているですねAI事業者ガイドラインもオンプレなら面積とは言っていませんのでガバナンスの整備が非常に大事ですね金融なら金融庁もですね</p>
+<p><code>25:34</code> 2026年3月にAIの活用に関する議論のペーパーも出していたりしますので業界ごともありますが進めていくにあたってはAIガバナンスも一緒に進めていきましょうといったところが最大のポイントになりますそうですね行き場所を社内にするのはあくまで出発点でしてゴールではないというまとめになるかなと思いますはいそうですねありがとうございますじゃあ最後そういった内容をまとめていければと思いますが3点でして1つ目ですねローカルLMMは自社に住み込みのAIになります</p>
+<p><code>26:11</code> 機密を出さずですね 止まらず定額で使えるというところが非常に良い点になります実際に使えていく業務はですね 現状4つで要約 文書チェック 社内ナレッジ ナレッジ検索マスキングがもう実務では使えていく段階になっています2つ目ですね モデルは目的別で選ぶという点です汎用型ならクエンスリーや機密やですね政府実績ならつずみつ業務文書ならストックマークでしたりとか</p>
+<p><code>26:47</code> 動かすのはですねその中でもオーラマさんでしたりとかそういったところをですね使ってまずは手元の1台から小さく始めていくのがいいといった内容でした3つ目がですねただ社内に置いたからって安全では全くないという点です権限の設計と運用まで含めて初めて安全なバックオフィスになりますので全部つながってますがやっぱり業務をちゃんと可視化してしっかり設計をして正しく運用していくっていうところはまだにも変わらない点にはなりますので</p>
+<p><code>27:27</code> 今回でいうとやっぱりセキュリティの問題がすごく強かったりどうしても外部に情報ができたら難しいというようなですね特に金融業界さんとか医療系の企業様はこういったローカルLMMとかを使っていくとAIの一部になるかなと思いますのでそこがすごく重要でしたねありがとうございます第62回ですね止まらないAIだったりとか漏れないAIみたいな話してきましたが本日はですね自社で動かすという点について解説してきましたうちでもですね</p>
+<p><code>28:00</code> ローカルLLM何から始めればというふうに思っていただいた方はですね管理のプロの業務棚卸しとあとはそういった研修だったり導入支援というところも実行しておりますのでぜひ一度コメント欄からホームページの方にお問い合わせいただければなと思っておりますはい資料もありますのでぜひご覧いただければと思いますはいそしてこの番組AI BPOラジオはAIとBPOバックホイースの交差点を掘り下げる番組となっております毎日更新しておりますのでチャンネル登録で通知届きますのでチャンネル登録の方またグッドボタンで高評価の方もお願いいたしますはいお願いいたしますはいでは本日もありがとうございました</p>
+<p><code>28:32</code> お相手はカニのブログ代表の松村とエリックさんと田中でしたまた次回お願いいたしますはいありがとうございますありがとうございます</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./llm" class="internal" data-slug="llm">llm</a> - ローカルLLMもLLMの一形態</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a> - 業務へのAI組み込み手順の文脈が重なる</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a> - RAGによる社内ナレッジ検索の関連概念</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a> - 業務自動化の文脈</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-814" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

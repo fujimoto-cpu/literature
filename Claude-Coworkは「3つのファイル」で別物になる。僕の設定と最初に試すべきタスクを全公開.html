@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開"/><meta name="twitter:description" content="「Claude Cowork、試してみたけど普通のチャットとあんまり変わらなくない？」もしそう感じているなら、たぶんセットアップをしていない。もしくは、中途半端にしかやっていない。これ、めちゃくちゃもったいないんですよね。まず「Coworkって何？」を30秒で知ってる人は飛ばして..."/><meta property="og:description" content="「Claude Cowork、試してみたけど普通のチャットとあんまり変わらなくない？」もしそう感じているなら、たぶんセットアップをしていない。もしくは、中途半端にしかやっていない。これ、めちゃくちゃもったいないんですよね。まず「Coworkって何？」を30秒で知ってる人は飛ばして..."/><meta property="og:image:alt" content="「Claude Cowork、試してみたけど普通のチャットとあんまり変わらなくない？」もしそう感じているなら、たぶんセットアップをしていない。もしくは、中途半端にしかやっていない。これ、めちゃくちゃもったいないんですよね。まず「Coworkって何？」を30秒で知ってる人は飛ばして..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="「Claude Cowork、試してみたけど普通のチャットとあんまり変わらなくない？」もしそう感じているなら、たぶんセットアップをしていない。もしくは、中途半端にしかやっていない。これ、めちゃくちゃもったいないんですよね。まず「Coworkって何？」を30秒で知ってる人は飛ばして..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-283"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-283" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開</a></div></nav><h1 class="article-title">Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開</h1><p show-comma="true" class="content-meta"><time datetime="2026-04-10T15:00:00.000Z">2026年4月11日</time><span>33 min read</span></p><ul class="tags"><li><a href="./tags/clippings" class="internal tag-link">clippings</a></li><li><a href="./tags/claude-cowork" class="internal tag-link">claude-cowork</a></li><li><a href="./tags/ai-setup" class="internal tag-link">ai-setup</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/context-file" class="internal tag-link">context-file</a></li><li><a href="./tags/general" class="internal tag-link">general</a></li></ul></div></div><article class="popover-hint"><p><img src="./99_🖼️-picture/511a34dea5daa7dafa17960424bdd0ae_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>「Claude Cowork、試してみたけど普通のチャットとあんまり変わらなくない？」</p>
+<p>もしそう感じているなら、たぶんセットアップをしていない。もしくは、中途半端にしかやっていない。</p>
+<p>これ、めちゃくちゃもったいないんですよね。</p>
+<h2 id="まずcoworkって何を30秒で">まず「Coworkって何？」を30秒で<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#まずcoworkって何を30秒で" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>知ってる人は飛ばしてもらって大丈夫です。</p>
+<p>Claude Coworkは、Anthropic（Claude を作っている会社）が提供しているデスクトップアプリの機能です。普通のAIチャットは「質問すると答えが返ってくる」だけですが、Coworkは違う。あなたのPC上のファイルを読んだり、新しく作ったり、外部ツール（チャットアプリのSlack、Googleドライブなど）と連携して、実際の作業をやってくれる。</p>
+<p>チャットが「相談相手」だとすると、Coworkは「作業もやってくれるアシスタント」です。</p>
+<p>ただし、初期状態のCoworkはあなたのことを何も知らない。名前も知らない、仕事内容も知らない、どんなトーンで文章を書くかも知らない。そりゃ「普通のチャットと変わらない」と感じるのは当然で。</p>
+<h2 id="セットアップ前と後でこれだけ変わる">セットアップ前と後で、これだけ変わる<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#セットアップ前と後でこれだけ変わる" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>先に完成形を見せます。</p>
+<p>セットアップ前に「来週のクライアント向け進捗レポートを作って」と頼むと、こうなります。</p>
+<p>→ 「どのクライアントですか？」「フォーマットはありますか？」「どのプロジェクトについてですか？」と質問が5つ返ってくる。結局、自分で全部説明するハメになる。</p>
+<p>セットアップ後に同じことを頼むと、こう変わります。</p>
+<p>→ Claudeが自分の役割、担当プロジェクト、使っているツール、文章のトーンを把握済みなので、「MEO事業のパイロット8社の進捗をまとめて、カジュアルなトーンでWordファイルにしますね」と、いきなり作業に入ってくれる。質問ゼロ。</p>
+<p>この差を生んでいるのが、これから紹介する「3つの設定ファイル」とその周辺の設定です。</p>
+<p>僕はCoworkを毎日使っていて、営業リストの生成からレポート作成、SNS運用の下書きまで任せています。でも最初の1週間は正直微妙でした。「なんかいちいち説明するの面倒だな」って。</p>
+<p>転機は、海外のAI系クリエイターがやっている「オンボーディング（新人の受け入れ準備）」という考え方を知ったこと。新しい社員を迎え入れるみたいに、Claudeに「自分のこと」を教えてあげる。それだけで、毎回のやりとりの質がガラッと変わりました。</p>
+<p>この記事では、僕が実際にやっているセットアップの全手順と、実際に使っている設定ファイルの中身（一部加工済み）、そしてセットアップ後に「最初にこれを試してほしい」というタスクを公開します。</p>
+<p>所要時間は30分くらい。一度やれば、あとは全セッションに効きます。</p>
+<h2 id="この記事でわかること">この記事でわかること<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#この記事でわかること" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>Coworkのセットアップ5ステップ（公式のベストプラクティスも交えて解説）</li>
+<li>僕が実際に使っている設定ファイルの中身</li>
+<li>セットアップ後にすぐ試すべき5つのタスク（ここが一番大事）</li>
+</ul>
+<h2 id="前提coworkを使うために必要なもの">前提：Coworkを使うために必要なもの<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#前提coworkを使うために必要なもの" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>始める前に確認しておきたいのが3つ。</p>
+<p>Claude Desktopアプリ（MacかWindowsのみ。スマホやブラウザ版では使えない）、有料プラン（Pro以上。月額$20〜）、安定したネット環境。</p>
+<p>まだアプリを入れていない人は <a href="https://claude.com/download" class="external">claude.com/download<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a> からダウンロードできます。プランはまずProで十分。使い倒して上限が気になったらMaxに上げればいい。</p>
+<h2 id="step-1ツールを先に接続する">Step 1：ツールを先に接続する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-1ツールを先に接続する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ここ、順番が大事です。設定ファイルを書くより先に、普段使っているツールをClaudeに接続してください。</p>
+<p>なぜかというと、ツールが繋がった状態でセットアップを進めると、Claudeが既存のドキュメントやチャット履歴を参照しながら設定ファイルを作れるから。自分で全部手打ちするよりずっと速いし、精度も高い。</p>
+<p>僕の場合、Google Driveを先に繋いでおいたら、「自己紹介ファイルを作って」と頼んだだけでDrive内の会社概要や過去の資料を拾って、8割くらい自動で書いてくれました。これを手で書いてたら20分はかかったと思います。</p>
+<p>やり方はシンプルで、Coworkモードを開いてサイドバーの「コネクタ」から使いたいサービスを検索して接続するだけ。ログイン認証の画面（よくある「Googleでログイン」みたいなやつ）が出るので、許可すればOK。</p>
+<p>優先的に繋ぐべきツールはこのあたり。</p>
+<p>Google Workspace（Drive、Gmail、カレンダー）は最優先。仕事の情報がだいたいここに集約されている人が多いはず。Slack（チーム向けチャットツール）はチーム内のやりとりをClaudeに参照させたいなら。Notion（メモや情報をまとめるツール）は社内の情報整理や議事録がある人向け。プロジェクト管理ツール（Asana、Linear等）は使っていれば。</p>
+<p>接続テストとして、Google Driveを繋いだら「最近作ったドキュメントを検索して」と聞いてみてください。ちゃんと見つけてくれたら成功です。</p>
+<p>ちなみに、まだコネクタが用意されていないツールもあります。その場合、別のツール経由で間接的にアクセスできることも。たとえばCalendlyの予定はGoogleカレンダーに同期されていれば、カレンダーコネクタ経由で取れます。</p>
+<h2 id="step-2プロジェクトを作る">Step 2：プロジェクトを作る<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-2プロジェクトを作る" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>次に、Coworkの「プロジェクト」機能で作業場所を用意します。</p>
+<p>プロジェクトは、フォルダ・指示・メモリ（過去のやりとりの記憶）がセットになった作業スペースです。プロジェクト内で作業すれば、Claudeが前回の文脈を覚えていてくれる。毎回「あのプロジェクトの件なんだけど…」と説明し直す必要がなくなります。</p>
+<p>一番簡単な作り方は、PCにフォルダを1つ作って、それをプロジェクトとして指定する方法。サイドバーの「Projects」から新規作成して、フォルダを選ぶだけ。僕はデスクトップに「Claude作業用」というフォルダを作って、そこを指定しています。</p>
+<p>ポイントは、プロジェクトごとに「指示」を書けること。たとえば僕は「営業リスト作成」プロジェクトには営業系のルールを、「コンテンツ制作」プロジェクトにはブランドボイス（文章のトーンや使う表現のルール）を、それぞれ個別に設定しています。「営業メールはです・ます調で」「note記事はカジュアルに」みたいな使い分けが、プロジェクトを切り替えるだけでできる。</p>
+<p>あと、プロジェクトには「メモリ」機能があって、過去のタスクで学んだことを次回以降にも反映してくれます。「前回のレポートで修正したフォーマット、次も同じでお願い」と言わなくても覚えている。使えば使うほど賢くなるイメージです。</p>
+<h2 id="step-3コンテキストファイルを作るここが一番効く">Step 3：コンテキストファイルを作る。ここが一番効く<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-3コンテキストファイルを作るここが一番効く" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>正直、セットアップの中でこのステップが一番インパクトあります。</p>
+<p>コンテキストファイルとは、Claudeに「自分のこと」を教えるためのテキストファイル。作業フォルダに置いておくと、Coworkがセッション開始時に自動で読み込んでくれます。新入社員に渡す引き継ぎ資料だと思ってください。ただし、この社員は毎朝その資料を読み直して、一言一句忘れない。</p>
+<p>作るのは3つ。</p>
+<p>ファイル1：about-me.md（自己紹介）</p>
+<p>自分が何をしている人なのか、今どんなプロジェクトを抱えているのか、どんなツールを使っているのか。Claudeに「前提知識」を渡すファイルです。</p>
+<p>僕が使っているものの一部を載せておきます（社名やメール等は加工しています）。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span># About Me</span></span>
+<span data-line> </span>
+<span data-line><span>## 基本情報</span></span>
+<span data-line><span>- 名前: tatsuki</span></span>
+<span data-line><span>- 役割: SaaS企業の事業企画 / プロダクト開発</span></span>
+<span data-line><span>- タイムゾーン: JST (Asia/Tokyo)</span></span>
+<span data-line> </span>
+<span data-line><span>## 今やっていること</span></span>
+<span data-line><span>- MEO（Googleマップ最適化）代行事業の立ち上げ</span></span>
+<span data-line><span>- 営業リスト自動生成ツールの運用</span></span>
+<span data-line><span>- note/Xでの情報発信（AI活用系）</span></span>
+<span data-line> </span>
+<span data-line><span>## 使っているツール</span></span>
+<span data-line><span>- Google Workspace（Drive, Gmail, Calendar）</span></span>
+<span data-line><span>- Slack（チーム連絡）</span></span>
+<span data-line><span>- Notion（社内情報整理）</span></span>
+<span data-line><span>- スプレッドシート（データ管理全般）</span></span></code></pre></figure>
+<p>書き方のコツは、「Claudeに毎回説明するのが面倒なこと」を全部ここに入れること。役職、担当業務、使っているツール、今の優先プロジェクト。これだけで「で、あなた誰ですか？」から始まるやりとりがなくなります。</p>
+<p>Step 1でツールを接続済みなら、Claudeに「Google Driveにある自己紹介資料や会社情報を参考にして、about-me.mdを作って」と頼めば、ほとんど自動で書いてくれます。</p>
+<p>ファイル2：brand-voice.md（文章のトーン）</p>
+<p>Claudeが生成するテキストのトーンを自分好みにするファイル。これがないと、いかにも「AIが書きました」という文章しか出てこない。</p>
+<p>僕のファイルはこんな感じです（抜粋）。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span># Brand Voice</span></span>
+<span data-line> </span>
+<span data-line><span>## トーン</span></span>
+<span data-line><span>- カジュアルだけど中身は濃い。友人に説明するような口調</span></span>
+<span data-line><span>- 「〜ですよね」「〜なんですよね」で共感を入れてから本題へ</span></span>
+<span data-line><span>- 断定しすぎない。「めちゃくちゃ使えるのでは？」のように疑問形で引き込む</span></span>
+<span data-line><span>- 体験ベース。「僕がやってみたら」「うちでは」が起点</span></span>
+<span data-line> </span>
+<span data-line><span>## 使う表現</span></span>
+<span data-line><span>- 一人称: 「僕」</span></span>
+<span data-line><span>- 口語寄り: 「めちゃくちゃ」「ぶっちゃけ」「正直」「やってみた」</span></span>
+<span data-line><span>- 具体的な数字を入れる: 「30分→数十秒」</span></span>
+<span data-line> </span>
+<span data-line><span>## 避ける表現</span></span>
+<span data-line><span>- 過度に丁寧な敬語（「させていただきます」「ございます」）</span></span>
+<span data-line><span>- 抽象的なビジネス用語の羅列（「DX推進」「シナジー」だけで終わる文）</span></span>
+<span data-line><span>- 上から目線の断定（「〜すべきです」）</span></span></code></pre></figure>
+<p>このファイルを入れる前と後で、体感で一番変わったのはメール文案です。以前は「貴社のますますのご発展を〜」みたいな定型文が出てきて毎回直してたのが、今は最初から自分の口調で出てくる。修正の手間が半分以下になりました。</p>
+<p>過去に書いた文章（メール、ブログ、SNS投稿など）があるなら、フォルダに入れて「この文章群から僕の書き方の特徴を抽出して、brand-voice.mdにまとめて」と頼むのが一番早いです。</p>
+<p>ファイル3：working-style.md（仕事の進め方）</p>
+<p>Claudeにどう動いてほしいかを指示するファイル。about-meが「誰」、brand-voiceが「どんなトーンで」なら、これは「どう仕事を進めるか」。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span># Working Style</span></span>
+<span data-line> </span>
+<span data-line><span>## コミュニケーション</span></span>
+<span data-line><span>- 直接的で簡潔に。前置きは最小限でいい</span></span>
+<span data-line><span>- 「なぜやるか」を先に説明してから手順に入る</span></span>
+<span data-line><span>- 不明点があれば作業前に確認してほしい</span></span>
+<span data-line> </span>
+<span data-line><span>## 出力のルール</span></span>
+<span data-line><span>- レポートはWord (.docx)、データ系はExcel (.xlsx)</span></span>
+<span data-line><span>- ファイル名は日本語OK</span></span>
+<span data-line><span>- 長い出力はセクションごとに分けて段階的に作る</span></span>
+<span data-line> </span>
+<span data-line><span>## やってほしくないこと</span></span>
+<span data-line><span>- 曖昧な「〜かもしれません」で終わる回答</span></span>
+<span data-line><span>- 聞いていないことまで長々と説明する</span></span>
+<span data-line><span>- 重要な判断を勝手に決める（先に相談して）</span></span></code></pre></figure>
+<p>このファイルで一番効いたのは「不明点があれば作業前に確認してほしい」の一行。これを入れる前は、Claudeが勝手に解釈して見当違いの方向に走ることがたまにあった。今は「この部分、AとBどっちの意味ですか？」と聞いてくれるようになったので、やり直しが減りました。</p>
+<p>この3ファイルを作業フォルダに置けば、Coworkが毎セッション自動で読み込んでくれます。一度作ったら、あとはたまに微調整するだけ。公式ドキュメントにも「これらのファイルは時間と共に複利で効いてくる」と書かれていて、使うほどに精度が上がっていく仕組みです。</p>
+<h2 id="step-4グローバル指示を設定する">Step 4：グローバル指示を設定する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-4グローバル指示を設定する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Step 3で作ったコンテキストファイルは、プロジェクトのフォルダに置くのでプロジェクト単位で効きます。一方、グローバル指示はすべてのセッションに適用される「最上位のルール」。どのプロジェクトを開いても、必ずこのルールが読み込まれます。</p>
+<p>設定方法は「設定 > Cowork > グローバル指示の編集」から。</p>
+<p>僕はここに、コンテキストファイル3つのエッセンスを800字くらいに凝縮して入れています。</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="text" data-theme="github-light github-dark"><code data-language="text" data-theme="github-light github-dark" style="display:grid;"><span data-line><span>## 基本ルール</span></span>
+<span data-line><span>- 出力はすべて日本語</span></span>
+<span data-line><span>- 一人称は「僕」、カジュアルだけど中身は濃いトーンで</span></span>
+<span data-line><span>- ファイル作成時は日本語ファイル名OK</span></span>
+<span data-line><span>- レポート系はWord、データ系はExcel</span></span>
+<span data-line> </span>
+<span data-line><span>## 仕事の進め方</span></span>
+<span data-line><span>- タスクを受けたら、まず実行計画を提示してから着手する</span></span>
+<span data-line><span>- 不明点は作業前に確認する</span></span>
+<span data-line><span>- 長い作業はステップに分割して途中経過を報告する</span></span>
+<span data-line> </span>
+<span data-line><span>## やらないこと</span></span>
+<span data-line><span>- 曖昧な回答で終わらせない</span></span>
+<span data-line><span>- 聞かれていないことを長々と説明しない</span></span>
+<span data-line><span>- ファイルの削除は必ず確認を取る</span></span></code></pre></figure>
+<p>使い分けはシンプルで、「出力は日本語で」「ファイル削除は確認」みたいなプロジェクトを問わないルールはグローバル指示に。「このプロジェクトのクライアントはXX社で、担当者は田中さん」みたいな固有情報はプロジェクト内のコンテキストファイルに書く。</p>
+<p>最初は「グローバル指示とコンテキストファイル、どっちに何を書けばいいの？」と迷ったんですが、迷ったらコンテキストファイル側に書いておけばOKです。グローバル指示は「絶対に全セッションで守ってほしいこと」だけに絞ったほうが管理が楽。</p>
+<h2 id="step-5プラグインとスキルを入れる">Step 5：プラグインとスキルを入れる<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-5プラグインとスキルを入れる" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>最後のステップ。プラグインは、Claudeに「専門スキルセット」をまとめてインストールする機能です。</p>
+<p>初期状態のClaudeは汎用的なアシスタント。プラグインを入れると、特定の業務に特化した知識と手順が追加されて、出力の質が一段上がります。</p>
+<p>インストール方法は、Coworkのサイドバーから「Plugins」→「＋」ボタンで一覧を見て、追加するだけ。</p>
+<p>公式プラグインは15種類以上ありますが、最初から全部入れる必要はないです。自分の業務に近いものを3〜5個選ぶのがおすすめ。</p>
+<p>参考までに、僕が入れているのはこのあたり。</p>
+<p>Marketing（マーケティング）。note記事やX投稿のドラフト、SEO（検索エンジンでの上位表示を狙う施策）の分析に使っています。/marketing:draft-content というコマンドで、ブログ記事の下書きが一発で出てくる。</p>
+<p>Sales（営業）。見込み客のリサーチや商談準備に。/sales:account-research で企業情報をまとめてくれるのが地味に助かる。</p>
+<p>Finance（財務・経理）。請求書の処理やレポート作成に。</p>
+<p>Product Management（プロダクト管理）。仕様書の作成や開発の優先順位整理に。</p>
+<p>プラグインにはスラッシュコマンド（ / で始まるショートカット）がついていて、チャット欄に / と入力すると使えるコマンドが一覧で出てきます。最初は「こんなのあるんだ」と眺めるだけでも、自分の業務に使えそうなものが見つかるはずです。</p>
+<h2 id="ここからが本番セットアップ後に試すべき5つのタスク">ここからが本番：セットアップ後に試すべき5つのタスク<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ここからが本番セットアップ後に試すべき5つのタスク" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>セットアップお疲れさまでした。ここからが本当に伝えたいパートです。</p>
+<p>セットアップしただけで満足して、結局使わなくなる人がけっこう多い。だからこそ、「最初にこれを試してほしい」というタスクを5つ用意しました。簡単なものから順番にやると、Coworkの実力がわかります。</p>
+<p>タスク1：「僕のこと、どこまで知ってる？」テスト</p>
+<p>まずはこれ。セットアップがちゃんと効いているか確認するために、Coworkにこう聞いてみてください。</p>
+<p>僕のことをどこまで知っているか、教えて。 名前、仕事内容、使っているツール、好みの文体、仕事の進め方について。</p>
+<p>ちゃんとセットアップできていれば、about-me.md、brand-voice.md、working-style.mdの内容を踏まえた回答が返ってくるはずです。</p>
+<p>「あれ、文体の好みが反映されてない」とか「ツールの情報が足りてない」と感じたら、今のうちにコンテキストファイルを修正しておく。ここで精度を上げておくと、後のタスクの質が全部上がります。</p>
+<p>これは公式ドキュメントでも推奨されている確認方法で、「tell me what you know about how I work here（僕の働き方についてどこまで知っているか教えて）」と聞けと書かれています。</p>
+<p>タスク2：自分のトーンでSNS投稿の下書きを作らせる</p>
+<p>brand-voice.mdの効果を体感するのにちょうどいいタスクです。</p>
+<p>僕が最近やっているMEO事業について、Xに投稿する文章を3パターン作って。 それぞれ切り口を変えてほしい。</p>
+<p>brand-voice.mdを入れていないと、「MEO事業を通じて、クライアント様の集客力向上に貢献しております」みたいな、よそよそしい文章が出てきます。入れていれば、「僕がやってるMEO事業、正直めちゃくちゃ面白いんですよね」みたいな、自分の口調に寄った文章が出てくる。</p>
+<p>この差を最初に体感しておくと、「ああ、だからコンテキストファイルが大事なのか」と腹落ちします。</p>
+<p>タスク3：接続したツールのデータを横断で使う</p>
+<p>Step 1で接続したツールが本領を発揮するのがここです。</p>
+<p>たとえばSlackを繋いでいるなら。</p>
+<p>先週の <a href="https://x.com/search?q=%23general&amp;src=hashtag_click" class="external"><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><a href="./tags/general" class="tag-link internal alias" data-slug="tags/general">general</a> チャンネルの重要なやりとりをまとめて、 今週のアクションアイテム一覧を作ってください。</p>
+<p>Googleカレンダーを繋いでいるなら。</p>
+<p>明日のミーティング一覧を確認して、 それぞれの参加者と議題をまとめた準備メモを作って。</p>
+<p>Google Driveを繋いでいるなら。</p>
+<p>Driveにある直近の議事録を3つ読み込んで、 共通するテーマと未解決の課題を抽出して。</p>
+<p>コネクタなしだと、いちいちデータをコピペしてClaudeに渡す必要がある。コネクタありだと、「あのチャンネルのあれ見て」で済む。僕が一番「これコネクタ繋いでてよかった」と思ったのは、Slackの過去ログから営業のやりとりを拾ってレポートにまとめてもらったとき。手でSlackを遡って情報を集める作業が丸ごとなくなりました。</p>
+<p>タスク4：データを渡してレポートを作らせる</p>
+<p>ここからもう少し実践的に。手元にExcelやCSV（カンマ区切りのデータファイル。Excelで開けるやつ）があれば、フォルダに入れてこう頼んでみてください。</p>
+<p>このデータを分析して、以下の内容を含むレポートをExcelで作成して。 - データの概要サマリー - 主要な指標の推移グラフ - 気づいたポイント3つ ビジネス向けのシンプルなデザインで。</p>
+<p>僕がMEOの営業リストのデータを渡したときは、業種別の分布グラフ、Googleマップの口コミ評価の平均点ランキング、優先的にアプローチすべきターゲットリスト、全部入ったExcelが3分くらいで出てきました。手で同じものを作ろうとしたら30分は確実にかかる内容です。</p>
+<p>データファイルが手元にない人は、「ダミーの売上データを作ってから、それを分析してレポートにして」と頼めば、データ生成から分析まで一気にやってくれます。初回の体験としてはこれで十分。</p>
+<p>タスク5：スケジュールタスクで毎朝の作業を自動化する</p>
+<p>最後はスケジュールタスク。これがCoworkの真骨頂だと僕は思っています。</p>
+<p>スケジュールタスクは、設定した時間に自動でClaudeが作業を実行してくれる機能。朝起きたら、もうレポートが出来上がっている、という状態を作れます。</p>
+<p>最初に試すなら「朝のブリーフィング（今日やることの整理）」がおすすめ。</p>
+<p>Coworkのチャットに /schedule と入力するか、サイドバーの「Scheduled」から設定できます。</p>
+<p>毎朝9時に以下を実行してください： 1. 今日のカレンダー予定を確認して一覧にする 2. 未読の重要メールがあればサマリーを作る 3. 今日やるべきことを3つ提案する 結果はテキストファイルで保存して。</p>
+<p>僕はこれに加えて「毎週月曜の朝に、先週のSlackの重要なやりとりをまとめる」というタスクも設定しています。月曜の朝にPCを開くと、先週の振り返りがもう出来上がっている。週次ミーティングの準備が格段に楽になりました。</p>
+<p>公式のセーフティガイドでは「最初は低リスクなタスク（サマリー作成、情報の取りまとめ等）から始めて、徐々に複雑なものに広げていく」と推奨されています。いきなりメール送信や重要ファイルの編集を自動化するのは避けて、まずは「情報を集めてまとめる」系から始めるのが安全です。</p>
+<p>注意点として、スケジュールタスクはPCがスリープしていない状態で、かつClaude Desktopアプリが開いている必要があります。ノートPCを閉じてたら動かないので、そこだけ気をつけてください。</p>
+<h2 id="安全に使うためのポイント">安全に使うためのポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#安全に使うためのポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>CoworkはあなたのPC上のファイルに直接アクセスする機能なので、便利な反面、最低限の注意は必要です。公式のセーフティガイドから、押さえておくべきポイントをまとめておきます。</p>
+<p>フォルダのアクセスは最小限にすること。「とりあえずデスクトップ全体を渡す」ではなく、専用の作業フォルダを作ってそこだけ指定する。機密情報やパスワードファイルが入ったフォルダは避ける。</p>
+<p>実行計画は走らせる前に目を通すこと。Claudeはタスクを受けると「こういう手順で進めます」と計画を見せてくれるので、特にファイルの上書きや削除が含まれる場合は慎重に確認する。</p>
+<p>プラグインや外部連携ツールは信頼できるものだけ入れること。公式のプラグインディレクトリからインストールするのが基本。よくわからないサードパーティ製のものは権限の内容をよく確認してから。</p>
+<p>あと、忘れがちですが、Claudeが実行したすべてのアクション（ファイル変更、メール送信、外部サービスへの操作等）の責任はユーザーにあります。自動化は便利ですが、「何を自動化して、何は自分で確認するか」の線引きは意識しておいたほうがいいです。</p>
+<h2 id="まとめ30分の初期投資が毎日効く">まとめ：30分の初期投資が毎日効く<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#まとめ30分の初期投資が毎日効く" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>振り返ると、やることは5つ。</p>
+<p>ツールを接続する → プロジェクトを作る → コンテキストファイル3つを作る → グローバル指示を設定する → プラグインを入れる。</p>
+<p>全部やっても30分くらい。Step 1でツールを先に繋いでおけば、Claudeが既存のドキュメントを参照して設定ファイルのドラフトを作ってくれるので、手打ちの量はかなり減ります。</p>
+<p>そしてセットアップが終わったら、5つのタスクを順番に試してみてください。1番目の「どこまで知ってる？」テストで設定の精度を確認して、2〜4番目で「Coworkってこんなことまでできるんだ」を体感して、5番目のスケジュールタスクで「AIに働いてもらう」感覚を掴む。</p>
+<p>僕がCoworkで一番変わったのは、「AIに聞く」から「AIに任せる」に切り替わったことです。チャットで質問してコピペして…という段階は終わった。やりたいことを伝えたら、あとはコーヒーでも飲んでいればファイルが出来上がっている。</p>
+<p>その切り替えの入り口が、このセットアップです。</p>
+<p>参考リンク</p>
+<ul>
+<li><a href="https://support.claude.com/en/articles/13345190-get-started-with-cowork" class="external">Claude Cowork スタートガイド（公式）<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://support.claude.com/en/articles/13364135-use-cowork-safely" class="external">Coworkを安全に使う（公式）<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://support.claude.com/en/articles/14116274-organize-your-tasks-with-projects-in-cowork" class="external">プロジェクト機能の使い方（公式）<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://claude.com/resources/tutorials/cowork-onboarding-guide" class="external">Coworkオンボーディングガイド（公式チュートリアル）<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://claude.com/resources/tutorials/teach-claude-your-way-of-working-using-skills" class="external">スキルの使い方（公式）<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://claude.com/download" class="external">Claude Desktop ダウンロード<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><a href="https://claude.com/pricing" class="external">Claude 料金プラン<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+</ul>
+<hr/>
+<h2 id="ai要約">AI要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Claude Coworkを「普通のチャット」から「作業もやってくれるアシスタント」に変えるセットアップ5ステップ。Step 1: ツール接続を先にやる（Google Drive→Slack→Notion）。Step 2: プロジェクト作成（フォルダ+指示+メモリのセット）。Step 3: コンテキストファイル3つ（about-me.md=自己紹介、brand-voice.md=文章トーン、working-style.md=仕事の進め方）を作業フォルダに配置。Step 4: グローバル指示に全セッション共通ルールを設定。Step 5: プラグイン（Marketing, Sales等）を3〜5個選んで導入。セットアップ後に試すべき5タスクとして「どこまで知ってる？テスト」「自分のトーンでSNS下書き」「ツール横断データ活用」「データからレポート生成」「毎朝のブリーフィング自動化」を紹介。所要時間30分の初期投資で全セッションの質が変わる。</p>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Claude-Codeの精度を100倍にするフォルダの作り方" class="internal alias" data-slug="Claude-Codeの精度を100倍にするフォルダの作り方">Claude Codeの精度を100倍にするフォルダの作り方</a>（LiteratureNote） — CLAUDE.md=about-me/brand-voice/working-styleの対応関係</li>
+<li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal alias" data-slug="元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a>（LiteratureNote） — 「AIに記憶を持たせる」コンセプトが共通</li>
+<li><a href="./🙋‍♀-取扱説明書" class="internal alias" data-slug="🙋‍♀-取扱説明書">🙋‍♀ 取扱説明書</a>（LiteratureNote） — 自分の情報をAIに伝える設計思想が関連</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-129" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#まずcoworkって何を30秒で" data-for="まずcoworkって何を30秒で">まず「Coworkって何？」を30秒で</a></li><li class="depth-0"><a href="#セットアップ前と後でこれだけ変わる" data-for="セットアップ前と後でこれだけ変わる">セットアップ前と後で、これだけ変わる</a></li><li class="depth-0"><a href="#この記事でわかること" data-for="この記事でわかること">この記事でわかること</a></li><li class="depth-0"><a href="#前提coworkを使うために必要なもの" data-for="前提coworkを使うために必要なもの">前提：Coworkを使うために必要なもの</a></li><li class="depth-0"><a href="#step-1ツールを先に接続する" data-for="step-1ツールを先に接続する">Step 1：ツールを先に接続する</a></li><li class="depth-0"><a href="#step-2プロジェクトを作る" data-for="step-2プロジェクトを作る">Step 2：プロジェクトを作る</a></li><li class="depth-0"><a href="#step-3コンテキストファイルを作るここが一番効く" data-for="step-3コンテキストファイルを作るここが一番効く">Step 3：コンテキストファイルを作る。ここが一番効く</a></li><li class="depth-0"><a href="#step-4グローバル指示を設定する" data-for="step-4グローバル指示を設定する">Step 4：グローバル指示を設定する</a></li><li class="depth-0"><a href="#step-5プラグインとスキルを入れる" data-for="step-5プラグインとスキルを入れる">Step 5：プラグインとスキルを入れる</a></li><li class="depth-0"><a href="#ここからが本番セットアップ後に試すべき5つのタスク" data-for="ここからが本番セットアップ後に試すべき5つのタスク">ここからが本番：セットアップ後に試すべき5つのタスク</a></li><li class="depth-0"><a href="#安全に使うためのポイント" data-for="安全に使うためのポイント">安全に使うためのポイント</a></li><li class="depth-0"><a href="#まとめ30分の初期投資が毎日効く" data-for="まとめ30分の初期投資が毎日効く">まとめ：30分の初期投資が毎日効く</a></li><li class="depth-0"><a href="#ai要約" data-for="ai要約">AI要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./Claude-Codeの精度を100倍にするフォルダの作り方" class="internal">Claude Codeの精度を100倍にするフォルダの作り方</a></li><li><a href="./Obsidian-×-Cursorで構築する「第二の脳」の作り方！ChatGPTの答えが凡庸だと感じるあなたへ" class="internal">Obsidian × Cursorで構築する「第二の脳」の作り方！ChatGPTの答えが凡庸だと感じるあなたへ</a></li><li><a href="./【なぜダサくなる？】Claude-CodeでWebサイトやアプリを開発する時の８つのポイントを徹底解説！【POSTS代表-梶谷健人】" class="internal">【なぜダサくなる？】Claude CodeでWebサイトやアプリを開発する時の８つのポイントを徹底解説！【POSTS代表 梶谷健人】</a></li><li><a href="./メモ管理は-Obsidian-in--Cursor-が最強｜松濤Vimmer" class="internal">メモ管理は Obsidian in  Cursor が最強｜松濤Vimmer</a></li><li><a href="./事実の羅列から卒業するために。自分の解釈を書く日記をはじめた話（振り返りプロンプトつき）｜平野太一" class="internal">事実の羅列から卒業するために。自分の解釈を書く日記をはじめた話（振り返りプロンプトつき）｜平野太一</a></li><li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

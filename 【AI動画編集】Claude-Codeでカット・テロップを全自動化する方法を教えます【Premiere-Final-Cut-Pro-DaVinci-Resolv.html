@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere Final Cut Pro DaVinci Resolv</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere Final Cut Pro DaVinci Resolv"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere Final Cut Pro DaVinci Resolv"/><meta name="twitter:description" content="📺 動画情報 【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere / Final Cut Pro / DaVinci Resolve】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-12 ・ ⏱️ 23分11秒 🔗 www.youtube.com/watch 📝 要約（AI生成） 動画編集者である河村さんが、Claude Codeのスキル機能を使って動画編集（カット・テロップ生成・プラグイン開発）を自動化する具体的手順を解説する動画。普段10時間かかっていた1時間素材→25分動画の編集を、4〜5時間（半分以上）に短..."/><meta property="og:description" content="📺 動画情報 【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere / Final Cut Pro / DaVinci Resolve】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-12 ・ ⏱️ 23分11秒 🔗 www.youtube.com/watch 📝 要約（AI生成） 動画編集者である河村さんが、Claude Codeのスキル機能を使って動画編集（カット・テロップ生成・プラグイン開発）を自動化する具体的手順を解説する動画。普段10時間かかっていた1時間素材→25分動画の編集を、4〜5時間（半分以上）に短..."/><meta property="og:image:alt" content="📺 動画情報 【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere / Final Cut Pro / DaVinci Resolve】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-12 ・ ⏱️ 23分11秒 🔗 www.youtube.com/watch 📝 要約（AI生成） 動画編集者である河村さんが、Claude Codeのスキル機能を使って動画編集（カット・テロップ生成・プラグイン開発）を自動化する具体的手順を解説する動画。普段10時間かかっていた1時間素材→25分動画の編集を、4〜5時間（半分以上）に短..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【AI動画編集】Claude-Codeでカット・テロップを全自動化する方法を教えます【Premiere-Final-Cut-Pro-DaVinci-Resolv"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【AI動画編集】Claude-Codeでカット・テロップを全自動化する方法を教えます【Premiere-Final-Cut-Pro-DaVinci-Resolv"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere / Final Cut Pro / DaVinci Resolve】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-12 ・ ⏱️ 23分11秒 🔗 www.youtube.com/watch 📝 要約（AI生成） 動画編集者である河村さんが、Claude Codeのスキル機能を使って動画編集（カット・テロップ生成・プラグイン開発）を自動化する具体的手順を解説する動画。普段10時間かかっていた1時間素材→25分動画の編集を、4〜5時間（半分以上）に短..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【AI動画編集】Claude-Codeでカット・テロップを全自動化する方法を教えます【Premiere-Final-Cut-Pro-DaVinci-Resolv"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1476"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1476" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere Final Cut Pro DaVinci Resolv</a></div></nav><h1 class="article-title">【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere Final Cut Pro DaVinci Resolv</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-11T15:00:00.000Z">2026年5月12日</time><span>52 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/video-editing" class="internal tag-link">video-editing</a></li><li><a href="./tags/premiere-pro" class="internal tag-link">premiere-pro</a></li><li><a href="./tags/skill" class="internal tag-link">skill</a></li><li><a href="./tags/workflow" class="internal tag-link">workflow</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【AI動画編集】Claude Codeでカット・テロップを全自動化する方法を教えます【Premiere / Final Cut Pro / DaVinci Resolve】</strong>
+🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-12 ・ ⏱️ 23分11秒
+🔗 <a href="https://www.youtube.com/watch?v=SJ5Pu2kcBgE" class="external">https://www.youtube.com/watch?v=SJ5Pu2kcBgE<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 要約（AI生成） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>動画編集者である河村さんが、<strong>Claude Codeのスキル機能</strong>を使って動画編集（カット・テロップ生成・プラグイン開発）を自動化する具体的手順を解説する動画。普段10時間かかっていた1時間素材→25分動画の編集を、4〜5時間（半分以上）に短縮できた実例を共有している。</p>
+<p><strong>基本フロー</strong>は次の通り：</p>
+<ol>
+<li><strong>Premiere Proで素材を取り込み、画面収録と音声同期した状態にする</strong></li>
+<li>ファイル → 書き出し → <strong>Final Cut Pro XML</strong> を出力（タイムライン情報をXMLで持ち出す）</li>
+<li>Claude Codeデスクトップアプリを起動 → XMLファイルをドラッグ＆ドロップ → <code>/cut</code> スキルを呼び出す</li>
+<li><strong>約20秒</strong>でカット済みXMLが出力 → Premiere Proに読み込み直すと、33分素材が22分に自動カットされている</li>
+<li>テロップは、編集済み動画をWAV書き出し → XMLと一緒にClaude Codeに投げて <code>/srt</code> スキルを実行 → 約10分でSRTファイル生成 → Premiere Proに読み込みでテロップ自動配置</li>
+</ol>
+<p><strong>重要なのは、Claude Codeの「スキル」は単なるマニュアル＝指示書ファイル</strong>であり、一度作っておけば <code>/cut</code> <code>/srt</code> というスラッシュコマンドで再現性高く呼び出せる点。河村さんはGitHub経由でスキル一式を公式LINE登録者向けに配布しており、メッセージ例をコピペして自分用にカスタマイズ（保存先・カット条件の緩急）できる設計になっている。</p>
+<p>出力精度に関する<strong>重要な思想</strong>として、咳込み・言い直し・フィラーは<strong>意図的にカットさせない</strong>方針を採用。理由は「AIに判断を任せると、勝手にカットされて思いもよらぬ事故が起きる」ため。<strong>AIができることはAIに任せ、人間判断が必要な部分は手作業で残す</strong>というハイブリッド設計が紹介されている。</p>
+<p>モデル選択は <strong>Sonnet 4.6推奨</strong>（Opusは過剰、Claude Codeのレート制限節約のため）。プランモード・許可バイパスはユーザーのリスク許容度で選択。</p>
+<p>動画後半では、<strong>Claude Codeでアドビ用プラグインを自作する</strong>応用例も紹介。UXP Developer Toolsに自作プラグインを読み込ませ、よく使うテロップデザイン・演出（強調・縮小・不透明度ダウン）を <code>Cmd+1</code> <code>Cmd+2</code> … のショートカットで呼び出せるようにしている。さらに「Iruru（入れる）」という動画レビュープラットフォームも自作し、タイムコード付き修正指示・矢印・画像添付・倍速確認まで実装している。</p>
+<p><strong>市販のAI動画編集ツール（Vrew等）やClaude Code Video Use機能</strong>との比較として、それらは社外公開・クライアントワーク用途には精度不足だが、<strong>Premiere Pro × Claude Codeスキル方式は実用レベル</strong>だと結論づけている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🎬 Premiere Pro × Claude Code 編集フロー </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>カット工程（約20秒）</strong></p>
+<pre><code>Premiere Pro（素材＋画面収録同期済み）
+  ↓ ファイル → 書き出し → Final Cut Pro XML
+XMLファイル
+  ↓ Claude Codeにドラッグ＆ドロップ
+/cut スキル発動（Sonnet 4.6）
+  ↓ 約20秒
+カット済みXML
+  ↓ Premiere Proに読み込み
+完成（33分→22分）
+</code></pre>
+<p><strong>テロップ工程（約10分）</strong></p>
+<pre><code>カット済みPremiere Proタイムライン
+  ↓ WAV書き出し ＋ 新しいXML書き出し
+WAV + XML
+  ↓ Claude Codeに投入
+/srt スキル発動
+  ↓ 約10分
+SRTファイル
+  ↓ Premiere Proの再生ヘッド位置に読み込み
+テロップ自動配置 → サイズ・改行を微調整 → グラフィックにアップグレード
+</code></pre>
+</div>
+</blockquote>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Premiere Pro&lt;br/>素材＋画面収録同期] --> B[Final Cut Pro XML&lt;br/>書き出し]\n    B --> C[Claude Code&lt;br/>デスクトップアプリ]\n    C --> D{スキル選択}\n    D -->|/cut| E[約20秒でカット済みXML出力]\n    D -->|/srt&lt;br/>+ WAV| F[約10分でSRT出力]\n    E --> G[Premiere Proに&lt;br/>読み込み直し]\n    F --> G\n    G --> H[手作業で&lt;br/>咳込み・言い直しのみ修正]\n    H --> I[テロップサイズ・改行調整]\n    I --> J[完成]\n\n    K[自作プラグイン&lt;br/>UXP Developer Tools] -.Claude Codeで開発.-> J\n    L[Iruru&lt;br/>レビュープラットフォーム] -.Claude Codeで開発.-> J\n\n    style C fill:#ffe4b5\n    style E fill:#90ee90\n    style F fill:#90ee90\n    style H fill:#ffd700&quot;">flowchart TD
+    A[Premiere Pro&lt;br/>素材＋画面収録同期] --> B[Final Cut Pro XML&lt;br/>書き出し]
+    B --> C[Claude Code&lt;br/>デスクトップアプリ]
+    C --> D{スキル選択}
+    D -->|/cut| E[約20秒でカット済みXML出力]
+    D -->|/srt&lt;br/>+ WAV| F[約10分でSRT出力]
+    E --> G[Premiere Proに&lt;br/>読み込み直し]
+    F --> G
+    G --> H[手作業で&lt;br/>咳込み・言い直しのみ修正]
+    H --> I[テロップサイズ・改行調整]
+    I --> J[完成]
+
+    K[自作プラグイン&lt;br/>UXP Developer Tools] -.Claude Codeで開発.-> J
+    L[Iruru&lt;br/>レビュープラットフォーム] -.Claude Codeで開発.-> J
+
+    style C fill:#ffe4b5
+    style E fill:#90ee90
+    style F fill:#90ee90
+    style H fill:#ffd700
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ゆりこはPremiere Pro / AE / Mocha AE / Blenderで動画編集スキルあり（<a href="./user_video_editing" class="internal" data-slug="user_video_editing">user_video_editing</a>参照）なので、このフローは<strong>そのまま実務で効く</strong>。特に以下の使い所がある：</p>
+<ul>
+<li><strong>講習動画・社内研修動画の編集自動化</strong>：Cowork講習・全社員向けAI研修・MD構成表説明動画などを撮ったとき、33分→22分カットが20秒で終わるなら撮影〜編集〜共有のループを劇的に短縮できる。</li>
+<li><strong>イベント・撮影記録の編集</strong>：Armillary.撮影・81fes・kemio関連の素材を社内共有用にカット＋テロップ付きで編集する用途。</li>
+<li><strong>MEADOW.メドウマガジン用ショート動画</strong>：月刊MEADOW Magazineの導線として、コレクション紹介ショート動画をPremiere Pro × Claude Codeで量産できる可能性あり。</li>
+<li><strong>/cut /srt スキルの自作化</strong>：河村さんが配布しているスキルをベースに、ゆりこ用に「フォント＝AvenirまたはARMILLARY指定」「テロップ位置＝下センター固定」「カット閾値＝0.5秒以上の無音」等カスタマイズしたスキルを <code>~/.claude/skills/</code> に格納する案がある。既存スキル群（<a href="./skills_inventory" class="internal" data-slug="skills_inventory">skills_inventory</a>）と統合可。</li>
+<li><strong>AIに任せない判断</strong>：咳込み・フィラー・言い直しは<strong>手作業</strong>にする方針はゆりこの「成果物クオリティ重視」スタンスに合う。AIで一括処理する誘惑を断つ。</li>
+<li><strong>アドビプラグイン自作</strong>：Claude Codeでアドビ用プラグインを自作できる事実は、デザイン部の制作自動化（<a href="./project_design_workflow" class="internal" data-slug="project_design_workflow">project_design_workflow</a>）の延長で活かせる。たとえばArmillary.の色補正プリセット呼び出し・Photoshopのスモークカットアウト自動化等。</li>
+<li><strong>公式LINE経由のプレゼント</strong>：実際に試したいなら、まず河村さんの公式LINEでGitHubリポジトリを受け取り、ベースを把握してから自作版を作るのが最短ルート。</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> どうもクロードコードチャンネルの河村です。今回はAIかける動画編集ということで普段YouTubeだったりとかInstagramなどの動画媒体のプラットフォームに投稿されているような方だったりとか もしくは業務とかで動画編集を受け負っている人だったり他にも本業の中でセミナーだったりとか勉強会を開催した時にその動画を編集している人だったりとか多種多様なジャンルで動画を編集する方が多いと思いますやっぱり今の世の中何を発信するにしても何を共有するにしても文字よりも動画の機会が多くなっております</p>
+<p><code>00:36</code> そんな時に一番工数がかかるのが編集と言われておりこれまでプレミアプロだったりキャップカットなどで手打ちで作業していた人たちが多いと思いますただ2026年クロードコードの登場によってこの動画編集さえ効率化できてしまったということで現役で動画編集もやっているこのカーメラがクロードコードを使った動画編集の効率化について本日は徹底解説させていただきますので最後まで動画を見るようにしていってくださいまず結果からお知らせしますと普段私が動画編集をしているときは</p>
+<p><code>01:11</code> 1時間ぐらいの素材尺を25分ぐらいの動画にしてテロップや演出を入れる作業に10時間以上かかっていましたしかしこのクロードコードを使うことによってそれらの作業が短縮され今では4時間長くても5時間半分以上を効率化させることができましたなので皆さんはカットだけでもいいよとかカットとフルテロップだけでもいいっていう人はもっと短くなりますし10分ぐらいの動画であれば本当に一瞬で終わるような世界が今開けていますのでぜひこちらの動画で学んでいってほしいなというふうに思います</p>
+<p><code>01:45</code> 具体的な方法になるんですけどもまずこちらのようにクロードコードを開いてください今回はデスクトップアプリ版を使いますのでまずはクロードをダウンロードするところから始めてくださいそして初期設定については過去の動画でも解説しておりますのでまだ初期設定をしてない人はまずそちらの動画を見て設定してからこの動画を見るようにしていってください今回主に使うものはたったの一つですそれはクロードコードのスキルというものになりますスキルっていうのは簡単に言うとマニュアルみたいなものだと思ってほしいんですけども</p>
+<p><code>02:21</code> そのスキルを呼び出すことでスキル内に格納された指示書だったりとか絶対的なルールその作業をやっていく上でのフローみたいなのを記憶しておりその通りにやってくれるっていうものになっていますので一度作ってしまえばそれを毎回呼び出すだけで全て自動化できるっていうものになっておりますので今回はそちらのスキルを使って実際に動画編集をしていきます今回プレミアプロを使っていくんですけどもこちらのように現在素材を入れております素材の上にはですねこのように画面収録も入れておりすでに音声は同期済みの状態になっております</p>
+<p><code>02:59</code> 見ていただいたらわかる通り喋ってない部分だったりとか細かに間が空いてる部分等がたくさんあるのがわかると思いますそして素材尺は33分でおそらくこれを普通に手打ちでカットしようと思うとまあ3時間遅い人だと4時間5時間とかかかってくると思われますこれをですね一瞬で今からやっていきたいと思いますその方法なんですけどもまず左上のファイルをしてもらって書き出しからファイナルカットプロ xml を押しますそしたらファインダーが開かれますので自分の好きなところに入れていきましょう 今回はダウンロードというところに入れていきますそしたらプレミアプロ一旦閉じてもらってクロードコードで先ほどダウンロードした素材を入れていきます</p>
+<p><code>03:43</code> 入れ方はそのままドラッグ&amp;ドロップもできますしこの下側にあるプラスボタンを押してもらったらファイルまたは写真を追加っていうのがあるのでそちらを押してもらって先ほどダウンロードしたこのXMLのファイルを入れていきますじゃあここから長々としたプロンプを入れていくのかそして何度も何度もやり取りして編集していくのかというとそうではありません先ほど説明したんですけどもここでスキルを発動させますスキルの発動のさせ方なんですけどスラッシュを入れて僕の場合だとCUTこちら入れていただくとなんとこれでもうOKですもちろん皆さんが今すぐスラッシュCUTって入れたところで何も発動はされません</p>
+<p><code>04:26</code> これはですねファインダーの中に指定の場所にですねこんな感じでプレミアプロのスキルを格納している場所がありましてここのコマンドってところにこのCUTがあるのでクロードコードでスラッシュCUT入れた時にここまで読んでくれてカットのギルを発動してくれるっていうようなものになっております今回皆さんにこちらのカットに必要なものをですねプレゼントさせていただきますのでぜひ欲しいなと思う方は概要欄のLINEを登録していただいてプレゼントを受け取るようにしていってくださいじゃあここまでできましたら次にこのプランモードってところなんですけど</p>
+<p><code>05:00</code> 皆さんのリスク許容度に合わせて変更するようにしてください具体的に言うとこちらの許可を確認にするとファイルを見に行ったりとかファイルを編集したりとかファイルに何かを追加するとき毎回毎回クロードコードが許可を取ってきますそれが面倒な方はですねこちらの許可を確認ではなくて許可をバイパスにしていただくのがお勧めになっておりますただファイルの削除だったりとかそういったものも許可を取らずにやる恐れがあるのでそういうのが怖いっていう人は許可を確認もしくはプランモードにしていただいてクロードコードがあらかじめ計画を立てた上で</p>
+<p><code>05:35</code> それを許可して一気に動かすっていうのもありだと思いますのでそこら辺は皆さんのリスク共有度にお任せいたします僕は普段許可をバイパスにしておりますそして最後モデルの選択なんですがOPAS 4.7、SONET 4.6、HIKU 4.5の3種類がありますこの中で結論おすすめなのはSONET 4.6になります理由としてはこのカットにそんなOPAS 4.6みたいな高性能のモデルを使う必要がないからですやっぱりクロードコードって制限がありますのでなるべく節約して使いたいところで今回ソネットで全然十分なので</p>
+<p><code>06:08</code> ソネット4.6を使っていきますじゃあこのまま送っていきたいと思いますそうしたらですねスキルを実行中ってところで今クロードコードが僕が設定したスキルをですね発動してXMLを作成してくれておりますはいそしたら今出てきましたなんとですねだいたい20秒ぐらいで出てきましたやばくないですかこれまで5時間ぐらいかけてたカットが今20秒で出てきましたじゃあプレミアに戻っていただいてこちらに先ほど出力されたXメロをもう一度戻していきますこのプロジェクトの部分をダブルクリックして格納された場所に移動してもらってこちらですねこれを入れていきますじゃあそれを開いていきす。そしたらこんな感じでカットがされております。尺も22分ぐらいに落ち着きました。</p>
+<p><code>06:54</code> じゃあこれの出力精度じゃないですか。結局喋ってる途中でカットされてたりとか喋ってないのにカットされてないとかそういうのがあったら意味がないのでそれを1回チェックしていきたいと思います。あらかじめ言っておくんですが無音部分をカットしているので例えば咳込みとか言い直しピラーここら辺はカットしておりません。もちろんそこら辺もカットするようにスキルを作り変えることができるんですが現状それだと時間がかかってしまうそして思いもよらぬことが起きる可能性があるんですねクロードコードが勝手に判断してこれはフィラーだ咳込みだ不要な部分だ繰り返し部分だと思って</p>
+<p><code>07:29</code> カットされる可能性があるので僕はあまり推奨しておりませんむしろこのフィラー部分だったり咳込み部分って別に簡単にカットできるんでそこら辺は手作業でやってもらってAIができることをAIに任せるこれが一番大事かなというふうに思いますじゃあチェックしていきましょう皆さんこんにちはAI修理科ラボの河村です今回は最新AI中国の動画生成AIがレベチすぎるというテーマでお話ししていきたいと思いますソラが使えなくなるという報道を受けて皆さんはどの動画生成AIを使えばいいのかって思っている方が多いと思うんですよ</p>
+<p><code>08:08</code> 多いと思うんですよこういう言い直しは残ってしまうと使えなくなったっていう動画に関してはこちらの動画で紹介させていただいてるんですけどもどうですか皆さん結構完璧にカットされてませんかこのカット感の間もうスムーズに流れるようにカットされており普通に動画編集者がカットしたんかってぐらいのレベルですよね何度も繰り返しになるんですがこういう最初の咳込み部分だったりとか先ほどの言い直しの部分時々現れる小さい声で何か喋ってしまった時とかも基本的にカットするだけなんで今まで一生懸命動かしてカットしていた作業が</p>
+<p><code>08:42</code> なんと今はチェックしながら咳込み部分とかを探す作業になっているという感じになっておりまして時間だけじゃなくてこの疲労感とか頭を使うみたいなところも削減されるのでめちゃくちゃおすすめになっております実際この撮影素材は綺麗にカットされてますが一緒に画面収録もカットしましたこれがどうなっているかを確認するんですけども2分23秒のところですねこちらを画面収録ありで聞いてみるんですけどこのアニメのクオリティがめちゃくちゃすごく全然ずれてないのがわかりますか</p>
+<p><code>09:15</code> もう一度聞きますねこのアニメのクオリティがめちゃくちゃすごくそうなんですよなんと画面収録と一緒にカットしても画面収録がずれて事故が起きるってことは全くないんですよこれが2カメラ3カメラ4カメラ5カメラってどんどん増えていっても同じようにカットしてくれるように今回スキル作っておりますのでこちら受け取って実際使ってみたいよって人はぜひ概要欄の公式LINEからLINEを登録していただいてプレゼントを受け取るようにしていってくださいちなみに今回のプレゼントなんですけどもGitHubのリンクをお渡ししておりまして</p>
+<p><code>09:49</code> 基本的にこちらのGitHubをクロードコードで投げていただいて一番上にあるクロードへ送るメッセージ例これをですねコピーしてそのまま送るだけでOKですもちろん今回僕仕様のスキルを送ってますので皆さんのルールに書き換えたいよって場合は入れた後にですねもうちょっとカット緩やかにしてとか自分はもうフィラーとか咳込みはどんどんカットしてほしいって人はそれも支持していいですし今回僕はクロードコートっていう ファイル名の中に格納しているので皆さんが例えばデスクトップに入れたいという人 はデスクトップで設定し直す必要があるのでそこらへんは各自やってみてください まあその時に例えばこれはどうからもらっ</p>
+<p><code>10:26</code> たスキルですとそれはその人用に作られて いるので自分用に作り直したいですいくつか質問をして適切な場所に配置するようにし てくださいみたいな感じでお願いすると自分特有のスキルが作れますのでぜひそちらの方法でやってみてくださいじゃあお次ですねカットができましたこの時点でですね多くの人がクロードコードで編集するのすごいぞという風になっていると思いますですがなんとテロップもちゃんと入れることができますやっぱり勉強会とか開いてカットしたとしてもやっぱりテロップ入れてちゃんと見やすい動画にしたいじゃないですか</p>
+<p><code>10:59</code> なんなら普通に普段動画編集の仕事を受けてたりとかSNS関連で動画編集してる人はまあさすがにテロップを入れるっていうのは結構必須なところになってるかなと思うんでそちらの方も解説していきたいと思いますじゃあ今回すでにカットが終わったという前提で話を進めていきたいと思いますもちろん今の状態は咳込みとか言い直しが残ってしまっているんですけどもそれが終わったという前提でお願いいたしますまず左上にある書き出しというところからこちらのようにWAV形式で動画をダウンロードするようにしてください</p>
+<p><code>11:34</code> 右下の書き出しボタンを押します15秒ぐらい待っていただくと基本的に書き出しは完了するかなっていう感じですそんなに時間がかからないと思いますじゃあ書き出しが終わりましたのでもう一度ファイルからXMLを書き出しますそして一度プレミアプロを閉まっていただいてクロードコードを再度立ち上げますこの画面のままやるとこちらのセッションが残ってしまっているので新しいセッションを立ち上げてくださいじゃあここに先ほどダウンロードした素材と最初に説明したスキルを入れていきますプラスボタンを押していただいて</p>
+<p><code>12:07</code> WAV形式のやつとXML形式の素材を入れてここにスラッシュSRTを今度は入れます今回こちらのテロップ用のやつもですねプレゼントの中に入れておりますのでそちらを使っていくようにしてくださいで同じく許可をバイパスにして同じくソネット4.6でいきますじゃあそのまま送信していきますこのスラッシュSRTはですねぶっちゃけ言うと10分ぐらいかかりますやっぱり文字起こししてきれいに整えて最後テロップとして作るので少々時間かかるんですけどこの時間自分は何もしなくていいので</p>
+<p><code>12:40</code> 他の作業をするなり編集でもっと先の作業がある人はそちらをやっていただいたりとか休憩したい方は寝るなり何か食事するなりしてもらうことができるのでこの10分は全然無駄にならないしここが時間かかるからやめとこうみたいな判断にはならないかなと思います僕は本当に10分待たないといけないのでちょっと小話でもしようかなと思うんですけど個人的に最近Xに流れてくるAI動画編集いわゆるクロードコードとリモーションを使った動画編集だったりとかクロードコードに最近導入されたビデオユーズっていうものが結構流行っているんですが</p>
+<p><code>13:16</code> ぶっちゃけ使い物にはなっておりませんもちろん一部の界隈例えばゼロから動画を作る方だったりとか本当に社内用というか限られたところにしか出さないだったりとか本当に個人の趣味というかそのレベルであれば全然問題ないかなと思うんですけども例えば社外に出す動画だったりとかYouTubeとかに出して伸ばしていきたいよっていう人もしくはクライアントワークで動画編集してる人は絶対に使わない方がいいですやっぱりまだ精度が悪くですねカットもどこかでぶつ切りになったりとかテロップもタイミングが遅かったり</p>
+<p><code>13:51</code> デザインが悪かったり変なところで開業されていたり誤字脱字が多かったりっていう風に色々欠損があるので基本的に使わない方がいいかなと思いますただ今回のこのプレミアプロをかけるクロードコードっていうところではかなり社外SNSのバスでクライアントワークここらへんの部分もですね全て使っていけるようになっておりますのでぜひ使っていただきたいなというふうに思っておりますじゃあこのまま出力まで待っていきたいと思いますはい出てきました実際10分ぐらいあったところ出てきましたのでこちらをですねプレミアプロに戻していきたいと思います</p>
+<p><code>14:26</code> 出力場所はですねカットの場所とほぼ一緒になっておりましてこちらのアウトプットのSRTととこに入っておりますこれをですねそのままプレミアプロに投げて再生ヘッドの位置に合わせてもらってこのままokを押すとこんな感じでテロップを入れることができますこういった無音部分だったりとかは例えばこういう動画を見てるシーンで喋ってないシーンとかになるので空いてるって感じになるのでエラーが発生しているわけではありませんただやっぱりたまに喋ってるのを認識されなくて飛ばされるみたいなことはあるんですそこら辺は直してもらったりとか</p>
+<p><code>15:01</code> もしくはもうちょっとはっきり喋ってもらうとかいろいろしていただけたらいいなって思いますこちらなんですけどまず全体を選んでもらってプロパティってところからまずサイズを大きくしてくださいじゃないと文字数増やした時とかに勝手に開業されてしまうのでここはですね最大限マックスにしておきましょうそれが終わりましたらグラフィックとタイトルってところからキャプションをグラフィックにアップグレートを押してもらうとこの下のテロップに入りますのでこちらを規定の位置にしてもらってこんな感じでテロップを入れることができましたただやっぱりこういったカットとテロップの位置</p>
+<p><code>15:36</code> やっぱりずれますなのでここをもし修正する場合はプレミアってところからキーボードショートカットでこちらの前の編集点を再生ヘッドまで変更もしくは次の編集点を再生ヘッドまで変更っていうショートカットキーがあるのでそれを押してもらったらこういう風に一瞬でテロップを綺麗にカット点に合わせることができますこんな感じでデザイン入れましてちょっとチェックしていきますね 皆さんこんにちはaic カラボのカーメラです今回は最新 ai 中国の動画 こういうところですね文字数が少し多くなったなってとこは軽く修正してもらう空がここの 咳込みはカットすると</p>
+<p><code>16:14</code> 空が使えなくなるという報道を受けて皆さんはどの動画生成AIを使えばいいのかってここですね思っている方が多いと思うんですよ多いと思うんですよここは言い直しですね空が使えなくなったっていうこんな感じで5字脱字は基本的にはなくてただこういうふうにテロップの範囲が決められているのでここは文字を小さくするとか開業部分を入れ替えるとか2行でもいいよっていう人は2行で表示するとかしてもらったらいいかなというふうに思いますので一発で完璧なものが出来上がるというよりかは</p>
+<p><code>16:49</code> 誤字達字のない綺麗なタイミングで切り替わっているテロップが生成されるというようなイメージなのでもし完璧を目指すのであればここから手修正してもらうただやっぱり手打ちで打ってた時代よりも半分以上何なら3分の1ぐらいまでショートカットされるのでこれはぜひやってほしいですねここまででカットとテロップについてクロードコードを使って解説していきましたこれだけだとじゃあもうプレミアプロとブリューっていう既存のAIツールとかジェミニーとかでいいよっていう人多いと思います確かに今回のクロードコードすごかったんですけどブリューではできないこともさらにここからできてしまうので</p>
+<p><code>17:26</code> クロードコードのすごさを追加で解説していきます結論から言うとアドベに入れるこのプラグインっていうものを開発することができます例えばなんですけど既存のプラグインのツールで先ほどテロップとカットがずれてるっていうのがあったと思うんですけどこれを自動で整えてくれるっていうようなプラグインがあるんですけどそういうのも基本クロードコードで開発することができますなので本来例えばそこに5000円払って使っているんだとしたらそれが0円になりますしもしくはこの世の中にないプラグインでも自分は使いたいと思ったっていうのを自分で作ることができます実際に僕も作ってみました</p>
+<p><code>18:01</code> それがこの adobe uxp developer tools っていうこの adobe が出してるアプリに自分が開発したプラグインを入れることで使うことができるんですけどもこちらのロードっていうのを押してもらうとこんな感じで開くことができますこの2つになるんですけどもこれどういうふうに使うのかっていうと例えばこんな感じの演出皆さん見たことないですか白民調に撮影素材ちょっと暗くするとかもしくは画角を引いて力弱くっていうフォントを入れるみたいな感じあとは強調でこういう感じで普通に拡大した上で</p>
+<p><code>18:37</code> こういうオリジナルのテロップを入れるってことが実際にあると思いますここに強調入れたいなって時にここまで戻ってコピーしてペーストするじゃあ次こっちにネガティブのやつを入れたい時また戻ってこれをコピーした上でベースするっていうこういう地味な作業を今まで繰り返してたと思うんですよしかも普段あまり使わないテロップだけど動画では1,2回は使うっていうようなものに関してはあれどこだったっけって探す手間もありますよねそういう時に使えるのがこれなんですけども例えばこちらの紫色のテロップ</p>
+<p><code>19:10</code> これを一番上にセーブを押します次茶色をですね効果音と一緒に2番目のとこにセーブを押します紫のやつを効果音と一緒に3番目にセーブしますそうすると僕の場合だとコマンド1コマンド2コマンド3でなんとこの3つをですねいつでも呼び出せるようになっております実際やってみますね手元は見せれないんですけどコマンド1を押すと紫のが出てきますコマンド2を押すと茶色のが出てきますこれすごくないですかコマンド3を押すとなんと紫のが出てくるとこれ要はいちいち1個前に戻ってコピペ1個前に戻ってコピペみたいなことはせずに</p>
+<p><code>19:47</code> もう一度保存しておけばいつでもショートカットキーで呼べるんですよっていうような地味かもしれないがかなり効率になる僕の場合だと普段この演出入れる作業に2時間時間かかる時は3時間かかってたんですけどこれのおかげでもう1時間もかかりません戻ってコピーっていう手間がないので他にもこの強調ですねこれがこっち側になるんですけど1番にキャプチャします画面が効いてるやつを2番目にキャプチャしますそして3番目の不透明度下げたやつをキャプチャしますこれをですねこちら側に僕の場合だとコマンドQに設定してるんですが</p>
+<p><code>20:23</code> 入れると勝手に拡大されここにコマンドW押すと勝手に引いてくれてこちらにコマンドE押すと不透明度が下がるというようなこれすごくないですかこれをクロードコードで開発できますもちろんこれを作ろうと思ったこのアイデア力っていうのはちょっと自分を褒めたいんですけどもこれを簡単な自然言語でクロードコードで作るれてしまうというような今すごい世界になっております他にも入れるという動画レビュープラットフォームっていうのも クロードコードで開発しましたこれがどういうものかというとなんと編集者さんが この入れるというものに動画をダウンロードするとここで僕が動画を見ることができて 右に修正指示を入れることができますこれ</p>
+<p><code>21:03</code> までタイムコード自分で手打ちしないと いけなかったところをなんとここで修正指示を出したい場合このまま打っていただく とタイムコード付きでなんと修正指示を入れることができるのでタイムコード打つ 手間をなくすことができます他にもこういった矢印とかでこういうふうに矢印を 引っ張ってここの人物をもうちょっとこういうふうにしてほしいと指示も入れること ができますしあとここにリンクがあるんですけど画像も入れることができまして 例えばサムネイルこの画像をこの画像に変更してほしいときに編集者に直接送る こともできますと倍速もこちら4倍にまで変更することができますしまたこちら でスクリーンショットを入れることもでき</p>
+<p><code>21:43</code> たりいろんな機能を詰め込むことができ ますこれもですねクロードコードで自然言語でやりとりして作ったものになるので 本当に自分が作りたいものを何でも作っていけるっていうような時代になってますの で動画編集者さんだったりディレクターの方もしくは動画を扱う方全員とってこの クロードコードがいいものだっていうのが伝わるかなというふうに思いますこんな感じで今回はクロードコードかける動画編集についてお話しさせていただきました何度も言うようですがやっぱりこの2026年はですね動画の時代に必ず入っていきますし何度も言うようですが今動画を扱うっていうのは企業や個人にとって当たり前のものになっておりまして</p>
+<p><code>22:25</code> ただ編集という点でかなり時間かかったり外注するにしてもお金がかかるっていう状態になってたと思うんですよそれをAIで解決することができるようになったということで皆さんもぜひクロードコードを使って動画編集やっていただきたいなというふうに思っております今回皆さんがそれを簡単に始めるためにプレゼントを用意しましたそちらを受け取るためには概要欄のリンクから公式LINE登録する必要があるので今のうちにLINE登録をよろしくお願いいたしますまたクロードコードチャンネルではこんな感じでクロードコードについての情報だったりとか</p>
+<p><code>22:57</code> 他にも最新AIの情報を発信しておりますので興味がある人はこちらの動画に高評価とそしてチャンネル登録をよろしくお願い致しますそれでは今回の動画は以上になりますありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_適切な文章が思いつかないとき" class="internal alias" data-slug="AIプロンプト例_適切な文章が思いつかないとき">AIプロンプト例_適切な文章が思いつかないとき</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — Claude Codeスキル・実装知見の中心ハブ</p>
+</li>
+<li>
+<p><a href="./ai" class="internal" data-slug="ai">ai</a>（StructureNote） — AI活用全般のハブ</p>
+</li>
+<li>
+<p><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote） — 業務自動化事例の横断まとめ</p>
+</li>
+<li>
+<p><a href="./SNS_メイキング動画" class="internal alias" data-slug="SNS_メイキング動画">SNS_メイキング動画</a>（PermanentNote） — 動画制作・発信の文脈で関連</p>
+</li>
+<li>
+<p><a href="./PR手段としてのYouTube" class="internal alias" data-slug="PR手段としてのYouTube">PR手段としてのYouTube</a>（PermanentNote） — YouTube活用の上位概念</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説"/><meta name="twitter:description" content="📺 動画情報 Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説 🎙️ まさやん【AIハックch】- AIであらゆるクリエイティブと開発を効率化・自動化するノウハウをお届け ・ 📅 2026-06-05 ・ ⏱️ 47分16秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 みなさんこんにちは。今回はクロードコードを使う上での31のトークン節約コスト最適化のテクニックについてご紹介したいなと思います。目次としましてはコスト構造コンテキスト管理モデル選択作業プロセスの最適化..."/><meta property="og:description" content="📺 動画情報 Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説 🎙️ まさやん【AIハックch】- AIであらゆるクリエイティブと開発を効率化・自動化するノウハウをお届け ・ 📅 2026-06-05 ・ ⏱️ 47分16秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 みなさんこんにちは。今回はクロードコードを使う上での31のトークン節約コスト最適化のテクニックについてご紹介したいなと思います。目次としましてはコスト構造コンテキスト管理モデル選択作業プロセスの最適化..."/><meta property="og:image:alt" content="📺 動画情報 Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説 🎙️ まさやん【AIハックch】- AIであらゆるクリエイティブと開発を効率化・自動化するノウハウをお届け ・ 📅 2026-06-05 ・ ⏱️ 47分16秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 みなさんこんにちは。今回はクロードコードを使う上での31のトークン節約コスト最適化のテクニックについてご紹介したいなと思います。目次としましてはコスト構造コンテキスト管理モデル選択作業プロセスの最適化..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-Code-３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-Code-３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説 🎙️ まさやん【AIハックch】- AIであらゆるクリエイティブと開発を効率化・自動化するノウハウをお届け ・ 📅 2026-06-05 ・ ⏱️ 47分16秒 🔗 www.youtube.com/watch 📝 文字起こし全文（クリックで展開） 00:00 みなさんこんにちは。今回はクロードコードを使う上での31のトークン節約コスト最適化のテクニックについてご紹介したいなと思います。目次としましてはコスト構造コンテキスト管理モデル選択作業プロセスの最適化..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-Code-３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-249"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-249" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説</a></div></nav><h1 class="article-title">Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-06T15:00:00.000Z">2026年6月07日</time><span>65 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Claude Code ３１のトークン節約テクニック｜使用制限にかからないために今すぐ見直したいポイント全部解説</strong>
+🎙️ まさやん【AIハックch】- AIであらゆるクリエイティブと開発を効率化・自動化するノウハウをお届け ・ 📅 2026-06-05 ・ ⏱️ 47分16秒
+🔗 <a href="https://www.youtube.com/watch?v=OoyKLPeTS_U" class="external">https://www.youtube.com/watch?v=OoyKLPeTS_U<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> みなさんこんにちは。今回はクロードコードを使う上での31のトークン節約コスト最適化のテクニックについてご紹介したいなと思います。目次としましてはコスト構造コンテキスト管理モデル選択作業プロセスの最適化自動化運用の6章立てで全部で31個の知識と実践できる内容を一挙にご紹介したいなと思いますクロードコードを使っていて結構トークンの使用量の消費が半端ないみたいなことが</p>
+<p><code>00:42</code> SNSとかを見ているとよく見かけるんですが一定程度こういったトークンコストの節約のテクニックを知っていればある程度回避できる部分もあるのでクロードコードをうまく使いこなしたいよという方はぜひ最後まで見ていっていただければなと思いますまず第一章としてそもそものこのクロードコードを利用する際のコスト構造について大前提こちらを理解しておく必要がありますコスト構造を知っていないとなかなかどこに改善のメスを入れたらいいのかとか</p>
+<p><code>01:20</code> 最適化したらいいのかどの部分に重点的に対策すればいいのかっていうのが見えてこないのでまずここを押さえておくことが大前提必要かなと思いますねまず非常に重要なのが出力トークンは入力トークンの5倍高いコストが高いということですねトークンの使用量が発生するのは主に入力トークンと出力トークンのこの2つになります入力トークンはユーザー人間利用者がメッセージを入力した内容ですね出力トークンはクロードが人間に対して返す結果の内容ですね</p>
+<p><code>02:02</code> コンソールとかターミナルとかに表示される内容です例えばソネットのモデルを使った場合入力100万トークンあたり3ドルなのに対して出力は15ドルなんですね5倍の価格差があるとまずこれを大事に抑えておく必要がありますなのでもしトークンの使用量を節約したいコストを節約したいとなった場合にまず考えるのはこの出力部分をどうにかできないかなっていうところ例えば簡潔に書いてもらったり</p>
+<p><code>02:36</code> 過程はそこまで重要じゃないので最終的なアウトプットだけを説明してくださいとかそういった工夫でコストカットできる余地はかなりあるかなと思います当然マークダウンファイルとかフレーンテキストとかで出すよりもHTMLで出力させたり画像として生成させた方がコストが高くなってしまうっていうのは出力量とか出力にかかる労力が増えれば増えるほどコストは膨らんでいくっていうような構造になっていますね</p>
+<p><code>03:09</code> この出力コストが高いという点と同じくらい重要なのがこれはモデルによって価格差があるという話ですね例えばソネットとオーパスにも5倍の価格差があります例えばソネットの100万トークンあたりの入力は3ドルですがオーパスの100万トークンあたりの入力は15ドルなんですね出力も同様でソネットは100万トークンあたり15ドルなのに対してオーパスは100万トークンあたり75ドルなんですね一つ前のスライドと合わせて要点をまとめるならオーパスを使った時の出力が最もコストがかかるということをまず大前提抑えておく必要があるかなと思います</p>
+<p><code>03:57</code> さらにもう一つ抑えておくべきこれ意外と知られてない可能性もあるんですがクロードコードのサブスクリオには1時間のプロンプトキャッシュが効いているということですねこれ何かと言いますとクロードコードのセッションを立ち上げてから同じセッション内で1時間以内であればキャッシュが効いているので基本的には入力コストが削減されるような仕組みになっているということです</p>
+<p><code>04:30</code> なのでこのいかにキャッシュを壊さずにうまく使いながら入力コストを下げるかっていう点はこれは一つ重要なポイント何気なくやっている操作がこのキャッシュを壊してしまって無駄なコストを使ってしまっているっていう可能性があります例えばモデル切り替えの操作があるかなと思いましてこれ何気なくモデルの切り替えをするとこのキャッシュっていうのはモデルごとに生成されているので例えばオーパスである程度長時間作業していて</p>
+<p><code>05:06</code> そこから簡単な作業をしたいなと思ってソネットとかハイクに切り替えたとしても実はこのキャッシュっていうのはモデルごとに作られる仕組みになっているのでオーパスで作ってきたキャッシュっていうのはこの切り替え先のモデルでは効かないそういう仕組みになっているんですがこれ何気なくやると切り替え先ではキャッシュ共有されないので切り替え先でもう1回キャッシュを作り直す分だけトークンコストが高くなってしまうという</p>
+<p><code>05:39</code> こういう何気ない操作が実はトークン効率の悪い状態になってしまっているということは結構あったりするので重要なのはこの1時間のキャッシュが存在するという点と何気なくやっている操作がキャッシュをリセットしてしまうような非効率なことにつながっていないかというのを意識する点が重要かなと思いますねさらにもう一つ重要な点としてこのトークンコストというのは線形ではなくて指数関数的に積み上がっていくものだということですね</p>
+<p><code>06:17</code> これは何かと言いますと基本的に一つのクロードのセッションの中で何回もやり取りを往復するかなと思うんですがこの何回もやり取りしてきた場合トークンの計算の際には例えばここに図であるように1ターン目2ターン目3ターン目4ターン目5ターン目っていう感じでどんどん積み重なっていくんですねこれまでのやり取りの買い割り歴全てが積み重なっていく例えば5ターン目に8000トークンって書いてますが</p>
+<p><code>06:54</code> これは1ターン目の入力と出力2ターン目の入力と出力3ターン目の入力と出力4ターン目の出力と入力5ターン目の入力と出力全てが累積されたトークンコストというのが支払われるようになっているので5ターン目のトークンコストだけを見るのではなくてこの累積されていく構造というのをきちんと理解しておく必要がありますつまり長くセッションの中でやり取りを重ねるほどトークンコストが跳ね上がっていくというこういう仕組みを理解しておく必要があります一方で一つ前のスライドで説明したようなキャッシュの仕組み自体も存在するにはするんですがやはり長時間セッションを続けてしまう方がこのキャッシュの有効性よりも勝ってしまう傾向にあるので</p>
+<p><code>07:52</code> 一つのセッションで長いやり取りは避けたいですしできるだけ定期的にタスクが切り替わるタスクをある程度切り分けられるものであれば同じセッションの中で作業をしないとかコンテキストを定期的にクリアするとかといったような工夫が必要になってくるわけですね続いて第2章コンテキスト管理に移りたいと思いますここからは代理者の前提知識みたいなものを踏まえた上でどういうことをしていけば効率的なのかトークンを節約できるのかという具体的な内容をご説明していきたいなと思いますまず一つ目ですねスラッシュコンテキストというコマンドがあります</p>
+<p><code>08:37</code> こちらをクロードコードのセッションの中で実行すると今どれぐらいのコンテキストがどういうレイヤーで使われているのか例えばレイヤーというのはクロードMDのファイルとかMCPサーバーのツールのコストツールの読み込みとかこれまでの会話履歴の積み重ねとか読み込まれたファイルの内容とかというのがコンテキストとして積み上がっていくこのコンテキストを実行することで現状把握ができるんですね今どこにこのトークンコストが多く使われているのか</p>
+<p><code>09:19</code> 例えばMCPの定義を読み込んでいるせいで思ったよりそこにトークンコストが使われているとかクロードMDファイルが肥大化しすぎているとか見えてくるのでまずはどこにコストがかかっているのかというのを可視化するところから始めるという点でこのスラッシュコンテキストコマンドの重要性をまず最初にお伝えしたいかなと思いますこれは100万トークンコンテキストを持てるモデルならあまり気にならないんですが例えば20万トークンのソネットとかでセッションを開始した時とかっていうのは</p>
+<p><code>09:57</code> 実はMCPとかクロードMDとかが最適化されてないとセッションを開始した時点でもうすでにコンテキストの使用量が30%とかになってたり気づかないうちにしたりするのでこれはなぜかというとクロードMDが肥大化しすぎてるとかそもそももう読み開始した時点でかなりのコンテキスト使用量メッセージで何も売ってないのに実はそれぐらい使われてたりとかということがあったりするのでスタートの時点で何かボトルネックになっている部分がないかとかっていうのは</p>
+<p><code>10:33</code> きちんとまず見ておいた方がいい点かなと思いますスラッシュスタッツとスラッシュステータスラインというコマンドがありましてまずスラッシュスタッツというのはトークンの使用量の統計を表示することができますねこのタスクを実行すると大体どれぐらいの使用量が支払われるのかなこういった感覚を使うこととかそのモデルを主に使っていてどれぐらいのコストを払っているのかなとかそういったトークン消費に関する統計を様々な観点で見れるようになっているので</p>
+<p><code>11:08</code> これをまず実行して自分普段どういう風なトークンの消費のされ方をしているのかなっていうのをまず確認するのと同時にこのスラッシュステータスラインというコマンドで常にクロードコードのセッションのターミナルとかで実行していればターミナルの入力欄のすぐ近くにコンテキスト使用量とか使用率こういった数値を常に表示させておくっていうのもこの2つ合わせてやっていくのがおすすめです同時ステータスラインで数値を確認しつつ定期的にこまめにスタッツで積み重なった情報というのを確認分析する改善につなげていくというのが重要ですね</p>
+<p><code>11:57</code> 続いてクリアコマンドですねこれはもう完全にコンテキストをリセットしてしまうというコマンドになっていますこれを行うタイミングっていうのはいくつかあるかなと思っていましてまず大きいところでいきますとタスクの内容が切り替わる時点でまず実行できるかなと思いますこれは先ほど最初の方で見た過去のやり取りも含めたこの累積されたトークンが支払われるという仕組みになっているので基本的にはできるだけ長時間同じセッションで作業しない</p>
+<p><code>12:37</code> 作業するとしてもクリアコマンドで定期的にコンテキストをリセットするこれが重要になってきます2つ目は重い処理から軽い処理を続けて実行するときにクリアコマンドが有効ですこれは例えば下の方にも書いてますが開発のケースで思い浮かべるとわかりやすいです何かと言いますと開発し終わった後に開発するということはコードベースを探索したり実装を行ったりしているので</p>
+<p><code>13:13</code> かなり多くのトークンを消費しているんですがその時点でコンテキストが結構溜まっているはずなんですがそのままこのコードの実装という重い作業からそのままコミットしてしまうとその重い作業で実行した際に積み重なったコンテキストはそのまま軽い作業のコンテキストに上乗せされて実行されてしまうので、本来GitDiff差分さえあればできる軽いコミット処理というのを多くのトークンを支払わなければいけないという、こういうことになってしまうので、実装完了した後はクリアしてからコミット指示した方がGitDiffさえあればコミット自体はできるので、重い処理の後の軽い処理の前にクリアを実行するというのが非常に効果的ですね。</p>
+<p><code>14:02</code> 3つ目は長時間離席した後、特に長時間離席した後、特にキャッシュ切れの場合にはリセットして仕切り直した方がいいですね。4つ目が序盤のミスを検知ということでクロードコードのセッションを開始して最初の方で自分自身が思っている感じの動きをしてくれないなとわかったらそのタイミングでもすぐクリアコマンドを実施して最初からやり直す計画モードからやり直すっていうことをした方が</p>
+<p><code>14:41</code> 起動修正させるのって結構大変でしかもトークンコストも使うので最初の時点で計画をしっかり練って進めていこうが手戻りもなくてトークンも節約できていいですよという内容ですねあとはここに書いてないんですが基本的に100万コンテキストウィンドウがあるとはいえ例えばオーパス4.7使っている場合でも20%30%ぐらいマックスが100万トークンなので</p>
+<p><code>15:15</code> 20万トークン30万トークンぐらいまでいったらそこで1回クリアをできればしたいなというこれは個人的な感覚ではあるんですができるだけコンテキストがあまり積み重なっていない状態フレッシュな状態で作業を進めていきたいので2,30%ぐらいそれもステータスラインで確認しながら2,30%ぐらい来たなというタイミングでできるだけクリアするのが私は個人的には良いかなと思っていますその方が精度が高い感覚ですね</p>
+<p><code>15:50</code> 続いてスラッシュコンパクトでコンテキストを圧縮するということですねどうしてもクリアコマンドしてしまうと全てコンテキストがリセットされてしまうので続けて作業したい場合とかっていうのが不便なんですがこのスラッシュコンパクトを実行するとコンテキストを圧縮しながら要点だけを整理して圧縮して作業を続けることができるようになりますこのスラッシュコンテキストは手動で60%ぐらいコンテキストが行ったらさすがに実行した方が良いかなと思ってますし</p>
+<p><code>16:27</code> ご説明した通り個人的にはこの60%行く前に2,30%で1回クリアコマンドをしたいなという印象ではありますどうしても本当に一つのセッションコンテキストクリアできない状態で長時間の作業をしないといけない時とかにコンパクト使うと良いかなと思います実はコンテキストが満タンになると自動でコンパクト処理が走るようになっているんですが私はこれあんまりできるだけやらない方が良いかなと思っていて</p>
+<p><code>17:04</code> 理由としてはコンテキストが満タンになっているあるいはその直前の状態っていうのは著しくやっぱりモデルの精度っていうのは落ちているのでそのモデルの精度が落ちた状態で圧縮したとしてもその圧縮の精度っていうのはどれだけ信頼できるのかなちゃんと残した要点をうまく残してくれてるのかなっていう心配というか懸念があるのであまり自動でコンパクトさせる自動で圧縮させる機能に関してはあまり信頼をしてないのでできるだけ手動でコンパクトするか</p>
+<p><code>17:42</code> クリアするかっていうのにした方が良いかなと思っています実はクリアコマンドを使いつつもできるだけ手間をかけずに作業を継続したいという場合にハンドオーバーというコマンドを一つ用意していますどういう場合に便利かと言いますと作業は引き継ぎたいものの一旦コンテキストをリセットしたいという場合に使えますどういう仕組みかと言いますと仕組み自体は簡単でこのスラッシュハンドオーバーを実行すると</p>
+<p><code>18:17</code> マークダウンを出力するようになっていますこのマークダウンには次のセッションで今のセッションで行っている作業を要約して引き継げるようにするためのまとめを出力してもらって次の新規セッションではそのファイルを参照させるような形でセッションを開始することで90%とかそのぐらいのコンテキストの削減っていうのをできるようになっているのでどうしてももう2,30%のコンテキスト使用率になりつつもただちょっとクリアだけだと作業を引き継ぐのが手間なので</p>
+<p><code>19:02</code> っていう場合にはこのハンドオーバーコマンドを使うことでコンテキストをリセットしつつも作業継続のための指示を残すことができるそれによってクリアしたいけどコンテキストがリセットされてしまうので多少精度が落ちてもこの同じセッションのまま続けてしまおうみたいなことになりにくいそういうメリットがありますコンテキストの仕組みと言いますかキャッシュのレイヤーについての知識ですねキャッシュというのはコンテキストを再利用して</p>
+<p><code>19:39</code> トークンの消費を抑えることができるっていう仕組みかなと思っていただければいいんですがこの仕組みっていうのはレイヤーが分かれていて例えばこれ一番左側は正しくはシステムになっていてシステムツールズ、クロードMD、スキルズ、メッセージズという風に左側をできるだけ変更しない方がキャッシュの構築コストを抑えることができるんですねちょっと難しい話にはなるんですが主にシステムっていうのはモデル切り替え</p>
+<p><code>20:13</code> クロードコードとかモデル本体の話になっていて例えばユーザーができる操作で当てはまるのはモデルの切り替えですねクロードコードの仕組み上キャッシュはモデルごとに作られるようになっているのでモデルごとで共有できないようになっているのでモデルの切り替え操作を行うとそのモデル切り替え先のモデルに対してキャッシュを作る必要があるのでこのモデル切り替えっていうのはそれより右側のツールとか</p>
+<p><code>20:47</code> CrowDemDとかスキルとかメッセージこれらの内容すべて新しくキャッシュを構築していく振る舞いになってしまうんですね一番キャッシュに影響する操作になっていてモデルの切り替えの次は例えばMCPサーバーのツールを追加したりとかプラグインを消したりインストールしたりとかっていうツールの操作その次がクロードMDファイルの変更とかスキル図最後にこの対話のやり取りですね</p>
+<p><code>21:20</code> クロードとのユーザーの対話のやり取りメッセージの部分になっていますなので通常のこの会話メッセージの内容をしている限りはそこに影響が出ていくだけなので大して影響は少ないんですが逆にモジュールの切り替えが一番左側に位置しているのでこれを行うことによって全てのコンテキストのキャッシュを再構築していくコストが発生するとこういうコンテキストとかキャッシュのレイヤーとかどこを変更したらどれだけ影響があるのかっていうのを</p>
+<p><code>22:00</code> 頭の片隅に入れておくことは非常に重要かなと思いますでは次がCloudMDのファイルの最適化についてですねこれはCloudMDファイルのプラクティスコンテキスト最適化の文脈でのプラクティスになるんですがCloudMDファイルっていうのは基本的に常にどんな場合でもコンテキストに読み込まれてしまうのでこれが例えば500行とか1000行とかなってしまうと常時この500行1000行のコンテキストが追加されてしまうことになります。なので常時読み込まれるものっていうのはできるだけ少なくしておくべきであるので、</p>
+<p><code>22:44</code> このクロードMD本体の行数を多くても200行ぐらい以内には抑えたいというところですね。さらにクロードMDファイルはパスフロントマターというので特定の拡張子例えばタイプスクリプトファイルが変更された時とか呼び出された時参照された時とかにのみ実行する指示という風に条件付きで読み込ませることができたりするのでこの常時読み込みっていうのをできるだけ少なくしていくさらにクロードMDファイルに常に書くのではなく</p>
+<p><code>23:21</code> エージェントスキルとかサブエージェントといった呼び出し時のみにコンテキストに上乗せされるような仕組みにクロードMDに書かれている内容をどんどん寄せていくクロードMDファイルをどんどん小さくしていくこれが割と簡単で手っ取り早くて効果も高い内容になります要は常にコンテキストに読み込まれてしまう内容をできるだけ必要時のみコンテキストに追加されるような仕組みにどんどん置き換えていく</p>
+<p><code>23:58</code> そういうことが必要になるという話ですねさらに不要なMCPサーバーが多くつながれている場合はこれはコンテキストを多く消費してしまいますmcpサーバーってものにもよるんですがすごくトークンを使用するようなツールとかもあったりしますしあとはmcpのmcpサーバーの中にはツールがすごくたくさんあるので中には結構使っているのは3割4割ぐらいでそれ以外は使ってないだけで無駄にこの読み込みにトークンコストを使っているっていう状態とかも大いにあり得るので</p>
+<p><code>24:39</code> 使ってないMCPサーバーとかツールとかっていうのはちゃんと適切に管理すべきこれをしないと本当にクロードのセッションを開始しただけでその時点で結構コンテキストを占有しているということも全然あり得るのでここの読み込みツールどういうものが読み込まれているのかとかそもそも不要なサーバーがないかとかっていうのを見直していく習慣をつけるというのが重要ですねMCPサーバーをどうしても使いたいという場合でもエージェントスキルとCLI</p>
+<p><code>25:18</code> APIでもいいんですがAPIとかCLIではダメかという風に構成に置き換えれないかというのを常に改善を検討していくというのが重要ですねMCPサーバーやMCPツールというのは先ほどお伝えした内容の通りでトークンコストがかさみやすいのでこれをエージェントスキルと内部の実装をAPIとかCLIで実行するようなものに置き換えていく例えばGitHub MCPよりもGitHub CLIのコマンドを使うような設計にしていった方が必要な処理だけを実装できますし</p>
+<p><code>26:02</code> 呼び出すときだけコンテキストに上乗せされるような最適化もできますしという感じでできるだけこのMCPと同じことが実現できる違う構成にどんどん置き換えていくっていうのが良いかなと思います。続いて第3章としてモデル選択を最適化するという話に移ります。これ少しもお触れているんですが、キャッシュ分離の罠という内容で、モデル切り替え先では切り替え元のキャッシュが使えないという、これはクロードコード自体の仕組みになっています。</p>
+<p><code>26:38</code> 例えばオーパスのセッションで10万トークンを蓄積していて、ここではキャッシュが有効になっているんですがこれをですね俳句のモデルに切り替えると俳句側にはキャッシュが存在しないのでまた新たにキャッシュを作り直すというこのコストがかかってしまうんですねこれはキャッシュっていうのはモデルごとに独立して作られるものなのでそれによって発生することなんですがこれどうすればいいかと言いますと</p>
+<p><code>27:11</code> これをもしモデルを切り替えたいのであればサブエージェントを使うというのが鉄則ですねメインのセッションはオーパスにしたまま単名なサブエージェントを立てることでサブエージェントっていうのはもともとコンテキスト最大のコンテキスト量が少ないということもありまたそのサブエージェントでの作業過程というのはメインのエージェントには返ってこないつまり結果だけが返ってくるのでメインのコンテキストに蓄積されるトークン量コンテキスト量っていうのは抑えることができるなのでこういう仕組みを使ってモデルの切り替えを行うことが推奨されます</p>
+<p><code>27:57</code> サブエージェントの話の続きで実はサブエージェントを定義するときに使うモデルを指定できるようになってるんですがこれ何も指定しないとインヘリットといってメインのセッションのエージェントを引き継承するような仕組みになっていますこれインヘリットになってしまうと簡単な作業をしようとしているのにサブエージェントのオーパスが使われてしまったりしてすごいコストが加算でしまうっていう</p>
+<p><code>28:31</code> 知らない間にコストが加算でしまうっていうことがあったりするのでサブエージェントを使うときはモデルの設定を必ず行うようにするタスクの内容に応じてこれは俳句でもできるなとかソネットの方がいいなとかっていうのをちゃんと指定してあげるのは重要ですね知らない間にオーパスが使われているっていうのが結構怖いのでさらにこのモデルの切り替えの話できちんとこの作業の難易度とかボリュームでモデルを使い分けるっていうことは重要ですね設計とか重要な判断が必要な場合はオーパス</p>
+<p><code>29:07</code> 定型作業とか簡単な質問とかファイルの検索とかに関しては俳句俳句ではちょっとやや難易度的に厳しいもののオーパスを使うほどでもない実装簡単な実装とか小中規模の実装ぐらいですかねそのあたりは基本的にソネットに任せていくこういうモデルの使い分けというのが非常に重要ですねさらにこのモデルの使い分けの文脈でもう一つありましてこのオーパスプランモードというのがすごく便利で私はよく使うんですが</p>
+<p><code>29:46</code> 設計はオーパスで実装はソネットというような自動切り替えができる機能ですねこれはsetting.jsonにモデルにオーパスプランというのを指定するとクロードコードのセッションを開始した時にシフトタブでプランモードにした時はオーパスに自動的に切り替わるようになっていて、それ以外はソネットになるように挙動が変わるような設定になっています。手動で切り替える必要がないので、基本的にはオートモードとプランモードをメインで使うことになると思うんですが、プランモードの時は自動的にオーパス、オートモードの時はソネットというようなことが勝手に切り替わってくれるので、すごく便利。</p>
+<p><code>30:33</code> おすすめですし設計にはトークンとかコストをかけてやってもらって実装の方はできるだけソネットで安く済ませるというようなことができると自然にできるというのはすごくいいですねこちらは次はモデルを変えたいならサブエージェントで移情するというのは先ほど触れた内容ですねポイントはやっぱり要約のみを親に返すようになっているので親のコンテキストを汚染しないということが実現できますしモデルの切り替えによるキャッシュの再構築のコストを抑えることができる</p>
+<p><code>31:12</code> こういうメリットがサブエージェントにはあるのでサブエージェントをいかにうまく使っていくかというのが重要になるのかなと思います次がスラッシュエフォートで推論強度を調整するという内容ですねモデルはそのままで推論にかけるトークン量だけを調整できるのがエフォートというコマンドになっていてローミディアムハイ、Xハイ、マックスとかがあったりしますオーパスを使うにしてもこの推論レベルというのをちゃんとタスクによって使い分けるっていうのが重要ですし</p>
+<p><code>31:49</code> MAXをずっと使っているとなかなかのトークンの消費のされ方をするので私はあまり相当困難なタスクとか難しいタスク以外はX-HIGHとかを使うようにしていますなので意外と見落とされがちなんですがモデルの使い分けと同じぐらいこのエフォートレベル推論強度の調整切り替えっていうのも重要ですねこれの存在を知らないとオーパス4.7でマックス使って難しい作業も簡単な作業も全部使っていると</p>
+<p><code>32:27</code> 結構見る見るうちにトークンの使用量が増えていくのでこれを押さえておくか押さえておかないかで結構変わってくるのかなと思いますねこのクロードコードというツール自体の印象も続きまして第4章として作業プロセスの習慣化ですね基本的な考え方としてある程度のタスクある程度ステップがあったりとかそこそこ難しいタスクっていうのはちゃんとプランモード計画モードで最初の要件を詰め切ってから実行に移るというのが重要ですね</p>
+<p><code>33:05</code> この習慣が重要かなと思います特に計画しないまますぐに実装に移ってしまうと手戻りが発生してしまったり軌道修正をするための無駄なトークンを消費してしまったりっていうのがすごくもったいないので自分がこう意図しているような計画と内容とクロードコードが認識している内容計画っていうのがそごがないぐらいまで一致した状態で計画を済ませてから実装に進むっていうのが</p>
+<p><code>33:41</code> 基本的なやり方として押さえておいた方が良いかなと思います私は普段このプランモードを使いつつ本当にクロードコードが不明点がなくなるまでかつ自分自身の認識とクロードコードが考えている実装内容が合致するまで複数ターン要件を整理していく深掘っていくブレイクダウンしていくということを普段していますこうした方が結局結果的に手戻りが発生せず</p>
+<p><code>34:18</code> トークンの無駄な消費もないのでこういうやり方の方がおすすめですね続いて調査はディレクトリファイル行数に絞り込むという話ですねこれは例えばコードを調査してもらったりとか既存のファイルをクロードコードに確認してもらったりとか内容を整理してもらったりとかするときに漠然とした依頼でプロジェクト全体とかコードベース全体を見てくださいみたいなことをするとこれかなりの高コストになったりあとはそもそも重要なファイルを抜け落ちたりとか</p>
+<p><code>34:54</code> かけてしまったりとかっていうリスクがあるのでできるだけこれはディレクトリとかファイルとかファイルのどの行数あたりなのかっていうのを指定してあげた方が精度ももちろん高いですしトークンのコストも低くなっていくのでできるだけ漠然とした依頼よりもディレクトリを絞りディレクトリよりもファイルを絞ってファイルよりもどこの行あたりを指しているのかっていうのを指定してあげた方が良いかなと思います続いてこれは先ほどのプランモードのところと重なるんですが</p>
+<p><code>35:29</code> 序盤のミスクロードコードが実装開始して序盤あたりで変なことを言っていたらそこから軌道修正させていくのではなくエスケープキーを押してスラッシュクリアでコンテキストリセットして再度計画モードからやり直す最初の序盤で本当にもう全然違うなと思ったらそこで最初からやり直すっていうことをした方が軌道修正させて右往左往させていくよりもよっぽどコスト的にも精度的にも良いかなと思いますので</p>
+<p><code>36:04</code> ちょっと違うなと序盤の方で感じたらもうすぐにエスケープキーでキャンセルしてスラッシュクリアでやり直すというのがおすすめですね続いて単純な質問はby the wayコマンドを使うということですねクロードコードのセッションを開いて何か長めの作業をしている時に疑問点とか出た時に今のメインのセッションの作業を継続した状態で質問をすることができるコマンドですねこのby the wayコマンドっていうのは</p>
+<p><code>36:37</code> 本筋のこのメインのセッションとは無関係な内容でも良いですしこのメインのセッションと関係のある内容例えばクロードコードが何かこのメインのセッションの作業の中で出力した内容に対しての質問とかもできますしこれの良い点というのが質問した内容っていうのがメインのセッションにコンテキストに残っていかないので全く無関係の質問とかをしたとしてもメインのコンテキストのセッションを汚染しないというメリットがあります続いて大規模調査はサブエージェントに移情するという話ですね</p>
+<p><code>37:14</code> これは何回か出てきているので良いかなと思うんですがポイントはだいたいいいですが目安としては5ファイル以上の調査はサブエージェントを使うのが良いかなと思いますね内部のアルゴリズムとか仕組みまでは分かってはいないんですが特にサブエージェントを使ってという風に指定しなくても何かコードベースの中で調査が必要な時とかっていうのは勝手に汎用のサブエージェントがクロードコードの内部で吉田に実行されたりとかっていうロジックがあったりするんですが</p>
+<p><code>37:49</code> 割と5ファイル以上とかになってくると私的にはサブエージェントを使って何かさせたいなっていうふうに思いますね第5章が自動化とかガードレールの内容になりますフックスで巨大ファイルの読み取りをガードするという話ですねこれ巨大ファイル例えば1万行とかっていう風に結構多めに書いてますが例えば3000とか5000とか1万行のファイルをバンバン読み込ませてしまうとその分だけコンテキストに上乗せされていってしまうので</p>
+<p><code>38:24</code> これはあまりそんなに頻繁にはさせたくないですねなのでFOOXといってクロードがそのファイルを読みに行く前に自動の処理としてファイルサイズを確認させて一定の敷地を超える行数のファイルに関しては読み込ませないということをすることができます基本的にはこんな1000行、1万行を超えるファイルとか5000行を超えるファイルとかっていうのはそもそも健全ではないので読み込ませたくないですしそもそもこのファイルの中身整理した方がいい</p>
+<p><code>38:58</code> 整理した方が良いかなと思うのでそういうののファイルの発見にもつながるということでこの仕組みはすごいおすすめですね次にLSPプラグインを利用してシンボル検索を行うという内容ですこのLSPっていうのはLanguage Server Protocolこれ主に開発で使うものなんですが関数とか変数の定義元にジャンプできたりする機能ですねIDEとかでよく使われているものなんですがこれができることによってシンボル検索ができるのでコードの定義にすぐジャンプしやすいんですね</p>
+<p><code>39:31</code> これがないと通常AIエージェントっていうのはGREPのコマンドで単純に例えば関数名とかで検索するだけなので定義元以外の例えばその関数が使用されている箇所とかも全部出てきてしまうので結構コンテキストが加算でしまったりとかノイズが結構多かったりするんですがこういうシンボルを元にして該当のコードにすぐにたどり着けることによって読み込むテキスト量を大幅に削減できたりとか</p>
+<p><code>40:06</code> トークンの使用量を抑えれたりするので開発を行う際はこのLSPプラグインを入れるっていうのはすごくおすすめですね次がFure Permission Prompts許可プロンプトを減らすという内容ですパーミッション設定で明示的に許可されていないコマンドというのはこのツールを実行していいですかという風にクロードから聞かれたりするようになっているんですがこのプロンプト自体もどんどんコンテキストとして積み上がっていくので定期的にFewer Permission Promptsを使って</p>
+<p><code>40:42</code> 過去のクロードとの対話のログを解析してよく使っている安全な操作っていうのは全部クロードセッティングJSONに自動追加してくれるというような内容になっていますなので設定して追加してからは許可プロンプトっていうのが出なくなるのでこれを定期的に過去のセッションを振り返らせて許可プロンプトを最適化するそれによってトークンの消費を抑えるというのもすごく効果的ですね第6章が運用とかモニタリングの内容になりますまずエージェントチームズの並列起動に価値があるのかを判定するという内容ですねこれ少し前にエージェントチームズという</p>
+<p><code>41:26</code> サブエージェントよりもより相互のエージェントが協調し合いながら一つのタスクを完遂するという高度な機能がリリースされたんですがこれ実は結構使いすぎるとなかなかのトークの使用量を使うものになっていますオーパスモデルとかでこのエージェントチームスを使うと本当にすぐに制限に変わってしまうようなレベルの代物になるのでこのエージェントチームスを使う必要性サブエージェントでは無理なのかっていうところを</p>
+<p><code>42:03</code> 検討をちゃんとした上でエージェントチームスの導入をするっていうのが重要かなと思います現に私もいろんなプロジェクトでエージェントチームスを使っていてすごく便利だなと思っていたんですがある時からトークンのコストの使用量がかなり増えてしまったので全部サブエージェントに置き換えるということをしましたなのでエージェントチームを無駄に使ってしまっていないか雑に使ってしまっていないかというのをちゃんと考えるというのが重要かなと思います次がWebダッシュボードで</p>
+<p><code>42:37</code> 使用量を定期チェックするという内容ですWebダッシュボードというのはウェブ版のcloud.aiというサイトで設定から使用量を確認することができるので私は常にその画面を一つのモニターに移して定期的にこのタスクを実行したらこれぐらいのトークンを使用するっていうのをチェックをするようにしていますあまりにもトークンを使用しすぎているタスクとかっていうのは何かおかしいところがあるはずなのでそのボトルネック改善したりとか</p>
+<p><code>43:12</code> このタスクは結構頻繁に実行しても大丈夫とかそういうのの感覚を養うためのチェックっていうのを定期的にするようにしています次がこれXのポストで見かけてすごく賢いなと思ったハック的な内容になるんですが5時間制限のサイクルを逆算してうまく制限にかからないように工夫をするという内容になるんですがクラウド上でタスクを定期実行できる仕組みが存在するのでクラウドコードには</p>
+<p><code>43:45</code> これを使って朝の5時に挨拶のプロンプトだけを投げるという定期実行させる仕組みを作っておくことで5時間制限の起点を5時にできますこれによって次の5時間制限がかかるタイミングを10時にすることができる朝の午前の10時にすることができるので自分が作業している時間帯にこの5時間制限に引っかからないように作業をフルでできるようにこの5時間制限の起点をコントロールするという内容ですね</p>
+<p><code>44:21</code> 一番嫌なのが自分が作業する時間帯の結構序盤に5時間制限がかかってしまってそこから例えば午前中に制限がかかってしまってすぐ解除されるのが15時その間5時間制限は引っかかってしまっているので使えない1週間の制限に関しては全然引っかかっていないのに5時間制限に引っかかってしまっているがためにクロードコードは使えないということは避けたいそういうことができるハックですね</p>
+<p><code>44:54</code> これは皆様のすごく便利なので使ってみていただければなと思います内容としては以上になるんですが仮にまず3つだけどれをやるというふうに 決めるとしたらまずクリアコマンドでタスク区切りでタスク区切りとか適切なタイミングでコンテキストをリセットする2つ目がクロードMDの行数を最適化するパス条件付き労働したりスキルとかサブエージェントに寄せていく3つ目がオーバースプランを使う</p>
+<p><code>45:28</code> これによってタスクの難易度に応じたモデルの自動切り替えを行うようにするこれらがまず手っ取り早くできて効果がある内容になるので皆さんもぜひまだ試していないという方はやってみていただければなと思います今まで紹介してきた31のTipsを振り返りますとコストっていうのは入力トークンかける単価足す出力トークンかける単価になっていますまずこのトークンのコスト構造を理解する</p>
+<p><code>46:02</code> そして出力のトークンコストが高いということを理解するという点が重要ですねその上で今まで説明してきたようなコンテキストの管理とかモデルの選択作業の進め方とかやり方の最適化自動化とかガードレール仕組み作り運用とかモニタリングから改善につなげていくこれらをうまく組み合わせていただければかなりトークンの節約とかコンテキストの最適化とかにつながっていくのかなと思います</p>
+<p><code>46:38</code> はいいかがでしたでしょうか今回はクロードコードのトークン節約コスト最適化をするための31のテクニックというテーマでお話しさせていただきました最近クロードコードの制限がかかってしまってなかなか作業ができないよという方は特に今回ご紹介したTipsを確認して実践していただければ効果はきっと出るんじゃないかなと思いますこの動画は少しでも面白かったためになったと思っていただけた方はぜひ高評価とチャンネル登録の方よろしくお願いします</p>
+<p><code>47:12</code> ではまた次の動画でお会いしましょう</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_適切な文章が思いつかないとき" class="internal alias" data-slug="AIプロンプト例_適切な文章が思いつかないとき">AIプロンプト例_適切な文章が思いつかないとき</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）— コンテキスト管理・モデル選択・コスト構造の実践ノウハウ</p>
+</li>
+<li>
+<p><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote）— サブエージェント並列・Agent Teams 運用の概念整理</p>
+</li>
+<li>
+<p><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（StructureNote）— 出力トークン削減・プランモード計画設計の上位概念</p>
+</li>
+<li>
+<p><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote）— フック・定期実行・5時間制限サイクル管理の自動化視点</p>
+</li>
+<li>
+<p><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote）— /fewer-permission-prompts・クリアコマンド習慣化との接続</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./🤖-Threads_Claude_Code_--name_で作業に名前を付ける" class="internal">🤖 Threads_Claude_Code_--name_で作業に名前を付ける</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

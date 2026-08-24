@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 ClaudeCodeStudio</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 ClaudeCodeStudio"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 ClaudeCodeStudio"/><meta name="twitter:description" content="𝕏 投稿情報 Claude Code Studio @ClaudeCode_love · 📅 2026-05-12 🔗 元の投稿 🖼️ メディア 📝 投稿内容 【衝撃】Anthropic公式が実践する「HTMLファースト」思考術。Claude Code活用の最適解はこれだ！ Claude Code Studio @ClaudeCode_love 突然ですが、今日みなさんの常識は崩れます。正直99%の人はClaude CodeでまだMarkdownを使っている。なんとAnthropicのClaude Codeチームの中の人が語ったのは、「それやめろ」って話でした。「もうMarkdow..."/><meta property="og:description" content="𝕏 投稿情報 Claude Code Studio @ClaudeCode_love · 📅 2026-05-12 🔗 元の投稿 🖼️ メディア 📝 投稿内容 【衝撃】Anthropic公式が実践する「HTMLファースト」思考術。Claude Code活用の最適解はこれだ！ Claude Code Studio @ClaudeCode_love 突然ですが、今日みなさんの常識は崩れます。正直99%の人はClaude CodeでまだMarkdownを使っている。なんとAnthropicのClaude Codeチームの中の人が語ったのは、「それやめろ」って話でした。「もうMarkdow..."/><meta property="og:image:alt" content="𝕏 投稿情報 Claude Code Studio @ClaudeCode_love · 📅 2026-05-12 🔗 元の投稿 🖼️ メディア 📝 投稿内容 【衝撃】Anthropic公式が実践する「HTMLファースト」思考術。Claude Code活用の最適解はこれだ！ Claude Code Studio @ClaudeCode_love 突然ですが、今日みなさんの常識は崩れます。正直99%の人はClaude CodeでまだMarkdownを使っている。なんとAnthropicのClaude Codeチームの中の人が語ったのは、「それやめろ」って話でした。「もうMarkdow..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-ClaudeCodeStudio"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-ClaudeCodeStudio"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 Claude Code Studio @ClaudeCode_love · 📅 2026-05-12 🔗 元の投稿 🖼️ メディア 📝 投稿内容 【衝撃】Anthropic公式が実践する「HTMLファースト」思考術。Claude Code活用の最適解はこれだ！ Claude Code Studio @ClaudeCode_love 突然ですが、今日みなさんの常識は崩れます。正直99%の人はClaude CodeでまだMarkdownを使っている。なんとAnthropicのClaude Codeチームの中の人が語ったのは、「それやめろ」って話でした。「もうMarkdow..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-ClaudeCodeStudio"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3368"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3368" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 ClaudeCodeStudio</a></div></nav><h1 class="article-title">𝕏 ClaudeCodeStudio</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-11T15:00:00.000Z">2026年5月12日</time><span>20 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Claude Code Studio @ClaudeCode_love</strong> · 📅 2026-05-12
+🔗 <a href="https://x.com/ClaudeCode_love/status/2054147693807874087" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="️-メディア">🖼️ メディア<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-メディア" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x/2054147693807874087_1.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_2.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_3.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_4.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_5.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_6.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_7.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_8.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_9.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_11.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_12.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_13.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_14.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_15.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_16.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_17.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_18.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x/2054147693807874087_19.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>【衝撃】Anthropic公式が実践する「HTMLファースト」思考術。Claude Code活用の最適解はこれだ！
+Claude Code Studio
+@ClaudeCode_love
+突然ですが、今日みなさんの常識は崩れます。正直99%の人はClaude CodeでまだMarkdownを使っている。なんとAnthropicのClaude Codeチームの中の人が語ったのは、「それやめろ」って話でした。「もうMarkdownではなく、HTMLで出力した方が圧倒的にいい」という話。
+なぜなら、Claude Codeの出力が高度になればなるほど、
+Markdownでは読みにくい、伝わらない、共有されない。
+一方でHTMLなら、
+・図解できる
+・色分けできる
+・タブで整理できる
+・スライダーやボタンまで作れる
+・そのままブラウザで共有できる
+つまり、Claude Codeの真価を引き出すには、
+「何を出すか」だけでなく、
+「どんな形式で出すか」がめちゃくちゃ重要になる。
+断言します。
+Claude Code時代の最適解は、
+ただのMarkdownではなく、HTMLファーストです。
+で、実際にこの記事が出る前からClaudeCodeStudioはこの方法を活用しており、スライド資料も全部1発でこのクオリティーが出るようにしています👇
+この記事を最後まで見れば、なぜそんなことができるようになるのかわかると思うのでぜひ！</p>
+<p>ところで、みなさん突然ですが、こんな経験ありませんか？
+・Claude Codeに計画書を書かせたけど、100行超えたあたりから読む気が失せた
+・Markdownの仕様書をチームに共有したけど、誰も最後まで読んでくれなかった
+・ASCIIアートの図を見て「…これ何？」となった
+・色やレイアウトで情報を整理したいのに、Markdownだと表現できなかった
+・作った計画書をSlackに貼っても、添付ファイルとして埋もれた
+これ、全部「出力フォーマットの問題」だったんです。
+Claude Codeの開発チームに所属するThariq（@trq212）が書いた記事「Using Claude Code: The Unreasonable Effectiveness of HTML」が、Xで1,100万View超えの大バズ中😳
+ThariqはAnthropicのClaude Codeチームのメンバーで、YC W20出身のエンジニア。つまり、Claude Codeを毎日最前線で使い倒している人間が「Markdownやめた」と宣言した記事です。
+今回はその内容を、具体的なプロンプト例も含めてわかりやすく噛み砕いて解説します👇
+元ポストはこちら：<a href="https://x.com/trq212/status/2052809885763747935" class="external">https://x.com/trq212/status/2052809885763747935<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+■ 𝗠𝗮𝗿𝗸𝗱𝗼𝘄𝗻の何が問題なのか
+Markdownは長年、AIエージェントと人間のコミュニケーション手段として使われてきました。シンプルで、どこでも使えて、リッチテキストもある程度書ける。Claude Codeも当然、デフォルトではMarkdownで出力します。
+でも、正直なところ心当たりありませんか？
+Claude Codeが複雑なタスクをこなせるようになればなるほど、出力される計画書や仕様書は長くなる。100行を超えたMarkdownファイルを、あなたは本当に最後まで読んでいますか？
+Thariqは記事の中でこう書いています：
+“I find it difficult to read a markdown file of more than a hundred lines.”
+（100行を超えるMarkdownファイルを読むのは難しいと感じる）
+しかも最近は、自分でファイルを編集することすら減っている。仕様書として参照したり、ブレストの出力として使ったり。編集するときもClaudeに「ここ直して」と頼む。つまり、Markdownの最大のメリットだった「人間が手で編集しやすい」という利点が、もはや意味をなさなくなっているんです。
+これは多くのClaude Codeユーザーが無意識に感じていた問題を、見事に言語化しています。
+■ 𝗛𝗧𝗠𝗟という選択肢が「異常に効果的」な理由
+Thariqが提唱するのは、Claude Codeの出力フォーマットをMarkdownからHTMLに変えること。
+「HTMLって、Webページ作るやつでしょ？」と思うかもしれません。でもHTMLの表現力は、Markdownとは比較にならない。
+具体的にHTMLで表現できるものを見てみましょう：
+・テーブルによる構造化データ
+・CSSによるデザインとカラーリング
+・SVGによるイラスト・図解
+・scriptタグによるコードスニペット
+・JavaScriptとCSSによるインタラクション
+・SVGとHTMLを組み合わせたワークフロー図
+・絶対位置指定やcanvasによる空間データ
+・画像タグによる画像埋め込み
+Thariqはこう断言しています：
+“I would go so far as to say that there is almost no set of information that Claude can read that you cannot fairly efficiently represent with HTML.”
+（Claudeが読める情報で、HTMLで効率的に表現できないものはほぼ存在しないと言い切れる）
+MarkdownでASCII図を描かせたり、Unicode文字で色を表現しようとした経験がある人は、この言葉の重みがわかるはずです。あの「フェラーリでコンビニに行く」ような非効率さから解放されるわけです。
+■ 情報密度が圧倒的に違う
+HTMLの最大の強みは「情報密度」です。
+同じ内容をMarkdownとHTMLで書いた場合、HTMLの方が圧倒的に多くの情報を、圧倒的に読みやすく伝えられる。タブで切り替えたり、色分けしたり、図を埋め込んだり。
+100行のMarkdownを読む気になれなくても、同じ情報量がタブとカラーで整理されたHTMLなら、すっと頭に入ってくる。
+これは単なる「見た目の問題」ではありません。読まれない仕様書は、存在しないのと同じ。読まれる形式で出力することは、仕事の質そのものに直結します。
+■ 共有のしやすさ
+Markdownファイルを誰かに共有しようとすると、だいたいこうなります：
+・Slackにファイルとして添付 → 誰も開かない
+・メールに添付 → 誰も開かない
+・GitHubに置く → エンジニア以外アクセスできない
+HTMLなら、S3にアップロードしてリンクを送るだけ。ブラウザさえあれば誰でも読める。モバイルでも読めるようにレスポンシブにもできる。
+Thariqの原文：
+“The chance of someone actually reading your spec, report or PR writeup is much much higher if it’s in HTML.”
+（仕様書やレポート、PRの説明がHTMLなら、実際に読まれる確率は格段に高くなる）
+これ、地味だけど実務では致命的に重要なポイントです。
+■ 双方向インタラクションという革命
+ここからがHTMLの真骨頂です。
+HTMLはただの「読むもの」ではない。操作できるんです。
+例えばデザインの微調整。Claude Codeに「スライダー付きのHTMLを作って」と頼めば、アニメーションの速度やイージング、色をリアルタイムで調整できるファイルが出てくる。気に入ったパラメータが見つかったら、「コピー」ボタンを押してClaude Codeに貼り直す。
+この双方向のやり取りは、テキストプロンプトだけでは絶対にたどり着けない精度の調整を可能にします。
+「もうちょっと右」「もう少し速く」「この色じゃない」を、言葉で伝えるストレスから解放される。スライダーを動かすだけでいい。
+■ 具体的なユースケース（プロンプト例つき）
+Thariqは記事の中で、HTMLの活用パターンを具体的なプロンプト例とともに紹介しています。これがとにかく実践的なので、そのまま紹介します。
+𝟭. 設計・計画・探索
+Claude Codeで複雑なタスクに取り組むとき、Markdownの計画書1枚ではなく、複数のHTMLファイルで「探索の網」を張る使い方。
+プロンプト例：
+「オンボーディング画面のどの方向に行くか決められない。6つの全く異なるアプローチを生成して、レイアウト・トーン・密度を変えて、1つのHTMLファイルにグリッドで並べて比較できるようにして。それぞれのトレードオフをラベルに書いて。」
+「HTMLファイルで詳細な実装計画を作って。モックアップ、データフロー、レビューすべき重要なコードスニペットを含めて。読みやすく消化しやすくして。」
+𝟮. コードレビュー・理解
+GitHubのdiff画面より読みやすいコードレビューが作れます。
+プロンプト例：
+「このPRをレビューするHTMLアーティファクトを作って。ストリーミング/バックプレッシャーのロジックに詳しくないのでそこを重点的に。実際のdiffをインラインのマージン注釈付きで描画して、重要度で色分けして。」
+Thariqは「今、すべてのPRにHTML形式のコード解説を添付している」と書いています。
+𝟯. デザイン・プロトタイプ
+Claude Designの基盤がHTMLであるように、HTMLはデザイン表現に極めて優れている。最終的な実装がReactやSwiftであっても、まずHTMLでスケッチしてから書き換えるワークフローが有効。
+プロンプト例：
+「新しいチェックアウトボタンのプロトタイプを作りたい。クリックするとアニメーションして紫に変わる。スライダーとオプションでアニメーションの各パラメータを試せるHTMLファイルを作って。うまくいったパラメータをコピーするボタンもつけて。」
+𝟰. レポート・リサーチ・学習
+Claude Codeは複数のデータソースを横断して情報を合成し、読みやすいレポートにまとめることが得意。Slack、コードベース、git履歴、インターネットを検索させて、リーダーシップ向けのレポートやインシデントレポートを作れる。
+プロンプト例：
+「レートリミッターの仕組みがわからない。関連コードを読んで、1つのHTML解説ページを作って。トークンバケットのフロー図、重要なコードスニペット3-4個に注釈付き、最後に「落とし穴」セクション。1回読んで理解できるように最適化して。」
+𝟱. カスタム編集インターフェース
+これが個人的に一番衝撃的だったユースケース。テキストボックスでは伝えにくい操作を、使い捨てのHTMLエディタで実現する。
+プロンプト例：
+「30件のLinearチケットの優先順位を整理し直したい。各チケットをドラッグ可能なカードにして、Now / Next / Later / Cutの4列に配置するHTMLファイルを作って。最初はあなたの推測で並べて。「Markdownとしてコピー」ボタンで、最終的な並び順を各バケットの理由1行付きでエクスポートできるようにして。」
+「このシステムプロンプトを調整中。左右並びのエディタを作って。左に編集可能なプロンプト（変数スロットをハイライト）、右にサンプル入力3つで、テンプレートがリアルタイムで反映されるようにして。文字数/トークンカウンターとコピーボタンをつけて。」
+この発想、すごくないですか？ 必要なUIを、その場で、その作業のためだけに生成する。再利用しなくていい。完璧じゃなくていい。でもテキストだけでやるより100倍効率的。
+■ よくある疑問への回答
+Thariqは記事の中で、HTMLに対するよくある疑問にも答えています。
+「トークン効率が悪くない？」
+→ Markdownより多くのトークンを使うのは事実。でも表現力と「実際に読まれる確率」を考えると、トータルでは効率的。Opus 4.7の100万トークンコンテキストでは、増加分は気にならないレベルとのこと。
+「生成に時間がかからない？」
+→ Markdownの2-4倍かかる。でも結果がそれだけの価値がある、とThariq本人は感じているそうです。
+「バージョン管理は？」
+→ これは正直デメリット。HTMLのdiffはMarkdownに比べてノイズが多く、レビューしづらい。現状ではHTMLの最大の弱点の一つ。
+「デザインがダサくなるんだけど？」
+→ Claude Codeのフロントエンドデザインプラグインを使うと改善する。さらに自社のコードベースをClaude Codeに読ませて「デザインシステムHTMLファイル」を作らせ、それを以降の参照元にすると、自社のスタイルに統一できる。
+■ なぜ「今」𝗛𝗧𝗠𝗟なのか
+この記事が刺さる理由は、タイミングにあります。
+Claude Codeが複雑なタスクをこなせるようになった今、出力は長く、密度が高くなっている。それをMarkdownという「テキストに毛が生えた」フォーマットで受け取り続けるのは、もはやボトルネック。
+Thariqの結論がこれです：
+“I feel much more in the loop than ever before when using HTML.”
+（HTMLを使うことで、Claudeとの協働でかつてないほど「ループの中にいる」と感じる）
+Claude Codeに任せきりにするのではなく、出力をHTMLにすることで「人間が理解し、判断し、フィードバックする」サイクルが回る。これこそがAIとの協働の本質です。
+■ 実践ポイントまとめ
+・難しいスキルや設定は不要。「HTMLファイルを作って」とClaude Codeに言うだけ
+・最初からスキルファイルを作ろうとしない。まずは素のプロンプトで試す
+・計画書、レビュー、レポート、プロトタイプなど、「人に読ませたいもの」から始める
+・スライダーやコピーボタンなど「双方向性」を意識すると効果が倍増する
+・生成されたHTMLはブラウザで開くか、S3にアップして共有
+Markdownが悪いわけではありません。でも、Claude Codeの出力がここまで高度になった今、受け取る側のフォーマットもアップグレードする時が来ている。
+まずは次にClaude Codeに計画書を作らせるとき、「HTMLで作って」と一言加えてみてください。その違いに驚くはずです。
+この記事が少しでも参考になった方へ。
+𝗖𝗹𝗮𝘂𝗱𝗲 𝗖𝗼𝗱𝗲 𝗦𝘁𝘂𝗱𝗶𝗼 @ 𝗝𝗮𝗽𝗮𝗻（@ClaudeCode_love）は、
+Claude Codeガチ勢3人で運営しているアカウントです。
+実務レベルのCLI活用・自動化を毎日発信しています。
+現在は上場企業とAIエージェントを共同開発中。
+普段の発信内容👇
+・Claude CodeやClaudeを活用したリアルなプロダクト開発事例
+・Claude Code活用／Vibe Coding／開発トレンドの整理
+・海外のClaude Codeに関する最新情報
+開発思想から設計、実装、改善まで、
+「作って終わり」ではなく動くプロダクトを世に出すところまでを
+海外の情報や１次情報をまとめています。
+ご関心のある方は、ぜひフォローしてチェックしてみてください👀有益だと思います！</p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>要約 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>@ClaudeCode_love</strong>（Claude Code Studio）による短縮URL共有のみの投稿。同アカウントはClaude Codeの活用ノウハウ・ワークフローを発信しており、質の高い情報源として継続フォロー推奨。リンク先は <code>https://t.co/alwK68bWnJ</code> で、Claude Code関連のチュートリアルまたはブログ記事と推定される。内容確認は手動展開が必要。</p>
+</div>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Claude Code関連の発信継続 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>同アカウントの投稿は良質。リンク先要確認。</p>
+</div>
+</blockquote>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① リンク先を別途確認</strong>
+短縮URLのまま。手動展開して内容把握。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）— Claude Code の活用・ワークフロー事例集</li>
+<li><a href="./AI" class="internal" data-slug="AI">AI</a>（EntityNote）— AI全般のトピック集</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1271" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#️-メディア" data-for="️-メディア">🖼️ メディア</a></li><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

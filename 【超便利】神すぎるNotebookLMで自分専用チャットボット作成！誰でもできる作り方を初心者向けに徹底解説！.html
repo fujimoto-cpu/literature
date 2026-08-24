@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！"/><meta name="twitter:description" content="📺 動画情報 【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！ 🎙️ ナオヤ@AIヲタク ・ 📅 2026-04-14 ・ ⏱️ 15分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotebookLMを使って「自分専用チャットボット」を5ステップで作り、チームに展開する方法を解説。ハルシネーションを防ぎながら、社内資料に特化した高精度Q&amp;Aボットを無料で構築できる。 🗺️ 全体像 flowchart TD A[📁 ステップ1: テーマごとにノートブック作成] --&amp;..."/><meta property="og:description" content="📺 動画情報 【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！ 🎙️ ナオヤ@AIヲタク ・ 📅 2026-04-14 ・ ⏱️ 15分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotebookLMを使って「自分専用チャットボット」を5ステップで作り、チームに展開する方法を解説。ハルシネーションを防ぎながら、社内資料に特化した高精度Q&amp;Aボットを無料で構築できる。 🗺️ 全体像 flowchart TD A[📁 ステップ1: テーマごとにノートブック作成] --&amp;..."/><meta property="og:image:alt" content="📺 動画情報 【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！ 🎙️ ナオヤ@AIヲタク ・ 📅 2026-04-14 ・ ⏱️ 15分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotebookLMを使って「自分専用チャットボット」を5ステップで作り、チームに展開する方法を解説。ハルシネーションを防ぎながら、社内資料に特化した高精度Q&amp;Aボットを無料で構築できる。 🗺️ 全体像 flowchart TD A[📁 ステップ1: テーマごとにノートブック作成] --&amp;..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！ 🎙️ ナオヤ@AIヲタク ・ 📅 2026-04-14 ・ ⏱️ 15分10秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotebookLMを使って「自分専用チャットボット」を5ステップで作り、チームに展開する方法を解説。ハルシネーションを防ぎながら、社内資料に特化した高精度Q&amp;Aボットを無料で構築できる。 🗺️ 全体像 flowchart TD A[📁 ステップ1: テーマごとにノートブック作成] --&amp;..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1832"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1832" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！</a></div></nav><h1 class="article-title">【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！</h1><p show-comma="true" class="content-meta"><time datetime="2026-04-14T15:00:00.000Z">2026年4月15日</time><span>35 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notebooklm" class="internal tag-link">notebooklm</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/chatbot" class="internal tag-link">chatbot</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【超便利】神すぎるNotebookLMで自分専用チャットボット作成！誰でもできる作り方を初心者向けに徹底解説！</strong>
+🎙️ ナオヤ@AIヲタク ・ 📅 2026-04-14 ・ ⏱️ 15分10秒
+🔗 <a href="https://www.youtube.com/watch?v=jBAfpJ8LRr8" class="external">https://www.youtube.com/watch?v=jBAfpJ8LRr8<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./NotebookLM" class="internal" data-slug="NotebookLM">NotebookLM</a>を使って「自分専用チャットボット」を5ステップで作り、チームに展開する方法を解説。ハルシネーションを防ぎながら、社内資料に特化した高精度Q&amp;Aボットを無料で構築できる。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[📁 ステップ1: テーマごとにノートブック作成] -->|1テーマ1ノートブック鉄則| B[📎 ステップ2: 知識源を追加]\n    B -->|PDF・GDocs・録音・URL全部そのまま投入| C[💬 ステップ3: 質問して精度確認]\n    C -->|ファクトチェック機能でソース明示| D[⚙️ ステップ4: カスタムプロンプトで強化]\n    D -->|役割・ルール・出力形式を指定| E[👥 ステップ5: チームで共有]\n    E -->|メールアドレス登録でリンク共有| F[🚀 業務効率化・定型質問の撲滅]&quot;">flowchart TD
+    A[📁 ステップ1: テーマごとにノートブック作成] -->|1テーマ1ノートブック鉄則| B[📎 ステップ2: 知識源を追加]
+    B -->|PDF・GDocs・録音・URL全部そのまま投入| C[💬 ステップ3: 質問して精度確認]
+    C -->|ファクトチェック機能でソース明示| D[⚙️ ステップ4: カスタムプロンプトで強化]
+    D -->|役割・ルール・出力形式を指定| E[👥 ステップ5: チームで共有]
+    E -->|メールアドレス登録でリンク共有| F[🚀 業務効率化・定型質問の撲滅]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. なぜChatGPTではなく <a href="./NotebookLM" class="internal" data-slug="NotebookLM">NotebookLM</a>か — ハルシネーション対策</p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>汎用AIは自社のルールを知らないため、存在しない社内規定をでっち上げることがある。NotebookLMはアップロードした自社資料だけを根拠に回答するため、「AIが嘘をついた」という事態を防げる。回答には必ずソース番号が付き、1クリックで原文の該当箇所を確認できる。ビジネスでの信頼性確保に直結するポイント。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 情報を混ぜないが大原則 — インプット設計がアウトプットの質を決める </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>人事資料・営業資料・プロジェクトメモを同じノートブックに入れると、AIが文脈を判断できず精度が落ちる。「1テーマ1ノートブック」を徹底し、人事サポートボット・営業アシストボット・プロジェクト管理ボットのように用途ごとに分ける。整理された資料・実績ベースのデータを入れるほどボットが賢くなる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. カスタムプロンプトでAIを専門家に変える — 設定画面の「カスタマイズされた指示」 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ノートブック設定の「カスタマイズされた指示」に役割プロンプトを書くだけで性能が大きく変わる。例：「あなたは経験豊富な人事責任者です。①ソース元の規定名と条文番号を必ず明記する ②規定にない内容は「該当記載なし」と明示する ③専門用語は初心者向けに言い換える ④関連規定を必ず1件提示する」。このプロンプトを入れると、事実だけの回答からプロの解説レベルへ引き上がる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 質問の型を指定するとさらに精度が上がる — 出力フォーマット制御 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「A案とB案の違いを教えて」ではなく「A案とB案の違いを3点で整理して」のように<strong>型を指定</strong>するだけで回答が整理される。「短期・中期・長期で」「メリット・デメリットで比較して」「結論→理由→具体例の順で」など、出力形式を明示すると自分が求めるレベルの回答が返ってくる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 明日の朝、社内AI活用ボット用ノートブックを1つ作る</strong>
+社内でよく聞かれる質問（経費申請ルール・会社のAI利用ポリシー等）に答えるボットを1つ作る。まずは1テーマに絞り、就業規則PDFかマニュアルを1〜2本だけ投入してテスト。小さく始めて確かめてから展開する。</p>
+<p><strong>② AI導入推進の説明資料をNotebookLMのソースとして登録する</strong>
+過去作成したAI導入ロードマップ・提案資料・会議メモをノートブックに投入し、「コネクトのAI導入方針を教えて」と聞けるボットにする。新メンバーへの説明コストを削減できる。</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 音楽続きって誰に聞けばいいの 前回の議事録に書いてあったはず</p>
+<p><code>00:33</code> なんだけど こうやってフォルダの奥底を探ってる時間とか すいません生産費用の締め日っていつですかみたいな マニュアルに書いてあることを毎週のように聞かれて 同じ説明を繰り返してる時間こういった探し物と 同じ説明の繰り返しに皆さんの貴重な時間が 奪われ続けてるんですでもnotebook.lmを使えば 皆さんの手持ち資料だけを根拠にして 即座に正確な回答をしてくれる自分専用のチャットボットが 作れちゃいますしかも無料で今日の動画ではたった5つのステップでチャットボットを構築し社内のチームに展開するまでの全手順をコピペで使えるプロンプト付きで解説します情報はあるのに見つけられない毎日検索ばっかりしているそんな無駄な時間を今日で終わりにしたい方は必ず今日の動画も最後までご覧ください</p>
+<p><code>01:16</code> そして本題に入る前に一つだけ今日紹介するノートブックエレムのような超便利なAIツールもっと使いこなして自分の武器にしたいとか業務効率化だけじゃなくてゆくゆくは副業とかにも活かしてみたいって思いませんかそんな方に向けて僕の公式LINEでは特別なプレゼントを用意しています今僕の公式LINEに登録してもらうとAIの基礎から学べるAI学習01ロードマップやAI副業図鑑など超実践的な15個の豪華特典を無料でプレゼントしています受け取った方からは無料なのにボリュームがすごいとめちゃくちゃ好評をいただいていますぜひ今のうちに概要欄のリンクか</p>
+<p><code>01:49</code> 画面のQRコードからサクッと登録して15大得点を全て受け取っておいてくださいそれでは早速本題に入っていきましょうはいそれでは具体的な5ステップに入る前にチャットボットならチャットGPTに聞けばいいんじゃないのと思った方いますよね僕も最初はそう思いましたでも実際にこれ仕事で試してみるとチャットGPTって自分の会社のルール全然知らないじゃんってことに気づいたんですよねチャットGPTとかジェミニみたいなチャットボットって一般的なウェブの情報をベースにそれっぽい回答を返してくるだけなので存在しない架空の社内規定を堂々とデッチ上げたりします</p>
+<p><code>02:23</code> これがよく言うハルシネーションになるんですけどAIの嘘って仕事でバレた時のダメージめちゃくちゃでかくないですかAIで効率化しますってドヤ顔したのにそのAIが嘘をついていてそれに気づかず提出したらなんてことになったらねミス以上に信頼を失っちゃいますよねこのハルシネーションの壁を超えるために必要なのが自分がアップロードした自社資料だけを根拠に応えてくれるノートブックエレムなんですそれでは実際に自分専用チャットボットを作っていきましょうはいということで早速自分専用のチャットボットを作っていきます進めていく手順はこちらです</p>
+<p><code>02:57</code> テーマごとにノートブックを作成する知識源を追加する質問して回答の精度を確認するカスタムプロンプトで性能を高めるそしてチームで共有して活用するこちらの5つですねここからは画面を見せながら一つ一つ解説していきますまずはステップ1ですねテーマごとにノートブックを作成する土台の構築をしていきますではですねノートブックLMアクセスしていただいてノートブックを新規作成してくださいこのノートブックLM使ったことがない方もいらっしゃると思いますけどこちらねGoogleアカウントあれば誰でも無料で使えますので</p>
+<p><code>03:29</code> まずGoogleアカウントを用意していただいてこちらのノートブックLMログインした上でこの新規ノートブックですね作成をしてくださいここで最初にやるのは何を入れるノートブックかを決めることです実はここかなり重要なんですけど多くの人が最初にやってしまうのがとりあえず全部入れてみるということです 人事の資料とか営業の提案書とかプロジェクトのメモなどをねこれを全部一つのノートブックにぐちゃぐちゃに入れてしまう でもそうすると ai がどの文脈で答えればいいかわからなくなってしまうんですよねノートブックエレムは読み込んだ情報をもとに回答を生成しますのでインプットの設計 イコールアウトプットの質になります情報が混ざると文脈の精度が一気に下がってしまうのでここで一つだけ絶対に守るべき 鉄則が一つあります</p>
+<p><code>04:11</code> それはですね情報を混ぜないということです必ず1テーマ1ノートブックにしてくださいこれがポイントなのでこれぜひ覚えておいてください例えばですけど就業規則とか福利構成などの人事サポートボットとかあと商談の議事録あと提案書など入れた営業アシストボットあとは要件定義とか進捗報告などを管理するプロジェクト管理ボットみたいな感じで用途ごとにノートブックを分けるのがおすすめです今回はですね人事サポートボットというものを作っていきます続いてのステップ2はですね知識源を追加するということですね</p>
+<p><code>04:44</code> ノートブックエディングに情報を入れる作業ですこれやることシンプルで手持ちの資料をそのまま放り込むだけですデータ整形しないとダメなんじゃないと思うかもしれませんけどそんなことありませんPDFをそのままアップロードとかGoogleドキュメントそのまま追加あとメモ書きのテキストなんかもそのままで大丈夫です本当に全部そのままアップロードしてもらって大丈夫です他にも会議の録音なんかもそのまま入れてもらえれば自動で文字起こししてくれますしウェブサイトのURLとかYouTubeのURLもそのまま追加できますつまりですねノートブックLMは情報収集したものを全部そのまま入れられるということなんですよね例えばですけど今回の人事用のノートブックなら就業規則とか社内マニュアルを入れます</p>
+<p><code>05:24</code> あと営業用なら過去の提案書とか成功事例集なんかを入れてくださいこんな感じで目的に合わせて資料を入れていきますここで覚えてほしいのは資料の質イコールボットの賢さに直結するということです例えば悪い例として情報が古い資料とか内容が曖昧なメモとか整理されていないデータみたいなねこういうものを入れてしまうとAIの精度落ちてしまってあまり使えないチャットボットになってしまう可能性があります逆によく整理された資料とか実績ベースのデータあと実務で使われている情報ねこういったものを入れるとかなり精度の高いチャットボットを作ることができます</p>
+<p><code>05:58</code> 入れる情報次第でただのAIにも優秀なアシスタントもなり得ますのでここは皆さんぜひ注意してみてください今回はですね人事サポートボットということであらかじめ作っておきましたこちらのソースを入れていきますまずファイル1の就業規則ですねそしてファイル2の経費交通費申請マニュアルそしてファイル3検討資料として新規人事制度A案B案といったねこちらの3つのファイルの方を追加していきますこれら3つ追加することで人事サポートボットの方を作っていきますのでこちらのドライブから先ほどのファイル3つをアップロードしていきますはい選択して挿入</p>
+<p><code>06:33</code> するとですね先ほどのファイルの方がアップロードされていますはいこんな感じでファイルの方アップロードしたら準備完了ですはい続いてステップ3です実際に質問をしてみてどれくらい正確に答えてくれるかを確認していきますこの資料を入れた時点でですねこのノートブックは自分専用のチャットボットとして完成しましたあとはですねチャット欄にここですねチャット欄に質問するだけですではですねちょっと簡単に質問していきましょうまずはね交通費の申請ルールを聞いてみましょうはいこんな感じで返答返ってきましたね交通費の申請ルールについては通勤交通費と出張交通費で</p>
+<p><code>07:06</code> それぞれ以下の規定が設けられていますと通勤交通費の申請ルールはこんな感じですと上限3万円とか一番安い定期代ですよと最も経済的かつ合理的な経路で計算してくださいよというルールがこんな感じで定められていますと返ってきましたもう一つちょっと聞いてみましょうでは次は有給休暇の日数聞いてみましょうはい返答返ってきましたね有給休暇は入社日から記算して6ヶ月間継続勤務し全労働日の8割以上出勤した場合にまずは10日間が付与されますその後は1年を計画するごとに金属年数に応じて最大20日を限度として加算して付与される仕組みですといった返答が返ってきましたでこのちゃんとね資料の中からこちら抽出してくれてるんですけども</p>
+<p><code>07:46</code> この文書の後ろに数字があるのがわかるかと思いますこの1番って書いてあるものですねこれはですね押していただくとわかるんですけどどのソースをもとにどこから情報を取ってきたのかをねしっかりとここで確認することができますはいでね今これですね元の資料のね該当箇所がそのまま表示されているんですけど前の方戻っていただくとここもですね同じようにその箇所がちゃんと明示されていますはいここから情報を引っ張ってきましたというところね見せてくれていますつまりですねAIの回答を見てそのまま根拠を確認できるっていうねこの2つの作業が1秒たった1秒でできるってことなんですねはいこのファクトチェック機能があるからこそビジネスでも安心して使えるってことになります</p>
+<p><code>08:23</code> はい次にステップ4ですこのステップ4ではカスタムプロンプトを使ってさらに性能を高めていきます。ノートブックLMってそのままでも便利なんですけど設定少し変えるだけで専門家レベルのエアに変わります。これやること簡単です。このチャット欄で指示するのではなくこの上のですねこのマークノートブックを設定とありますけどここを押していただいてこのチャットを設定という画面出しましたらここにですねカスタムとあります。これを押していただくとここにですねカスタマイズされた指示というねあなたはこういう役割ですというプロンプトを入れることができますのでここにそれを入れていくだけです</p>
+<p><code>08:58</code> 今回はこちらのプロンプトを入力していきますあなたは経験豊富な人事責任者です社員からの質問に対して以下のルールで回答してください必ずソース元の規定名と条文番号を明記する規定に記載がない内容は推測せず該当記載なしと明示する専門用語は初心者でも分かる言葉に言い換える回答の最後に関連する規定を必ず一つ提示するといってねこちらを入れるだけでAIがプロの専門家に化けますこちら皆さん入力するの大変だと思いますのでそのままコピーできる形でプレゼントさせていただきますこのプロンプト欲しい方は僕の公式LINEに登録していただいて</p>
+<p><code>09:32</code> チャットボットとカタカナで一言メッセージを送ってください自動で届くように設定しておきますではこちらで入力していきます保存してでは先ほどと同じ質問をしてみます交通費の申請ルールを聞いてみましょうそうするとどうなるかはいこんな感じで回答返ってきましたね経費交通費申請社内マニュアルの通勤交通費の申請ルール及び出張交通費の申請ルールについて交通費の申請について定められています人事責任者として初めての方にも分かりやすく解説いたしますという前振りがありましてこんな感じで先ほどよりかなり細かく書かれていますね</p>
+<p><code>10:05</code> 先ほどとの比較ですけどもはいこちらですねこちら事実だけ述べているんですけどこちらより分かりやすく具体的に解説してくれてますね引越しなどで通勤ルートが変わる場合は新しいルートに変わる月の前の月の20日までに報告してくださいよとかマイカー通勤とか自転車通勤に関するルール日割りの通勤必至給については該当記載なしという補足説明なんかも入れてくれていますかなり精度高くより初心者向けに分かりやすく回答してくれるような答えが返ってきましたさらに一段上の回答欲しいなって場合は質問の仕方少し工夫してみてください</p>
+<p><code>10:39</code> こうすると回答の質が一気に上がります例えばA案とB案の違いを教えてではなくA案とB案の違いを3点で整理してみたいに聞くだけで回答が一気に整理されて出力されます他にも短期中期長期で整理してとかメリットデメリットで比較してあと結論理由具体例の順で説明してみたいに型を指定してあげるとかなりレベルの高い回答自分が求めている回答が返ってきますなのでまず役割を設定することそして聞き方を工夫するこの2つを意識することでAIの性能は大きく向上するのでちょっとこの点意識してみてください</p>
+<p><code>11:12</code> では最後ステップ5ですねここでは完成したチャットボットを チームで共有して活用していきますここまで作ってきたチャットボットね 正直自分だけで使うのもったいないですよねこれチーム全体に共有すれば一気に業務効率が変わりますやり方としてはこの右上の共有ですねこちらのボタンをクリックしてメンバーのメールアドレスとか連絡先をここに登録するだけですちなみにこのアップロードした資料っていうのはAIの学習データには使われないのでセキュリティ的には安心ですただし社会費の機密情報とか個人情報の扱いは会社のルールに必ず従うようにしてください</p>
+<p><code>11:45</code> このチャットボットチームに共有すれば経費生産どうやるんだっけみたいな定型的な質問を全部このボットが答えてくれて業務の効率化が図れますなので担当者の負担を激減して本来やるべき仕事に集中できるようになります僕も自分専用のチャットボットを作ってからは本当情報検索の時間かなり減りました今までは自分で資料を探して読んで理解するのに10分から30分かかっていたのがノートブックLMに聞けば30秒で終わるんですよこの差が1日に何回も積み重なれば1ヶ月後1年で取り戻せる時間というのは分かり知りませんよね</p>
+<p><code>12:17</code> なので個人で使うだけでも便利なんですけどチームで使いますとこの仕組みとして機能し始めますのでぜひ自分専用のチャットボットこちらで今日の動画参考に作ってみてくださいはいいかがだったでしょうかここまでノートブックエレムの連携方法から実演そして注意点まで一気に解説してきました最後に一つここまで動画を見てくれた学習意欲の高いあなたにとても重要なお話をさせてください今回紹介したノートブックエレンもそうですが今の時代本当に便利で強力なAIツールが毎日のように登場していますでもこういった最新のAIを自分の仕事にどう活かすか一人で常に情報を追いかけて試行錯誤するのって</p>
+<p><code>12:52</code> 正直めちゃくちゃ大変じゃないですか独学だとどうやって実務に落とし込めばいいかわからない一人だと結局使わなくなって挫折しそうそんな風に感じている方も多いと思いますでも安心してくださいこの動画をここまで見てしっかり勉強している時点であなたは周りより1本も2本も進んでいます日本でAIを本格的に使いこなしている人はまだほんの一握りしかいませんだからこそ今正しい環境で学んでおけば数年後には周りととんでもない差がつきます僕が運営しているコミュニティリベラルAIでは今回のようなツールの超実践的な使い方や最新のAI活用事例を</p>
+<p><code>13:26</code> 常にメンバー同士で共有し合っていますAIを使って業務を劇的に効率化したいゆくゆくはAIを使った副業で収益を得てみたい一人ではなく同じ目標を持った仲間と一緒に学びたいそんな方はぜひ仲間と一緒に学べる環境を手に入れてくださいコミュニティの詳細や参加方法については僕の公式LINEでご案内しています少しでも気になった方は概要欄からLINEをチェックしてみてくださいねはいということで今回はノートブックエルムを使った自分専用チャットボットの作り方について解説してきましたまとめると今日から皆さんにやってほしいアクションは3つですノートブックエルムにアクセスして1つ目のノートブックを作る</p>
+<p><code>14:01</code> 一番質問が多いテーマの資料を入れチャットボットを稼働させるそしてチームメンバーにそれを共有するぜひこのアクションを実行してあの資料どこだっけとか同じ説明を何度もするというね無駄な時間は今日で終わりにしてくださいノートブックLMがあなたの代わりに記憶し検索し説明してくれます動画の中で使ったプロンプトが欲しいという方は公式LINEにチャットボットとだけメッセージを送ってください自動で届くように設定しておきます今日の動画を見て皆さんはどんな自分専用ボットを作ってみたいと思いましたか営業用でしょうか人事用それとも趣味用でしょうかぜひ一言でもいいので</p>
+<p><code>14:33</code> コメント欄で教えてくださいそしてこの動画が少しでも役に立った早速Bot作ってみると思ってくれた方はぜひコメント欄を左にスライドしてハイアプデの応援と高評価チャンネル登録をよろしくお願いしますそれではまた次回の動画でお会いしましょうバイバイまたね</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./notebooklm" class="internal" data-slug="notebooklm">notebooklm</a>（StructureNote/concepts） — NotebookLMの概要・CLI設定・活用シーン一覧</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（StructureNote/concepts） — カスタムプロンプト設計の上位概念</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts） — 社内チャットボットによる業務自動化の文脈</li>
+<li><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote/concepts） — 情報検索・定型質問撲滅による生産性向上</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote） — AI活用全般のインデックス</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-707" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./作業効率が劇的に変わる！NotebookLMの神・活用術10選【Google-AI】" class="internal">作業効率が劇的に変わる！NotebookLMの神・活用術10選【Google AI】</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

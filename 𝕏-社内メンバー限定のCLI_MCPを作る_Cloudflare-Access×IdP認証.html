@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 社内メンバー限定のCLI_MCPを作る_Cloudflare Access×IdP認証</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 社内メンバー限定のCLI_MCPを作る_Cloudflare Access×IdP認証"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 社内メンバー限定のCLI_MCPを作る_Cloudflare Access×IdP認証"/><meta name="twitter:description" content="𝕏 投稿情報（X記事） @farstep_ · 📅 2026-06-11 🔗 元の投稿 📄 X記事「社内のメンバーだけがアクセス可能な CLI / MCP を作る」（本文 7,947 字・画像 1 枚） 📝 投稿内容 社内のメンバーだけがアクセス可能な CLI / MCP を作る farstep @farstep_ · 14h Follow 4 57 648 414K 現在、スタートアップで、会社を AI Ready な状態にするための基盤システムを開発しています。目的は、Claude や Codex などの AI が、人間と同じ文脈にアクセスできる状態を作ることです。そのためには..."/><meta property="og:description" content="𝕏 投稿情報（X記事） @farstep_ · 📅 2026-06-11 🔗 元の投稿 📄 X記事「社内のメンバーだけがアクセス可能な CLI / MCP を作る」（本文 7,947 字・画像 1 枚） 📝 投稿内容 社内のメンバーだけがアクセス可能な CLI / MCP を作る farstep @farstep_ · 14h Follow 4 57 648 414K 現在、スタートアップで、会社を AI Ready な状態にするための基盤システムを開発しています。目的は、Claude や Codex などの AI が、人間と同じ文脈にアクセスできる状態を作ることです。そのためには..."/><meta property="og:image:alt" content="𝕏 投稿情報（X記事） @farstep_ · 📅 2026-06-11 🔗 元の投稿 📄 X記事「社内のメンバーだけがアクセス可能な CLI / MCP を作る」（本文 7,947 字・画像 1 枚） 📝 投稿内容 社内のメンバーだけがアクセス可能な CLI / MCP を作る farstep @farstep_ · 14h Follow 4 57 648 414K 現在、スタートアップで、会社を AI Ready な状態にするための基盤システムを開発しています。目的は、Claude や Codex などの AI が、人間と同じ文脈にアクセスできる状態を作ることです。そのためには..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-社内メンバー限定のCLI_MCPを作る_Cloudflare-Access×IdP認証"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-社内メンバー限定のCLI_MCPを作る_Cloudflare-Access×IdP認証"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報（X記事） @farstep_ · 📅 2026-06-11 🔗 元の投稿 📄 X記事「社内のメンバーだけがアクセス可能な CLI / MCP を作る」（本文 7,947 字・画像 1 枚） 📝 投稿内容 社内のメンバーだけがアクセス可能な CLI / MCP を作る farstep @farstep_ · 14h Follow 4 57 648 414K 現在、スタートアップで、会社を AI Ready な状態にするための基盤システムを開発しています。目的は、Claude や Codex などの AI が、人間と同じ文脈にアクセスできる状態を作ることです。そのためには..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-社内メンバー限定のCLI_MCPを作る_Cloudflare-Access×IdP認証"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-4325"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-4325" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 社内メンバー限定のCLI_MCPを作る_Cloudflare Access×IdP認証</a></div></nav><h1 class="article-title">𝕏 社内メンバー限定のCLI_MCPを作る_Cloudflare Access×IdP認証</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-10T15:00:00.000Z">2026年6月11日</time><span>24 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/x-article" class="internal tag-link">x-article</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li><li><a href="./tags/認証" class="internal tag-link">認証</a></li><li><a href="./tags/AI基盤" class="internal tag-link">AI基盤</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報（X記事） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@farstep_</strong> · 📅 2026-06-11
+🔗 <a href="https://x.com/farstep_/status/2064860995466809848" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 X記事「社内のメンバーだけがアクセス可能な CLI / MCP を作る」（本文 7,947 字・画像 1 枚）</p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-articles/farstep__2059957499353337856_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>社内のメンバーだけがアクセス可能な CLI / MCP を作る
+farstep
+@farstep_
+·
+14h
+Follow
+4
+57
+648
+414K
+現在、スタートアップで、会社を AI Ready な状態にするための基盤システムを開発しています。目的は、Claude や Codex などの AI が、人間と同じ文脈にアクセスできる状態を作ることです。そのためには、この基盤システムが人間だけでなく AI からもアクセスできる必要があります。
+AI にとって扱いやすいインターフェースは CLI と MCP です。ここで問題になるのが認証の仕組みです。API キーを作成して配布する方法も考えられますが、次の課題があります。
+秘密情報である API キーを AI に渡したくありません。そもそも漏洩の危険性があります。
+API キーの発行・配布・保管に手間がかかります。
+社員が入れ替わったときの失効や、有効期限の扱いを個別に管理する必要があります。
+CLI や MCP を社内メンバーだけがアクセスできるようにするという課題は、突き詰めると「API の認証をどうするか」という問題になります。
+本記事では、API キーを配布せず、API 自体を IdP 認証で保護し、その認証を CLI と MCP で共有することで、社内メンバーだけがアクセス可能な CLI と MCP を実現する構成を説明します。</p>
+<p>何を保護するのか
+この基盤の本体は、業務に必要な文脈を AI が読める形で集約した API です。これにより、人間が毎回情報を探して渡さなくても、AI が自分で文脈を読みに行けるようになります。
+この API は業務データの正本（source of truth）であり、業務情報を含みます。そのため、社内の人間と AI だけが、同じ認証のもとで参照できる必要があります。本記事が扱う CLI / MCP / API 基盤は、この集約した文脈への社内限定アクセス経路にあたります。</p>
+<p>解決の方針
+この構成の要点は、利用者や AI ごとに API キーを発行するのではなく、API 自体を IdP（Google Workspace 等）認証で保護し、その認証を CLI と MCP で共有することです。具体的には次の 2 点で成り立ちます。
+これを実現するため、API の手前に「認証をエッジで肩代わりする層」を置き、IdP にログイン済みのリクエストだけを通します。この層として、本構成では Cloudflare Access（Cloudflare が提供する、エッジでのアクセス制御サービス）を採用します。数あるアクセス制御の手段のなかで Cloudflare を選ぶ理由は次の 3 点です。
+IdP（Google Workspace 等）とそのまま連携でき、本人確認の判断を IdP に委ねられます。
+cloudflared というローカルエージェントが認証トークンの取得とキャッシュを肩代わりするため、CLI も MCP も秘密情報を持たずに済みます。
+API の実行基盤やデータベースも Cloudflare（後述する Workers / D1）で構築するため、認証から実行まで同一プラットフォームで完結します。
+この前提のうえで、構成は具体的には次の 2 点で成り立ちます。
+API を Cloudflare Access（エッジでのアクセス制御）の内側に置き、IdP で認証されたリクエストだけを通します。クライアントは Access を通過しなければ API に到達できません。
+CLI と MCP サーバを同一のバイナリで提供します。どちらの入口を使っても、同じ手順で認証トークンを取得し、同じ API を呼びます。
+「誰が社員か」の判断は IdP に一元化するため、入退社の反映は IdP の操作だけで完結します。</p>
+<p>全体構成
+中心にあるのは API です。CLI と MCP サーバは、その API を呼ぶ 2 つの入口にすぎません。重要なのは、CLI と MCP サーバが同一のバイナリである点です。CLI に専用のサブコマンド（例：<cli> mcp）を用意し、それを実行すると MCP サーバとして振る舞います。
+この基盤は次の 3 つの要素で成り立ちます。
+API（保護対象）：業務データを提供する本体です。実行基盤は Cloudflare Workers、データベースは Cloudflare D1 を使います。唯一の保護対象であり、業務データの正本です。
+CLI（コマンドライン入口）：API を呼び出すコマンドラインツールです。人間がターミナルから操作するほか、シェルを扱う AI エージェントも同じコマンドを実行します。配布の単位でもあります。
+MCP サーバ（AI ホスト向け入口）：MCP に対応した AI ホストから呼び出すための入口です。CLI と同一のバイナリが提供します。
+入口は利用者で固定されるわけではなく、状況に応じて使い分けられます。人間は主にターミナルで CLI を使います。AI は、MCP に対応したホストからは MCP を、シェルを扱えるエージェントからは CLI を直接実行します。CLI は出力先がパイプのとき機械可読な形式（JSON）へ自動で切り替わるため、AI からも扱えます。
+このため、どちらの入口も、認証・通信・データアクセスのすべてを共有します。
+入口</cli></p>
+<p>主な利用者</p>
+<p>通信形式</p>
+<p>CLI</p>
+<p>人間（ターミナル）・シェルを扱う AI エージェント</p>
+<p>コマンド実行・標準出力（パイプ時は JSON）</p>
+<p>MCP</p>
+<p>MCP 対応の AI ホスト</p>
+<p>stdio 上の JSON-RPC
+API は Cloudflare Access（エッジ）で保護され、その内側の Cloudflare Workers で動きます。</p>
+<p>前提・条件
+この構成を成立させるには、次の準備が必要です。
+IdP（Google Workspace 等）を Cloudflare Access に連携していること。
+API を保護対象とする Self-hosted Application を Cloudflare Access に作成し、アクセスポリシー（許可対象を自社ドメインやグループに限定）を設定していること。
+API 側に、検証で使うチームドメイン（issuer）とアプリケーション固有の AUD 値（audience）を設定していること。
+CLI を GitHub Packages（npm レジストリ）で配布するため、ソースとパッケージを GitHub の Organization 配下に置き、CI 実行基盤として GitHub Actions を利用できること。
+利用者が CLI をインストールする端末に、GitHub CLI（gh）・cloudflared（Cloudflare のローカルエージェント）・CLI 実行環境（Node.js 等）を導入していること。
+IdP ログインを行えない経路（外部サービスからの Webhook、外形監視のヘルスチェックなど）がある場合は、Cloudflare Access の Bypass ポリシーで対象外にできること（具体的な担保方法は後段「IdP ログインを行えない経路の扱い」で述べます）。</p>
+<p>認証の仕組み（Cloudflare Access × IdP）
+リクエストは「クライアント → Cloudflare Access → API」という一方向で流れます。Cloudflare Access が IdP と連携して本人確認を担い、API は Access が保証した認証情報を受け取って処理します。
+クライアントが API を呼ぶには、先に認証トークン（JWT）を取得しておく必要があります。手順は次のとおりです。
+クライアントがログイン操作を行い、ブラウザを開きます。
+ブラウザが Cloudflare Access 経由で IdP のログイン画面に遷移し、利用者が認証します。
+認証が成功すると、Cloudflare Access が短命の JWT を発行します。
+cloudflared がこの JWT をローカルにキャッシュし、以降のリクエストで使い回します。期限が切れたら再ログインで取り直します。
+トークンの取得とキャッシュは cloudflared が担うため、CLI 自身は認証情報（秘密鍵やパスワード）を一切持ちません。</p>
+<p>二段階の JWT 検証
+トークン取得後の API 呼び出しでは、エッジとオリジンの二段階で検証が行われます。
+クライアントは取得済みの JWT をヘッダ（cf-access-token）に載せて HTTPS で送信します。
+エッジ（Cloudflare Access）が JWT を検証します。失敗すればこの時点で拒否されます。
+検証に成功すると、Cloudflare Access はオリジン向けのリクエストに Cf-Access-Jwt-Assertion ヘッダを付与して API へ転送します。
+オリジン（API）はこのヘッダの JWT を、Cloudflare Access が公開する JWKS（公開鍵セット、/cdn-cgi/access/certs）で再検証します。このとき署名の正当性に加え、発行者（issuer ＝チームドメイン）と宛先（audience ＝アプリ固有の AUD）が一致することを確認します。
+検証に成功したリクエストだけが、API の本処理に到達します。
+オリジンでも検証する理由は多層防御です。設定ミスや想定外の経路でオリジンに直接到達した場合でも、Access を経由していないリクエストを確実に弾けます。鍵は定期的に（既定では 6 週間ごとに）ローテーションされるため、公開鍵は固定値で持たず、必ず JWKS エンドポイントから取得します。</p>
+<p>IdP を正本とするアカウント管理
+この構成では、「誰が社員か」を IdP（Google Workspace）だけで管理します。Cloudflare Access も API も独自のユーザ名簿を持たず、認証のたびに IdP の判断へ委ねます。アカウント管理の窓口を IdP 一つに集約することで、次の利点が得られます。
+入社時：IdP にアカウントを追加するだけで、CLI・MCP・Web のすべてにアクセスできるようになります。各システムへの個別登録は不要です。
+退職時：IdP からアカウントを削除（または無効化）するだけで、すべての経路へのアクセスが即座に断たれます。Access は認証のたびに IdP を参照するため、削除されたユーザは新しいトークンを取得できず、既存の短命トークンも期限切れとともに失効します。
+権限の追加・剥奪を複数システムで個別に行う必要がなく、消し忘れによる不正アクセスなどの食い違いが起きません。</p>
+<p>CLI の配布（GitHub Packages）
+CLI は単一の実行ファイルにバンドルし、GitHub Packages の npm レジストリに非公開（private）パッケージとして publish します。GitHub Packages を選ぶことで、別途レジストリや認証基盤を用意せず、ソースコードと同じ GitHub の権限管理をそのまま配布のゲートに使えます。
+配布の流れは次のとおりです。
+リリース担当がバージョンを上げ、バージョンタグを push します。
+GitHub Actions がタグ push を契機に起動し、ビルド・型チェック・publish を実行します。
+利用者は GitHub の認証を通したうえで、グローバルインストール（npm install -g <package>）します。
+接続先 API の URL は CLI に既定値を持たせ、通常は設定不要とします。別環境に向けるときだけ環境変数で上書きします。
+パッケージ名は @<org>/<name> の形式で、スコープ（@<org>）を Organization 名と一致させる必要があります。これは GitHub Packages の npm レジストリの制約です。</org></name></org></package></p>
+<p>publish 側の認証（CI）
+publish は GitHub Actions に自動発行されるトークン（GITHUB_TOKEN）で行います。このトークンはワークフローの実行中だけ有効で、終了と同時に失効します。権限はワークフロー定義で「パッケージ書き込み（write:packages）」のみに絞ります。
+この方式により、長期間有効な API トークンを secret として保管・ローテーションする必要がなくなります。タグとパッケージのバージョンが一致することを検証してから publish し、二重 publish を防ぎます。</p>
+<p>install 側の認証（Org メンバーシップがゲート）
+このアーキテクチャの要は、GitHub Organization のメンバーであることが、そのまま CLI をインストールできる条件になる点です。非公開パッケージの取得には「パッケージ読み取り権限（read:packages）を持つ Org メンバーのトークン」が必要で、Org 外の人はインストールできません。
+認証情報（トークン）の渡し方は次の 2 通りで、いずれも Org メンバーシップが前提です。
+動的取得（主）：GitHub CLI のログインセッションからトークンをその都度取り出し、環境変数経由で npm に渡します。設定ファイル（~/.npmrc）にはトークンそのものを書かず、環境変数を参照する記法だけを書きます。トークンをディスクに平文保存せず、GitHub のログアウトで自動的にインストールもできなくなる点が利点です。
+個人アクセストークン（従）：GitHub CLI を使えない場合の代替です。パッケージ読み取り権限（read:packages）を持つ個人アクセストークンを発行し、設定ファイルに保存します。なお、クラシックトークンで非公開リポジトリと連携する構成では repo スコープも必要になる場合があるため、可能なら必要権限だけを付与できる細粒度（fine-grained）トークンを推奨します。レジストリが公式にサポートする方式ですが、有効期限の管理が必要で、ファイル権限を絞る運用が前提です。
+publish 側のトークンとは異なり、install 側に書き込み権限は不要です。読み取り権限のみに限定します。</p>
+<p>配布の制限とセキュリティ境界の関係
+ここで明確にしておくべきは、パッケージの非公開化はアクセス制御の本体ではないという点です。セキュリティ境界はあくまで Cloudflare Access（IdP 認証）です。
+CLI のバイナリ自体は秘密情報を含みません。仮に流出しても、IdP 認証を通らない限り API へはアクセスできません。
+GitHub Packages の非公開化は、「無関係な人が CLI を入手・実行しようとする入口」を一段減らすための層と位置づけます。
+結果として境界が二重になります。配布のゲートが GitHub Org メンバーシップ、API のゲートが IdP 認証で、どちらも社員名簿（IdP / Org）に紐づきます。退職時に両方の名簿から外せば、入手経路も実行権限も同時に失われます。</p>
+<p>MCP の設定
+MCP サーバは、CLI と同じバイナリをサブコマンドで起動したものです。AI のホスト（Claude Desktop / Codex CLI 等）の設定ファイルに、起動コマンドとして登録します。
+json
+{
+“mcpServers”: {
+&quot;<name>&quot;: {
+“command”: &quot;<cli>&quot;,
+“args”: [“mcp”],
+“env”: { “&lt;API_URL_VAR>”: “https://<api-host>” }
+}
+}
+}
+通信方式：ホストがプロセスを spawn し、標準入出力（stdio）越しに JSON-RPC で通信します。プロトコルが流れる標準出力は専有し、ログは標準エラー出力に出します。
+遅延認証：起動時には認証しません。認証起因で起動が失敗すると、ホスト側から原因を追えなくなるためです。ツール呼び出しのたびにトークンを取得し、認証エラー（401／403）を受けたら一度だけ取り直して再試行します。
+読み取り専用：AI に公開するツールはデータの参照系に限定します。AI からデータを変更できないことを型レベルで保証します。
+設定は起動コマンドの登録だけで完結し、AI 専用の認証情報は発行しません。AI は、その端末の利用者がすでに行った cloudflared ログインのセッションをそのまま使います。</api-host></cli></name></p>
+<p>CLI と MCP が同じ認可を共有する仕組み
+CLI も MCP サーバも同じ手順でトークンを取得し、同じ API を呼びます。したがって、どちらの入口を使っても、また人間と AI のどちらが使っても、同一の IdP・同一の認可経路を通って同じデータにアクセスします。AI は、それを動かす端末利用者の身元で動くため、誰の操作かが明確で、退職時の失効も人間と同時に効きます。
+入口ごとに異なるのは、公開する操作の範囲だけです。MCP 経由で使える操作は公開するツール（参照系）に絞られ、CLI を直接使う場合は人間と同じコマンド範囲になります。ただしいずれの場合も、API 側の認可（同一の身元）を超える操作はできません。</p>
+<p>IdP ログインを行えない経路の扱い
+外部サービスからの Webhook や外形監視のヘルスチェックは、人間によるブラウザ認証を行えません。これらは Cloudflare Access の Bypass ポリシーで保護対象から外し、別の手段で正当性を担保します。
+Webhook：送信元が付与する署名（HMAC など）をオリジン側で検証します。
+ヘルスチェック：認証不要の軽量なエンドポイントを用意し、機密情報を返さないようにします。
+ローカル開発でも IdP 認証を行えないため、認証をバイパスする経路を設けることがあります。この経路は本番環境に絶対に持ち込まない運用が前提です。</p>
+<p>運用コスト
+小規模な組織であれば、IdP 以外はほぼ無料で運用できます。
+Cloudflare Access（Zero Trust）は 50 ユーザーまで無料です。
+API の実行基盤である Cloudflare Workers と、データベースである Cloudflare D1 にも無料枠があり、小〜中規模の利用であれば無料枠に収まります。
+実質的な費用は IdP（Google Workspace 等のライセンス）のみで、それも多くの組織がすでに契約済みのものを流用できます。
+つまり 50 人以下の組織なら、IdP 以外に追加コストをほぼかけずに、社内限定の API 基盤を構築できます。</p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>スタートアップで「会社をAI Readyにする基盤」を作っている著者が、APIキーを配布せず社内メンバー（人間＋AI）だけがアクセスできる CLI / MCP を構成する方法を解説。API自体を IdP（Google Workspace等）認証で保護し、Cloudflare Access をエッジ認証層として置く設計。</strong></p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>APIキー配布をやめる理由 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIに秘密情報を渡したくない・漏洩リスク・発行/保管/失効の管理コスト。認証の判断はIdPに委ね、エッジ（Cloudflare Access）でリクエストを検査する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>AIが文脈を「読みに行ける」会社 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>基盤の本体は業務文脈を集約したAPI（source of truth）。人間が毎回情報を渡さなくてもAIが自分で参照する——corinのwiki-brain思想の企業版。</p>
+</div>
+</blockquote>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① KONNEKT社内AI基盤の参考アーキテクチャ</strong>
+Recall議事録やナレッジハブを社内限定でAIに読ませる将来構成のリファレンス。Google Workspace連携前提なのでKONNEKTと相性がいい。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1742" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

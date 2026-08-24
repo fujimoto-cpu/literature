@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】"/><meta name="twitter:description" content="🎬 動画情報 【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-11 ・ ⏱️ 17分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコード単体で使うのはもう時代遅れ。OpenAIのCodex CLIをセカンドオピニオンとして連携させることで、出力品質が10倍に跳ね上がる「クロスチェック型AI活用」を非エンジニア向けに解説する動画。 🗺️ 全体像 flowchart TD A[Claude Code単体&lt;br/>日本..."/><meta property="og:description" content="🎬 動画情報 【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-11 ・ ⏱️ 17分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコード単体で使うのはもう時代遅れ。OpenAIのCodex CLIをセカンドオピニオンとして連携させることで、出力品質が10倍に跳ね上がる「クロスチェック型AI活用」を非エンジニア向けに解説する動画。 🗺️ 全体像 flowchart TD A[Claude Code単体&lt;br/>日本..."/><meta property="og:image:alt" content="🎬 動画情報 【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-11 ・ ⏱️ 17分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコード単体で使うのはもう時代遅れ。OpenAIのCodex CLIをセカンドオピニオンとして連携させることで、出力品質が10倍に跳ね上がる「クロスチェック型AI活用」を非エンジニア向けに解説する動画。 🗺️ 全体像 flowchart TD A[Claude Code単体&lt;br/>日本..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【誰でもできる】Claude-Codeで効率アップするとんでもない方法を教えます【Codex】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【誰でもできる】Claude-Codeで効率アップするとんでもない方法を教えます【Codex】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="🎬 動画情報 【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-11 ・ ⏱️ 17分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 クロードコード単体で使うのはもう時代遅れ。OpenAIのCodex CLIをセカンドオピニオンとして連携させることで、出力品質が10倍に跳ね上がる「クロスチェック型AI活用」を非エンジニア向けに解説する動画。 🗺️ 全体像 flowchart TD A[Claude Code単体&lt;br/>日本..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【誰でもできる】Claude-Codeで効率アップするとんでもない方法を教えます【Codex】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1822"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1822" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】</a></div></nav><h1 class="article-title">【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-11T15:00:00.000Z">2026年5月12日</time><span>40 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/codex" class="internal tag-link">codex</a></li><li><a href="./tags/cli" class="internal tag-link">cli</a></li><li><a href="./tags/workflow" class="internal tag-link">workflow</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🎬 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【誰でもできる】Claude Codeで効率アップするとんでもない方法を教えます【Codex】</strong>
+🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-11 ・ ⏱️ 17分9秒
+🔗 <a href="https://www.youtube.com/watch?v=t_IySHzbIaI" class="external">https://www.youtube.com/watch?v=t_IySHzbIaI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【誰でもできる】Claude-Codeで効率アップするとんでもない方法を教えます【Codex】.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>単体で使うのはもう時代遅れ。OpenAIのCodex CLIをセカンドオピニオンとして連携させることで、出力品質が10倍に跳ね上がる「クロスチェック型AI活用」を非エンジニア向けに解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Claude Code単体&lt;br/>日本語・長距離思考が強い] -->|連携| C[Claude Code × Codex&lt;br/>クロスチェックで最高出力]\n    B[Codex単体&lt;br/>短時間精密・数値・論理が強い] -->|連携| C\n    C --> D[7つの活用裏技]\n    D --> E1[1.ライティングのクロスチェック]\n    D --> E2[2.ファクトチェック・数値検証]\n    D --> E3[3.分析調査のセカンドオピニオン]\n    D --> E4[4.コーディングレビュー]\n    D --> E5[5.迷ったら両方に聞く]\n    D --> E6[6.土台はClaude・仕上げはCodex]\n    D --> E7[7.重いタスクを裏で並列実行]&quot;">flowchart TD
+    A[Claude Code単体&lt;br/>日本語・長距離思考が強い] -->|連携| C[Claude Code × Codex&lt;br/>クロスチェックで最高出力]
+    B[Codex単体&lt;br/>短時間精密・数値・論理が強い] -->|連携| C
+    C --> D[7つの活用裏技]
+    D --> E1[1.ライティングのクロスチェック]
+    D --> E2[2.ファクトチェック・数値検証]
+    D --> E3[3.分析調査のセカンドオピニオン]
+    D --> E4[4.コーディングレビュー]
+    D --> E5[5.迷ったら両方に聞く]
+    D --> E6[6.土台はClaude・仕上げはCodex]
+    D --> E7[7.重いタスクを裏で並列実行]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Claude Code と Codex の役割分担 — 強みが綺麗に補完関係 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude Codeは「長時間の熟考・日本語ニュアンス・記憶力（コンテキスト保持）・MCP拡張性（Canva/Figma/Notion/Slack連携）」が強い。Codexは「短時間の精密タスク・数値の正確性・論理的整合性・コーディング品質」が強い。ChatGPT月20ドルプラン以上ならCodex CLIが使え、GPT-5.5搭載でコーディング性能はClaudeを上回るレベルに進化している。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. CLAUDE.md にルールを1行書くだけで連携完了 — エンジニアでなくてもOK </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>CLAUDE.md</code> に「○○と相談しながら進めてと指示されたら該当CLIと協調する」と書いておけば、あとはプロンプトに「Codexと相談しながら進めて」と添えるだけでClaude Code側が自動的にCodex CLIを呼び出して掛け合いを始める。コマンド方式（エンジニア向け）は使わず、自然言語で呼ぶのが非エンジニア向けのコツ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. クロスチェック実験で 5/8 → 7/8 → 8/8 の精度向上 — 数字で証明 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ダミーのAI研修事業計画書に8つの罠（売上計算ミス・実在しない調査会社・古すぎる出典・LTV論理飛躍・CAC試算ミス等）を仕込んで検証。Claude Code単体は5/8しか検知できなかったが、Codex単体で7/8、Claude Code × Codexでは8/8全検知。さらに掛け合わせた時だけ「指摘を重要度Tier1/2/3順に整理」という上位の出力まで自発的に行った。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 7つの活用裏技 — 非エンジニアでもそのまま使える </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①ライティングのクロスチェック（日本語生成はClaude・数値と論理はCodex）②ファクトチェック・数字検証 ③分析調査のセカンドオピニオン ④コーディングレビュー（エンジニア向け）⑤迷った時は両方に聞いて最後は自分が決める ⑥土台設計はClaude・量産と仕上げはCodex（セミナー台本/スライド/LINEコピー等）⑦重いタスクは裏でCodexに並列実行させて部下Aと部下Bを同時稼働。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. Codexがない人は Gemini CLI で代用可 — Google Workspace連携者は全員使える </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ChatGPT課金していなくても、Gemini CLIをインストールすれば同じ「別モデル観点を混ぜる」効果が得られる。重要なのは「Claude Code単体で完結させない」こと。別タイプのAIの意見を混ぜると出力精度が確実に上がる、というのが今日からのアクション。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 明日の朝、<code>/Users/yuriko/Documents/corin/CLAUDE.md</code> にCodex連携ルールを1行追加する</strong>
+「Codexと相談して」「Gemini CLIと相談して」と指示されたら該当CLIを呼ぶ、というルールを追加。すでにCodex CLIは導入済み（<code>project_codex_setup.md</code>）なので、あとはCORINに呼ばせる仕組みを作るだけ。Armillary.の数字レビュー・PPTXの論理チェック・kemio企画のファクト確認で即効く。</p>
+</div>
+</blockquote>
+<blockquote>
+<p><strong>② Armillary.26SS分析PPTX・LDH BDグッズ提案の数字レビューでクロスチェック運用を試す</strong>
+売上計算・出典・論理飛躍はClaude単体だと素通りする弱点があると数字で証明された。CORINに「Codexと相談してファクトチェックして」と指示する流れを、提出前ルーチンに組み込む。¥898万/CVR4.27%系の数値資料は特に必須。</p>
+</blockquote>
+<blockquote>
+<p><strong>③ 「土台はClaude・仕上げはCodex」をデザイン制作にも応用する</strong>
+セミナー台本・LINE文面・スライド構成までClaude Codeで作って、最終仕上げと量産（バリエ展開・コピー磨き込み）をCodexに移すワークフローは、ゆりこの「デザインに時間がかかりすぎる」課題と相性が良い。次のkemio/Armillary.のコピー作成で1回試して効果測定する。</p>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> まだクロードコード単体で使ってるんですか?クロードコード単体で使うのは正直時代遅れなので早く変えた方がいいですこのクロードコードチャンネルではクロードコードの情報であったりとか最新のAI情報を発信しているチャンネルなのでぜひチェックしてみてくださいこの動画を見ているということはクロードコードを使っている方もかなり多いんじゃないかなというふうに思います今日はその天才だけが使っているクロードコードが10倍賢くなる裏技7戦という内容についてお話ししていきますでは10倍賢くなる方法で何をするか皆さん何をすると思いますか</p>
+<p><code>00:32</code> 結論めちゃくちゃシンプルです何をするかというとこちらコーデックスと連携をしますコーデックスって何かっていうとオープンAIが出しているクロードコードみたいなイメージですこの後詳細をお伝えするんですけど結論これだけでクロードコードっていうのは10倍賢くなります今日この動画でお伝えしたいことは大きく3つありますまず1個目はクロードコードとコーデックスを1セッションで連携できる状態に持っていきます2つ目はコーデックスを呼ぶ7つの裏技を教えていきます3つ目がですねさらに番外編としてジェミニCLIも呼ぶ方法っていうのをお伝えしますそもそもの前提の話ですけどクロードコードって何かっていうと</p>
+<p><code>01:10</code> アンソロピックが出している常に動くAI秘書みたいなイメージですファイルを読むこともできるしファイルを書くこともできるしさらにそのターミナルとかフォルダ整理とかの操作もできたりしますじゃあ一方コーデックスとは何かっていうとオープンAIが出しているクロードコードみたいなイメージです言ってしまえばアンソロピックが出しているクロードコードオープンAIが出しているコーデックスこのような違いしかありませんなので考え方はめちゃくちゃシンプルです言ってしまえばオープンAI製のAI秘書のようなイメージですどうやって使うかっていうとChatGPTの月20ドルプラン以上に入っている方であれば</p>
+<p><code>01:44</code> コーデックスCLIコーデックスっていうのは使うことができますさらにChatGPT側の5.5が出たことによってこのコーデックス自体もモデルを5.5が使うことができるようになってめちゃくちゃレベルが進化していますなので今日どういう使い方でクロードコードとコーデックスを使っていくかっていうとクロードコードをメインの秘書として使ってコーデックスはセカンドオピニオンみたいな感じで補佐役として使っていくっていうような使い方になりますこれをするだけでクロードコードが10倍賢くなります前提クロードコードとコーデックスでそれぞれどんな強みがあるのか</p>
+<p><code>02:16</code> どんな違いがあるのかっていうのはお話ししていきます大きく5つの観点についてお話ししていきますまず1個目から言うと短時間の精密なタスク短時間でより早い処理をするタスクに関してはクロードコードよりコーデックスの方が優れていると言われています逆に短時間ではなく長時間長い時間かけてじっくり熟考して出す出力っていうのはコーデックスよりクロードコードの方が優れていると言われますなのでまず純粋にこの処理時間によってそれぞれコーデックスとクロードコードの強みが変わってくるってようなイメージです3つ目ですね</p>
+<p><code>02:51</code> 日本語のニュアンスっていうところなんですけどこれは多分一度でも聞いたことあると思うんですけどやっぱクロードっていうのが日本語に優れているっていう風に言われてきました簡単に言ったら文章がAIぽくないっていうよううな表現が正しいかなって思います機械とかAIっぽくない言葉遣いであったりとかトーンとかそこら辺がクロードがやっぱ優れてるんですけどやっぱりこの日本語のニュアンスっていうのはコーデックスよりクロードコードの方が優れていますあとは実務の正確さっていうところですね数字であったりとか論理的な部分この正確さっていうところにおいてはクロードコードよりコーデックスの方が優れています</p>
+<p><code>03:24</code> ここは実際後ほどですね検証した出力結果っていうのがあるのでそこで実際に見ていきたいと思います最後は拡張性っていうところですねクロードコードコーデックスから外部ツールを触る窓口みたいなことをMCPと言うんですが他のいろんなツールCanvaとかFigmaとかNotion Slackとかいろんなツールを触る拡張性に優れているっていうのがクロードコードになりますなので今日これからやることっていうのはクロードコードで全てを扱うんじゃなくて場合によってはクロードコードを使うし場合によってはコーデックスの力も借りてこの両方を掛け合わせることによってより最高出力を出すっていうところをやっていきたいと思います</p>
+<p><code>03:59</code> 具体業務に対してこれはどっちのツールを使った方がいいのかっていうところをまとめてきています僕が実際非エンジニアなので非エンジニア向けに具体業務っていうのは分けています例えばライティングのところですねLINEであったり台本提案書の文章を書くっていうのはやっぱり日本語に優れているクロードコードを使うのがおすすめです逆に数時間の議事録整理とか大量データっていう長時間にわたって処理を行うことに関してはさっき言った通りクロードコードがおすすめです逆にその正確性文章の論理的なところであったりとかファクトチェックみたいな文章の正確性みたいなところは</p>
+<p><code>04:33</code> クロードコードよりコーデックスの方が正確性があるっていう風に言われていますあとはその数値の部分ですねテキストだけじゃなくて数値の部分に関してもやっぱコーデックスの方が優れていますあとはブランド等の仕上げみたいなところで記憶力みたいなところですねそこもどっちかというとクロードコードの方が記憶力がある記憶力のコンテキストを使って出力するっていうところに優れていますさらに短時間の集中タスクですね短時間でより高い出力を出すための短時間の集中タスクみたいなところはさっきも言った通りコーデックスの方が優れていたりします</p>
+<p><code>05:05</code> なのでそれぞれのコーデックスとクロードコードの強みを理解した上で使い分けをするっていうのがめちゃくちゃ大事になってきますここでのその天才が使ってる使い方っていうのはさっき言った通りクロードコードのニュアンス持続力っていうこの長距離を走る強みに対して単発的な出力を一気に出せるコーデックスっていうのを掛け合わせることによってよりいいとこ取りをした出力結果を出すっていうのがこれからやっていくことになりますここからですね実際にやり方について説明していきたいと思いますまず準備するものは2つですねまずクロードコードのインストールとコーデックスのインストールこの2つが必要です</p>
+<p><code>05:38</code> クロードコードのインストールに関してはこのクロードコードチャンネルのクロードコードのセットアップ動画っていうのがあるのでそちらを参考に入れてみてくださいさらにこの次コーデックスコーデックスCLIのインストールに関しては今回特別に今日使っているスライド資料をプレゼントとしてお渡しするのでそちらからダウンロードするようにしてくださいやり方はめちゃくちゃ簡単でチャットGPTのプロプラン20ドル以上のプランに課金していれば大体5分から10分でコーデックスのダウンロードっていうのは完了します今日ここでお伝えしたいこととしてはただCodexをインストールするだけじゃなくてクロードコードでCodexを触る必要があるのでCloud.mdと言われる</p>
+<p><code>06:15</code> クロードを扱う上でのルールブックみたいなのがありますその中にCodexと今日番外編で地味にも使っていくんですけどここの○○と相談しながら進めてと指示をされたら該当Cliと強調するっていう風に書かれてるんですけどこれをそのままコピペで大丈夫ですここでコーデックスと相談しながら進めてとかジミニシーライト相談しながら進めてっていう風な指示をするとこれだけでクロードコード上で勝手にコーデックスを読んで一緒に掛け合いをして出力をしてくれるっていうような構造になりますあと今日ここで扱うコーデックスを呼ぶ方法としてはコマンドは使いません</p>
+<p><code>06:49</code> 実はさっきのこの方法と別でコマンドを使ってコーデックスをクロードコード上で使うっていう方法もあるんですけどどっちかというとこのコマンドを使ってコーデックスを使うっていうのはエンジニア向けの内容になりますどっちかというとコーディングをすることに対して優れているのがこのコマンドだったりするので今日はコマンドは使わずに別の方法で呼び出していきたいと思いますここからが本題ですねじゃあそのコーデックスを使った裏技7選っていうのがどういうものがあるのかっていうのをちょっと一緒に見ていきたいと思いますまず1個目ですね1個目はライティングのクロスチェックっていうのを行います</p>
+<p><code>07:25</code> これはどういうことかっていうとクロードコードが強みである文書日本語生成っていうところはクロードコードに任せてその上でこの数値であったりとか論理的な部分に間違いはないのか誤りはないのかっていうのをコーデックスに見てもらうっていうこのクロスチェックをすることによってより高い出力で正確性のある出力を出すっていうようなイメージです。実際にこれクロードコード単体とコーデックス単体とクロードコードかけるコーデックスでどれだけ出力に違いがあるかっていうのを調べたのでぜひそれをですね一緒に見ていけたらと思います。やったこととしては簡単でAI研修の事業計画書っていうのを作りました。ダミーデータですね。これをもとにパターンAとしてクロードコード単体、パターンBのコーデックス単体、パターンCのクロードコード×コーデックスっていうこの3つを使ってどのくらい出力に違いがあるのかっていうのを見てみました。どのような方法でこの結果を比較したかっていうと</p>
+<p><code>08:13</code> まずこのダミーデータとしてこういう事業計画書がありますとAI研修のこういう事業計画書があってこのファイルを使って全部のパターンに統一したプロンプトを入れましたこの事業計画書のレビューして問題点を指摘してというプロンプトですパターンCの場合はコーデックスも動かすために最後にコーデックスにも相談してっていう風に言ってますこれをすることによってクロードコード内でコーデックスを呼び出してそのクロスチェックで出力をするっていうのが可能になりますただ実行するだけじゃ面白くないのでここである罠っていうのを入れました</p>
+<p><code>08:45</code> 罠っていうのは明らかに間違いなところを意図的に入れています具体的に入れたこととしては全部で8つの罠を入れてますまず1個目が数字の整合性ミスっていうところを意図的に起こしています例えばこの100社×480万っていうところをイコール5億円として事業計画書には記載しているんですけどこれって見たら分かる通り正しくは5億円いかないですよね4億8000万円になると思いますなのでこういった罠を入れたりとかあとは出店の信頼性で出在しない調査会社とかも入れてますそして3つ目は古すぎる出店っていうところですね</p>
+<p><code>09:18</code> 2019年の総務省調査っていうところで生鮮ややの登場前の実態とずれているっていうここが正しいのか悪いのかっていうのは判断できると思いますそういうような罠を8つほど仕掛けていますあとは価格戦略のトーン整合であったりLTV決算の論理飛躍計算がミスっているっていうところですねあとは営業利益率とかあとはCACの資産放棄そしてブルーオーシャンの主観的判断みたいなところで全部で8つの罠を仕掛けていますとなのでここに対してパターンA、B、Cがそれぞれどんな出力結果を返しているのかその罠をちゃんと間違えたと気づけているのかっていうのを</p>
+<p><code>09:53</code> 見ていきたいと思いますこれがですね調べるとめちゃくちゃ面白い結果になりました実際にどうなったかっていうとパターンAに関しては8つの罠のうち5つの観点で見つけることができましたクロードコード単体ですね拾えた指摘としてはこちらの5つ逆に見落としたのは売上の計算ミスとか出店の信頼性、古すぎる出店っていうのはミスだと気づかずにそのまま素通りをしてしまいましたこれがパターンAの結果になります実際に出力結果を見ていきますとこのレビューして問題点を指摘してっていう風に出てるので単純に問題点が8つ出ればちゃんと8つ理解してるし</p>
+<p><code>10:29</code> パターンAの場合今回は5つだったので5つしか理解していないというような結果になります内容としてはここのミスマッチとかブルーオーシャン、LTV計算、営業利益率そしてCACの資産が間違ってるっていうのは結果出てますけど逆に①から③っていうのはミスをしてしまってますこれはやっぱ結構問題ですよねやっぱクロードコードだけだとやっぱこの結果の出力になってしまいますじゃあ逆にコーデックス単体で見るとどうなのかコーデックス単体で見ると7⅛っていうところでかなり高く1個だけミスはあったんですけど7つの罠っていうのは気づけています</p>
+<p><code>11:03</code> 見落としたもので言うと出典の実在性だと並列リストで読みづらいBの結果だけでいくと出典の実在性っていうところだけが見落としてしまったっていうような結果になっていますなのでちゃんとですね7分の8に関してはちゃんとここが指摘だっていうところを見つけて教えてくれましたじゃあですよこのクロードコードとコーデックスを掛け合わせた上でどういう結果が返ってきたかっていうとこちらですねやっぱり8分の8ちゃんと全部の罠を検知してちゃんと指摘をしてくれてますさらにすごいなと思ったのが8分の8ちゃんと罠を見つけ出すっていうのはもちろんめちゃくちゃすごいんですけどその上で勝手に指名の順にして整理してくれてるんですよ</p>
+<p><code>11:42</code> 打ったプロンプトはパターンAパターンBと全く変わりませんただコーデックスにも相談してっていうプロンプトを加えただけでパターンAとパターンBはただの指摘だけを出してくれてたんですけどパターンCに関してはその指摘をかつ優先順位順知名度順に並べて書き出してくれましたTier1 Tier2 Tier3っていうところでここから重要度が高いですよ知名度がありますよっていうのを明確に出してくれてますこれめちゃくちゃすごくないですか単体で使っていたものだとそれ通りの回答しか出なかったんですけど掛け合わせるクロスチェックすることによってまた別の新しいさらに上を超える出力結果が返ってきてます</p>
+<p><code>12:18</code> 全部比較したサマリとしてはこのような結果になっていますそもそもこのやっぱりパターンCに行くにつれて罠の精度指摘の精度っていうのは上がってますしただ指摘するだけじゃなくてその上を超えてきてる出力結果を出すこともできてますなので皆さん多分これ見てわかりましたよねクロードコード単体コーデックス単体で使うんじゃなくてクロードコードとコーデックスを掛け合わせていかに使うかがめちゃくちゃ重要であるとなのでこれをですねぜひ皆さん使ってほしいなって思いますじゃああと残りのですね6つの事例についても簡単に説明していきます裏技2個目ですねこれはファクトチェック数字の検証ができますさっきあったようにやっぱクロードコード単体だと売上げのミスを犯してしまいました</p>
+<p><code>12:55</code> ただコーデックスも掛け合わせることによってこの数字的根拠と論理的なところも全てチェックすることができますなのでこういう感じでですねコーデックスと相談して数字と出典のファクトチェックだけお願いしますとかすればコーデックスが強いところだけ担保してくれるっていうようなイメージです次裏技の3つ目ですね分析調査のセカンドオピニオンっていうところです何かっていうとさっきやった出典の確認とかその情報が正しいのかその調査はちゃんと正しいのかっていうところを見てくれますなのでそこはちゃんとクロードコードだけの出力じゃなくてコーデックスの観点を用いてちゃんと検証出力に誤りがないかデータに誤りがないかっていうのを見てもらうということになります次4つ目ですね</p>
+<p><code>13:34</code> これはちょっとエンジニア向きになるんですけどコーディング部分のレビューっていうのもコーデックスが非常に優れていますコーディングをした時にクロードコード単体だけだとエラーが起きたりとか質として微妙なところがあるんですけどこれもこのコーデックスGPT5.5の登場によってそのコーディング部分っていうのもクロードコード上回ってるっていうような数字も出ていますなのでそこをコーデックスが最後のこのコーディング部分のレビューを行って修正してくれるとかそういったことも可能になります5つ目ですね何か迷った時はこの両方に聞くっていうのがありかなと思いますなので例えばちゃんと意見も聞いた上で</p>
+<p><code>14:09</code> 最後はじゃあどうするかっていうのをあなたが決めるみたいな使い方ができたりしますが非常におすすめですこれは単純にいいとこ取りをしてるっていうようなイメージですまずは考えるっていうフェーズ構成とか設計をするフェーズっていうのはクロードコードが非常に優れていますなのでそこはクロードコードに任せて土台を使って量産をしていくとかより深くやっていくっていうのはCodexの方が優れているのでこの使い分けをするっていうようなイメージです例えばですけどこのセミナー台本を作るとかスライド構成を作るスライド起こすとかあとはLINEとしてコピーライティングをするとかみたいなところでクロードコードで土台を作ってそこからコーデックスに移して仕上げをするみたいな使い方があってきます次7つ目ですね重いタスクは裏で走らせるっていうところですさっきも言ってる通りメインセッションはクロードコードが動いてそこにコーデックスを呼ぶっていうようなイメージです</p>
+<p><code>14:58</code> なのでクロードコードにメイン作業を任せて重いタスクとかは裏でコーデックスに走らせることによって部下Aだけが動くんじゃなくて部下Aと部下Bが並列実装するっていうことも可能だったりするので重いタスクに関しても2人を使って動かせるっていうのが非常に大事になってきますここまでがですね天才だけが使っているクロードコードを10倍賢くさせる活用事例の7線になってきますなのでまずはクロードコードにコーデックスを入れましょうそうすることによってクロードコード単体だけの意見じゃなくてCodexのよりタイプが違う優れたAIの意見も入れた上で</p>
+<p><code>15:33</code> 最高の出力っていうのを出してくれますさらに興味がある人はここまでやってください正直僕もCodexに課金できないよっていう方はジミニCLIっていうのも入れてみてくださいGWS連携してる方とかでも誰でも使えますしやっぱクロードコード単体の意見よりはジミニCLIとかいろんな違う意見も入れた方が絶対より高出力になったりするのでなので今日からやることとしてはクロードコード単体じゃなくて必ずコーデックスかジェミニシアラーを呼んでAI CLIの掛け算で最高出力を出すっていうところそこをですねやっていっていただきたいと思います今日のまとめとしては大きく3つですね</p>
+<p><code>16:10</code> クロードコード単体では最高出力を出すことはできないですとそのために何をするかっていうとコーデックスを呼びます何で呼ぶかっていうと別モデルの観点が混ざってより出力の精度が上がるからです呼び方っていうのはめちゃくちゃ簡単ですとCodex CLIをインストールしてCodexと相談してっていうのをプロンプトに足せば誰でもCodexとクロードコードを掛け合わせて使うことができます今日このスライドの特典はプレゼントしますのでそこからCodexのインストールないしクロードコードと掛け合わせてですねまずはライティングのクロスチェックでも大丈夫ですその2つを使うところから</p>
+<p><code>16:44</code> ぜひ始めてみてくださいこの動画の特典に関してはこの動画の概要欄かもしくはLINEから受け取ることができるのでぜひですね気になった方はそこから受け取ってみてくださいまたこのクロードコードチャンネルに関してはクロードコードの具体的な使い方とか応用編活用方法とか最新AI情報とかも発信しているのでチャンネル登録といいねをお願いしますではまた次の動画でお会いしましょう</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — Claude Code本体の概念ページ</li>
+<li><a href="./2026-04-14-claude-prompt-workflow" class="internal" data-slug="2026-04-14-claude-prompt-workflow">2026-04-14-claude-prompt-workflow</a>（StructureNote） — プロンプト運用ワークフローの横断まとめ</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（StructureNote） — Claude系エージェント運用</li>
+<li><a href="./PR手段としてのYouTube" class="internal alias" data-slug="PR手段としてのYouTube">PR手段としてのYouTube</a>（PermanentNote） — YouTube活用観点</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-702" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

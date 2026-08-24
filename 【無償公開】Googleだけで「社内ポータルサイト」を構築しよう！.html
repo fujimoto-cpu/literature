@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！"/><meta name="twitter:description" content="📺 動画情報 【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！ 🎙️ こーすけ先生のGoogle塾 ・ 📅 2026-08-07 ・ ⏱️ 19分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 GAS（Google Apps Script）だけでGoogle Workspace公式にはない「社内ポータルサイト」を無償構築する解説動画。Gmail・カレンダー・Drive・Googleグループなど各サービスを1画面に統合し、アクセスした本人ごとに表示が変わる個人化ポータルを実現。近日GitHubで導入手順込みで無償公開予定。 🗺️ 全体像 fl..."/><meta property="og:description" content="📺 動画情報 【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！ 🎙️ こーすけ先生のGoogle塾 ・ 📅 2026-08-07 ・ ⏱️ 19分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 GAS（Google Apps Script）だけでGoogle Workspace公式にはない「社内ポータルサイト」を無償構築する解説動画。Gmail・カレンダー・Drive・Googleグループなど各サービスを1画面に統合し、アクセスした本人ごとに表示が変わる個人化ポータルを実現。近日GitHubで導入手順込みで無償公開予定。 🗺️ 全体像 fl..."/><meta property="og:image:alt" content="📺 動画情報 【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！ 🎙️ こーすけ先生のGoogle塾 ・ 📅 2026-08-07 ・ ⏱️ 19分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 GAS（Google Apps Script）だけでGoogle Workspace公式にはない「社内ポータルサイト」を無償構築する解説動画。Gmail・カレンダー・Drive・Googleグループなど各サービスを1画面に統合し、アクセスした本人ごとに表示が変わる個人化ポータルを実現。近日GitHubで導入手順込みで無償公開予定。 🗺️ 全体像 fl..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！ 🎙️ こーすけ先生のGoogle塾 ・ 📅 2026-08-07 ・ ⏱️ 19分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 GAS（Google Apps Script）だけでGoogle Workspace公式にはない「社内ポータルサイト」を無償構築する解説動画。Gmail・カレンダー・Drive・Googleグループなど各サービスを1画面に統合し、アクセスした本人ごとに表示が変わる個人化ポータルを実現。近日GitHubで導入手順込みで無償公開予定。 🗺️ 全体像 fl..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1750"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1750" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！</a></div></nav><h1 class="article-title">【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-07T15:00:00.000Z">2026年8月08日</time><span>45 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/google-workspace" class="internal tag-link">google-workspace</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【無償公開】Googleだけで「社内ポータルサイト」を構築しよう！</strong>
+🎙️ こーすけ先生のGoogle塾 ・ 📅 2026-08-07 ・ ⏱️ 19分0秒
+🔗 <a href="https://www.youtube.com/watch?v=gQdnlAZ2iqE" class="external">https://www.youtube.com/watch?v=gQdnlAZ2iqE<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>GAS（Google Apps Script）だけでGoogle Workspace公式にはない「社内ポータルサイト」を無償構築する解説動画。Gmail・カレンダー・Drive・Googleグループなど各サービスを1画面に統合し、アクセスした本人ごとに表示が変わる個人化ポータルを実現。近日GitHubで導入手順込みで無償公開予定。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Google Apps Script] --> B[Gmail/Drive/Calendar連携]\n    A --> C[Googleグループ=掲示板]\n    A --> D[ユーザープロパティ=個人設定保存]\n    B --> E[ポータル画面]\n    C --> E\n    D --> E\n    E --> F[かんばんボード⇄個人ToDo同期]\n    E --> G[決裁申請フロー=マイルート]\n    E --> H[モバイル対応UI]&quot;">flowchart TD
+    A[Google Apps Script] --> B[Gmail/Drive/Calendar連携]
+    A --> C[Googleグループ=掲示板]
+    A --> D[ユーザープロパティ=個人設定保存]
+    B --> E[ポータル画面]
+    C --> E
+    D --> E
+    E --> F[かんばんボード⇄個人ToDo同期]
+    E --> G[決裁申請フロー=マイルート]
+    E --> H[モバイル対応UI]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. GASが核 — 個人ごとに見え方が変わる理由 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Googleサイトのカレンダー部品は「作成者が選んだ1つのカレンダー」が誰にでも同じ表示になってしまう。GASでGoogleサービスに直接アクセスして構築することで、アクセスした本人自身のGmail・カレンダー・Driveがそのまま表示される「個人化ポータル」を実現している。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. ウィジェット配置とテーマは個人設定でカスタマイズ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>個人設定画面からテーマカラー（Google4色＋会社のコーポレートカラー）とウィジェットの表示位置・幅（25/50/70/100%）を自由に変更できる。設定はスプレッドシートではなくGASの「ユーザープロパティ」に保存される。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 掲示板はGoogleグループを流用 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>掲示板ウィジェットの正体はGoogleグループ。自分が所属するグループを選ぶだけで投稿一覧が表示され、投稿者への返信・全員への返信も可能。掲示板ブロックは最大5つまで作成でき、全社／部署／有志グループなど階層別に使い分けられる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. マイルート設定＝決裁ルートのテンプレート化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>稟議・決裁の際に「まず共覧→次に承認」といったルートを、個人用 or グループ共有のテンプレートとして事前登録できる。申請時にテンプレートを選ぶだけで承認者・共覧者が自動で入力される。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. かんばんボードは個人ToDoと双方向連携 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ポータル上のタスクボードで追加したタスクはGoogleの個人ToDoリストにも自動反映され、完了操作もボード⇄ToDoで同期する。ToDo経由でスマホ通知も受け取れる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>6. 会議室検索・横断検索・モバイル最適化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>グループカレンダーから空き会議室を時間・キーワードで検索して予定作成まで一気通貫。Googleクラウドサーチでポータル上から横断検索も可能。モバイルでは検索窓を常時表示せず、アイコンタップでポップアップ表示にするなど片手操作を意識したUIになっている。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 社内ポータル的な情報集約の考え方をAI推進提案に転用する</strong>
+KONNEKT社内で「Gmail・カレンダー・Notion・タスクが散らばってる」という声が出たら、GAS一本で作れる社内ポータルの事例として紹介できる。GitHub公開後に手順書が出たら<code>ai/</code>フォルダに保存して社内AI推進のネタにする。</p>
+<p><strong>② 「個人ごとに見え方が変わる」設計思想はCockpit設計にも応用できる</strong>
+ゆりこが自作しているTaskForge/Cockpitも「本人のGoogleカレンダー・タスクだけを表示する」個人化の思想が近い。この動画のGAS実装アイデア（ユーザープロパティで個人設定保存）は今後の機能追加時の参考になる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちは、こすけ先生です。こすけ先生、普段こんなこともやっているので、気になる方はチェックしてみてください。今日はですね、以前皆さんにご紹介いたしましたGoogleワークスペースにおけるポータルサイトがですね、ついに私の中ではですよ、私の中ではだいぶ完成をしましたと。で、この後、ジェミニとですね、脆弱性とかがないかなとか、コーディング上セキュアになっていないところがないかっていうのをチェックをかけた上で、GitHub上でですね、公開させていただければというようなところでございます。もうGitHubの方に公開したらですね、導入手順とかも含めて全て皆さんに無償でですね、やらせていただきますので、ぜひ使っていただければというところで、今日はこのGoogleワークスペースポータルがどんな振る舞いをするのかとかですね、</p>
+<p><code>00:40</code> これだったらうちの会社でもであったりだとか、うちの庁舎でも使えるかなっていうようなところをですね、ご覧いただければというところでございます。それではGoogleワークスペースポータルサイトということでやってまいりましょう。そもそもこのGoogleワークスペースポータルというのをなぜ作ろうと思ったかというとですね私はまずGoogleワークスペースは最強のプラットフォームかなというふうに思っておりますそれこそコミュニケーションツールとしてですねメールとかミート、チャット、カレンダーだったりとかそういったものがあったりとかあとはこういったドライブの中にですねドキュメント、スプレッドシート、スライド</p>
+<p><code>01:15</code> Googleサイト、Googleフォーム、Googleビッツだったりとか様々なですね作成が行えて全てはコラボレーションツールになっているとさらにジェミニこれジェミニノートブックですねもうノートブックエレムって書いちゃってますけれどもAIとインテリジェンスというところでこういったものもありますよとこういったものが全てですね揃うクラウド時代の働き方プラットフォームということでですね私はもうGoogleワークスペースを愛してやまないというようなものでありますがよく言われるのはGoogleワークスペースをグループウェアとして入れてるとただポータルサイトがないよねと例えばこういったGoogleサイトというのを使えばですねポータルっぽいものはもちろん作れるんですよ</p>
+<p><code>01:49</code> 簡単にGUIで作れるんですけれど例えばGoogleサイトのカレンダーという部品がありますアイテムがありますこれをGoogleサイトに埋め込むってやるとですね例えば私が今Googleサイトを扱っていてカレンダーを押すと私が参照できるカレンダーのどれを埋め込むんですかっていう形になるわけですよつまり私がGoogleサイトにアクセスした場合と別の方がアクセスした場合に同じカレンダーになっちゃうんですね本来は自分自身のカレンダー見たいわけじゃないですかでもそうはならないというところもあってですねポータルサイトがないよねっていうようなことはかなり言われることが多いんですね</p>
+<p><code>02:21</code> なのでじゃあ私が作ろうということでもう一タッチですねこういったGoogleワークスペースのポータルサイトというのを作らせていただきましたじゃあ何を使ったかというとGASを使って構築をしておりますGoogle Apps Scriptというものを使って構築をさせていただいているとなぜGASを使ってそういった構築ができるのかといえばGASはですねもうほぼ全てのGoogleサービスに柔軟に対応ができるんですねGAS自体はですねもうそもそもがGoogleのサービスですよとそうするとGoogleの例えばGmailとかGoogleドキュメントスプレッドシートフォーム</p>
+<p><code>02:53</code> ドライブそういったものに対してアクセスも容易にできるということであればカレンダーもちゃんと取れるよねだったりだとかGoogleグループとかも取れるよねっていうのを確認しながらですねあれじゃあこうやったらこういうポータル作れるなっていうのがどんどん分かってきたので今回作らせていただいたというようなところでございますそれではですねついにお披露目ということでご覧いただければと思いますこちらがですね実際の私が作ったですねGoogleワークスペースポータルというような形になっていますこの並び順というのは別に強制ではなくてですねじゃあ一つ目の機能としてこの並び順というのを変えるというのをですね</p>
+<p><code>03:26</code> やってみましょうかメニューの方からですね個人設定というのをやっていただくとこんな形になっていますここ上で例えばテーマカラーというのもですねこれGoogleカラーが青赤黄色緑というような形で揃っていてかつここにあるのは弊社のですねいわゆるコーポレートカラーというのもせっかく我々が作ったので入れさせていただいているというようなところですここからテーマカラーとかこう選んでいただいたりだとかっていうのもできたりあとはこの下ですねこれが先ほどのウィジェットと呼ばれるものの配置を変える部分になってきます例えば先ほどのではなくて掲示板は左側に表示したいなってことであれば一番上に上げてもらって何パーセントか25、50、70、100から選ぶような形ですね。掲示板は左側にちょこんと表示してくれればいいよということであれば25%だったりだとかにするような形ですね。こんな形にすると、じゃあこれで一回保存かけてみましょうか。</p>
+<p><code>04:13</code> 保存してポータルに戻るというような形にすると、この個人設定が保存されてポータルが、分かりますかね。先ほどまでこれが真ん中にあったかと思うんですが、それが25%表示でここに来るというような形です。自分自身でですねウィジェットをどこに配置するかというのももちろん変えられるというようなところですちなみにですね先ほどこの掲示板というふうに申し上げましたけれどこれはGoogleグループというのを使っておりますのでご自身のアカウントが所属しているグループというのをここから選ぶような形ですね選んでいただいてそれの表示があのような形でされるというような流れになっております</p>
+<p><code>04:48</code> 一応例えば全庁の全社の掲示板とあとは部の掲示板とかがもしかしたらあるかもしれないので掲示板機能に関しては最大ですね掲示板ブロックを5つまでは作ることが可能ですなので前者の掲示板そして部の掲示板仲間内で作ったグループの掲示板とかそういったものを配置するのもありなんじゃないかなというようなところですねここはですねうまくGoogleグループを使って掲示板を作っていただければというようなところです次にですねちょっと個人設定の中でいくつか特徴的な機能を申し伝えますとですね</p>
+<p><code>05:21</code> ここにマイルート設定というのがありますこれが何かというとここに申請するボタンがあるかと思いますがいわゆる決済ですね決済を行う時に何か文章を付けて誰々に対して決済を行うってあると思うんですがその中でやはり決済ルートってあると思うんですね評覧だけでよかったりだとか承認っていうのもあるかと思いますのでそういったものをテンプレートとして登録する機能っていうのがこちらになってきますここでルート作成っていうのを押してもらうとデータベース準備とこれ何をしてるかというとですねルート設定は全てスプレッドシート側に書き込むというような仕組みを取っておりますのでそのデータベースの準備をまずはしているというようなところです</p>
+<p><code>05:58</code> 準備が終わるとですね例えば新しいルートを追加するとここでテンプレートの名前ですねこれじゃあMyRouteみたいな形にしておきましょうこれを個人用のテンプレートとして使うのかもしくは所属しているグループ全体で使うのかであったりだとかあとは期間設定ですね期間が5年なのかとか日付設定いわゆるいつまでこの申請を保存するかというようなものになってきますこれを選んでいただいてそしたらこの下がですねまさに決済ルートになりますので例えばまず評覧で皆さんに見てほしいなということであれば対象のグループアドレスというのを付けてですね</p>
+<p><code>06:32</code> 新しいステップを追加でその個人に対して承認を依頼したいよということであればこんな形で予測入力というのもできますグループを選んだ場合はご自身が所属しているグループアドレスが出てきます個人を選んだ場合は自分自身も含めてそのグループに所属しているメンバーのアドレスというのが全て出るような形になっていますそのグループに属していない方を個人でですね共覧とか承認とかさせたい場合はそれはもう個別にここでメールアドレスを入力していただくというような形になってまいりますじゃあ今回こういった共覧承認</p>
+<p><code>07:04</code> 共覧はグループに対して承認個人に対してというようなものをルートとしてですね保存しておこうというような形でどんどんどんどん決済ルートというのを作り上げるそしてそれを保存する機能というのもありますこれがマイルート設定でウィジェットは先ほど言った通りですね下に行くとワッフルメニューのリンク設定ということでいわゆるですねこのここですねこのワッフルボタンを押した時のこういったところになってきますと皆さんも見てわかるようにですねGoogleのですねワッフルボタンをかなりイメージして作ったものになっておりますがここでですね例えば私こういった並びにしてますけれどもそうではない並びというのも</p>
+<p><code>07:38</code> もちろんこんな形で変えられることはできますもともとここに表示されているのは別にはなるんですけれどスター設定というのがまずありますこれは管理者だけが表示されるような仕掛けになっているんですがこのマスター管理のところでこういったリンクマスター管理というのがまずありますこれがマスターとなって個人側でそれが表示されてそれぞれ入れ替えができるというような形ですこれ以外にも独自リンクということで自分だけが表示するリンクというのもここで追加することは可能ですというような形ですね必要なものだけを表示すればいいというような考え方なので</p>
+<p><code>08:13</code> 不要なものはこんな形で排除をしていくというような形にするとよろしいかなと思います必ずですねそういった変更を行った場合はこの保存してポータルに戻るというようなものを押してもらうとこれで初めて個人設定が保存される個人設定の保存先はプレートシートというわけではありません個人設定はですねGASのユーザープロパティというところがあるのでそのユーザープロパティに書き込みをしているとそうすると先ほどと違ってワッフルボタン減りましたよねワッフルボタンから表示されるメニューも減ったと思うんですがこんな形で個人が何を表示させたいかというのもポチポチポチポチですね選んでいただければというところでございます</p>
+<p><code>08:48</code> さらに下に行くとですね防災運行情報の設定ということで例えば会社で働いている時に例えば私だと北千住に住んでいて北千住で仕事してますけれど例えば出張に行った時とかに帰りのうちの近くの天気どうだろうとか会社近くの天気どうだろうっていう時のエリアというのを選んでいただいてまた運行情報とかもですねデフォルトでいくつかこれはこのGoogleワークスペースポータルとして設定したものっていうのが出てくるような形ですけれどこれも独自リンクは追加できますのでそういったものをどんどん追加していただければというところです</p>
+<p><code>09:19</code> これ保存してポータルに戻るというような形にするとじゃあどう見えるかということでご覧いただくとですねここに防災運行情報私の場合はここのウィジェットにあるんですがこんな形で天気のですね概要ですね概要レベルっていうのは気象庁からこれ取ってきてる情報ですけどこんな形で見えますでこのリンクボタンですねこれを押すと千葉県の代表地をですね井戸経路として指してそこの雨雲ズームレーダーがこんな形で見えるというような仕掛けになってますので最近ゲリラ豪雨とか多いじゃないですかその時は例えば帰りどうかなーってこう見てもらってですね</p>
+<p><code>09:51</code> そこからちょっと動かしてみた時に今日は1日大丈夫そうだなとかっていうのをご確認いただくとよろしいんじゃないかなと思います運行情報もですねこんな形でリンクに飛ぶような仕掛けになっておりますのでこれも合わせてお使いいただければなというところでございますでですねちょっとこの上の部分を先に話す前に下ですね下がこれが未読メールとなってますけど正確にはメール一式ですねメールが表示されるでフォーカス当てるとですねこんな形でざっくりした表示というのがポップアップで出てきますのでこれご覧いただいてもいいですしこれクリックすればGメールがですね個別メールの画面というのが</p>
+<p><code>10:26</code> 立ち上がるような形になっておりますのでこんな形でですね個別の画面がですね立ち上がりますのでここからいつものように返信するのか転送するのかとかですねもしくはラベルつけるのかとかやっていただければと思いますここはもうGメールの方のテリトリーなのでご自由にお使いいただければとあとはこれGoogleドライブですねGoogleドライブも最近更新があったものとかですねマイドライブとか共有ドライブのあくまでも一部ですよ一部のフォルダーっていうのを出すような仕掛けになっておりますのでこれですねちょっと使いづらいなという時はこうしてもらえればGoogleドライブが普通に開くような形なのであくまでも補助としてですね</p>
+<p><code>10:59</code> 使っていただければというところです右側カレンダーですねこういうカレンダーはビューをするためのカレンダーになっていますのでここから追加というのはできないです追加したい場合にはここから飛んでいただいて同じくカレンダー画面にてですね予定を追加していただければというところでございますこれが下側ですね私で言うと下側なんですがメールとかドライブとかカレンダーとかあとはこの真ん中にあるのが掲示板というような形です掲示板を押してもらえるとですねその中身が表示されてそれに対して投稿者に返信するのか全員に返信するのかというのが選べるというような形です</p>
+<p><code>11:33</code> 特徴的な機能をですねいくつかご紹介すると例えばこちらこれチーム共有看板ボードですねいわゆるタスクボードというのを作成していましてですねここで自分自身のタスクなのかもしくはグループの中のグループタスクなのかというのがありますけれどもここで例えばタスクを追加としてみたいと思いますこれでタスクをですね例えば google workspace ポータルの構築なんていうタスクを立てたとするじゃないですかで期限をここまでにしましょうこれで追加というふうにしていただくとこれ実はこの 看板にタスクを追加しているだけではなくてですね、個人のTo Do、いわゆるGoogleの方ってTo Doリストというのがあるんですが、そこにこんな形で反映されます。</p>
+<p><code>12:14</code> こちら側で管理するっていうのもありですし、このポータル上でですね、自由に移動させて、もう完了したよというような形で完了に入ると、やはりそれはそれでこっちに連携されて、はい、こんな形で今消えましたよね。こんな形の連携がされますので、こちら側でボードで管理するそれが個人のTo Doには入るのでそうするとGoogleカレンダーとかから通常見れたりだとかあとはTo Doを通知するような形にしておけば今日までの期限ですよっていうのもスマホとかで通知受けれますのでこれもぜひ使っていただければなというところですねあとは先ほど自分自身のカレンダーっていうのはお見せしましたがグループカレンダーっていうのもやはり</p>
+<p><code>12:49</code> 組織で使う運には必要だろうということでグループカレンダー機能も揃えておりますこれもマイカレンダーのみ表示なのかグループの表示なのかということでグループでこうやってみるとですねそのグループのメンバーというのが一挙にドンというような形で表示されるような仕掛けですねこんな形で表示がされるかと思います1日表示なのか日課表示なのかというような表示を切り替えることもグループカレンダー上でできますし多分グループで仕事をしていると例えばこの時間に打ち合わせしたいなっていうのがあるとしますあった時にその時間が会議室空いてるかなとか</p>
+<p><code>13:21</code> っていうのを確認したいと思うんですよなのでここのボタンを押してもらうとこれもGoogleワークスペース上のリソースっていうところにしっかり登録されていればですがこんな形でですねどこの打ち合わせコーナーがまずあるよとじゃあこの時間に空いてるかなということで例えば14時から15時で検索みたいな形にするとそれが空いてる場所っていうのがまず出てきますかつここでフィルタリングしていただければこんな形で出ますしこれ例えば東京とか打つと打ち合わせの東京っていう名前の打ち合わせコーナーないのでこんな形でフィルターから外れるとなのでフィルタリングして</p>
+<p><code>13:53</code> かつ指定時間で空いてるかどうかを見てですねそしてそこから予定を作るのであれば予定を作成ボタンを押せばカレンダーの予定作成画面っていうのが開くというような形になってますのでかなりGoogleワークスペースポータルということでGoogleサービスとシームレスに連携っていうのは取れてるかなと思いますのでこちらのカレンダーもぜひお使いいただければというようなところですあとはこのGoogleクラウドサーチですねここ上で検索をかければGoogleクラウドサーチが開いてですねこのような形で横断検索というのも可能になっております最後一つですねご紹介するのが先ほど言った決済ですね例えば申請するという形にしてテスト決済と</p>
+<p><code>14:29</code> 詳細内容の方をしっかりと書いていただいてここに添付ファイルということでPCから追加というものを押せばPCからどれ追加しますかというのを選べたりだとかあとはGoogleドライブから選択ということであれば先ほどと同じような形でですねGoogleドライブ上のファイルというのを読み込んでじゃあこれを使いましょうということでですねそれを決定という形でそして次へを押すとここで先ほど保存したルート情報も含めてさらに読み込みを開始しますそしたら先ほど作ったこのマイルートというのを使いましょうというともうすでにこんな形で入りますのでこれで申請するという風にすると</p>
+<p><code>15:02</code> 申請が実際に行われてですね決済を決済権者にここですね承認確認待ちタスクが走ってですねこんな形でテスト決済というのが行われてそれが開くとそれを却下するのかどうなのかというのも実施していただければというような形ですねこれで承認するとやればこれで決済が承認されるような形です。承認された決済とかも過去の履歴検索っていうのもついてますので、自分の過去決済を上げたものが今どういう状態なのかっていうのをご確認いただければというところでございます。ざっくり言うとこういった機能を今回Googleワークスペースポータルで盛り込ませていただきました。それをですねGitHub上で公開する際にはこういった形で機能使用利用ガイドというような形、特徴としてはこういったものありますよということを述べさせていただいたりだとか、</p>
+<p><code>15:46</code> また機能仕様ということで各機能がどういったものなのかあとは利用説明とかですね ユーザー側で準備すべきこと何かあるかとかですねそういったものも一つ一つ書かせていただいて公開ともちろんこの中には像とかもスクリーンショットが入れさせていただきます のでなるべくわかりやすい機能仕様にして皆さんでですね google ワークスペースのポータル使ってもらってさらに盛り上げていけるというところでございます。余談にはなりますけれどもこの Google Workspace ポータルは完全にモバイル対応にもしておりますのでモバイルレイアウトももちろん同じようにお使いいただくことは可能です。例えばチーム共有の看板とかもですねモバイルであってもタスクというのは自由に動かすことはこんな形でヌルヌルヌルヌル動いてですねタスクを動かすことは可能ですのでぜひ導入いただいたらですねもちろん pc からもそしてモバイルからもお使いいただければというところです。</p>
+<p><code>16:34</code> モバイルの中で特にこだわったのは検索ですここの上に検索ボックスがあったらなんかちょっと多分使いづらいと思うんですよモバイルの時って私もそうなんですけど私そんなに手が大きくないのでここにこう検索があると多分使いづらいと思ったのでこの検索アイコンを押すと真ん中にポワンって形で出てきてそこに入力いただくというような形にしておりますのでぜひですねこちらも合わせて使っていただければと思いますもう少しだけ待ってくださいもう少しだけお待ちいただいたらですねGitHub上できれいな手順書も含め公開させていただこうというふうに考えております弊社ではですね</p>
+<p><code>17:05</code> このような形で今Googleワークスペースどんどんどんどんご採用いただいている企業であったりだとかですね行政自治体増えてきているかと思いますその中でですねやはり課題となっているところに関しては我々の持てる力でですねこういったものも提供させていただきながら皆さんのDX支援というのをお手伝いしております気になる方は概要欄にお問い合わせページございますのでお気軽にお問い合わせいただければと思いますこのチャンネルでは今回GoogleワークスペースのポータルというのをですねGASで作らせていただいてそのGASの中で様々なGoogleサービスを連携させるというのをやらせて いただきましたこれはやっぱりですねgoogle のエコシステムだからこそ できるなというふうに感じているとともにですねもっといろんなサービスを皆さんに どんどん提供していこうかなというふうに</p>
+<p><code>17:44</code> 考えておりますのでぜひチャンネル登録 よろしくお願い致しますありがとうございましたまたねーコスケ先生最初は声めっちゃ滑らかなかったのに後半につれて声がもうガッサガサよねご大事にしてくださいそうですね本当に喉塗るスプレー飲もうと思ったもんシュッシュッじゃ効かないなぐらい先週の金曜ぐらいからこんな形になってしまったので喉塗るスプレーをまさか3日ぐらいで1本使い切ると思わなかった3日で1本やばいっすねずっとやってます</p>
+<p><code>18:18</code> 2本目突入みたいなねついに社内掲示板がね公開っていうまだGitHub上にはないGitHub上には今作ってますねちょっとずつ動画は先に公開する形で後日概要欄にあるよそうね動画自体は今回公開するじゃないですかこれはデビュー前お披露目みたいなプレイです次のやつがあるんだ次がGitHubできたら利用手順は書くんだけど多分それはそれで動画にしといた方がいいそれはそれでやらせてもらいますキリス中に多分1週間かからず受けると思うんですよね</p>
+<p><code>18:51</code> 動画が出て多分1週間くらいとかでGitHub上に公開されると思うので皆さんもぜひ使ってみてください</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./2026-08-01-GAS運用でつまずく場所" class="internal alias" data-slug="2026-08-01-GAS運用でつまずく場所">2026-08-01-GAS運用でつまずく場所</a>（StructureNote） — GAS運用の落とし穴まとめ</p>
+</li>
+<li>
+<p><a href="./2026-07-18-gas-webapp-post-verification" class="internal" data-slug="2026-07-18-gas-webapp-post-verification">2026-07-18-gas-webapp-post-verification</a>（StructureNote） — GAS Webアプリの検証パターン</p>
+</li>
+<li>
+<p><a href="./2026-06-30-gas-cards-json-notion-mirror-architecture" class="internal" data-slug="2026-06-30-gas-cards-json-notion-mirror-architecture">2026-06-30-gas-cards-json-notion-mirror-architecture</a>（StructureNote） — GASを使った連携アーキテクチャ事例</p>
+</li>
+<li>
+<p><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-668" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>🎬 AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="🎬 AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="🎬 AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML"/><meta name="twitter:description" content="📺 動画情報 AnthropicのエンジニアがついにMarkdownを捨てた／Claudeに書かせて、Claudeに読ませる時代の答え /HTML・Markdown・Claude Code・Anthropic 🎙️ 情報の灯台 ・ 📅 2026-05-14 ・ ⏱️ 12分9秒 🔗 www.youtube.com/watch 📝 要約 🎯 Anthropicのクロードコードチームのタリク・シヒパル氏が、社内のドキュメントフォーマットをMarkdownからHTMLに切り替えた理由を解説。AIが書き手・読み手になった時代に、トークン制限が消えた今、HTMLの情報密度と双方向性が「読み..."/><meta property="og:description" content="📺 動画情報 AnthropicのエンジニアがついにMarkdownを捨てた／Claudeに書かせて、Claudeに読ませる時代の答え /HTML・Markdown・Claude Code・Anthropic 🎙️ 情報の灯台 ・ 📅 2026-05-14 ・ ⏱️ 12分9秒 🔗 www.youtube.com/watch 📝 要約 🎯 Anthropicのクロードコードチームのタリク・シヒパル氏が、社内のドキュメントフォーマットをMarkdownからHTMLに切り替えた理由を解説。AIが書き手・読み手になった時代に、トークン制限が消えた今、HTMLの情報密度と双方向性が「読み..."/><meta property="og:image:alt" content="📺 動画情報 AnthropicのエンジニアがついにMarkdownを捨てた／Claudeに書かせて、Claudeに読ませる時代の答え /HTML・Markdown・Claude Code・Anthropic 🎙️ 情報の灯台 ・ 📅 2026-05-14 ・ ⏱️ 12分9秒 🔗 www.youtube.com/watch 📝 要約 🎯 Anthropicのクロードコードチームのタリク・シヒパル氏が、社内のドキュメントフォーマットをMarkdownからHTMLに切り替えた理由を解説。AIが書き手・読み手になった時代に、トークン制限が消えた今、HTMLの情報密度と双方向性が「読み..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/🎬-AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/🎬-AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 AnthropicのエンジニアがついにMarkdownを捨てた／Claudeに書かせて、Claudeに読ませる時代の答え /HTML・Markdown・Claude Code・Anthropic 🎙️ 情報の灯台 ・ 📅 2026-05-14 ・ ⏱️ 12分9秒 🔗 www.youtube.com/watch 📝 要約 🎯 Anthropicのクロードコードチームのタリク・シヒパル氏が、社内のドキュメントフォーマットをMarkdownからHTMLに切り替えた理由を解説。AIが書き手・読み手になった時代に、トークン制限が消えた今、HTMLの情報密度と双方向性が「読み..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="🎬-AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-5610"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-5610" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>🎬 AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML</a></div></nav><h1 class="article-title">🎬 AnthropicがついにMarkdownを捨てた_Claudeに書かせてClaudeに読ませる時代のHTML</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-17T15:00:00.000Z">2026年5月18日</time><span>24 min read</span></p><ul class="tags"><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/html" class="internal tag-link">html</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/anthropic" class="internal tag-link">anthropic</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>AnthropicのエンジニアがついにMarkdownを捨てた／Claudeに書かせて、Claudeに読ませる時代の答え /HTML・Markdown・Claude Code・Anthropic</strong>
+🎙️ 情報の灯台 ・ 📅 2026-05-14 ・ ⏱️ 12分9秒
+🔗 <a href="https://www.youtube.com/watch?v=9Q_rBJXmQbQ" class="external">https://www.youtube.com/watch?v=9Q_rBJXmQbQ<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Anthropicの<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>チームのタリク・シヒパル氏が、社内のドキュメントフォーマットをMarkdownからHTMLに切り替えた理由を解説。AIが書き手・読み手になった時代に、トークン制限が消えた今、HTMLの情報密度と双方向性が「読み飛ばし」を解決する答えだという主張。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Markdownが選ばれていた理由&lt;br/>①人が編集しやすい&lt;br/>②トークンコストが低い] -->|前提崩壊| B[編集者の消失&lt;br/>クロードに書かせる&amp;編集させる]\n    A -->|前提崩壊| C[トークン制限の終わり&lt;br/>Opus 4.7で100万トークン]\n    B --> D[HTMLへ移行]\n    C --> D\n    D --> E[情報密度UP&lt;br/>表/SVG/CSS/JS]\n    D --> F[双方向UI&lt;br/>スライダー/トグル/エディタ]\n    D --> G[読まれる確率UP&lt;br/>S3リンク1本で共有]\n    E --> H[読み飛ばしの習慣を変える&lt;br/>=人がもう一度読み始める]\n    F --> H\n    G --> H&quot;">flowchart TD
+    A[Markdownが選ばれていた理由&lt;br/>①人が編集しやすい&lt;br/>②トークンコストが低い] -->|前提崩壊| B[編集者の消失&lt;br/>クロードに書かせる&amp;編集させる]
+    A -->|前提崩壊| C[トークン制限の終わり&lt;br/>Opus 4.7で100万トークン]
+    B --> D[HTMLへ移行]
+    C --> D
+    D --> E[情報密度UP&lt;br/>表/SVG/CSS/JS]
+    D --> F[双方向UI&lt;br/>スライダー/トグル/エディタ]
+    D --> G[読まれる確率UP&lt;br/>S3リンク1本で共有]
+    E --> H[読み飛ばしの習慣を変える&lt;br/>=人がもう一度読み始める]
+    F --> H
+    G --> H
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 編集者の消失 — Markdownの「人が編集しやすい」前提が崩れた </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>シヒパル氏の.mdファイルはもうクロードに書かせてクロードに編集させる運用に変わった。自分の手で直接編集する機会がほぼゼロ。さらに「100行を超えるMarkdownは自分でも読まないし、チームに共有しても誰も開かない」と明言。Markdownが選ばれてきた最大の理由＝人の可読性が、AIワークフローでは消滅している。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. トークン制限の終わり — HTMLのタグオーバーヘッドはもう誤差 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>GPT-4時代のコンテキストウィンドウ8192トークンでは、HTMLのタグ分のトークン膨張が致命的だった。だが2026年4月の<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロード</a> Opus 4.7で入力100万トークン・$5/1Mトークンになり、新トークナイザーで35%増えてもHTMLオーバーヘッドは誤差範囲。Markdownを選ぶ「トークン効率」の根拠が消えた。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 情報密度の差 — エージェントが妥協しなくなる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>HTMLは表（table）、デザイン（CSS）、図解（インラインSVG）、コード（script）、操作UI（HTML+JS）、空間データ（絶対配置/canvas）、画像（img）まで全部表現できる。Markdownしか出せないクロードは、カラーパレットをユニコードのブロック文字＋グレースケール濃淡で表現するような「歪んだ妥協」をする。HTMLを許すと、エージェントが書きたい情報を圧縮せずに渡せる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 動かせる文書 — その場限りのカスタムエディタが生まれる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>シヒパル氏が公開したコンパニオンサイト（tarix.github.io）には、20個の自己完結型HTMLが置かれている。チェックアウトボタンのホバーアニメ調整スライダー、Linear 30チケットをNow/Next/Later/Cutにドラッグ並べ替えするボード、プロンプトテンプレートのチューナーなど。<strong>製品にもしない、再利用ツールにもしない、その作業1回限りのために作るUI</strong>という発想。出力ボタンで結果をJSON/プロンプトとしてコピーし、クロードに戻すループが速くなる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. スキル化を「待て」 — まだ /html スキルを作るな </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>シヒパル氏は記事の最後で「/htmlスキルを作りたくなる気持ちはわかるが早すぎる」と断言。HTMLの価値はフォーマットではなく「そのHTMLで何をやらせたいか」を毎回考えること。用途依存性が高い（仕様書なら可読性、レビューなら差分注釈、デザインなら触れるノブ）。プロンプトの試行錯誤を経て自分の使い方が固まった後でスキル化を検討する。<strong>Anthropic自身がスキル機能を強く押している時期に、エンジニアが「まだスキル化するな」と公言</strong>しているのが面白い。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>6. コストは正直に — 生成時間2倍〜4倍、Diff読みにくい </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>HTMLの最大の弱点は生成時間がMarkdownの2〜4倍かかること、バージョン管理でDiffが構造ノイズで読みにくいこと。それでもシヒパル氏が選んだ理由は「HTMLにしたことでクロードの作業に深く関与できるようになった」から。以前は計画書を読まずクロードに任せて不安だったが、今は何をしているか把握できる。<strong>読まないまま承認していた人が、もう一度読み始めるためのコスト</strong>として正当化。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 明日の朝、Armillary. 26AW提案資料をHTML出力で試作する</strong>
+<a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">クロードコード</a>に「HTMLアーティファクトで作って」と一言添えて、26AW提案の構成案を作らせる。スライダーやトグルで方向性を触れるようにする。MDで「3案あります」と並べるより、実際に値を動かして見せる方が小山さんもチームも判断早い。生成時間2倍は許容範囲。</p>
+<p><strong>② デザインレビュー用の「動かせる仕様書」を1つ作ってみる</strong>
+LAVANDAボンドロシールのような版下提案で、アニメ時間・拡大率・影のぼかしをスライダーで触れるHTMLを作る。クライアントに「このスライダーで好きな値にして、最後にプロンプトをコピーして送って」と言える状態を作ると、FB往復が激減する。</p>
+<p><strong>③ スキル化は「型が固まってから」ルールをCORINにも適用</strong>
+ゆりこは「これ便利！」→「即スキル化」のサイクルが速い。シヒパル氏の警告通り、用途依存性が高い作業（資料作成・提案書）は3〜5回プロンプトで試してパターンが固まってから <code>.claude/skills/</code> に固定する。早すぎるスキル化は具体性を殺す。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> なぜHTMLかなぜアンソロキックのエンジニアはマークダウンからHTMLへ移ったのかクロードコードチームのタリクシヒパルシが今月公開した投稿は表示1168万回、ブックマーク3万線、いいね1万5千しかしマークダウンは長らくAIエージェントの標準だったはずだなぜ今、社内でHTMLが増えているのか答えは、シヒパル氏自身のマークダウンの使い方にあった編集者の消失タリクシヒパル氏が記事の冒頭で挙げているのは、自分のマークダウンの扱いが切り替わったことだ</p>
+<p><code>00:39</code> 使用書、参照ファイル、ブレインストーミングのアウトプットどれもクロードに書かせて、編集するときもプロンプトでクロードに指示する自分の手で.mdファイルを直接書き直す機会は、ほとんどなくなったマークダウンが選ばれてきた最大の理由の一つは、人が直接編集しやすいことだったシンプルな記号、軽量なリッチテキスト、ポータブルその前提が、自分の作業から消えた、とシヒパル氏は書いているさらに踏み込む百領を超えるマークダウンファイルを、自分はもう読めない</p>
+<p><code>01:14</code> 色やず、視覚的な構造が欲しいチームに共有しても、誰も開かない書き手がクロードになり、読み手も自分一人にすら届かなくなったとき、フォーマットを選ぶ条件は別のところに移るこれはHTMLとマークダウンの優劣を抽象的に論じる話ではないAIが書き手になり、人が編集者でなくなったことの結果だシヒパル氏が記事に付けたタイトルは、Using Cloud Code, the Unreasonable Effectiveness of HTML和訳すれば、クロードコードを使うHTMLの創造を超えた有効性、となるトークン制限の終わり</p>
+<p><code>01:52</code> HTMLとマークダウンの選択は、過去にも何度か議論されてきたその度にマークダウンが買ってきた理由は、シンプルでトークンコストが低かったからだGPT4が公開された当時、コンテキストウィンドウは8192トークン同じ情報をHTMLで書くと、タグの分だけトークンが膨らみ、すぐに上限に当たったマークダウンの軽さは実利だったサイモン・ウィリソン氏は今回の投稿への反応で、自分がGPT4の頃からマークダウンをデフォルトにしてきたのは、その8192トークン制限のせいだったと書いている前提が変わったのは2026年4月のクロードオーパス4.7だ</p>
+<p><code>02:31</code> コンテキストウィンドウは100万トークン、入力は100万トークンあたり5ドル、長文プレミアムなし同じテキストでもトークンが最大35%増える新トークナイザーが入ったがそれを差し引いてもHTMLのタグオーバーヘッドはもはや誤差の範囲に入るトークン効率という最大の理由が消えたときマークダウンが選ばれてきた根拠の半分は失われた残った根拠は人が編集しやすいだが、シヒパル氏が指摘する通りその前提も崩れている情報密の差。HTMLが扱える情報の幅は、マークダウンより明らかに広い。表はテーブルタグ、デザイン詳細はCSS、図解はインラインSVG、コードはスクリプトタグ、操作はHTML要素とJavaScript、ワークフローはSVGとHTMLの組み合わせ、空間データは絶対配置とキャンバス、画像はイメージタグ。</p>
+<p><code>03:22</code> シヒパルシの言葉では、クロードが読める情報のうち、HTMLで効率的に表現できないものはほぼないこれができないとき、エージェントは妥協するシヒパルシが記事に貼ったスクリーンショットは具体的だクロードコードがマークダウン内でカラーパレットを表現しようとして、ユニコードのブロック文字で色を禁止している背景色の行の右側に、グレースケールの濃淡だけで色相を再現しようとした痕跡が残っている情報を扱う手段を持たないとき、エージェントはこういう非効率を選ぶHTMLを出力先に許すと、こうした歪みが消える</p>
+<p><code>03:59</code> 情報密度が上がれば、エージェントが書きたい内容を圧縮せずに渡せる読み手も同じ情報量を、視覚的構造のおかげで短時間で把握できるこれは生産性の議論というより、エージェントと人の間の伝達効率の問題だ百行を読む人シヒパル氏はもう一つ素朴な事実を挙げる百領を超えるマークダウンファイルは、自分でも読まないチームに共有しても、誰も開かないHTMLにすると、タブで章を切り替え、目次でジャンプし、色とアイコンで重要度を示せる同じ内容でも、最後まで読まれる確率が変わる</p>
+<p><code>04:39</code> エージェントが書く使用書やレポートは、クロードの能力向上とともに長くなっているこれも読み飛ばしを増やす要因になるエージェントは8時間から10時間連続で動くようになった、とシヒパル氏は別のワークショップで話している長時間動かした後に出てくるアウトプットを、読まずに承認する経験を、多くのエンジニアが共有している読まないまま承認すれば、品質を担保するのは結局AIになる読まれない文書は、書かれていないのと変わらない共有の難しさも実用的な問題だマークダウンはほとんどのブラウザでネイティブには十分に表示されない</p>
+<p><code>05:16</code> GitHubに置くか、エディタで開かせる必要があるHTMLならS3に上げてリンク一本で共有できる同僚が実際に開いて読む確率は、シヒパルシの感覚では大幅に上がるという書き手のリベント、読み手の数両方とも、マークダウンが選ばれてきた理由から外れている動かせる文書HTMLが単なる読み物を超える瞬間は、双方向性が入った時だシヒパルシは記事の中で、チェックアウトボタンのホバーアニメーションを調整するHTMLサンプルを見せているアニメーション時間のスライダー、拡大率のスライダー、影のぼかしの数値、スプリング動作のトグル</p>
+<p><code>05:58</code> 隣のペインにはクロードコードのプロンプトが用意されていて、調整した値をプロンプトとしてコピー、ボタンで取り出すと、そのままクロードに渡せる。使用書を読みながら値を試し、結果をプロンプトとして返す。マークダウンでこれを再現する方法はない。チケットの優先順位を並べ替えるドラッグ可能なボード、フィーチャーフラグをトグルできるエディタ、プロンプトのテンプレートにサンプル入力をリアルタイムで適用するチューナー。シヒパルシが示すユースケースの中で最も挑戦的なのは、こうしたカスタムエディタだ製品にも再利用ツールにもしない、その作業1回限りのために作るUIという発想が、マークダウンの想定範囲を超えている</p>
+<p><code>06:37</code> 出力ボタンが必ず最後にあるのが共通点だUIで触った結果を、JSONとしてコピー、プロンプトとしてコピー、で取り出し、クロードコードに戻す人が判断する場面は残ったまま、作業のループは早くなるツール選びの理由シヒパルシがクロード.aiやクロードデザインではなくクロードコードを使う理由はコンテキストにあるクロードコードはファイルシステムだけでなくスラックやリニアなどのMCP、Chrome経由のブラウザ、Git履歴を読める記事を書く際にもシヒパルシは自分のコードフォルダ内のHTMLファイルを全て読ませ</p>
+<p><code>07:14</code> グルーピングしてカテゴリ化させ各タイプを表現する図入りのHTMLを生成させた記事中の図は全てその出力だという問題に取り組むとき、シンプルなマークダウンプランの代わりに、複数のHTMLファイルが相互に参照する形を期待する、とシヒパル氏は書いている最初にクロードコードにブレインストームと選択肢の探索をさせ、一つに絞ったらモックアップとコードスニペットで膨らませ、最後に納得したら実装プランを書かせるプランに満足したら新しいセッションを開き、これらすべてのファイルを実装のコンテキストとして渡す検証エージェントにも同じファイルを読ませると、はるかに広いコンテキストで動ける</p>
+<p><code>07:52</code> HTML出力は、クロードコード自身が次のセッションで読み込み直せる入れ子構造を可能にするエージェント同士が読むためのフォーマットが、人にも読まれる形になっている二重のサンプルシヒパル氏は記事に合わせてコンパニオンサイトを公開したTarix.github.io HTML Effectivenessに、クロードコードで生成された20個の自己完結型HTMLファイルが置かれている9つのカテゴリに分かれていて、探索と計画が3本、コードレビューと理解が3本、デザインが2本、プロトタイピングが2本、イラストと図解が2本、スライドデッキが1本、調査と学習が2本、レポートが2本、カスタムエディタが3本9番目のカスタムエディタは、マークダウンでは作れないものを生成する</p>
+<p><code>08:38</code> リニアの30チケットを、Now, Next, Later, Cutの4列にドラッグで並べ替え、結果をマークダウンでエクスポートするボードフィーチャーフラグをエリア別に並べ、依存関係を警告し、変更したキーだけをDIFで取り出すエディタプロンプトのテンプレートの隣に3つのサンプル入力を並べ、編集中の値でテンプレートを再描画するチューナークロードが生成しているのは、もう文書ではないその場限りの小さなアプリだサイトのフッターにはこのページ自体も単一の.htmlファイルで作られていると書かれている。主張をhtmlそのもので示す構成になっている。</p>
+<p><code>09:17</code> スキル化を待つ理由。しひぱる氏は記事の終わりで、読んだ人がスラッシュhtmlスキルを作りたくなる気持ちはわかる、と書く。だがそれは早すぎる、と続ける。HTMLにする価値はフォーマットを切り替えることではなくそのHTMLで何をやらせたいかを毎回考えることにあるからだ使用書なら可読性、レビューなら差分注釈、デザインなら触れるノブ用途ごとに最適なHTML構成は別物になるスキルとして固めるとその用途依存性が消えるスキル機能はクロードコードに同じパターンの作業を仕込むための仕組みだ</p>
+<p><code>09:54</code> プロンプトを定型化して、スラッシュコマンドで呼び出せる定型化を進めれば、固定化も進むクロードコードにHTMLファイルを作って、HTMLアーティファクトを作って、と一言添えるだけで質が上がる、というのがシヒパルシの推奨だプロンプトの試行錯誤を経て、自分の使い方が固まった後でスキル化を検討すればいいアンソロピックがクロードコードのスキル機能を強く押している時期に、自社のエンジニアが、まだスキル化するな、と公言している便利な抽象化を急ぐと、その下にある具体性が失われるスキル化のタイミングは、抽象化が損なう価値より小さくなった後だ、と本人の文章から読み取れる</p>
+<p><code>10:35</code> 残るのはコストHTMLに切り替えるコストは正直に上げられている生成時間はマークダウンの2倍から4倍シヒパルシ自身がそう書いているバージョン管理でのDIFは、HTMLの構造ノイズが入る分、マークダウンより読みにくいこれがHTML出力の最大の弱点だと本人が認めているトークン消費も増えるコンテキスト100万トークンの規模では誤差に近いがゼロではないそれでも結果に価値があるとシヒパル氏が判断したのは</p>
+<p><code>11:09</code> HTMLにしたことでクロードの作業に深く関与できるようになったからだという以前は計画書を細かく読まなくなりクロードに意思決定を任せてよいのか不安だった今はクロードが何をしているのかを以前よりはるかに把握できているHTMLが読み飛ばしの習慣を変えた、と本人は書いている読まないまま承認していた人が、もう一度読み始めるためのコストとして、生成時間2倍とDIFの読みにくさを払う割に合うかどうかは、その文章を誰のために書いているかで決まるエージェントの中だけで完結する作業ならマークダウンのままで良い、とシヒパル氏自身も書いている</p>
+<p><code>11:46</code> HTMLが選ばれる条件は読み手に人が含まれるかどうかだ人がもう一度読み始めるためにフォーマットが選び直されている最後までお付き合いいただきありがとうございますまた見てね</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（concepts） — クロードコード本体の概念ページ</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（concepts） — AIワークフロー全般。HTML出力もここに統合</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（concepts） — スキル化前のプロンプト試行錯誤の文脈</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（concepts） — 長時間エージェント運用の文脈</li>
+<li><a href="./2026-04-14-claude-prompt-workflow" class="internal" data-slug="2026-04-14-claude-prompt-workflow">2026-04-14-claude-prompt-workflow</a>（syntheses） — クロードのプロンプト運用横断まとめ</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-2362" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

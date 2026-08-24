@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。"/><meta name="twitter:description" content="📺 動画情報 信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。 🎙️ Shin Coding Tutorial ・ 📅 2026-08-18 ・ ⏱️ 28分16秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 個人開発でウェブサービスを作るなら「Cloudflareスタック」が最もコスパが良い、という技術構成解説動画。フロントエンドからDB・ストレージ・認証・決済・デプロイまで、Claude Codeなどのコーディングエージェント上で指示だけで完結できる点が最大の魅力。 🗺️ 全体像 flowchart TD..."/><meta property="og:description" content="📺 動画情報 信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。 🎙️ Shin Coding Tutorial ・ 📅 2026-08-18 ・ ⏱️ 28分16秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 個人開発でウェブサービスを作るなら「Cloudflareスタック」が最もコスパが良い、という技術構成解説動画。フロントエンドからDB・ストレージ・認証・決済・デプロイまで、Claude Codeなどのコーディングエージェント上で指示だけで完結できる点が最大の魅力。 🗺️ 全体像 flowchart TD..."/><meta property="og:image:alt" content="📺 動画情報 信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。 🎙️ Shin Coding Tutorial ・ 📅 2026-08-18 ・ ⏱️ 28分16秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 個人開発でウェブサービスを作るなら「Cloudflareスタック」が最もコスパが良い、という技術構成解説動画。フロントエンドからDB・ストレージ・認証・決済・デプロイまで、Claude Codeなどのコーディングエージェント上で指示だけで完結できる点が最大の魅力。 🗺️ 全体像 flowchart TD..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。 🎙️ Shin Coding Tutorial ・ 📅 2026-08-18 ・ ⏱️ 28分16秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 個人開発でウェブサービスを作るなら「Cloudflareスタック」が最もコスパが良い、という技術構成解説動画。フロントエンドからDB・ストレージ・認証・決済・デプロイまで、Claude Codeなどのコーディングエージェント上で指示だけで完結できる点が最大の魅力。 🗺️ 全体像 flowchart TD..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2390"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2390" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。</a></div></nav><h1 class="article-title">信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-18T15:00:00.000Z">2026年8月19日</time><span>59 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li><li><a href="./tags/cloudflare" class="internal tag-link">cloudflare</a></li><li><a href="./tags/web-development" class="internal tag-link">web-development</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。</strong>
+🎙️ Shin Coding Tutorial ・ 📅 2026-08-18 ・ ⏱️ 28分16秒
+🔗 <a href="https://www.youtube.com/watch?v=wN2byhrfqN4" class="external">https://www.youtube.com/watch?v=wN2byhrfqN4<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/信じられない。個人開発の最強の味方「Cloudflare」インフラ構成を紹介します。.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>個人開発でウェブサービスを作るなら「Cloudflareスタック」が最もコスパが良い、という技術構成解説動画。フロントエンドからDB・ストレージ・認証・決済・デプロイまで、Claude Codeなどのコーディングエージェント上で指示だけで完結できる点が最大の魅力。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[フロントエンド Next.js/Benext] -->|APIリクエスト| B[バックエンド Route Handlers/Hono]\n    B --> C[(データベース Cloudflare D1)]\n    B --> D[ファイルストレージ Cloudflare R2]\n    E[認証 BetterAuth/Clerk] --> B\n    F[決済 Stripe] --> B\n    G[ホスティング Cloudflare Workers] --> A\n    G --> B&quot;">flowchart TD
+    A[フロントエンド Next.js/Benext] -->|APIリクエスト| B[バックエンド Route Handlers/Hono]
+    B --> C[(データベース Cloudflare D1)]
+    B --> D[ファイルストレージ Cloudflare R2]
+    E[認証 BetterAuth/Clerk] --> B
+    F[決済 Stripe] --> B
+    G[ホスティング Cloudflare Workers] --> A
+    G --> B
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. データベースはCloudflare D1 — 無料枠がSupabaseより太い </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>D1はSQLiteベースで、書き込みが直列（同時並行書き込み不可）というデメリットはあるが、無料枠で読み取り1日500万行・書き込み10万行・データベース合計5GB・転送量とエグレスが無制限という点がSupabase（無料枠500MB・転送量5GBまで）より圧倒的にコスパが良い。ただし1データベースあたり500MBを超えると5ドル課金しても10GBまでしか伸ばせないのが弱点。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 認証はBetterAuthが完全無料、Clerkは月5万ユーザーまで無料 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>BetterAuthは無料だがユーザー管理・セキュリティを自前で担う必要があり、メール送信も別サービス依存。Clerkはセキュリティ・MFA・アカウント切り替えまで任せられて月5万アクティブユーザーまで無料だが、セッション有効期間を7日超に伸ばすには25ドルの課金が必要という落とし穴がある。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 決済はStripe一択、ファイルストレージはR2一択 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>決済は手数料3.6%で実装のしやすさ・ドキュメントの豊富さからStripeが最有力（複数ユーザー間の売買システムを作るならStripe Connect）。ファイルストレージはR2が無料枠10GB＋転送量無制限で、画像を1日4000枚アップロードする自社SNSアプリでも月3ドル程度に収まっている実例を紹介している。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. ホスティングはCloudflare WorkersがVercelより有利 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>転送量が無料（Vercelは1TB超で課金）、無課金でも商用利用可（Vercelは無料枠だと商用利用不可・月20ドル必要）という2点でWorkersが優位。Next.jsをWorkersにデプロイする新アダプター「Benext」も紹介されている（まだベータ版）。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「AIエージェントに全部任せられるか」を導入基準にする発想を覚えておく</strong>
+この動画の核心は技術選定そのものより「ダッシュボードをポチポチ操作せず、Claude CodeやCodexにDB作成・ストレージ作成・デプロイまで指示だけで完結できる」という点。AI推進の文脈で「このツールはAIエージェントに委任しやすいか」を判断軸にする発想は、社内AI導入の評価基準としても転用できる。</p>
+<p><strong>② 無料枠を項目別に並べて比較する構成を見積もり比較シートに応用する</strong>
+動画内でSupabaseとCloudflare D1を無料枠の項目（容量・転送量・書き込み回数）で並べて比較している構成は、<code>/mitsumori-hikaku</code>のメーカー見積もり比較シートの「項目を横に並べて一目で差が分かる」フォーマットと同じ発想。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいどうも シンです 今回はコスパ最強 ウェブサービス開発の技術スタックのクラウドフレアスタックについて 紹介する動画を撮っていきます今 皆さん 個人開発のバイブコーディングで 何かアプリケーションとかサービス開発している方 いらっしゃるかもしれませんがこのクラウドフレアスタックを使えば 最もコスパよくサービス運営ができるかつ データベースの用意とか ストレージの用意とかクロードコードとかコーデックス内で 完結 作成することができるっていうところが 非常に魅力的だなと思いますだから自分でダッシュボードをポチポチして データベース作成したりとかそういうことしなくてよくて もうAIエージェントに全部任せられるっていうところが</p>
+<p><code>00:35</code> 非常に魅力的なので 今個人開発でチャレンジしている人は ぜひ参考にしてみてくださいこのチャンネルではですね AIコーディングの知識とViveコーディングで作った個人開発で 実際にマネタイズしていくっていうのに挑戦するチャンネルになりますので 気になる方は今のうちにチャンネル登録よろしくお願いしますということで早速解説していきますはい ということでクラウドフレアスタック 早速見ていくんですけどどこで使ってるかっていうとまず公開ねホスティングサービスとしてワーカーズを使っているっていうところとあとデータベースのD1っていうのを使っているところそしてファイルストレージのクラウドフレアR2っていう</p>
+<p><code>01:07</code> この3つですね主に他にもKVっていうキャッシュ機能があるんですけどそれも含めると4つクラウドフレアスタックで使っていますちょっと1つずつ解説していきたいと思いますじゃあまずですねフロントエンドのところなんですけどこれNext.jsっていうのは私使っていますこのフロントエンドに関しては別にNext.jsじゃなくても大丈夫です最近だとTanStack Startとクラウドフレアの連携もできるのでそちら全然使ってもいいし他にもAstroとかいろんなフレームワークがあると思うので皆さんが使いやすいものを選んでくださいNext.jsちょっと癖があるフレームワークなのでクライアントコンポーネント</p>
+<p><code>01:40</code> サーバーコンポーネントのRSCっていう考え方が必要だしサーバーアクションとかもあるのでちょっと小難しいので最近だとスキルとか提供されているのでそこまでボトルネックにはなりづらいかなと思っています最近はNext.jsをクラウドフレアワーカーズにデプロイするために今はOpenNextというアダプターが利用されてるんですけど最近だとBenextっていうのが登場したみたいで今年の2月くらいですかね 登場したみたいでこのBenextっていうのはBeatっていうビルドツールがあるんですよねそのビルドツールで1からNext.jsっていうのを作り直したみたいでワーカーズにデプロイしやすいようにね 運用しやすいように</p>
+<p><code>02:16</code> 1から再構築したフレームワークみたいなものなのでこちらを採用してもいいんじゃないかなと思いますただ安定版とかではないのでNext.jsにOpenNextのアダプターでワーカーズにデプロイしてもいいかもしれませんおそらく今後こちらが安定版になっていくと思うので今回ちょっと最後にアプリ作ってみるんですけどBenext使ってみたいと思いますNext.jsの全機能の94%、95%は使えるみたいなので実際にちょっと使ってみますまだベータ版だと思いますけどというのがフロントエンドです要はWebサービス、Webアプリの見た目の部分となるところは</p>
+<p><code>02:50</code> ネクストJS使ってますっていう話ですじゃあ続いてバックエンドなんですけどバックエンドもAPI私ネクストJS採用してますルートハンドラーズですねそもそもAPIって何かっていうとフロントエンドから何かしらのリクエストが送られてくるんですよね例えばページを作成してくださいとか何かを読み込んでくださいとか削除してくださいとかそういったものがフロントエンドからリクエストが来るのでそれをデータベースに対してどう裁くのかだからユーザーさんからこういうリクエストが来たのでじゃあこれを提供してくださいとか作成してください削除してくださいってデータベースに対して受け渡しですね中継ぎをする役割がAPIです</p>
+<p><code>03:23</code> だからレストランで言うとウェイターさんの役割ですね来たお客さんがハンバーグくださいって言ったらその厨房に対してハンバーグ1丁入りましたというふうに伝える人いるじゃないですかその役割がAPIですただNext.jsはアプリが小規模であればちょっとオーバースペックっていうふうに言われているのでより軽量なね例えばバックエンド用のHonoとかクラウドフレアだと相性がいいと思うのでHonoのAPIを採用してフロントエンドはTanStackとかですねそういった使い分けでもいいかなと思いますじゃあAPIが分かったところで続いて初めてクラウドフレアスタックでできたんですけどデータベースにクラウドフレアD1というものを採用します</p>
+<p><code>03:58</code> データベースっていうのは皆さん分かりますよねユーザーさんからいただいたデータを保存する場所なんですけどこれめちゃくちゃ大事な場所なんですけどもそこにD1を使っていますD1はSQLiteっていうもので作られているデータベースですだから他にも例えばSpaBaseとか皆さん聞いたことあると思うんですけどあれはPostgreSQLでちょっとデータベースの種類が違うんですよ何が違うかっていうとSQLiteは書き込みねユーザーが何かを作成お願いしますと言われた時の書き込みが直列でしか書き込めないつまり複数のユーザー同時並行で書き込みをすることができないっていうのがちょっとデメリットです</p>
+<p><code>04:32</code> だから一人一人順番順番書き込んでいくっていう形がSQLiteなんですけど逆にPostgreSQLに関しては複数のユーザーさんの書き込み同時並行でできるので書き込みに関してはPostgreSQLがいいです要はSQLiteに比べてちょっとリッチなイメージなのがPostgreSQLですねあとデメリットとしては全文検索っていうのが苦手としているのでそういった全文検索っていうのが必要な場合は別サービス使わなきゃいけないってところですねただ普通の検索は全然できるのでD1で事足りるかなと思います</p>
+<p><code>05:05</code> こう聞くとあんまりD1にメリットないんじゃないかなと思うかもしれませんが何と言っても導入のしやすさと無料枠が大きいっていうところがポイントかなと思いますじゃあ実際にどのくらいの無料枠があるのかっていうのをスパベースとちょっと比較したいと思いますバイブコーディングの文脈でスパベース採用される方もねいらっしゃるのでちょっと比較してみたいと思うんですけどまずちょっとスパベースから見ていきましょうスパベースのプランを見ていくんですけど無料枠ですね 0ドルこれどれだけの容量があるのかというと0ドルに関してはAPIリクエストは無制限なのでこれは良心的です</p>
+<p><code>05:38</code> 月間アクティブユーザー5万人ということでこれは認証サービスのことですねだからクラークっていう認証サービスと同じ無制限の数ですね 5万人っていうのはここ注目なんですけどデータベースサイズデータベース容量が500MBまでが無料なんですよこれ覚えておいてください500MBっていう数字ですねあと1GBのファイルストレージというところね。 これ後でR2も説明するんですけど、どのくらい違うのかって話ですね。じゃあD1だとどのくらいなのかちょっと見ていきますね。ここちょっとプライシングのページなんですけど、 無料枠ね。読み取った行数これ1日500万まで無料ですこれに関してはスパベースはさっきAPIリクエストが無制限だったのでスパベースの方が優れています</p>
+<p><code>06:20</code> これに関してはこれ具体的にどういうことかっていうと読み込みとか書き込みとか更新とか削除ねそういったものをデータベースに対して書き込むんですけどその書き込み操作が500万回まで1日無料ってことですこれめちゃくちゃ多いじゃんって思われるかもしれないんですけど書き込みだけじゃなくて読み取りとかも入ってくるので例えばデータベースにインデックスを貼っていない場合だからインデックスっていうのは本の目次みたいなもので目次がないとすぐに目的のページ飛べないですよねだから目次がないと1ページ1ページどこに書いてあるか探さなきゃいけないじゃないですか</p>
+<p><code>06:51</code> その探してる1ページ1ページにもこの書き込み1っていうのがカウントされちゃうのでちゃんとインデックスとかしてないとすぐにこの500万っていうのを超えてしまう可能性があるのでそれは気をつけてくださいってことですねちゃんとインデックスを貼るっていうところ書き込みに関しては10万までみたいですねただ小規模からスタートして無料なわけですから1日に10万の書き込みってなかなかないですねだからあんま気にしなくていいってところこちら注目してほしいんですけどストレージ容量ですねフリーの場合は5GB合計というふうに書かれていますスパベースの場合は500MBって書かれてたんですけどD1の場合はアカウントで使うデータベースの合計が5GBまでです</p>
+<p><code>07:28</code> 1つのデータベースの最大は500MBでしたこれ調べたところだからスパベースと容量は同じでしたね一つのデータベースに対しては同じですその500MBを超えた場合は5ドル課金していただくと1データベースあたり10GBまで保存できるっていうふうにドキュメントでは書いてありましただから課金した場合スパベースとクラウドフレアD1どっちがお得なのかはちょっと後で説明したいと思いますあと一つですねスパベースここちょっと注目してほしいんですけどここ5GBの出力って書いてるんですよこれは転送量のことですエグレスって言うんですけど</p>
+<p><code>08:00</code> だからどれだけのデータ量をユーザーさんに対して転送できるのかっていう転送量のことですどういうことかというとデータベースに保存しているデータをユーザーさんにどれだけの量1日見せることができるのか表示だけじゃなくて編集とか書き込みも含まれるんですけどそのデータ転送量の総量のことですもっと分かりやすく言うとちょっと比喩で例えるんですけどだからバケツがあるとしますこのバケツの容量のことをデータベースサイズデータベース容量って言います転送量っていうのは例えばここに蛇口があるとします蛇口から水をバーって出せると思うんですけど</p>
+<p><code>08:35</code> バーって出せていくと思うんですけど転送量っていうのはこの出せる水の総量のことですだから5GBのエグレスっていうのはそれだけの水の量をバケツに注ぐことができるっていう上限のことですねこれがスパベースだと無料枠だと5GBまでなんですけどこれクラウドフレアに関しては無制限なんですよねこれがすごいところなんですよねあと帯域幅っていう考え方もあるんですけど帯域幅っていうのはユーザーさんが例えば一気にアクセスしてきたときバズったときね バズったときに帯域幅が広くないとちょっとずつしか水が出せないっていう話なんですよねで帯域幅が大きければたくさんユーザーさんがバズってアクセスしたとしても全部 捌けるっていうまあそういう話なんですけど帯域幅をこの例で説明するとこの蛇口の太さのことですねこの太さが太ければ大量にデータがバーって流れてきても全部バーって出せるじゃないですか</p>
+<p><code>09:23</code> でも蛇口の太さが細いとちょろちょろしか出せないのでデータをちょろちょろしか出せないので全ユーザーに対してデータを見せることができないのでもっさりとした動きになっちゃうっていうそういう話ですねだからD1っていうのはその転送量と帯域幅がこれ無制限ですね無料枠でだからめちゃくちゃコスパがいいっていうそういうお話ですだから仮にサービスを公開してXとかでバズっても全部さばけますよねっていうそういうお話になりますだからクラウドフレアの良さっていうのはアプリがある程度バズっても無料枠の中で抑えられるっていうところです仮に無料枠を超えたとしても</p>
+<p><code>09:57</code> 重量課金にはなるんですけどめちゃくちゃ良心的な価格設定になってます読み取りに関してはね100万行あたり0.001ドルでめっちゃ安いんですよねただ書き込みに関してはちょっと高いんですよね100万行あたり1ドルなので1000倍はあるんですけど書き込みがそんなに爆発的に増えるってことがあんまないのでそこまで気にしなくていいかなってとこですちょっとD1の弱点がですねここですねデータベースはアカウント合計で5GBまで無料なんですけど一つのデータベースに対しては500MBまでが無料枠で上限ですそれを超えたい場合は5ドル課金して10GBまでは使えるって話ですね</p>
+<p><code>10:33</code> つまり5GBから10GBはこのプラス1GBあたりの重量課金で済むんですけど10GBを超えたらそれ以降がちょっと使えないらしいですねスパベースであれば10GB以降も課金していただければ使えるんですけどだからそこがちょっとD1の弱点かなというふうに思いました10GB超えるってなかなかないですね画像ストレージとかはR2で保存するのでそれは含まれないので画像ストレージではなくてこのデータベースに対する書き込みとかそういった行数の量が10GB超えないといけないですだから常に何万ユーザーを毎日さばいているみたいな</p>
+<p><code>11:10</code> そういうサービスであれば例えば半年とか1年後とかそういうのに10GBに上限が来ると思いますだからそうなってくるとこのD1からの移行先じゃないですけど考えなきゃいけないんですけどなかなかそういった規模のアプリケーションになるってのはねかなり珍しいのであんまり個人開発の初期スタートでは考えなくていいかなと思いますね私今作っているヌイビオリっていうSNSに関してはこれD1じゃなくてコンベックスっていうのを使ってますなのでこの10GBの上限っていうのはないので重量課金すれば無制限に使えるって形なのでそこに関してはコンベックスで良かったかなと思ってます</p>
+<p><code>11:45</code> だからこう見るとやっぱり一長一短あるなっていうイメージがあるんですけどそれを加味した上でもD1かなりお得だなと思いましたはいということでちょっと小難しい話だったんですけどクラウドフレアD1についてでしたじゃあ続いてですねちょっと認証について説明しましょうかじゃあなんでユーザー認証必要なのかっていうと当たり前ですけど ユーザー認証なかったら 誰がデータを追加して誰が更新して削除しているのかっていうのが 追えないわけですよね データベースの中でだからユーザー認証して この人はこのIDだよね ユーザーIDだよねっていうのを特定しておく必要があるわけですね だからユーザー認証が必要です今回BetaAuthっていうものを お勧めしてるんですけども</p>
+<p><code>12:21</code> いろんなサービスあります SPAベースAuthだったりコンベックスAuthとか、Clarkとか、その他いろいろあります。どのサービスも無料枠かなり大きいので、どれ使っていただいてもいいんですけど、BetaAuthに関してはもう完全無料で使えるということです。ただデメリットとして、ユーザーの管理は全部自分のデータベースで管理しなきゃいけないから、セキュリティだったりとか、そこら辺のユーザー管理の運用面というのがちょっと大きくなっちゃいますよというところですね。それに比べて、例えばSpaBaseAuthとかClarkとかそういったサービスは、セキュリティ対策とかしっかりなされているので</p>
+<p><code>12:54</code> ユーザー管理はそのサービスに任せることができるわけですねあと一つベタオスのデメリットといったらメールアドレスパスワード認証を実装する場合はメールを送信するとかっていうのは別サービスに頼らないといけないっていうところです例えばリセンドだったりとかクラウドフレアにもeメールサービスがあるのでそれも3000通くらいは無料っていう無料枠があるのでそれを使えば無料枠で収まるんですけどそれを超えてくるとメール送信にお金がかかってくるっていうところですねそういったメールアドレス認証する場合はベタオースちょっとデメリットですよっていうことです逆にGoogle認証とか他のGitHub認証とか</p>
+<p><code>13:27</code> そういったものを実装すればそういうメール送信コストかからないのでオース認証と言われているものですねそれだけであればベタオースだけでいいかなと思いますちなみに余談なんですけど私Nuiviよりどういった認証サービス使っているかというとClarkのサービスを使っていますなんでClark採用したのかというと無料枠で月間アクティブユーザー 5万ユーザーまでは無料ですっていうところが魅力ですプラスExpoで開発してますのでそのExpoにはクラーク専用のSDKみたいな ライブラリーが専用で用意されているのでクラークでなのでそれを使えば簡単に実装ができるっていうところ</p>
+<p><code>14:02</code> あとはやっぱセキュリティ面とかも ユーザーの管理とかもこのクラークに任せることができるので 楽だなっていう意味でこのクラークを採用しましたただ後で気づいたデメリットなんですけどユーザー認証っていうのは そのユーザーがどのくらいログイン済みなのかっていうのをセッション期間っていう形で 保持するような仕組みになってますWebブラウザにクッキーとして 暗号化されたセッションを保存してデータベースに保存されている そのセッションからユーザーを特定するために称号するために必要となるデータっていうのが 2つあるんですけどそのセッションの有効期間っていうのが 暗くだと無料枠だと7日までしか設定できないんですよ</p>
+<p><code>14:38</code> その7日を超えちゃうと自動的に端末からログアウトされてしまうっていう仕様があったみたいで僕それ気づかなかったんですけどだからSNSとかのアプリだったら1週間経ったらログアウトされるとめちゃくちゃ使いづらいじゃないですかUX的にもまずいのでだから僕はクラークに25ドル課金したんですよ25ドル課金することでその7日間っていうのを無制限に伸ばすことができるのでそこがちょっと微妙だなと思いましたそこ課金させるんだっていうふうに思っちゃいました正直7日だと短すぎるので結局課金が必要になるんじゃないかなと思いますただクラークは本当に認証に関する全ての機能</p>
+<p><code>15:13</code> 例えばMFAマルチファクターオーセンティケーション二段階認証とかあとはマルチアカウントねアカウントの切り替えこういった機能も課金すれば使えるようになるのでそこはすごく便利だなと思いましたし月間5万アクティブユーザー使えるっていうのもかなり大きいのでこれはいいかなと思いましたただ5万ユーザー超えると1ユーザーあたり0.02ドルだったかなかかりますのでだから毎月10万ユーザー20万ユーザーのアクティブがあると結構なコストになるかなと思いますだからそこは本当にやっぱトレードオフですよね安全面を取るのか機能面を取るのか</p>
+<p><code>15:46</code> コスト面を取るのかっていうのがそこは皆さんによって天秤がね重要度が違うと思うので皆さんによってこの選定が変わるかなと思います認証です続いてなんですけど課金ですねこれは本当にストライプ一択かなと思います個人的にこのストライプを経由すると手数料3.6%取られるんですけどもかなり良心的かなと思います他サービスのPOLAっていう決済サービスあるんですけど今現状手数料どうなってるか分からないんですけど私が導入しようと思った時はストライプよりも高かったので僕は見送っています今現状ただPOLAの良さっていうのは</p>
+<p><code>16:20</code> 海外のユーザーさんが決済した時の税務関係みたいなのがかなり楽になるみたいなのでそこはポーラーの良さかなと思います他にも国内で決済サービスいろいろあると思うんですけども海外展開とか考えているならば最初からストライプを導入した方がいいんじゃないかなと思いますしプラスストライプはやっぱり実装しやすいです豊富なドキュメントがあるしストライプ専用のスキルもあるしMCPもあるしめちゃくちゃ導入しやすいっていうのもかなりメリットだしプラスストライプコネクトっていう機能もあってユーザーさんの間で売買システムを構築するとか</p>
+<p><code>16:53</code> メルカリみたいなそういうシステムを構築するときはストライプコネクトが一番簡単と言われているものになりますのでそういった売買システムを構築して手数料をいただくようなビジネスをする場合でもストライプがかなり有効です私の今のヌイビーよりのSNSでもマーケットっていうのを作ろうと思っているのでその時はこのストライプコネクトを使おうと思っています実装はもちろん簡単ではないですが今はやっぱクロードコードとかがありますので以前よりかは簡単かなと思いますこれが課金になりますね続いてファイルストレージなんですけど、クラウドフレアR2っていうのをお勧めします。ファイルストレージって何かっていうと、画像ファイル、音声ファイル、動画ファイルになります。</p>
+<p><code>17:32</code> 特に画像を取り扱うサービスって結構多いと思うんですよね。音声とか動画はそこまで取り扱う機会ないと思うんですけど、画像に対してどうすればいいのかっていうところでR2を使います。他にもスパベースストレージとかコンベックスのストレージとか、そういったものを使ったことある方いらっしゃると思いますけども、スパメスストレージの方は無料枠だと1GBまでですだから結構渋いんですよねそれ以上使いたかったら課金してくださいねって感じなんですけどR2に関してはこれは10GB10倍ですねがですね課金せずとも無料枠で使えるっていうところが</p>
+<p><code>18:05</code> めちゃくちゃすごいところプラス転送料ですねエグレスとあと待機幅これも全て無料というところでかなり良心的なのがこのR2になります私ぬいかつ用のSNS使ってるんですけど投稿に画像の投稿が必須なんですよねめちゃくちゃたくさんのユーザーが1日に投稿してくださってるんですけど現在1日で4000投稿くらいされてるんですよねつまり1日で4000個の画像が新しくアップロードされてるわけなんですけどもそれでもですねもうほぼお金かかってません重量課金で今3ドルくらいですかねププラスで3ドルくらい払っているだけで、それを賄えているというところが非常に素晴らしいと思います。現状170GBくらい使っているんですけど、それくらいの値段です。</p>
+<p><code>18:46</code> 動画ストレージに関してもR2取り扱うことができますので、今後SNSで私動画のショート動画みたいなの取り扱っていこうと思うんですけど、そこでもR2を採用しようと思っています。AWSのS3みたいな選択肢もあると思うんですけど、S3に関しては正直僕はあんま使ったことがないのでその比較がちょっと難しいんですけどもクラウドフレア使うんだったらこのR2でいいと思いますという感じです最後になるんですけどこの作ったNext.jsのアプリケーションどこにデプロイするのかというとおすすめがクラウドフレアワーカーズというところにデプロイしましょうということです</p>
+<p><code>19:19</code> 従来はNext.jsといえばバーセルというふうに言われてはいるんですけどもちろんバーセルも非常に簡単ですNext.jsで作ったものをデプロイすることに関してはですけど最近だとOpenNextのアダプターだったり今回VNextっていうものを使ってるんですけどワーカーズにかなりデプロイしやすくなってますしかもクロードコードが吉なにやってくれるのでラングラーCLIとかを使えばクロードコード上でクラウドフレアワーカーズにデプロイまでできちゃうのでそこにあまり比較の大差はないかなと思いますまずこの料金体系なんですけどやっぱワーカーズの方がめちゃくちゃ安いです</p>
+<p><code>19:54</code> コスパがいいと思いますまず転送料ですね画像をたくさんするようなサービスであればかなりワーカーズの方が有利です転送料が無料なのでバーセルだったら1TBを超えたあたりから重量課金になっちゃうのでコストがかかってきますけどもワーカーズがそれがかからないっていうところですねこれがめちゃくちゃすごいところだしプラスバーセルの方は無料でホスティングすると商用利用ができないんですよねなのでストライプの課金実装しても20ドル毎月課金しないと使えないんですけどワーカーズの方は無課金でも商用利用OKというふうに今は言われているので</p>
+<p><code>20:29</code> ここもかなり有利なところかなと思います課金したとしても5ドルなので5ドルでかなりの容量使えるのでその観点でもワーカーズがかなり今現状撮影時点ではめちゃくちゃコスパがいいかなと思っています一応私サムネイアイっていうのを運営してるんですけどこれめちゃくちゃ画像を取り扱うサービスで転送料を使うわけですよねやっぱりなのでこれバーセルよりもクラウドフレアワーカーズの方が転送料は無料なのでそちら使ってあげたほうが良かったかなと今になって思いますけどR2を採用しているのでストレージに関してはほぼ無料で運営できているので</p>
+<p><code>21:02</code> その選択は良かったかなと思いますちなみにこのサムネAIっていうのはYouTubeとかのサムネイルをAIで簡単に似たようなものをデザインして作れるっていうサービスなので気になる方はちょっとサムネAIで検索してみてください私のサイトが一番上に出てきますのでなのでこのサムネAIみたいなウェブサービスですねその時にめちゃくちゃコツパがいいのが このクラウドフレアスタックなので皆さんこれね 個人開発から事業をスタートしたいっていう場合はこれ採用していただけると いいんじゃないかなと思いますそんな感じで終わってもいいかなと思うんですけど最後にね ちょっとクロードコードで簡単に このクラウドフレアスタックで何か簡単なアプリを作って お見せして終わりにしようかなと思いますはい ということでサクッと簡単なアプリケーションを作ってクラウドフレアスタックで何か簡単なアプリを作ってお見せして終わりにしようかなと思いますはいということでサクッと簡単なアプリケーションを作ってクラウドフレアスタックっていうのがクラウドコード上で完結するっていうところを</p>
+<p><code>21:48</code> お見せできたらなと思いますじゃあ例えば私アプリ開発最近めっちゃやっててアプリの数が増えてきましたアプリの管理がちょっと大変になってきたので自分専用のアプリを管理するためのウェブサービスみたいなのを簡単に作ってみたいと思いますということでモデルはOpethで十分なのでOpeth5に変更してちょっと指示出しをしていきますこれからアプリを管理するためのウェブサービスを作ろうと思っています最近個人開発でアプリを作る機会が増えてきたのでそれを自分用に作ろうと思います管理するためのウェブサービスを今回使用する技術スタックがクラウドフレアスタックといって</p>
+<p><code>22:22</code> フロントエンドバックエンドがNext.jsでBnextを用いますとそしてデータベースはクラウドフレアD1を使いましょう今回は認証簡単のためにメールアドレス認証なんですけどメールの確認なくていいですメールアドレスとパスワードでログインできるようにしてください課金に関してはストライプが理想なんですけど課金は今回省略したいと思います画像ストレージに関しては画像のアップロードなどがあればCloudflare R2ですねこちらのストレージなど新しく作って実装したいと思っていますホスティング先がCloudflare Workersになります</p>
+<p><code>22:56</code> ラングラーCLIを使ってCloudflare周りの技術はデータベース作成したりストレージを作成したりしてください既存にあるストレージだったりとかデータベースは触らないでくださいそしてデザインに関してはHero UIこちらを使いたいと思いますのでそちらの採用をお願いしますHero UIはV3ですねそれでは実装をお願いしますもし分からないことがあれば僕に質問してくださいこんな感じで作っていきたいと思いますハーネスとか作った方がレビュー用のエージェントも作れるのでかなり正確には作れるんですけど</p>
+<p><code>23:30</code> 今回は皆さんにデモをお見せしたいのでこれくらいの仕出しでやっていきましょうはいということで30分くらい待ったらね作ってくれましたのでじゃあ早速ねちょっとログインをしていこうかなと思いますパスワードの方がもう用意されてますのでダミーデータでこちらね入っていきたいと思います実際にクラウドフレアの方も後で確認していきますねデータが入っているかってところですね画像ストレージももうすでに用意してくれていますということでこんな感じでログインができてもうすでにダミーデータがあって例えばサムネAIだったらこんな感じで概要があってリリース履歴があって指標があってto doがあってみたいな感じですね</p>
+<p><code>24:07</code> 例えばフィードバック対応とかねこんな感じでto doを入れていくことができるということになりますちゃんと入ってますね完了未完了もちゃんとついている形で削除もできますこれが実際にデータに保存されているのかというのを確認していきますD1ストレージですねSQL DatabaseのApp Manager DB見てみるとこんな感じでデータにちゃんと保存されているとデータの探索ですかねこれを押していただくと保存されているかなと思ったんですけど今開発環境なのでローカルで保存している形になりますこれ本番にデプロイすると</p>
+<p><code>24:40</code> ここのデータベースに入っていくという形なので実際に続いてデプロイをしていきたいと思いますデプロイに関してもこのクロードコード上でやらせましょう。はい、じゃあ本番にデプロイしてください。だからWebサービスに必要な認証データベースとか、画像ストレージとか、あとデプロイね。ここら辺全部クロードコード上で、クラウドフレアだったら完結するっていうところが一番楽かなと思いますね。ただ、シークレットキーだったりとか、クロードコードに渡しちゃうと、ちょっとログとして残っちゃうようなデータに関しては、自分で手動でコピー&amp;ペーストして貼り付けていくっていうことが、必要になるかなと思います。</p>
+<p><code>25:14</code> こんな感じでクラウドフレアはコスパがいいだけじゃなくてクロードコードとかコーデックス上で全部完結するというところが一番魅力的かなと思っていますということで3分くらい待ったらデプロイ完了しましたBetterOS Secretもランダムで生成してくれて設定してくれたみたいですということでこちらでリンク遷移していきましょうこんな感じでデプロイまでやってくれるのは非常にありがたいかなと思います新規登録やっていきますね新コードちょっと大きくします新コード新コードtest.gmail.com</p>
+<p><code>25:48</code> 新コードとしましょうかアカウント作成そうすると作られます作られたらですねクラウドフレアD1の方確認していくんですけどアカウントに入ってますねこれ素晴らしいですねなのでウェブサービスを形にするのはクロードコードさえあればできるといった形になりましたねアプリだったら例えばぬいびおりとかですかね私が作ってるやつで縫いカツやってる方はぜひ触っていただきたいんですけどステータスは開発中で適当にiOSまだAndroidできてませんここら辺は適当に埋めてアイコンですね</p>
+<p><code>26:22</code> ストレージアップロードしてみます縫い日和のアイコンを選択してアップロードするとプレビューが出てきてアプリを登録すると実際に登録することができました。いいですね。ToDoに関してもおそらく追加されると思います。いいですね。一応この画像ストレージの方も確認しておきます。ちゃんとアイコンが入ったかどうか見てみるとこんな感じでWebPとしてこんな感じで画像が保存されました。なので画像アップロードもこれで管理できるようになったというところです。みたいな感じでダッシュボード私何も触ってませんけど</p>
+<p><code>26:57</code> こういった設定ができるのは素晴らしいなと思いましたという感じでクラウドフレアスタックについては以上になりますはいということでいかがだったでしょうか私はこれからウェブサービス開発をするときはこの動画で紹介したクラウドフレアスタックで開発をしていこうかなと思います今回ウェブサービスに限ったお話をしたんですけどスマホアプリ開発でこの技術スタック使えるかというと例えばストレージの部分音声ファイルとか画像ファイルのR2に関してはスマホでも使えますしStripeとかもアプリ内決済じゃないものであれば採用できますなのでその部分は皆さんで応用を聞かせて</p>
+<p><code>27:30</code> どれがいいのかっていうのは決定できるような知識だったり経験をつけていくとよりAIを使いこなせるようになるんじゃないかなと思いますもしこの動画が良ければチャンネル登録ご用意よろしくお願いします私ね新コードアカデミーっていうね講座プラットフォームやっております主にクロードコードの講座取り扱っていてウェブサービスだったりスマホアプリ開発っていうのをハーネスを組んでどうやって形にしてリリースするのかそしてどうやってマネタイズしていくのかというところまで教えている講座になります今月中はサマーセールということでお安くお求めいただけますので気になる方は概要欄の方を覗いてみてください</p>
+<p><code>28:04</code> 今後もちょっとラフにYouTubeで動画を上げていこうと思いますのでぜひ今後ともよろしくお願いしますという感じでまた別の動画でお会いしましょうバイバーイ</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./programming" class="internal" data-slug="programming">programming</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-861" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

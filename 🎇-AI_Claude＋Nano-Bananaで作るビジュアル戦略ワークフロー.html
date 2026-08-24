@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>🎇 AI_Claude＋Nano Bananaで作るビジュアル戦略ワークフロー</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="🎇 AI_Claude＋Nano Bananaで作るビジュアル戦略ワークフロー"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="🎇 AI_Claude＋Nano Bananaで作るビジュアル戦略ワークフロー"/><meta name="twitter:description" content="📷 Instagram投稿情報 @sociyell ・ 📅 2026-04-14 🔗 www.instagram.com/p/DXFISFEgT-R/ 📝 日本語訳 キャプション 先週クライアントに言われた。「どうしてそんなにビジュアルが早くできるのに、ちゃんとワークするんですか？」 「Nano Bananaを触る前にClaudeと2時間かけてるんです」とは言えなかった。 変に聞こえるし、遅そうに聞こえる。でもそれが全部うまくいく理由。 実際に起きていること： 木曜日にクライアントがブリーフを送ってくる。 金曜日の朝：2時間のClaudeセッションでクリエイティブシステム全体を構築す..."/><meta property="og:description" content="📷 Instagram投稿情報 @sociyell ・ 📅 2026-04-14 🔗 www.instagram.com/p/DXFISFEgT-R/ 📝 日本語訳 キャプション 先週クライアントに言われた。「どうしてそんなにビジュアルが早くできるのに、ちゃんとワークするんですか？」 「Nano Bananaを触る前にClaudeと2時間かけてるんです」とは言えなかった。 変に聞こえるし、遅そうに聞こえる。でもそれが全部うまくいく理由。 実際に起きていること： 木曜日にクライアントがブリーフを送ってくる。 金曜日の朝：2時間のClaudeセッションでクリエイティブシステム全体を構築す..."/><meta property="og:image:alt" content="📷 Instagram投稿情報 @sociyell ・ 📅 2026-04-14 🔗 www.instagram.com/p/DXFISFEgT-R/ 📝 日本語訳 キャプション 先週クライアントに言われた。「どうしてそんなにビジュアルが早くできるのに、ちゃんとワークするんですか？」 「Nano Bananaを触る前にClaudeと2時間かけてるんです」とは言えなかった。 変に聞こえるし、遅そうに聞こえる。でもそれが全部うまくいく理由。 実際に起きていること： 木曜日にクライアントがブリーフを送ってくる。 金曜日の朝：2時間のClaudeセッションでクリエイティブシステム全体を構築す..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/🎇-AI_Claude＋Nano-Bananaで作るビジュアル戦略ワークフロー"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/🎇-AI_Claude＋Nano-Bananaで作るビジュアル戦略ワークフロー"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📷 Instagram投稿情報 @sociyell ・ 📅 2026-04-14 🔗 www.instagram.com/p/DXFISFEgT-R/ 📝 日本語訳 キャプション 先週クライアントに言われた。「どうしてそんなにビジュアルが早くできるのに、ちゃんとワークするんですか？」 「Nano Bananaを触る前にClaudeと2時間かけてるんです」とは言えなかった。 変に聞こえるし、遅そうに聞こえる。でもそれが全部うまくいく理由。 実際に起きていること： 木曜日にクライアントがブリーフを送ってくる。 金曜日の朝：2時間のClaudeセッションでクリエイティブシステム全体を構築す..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="🎇-AI_Claude＋Nano-Bananaで作るビジュアル戦略ワークフロー"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-5187"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-5187" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>🎇 AI_Claude＋Nano Bananaで作るビジュアル戦略ワークフロー</a></div></nav><h1 class="article-title">🎇 AI_Claude＋Nano Bananaで作るビジュアル戦略ワークフロー</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-01T15:00:00.000Z">2026年5月02日</time><span>13 min read</span></p><ul class="tags"><li><a href="./tags/instagram" class="internal tag-link">instagram</a></li><li><a href="./tags/nanobanana" class="internal tag-link">nanobanana</a></li><li><a href="./tags/claude" class="internal tag-link">claude</a></li><li><a href="./tags/workflowsystem" class="internal tag-link">workflowsystem</a></li><li><a href="./tags/clientwork" class="internal tag-link">clientwork</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/creative-direction" class="internal tag-link">creative-direction</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📷 Instagram投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@sociyell</strong> ・ 📅 2026-04-14
+🔗 <a href="https://www.instagram.com/p/DXFISFEgT-R/" class="external">https://www.instagram.com/p/DXFISFEgT-R/<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<blockquote>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_1.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_2.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_3.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_4.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_5.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_6.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_7.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_8.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_9.jpg" width="auto" height="auto" alt/></p>
+<p><img src="./99_🖼️-picture/instagram/DXFISFEgT-R_10.jpg" width="auto" height="auto" alt/></p>
+</blockquote>
+<hr/>
+<h2 id="-日本語訳">📝 日本語訳<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-日本語訳" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="キャプション">キャプション<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#キャプション" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>先週クライアントに言われた。「どうしてそんなにビジュアルが早くできるのに、ちゃんとワークするんですか？」</p>
+<p>「Nano Bananaを触る前にClaudeと2時間かけてるんです」とは言えなかった。</p>
+<p>変に聞こえるし、遅そうに聞こえる。でもそれが全部うまくいく理由。</p>
+<p>実際に起きていること：</p>
+<p>木曜日にクライアントがブリーフを送ってくる。</p>
+<p>金曜日の朝：2時間のClaudeセッションでクリエイティブシステム全体を構築する。プロンプトを書くんじゃなくて、感情・ビジュアル優先度・絶対NG要素・照明ロジック・カラー境界線を定義する。8ページのクリエイティブブリーフが完成する。</p>
+<p>月曜日：Nano Bananaがそのブリーフを実行する。実験じゃなくて、Claudeが設計したものを正確に生成する。47枚生成。39枚は内部でキル。クライアントが見るのは8枚。</p>
+<p>火曜日：内部A/Bテスト。同じ商品、温度違い。同じシーン、アングル違い。Claudeがどれがプレミアム感を出すか、どれが購買欲求を生むか、どれがどこで機能するかを分析する。さらに3枚キル。</p>
+<p>水曜日：クライアントが5つの勝者をレビューし、お気に入りを選ぶ。木曜日：キャンペーン開始。彼らには1週間に見える。私たちは最初の2日間で戦略を先行させたから、残りの5日間はただの実行だった。</p>
+<p>直近のキャンペーン：調理器具ブランド、予算400万円。結果——メールCTR 4.7%（クライアント従来2.1%）、広告CV 6.2%（従来3.8%）、直帰率38%減。ROAS 5.8（予測3.2）。</p>
+<p>より良いピクセルじゃない。ピクセルが存在する前に、より良い戦略があったから。</p>
+<p>クライアントは「早い」と思っている。私たちはただ「クリエイティブになる前に戦略的」なだけ。</p>
+<hr/>
+<h3 id="スライド-1">スライド 1<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>クライアントが知らない、ClaudeとNano Bananaのワークフロー</strong>
+（結果が出るまでは）</p>
+<p>Sociyell — SNS管理＆グロース</p>
+<hr/>
+<h3 id="スライド-2クライアントが見ているもの-vs-裏で起きていること">スライド 2：クライアントが見ているもの vs 裏で起きていること<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-2クライアントが見ているもの-vs-裏で起きていること" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>クライアント目線：</strong>
+Week1：商品情報を送る → Week2：ビジュアルを承認する → Week3：キャンペーンが公開される</p>
+<p><strong>実際の裏側：</strong></p>
+<p><strong>Day1-2：</strong> ビジュアルツールに触れる前に、Claudeでキャンペーン全体の戦略レイヤーを構築する。「ブレスト」じゃなくて、フルのキャンペーン設計。</p>
+<p><strong>Day3-4：</strong> Nano Bananaはランダムなオプションを生成しない。Claudeが定義した正確なビジュアルシステムを実行する。</p>
+<p><strong>Day5-6：</strong> クライアントが絶対に見ない12バリエーションをテストする。内部審査を通過した3つだけを見せる。</p>
+<p>スピードが強みじゃない。<strong>精度が強み。</strong></p>
+<hr/>
+<h3 id="スライド-3-claudeが世界観を構築する">スライド 3：① Claudeが世界観を構築する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-3-claudeが世界観を構築する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Nano Bananaを開く前に、Claudeに答えさせること：</p>
+<ul>
+<li>このキャンペーンを動かす感情は何か？</li>
+<li>誰に何を感じさせる必要があるか？</li>
+<li>ビジュアルの優先順位は？</li>
+<li>絶対に出してはいけないものは何か？</li>
+</ul>
+<p>これはプロンプト作成じゃない。Nano Bananaがピクセル単位で実行するためのクリエイティブディレクション。</p>
+<hr/>
+<h3 id="スライド-4実際にどうなるか実例">スライド 4：実際にどうなるか（実例）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-4実際にどうなるか実例" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>先月のケース：プレミアム調理器具ブランド、ローンチキャンペーン、予算400万円。</p>
+<p>Claudeセッション（2時間）：</p>
+<ul>
+<li>コア感情を「quiet luxury（静かな高級感）」に定義</li>
+<li>顧客の入口を3パターン特定</li>
+<li>カラーシステム構築</li>
+<li>照明設計を確定</li>
+<li>NG要素：清潔感すぎるもの、色が揃いすぎるもの</li>
+</ul>
+<p>アウトプット：Nano Bananaが迷わず実行できる8ページのクリエイティブブリーフ。</p>
+<hr/>
+<h3 id="スライド-5-nano-bananaが実験じゃなく実行する">スライド 5：② Nano Bananaが「実験」じゃなく「実行」する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-5-nano-bananaが実験じゃなく実行する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Nano BananaはClaude CodeとGoogleのGemini画像モデルを繋ぐ無料MCPサーバー。</p>
+<p>生成するのは：</p>
+<ul>
+<li>Claudeが指定した照明でのヒーロープロダクトショット</li>
+<li>3つのエントリーポイントに合わせたライフスタイルシーン</li>
+<li>真鍮の温かみとスレートのテクスチャを強調したディテールショット</li>
+<li>同じビジュアルDNAで統一</li>
+</ul>
+<p>生成枚数：47枚　　クライアントが見るのは：8枚</p>
+<p>理由：39枚はブリーフを満たさなかったからレビュー前に切った。</p>
+<hr/>
+<h3 id="スライド-6-テストレイヤークライアントには見せない">スライド 6：③ テストレイヤー（クライアントには見せない）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-6-テストレイヤークライアントには見せない" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>クライアントに渡す前に、内部でビジュアルA/Bテストを実施：</p>
+<ul>
+<li>同じ商品、3種類の背景温度</li>
+<li>同じ構図、2種類の照明角度</li>
+<li>同じシーン、2種類のトリミング比率</li>
+</ul>
+<p>Claudeが各パターンを分析：
+「どれがプレミアム感を出しながら冷たく見えないか？」
+「どれが欲求を生むか、どれが単に商品を見せるだけか？」
+「Instagram・メール・LPそれぞれでどれが機能するか？」</p>
+<p>クライアントが見るのは勝者だけ。トーナメントは見せない。</p>
+<hr/>
+<h3 id="スライド-7何が違うのか">スライド 7：何が違うのか<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-7何が違うのか" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>普通のエージェンシー：20案を生成 → クライアントが選ぶ → うまくいくことを祈る → 後から最適化</p>
+<p>このワークフロー：戦略が先（Claude）→ 精密な実行（Nano Banana）→ 内部審査 → 勝者だけを見せる</p>
+<p>クライアントは「良い」と「悪い」の間で選ばない。「最高」と「さらに最高」の間で選ぶ。</p>
+<hr/>
+<h3 id="スライド-8結果調理器具キャンペーン">スライド 8：結果（調理器具キャンペーン）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-8結果調理器具キャンペーン" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>クライアントが8枚のビジュアルを承認。そこからキャンペーンを組んだ。</p>
+<p>Week1：メールキャンペーン（ヒーローショット）→ CTR 4.7%（従来平均2.1%）
+Week2：Instagram広告（ライフスタイルシーン）→ CV率6.2%（以前3.8%）
+Week3：LPリニューアル（ディテールショット）→ 直帰率38%減</p>
+<p>キャンペーン全体ROAS：<strong>5.8</strong>（予測値は3.2）</p>
+<p>ビジュアルが「良くなった」からじゃない。ピクセルが存在する前に戦略が確定していたから。</p>
+<hr/>
+<h3 id="スライド-9なぜクライアントはこのプロセスを知らないのか">スライド 9：なぜクライアントはこのプロセスを知らないのか<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-9なぜクライアントはこのプロセスを知らないのか" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>知る必要がないから。</p>
+<p>クライアントが渡すもの：商品情報、ブランドガイドライン、キャンペーン目標
+クライアントが受け取るもの：成果を出すビジュアル</p>
+<p>その間にあるもの？それが2万ドルのエージェンシーと2000ドルのエージェンシーを分けるワークフロー。</p>
+<hr/>
+<h3 id="スライド-10">スライド 10<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#スライド-10" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>このワークフローをあなたのブランドで見てみたい？
+🔧 のコメントをどうぞ。</p>
+<hr/>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>ClaudeとNano BananaのAI駆動クリエイティブワークフロー。Claudeで戦略ブリーフを先行構築し、Nano Bananaで精密実行。内部テスト層を経て「勝者だけ」を納品する手法で、調理器具ブランドの案件でROAS 5.8（予測3.2）を達成。</strong></p>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🧠 Phase 1: Claudeで世界観を構築（Day 1-2） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ビジュアルツールを開く前に2時間のClaudeセッション。プロンプト作成ではなく「キャンペーンの核感情」「視覚的ヒエラルキー」「絶対NG要素」を定義して8ページのクリエイティブブリーフを完成させる。調理器具案件例：核感情=「quiet luxury」、顧客エントリーポイント3つ、カラーシステム、照明設計、NGルールを確定。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🎨 Phase 2: Nano Bananaで精密実行（Day 3-4） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Nano BananaはClaude CodeとGoogleのGemini画像モデルを繋ぐ無料MCPサーバー。ランダムなオプション生成ではなく、Claudeが設計したビジュアルシステムを忠実に実行する。47枚生成→39枚を内部で却下→クライアントに見せるのは8枚のみ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🔬 Phase 3: 内部A/Bテスト（Day 5-6） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>同一商品×3背景温度、同一構図×2照明角度、同一シーン×2クロップ比率でテスト。Claudeが「どれがプレミアム感を出すか」「どれが購買欲求を生むか」「どれがInstagram/メール/LPで機能するか」を分析してさらに絞り込む。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 案件着手前の「2時間Claudeブリーフィングセッション」を試す</strong>
+Armillary.やkemio案件でも制作ツールを開く前にClaudeと「核感情・NG要素・視覚ヒエラルキー」を徹底議論してブリーフを言語化する。提案精度が上がる。</p>
+<p><strong>② 「戦略が先、ピクセルが後」を社内で啓発する</strong>
+<span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord cjk_fallback">エージェンシーと</span></span></span></span>20Kエージェンシーの差は「戦略の深度」。AI推進チームへの展開時のメッセージとして使える。</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>クリエイティブの視座 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「早い」ではなく「戦略を先行させている」。制作速度の競争をやめ、戦略の深度で差別化するエージェンシーモデル。AIを使いこなす人は「プロンプトを書く人」ではなく「クリエイティブディレクターとして機能する人」になれるかが鍵。</p>
+</div>
+</blockquote>
+<hr/>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Claude-Code" class="internal alias" data-slug="Claude-Code">Claude Code</a> — ビジュアル戦略の実行エンジンとして活用</li>
+</ul>
+<hr/>
+<h2 id="-原文英語">📝 原文（英語）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-原文英語" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="caption">Caption<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#caption" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Client asked last week: “How do you turn around visuals so fast and they just… work?”</p>
+<p>Didn’t want to say “we spend 2 hours with Claude before touching Nano Banana.”</p>
+<p>Sounds weird. Sounds slow. But it’s why everything hits.</p>
+<p>Here’s what actually happens:</p>
+<p>Client sends brief Thursday.</p>
+<p>Friday morning: 2-hour Claude session building the entire creative system. Not writing prompts - defining emotion, visual hierarchy, what can’t appear, lighting logic, color boundaries. Creates an 8-page creative brief.</p>
+<p>Monday: Nano Banana executes that brief. Not experimenting. Generating exactly what Claude designed. 47 images. We kill 39 internally. Client sees 8.</p>
+<p>Tuesday: Internal A/B testing. Same product, different temps. Same scene, different angles. Claude analyzes which signals premium, which creates desire, which works where. Kill 3 more.</p>
+<p>Wednesday: Client reviews 5 winners. Picks their favorites. Thursday: Campaign launches. They see 1 week. We front-loaded 2 days of strategy so the remaining 5 were just execution.</p>
+<p>Last campaign: cookware brand, $40K budget. Our visuals: 4.7% email CTR (vs their 2.1%), 6.2% ad conversion (vs 3.8%), 38% bounce reduction. 5.8 ROAS vs projected 3.2.</p>
+<p>Not better pixels. Better strategy before pixels existed.</p>
+<p>Client thinks we’re fast. We’re just strategic before we’re creative.</p>
+<h3 id="slides">Slides<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#slides" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>Slide 1</strong>
+THE CLAUDE + NANO BANANA WORKFLOW OUR CLIENTS DON’T KNOW ABOUT. (UNTIL RESULTS SHOW UP)
+Sociyell — SM Management &amp; Growth</p>
+<p><strong>Slide 2</strong>
+What clients see: Week 1: Send us product info → Week 2: Approve visuals → Week 3: Campaign goes live</p>
+<p>What actually happens behind the scenes:
+Day 1-2: Claude builds the entire strategic layer before we touch any visual tool. Not “brainstorming.” Full campaign architecture.
+Day 3-4: Nano Banana doesn’t generate random options. It executes the exact visual system Claude defined.
+Day 5-6: We test 12 variations clients never see. Only show the 3 that survived internal review.
+Speed isn’t the advantage. Precision is.</p>
+<p><strong>Slide 3 — Claude Builds The World</strong>
+Before Nano Banana opens, Claude answers: What emotion drives this campaign? / Who needs to feel what? / What’s the visual hierarchy? / What absolutely cannot appear?
+This isn’t prompt writing. It’s the creative direction that Nano Banana will execute pixel-perfect.</p>
+<p><strong>Slide 4 — What This Actually Looks Like</strong>
+Real example: Premium cookware brand, launch campaign, $40K budget.
+Claude session (2 hours): Defined “quiet luxury” as core emotion / Identified 3 customer entry points / Built color system / Locked lighting / Banned: anything clinical, anything matchy-matchy
+Output: 8-page creative brief Nano Banana could execute without guessing.</p>
+<p><strong>Slide 5 — Nano Banana Executes (Not Experiments)</strong>
+Generation count: 47 images. Client sees: 8 images. Why: 39 didn’t hit the brief. We killed them before the review.</p>
+<p><strong>Slide 6 — Testing Layer</strong>
+Visual A/B internally: Same product 3 background temps / Same composition 2 light angles / Same scene 2 crop ratios
+Claude analyzes: “Which signals premium without feeling cold?” / “Which creates desire vs just displays product?” / “Which works for Instagram vs email vs landing page?”
+Client sees winners. Never sees the tournament.</p>
+<p><strong>Slide 7 — What Makes This Different</strong>
+Most agencies: Generate 20 options → client picks → hope it works → optimize later
+Our workflow: Strategy first (Claude) → Precise execution (Nano Banana) → Internal gauntlet → Only show winners
+The client doesn’t choose between good and bad. They choose between great and greater.</p>
+<p><strong>Slide 8 — The Results</strong>
+Week 1: Email - 4.7% CTR (avg: 2.1%) / Week 2: Instagram ads - 6.2% conversion (prev: 3.8%) / Week 3: LP refresh - 38% bounce reduction
+Total ROAS: 5.8 (projected 3.2)</p>
+<p><strong>Slide 9 — Why Clients Never See This Process</strong>
+They send us: Product info, brand guidelines, campaign goals.
+They get: Campaign-ready visuals that perform.
+Everything between? That’s the workflow that separates <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord">2</span><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">c</span><span class="mord mathnormal">i</span><span class="mord mathnormal">es</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal">ro</span><span class="mord mathnormal">m</span></span></span></span>20K agencies.</p>
+<hr/>
+<p><a href="./Instagram" class="internal" data-slug="Instagram">Instagram</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-2154" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-日本語訳" data-for="-日本語訳">📝 日本語訳</a></li><li class="depth-1"><a href="#キャプション" data-for="キャプション">キャプション</a></li><li class="depth-1"><a href="#スライド-1" data-for="スライド-1">スライド 1</a></li><li class="depth-1"><a href="#スライド-2クライアントが見ているもの-vs-裏で起きていること" data-for="スライド-2クライアントが見ているもの-vs-裏で起きていること">スライド 2：クライアントが見ているもの vs 裏で起きていること</a></li><li class="depth-1"><a href="#スライド-3-claudeが世界観を構築する" data-for="スライド-3-claudeが世界観を構築する">スライド 3：① Claudeが世界観を構築する</a></li><li class="depth-1"><a href="#スライド-4実際にどうなるか実例" data-for="スライド-4実際にどうなるか実例">スライド 4：実際にどうなるか（実例）</a></li><li class="depth-1"><a href="#スライド-5-nano-bananaが実験じゃなく実行する" data-for="スライド-5-nano-bananaが実験じゃなく実行する">スライド 5：② Nano Bananaが「実験」じゃなく「実行」する</a></li><li class="depth-1"><a href="#スライド-6-テストレイヤークライアントには見せない" data-for="スライド-6-テストレイヤークライアントには見せない">スライド 6：③ テストレイヤー（クライアントには見せない）</a></li><li class="depth-1"><a href="#スライド-7何が違うのか" data-for="スライド-7何が違うのか">スライド 7：何が違うのか</a></li><li class="depth-1"><a href="#スライド-8結果調理器具キャンペーン" data-for="スライド-8結果調理器具キャンペーン">スライド 8：結果（調理器具キャンペーン）</a></li><li class="depth-1"><a href="#スライド-9なぜクライアントはこのプロセスを知らないのか" data-for="スライド-9なぜクライアントはこのプロセスを知らないのか">スライド 9：なぜクライアントはこのプロセスを知らないのか</a></li><li class="depth-1"><a href="#スライド-10" data-for="スライド-10">スライド 10</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="depth-0"><a href="#-原文英語" data-for="-原文英語">📝 原文（英語）</a></li><li class="depth-1"><a href="#caption" data-for="caption">Caption</a></li><li class="depth-1"><a href="#slides" data-for="slides">Slides</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./🎇-AI_Comment-&quot;Insmind&quot;-for-prompt" class="internal">🎇 AI_Comment &quot;Insmind&quot; for prompt</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説"/><meta name="twitter:description" content="📺 動画情報 【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説 🎙️ まさおAIじっくり解説ch ・ 📅 2026-04-05 ・ ⏱️ 30分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 ハーネスエンジニアリングとは「モデル以外の全て」の設計・最適化。AIエージェントの品質を決定する最重要技術であり、クロードコードのフック・スキル・メモリ・サブエージェントをどう組み合わせるかがその核心。 🗺️ 全体像 flowchart TD A[AIエージェント] --> B[モデル] A --> C[ハーネ..."/><meta property="og:description" content="📺 動画情報 【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説 🎙️ まさおAIじっくり解説ch ・ 📅 2026-04-05 ・ ⏱️ 30分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 ハーネスエンジニアリングとは「モデル以外の全て」の設計・最適化。AIエージェントの品質を決定する最重要技術であり、クロードコードのフック・スキル・メモリ・サブエージェントをどう組み合わせるかがその核心。 🗺️ 全体像 flowchart TD A[AIエージェント] --> B[モデル] A --> C[ハーネ..."/><meta property="og:image:alt" content="📺 動画情報 【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説 🎙️ まさおAIじっくり解説ch ・ 📅 2026-04-05 ・ ⏱️ 30分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 ハーネスエンジニアリングとは「モデル以外の全て」の設計・最適化。AIエージェントの品質を決定する最重要技術であり、クロードコードのフック・スキル・メモリ・サブエージェントをどう組み合わせるかがその核心。 🗺️ 全体像 flowchart TD A[AIエージェント] --> B[モデル] A --> C[ハーネ..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説 🎙️ まさおAIじっくり解説ch ・ 📅 2026-04-05 ・ ⏱️ 30分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 ハーネスエンジニアリングとは「モデル以外の全て」の設計・最適化。AIエージェントの品質を決定する最重要技術であり、クロードコードのフック・スキル・メモリ・サブエージェントをどう組み合わせるかがその核心。 🗺️ 全体像 flowchart TD A[AIエージェント] --> B[モデル] A --> C[ハーネ..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1633"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1633" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説</a></div></nav><h1 class="article-title">【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-17T15:00:00.000Z">2026年5月18日</time><span>60 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【全員必見】ハーネスエンジニアリングとは？AIエージェントの必須知識を徹底解説</strong>
+🎙️ まさおAIじっくり解説ch ・ 📅 2026-04-05 ・ ⏱️ 30分34秒
+🔗 <a href="https://www.youtube.com/watch?v=JvCIgFPgOlk" class="external">https://www.youtube.com/watch?v=JvCIgFPgOlk<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>ハーネスエンジニアリングとは「モデル以外の全て」の設計・最適化。<a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>の品質を決定する最重要技術であり、<a href="./claude-code" class="internal alias" data-slug="claude-code">クロードコード</a>のフック・スキル・メモリ・サブエージェントをどう組み合わせるかがその核心。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[AIエージェント] --> B[モデル]\n    A --> C[ハーネス]\n    C --> D[コンテキスト最適化]\n    C --> E[行動制御 / フックス]\n    C --> F[メモリシステム]\n    C --> G[スキル / サブエージェント]\n    C --> H[フィードバックループ]\n    H --> I[プランナー]\n    H --> J[ジェネレーター]\n    H --> K[エバリエーター]&quot;">flowchart TD
+    A[AIエージェント] --> B[モデル]
+    A --> C[ハーネス]
+    C --> D[コンテキスト最適化]
+    C --> E[行動制御 / フックス]
+    C --> F[メモリシステム]
+    C --> G[スキル / サブエージェント]
+    C --> H[フィードバックループ]
+    H --> I[プランナー]
+    H --> J[ジェネレーター]
+    H --> K[エバリエーター]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. ハーネスとは何か — モデル以外の全て </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIエージェント = モデル ＋ ハーネス。ハーネスが担う役割は5つ：①何を見せるか（コンテキスト）、②何を使わせるか（ツール）、③行動をどう制限するか（ガードレール）、④外から監視するか（オブザーバビリティ）、⑤失敗時のフィードバックループ。Claude MDの改善もフックスの設定もハーネスエンジニアリングの一部。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 決定論的 vs 非決定論的 — 制御の軸 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AIエージェントの出力は非決定論的。だからこそ、できる限り決定論的な処理に寄せて確実性を高めることがハーネス設計の基本方針。繰り返しミスる箇所はスキルMDやClaude MDに書いてLLMに判断させない。フックス（ツール呼び出し前後の処理）が最も決定論的な制御手段として有効。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. フックスの活用 — 自動化の決定論的レイヤー </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><a href="./claude-code" class="internal alias" data-slug="claude-code">クロードコード</a>のフックスはツール呼び出し前後・ユーザープロンプト入力時・応答完了時に任意の処理を実行できる。自動リント・コードフォーマッター・通知・成果物検証・自動コミットなどに活用。LLMに逐一判断させずコードで確実に動かせる部分はフックスに寄せるのが原則。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. プランナー・ジェネレーター・エバリエーター分離 — 品質向上の設計パターン </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>同一エージェントに「作る」と「評価する」を両方させると主観バイアスが入る。プランナー（俯瞰・戦略）、ジェネレーター（実装・生成）、エバリエーター（客観評価・フィードバック）の3つに分離するのがAnthropicも推奨するパターン。コストは上がるが品質が大幅に向上する。モデルを変えて評価させるのも有効（UI評価ならGeminiなど）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. アンチパターン — 過剰なハーネス構築 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>制約をつければつけるほど確実性は上がるが、モデルの非決定論的な強みを殺す。Claude MDやエージェントMDを書きすぎるのもNG（注意力・コンテキストウィンドウを浪費する）。「モデルが賢い」前提でシンプルに保つ。不要になった・腐ったドキュメントは整理する。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+</blockquote>
+<blockquote>
+<p><strong>① 今すぐできるハーネス改善：Claude MD &amp; スキルMDの棚卸し</strong>
+「よく繰り返すミス」や「毎回同じ指示をしてること」をcritical-mistakes.mdやスキルに落とし込むこと自体がハーネスエンジニアリング。すでにやってることを「ハーネス」という概念で捉え直すと強化ポイントが見えやすくなる。今週1つ、繰り返しミスをスキルに追加してみる。</p>
+<p><strong>② CORINのフィードバックループを設計する視点を持つ</strong>
+現状「CORIN単体」でレビュー・実装・評価を同時にやらせてる場面が多い。wiki-ingest・brand-analysisなど重要スキルで「エバリエーターを分ける」設計を意識すると品質が上がる。/doneや/wiki-lintのような「評価専用フェーズ」を増やすのもハーネス改善の一手。</p>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> おつまそうです。本日はですね、ハーネスエンジニアリングについて解説していきたいと思います。最近になってね、いろいろと意見が飛んでるかなと思うんですけども、ハーネスなんか意味ないやろみたいな感じで言う声があったりだとか、そこに全てかけるべきだとか、いろんな方向からいろんなジャーナルの人がこのAIに関してはすごく注目されているテーマになっているんでね、言ってると思うんですけども、僕はね、2025年の11月ぐらいからノートの方で黒ずいね、ハーネスを作れと。未来これから起こりますねみたいなノートをですねクローズに公開したりだとかして</p>
+<p><code>00:33</code> ずっと前から僕のクローズのコミュニティの方とかでは取り上げてきたトピックではあったりするんですけどもそういう意味も込めてね今話題になってるんで改めて公開情報をベースに皆さんにですねハーネスについてこの動画で徹底解説できたらなと思いますメタなところもありまして掘っていくとね本当に深いんですよなんでちょっと触りの部分でとりあえずこの動画を押さえておけばハーネスって何なんだっていうのがざっくり分かるような形でやっていけたらと思います私のチャンネルではAIに関する最新情報や本質情報をできる限り早く</p>
+<p><code>01:07</code> より深くほぼ毎日動画投稿してますよかったらチャンネル登録と高評価で応援していただけると嬉しいです今日も動画やっていこうと思うんですけどハーネスって何ですかっていうところからまずいきたいなと思うんですけどAIエージェントにおいてモデル以外の全てのことをハーネスと言いますなのでモデルプラスハーネスでAIエージェントみたいな形でイメージしていただければと思いますアンソルピックはね大役にやり1025年の11月ぐらいのブログで共有してくれていてそこからね徐々にいろんなところでコーデックスのブログとかもあったりだとかして登場しているんですけど</p>
+<p><code>01:40</code> 僕もねこの速さマジでみんな褒めてくださいっていう感じなんですけど僕もねこの概念を早めに掴んでそれがね本当に素晴らしいものなんだっていうのをずっとね伝えてきたんですけどもはいっていう感じですでまあこのハーネスとねざっくりその担う役割みたいなの分割した時にですね5つ分けられますよねっていう話で例えばモデル自体のねに対して何を見せるのかとか何を使わせるのかとかガードレールでね行動をどう制限するかとかモデル自体を外からねどう監視するかとか</p>
+<p><code>02:16</code> フィードバックループで失敗時にどうしていくかっていうものをこのハーネスエンジニアリングをすることで強制するというか調節していくみたいな感じになっております今よく言われているハーネスハーネスっていうのは結構ユーザー側で使える例えばクロードMDを改善するのもハーネスエンジニアリングの一つですし例えばクロードコードにはフックスっていう形で例えばAIエージェントが行動する前とか行動する後とかいろんな視点から</p>
+<p><code>02:49</code> 例えばサブエージェントがスタートした時とかもありますしっていうところで制御することができるように作られているんですねクロードコードとかコーデックスとかオープンコードとかいろんなものがいろんな形でユーザー視点でこの外部から調節できるようにしてくれていたりしますここを最適化していくっていうのを外部ハーネスの最適化みたいな形で考えたらいいかなと思うんですけど実際にはクロードコードとかコーデックスとかの中の例えばシステムプロンプトオーケストレーションの仕組みクロードコードだったらね</p>
+<p><code>03:20</code> エージェントチームスという機能があってメッセージボックスでやり取りをしながらチームを組んでやっていくみたいな仕組みであったりだとかちょっと前に今ではねコーデックスの中にサブエージェントという機能が存在してませんでしたけども内部でねちゃんとそういうのを作ったら内蔵ハーネスとしてできるようになりましたよとそういうのがなかったらねちょっとハックとかをしながらこの外部ハーネスみたいな形でやっていくという感じになってます今回ちょっとお話しするっていうのはこの外部ハーネスの部分をね主にお話しできたらと思っています内部ハーネスから作っていく</p>
+<p><code>03:54</code> オープンクロードとかも独自のやつでやってますけどねそこをやっていこうと思うともっと本質の理解とかが必要なんでまずは外部ハーネスの部分例えばクロードコードが提供してくれている部分を最適化していくここを押さえておくといいかなと思いますコーデックスとクロードコードやったらやっぱその干渉できる余白というか外部ハーネスの部分が結構クロードコードはね自由に作らせるような思想でやってくれているからこそ干渉しやすいんですよねコーディックスもね結構頑張ってくれているんですけどもそういうような思想でやってくれているからこそまあ干渉しやすいんですよねはいまあコーデックスもね結構頑張ってはくれているんですけどもまあそういうそういうなんか思想みたいなところもあったりとかして僕はですねまああのハーネス</p>
+<p><code>04:32</code> どんどん掘っていきたいならクロードコードお勧めしますよという形になってますモデルだったらねやっぱり一発の破壊力とか賢さのアッパーというかGPT5.4がいいなって思うときももちろんあるんですけどねハーネスエンジニアリングの位置付けとしては現在ではねオープンエアのコーデックスチーム自体もこの最も困難な課題が環境フィードバックループ制御システムの設計に集中しているとだからモデルだけがAIってAIエージェントというかでいうわけじゃなくてハーネス設計力もすごく重要なんだよっていう話になっています</p>
+<p><code>05:04</code> 僕もねこのモデルが進化すればするほどハーネスの恩恵受けにくくなるというか差がつきにくくなるよねみたいな話も実はあったりはするんですよクロードの公式ブログでソネットが4.5の時と比べて今のクロードのオーパス4.6とか見ていった時にねそんなあんまりハーネスしっかりやらなくても最終的にゴールにたどり着けるみたいなブログがあったりだとかしたんですけどもオープンAIのコーデックスチームは5ヶ月で100万行超えのコードを人間が1行を書かずにやりましたよとそれもやっぱハーネス設計が良かったからだよ</p>
+<p><code>05:37</code> みたいなことも一応共有されておりますじゃあハーネスってなんやねんっていう話になってくるんですけどモデル単体やったらねコンテキストがどんどんどんどん例えば1万が100万とかになっていった時にやっぱ精度がどんどん落ちていくっていうのがいろんな研究とか実践地とかでも知られています人間も一緒だと思うんですけども自分自身が正しさを正しいか間違ってるかどうかっていうのを評価するのが難しいわけですよあとグロックとかちょっと使ってて僕は思うんですけどアンカリング効果っていってね</p>
+<p><code>06:10</code> ちょっとしたバイアスをかけたらその後の意思決定とかが引っ張られるみたいなところもあったりだとかまあいろんなねそのモデル自身が持っているまあ本質ベースの特徴みたいなのがやっぱあったりするわけですね早期に完成してしまって作業終了とかまあそういう特性みたいなのをコントロールするのがまあやっぱりハーネスがやっていくことであったりしますだからこのLLMの研究とかまあそういうのもやっぱちょっとウォッチしておいた方がこのハーネスでねじゃあこういうところがあるからより良いハーネスを作ろうと思ったらこうすればいいなんだみたいなところもねありますまあハーネス自体はですね結構ソフトウェア</p>
+<p><code>06:43</code> 開発というかにもちょっと近いんですけどもモデルっていうとねやっぱちょっと研究っぽい感じはするんですけどもアプリエンジニアとしてもハーネスやったらね結構ゴリゴリ掘っていく研究とか追わないといけない感じしますけどもっていうとこあったりするなっていうのはすごく思ってますちょっと雑談でしたけどねハーネスが解決することとしては例えばコンテキストを最適化してあげることそして行動をね行動をいい感じに制御することそして品質をより高めていくことフィードバックループね今ちょっと流行ってますけど</p>
+<p><code>07:16</code> っていうところもあります他にもね状態の永続化っていうことでちょっとメモリシステムとか作ってねちょっと補佐してみたりだとかクロードMDから始まってコードベースにドックス入れてみたりだとかスキルの自称型作ってみたりだとかいろんな工夫があると思いますけども状態の永続化安全性の担保例えばねクロードコードだったら結構ガードレールを仕切るようになっていて特定のコマンドを弾くとかねいろんなことができると基本的にはクロードコードとかもベース結構作ってくれてるんでここの中で自分で活かしたい部分を</p>
+<p><code>07:49</code> シンプルにモデルがどんどん進化しても崩れないぐらいにあんまり制約をつけすぎずにやっていくみたいなのがすごく重要で必要な場合のみ複雑さを増しましょうねっていうことを言われていますここもちょっと後で喋りますけどやっぱバランスですね制約つけすぎてもダメだしふわっと浮かせすぎてもダメみたいな浮かせた方は自由度が高ければモデルの進化の音響を受けやすいっていう感覚があるんですけどね制御みたいな話でいくとAIエージェントが動く前動く後みたいな部分で考えたりすることもできますよねっていう概念整理があります例えばAIエージェントが動く前っていう部分でいくと</p>
+<p><code>08:30</code> 例えばクロードMDとかそういうのを調節したりだとか行動した後だったら例えばテスト実行でやったりだとかフォーマッターとか色んなそういう分類ができるんですけども僕は結構決定論的非決定論的で分類とかしてるんですけどもAIエージェントっていうとね1入れたらBが必ず返ってくるみたいな決定論的ではない出力の仕方をするわけなのでどっちがね基本的にはこの決定論的な部分に寄せて制御ができるのがいろんな観点から理想であったりするんですけども</p>
+<p><code>09:05</code> ここをLLMにやらせないっていうのが結構重要例えば軽量なものだったらねスキルの中であるのがよくミスる内容とかをスキルMDの中にちょっと入れたりだとかクロードMDとかに入れていくっていうのがあったりすると思うんですけどもここで複数回発生したりだとかよく頻繁に起こっている部分はどんどん改善していってねこっちの決定論的に寄せましょうとかそういったことがコンテキストやハーネスエンジニアリングの中にあったり存在してたりします</p>
+<p><code>09:37</code> やっぱりこの決定論的な部分の方が確実性が高いわけなのでできる限りこっちに寄せていって無駄にLLMトークン使わないでおこうみたいな話もあったりしますじゃあコンテキストエンジニアリングって最近ありましたけどこれって何だったっけっていう話をしたいなと思ってるんですけどこれはですねモデルのコンテキストウィンの中に何を入れるかっていう話でプロンプトエンジニアリングのちょっと進化系みたいな感じだったんですけどここからねハーネスエンジニアリングっていうのがもっと包括的な感じになっております</p>
+<p><code>10:11</code> 環境全体っていう定義なんでそのちょっと広い定義がハーネスエンジニアリングになってますコンテキストにどう最適化するかっていうよりも制御システム自体の設計と実装ということで定義されておりますなんでね2年前3年前とかやったらこっちだったと思うんですけど去年は結構コンテキストエンジニアリングって言われてましたけど今はもう2026年の4月時点ではハーネスエンジニアリングっていう形になってますねコンテキスト戦略みたいな部分でアンソロピックが過去にコンテキストエンジニアリングの中で言われていた部分これハーネスエンジニアリングの一つコンテキストエンジニアリングってなっていて</p>
+<p><code>10:50</code> その中の戦略みたいな部分なんですけどもさっきちょっと喋ってたコンテキストを入れていく上でエレリウム全体に対してすごく持っておきたい感覚ではあるんですけども適切な流度っていうのがすごく重要です具体的すぎると制約がすごく厳しくなるのでその分確実性とか取っていけるかなと思うんですけどもLLのね持ってる想像力を発揮させるみたいな部分のところでは制約をつけすぎて思うように動かないとかねあったりする可能性もありますし逆に抽象的すぎると何していいかわからなくて迷うとか</p>
+<p><code>11:23</code> っていう部分もあったりするので適切な流度っていうのを見つけていくこれも感覚なんですけどねなかなか定量化できなくて難しいところではあるんですけどもそれが一つありますとツールはできる限り最小化していきますよと最小化していきましょうとMCPとかめっちゃ入れてたりする場合よく話題になってますけど僕の視聴者さんはそんなところはねあんまり引っかかってないと思いますけどもコンテキストに詰め込む上でMCPとかって結構量食ってたりするんで注意しましょうと</p>
+<p><code>11:58</code> サブエージェントに委託して関心ごと分離したりだとかやっていきましょうとか会話のコンパクションどうしていこうかとかあとはねコンテキストにどういう感じで例えば段階的開示っていってスキルのね頭の部分だけヤムルフォーマッターの中だけ頭の中に入れといてあとからこのスキルってこのスキル使えそうだなって思ったらLLM見に行くという形になっているような技術とかそういうのがね存在しておりますまずねフックスについてちょっと喋っていきたいかなと思うんですけども</p>
+<p><code>12:32</code> 結構ねこのFUXが決定論的というかAIエージェントがツールを呼び出しする前でやったりだとかツール呼び出しする後あとはユーザーのプロンプトが入力された時とかAIエージェントが応答完了したタイミングとかでいろんなね行動を実行したりすることができるんですけど結構ね決定論的に寄っているからこそ制御しやすいというかハーネスの一つだったりしますどういうところに使うかっていうとねリント入れ自動リントでやったりコードフォーマッターでやったりだとか</p>
+<p><code>13:06</code> 人によってはね通知を飛ばすとか成果物の検証を入れる自動コミットやるとか、ユーザープロンプトサブミットとかもね、僕も作ってるプラグインとかでちょこちょこやってたりしますけど、いろんなですね、例えばスーパーパワーズとか、そのあたりとかのフックスどういうことやってるの?って見るのも一つ面白く勉強になる部分だったりしますね。僕もそういうの見てますけど、そこから本質を抜き出して、自分のハーネスの中に取り入れていくみたいなことをやってたりしますねまあフックスってね結構いろんなクロードコードやったタイミングであるんですけども</p>
+<p><code>13:42</code> 事前処理事後処理両方ね結構入れてくれてたりするんでこの辺りをね調節することで目的がね例えばデバハーネスだけじゃないと思うんですよ開発だけじゃないねなんで例えばライティングハーネスを作ってるんだったらそこでね適切な部分あると思いますしっていうのでできる限りねAIエージェントの出力が決定論的であるんだったらこれ使っていきましょうねっていうのがありますとハーネスエンジニアリングの一つとしてメモリシステムがあるかなと思います</p>
+<p><code>14:16</code> メモリシステムっていうとね結構みんなすごく興味のあるテーマかなと思ってるんですけどクロードコードとかのメモリシステムっていうのはまずですねメモリ.mdが存在してたりだとか個別メモリファイルサブエージェントのメモリとかもあったりしますよねっていうのでどんどん記録していってセッションがね例えば別セッションで動かしていても記憶が保持されるとかグローバル領域に保持されるとか色々ありますよねっていう部分ですここもね探索していけば面白い分野かなと思うんですけど</p>
+<p><code>14:49</code> オープンクロードのメモリシステム結構探索してますけどもそれもハーネスエンジニアリングの一つだよねっていう話ですなんですごく好奇なんでね色々あるんですけども例えばこのメモリに関連すると記憶っていう部分で区切った時にGitとかねっていうのをメタ認知しながら自分の行動履歴を見るとかあとタスクベースで見ていくんやったらフューチャーリストを作らしてここまだ完了してないわとかっていうのを見せたりだとかサマリーを作ったりとかいろんなやり方がありますこれ自体もハーネスっていう話ですね</p>
+<p><code>15:22</code> ハーネスといえばやっぱりスキルとかサブエージェントという概念もね非常に人気というか押さえておかないといけないポイントなんですけどスキルというのはねマークダウンファイルでYAMLフォーマットYAMLのフロントマターと内部のマークダウンあるいはリファレンスとかで段階的開示でここのファイルにこのスクリプトがあるんでこういう時実行してくださいとかCLIこういう感じでやったらこういう出力が得られますとかマークダウンの中に書いていくわけなんですけどもっていう形でこのスキル自体を</p>
+<p><code>15:54</code> どんどんどんどん高度化していくっていうのもハーネスエンジニアリングですしサブエージェントでどういうことにね関心を向けるのかそういう部分を意識するのもハーネスエンジニアリングという形ですすごくね直感的にパッとハーネス全部ですって言うとなんやそれっていう形でふわっとしてしまうんですけどこの辺りのね小さい部の部分を掘っていくとスキルもやっぱね本当にいいスキルを作ろうと思うと深いですしサブエージェントもねハーネス全体で活用していく部分の本質を突き詰めていくとやっぱりねいろんな研究であったりだとか実践地ベースにたどり着くんですよね</p>
+<p><code>16:30</code> でさらにはねそれを上位概念でエージェントチームスという概念を作り出してサブエージェントでオーケストレーションさせたりだとかして一つの課題に向き合っていくみたいなのをやっているクロードコードの中でやってるんですけどもこれがね例えばサブエージェントにどのモデルを割り当てるのかであったりだとかスキルを読み込ませるのかとかどういうところに注視して仕事をしてもらうかツールの権限とかそういうのをクロードコードハーネスだよねしっかりと設定することができるんですけどもそのあたりの部分を</p>
+<p><code>17:04</code> 自分がどうしていくか外部のハーネスの部分で調節していくっていうのもハーネスエンジニアリングだという話になっておりますこのエージェントチームとかは他では一般的な感じではないんですけどもすごく僕は好きな機能の一つだったりしますこのあたりの本質今色々喋ってきたと思うんですよこれね僕ちょっとノートめっちゃ頭痛くなりながら書き続けてたんですけどこのねハーネスエンジェリングの原理原則の部分LLMがねどういう特性があってそれを</p>
+<p><code>17:35</code> 意識しながら開発すればいいんかみたいなねハーネスをどんどん掘っていけばいいかみたいな部分の指針になるようなノートを書きましたこれめっちゃ時間かけたんで本当に読んでほしいんですけどメンバーシップに入っていただくとねお得に読める感じになっておりますこの設計パターンとかをね具体的にクロードコードだったらどういう形でやるのが正しい本質ベースになっているのかみたいな解説をやっているイメージですねなんでその抽象パッとねハーネスエンジニアリングってパッと言われてしまうとすごくふわっとしていると思うんですけどもそこにね例えば実践地であったりだとか</p>
+<p><code>18:09</code> 研究ベースの事実がひも付いていくと例えばクロードコードではこういう形だよねっていう意味で表現、具現化していけるわけなんですよなのでその具現化していくための道しるべみたいなのをこのノートでやってるんですよそんな感じでねちょっと実践系の話になっていくクロードコードの実践地的な部分を次、ハネスエンジニアリングとして喋っていきたいなと思ってるんですけど一つ言われているのがAIエージェントはLLM自体がですね自分がしたタスクに対しても完了みたいなのが早く来るというか</p>
+<p><code>18:43</code> 本当に100点のやつやってくださいって言った時100点のこと分からないみたいな部分があったりするわけなんですよ僕もねそういうループ回してる時にレビュアーと分割した時100点でやってよって言ったのに80点でね出力しててレビュアーがこういう視点が80点じゃないですよみたいな形でフィードバックをしてそこをループしていくっていうことをやるんですけども基本原則としてね評価者っていうのは分離した方がいいとクロードコードではね自然と例えば監視ごとの分離みたいな部分でいくならばプランサブエージェントであったりだとか</p>
+<p><code>19:17</code> エクスプロアサブエージェントであったりだとかいろんなことにね分離をさせながら自然と進めてくれているんですけどそれにちょっと近いというかただ本質ベースでいくとその主観と客観の長尻合わせみたいな部分をやる必要がある自分自身でやりにくいよねみたいな部分の話につながっていくということでジェネレーターとエバリエーターを開けましょうねこれも絶対やった方がいい設計パターンですね評価者は会議的に調節できたりだとかして作ってる人が主観的に</p>
+<p><code>19:51</code> 見落としてしまっている部分っていうのをフィードバックの中でやっていきますこれ別にコーデックスだけじゃなくてクロードモデルでも十分に効果的だなと思いますけど例えばモデルを変えるっていうのももちろん一つのやり方です例えばこの視点をレビューするのはコーデックスの方が向いてそうとか例えばジェミの方がね生成するジェネレーターが向いてるんじゃないかとかやっぱそういうのあるんですよねウェブデブベンチみたいなのあったりしますけどもやっぱウェブ開発のねそのUIの美しさみたいな部分で言うと僕はやっぱジェミディスアンティー1プロが一番いいと思ってるんですけどね</p>
+<p><code>20:24</code> 現状時点ではなんですけどもじゃあそこからAIエージェントとしてやっていく上でその ai エージェントとしてずっと仕事していく上でまぁジェミニーが優秀かっていうそうでもなかったりだとか まあ例えばねレビューはこのコーデックスの方がいいんじゃないかとか条件によってねあると思いますまあジェミニーはね結構マルチモーダーもいいかね まあその ui をフィードバックさせるのはどれがいいかっていうのはもう諸説あるかなと思うんですけどなんでまぁそういうところでジェネレーターにはこれ割り当ててエバリエーターにはこれ割り当ててみたいなことも僕のコミュニティとかね僕自身とかはしっかりやってるっていう感じですそれも一つね</p>
+<p><code>20:58</code> ハーネスエンジニアリングですよであとねちょっとこれもずいくずれちゃってるけどアンソロピック自体がやってるのがこのプランナージェネレーターエバリエーターのパターンですねこれはねすごく本質的でさっきのねエージェントのノートの中にもすごく丁寧に書きましたけどもそもそもね、俯瞰と詳細を同時に見るっていうのはやっぱり難しいんですよねなのでここでね、ジェネレーターとプランナーっていうのは分けた方がいいですよねっていうパターンで、エバリエーターっていうのはさっき言った通りね、主観と客観の話で分離しないと分離しないと自分が正しいと思い込んでいるジェネレーターに対してフィードバックを回す必要があるよねということで</p>
+<p><code>21:35</code> この3つに分類しているこのね部分とかをやっぱね研究とか実践地ベースでめっちゃ本質的にね抜きまくってるのがクロードなんですよアンソルピックなんですよねなんで僕はすごくクロードコードのハーネスが本当に美しいと思ってるしここにねずっと貼ろうかなって思ってるし僕自身もですねそれが作れる人間でありたいなと思ってるからこそめっちゃハーネス掘ってるって感じですけどはいでまぁ実際ね単一エージェントでやるよりこの3エージェントで分割した方がコストとかはね高くなったりすることもあるんですけども</p>
+<p><code>22:08</code> 品質は高くなっていくと今はですねこれちょっと出た時が結構古かったと思うんですけども今ではこのモデル自体がもっとスマートになってトークン効率を上げていくGPT5から5.1ぐらいの流れの時に結構僕は感じたんですけどもモデルのトークン効率それからずっとクロードとかもどんどんトークン効率を上げているなという印象がありましてそれは全体内部ハーネスの部分でどうにかしていたりだとかモデル自身がね良くなってるっていうのもあるとは思いますけどもで今はねみんな80点で100個のね80点出してくる時代じゃないですか</p>
+<p><code>22:42</code> だからこそ差をつけるってなってくるとまあそのハーネスでねこの本質を掘りまくっていかないとこの質の部分で差をつけないとどうするんだっていうのは僕ちょっと自分の意見として持っていてだからこそ目の前のねアウトカムじゃなくて長期的な大きいアウトカムを取りに行くっていう意味ではまあやっぱハーネスに貼るんがいいんじゃないかなって思ってるんですけどねぜひよかったら皆さんもコメント欄の方で感想いただければと思うんですけどはいっていう感じですかねだから質にどんどんトークンを使っていくべきだと思ってますまあもちろんね量は</p>
+<p><code>23:16</code> みんなと同じように出すべきなんですけどでも質で差つけないとどうしようもないなってちょっと思ってるって感じですねそれぐらいやっぱクロードがやってきたことまあコーデックスもそうですけど偉大だなって思ってますで長期的なねタスクとかでよく失敗するのが早期終了宣言みたいな部分とかあとはねめっちゃバグとか検証できてないとかあったりするんですけどこれもねよく言われているやり方でフューチャーリストJSONで外に外部で書き出しさせて進捗管理させるとかあとはGitの部分や進捗ノートとかでねえーまあ</p>
+<p><code>23:50</code> コンテキセッション間のやり取りやるとかあとはね検証ツールをちゃんと持たせましょうっていうのもよく言われている話で例えばプレイライトであったりだとかねブラウザでやるんやったらそのプレイライトとかエージェントブラウザとかでもいいですけどそういうのを持たせてどういう形で検証すればいいかっていうのを教えてあげるという形ですじゃあハーネスのアンチパターンみたいな部分の話もしたいんですけどこれはやっぱり過剰な制御さっき言った通り制約をつければつけるほどその部分に収束はしていくんですけどもモデルの想像力を使えない</p>
+<p><code>24:23</code> 非決定論的っていうのが強力であるにもかかわらずそれを生かしきれないという部分もあったりするので過剰なハーネス構築っていうのはあんまりお勧めされていないだからモデルが進化しても生きるだろうっていうようなねハーネス作りっていうのはやっぱり心がける必要があるのかなと個人的に思っていますそれこそねクロードが賢いという前提を持つのがすごく重要だなって思っていてそうすると過剰なハーネス構築っていうのはねより避けられるんじゃないかこれもちょっとアバウトの話なんですけどねそもそもベタなものでもあるんでね</p>
+<p><code>24:57</code> ハーネスエンジニアリングっていうものがっていうのもあるかなと思いますテスト検証手段で完了条件の明記化みたいな部分のも結構大事だなと思っていますしクロードMD、エージェントMDっていうのをむちゃくちゃ書きまくるこれもあんまり良くないパターンですねっていうのも常にAIエージェントの向けられる注意力というのは有限だしコンテキストウィンドウっていうのも今でも100万とか結構増えてきましたけども常に頭につきまといながら動いていくわけなのでそれはもちろんそこにね</p>
+<p><code>25:30</code> 注意をされてしまうという意味ではあんまり気持ちいいことではないだからこそできる限りシンプルにやっていこうとかあとはドキュメントがね腐ってたらちゃんと処理しましょうとかそういうのをねしっかりやるべきですで、じゃあ反設計何から始められるんだっていう話ですけどもよく言われているのはねクロードMDまず綺麗にしましょうエージェントMD綺麗にしましょうとで、その次にねフックスとかでリンターコードフォーマッターとかを整備してで決定論的に寄せられる部分は寄せていってクロードにそういうのをわざわざやらせないようにしましょうねというのがステップ2としてある</p>
+<p><code>26:05</code> それがねフックで自動化していくという感じですねその後にね検証手段として例えばプレイライトMCPとかプレイライトMCPはねもう今ちょっとやめた方がいいかもしれないですねエージェントブラウザーとかプレイライトCLIとかも存在してるんでねそのあたりをちょっと検討してAIエージェントに動作確認をねさせられる手段を入れるでそれを教えるスキルであったりだとかそれはもちろんサブエージェントであったりだとかねいろいろあると思いますけどレビュアー的な部分をできるような環境を整えてあげると</p>
+<p><code>26:40</code> 評価ループとしてジェネレーターとエバリエーターっていうのを分割して作業をさせるようにクロードMDなりサブエージェントスキルいろいろやり方はあると思いますけど導入しましょうと継続的に作っている自分のやり方っていうのはスキルであったりだとかいろんなものに制御してハーネスを改善していきましょうねというのが無難なハーネス設計の始め方かなと思いますハーネスエンジニアリングはAIエージェントの品質を決定する最も重要な技術分野すごく好技なんですけどもね</p>
+<p><code>27:12</code> 今日話したスキルをどんどん掘っていく効果的なスキルをどう作るかフックスとかサブエージェントとかいろんな機能がクロード外部のね部分で存在していますけどそれをねどれだけそのAIエージェント制御させるために掘っていけるかそのための知識としてはいろいろね実践地ももちろんありますし研究とかでね言われていることちょっとメタインですけどね存在しておりますそれをね具現化していくっていうのが本当に大変ではあるんですけどもそのね具現化をしているのが結構僕のねノートだったりとかしてさっきねハーネスの</p>
+<p><code>27:46</code> 話したと思うんですけどもこれをね評価する僕がすごい自分の中で頭痛くしながら集めまくった本質みたいなのをバーっとね25個ぐらいのパターンをね準備しておいてその基準でね皆さんのそのクロードコードハーネス自体を診断するみたいなねスキルを作りましたなんでこれクロードコードベースでね特化してますけど本質リストみたいなのをノートに書いてますしでそれまあリファレンスとして持ってるんでコーデックスでやりたかったらそれもちょっと改造していただく必要あるんですけども使えるようにしてます</p>
+<p><code>28:18</code> はいまあなんでねどこがまだ本質的に向き合えてないのかとかっていうのをちょっとねしっかりやらせてもらってたりするんでまあ実はねもう最短経路というかまあ結構そのマクロの部分での指針をねやらせてもらってたりしますはいまあこのね設計の部分で何やればいいんだみたいな形もあると思うんですけどもそれに加えてねまあメンバーシップとか入っていただいてハーネスの診断してもらって自分のどこが課題でどういう部分を改善していけるかとか見ていただくとめっちゃいいんじゃないかなと思ってますなんでわざわざこんなものを共有するんだっていうと</p>
+<p><code>28:51</code> 僕自身もっと強いAGIを手にするためにどうするかっていうのを自分で向き合ってますけどもそこでね僕はマサオコミュニティゾーンで一緒にセンスタックマンしながら掘っていけたらいいんじゃないかなと思ってるし自分のプレッシャーになってくるんでそういうのが周りも強くなってくるとねなんで共有させてもらってますまあ本当にねいやこれマジでやばいんではいっていう感じでありますまあちょっとねただあのメタい話ではあるので本質論とか得意じゃない人はあんまり向いてないかもしれないですね</p>
+<p><code>29:23</code> はいなんですけどただまあハーネスエンジニアリングマジで差出るんで結構しっかりやった方がいいんじゃないかなと個人的には思ってますねっていう感じでまあこの動画ねおしまいということでハーネスエンジニアリングまあ入門系の話かなもっとスキルとかねミクロで掘らないといけないことっていうのもいっぱいありますけど公開情報がどんどん増えてきたら僕のYouTubeチャンネルでも共有させてもらいますしメンバーシップではね次どんどん僕が探索している部分徹底的に解説していくので今後もお楽しみにしていただければと思いますそんなところで</p>
+<p><code>29:54</code> この動画が面白いなと思った方チャンネル登録と高評価どうぞよろしくお願いします私はね先ほどから共有している通りノートでメンバーシップやってて今日の共有したハーネス診断とかAIエージェントの本質ベースでのレビュースキルとかノートで共有させてもらってます他にも日々の情報のキャッチアップでやったりだとか質問や相談をこちらでもディスコードコミュニティでも受け付けてますしノートにメンバー限定の勉強会定期的に開催してますこれも結構非常に評判が良くて入門者向けからハーネスエンジニアリングの徹底解説系の勉強会やってます</p>
+<p><code>30:27</code> 興味のある方はぜひ概要欄のリンクの方からご参加いただければと思いますというところで以上、マサオでした</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（PermanentNote）— AIエージェントの構造・ハーネスとの関係</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）— ハーネスエンジニアリングの主要実装環境</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（PermanentNote）— フックスによる自動化・決定論的処理</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（PermanentNote）— コンテキスト最適化に関わるツール管理</li>
+<li><a href="./claude-managed-agents" class="internal" data-slug="claude-managed-agents">claude-managed-agents</a>（PermanentNote）— エージェントチームス・サブエージェント設計</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-614" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

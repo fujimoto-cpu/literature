@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Claude Codeの精度を100倍にするフォルダの作り方</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Claude Codeの精度を100倍にするフォルダの作り方"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Claude Codeの精度を100倍にするフォルダの作り方"/><meta name="twitter:description" content="Claude Codeを使いこなしてる人には、ある共通点がある。コードが上手いとか、プロンプトのセンスがあるとか、そういう話じゃない。初期設定に異常なほど時間をかけてる。逆に「Claude Code、なんか微妙だな」って感じてる人は、 ほぼ例外なく初期設定をすっ飛ばしてる。僕がま..."/><meta property="og:description" content="Claude Codeを使いこなしてる人には、ある共通点がある。コードが上手いとか、プロンプトのセンスがあるとか、そういう話じゃない。初期設定に異常なほど時間をかけてる。逆に「Claude Code、なんか微妙だな」って感じてる人は、 ほぼ例外なく初期設定をすっ飛ばしてる。僕がま..."/><meta property="og:image:alt" content="Claude Codeを使いこなしてる人には、ある共通点がある。コードが上手いとか、プロンプトのセンスがあるとか、そういう話じゃない。初期設定に異常なほど時間をかけてる。逆に「Claude Code、なんか微妙だな」って感じてる人は、 ほぼ例外なく初期設定をすっ飛ばしてる。僕がま..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Claude-Codeの精度を100倍にするフォルダの作り方"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Claude-Codeの精度を100倍にするフォルダの作り方"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Claude Codeを使いこなしてる人には、ある共通点がある。コードが上手いとか、プロンプトのセンスがあるとか、そういう話じゃない。初期設定に異常なほど時間をかけてる。逆に「Claude Code、なんか微妙だな」って感じてる人は、 ほぼ例外なく初期設定をすっ飛ばしてる。僕がま..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Claude-Codeの精度を100倍にするフォルダの作り方"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-269"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-269" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Claude Codeの精度を100倍にするフォルダの作り方</a></div></nav><h1 class="article-title">Claude Codeの精度を100倍にするフォルダの作り方</h1><p show-comma="true" class="content-meta"><time datetime="2026-04-10T15:00:00.000Z">2026年4月11日</time><span>35 min read</span></p><ul class="tags"><li><a href="./tags/clippings" class="internal tag-link">clippings</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/project-setup" class="internal tag-link">project-setup</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/" class="internal tag-link"></a></li></ul></div></div><article class="popover-hint"><p><img src="./99_🖼️-picture/281987e22097ebfdc5d4c387367511e0_MD5.jpg" width="auto" height="auto" alt/></p>
+<p>Claude Codeを使いこなしてる人には、ある共通点がある。</p>
+<p>コードが上手いとか、プロンプトのセンスがあるとか、そういう話じゃない。</p>
+<p><strong>初期設定に異常なほど時間をかけてる。</strong></p>
+<p>逆に「Claude Code、なんか微妙だな」って感じてる人は、 ほぼ例外なく初期設定をすっ飛ばしてる。</p>
+<p>僕がまさにそうだった。</p>
+<h2 id="僕が最初の1ヶ月で学んだ高い授業料">僕が最初の1ヶ月で学んだ「高い授業料」<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#僕が最初の1ヶ月で学んだ高い授業料" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Claude Codeを導入した直後、僕はワクワクしてた。</p>
+<p>「これでコーディング速度10倍だ」と。</p>
+<p>現実は違った。</p>
+<p>セッションを開くたびに、毎回こうなる。</p>
+<p>「このプロジェクトはNext.jsで構成してて……」 「テストはVitest使ってて……」 「コミットメッセージは日本語で……」</p>
+<p>5分かけて前提を共有して、ようやく本題に入る。 で、次のセッションではまた同じ5分。</p>
+<p>プロジェクトを切り替えたら当然リセット。 昨日30分かけて教えたことも、今日はもう何も覚えてない。</p>
+<p>これ自体は仕様だから仕方ない。 LLMはセッションをまたいで記憶を持たない。</p>
+<p>問題は、それを知ってるはずなのに <strong>毎回「口頭で教え直す」という最悪の対処法を続けていた</strong>こと。</p>
+<p>1ヶ月たって、ふと自分の作業を振り返った。</p>
+<p>Claude Codeとの会話ログを見返すと、 全体の3割くらいが「前提の説明」で埋まってた。</p>
+<p>コードの話をしてる時間より、 「お前は何を知ってるべきか」を説明してる時間のほうが長い日すらあった。</p>
+<p>AIを導入して効率化したはずなのに、 体感の疲労はむしろ増えてる。</p>
+<p>この矛盾に気づいたとき、 さすがにやり方を根本から見直すことにした。</p>
+<h2 id="発想の転換会話で教えるをやめる">発想の転換——「会話で教える」をやめる<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#発想の転換会話で教えるをやめる" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>考え方を変えた。</p>
+<p>Claudeに毎回口頭で説明するのは、 <strong>新入社員に毎朝オリエン資料を読み上げてるようなもの</strong>だ。</p>
+<p>普通そんなことしない。 資料を渡して「これ読んどいて」で済む話。</p>
+<p>Claude Codeにも同じことができる。</p>
+<p>それが .claude フォルダだ。</p>
+<p>プロジェクトのルートに .claude/ というディレクトリを置くと、 Claudeはセッション起動時にその中身を自動で読み込む。</p>
+<p>つまり、ここに書いたことは<strong>最初から知ってる前提</strong>になる。</p>
+<p>口頭での説明ゼロ。起動した瞬間に戦力。</p>
+<p>構造はこうなってる。</p>
+<p>your-project/</p>
+<p>├── CLAUDE.md # 「お前は何者で、何を守るか」</p>
+<p>├── CLAUDE.local.md # 自分だけの設定（git管理外）</p>
+<p>└── .claude/</p>
+<p>├── settings.json # やっていいこと・ダメなことの境界線</p>
+<p>├── rules/ # 状況別の詳細ルール集</p>
+<p>├── skills/ # 自動で発動するワークフロー</p>
+<p>└── agents/ # 独立して動く専門エージェント</p>
+<p>パーツは5つだけ。</p>
+<p>ただし、この5つの<strong>設計順序</strong>がめちゃくちゃ大事。 間違った順番で作ると、かえってClaudeの精度が落ちる。</p>
+<p>僕が試行錯誤した結果たどり着いた、 最適な構築順序で解説していく。</p>
+<h2 id="step-1settingsjson--まず柵を立てる">STEP 1：settings.json —— まず「柵」を立てる<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-1settingsjson--まず柵を立てる" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>最初にやるべきは、CLAUDE.mdでも skills でもない。</p>
+<p><strong>settings.json で安全装置をかけること。</strong></p>
+<p>理由は単純で、Claudeに自由に動いてもらう前に 「ここから先は立入禁止」という境界線を引いておかないと危ないから。</p>
+<p>犬を庭で放し飼いにするなら、まず柵を立てるだろう。 それと同じ。</p>
+<p>.claude/settings.json の中身はこうなる。</p>
+<p>{</p>
+<p>“permissions”: {</p>
+<p>“allow”: [</p>
+<p>“Bash(npm run *)”,</p>
+<p>“Bash(git status)”,</p>
+<p>“Bash(git diff *)”,</p>
+<p>“Read”,</p>
+<p>“Write”,</p>
+<p>“Edit”</p>
+<p>],</p>
+<p>“deny”: [</p>
+<p>“Bash(rm -rf *)”,</p>
+<p>“Bash(curl *)”,</p>
+<p>“Bash(wget *)”,</p>
+<p>“Read(.env)”,</p>
+<p>“Read(.env.*)”</p>
+<p>]</p>
+<p>}</p>
+<p>}</p>
+<p>ルールは3段階。</p>
+<p><strong>allowに入れたもの → 無断で実行する。</strong></p>
+<p>Claude Codeはデフォルトだと、コマンドを1つ実行するたびに 「これ実行していいですか？ [y/n]」って聞いてくる。</p>
+<p>1セッションで30回コマンド叩くとして、毎回「y」を入力する。</p>
+<p>この確認ダイアログ、最初は安心感があるんだけど、 慣れてくると完全にテンポを殺してくることに気づく。</p>
+<p>npm run test とか git status みたいな 壊れようがないコマンドは allow に入れて自動化する。 これだけで作業リズムがまるで変わる。</p>
+<p><strong>denyに入れたもの → 何があっても実行しない。</strong></p>
+<p>rm -rf *（全削除）を deny に入れてないのは、 家の鍵をかけずに旅行に行くのと同じ。</p>
+<p>Claudeが「ディスク容量確保のために不要ファイルを削除しますね」 とか言い出してプロジェクトごと吹き飛ばす—— これは理論上ありえるし、実際にやらかした報告もある。</p>
+<p>curl と wget もブロック推奨。 外部からスクリプトを引っ張ってきて実行される可能性がある。</p>
+<p><strong>どちらにも書いてないもの → 毎回聞いてくる。</strong></p>
+<p>初めて使うコマンドや、判断に迷うものはここに落ちる。 「一応聞くけど、あなたが判断して」というゾーン。</p>
+<p><strong>.envの読み取り禁止は初日にやれ</strong></p>
+<p>特にこれ。</p>
+<p>“Read(.env)”,</p>
+<p>“Read(.env.*)”</p>
+<p>.env にはAPIキーやパスワードが入ってることが多い。</p>
+<p>Claudeがうっかり .env の中身を読み取って、 それをコンテキストに載せてしまったら？</p>
+<p>ログに残る。出力に混ざるかもしれない。</p>
+<p>「Claudeを信頼してないの？」って話じゃない。</p>
+<p><strong>構造的に事故が起きない仕組み</strong>を作るかどうか。 ヒューマンエラーならぬAIエラーを、設計で防ぐ。</p>
+<p>settings.json は5分で書ける。 でもこの5分をサボった代償は計り知れない。</p>
+<p><strong>だから最初にやる。</strong></p>
+<h2 id="step-2claudemd--お前はこういう前提で動けを定義する">STEP 2：CLAUDE.md —— 「お前はこういう前提で動け」を定義する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-2claudemd--お前はこういう前提で動けを定義する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>柵を立てたら、次はClaude自身の頭の中を書く。</p>
+<p>CLAUDE.md はプロジェクトルートに置くファイルで、 セッション開始時にClaudeが<strong>真っ先に読む</strong>。</p>
+<p>ここに書かれた内容は、そのセッション中ずっと効き続ける。</p>
+<p>言い換えれば、 **CLAUDE.mdはClaudeにインストールする「初期OS」**みたいなもの。</p>
+<p>どんな言語で話すか。 どういうスタンスで仕事するか。 何を最優先にするか。</p>
+<p>これを起動前に注入しておく。</p>
+<p><strong>書くべきは3つだけ</strong></p>
+<p>CLAUDE.mdに書く内容は、3ブロックに絞る。</p>
+<p><strong>① 自分自身のプロファイル</strong></p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> About Me</p>
+<p>- 日本語で対話する（コード・ファイル名・コマンドは英語OK）</p>
+<p>- テンポ重視。回りくどい説明は不要</p>
+<p>- 「いい質問ですね！」系のリアクションはいらない</p>
+<p>これ、地味に見えるけど書かないと事故る。</p>
+<p>デフォルトのClaudeは英語ベースで、 とにかく丁寧に、褒めちぎりながら返してくる。</p>
+<p>「素晴らしいアプローチですね！」 「とても良い質問です！」</p>
+<p>作業中にそれ、いる？</p>
+<p>いらない。</p>
+<p>「日本語で話せ」「お世辞は省け」—— この2行だけでレスポンスの質がガラッと変わる。</p>
+<p><strong>② プロジェクトの環境情報</strong></p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> Environment</p>
+<p>- OS: macOS Sonoma</p>
+<p>- Runtime: Node.js 20 / pnpm</p>
+<p>- Framework: Next.js 14 (App Router)</p>
+<p>- DB: Supabase (PostgreSQL)</p>
+<p>- デプロイ先: Vercel</p>
+<p>これを省くと何が起きるか。</p>
+<p>Claudeが apt-get install って打ってくる（Macなのに）。 npm install って書いてくる（pnpmなのに）。 pages/ ディレクトリ前提で話してくる（App Routerなのに）。</p>
+<p>毎回「いや、うちはpnpmだから」って訂正する羽目になる。</p>
+<p>環境情報は<strong>Claudeが最初の1手を間違えないために</strong>書く。 地味だけど、手戻りが劇的に減る。</p>
+<p><strong>③ 仕事の進め方のルール</strong></p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> Work Rules</p>
+<p>- 結論から先に言え。前置き不要</p>
+<p>- わからないことは「わからない」と言え。推測で埋めるな</p>
+<p>- 成果物は必ずファイルに保存しろ。チャットに流すだけは禁止</p>
+<p>- 1つの変更につき1コミット。まとめてコミットするな</p>
+<p>ここが<strong>CLAUDE.mdの心臓部</strong>。</p>
+<p>特に「推測するな」は絶対に入れたほうがいい。</p>
+<p>Claudeは知らないことがあっても、 それっぽく答えてくるクセがある。いわゆるハルシネーション。</p>
+<p>「わからないなら聞け」と明示するだけで、 嘘をつく頻度が体感で半分以下になった。</p>
+<p>あと「ファイルに保存しろ」も必須。</p>
+<p>これを書かないと、3000字の記事をチャット欄にベタ打ちして 「どうぞ！」って言ってくる。 チャットが流れたら終わり。どこにも残らない。</p>
+<p><strong>絶対に守るべきルール：200行以内</strong></p>
+<p>CLAUDE.mdには何でも書けるけど、<strong>200行を超えたらアウト</strong>。</p>
+<p>僕も最初、「あれもこれも」と詰め込んで350行くらいになったことがある。</p>
+<p>結果、Claudeの指示遵守率が目に見えて落ちた。</p>
+<p>原因はコンテキストウィンドウの圧迫。</p>
+<p>Claudeが一度に保持できる情報量には上限がある。 CLAUDE.mdが長すぎると、肝心な作業の指示を入れるスペースが減る。</p>
+<p>分厚いマニュアルを新人に渡しても読まれないのと一緒。</p>
+<p><strong>CLAUDE.mdには「絶対に知っておくべき最小限」だけ。</strong></p>
+<p>じゃあ200行に収まらない詳細ルールはどうするのか。 次のステップで解決する。</p>
+<h2 id="step-3rules--ルールブックを棚に分ける">STEP 3：rules/ —— ルールブックを「棚」に分ける<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-3rules--ルールブックを棚に分ける" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>プロジェクトが成長すると、ルールも膨らむ。</p>
+<p>文体のルール、投稿のルール、コーディング規約、 セキュリティポリシー、命名規則……</p>
+<p>全部CLAUDE.mdに書いたら200行なんて一瞬でオーバーする。</p>
+<p>.claude/rules/ はこの問題を解決するための<strong>分割収納スペース</strong>だ。</p>
+<p>.claude/rules/</p>
+<p>├── writing-style.md # 文体・トーン</p>
+<p>├── git-workflow.md # Gitの運用ルール</p>
+<p>├── naming.md # 命名規則</p>
+<p>└── mistakes.md # やらかしログ</p>
+<p>ここに置いたMarkdownファイルは全部自動で読み込まれる。 CLAUDE.mdと同じ扱い。</p>
+<p>違いは「分割管理できること」。</p>
+<p><strong>実例を出す</strong></p>
+<p><strong>writing-style.md（文体ルール）</strong></p>
+<p># 文体ルール</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> 基本方針</p>
+<p>- 「です・ます」は使わない。言い切りの口語体</p>
+<p>- 1文は短く。目安は40字以内</p>
+<p>- 体言止めを積極的に使う</p>
+<p>- 具体的な数字を入れる（「たくさん」→「月30件」）</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> 禁止ワード</p>
+<p>- 「〜させていただきます」→「〜する」に置換</p>
+<p>- 「〜と思います」→「〜だ」に置換</p>
+<p>- 「いかがでしょうか」→ 削除</p>
+<p>- 「基本的に」「一般的に」→ 具体的に書き直す</p>
+<p><strong>git-workflow.md（Git運用ルール）</strong></p>
+<p># Git運用ルール</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> コミット</p>
+<p>- コミットメッセージは日本語</p>
+<p>- prefix必須: feat / fix / refactor / docs / chore</p>
+<p>- 例: “feat: ユーザー登録フォームのバリデーション追加”</p>
+<p>- 1コミット1変更。複数の変更をまとめない</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> ブランチ</p>
+<p>- main への直接pushは禁止</p>
+<p>- feature/〇〇 でブランチを切る</p>
+<p>- マージ前にテストを通すこと</p>
+<p><strong>mistakes.md（やらかしログ）</strong></p>
+<p>これが個人的に最も効果を実感したファイル。</p>
+<p># 過去のミスと対策</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> Case 1: 存在しないAPIを自信満々に使った</p>
+<p>状況: Supabaseのクエリで `.contains()` を使ったが、</p>
+<p>そんなメソッドは存在しなかった。</p>
+<p>Claudeが公式ドキュメントを確認せず推測で書いた。</p>
+<p>→ 対策: 外部ライブラリのAPIを使う前に、</p>
+<p>公式ドキュメントのURLを確認してから書け。</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> Case 2: 既存のテストを壊した</p>
+<p>状況: 新機能を追加した際、既存の `user.test.ts` を</p>
+<p>上書きしてテストケースが5個消えた。</p>
+<p>→ 対策: 既存ファイルを編集する前に、</p>
+<p>必ず現在の内容をGrepで確認しろ。</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> Case 3: チャットに出力しただけで保存しなかった</p>
+<p>状況: 5000字の記事をチャットに出力して終わり。</p>
+<p>セッション終了後に消えた。</p>
+<p>→ 対策: 500字以上の成果物は必ずファイルに書き出せ。</p>
+<p>Claudeは毎回記憶がリセットされる。</p>
+<p>ということは、<strong>同じミスを無限に繰り返す可能性がある</strong>。</p>
+<p>人間の部下なら「前もやったよね？」で済む。 でもClaudeには「前」がない。</p>
+<p>だから、ミスが起きたらその場で mistakes.md に追記する。</p>
+<p>「こういうミスをした → 次からこうしろ」</p>
+<p>このファイルが育つほど、Claudeの判断精度が上がっていく。</p>
+<p>僕の mistakes.md はもう30件を超えてるけど、 記録したミスの再発率は体感で9割減った。</p>
+<p><strong>CLAUDE.md と rules/ の棲み分け</strong></p>
+<p>CLAUDE.mdは <strong>「会社の理念とクレド」</strong> 。 全社員が暗記すべき、短くて核心的なやつ。</p>
+<p>rules/ は <strong>「部署ごとの業務マニュアル」</strong> 。 必要な人が必要なときに参照する、具体的な手順書。</p>
+<p>この分け方にしてから、情報が散らかることがなくなった。</p>
+<h2 id="step-4skills--毎回やってる作業を自動化する">STEP 4：skills/ —— 「毎回やってる作業」を自動化する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-4skills--毎回やってる作業を自動化する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>ここまでの3ステップで、Claudeの土台はできた。</p>
+<p>次は「繰り返しの作業を自動化する」フェーズ。</p>
+<p>あなたが毎回Claudeに同じ指示をしてるなら、 それは<strong>スキルにすべきサイン</strong>。</p>
+<p>「レビューして」 「テスト書いて」 「この記事のドラフト作って」</p>
+<p>こういう定型タスクを .claude/skills/ に定義しておくと、 Claudeが文脈を読んで<strong>勝手に発動してくれる</strong>。</p>
+<p>昔は .claude/commands/ でスラッシュコマンドを作る仕組みだったけど、 今は skills に統合されて commands は非推奨になってる。</p>
+<p>skills は commands の完全な上位互換で、 スラッシュコマンドとしても呼べるし、 Claudeの自動判断で起動させることもできる。</p>
+<p><strong>フォルダ構造</strong></p>
+<p>.claude/skills/</p>
+<p>├── draft-post/</p>
+<p>│ ├── SKILL.md # スキル定義（これが必須）</p>
+<p>│ └── examples.md # 参考事例（補足資料、任意）</p>
+<p>├── review-code/</p>
+<p>│ ├── SKILL.md</p>
+<p>│ └── checklist.md</p>
+<p>└── write-test/</p>
+<p>└── SKILL.md</p>
+<p>各スキルは<strong>フォルダ単位</strong>で管理する。</p>
+<p>SKILL.md がメインの定義ファイルで、 補足資料を好きなだけ横に置ける。</p>
+<p>これが昔の commands にはできなかったこと。 commands は単一ファイルだけだったから、 「チェックリストも一緒に読ませたい」ができなかった。</p>
+<p><strong>SKILL.md の書き方</strong></p>
+<p>例として、X投稿の下書きスキルを作ってみる。</p>
+<p>---</p>
+<p>name: draft-post</p>
+<p>description: ></p>
+<p>Xの投稿文を作成する。</p>
+<p>「ポスト書いて」「ツイート作って」「投稿案ほしい」</p>
+<p>などのキーワードで自動起動する。</p>
+<p>---</p>
+<p>以下のフォーマットでX投稿文を3パターン作成しろ。</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> 構成</p>
+<p>- 1行目: 読み手の指を止めるフック</p>
+<p>- 中盤: 具体的な価値や気づき（数字 or 実体験）</p>
+<p>- 最終行: 読後に行動を促すか、余韻を残す</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> 制約</p>
+<p>- 140字以内</p>
+<p>- 改行は最大2回</p>
+<p>- ハッシュタグは最大2個（なくてもいい）</p>
+<p>- 「今だけ」「限定」「必見」等のセールス語禁止</p>
+<p><a href="./tags/" class="tag-link internal alias" data-slug="tags/index"></a> トーン</p>
+<p>- 断定口調。「〜と思います」は使わない</p>
+<p>- 上から説教しない。横に座って話す感覚</p>
+<p>- 実体験ベース。抽象論だけで終わらせるな</p>
+<p>3パターンそれぞれに「狙い」を1行で添えること。</p>
+<p><strong>ポイントは description の書き方</strong></p>
+<p>description はClaudeがスキルを選ぶときの判断材料。</p>
+<p>ここが雑だと、スキルを作ったのに一生発動しないという悲劇が起きる。</p>
+<p>コツは「ユーザーが実際に言いそうな言葉」をそのまま入れること。</p>
+<p>「ポスト書いて」「ツイート作って」「投稿案ほしい」—— こういう日常的なフレーズを description に散りばめておくと、 Claudeが「あ、draft-postスキルを使うべきだ」と自動で判断してくれる。</p>
+<p><strong>description は「Claudeに向けた求人票」だと思って書く。</strong></p>
+<p>「こういう場面で」「こういうキーワードが出たら」あなたの出番ですよ、と。</p>
+<p><strong>指示本文は「命令形」で書く</strong></p>
+<p>SKILL.md の本文、つまりClaudeへの指示は<strong>命令形が鉄則</strong>。</p>
+<p>「〜してください」じゃなくて「〜しろ」。 「〜を検討してみてはいかがでしょうか」じゃなくて「〜を確認しろ」。</p>
+<p>曖昧な指示を出すと、曖昧な出力が返ってくる。 これはプロンプトエンジニアリングの基本だけど、 SKILL.mdでも同じことが言える。</p>
+<p><strong>スラッシュコマンドとしても使える</strong></p>
+<p>自動発動だけじゃなく、/draft-post と打てば手動でも呼び出せる。</p>
+<p>僕は日常的に使う操作をコマンド化してて、</p>
+<p>/draft-post → X投稿の下書き3案</p>
+<p>/daily-log → その日の作業ログを自動生成</p>
+<p>/refactor → 指定ファイルのリファクタリング</p>
+<p>こういうのを揃えておくと、定型作業が<strong>呼吸するように回る</strong>。</p>
+<p><strong>model指定でコストを最適化する</strong></p>
+<p>---</p>
+<p>name: security-scan</p>
+<p>description: セキュリティ脆弱性のスキャン。デプロイ前チェック時に自動起動。</p>
+<p>allowed-tools: Read, Grep, Glob</p>
+<p>model: opus</p>
+<p>---</p>
+<p>model: opus を入れると、そのスキルだけOpus（最上位モデル）で動かせる。</p>
+<p>普段の作業はSonnetで十分だけど、 セキュリティ監査みたいな判断の重い仕事だけOpusに任せる。</p>
+<p>全部Opusで回したら、月のAPI代が簡単に5桁を超える。</p>
+<p><strong>タスクの重さでモデルを切り替える。</strong> これだけでコストの桁が変わる。</p>
+<h2 id="step-5agents--別室で働く専門家を配置する">STEP 5：agents/ —— 「別室で働く専門家」を配置する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-5agents--別室で働く専門家を配置する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>最後のパーツ。ここが .claude フォルダの最深部。</p>
+<p>agents/ は skills/ と似てるようで、根本的に違う。</p>
+<p>一番の違いは<strong>メインセッションとコンテキストが完全に分離されてる</strong>こと。</p>
+<p>Claudeと長く会話してると、 後半になるにつれて前半の指示を忘れ始める経験、ないだろうか。</p>
+<p>これはコンテキストウィンドウが溢れるから。 会話が長くなるほど、古い情報が押し出されていく。</p>
+<p>エージェントは<strong>別部屋で動く</strong>。 メインの会話を一切圧迫しない。</p>
+<p>つまり、メインのClaudeと雑談してる横で、 別のClaudeが黙々とコードレビューしてる、みたいなことができる。</p>
+<p><strong>ファイル構成</strong></p>
+<p>.claude/agents/</p>
+<p>├── reviewer.md # コード品質チェック担当</p>
+<p>├── security-guard.md # セキュリティ監査担当</p>
+<p>├── test-engineer.md # テスト作成担当</p>
+<p>└── fact-checker.md # 事実確認担当</p>
+<p><strong>書き方の例</strong></p>
+<p>---</p>
+<p>name: reviewer</p>
+<p>description: コード品質のレビューを行う専門エージェント</p>
+<p>tools:</p>
+<p>- Read</p>
+<p>- Grep</p>
+<p>- Glob</p>
+<p>model: sonnet</p>
+<p>---</p>
+<p>あなたはシニアエンジニアとしてコードレビューを行う。</p>
+<p>以下の基準で差分を評価しろ：</p>
+<p>- ロジックに矛盾や抜けがないか</p>
+<p>- エッジケースが考慮されているか</p>
+<p>- 既存コードとの整合性はとれているか</p>
+<p>- 不要な複雑さがないか</p>
+<p>問題がなければ「LGTM」とだけ返せ。</p>
+<p>問題がある場合は、ファイル名・行番号・理由・修正案をセットで出せ。</p>
+<p>ファイルへの書き込みは絶対にするな。読み取りと分析のみ。</p>
+<p><strong>エージェントの真価は「並列処理」</strong></p>
+<p>エージェントが本領を発揮するのは、 <strong>複数を同時に走らせるとき</strong>だ。</p>
+<p>メインセッション → 新機能のコードを書いてる</p>
+<p>↓ 裏で同時に</p>
+<p>reviewer → 書いたコードの品質をチェック中</p>
+<p>↓ 裏で同時に</p>
+<p>security-guard → 脆弱性がないかスキャン中</p>
+<p>↓ 裏で同時に</p>
+<p>test-engineer → テストコードを自動生成中</p>
+<p>人間がやったら3〜4時間かかる作業が、<strong>並列で同時に進む</strong>。</p>
+<p>しかもメインの会話は一切邪魔されない。 エージェントたちが別室で仕事してるあいだ、 僕はメインのClaudeと次の設計の話をしていられる。</p>
+<p><strong>skills と agents、どっちを使う？</strong></p>
+<p>判断基準はシンプル。</p>
+<p><strong>「手順が決まってる作業」→ skills</strong></p>
+<p>テンプレートに沿ってやればいい仕事。 毎回同じフローで処理する定型タスク。 マニュアル通りに動けば完了する作業。</p>
+<p><strong>「自分の頭で判断が必要な仕事」→ agents</strong></p>
+<p>コード全体を見渡して品質を評価する。 セキュリティの観点で多角的に分析する。 事実確認のためにあちこち調べまわる。</p>
+<p>skills は「レシピ」、agents は「シェフ」。</p>
+<p>レシピがあれば誰でも同じ料理が作れる。 でもメニューにない注文が来たとき、判断できるのはシェフだけ。</p>
+<p>初心者はまず skills から。 agents は「skillsだけだと足りないな」と感じてからで十分間に合う。</p>
+<h2 id="おまけhooks--セッションの前後を自動化する">おまけ：hooks —— セッションの前後を自動化する<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#おまけhooks--セッションの前後を自動化する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>settings.json にはもう一つ、hooks という仕組みがある。</p>
+<p>「特定のタイミングで、自動でスクリプトを走らせる」機能。</p>
+<p>{</p>
+<p>“hooks”: {</p>
+<p>“SessionStart”: [</p>
+<p>{</p>
+<p>“hooks”: [</p>
+<p>{</p>
+<p>“type”: “command”,</p>
+<p>“command”: “node scripts/load-context.js”,</p>
+<p>“timeout”: 10</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>],</p>
+<p>“Stop”: [</p>
+<p>{</p>
+<p>“hooks”: [</p>
+<p>{</p>
+<p>“type”: “command”,</p>
+<p>“command”: “node scripts/save-log.js”,</p>
+<p>“timeout”: 30</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>]</p>
+<p>}</p>
+<p>}</p>
+<p>たとえば——</p>
+<ul>
+<li><strong>セッション開始時</strong>：プロジェクトの現在の状態を自動取得して、Claudeに渡す</li>
+<li><strong>セッション終了時</strong>：作業ログを自動保存して、一時ファイルを片付ける</li>
+</ul>
+<p>僕はこれを使って、セッション開始時に 「前回どこまでやったか」の情報を自動で読み込ませてる。</p>
+<p>通常のClaude Codeは毎回まっさらな状態で始まるけど、 hooks を使えば「前回の続きから」に近い体験が作れる。</p>
+<p>ただしこれは上級テクニック。 最初から手を出す必要はないけど、 「Claudeが毎回記憶喪失なのがストレス」って人は 存在だけ覚えておくといい。</p>
+<h2 id="before--after">Before → After<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#before--after" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>.claude フォルダを整える前と後で、 僕の1日は全く別物になった。</p>
+<p><strong>Before</strong></p>
+<p>毎朝、Claudeに「おはよう、今日のプロジェクトはこれで……」から始まる。 コマンドを実行するたびに「y」を連打する日々。 レビューは自分の目で全部チェック。 3時間かけて書いたコードのテストを、さらに1時間かけて手動で作る。 Claudeが.envの中身を読もうとしてヒヤッとする。 同じミスを3回されてキレそうになる。</p>
+<p>「AIで時短してるはずなのに、なんでこんな疲れてるんだ？」</p>
+<p>これが毎日だった。</p>
+<p><strong>After</strong></p>
+<p>セッションを立ち上げた瞬間、Claudeはもう全部わかってる。 僕が「始めて」と言えば、勝手にコードを書き始める。 その裏でsecurity-guardが脆弱性をスキャンしてる。 reviewerがレビューの叩き台を出してくる。 test-engineerがテストコードを並行で生成してる。</p>
+<p>僕の仕事は「何を作るかの判断」と「最後のGO」だけ。</p>
+<p>これが典型的な1日の流れ。</p>
+<p>方針決定（15分）</p>
+<p>→ Claudeが実装を自律走行</p>
+<p>→ security-guard が並列スキャン</p>
+<p>→ reviewer がレビュー叩き台を生成</p>
+<p>→ 僕が最終確認（10分）</p>
+<p>→ 完了</p>
+<p>「どう作るか」はCLAUDE.mdとskillsが規定する。 「問題ないか」はagentsが検証する。 人間がやるのは「意思決定」だけ。</p>
+<h2 id="始め方今日やる3つだけ">始め方——今日やる3つだけ<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#始め方今日やる3つだけ" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>「全部やらなきゃ」と思うと手が止まる。</p>
+<p>だから最初はこの3つだけ。</p>
+<p><strong>① settings.json の deny を書く（5分）</strong></p>
+<p>{</p>
+<p>“permissions”: {</p>
+<p>“deny”: [</p>
+<p>“Bash(rm -rf *)”,</p>
+<p>“Read(.env)”,</p>
+<p>“Read(.env.*)”</p>
+<p>]</p>
+<p>}</p>
+<p>}</p>
+<p>安全装置。考えるより先に手を動かせ。</p>
+<p><strong>② CLAUDE.md を書く（20分）</strong></p>
+<ul>
+<li>自分のこと（言語、文体の好み）</li>
+<li>プロジェクトの概要（1〜2行）</li>
+<li>絶対ルール（3個まで）</li>
+</ul>
+<p>完璧じゃなくていい。 まず置くことが大事。使いながら育てればいい。</p>
+<p><strong>③ 「毎回説明してること」を1つだけスキルにする（30分）</strong></p>
+<p>あなたが毎セッション繰り返してる指示があるはず。 それを .claude/skills/ に書いて切り出す。</p>
+<p>最初の1個は完成度30%でいい。 使っていくうちに自然と磨かれる。</p>
+<p>この3つで合計55分。 1時間もかからない。</p>
+<p>でもこの1時間で、 <strong>これ以降のすべてのセッションが別次元になる。</strong></p>
+<p>逆にこの1時間をケチると、 毎回5分の説明 × 100セッション = 500分。</p>
+<p>8時間以上が「同じ説明の繰り返し」に消える計算。</p>
+<p>1時間の初期投資で8時間を回収。 やらない理由が見つからない。</p>
+<p>ここまでの3ステップで .claude フォルダの土台はできる。</p>
+<p>ただ、もう1つ押さえておくと圧倒的に楽になるものがある。</p>
+<p><strong>Claude Code本体のコマンドだ。</strong></p>
+<p>.claude フォルダが「Claudeの頭の中」を設計する仕組みなら、 コマンドは「Claudeの手足を直接動かす」操作体系。</p>
+<p>どれだけ頭の設計が完璧でも、 手足の動かし方を知らなければ仕事にならない。</p>
+<p>ただ、コマンドの数が多すぎて 「で、結局どれ使えばいいの？」となる人がほとんどだと思う。 僕も最初はそうだった。</p>
+<p>なので、僕が実際に毎日使ってる必須コマンド20個を 使い方と活用シーン付きで1つのガイドにまとめた。</p>
+<p>.claude フォルダの設定と合わせて手元に置いておけば、 Claude Codeの操作で迷うことはほぼなくなるはず。</p>
+<p><img src="./99_🖼️-picture/f117245783c278f15c4c08d628bc1482_MD5.jpg" width="auto" height="auto" alt/></p>
+<h2 id="claude-codeは道具じゃない">Claude Codeは「道具」じゃない<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#claude-codeは道具じゃない" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>正しく設定すれば「チームメンバー」になる。</p>
+<p>でもチームメンバーって、 入社初日にちゃんとオンボーディングしないと動けない。</p>
+<p>どのSlackチャンネルを見ればいいか。 誰に何を聞けばいいか。 やっちゃいけないことは何か。</p>
+<p>全部教えてあげないと、 せっかく優秀な人材でも力を発揮できない。</p>
+<p>.claude フォルダは、そのオンボーディング資料。</p>
+<p>「思い通りに動かない」 「毎回同じ説明してる」 「使ってるのに疲れる」</p>
+<p>これらは全部、Claude Codeの問題じゃない。 <strong>オンボーディングが足りてないだけ。</strong></p>
+<p>1時間、本気で設計してみてほしい。</p>
+<p>その1時間が、この先の全セッションを変える。</p>
+<hr/>
+<h2 id="ai要約">AI要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Claude Codeの精度を劇的に上げる<code>.claude</code>フォルダの設計方法を5ステップで解説。STEP 1: settings.jsonで安全装置（deny: rm -rf, .env読み取り禁止等）を最初に設定。STEP 2: CLAUDE.mdに「自分のプロファイル」「環境情報」「仕事ルール」の3ブロックを200行以内で記述。STEP 3: .claude/rules/に文体・Git運用・命名規則・やらかしログ（mistakes.md）を分割管理。STEP 4: .claude/skills/に繰り返しの作業を定義し自動発動またはスラッシュコマンドで呼び出し。STEP 5: .claude/agents/にコードレビュー・セキュリティ監査など専門エージェントを配置し並列処理。特に「mistakes.md（やらかしログ）」が最も効果的で、記録したミスの再発率が体感9割減。skills=レシピ（手順が決まった定型作業）、agents=シェフ（判断が必要な仕事）という使い分けが鍵。</p>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Claude-Codeで1人開発チームを作る方法" class="internal alias" data-slug="Claude-Codeで1人開発チームを作る方法">Claude Codeで1人開発チームを作る方法</a>（LiteratureNote） — フック・スキル・サブエージェントの組み合わせが共通テーマ</li>
+<li><a href="./Claude-Codeのオススメ作業環境、全部公開！ハードからソフトまで。" class="internal alias" data-slug="Claude-Codeのオススメ作業環境、全部公開！ハードからソフトまで。">Claude Codeのオススメ作業環境、全部公開！ハードからソフトまで。</a>（LiteratureNote） — hooks・settings.json設定が関連</li>
+<li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal alias" data-slug="元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a>（LiteratureNote） — CLAUDE.mdの設計思想が共通</li>
+<li><a href="./Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開" class="internal alias" data-slug="Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開">Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開</a>（LiteratureNote） — コンテキストファイル3つの設計が対応</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-125" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#僕が最初の1ヶ月で学んだ高い授業料" data-for="僕が最初の1ヶ月で学んだ高い授業料">僕が最初の1ヶ月で学んだ「高い授業料」</a></li><li class="depth-0"><a href="#発想の転換会話で教えるをやめる" data-for="発想の転換会話で教えるをやめる">発想の転換——「会話で教える」をやめる</a></li><li class="depth-0"><a href="#step-1settingsjson--まず柵を立てる" data-for="step-1settingsjson--まず柵を立てる">STEP 1：settings.json —— まず「柵」を立てる</a></li><li class="depth-0"><a href="#step-2claudemd--お前はこういう前提で動けを定義する" data-for="step-2claudemd--お前はこういう前提で動けを定義する">STEP 2：CLAUDE.md —— 「お前はこういう前提で動け」を定義する</a></li><li class="depth-0"><a href="#step-3rules--ルールブックを棚に分ける" data-for="step-3rules--ルールブックを棚に分ける">STEP 3：rules/ —— ルールブックを「棚」に分ける</a></li><li class="depth-0"><a href="#step-4skills--毎回やってる作業を自動化する" data-for="step-4skills--毎回やってる作業を自動化する">STEP 4：skills/ —— 「毎回やってる作業」を自動化する</a></li><li class="depth-0"><a href="#step-5agents--別室で働く専門家を配置する" data-for="step-5agents--別室で働く専門家を配置する">STEP 5：agents/ —— 「別室で働く専門家」を配置する</a></li><li class="depth-0"><a href="#おまけhooks--セッションの前後を自動化する" data-for="おまけhooks--セッションの前後を自動化する">おまけ：hooks —— セッションの前後を自動化する</a></li><li class="depth-0"><a href="#before--after" data-for="before--after">Before → After</a></li><li class="depth-0"><a href="#始め方今日やる3つだけ" data-for="始め方今日やる3つだけ">始め方——今日やる3つだけ</a></li><li class="depth-0"><a href="#claude-codeは道具じゃない" data-for="claude-codeは道具じゃない">Claude Codeは「道具」じゃない</a></li><li class="depth-0"><a href="#ai要約" data-for="ai要約">AI要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./AIプロンプト" class="internal">AIプロンプト</a></li><li><a href="./Claude-Code-Desktop神機能5選｜2026年最新-VS-Codeから乗り換えた医師が徹底レビュー" class="internal">Claude Code Desktop神機能5選｜2026年最新 VS Codeから乗り換えた医師が徹底レビュー</a></li><li><a href="./Claude-Codeで1人開発チームを作る方法" class="internal">Claude Codeで1人開発チームを作る方法</a></li><li><a href="./Claude-Codeのオススメ作業環境、全部公開！ハードからソフトまで。" class="internal">Claude Codeのオススメ作業環境、全部公開！ハードからソフトまで。</a></li><li><a href="./Claude-Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開" class="internal">Claude Coworkは「3つのファイル」で別物になる。僕の設定と最初に試すべきタスクを全公開</a></li><li><a href="./【なぜダサくなる？】Claude-CodeでWebサイトやアプリを開発する時の８つのポイントを徹底解説！【POSTS代表-梶谷健人】" class="internal">【なぜダサくなる？】Claude CodeでWebサイトやアプリを開発する時の８つのポイントを徹底解説！【POSTS代表 梶谷健人】</a></li><li><a href="./【実験】Claude-Codeに投資をさせたら利益は出せるのか実験してみた！" class="internal">【実験】Claude Codeに投資をさせたら利益は出せるのか実験してみた！</a></li><li><a href="./元OpenAIの社員が実践するClaude-Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド" class="internal">元OpenAIの社員が実践するClaude Code×Obsidianで「AI外部脳」をゼロから作る完全ガイド</a></li><li><a href="./単なるメモから知的資産へ：Obsidian-in-Cursorで構築する知的生産システム｜松濤Vimmer" class="internal">単なるメモから知的資産へ：Obsidian in Cursorで構築する知的生産システム｜松濤Vimmer</a></li><li><a href="./天才がやってるClaudeCode-x-Obsidian-x-Claude-DesignでAIビジネス構築する方法" class="internal">天才がやってるClaudeCode x Obsidian x Claude DesignでAIビジネス構築する方法</a></li><li><a href="./🎇-AI_Claude-Design完全活用ガイド（クリエイター・EC・Web・デザイン全方位）" class="internal">🎇 AI_Claude Design完全活用ガイド（クリエイター・EC・Web・デザイン全方位）</a></li><li><a href="./🧵-ClaudeCode生みの親Boris-Chernyが語る運用Tips30選" class="internal">🧵 ClaudeCode生みの親Boris Chernyが語る運用Tips30選</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

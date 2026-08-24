@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>The AI Multi-Page Tech Pack Master Prompt</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="The AI Multi-Page Tech Pack Master Prompt"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="The AI Multi-Page Tech Pack Master Prompt"/><meta name="twitter:description" content="A collaborative AI workspace, built on your company context. Build and orchestrate agents right alongside your team's projects, meetings, and connected apps."/><meta property="og:description" content="A collaborative AI workspace, built on your company context. Build and orchestrate agents right alongside your team's projects, meetings, and connected apps."/><meta property="og:image:alt" content="A collaborative AI workspace, built on your company context. Build and orchestrate agents right alongside your team's projects, meetings, and connected apps."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/The-AI-Multi-Page-Tech-Pack-Master-Prompt"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/The-AI-Multi-Page-Tech-Pack-Master-Prompt"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="A collaborative AI workspace, built on your company context. Build and orchestrate agents right alongside your team's projects, meetings, and connected apps."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="The-AI-Multi-Page-Tech-Pack-Master-Prompt"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-823"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-823" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>The AI Multi Page Tech Pack Master Prompt</a></div></nav><h1 class="article-title">The AI Multi-Page Tech Pack Master Prompt</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-05T15:00:00.000Z">2026年5月06日</time><span>23 min read</span></p><ul class="tags"><li><a href="./tags/clippings" class="internal tag-link">clippings</a></li><li><a href="./tags/fashion-tech" class="internal tag-link">fashion-tech</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/design-production" class="internal tag-link">design-production</a></li></ul></div></div><article class="popover-hint"><h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>ファッションのテクニカルパック（仕様書）をAIで自動生成するマスタープロンプト集。スケッチや2Dフラット図をアップするだけで、工場入稿レベルの7ページ構成の技術仕様書をChatGPTに一括生成させる。</strong></p>
+</blockquote>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📋 概要 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>@morchenliu が公開したワークフロー。手動で作成すると何時間もかかるテクニカルパックを、ChatGPT（GPT-4o / 画像認識モデル）にガーメントのフラット図とマスタープロンプトを投げるだけで一括生成する方法。出力はPDFに書き出してCanvaで仕上げる想定。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>生成される7ページの構成 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>P1: カバーページ</strong> — ブランド情報・スタイル番号・季節・サイズ・リビジョン履歴・フロント＆バック図
+<strong>P2: 構造詳細・コールアウト</strong> — 縫い仕様（SPI・糸種・縫い代）・補強点・エッジ仕上げ
+<strong>P3: BOM（資材リスト）</strong> — 生地・副資材・ジッパー・ボタン・スレッド・パッケージングまで全部品を表形式で列挙
+<strong>P4: カラーウェイ＆アートワーク配置</strong> — Pantone番号・アートワーク配置寸法・加工方法（刺繍・スクリーンプリント等）
+<strong>P5: サイズスペック</strong> — POM図（測定点ダイアグラム）＋全測定箇所の寸法・許容差・計測方法
+<strong>P6: サイズグレーディング</strong> — ベースサイズから全サイズへのグレードルール一覧
+<strong>P7: ラベル＆パッケージ</strong> — メインラベル・ケアラベル・ハンタグ・折りたたみ指示・ポリ袋仕様</p>
+</div>
+</blockquote>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>⚠️ 注意事項 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AI生成テクニカルパックは「構造化された初稿」として使う。工場送付前に測定値・素材仮定・縫製詳細・パッケージ仕様を必ず人間が確認・修正すること。不確かな部分はプロンプトの段階で「proposed」ラベルを付けるよう指示されており、TBC（要確認）はRed表示で区別される。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① Armillary.やkemio案件への応用</strong>
+デザイン確定後にフラット図をChatGPTに投げてP2（縫製仕様）・P3（BOM）・P5（スペック）を一括生成し、初稿を工場向け資料として使える。全部を信じるのではなく「骨格だけもらってCanvaで仕上げる」使い方が現実的。</p>
+<p><strong>② 自分でプロンプトを改造して使う</strong>
+<code>[INSERT BRAND NAME]</code> 等のプレースホルダーをArmillary.の情報に差し替えてテンプレート化しておけば、案件ごとに再利用できる。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout info" data-callout="info">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>概要 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>制作者</strong>: @morchenliu
+<strong>ゴール</strong>: テックパック（仕様書）の手動作成を完全にスキップする。ChatGPTの画像認識機能でスケッチやレンダリングを解析し、工場入稿レベルのマルチページ技術資料を自動生成する。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🧠 Step 1: インプット </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>最低限必要なもの</strong>：ガーメントの明確な2Dスケッチ、フラット図、または3Dレンダリング。フロント＆バックの両面があるとベスト。</p>
+<p><strong>追加で精度を上げるもの（任意）</strong>：</p>
+<ul>
+<li>寸法詳細・パッケージングメモ・構造の意図</li>
+<li>トリム・生地情報</li>
+<li>ブランドアセット（ロゴ・ブランドカラー・タイポグラフィ例）</li>
+</ul>
+<p>情報が構造化されているほど、生成されるテックパックの精度が高くなる。ファイルはデスクトップに保存しておくこと。</p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/cca0bad2ccc48b1642d3d7d4e63a1172_MD5.png" width="auto" height="auto" alt/></p>
+<hr/>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>⚙️ Step 2: エンジン（使い方） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<ol>
+<li>ChatGPTを開き、ビジョン機能付きの最新モデルを使用していることを確認する</li>
+<li>ガーメントの画像（＋ブランドアセットがあれば）をチャットバーにドラッグ＆ドロップする</li>
+<li>下記のマスタープロンプトをコピー＆ペーストする</li>
+</ol>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📋 マスタープロンプト（コピペ用・必要に応じて編集） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>アップロードしたテクニカルフラット図を使用して、ガーメント製造向けの完全で信頼性の高いマルチページ ファッション テクニカルパックを生成してください。出力は、ファッションムードボードやカタログページ、装飾的なインフォグラフィックではなく、プロのスタジオ・工場入稿レベルのテックパックとして仕上げてください。</p>
+<p>アップロードしたテクニカルフラット図を唯一の情報源として使用してください。不必要なガーメント要素を創作しないでください。構造的な詳細が見えない場合は、業界標準の縫製構造に基づいて論理的に推測し、「proposed（推定）」と明記してください。すべてのページを通じて一貫性を保ってください（スタイル名・スタイル番号・シーズン・ベースサイズ・ガーメントのプロポーション・構造詳細・トリム・カラーウェイ・寸法・ラベル）。</p>
+<p>クリーンな白黒テクニカルドローイングスタイルで、構造化されたテーブル・正確なコールアウト・明確なページタイトルを使用してテックパックを作成してください。全体を通じてプロのファッション製造用語を使用してください。すべてのスケッチは、正確なフロント・バックビュー・詳細拡大図・ステッチライン・シームラベル・地の目ロジック・必要に応じた寸法ガイドを備えたクリーンなベクタースタイルのテクニカルフラットにしてください。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P1 — カバーページ / スタイルサマリー </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>メーカーがガーメントをすぐに把握できるエグゼクティブサマリーのカバーページを作成してください。</p>
+<p><strong>含める項目：</strong></p>
+<ul>
+<li>ブランド名：<code>[ブランド名を入力]</code></li>
+<li>ロゴプレースホルダー：<code>[ロゴまたはロゴ配置を入力]</code></li>
+<li>ブランド連絡先：<code>[メール / ウェブサイト / 連絡先を入力]</code></li>
+<li>スタイル名：<code>[スタイル名を入力]</code></li>
+<li>スタイル番号：<code>[スタイル番号を入力]</code></li>
+<li>ターゲットシーズン：<code>[シーズンを入力（例：Fall/Winter 2026）]</code></li>
+<li>ジェンダー / カテゴリー：<code>[カテゴリーを入力]</code></li>
+<li>ベースサンプルサイズ：<code>[ベースサイズを入力（例：メンズ Mサイズ）]</code></li>
+<li>作成日：<code>[日付を入力]</code></li>
+<li>デザイナー名：<code>[デザイナー名を入力]</code></li>
+<li>リビジョン履歴テーブル（列：リビジョン番号・日付・変更内容・承認者）</li>
+<li>ガーメントのフロント・バックのクリーンな白黒テクニカルフラット</li>
+<li>シルエット・フィット・主要構造特徴・想定生地タイプを要約したガーメント説明文</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P2 — 構造詳細・コールアウト </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>テクニカルフラットをベースに、すべての可視・必要な構造箇所に番号付きコールアウトと詳細拡大図を追加した構造ページを作成してください。</p>
+<p><strong>含める項目：</strong></p>
+<ul>
+<li>番号付き構造コールアウトを添えたフロント・バックのテクニカルフラット</li>
+<li>複雑な箇所の拡大スケッチ（カラー・ネックライン・フード・ポケット・カフス・ヘム・プラケット・クロージャー・ウエストバンド・ベンツ・シームなど、アップロードしたガーメントに応じて）</li>
+<li>シームタイプ仕様（例：5本糸オーバーロック・フラットフェルドシーム・フレンチシーム・ツインニードルカバーステッチ・ロックステッチ・バインディング・バータック・エッジステッチ）</li>
+<li>ステッチ指示（SPI・ステッチタイプ・糸種・糸の太さ）</li>
+<li>固定参照点からの正確な寸法を添えたハードウェア配置</li>
+<li>ヘム・ネックライン・アームホール・カフス・ポケット開口部・ウエストバンド・生端のエッジ仕上げ指示</li>
+<li>補強ポイント（バータック・リベット・トップステッチ・ステイステッチ・芯地）</li>
+<li>縫い代基準の明記：<code>[縫い代を入力（例：特に指定がない限り縫い代1cm）]</code></li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P3 — BOM（資材リスト / Bill of Materials） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>ガーメント1着の製造に必要なすべての物理的コンポーネントを列挙した詳細なBOMテーブルを作成してください。</p>
+<p><strong>BOMテーブルの列：</strong>
+アイテム番号 / コンポーネントカテゴリー / コンポーネント説明 / 配置・用途 / 繊維組成 / 生地重量またはトリムサイズ / カラー / サプライヤー・サプライヤーコード / 1着あたりの使用量 / 備考</p>
+<p><strong>含めるセクション：</strong></p>
+<ul>
+<li><strong>表地 / メイン生地</strong>：繊維組成・GSM・織り・ニットの種類・仕上げ・サプライヤー情報</li>
+<li><strong>副資材生地</strong>：裏地・ポケット地・コントラスト生地・リブ・バインディング・メッシュ・芯地・インターフェイシング（該当するもの）</li>
+<li><strong>トリム・ハードウェア</strong>：ジッパー・ボタン・スナップ・リベット・鳩目・トグル・ドローコード・ゴム・ラベル・テープ・コードエンド・パッチ</li>
+<li><strong>スレッド</strong>：組成・糸番手・カラーマッチング指示</li>
+<li><strong>芯地 / インターフェイシング</strong>：重量・配置・サプライヤー</li>
+<li>パッケージングコンポーネント（該当する場合）</li>
+<li>全資材の1着あたりの使用量見積もり</li>
+</ul>
+<p>※アップロードしたガーメントに不要なコンポーネントは含めない。不確かな場合は「標準構造に基づく推定（proposed based on standard construction）」と赤字で記載すること。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P4 — カラーウェイ &amp; アートワーク配置 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>カラーウェイとアートワーク配置のページを作成してください。</p>
+<p><strong>含める項目：</strong></p>
+<ul>
+<li>カラーウェイ表（列：カラーウェイ名・表地Pantone/TCXコード・副生地カラー・リブ/トリムカラー・スレッドカラー・ハードウェアカラー・アートワークカラー）</li>
+<li><code>[カラーウェイ数を入力]</code> 種類以上のカラーウェイオプション（1色のみ必要な場合を除く）</li>
+<li>アートワークファイル参照テーブル（列：アートワーク名・ファイル名・ファイル形式・配置・スケール・加工方法）</li>
+<li>寸法矢印で正確なアートワーク配置を示したテクニカルフラット</li>
+<li>固定点からの正確なアートワーク配置寸法：
+<ul>
+<li>センターチェスト：フロントネックラインから計測</li>
+<li>スリーブグラフィック：スリーブヘムから計測</li>
+<li>バックグラフィック：CBネックシームから計測</li>
+<li>ポケットロゴ：ポケット端から計測</li>
+</ul>
+</li>
+<li>加工技法（例：刺繍・スクリーンプリント・パフプリント・熱転写・ウーブンパッチ・ラバーバッジ・ダイレクトtoガーメントプリント）</li>
+<li>アートワークサイズ（cm またはインチ）</li>
+<li>アートワークカラー仕様</li>
+<li>見当合わせ / 位置合わせ備考</li>
+</ul>
+<p>※アップロードしたガーメントにアートワークが見えない場合は「アートワーク不要」のクリーンなレイアウトを作成し、適切な場合のみブランディング配置オプションを含めること。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P5 — 寸法仕様 / ベースサイズ スペックシート </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>ベースサンプルサイズの詳細な寸法仕様ページを作成してください。</p>
+<p><strong>含める項目：</strong></p>
+<ul>
+<li>明確な番号 / 文字の測定線を持つPOM図（Point of Measure ダイアグラム）</li>
+<li>必要に応じたフロント・バックの寸法図</li>
+<li>POMテーブル（列：POMコード / 測定箇所名 / 測定説明 / ベースサイズ寸法 / 許容差 / 測定方法 / 備考）</li>
+</ul>
+<p><strong>ガーメントタイプに応じて含めるPOM（例）：</strong>
+着丈 / バスト幅 / ウエスト幅 / ヘム幅 / ショルダー幅 / スリーブ丈 / バック幅 / アームホール / バイセップ幅 / カフス開口部 / ネック幅 / ネックドロップ / フード高さ・幅（該当する場合）/ カラー高さ（該当する場合）/ ポケット配置（該当する場合）/ 股下・股上・太もも・膝・裾開き（パンツの場合）/ スカート丈・ウエスト・ヒップ・裾周り（スカート・ワンピースの場合）</p>
+<p>ベースサイズ <code>[ベースサイズを入力]</code> に対して業界標準の現実的な寸法を使用すること。寸法はアップロードしたテクニカルフラットと想定フィットと内部整合性を保つこと。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P6 — サイズグレーディング </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>承認済みのベースサイズが全サイズ展開にどのようにスケールするかを示すサイズグレーディングページを作成してください。</p>
+<p><strong>含める項目：</strong></p>
+<ul>
+<li>サイズ展開：<code>[サイズ展開を入力（例：XS・S・M・L・XL）]</code></li>
+<li>ベースサイズを明確にマーク</li>
+<li>グレーディングテーブル（列：POMコード / POM名 / XS / S / M（ベース） / L / XL / サイズ間グレードルール / 許容差）</li>
+<li>ガーメントカテゴリーとフィットに基づいた現実的なグレードインクリメントを使用</li>
+<li>バスト・ウエスト・ヘム・ショルダー・スリーブ・カフス・着丈の比例ロジックを維持</li>
+<li>グレーディングがスタンダード・ゆったりフィット・オーバーサイズ・フィット・ユニセックス・メンズ・ウィメンズ・子供服のいずれかを備考に記載</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 P7 — ラベル &amp; パッケージング </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>ガーメントのブランディング・ラベル付け・折りたたみ・梱包方法を示すラベル＆パッケージングページを作成してください。</p>
+<p><strong>含める項目：</strong></p>
+<ul>
+<li>メインブランドラベルのデザインプレースホルダー</li>
+<li>メインラベルの寸法</li>
+<li>正確なラベル配置（例：インナーバックネック・ウエストバンド・サイドシーム・インナーフェイシング）</li>
+<li>法的テキストプレースホルダー付きのケア / 組成表示ラベル</li>
+<li>ケアシンボルプレースホルダー</li>
+<li>BOMと一致する繊維組成テキスト</li>
+<li>原産国プレースホルダー</li>
+<li>ラベル配置図</li>
+<li>サイズラベルの配置</li>
+<li>ハンタグデザインプレースホルダー</li>
+<li>ハンタグサイズ</li>
+<li>ハンタグの取り付け方法と正確な位置</li>
+<li>明確なステップ・バイ・ステップの図または番号付きテキストによる折りたたみ指示</li>
+<li>ポリ袋仕様：寸法 / 素材 / 厚さ / 窒息警告の配置 / バーコードシールの配置 / サイズ・カラーシールの配置</li>
+<li>該当する場合はカートン梱包備考</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip is-collapsible is-collapsed" data-callout="tip" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📋 全体出力要件 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<ul>
+<li>完全な7ページのテクニカルパックとしてフォーマットすること</li>
+<li>明確なページタイトルと一貫したページ番号付けを使用すること</li>
+<li>白背景に白黒ベクタースタイルのガーメント図を使用すること</li>
+<li>テーブルは構造化され、読みやすく、工場向けであること</li>
+<li>プロのファッション技術用語を使用すること</li>
+<li>すべてのテクニカルフラットをアップロードした図と一致させること</li>
+<li>ファッションポーズ・モデル・装飾的背景・ムードボード画像・ライフスタイル写真・不要なグラフィック装飾を追加しないこと</li>
+<li>ビジュアルスタイリングより製造上の明確さを優先すること</li>
+<li>推測した情報には必ず「proposed（推定）」ラベルを付けること</li>
+<li>不明な情報はプロフェッショナルなプレースホルダーとして赤字で表示すること（例：<code>[TBC supplier]</code>・<code>[TBC Pantone]</code>・<code>[TBC artwork file]</code>）</li>
+<li>特に指定がない限りメートル法を使用すること</li>
+<li>テックパック全体を通じて、ガーメントの寸法・構造詳細・素材・カラーウェイ・ラベル・パッケージング指示が内部整合性を保つこと</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🎯 Step 3: エクスポート＆ブラッシュアップ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ChatGPTが完璧に構造化された生データを生成する。寸法を見直し、好みに合わせて生地組成を微調整し、PDFに書き出してCanvaで仕上げる。</p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/97f836dea99db241820ae66e792803fa_MD5.png" width="auto" height="auto" alt/></p>
+<hr/>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>⚠️ 重要な免責事項 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AI生成テクニカルパックは常に完全な正確性を保証するわけではない。出力は「構造化された初稿」として使用し、工場やメーカーに送付する前に内容を必ず人間が確認・編集・修正すること。</p>
+<ul>
+<li>寸法・生地の仮定・トリム・構造詳細・パッケージング指示を再確認すること</li>
+<li>必要に応じてガーメント画像を再アップロードし、テックパックがデザイン意図に一致するまでChatGPTに特定のセクションを修正させること</li>
+</ul>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>⚡️ パイプラインのアップグレード </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Morchen_OS ラボにある全ワークフロー・CADアセット・マスタープロンプトを制限なくダウンロードできるアクセスパスあり（£5/月）。</p>
+<p>コミュニティ（Instagram）でも毎週新しいチュートリアル・プロンプト式・空間デザインワークフローを発信中。</p>
+</div>
+</blockquote>
+<hr/>
+<blockquote class="callout note is-collapsible is-collapsed" data-callout="note" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📄 英語原文（Original） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p>A Workflow by @morchenliu</p>
+<p>Goal: Completely bypass the manual creation of tech packs. Use ChatGPT’s advanced image recognition to analyze a sketch or render and generate a multi-page, factory-ready technical document.</p>
+<h4 id="-step-1-the-input">🧠 Step 1: The Input<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-step-1-the-input" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>You need at least a clear 2D sketch, flat drawing, or 3D render of your garment. Front and back views work best.</p>
+<p>You can also improve the output by feeding the AI extra supporting assets, for example measurement details, packaging notes, construction intentions, trims, or fabric information. Upload branding Assets if you do, E.g,: Logos, brand colours, typography example.</p>
+<p>The more structured information you provide, the stronger and more accurate the generated tech pack will be. Save this to your desktop.</p>
+<h4 id="️-step-2-the-engine">⚙️ Step 2: The Engine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-step-2-the-engine" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ol>
+<li>Open ChatGPT and ensure you are using the latest model with vision capabilities.</li>
+<li>Drag and drop your garment image into the chat bar. (And branding assets if you have)</li>
+<li>Copy and paste the Master Prompt below.</li>
+</ol>
+<h4 id="-the-master-prompt-copy--paste--edit-if-necessary">📋 THE MASTER PROMPT (Copy &amp; Paste / Edit if Necessary)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-the-master-prompt-copy--paste--edit-if-necessary" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>Use uploaded technical flat drawing, generate a complete, believable, multi-page fashion technical pack for garment manufacturing. The output should look like a professional studio/factory-ready tech pack, not a fashion moodboard, catalogue page, or decorative infographic.</p>
+<p>Use the uploaded technical flat drawing as the primary source of truth. Do not invent unnecessary garment features. If any construction detail is not visible, infer it logically based on industry-standard garment construction and clearly label it as “proposed”. Maintain consistency across all pages: same style name, style number, season, base size, garment proportions, construction details, trims, colorways, measurements, and labels.</p>
+<p>Create the tech pack in a clean black-and-white technical drawing style with structured tables, precise callouts, and clear page titles. Use professional fashion manufacturing terminology throughout. All sketches should be clean vector-style technical flats with accurate front/back views, detail enlargements, stitch lines, seam labels, grain logic, and measurement guides where required.</p>
+<p>Generate the following pages:</p>
+<p><strong>PAGE 1 — COVER PAGE / STYLE SUMMARY</strong></p>
+<p>Create an executive summary cover page that gives the manufacturer an immediate understanding of the garment.</p>
+<p>Include:</p>
+<ul>
+<li>Brand name: [INSERT BRAND NAME]</li>
+<li>Logo placeholder: [INSERT LOGO OR LOGO PLACEMENT]</li>
+<li>Brand contact details: [INSERT EMAIL / WEBSITE / CONTACT]</li>
+<li>Style name: [INSERT STYLE NAME]</li>
+<li>Style number: [INSERT STYLE NUMBER]</li>
+<li>Target season: [INSERT SEASON, e.g. Fall/Winter 2026]</li>
+<li>Gender/category: [INSERT CATEGORY]</li>
+<li>Base sample size: [INSERT BASE SIZE, e.g. Men’s Medium]</li>
+<li>Date created: [INSERT DATE]</li>
+<li>Designer name: [INSERT DESIGNER NAME]</li>
+<li>Revision history table with columns: Revision number, date, description of change, approved by</li>
+<li>Clean black-and-white technical flats of the garment front and back</li>
+<li>Brief garment description summarising silhouette, fit, key construction features, and intended fabric type</li>
+</ul>
+<p><strong>PAGE 2 — CONSTRUCTION &amp; DETAIL CALLOUTS</strong></p>
+<p>Create a construction page using the technical flats as the base. Add numbered callouts and enlarged detail views for all visible or necessary construction areas.</p>
+<p>Include:</p>
+<ul>
+<li>Front and back technical flats with numbered construction callouts</li>
+<li>Enlarged detail sketches of complex areas such as collar, neckline, hood, pockets, cuffs, hem, placket, closures, waistband, vents, or seams, depending on the uploaded garment</li>
+<li>Seam type specifications, for example: 5-thread overlock, flat-felled seam, French seam, twin-needle coverstitch, lockstitch, binding, bartack, edge stitch</li>
+<li>Stitching instructions including SPI, stitch type, thread type, and thread thickness</li>
+<li>Hardware placement with exact measurements from fixed reference points where relevant</li>
+<li>Edge finishing instructions for hem, neckline, armhole, cuff, pocket opening, waistband, or raw edges</li>
+<li>Reinforcement points such as bartacks, rivets, topstitching, stay stitching, or fusing</li>
+<li>Clearly state seam allowance standard: [INSERT SEAM ALLOWANCE, e.g. 1 cm seam allowance unless otherwise stated]</li>
+</ul>
+<p><strong>PAGE 3 — BILL OF MATERIALS / BOM</strong></p>
+<p>Create a detailed Bill of Materials table listing every physical component required to produce one garment.</p>
+<p>Include a structured BOM table with columns: Item number / Component category / Component description / Placement &amp; usage / Fiber content &amp; composition / Fabric weight or trim size / Color / Supplier &amp; supplier code / Consumption per garment / Notes</p>
+<p>Include sections for:</p>
+<ul>
+<li>Main fabric / self fabric: fiber content, GSM, weave or knit type, finish, supplier information</li>
+<li>Secondary fabrics: lining, pocketing, contrast fabric, rib, binding, mesh, fusing, or interfacing where relevant</li>
+<li>Trims and hardware: zippers, buttons, snaps, rivets, eyelets, toggles, drawcords, elastic, labels, tapes, cord ends, patches</li>
+<li>Thread: composition, ticket size/weight, color-matching instructions</li>
+<li>Fusing/interfacing: weight, placement, supplier</li>
+<li>Packaging components if relevant</li>
+<li>Consumption estimate per garment for every material</li>
+</ul>
+<p>Do not include components that are not required by the uploaded garment. If unsure, mark the component as “proposed based on standard construction” in Red.</p>
+<p><strong>PAGE 4 — COLORWAYS &amp; ARTWORK PLACEMENT</strong></p>
+<p>Create a colorway and artwork placement page.</p>
+<p>Include:</p>
+<ul>
+<li>Colorway chart with columns: Colorway name, main fabric Pantone/TCX code, secondary fabric color, rib/trim color, thread color, hardware color, artwork color</li>
+<li>At least [INSERT NUMBER] colorway options, unless only one colorway is required</li>
+<li>Artwork file reference table with columns: Artwork name, file name, file format, placement, scale, application method</li>
+<li>Technical flat showing exact artwork placement using measurement arrows</li>
+<li>Exact artwork placement measurements from fixed points (center chest from front neckline / sleeve graphic from sleeve hem / back graphic from CB neck seam / pocket logo from pocket edge)</li>
+<li>Application technique (embroidery, screen print, puff print, heat transfer, woven patch, rubber badge, direct-to-garment print)</li>
+<li>Artwork size in cm or inches</li>
+<li>Artwork color specification</li>
+<li>Registration/alignment notes</li>
+</ul>
+<p>If the uploaded garment has no visible artwork, create a clean “No artwork required” layout and include optional branding placement only if appropriate.</p>
+<p><strong>PAGE 5 — MEASUREMENT SPECIFICATIONS / BASE SIZE SPEC SHEET</strong></p>
+<p>Create a detailed measurement specification page for the base sample size.</p>
+<p>Include:</p>
+<ul>
+<li>POM diagram showing the garment with clear numbered or lettered measurement lines</li>
+<li>Front and back measurement diagrams where needed</li>
+<li>POM table with columns: POM code / Point of Measure name / Measurement description / Base size measurement / Tolerance / How to measure / Notes</li>
+<li>Include relevant POMs only for the garment type: Body length / Chest width / Waist width / Hem width / Shoulder width / Sleeve length / Across back / Armhole / Bicep width / Cuff opening / Neck width / Neck drop / Hood height &amp; width if relevant / Collar height if relevant / Pocket placement if relevant / Inseam, rise, thigh, knee, leg opening if trousers / Skirt length, waist, hip, hem sweep if skirt or dress</li>
+</ul>
+<p>Use realistic industry measurements for base size [INSERT BASE SIZE]. Measurements should be internally consistent with the uploaded technical flat and intended fit.</p>
+<p><strong>PAGE 6 — SIZE GRADING</strong></p>
+<p>Create a size grading page showing how the approved base size scales across the full size range.</p>
+<p>Include:</p>
+<ul>
+<li>Size range: [INSERT SIZE RANGE, e.g. XS, S, M, L, XL]</li>
+<li>Base size clearly marked</li>
+<li>Grading table with columns: POM code / POM name / XS / S / M (Base) / L / XL / Grade rule between sizes / Tolerance</li>
+<li>Use realistic grading increments based on garment category and fit</li>
+<li>Maintain proportional logic between chest, waist, hem, shoulder, sleeve, cuff, and body length</li>
+<li>Add notes explaining whether grading is standard, relaxed fit, oversized fit, fitted, unisex, menswear, womenswear, or childrenswear</li>
+</ul>
+<p><strong>PAGE 7 — LABELS &amp; PACKAGING</strong></p>
+<p>Create a labels and packaging page showing how the garment should be branded, labelled, folded, and packed.</p>
+<p>Include:</p>
+<ul>
+<li>Main brand label design placeholder + dimensions</li>
+<li>Exact label placement (inside back neck / waistband / side seam / inner facing)</li>
+<li>Care/content label with legal text placeholder + care symbols placeholder</li>
+<li>Fiber content text matching the BOM</li>
+<li>Country of origin placeholder</li>
+<li>Label placement diagram + size label placement</li>
+<li>Hangtag design placeholder, size, attachment method and exact position</li>
+<li>Folding instructions using clear step-by-step diagrams or numbered text</li>
+<li>Polybag specification: dimensions / material / thickness / suffocation warning placement / barcode sticker placement / size &amp; color sticker placement</li>
+<li>Carton packing notes if relevant</li>
+</ul>
+<p><strong>GENERAL OUTPUT REQUIREMENTS</strong></p>
+<ul>
+<li>Format as a complete 7-page technical pack.</li>
+<li>Use clean page titles and consistent page numbering.</li>
+<li>Use black-and-white vector-style garment drawings on a white background.</li>
+<li>Tables should be structured, readable, and factory-facing.</li>
+<li>Use professional fashion technical terminology.</li>
+<li>Keep all technical flats consistent with the uploaded drawing.</li>
+<li>Do not add fashion poses, models, decorative backgrounds, moodboard imagery, lifestyle photos, or unnecessary graphic decoration.</li>
+<li>Prioritise manufacturing clarity over visual styling.</li>
+<li>Any inferred information must be labelled as “proposed”.</li>
+<li>Any missing information should be shown as a professional placeholder in Red (e.g. [TBC supplier], [TBC Pantone], [TBC artwork file]).</li>
+<li>Use metric measurements by default unless otherwise specified.</li>
+<li>Ensure all garment measurements, construction details, materials, colorways, labels, and packaging instructions are internally consistent across the full tech pack.</li>
+</ul>
+<h4 id="-step-3-export--refine">🎯 Step 3: Export &amp; Refine<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-step-3-export--refine" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>ChatGPT will generate the raw data perfectly structured. Review the measurements, tweak any fabric compositions to your specific liking, and export it as a PDF and edit on Canva.</p>
+<h4 id="️-important-disclaimer">⚠️ Important Disclaimer<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-important-disclaimer" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p>AI-generated tech packs are not always fully accurate. Use the output as a structured first draft, then carefully review, edit, and refine the contents before sending anything to a factory or manufacturer.</p>
+<ul>
+<li>Double-check measurements, fabric assumptions, trims, construction details, and packaging instructions.</li>
+<li>If needed, re-upload the garment image and ask ChatGPT to revise specific sections until the tech pack matches your design intent.</li>
+</ul>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote） — AI活用の全体構造との接続</li>
+<li><a href="./project_design_workflow" class="internal" data-slug="project_design_workflow">project_design_workflow</a>（ContextNote） — デザイン制作自動化フローとの関連</li>
+<li><a href="./The-AI-Tech-Pack-Engine-Multi-Page-Master-Prompt" class="internal alias" data-slug="The-AI-Tech-Pack-Engine-Multi-Page-Master-Prompt">The AI Tech Pack Engine Multi-Page Master Prompt</a> — 同作者のテックパックエンジン解説（Gumroad版）</li>
+<li><a href="./🌌-morchenliu-CD分析" class="internal alias" data-slug="🌌-morchenliu-CD分析">🌌 morchenliu CD分析</a> — @morchenliu アカウントのCD分析</li>
+<li><a href="./🌌-PS_MacBook-NeoのファッションテックワークフローCLO3D×AI_2" class="internal alias" data-slug="🌌-PS_MacBook-NeoのファッションテックワークフローCLO3D×AI_2">🌌 PS_MacBook NeoのファッションテックワークフローCLO3D×AI_2</a> — 同作者のCLO3D×AIワークフロー</li>
+<li><a href="./🎇-AI_Stop-spending-5-hours-on-tech-packs.-🛑✂️" class="internal alias" data-slug="🎇-AI_Stop-spending-5-hours-on-tech-packs.-🛑✂️">🎇 AI_Stop spending 5 hours on tech packs. 🛑✂️</a> — テックパック時短 Instagram投稿</li>
+<li><a href="./🎇-AI_The-era-of-manual-tech-packs-is-officially-over.-🪡" class="internal alias" data-slug="🎇-AI_The-era-of-manual-tech-packs-is-officially-over.-🪡">🎇 AI_The era of manual tech packs is officially over. 🪡</a> — 手動テックパック終了宣言</li>
+<li><a href="./🎇-AI_テックパック5時間作業をClaude自動化" class="internal alias" data-slug="🎇-AI_テックパック5時間作業をClaude自動化">🎇 AI_テックパック5時間作業をClaude自動化</a> — Claude活用テックパック自動化</li>
+<li><a href="./🎇-AI_Firefly-Turntableでテックパック高速化" class="internal alias" data-slug="🎇-AI_Firefly-Turntableでテックパック高速化">🎇 AI_Firefly Turntableでテックパック高速化</a> — Fireflyを使ったテックパック高速化</li>
+<li><a href="./🎇-AI_Claude-DesignでテックパックDX化" class="internal alias" data-slug="🎇-AI_Claude-DesignでテックパックDX化">🎇 AI_Claude DesignでテックパックDX化</a> — Claude DesignによるDX化事例（Instagram版）</li>
+<li><a href="./Claude-Design-AI-Workflow-Interactive-Fashion-Tech-Packs" class="internal alias" data-slug="Claude-Design-AI-Workflow-Interactive-Fashion-Tech-Packs">Claude Design AI Workflow Interactive Fashion Tech Packs</a> — Claude DesignワークフローのNotionガイド版（詳細）</li>
+<li><a href="./🎇-AI_音声入力でテックパック採寸を自動化するワークフロー" class="internal alias" data-slug="🎇-AI_音声入力でテックパック採寸を自動化するワークフロー">🎇 AI_音声入力でテックパック採寸を自動化するワークフロー</a> — 音声入力×採寸自動化</li>
+</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-325" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./3-Steps-Turn-Your-Fashion-Sketch-into-a-Technical-Drawing" class="internal">3 Steps: Turn Your Fashion Sketch into a Technical Drawing</a></li><li><a href="./AI-Tech-Pack-Pipeline-Hands-Free-Measuring-to-Final-Spec-Sheet" class="internal">AI Tech Pack Pipeline: From Hands-Free Measuring to Final Spec Sheet</a></li><li><a href="./CLO3D-Hardware-Hack-The-Punk-Spike" class="internal">CLO3D Hardware Hack: The Punk Spike</a></li><li><a href="./CLO3D-Workflow-AI-Generated-Custom-Lace" class="internal">CLO3D Workflow: AI-Generated Custom Lace</a></li><li><a href="./Claude-Design-AI-Workflow-Interactive-Fashion-Tech-Packs" class="internal">Claude Design AI Workflow: Interactive Fashion Tech Packs</a></li><li><a href="./Illustrator-AI-Workflow-Instant-Tech-Pack-Textures" class="internal">Illustrator AI Workflow: Instant Tech Pack Textures</a></li><li><a href="./The-AI-Lookbook-Blueprint-From-Sketch-to-Product" class="internal">The AI Lookbook Blueprint: From Sketch to Product</a></li><li><a href="./The-AI-Tech-Pack-Engine-Multi-Page-Master-Prompt" class="internal">The AI Tech Pack Engine: Multi-Page Master Prompt</a></li><li><a href="./The-Illustrator-Swatch-Engine-Dynamic-Tech-Flats" class="internal">The Illustrator Swatch Engine: Dynamic Tech Flats</a></li><li><a href="./The-Turntable-Cheat-Code-Automated-Multi-View-Flats" class="internal">The Turntable Cheat Code: Automated Multi-View Flats</a></li><li><a href="./🌌-morchenliu-CD分析" class="internal">🌌 morchenliu CD分析</a></li><li><a href="./🌌-morchenliu-コンテンツ一覧" class="internal">morchenliu コンテンツ一覧</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

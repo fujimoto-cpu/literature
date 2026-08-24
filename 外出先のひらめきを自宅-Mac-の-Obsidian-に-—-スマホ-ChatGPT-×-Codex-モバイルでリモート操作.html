@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作"/><meta name="twitter:description" content="📺 動画情報 外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-05-19 ・ ⏱️ 16分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 スマホの ChatGPT（Codex Mobile）から自宅 Mac の Obsidian をリモート操作し、外出先のひらめきをそのままノートに落とし込む方法を解説。ChatGPT 無料プランでも現在プレビュー..."/><meta property="og:description" content="📺 動画情報 外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-05-19 ・ ⏱️ 16分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 スマホの ChatGPT（Codex Mobile）から自宅 Mac の Obsidian をリモート操作し、外出先のひらめきをそのままノートに落とし込む方法を解説。ChatGPT 無料プランでも現在プレビュー..."/><meta property="og:image:alt" content="📺 動画情報 外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-05-19 ・ ⏱️ 16分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 スマホの ChatGPT（Codex Mobile）から自宅 Mac の Obsidian をリモート操作し、外出先のひらめきをそのままノートに落とし込む方法を解説。ChatGPT 無料プランでも現在プレビュー..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/外出先のひらめきを自宅-Mac-の-Obsidian-に-—-スマホ-ChatGPT-×-Codex-モバイルでリモート操作"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/外出先のひらめきを自宅-Mac-の-Obsidian-に-—-スマホ-ChatGPT-×-Codex-モバイルでリモート操作"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作 🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-05-19 ・ ⏱️ 16分9秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 スマホの ChatGPT（Codex Mobile）から自宅 Mac の Obsidian をリモート操作し、外出先のひらめきをそのままノートに落とし込む方法を解説。ChatGPT 無料プランでも現在プレビュー..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="外出先のひらめきを自宅-Mac-の-Obsidian-に-—-スマホ-ChatGPT-×-Codex-モバイルでリモート操作"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2455"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2455" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作</a></div></nav><h1 class="article-title">外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-19T15:00:00.000Z">2026年5月20日</time><span>32 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>外出先のひらめきを自宅 Mac の Obsidian に — スマホ ChatGPT × Codex モバイルでリモート操作</strong>
+🎙️ NAOYA IMURA / Claude × Obsidian for Non-Engineers ・ 📅 2026-05-19 ・ ⏱️ 16分9秒
+🔗 <a href="https://www.youtube.com/watch?v=KvqefkAO2Mk" class="external">https://www.youtube.com/watch?v=KvqefkAO2Mk<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>スマホの <a href="./ChatGPT" class="internal" data-slug="ChatGPT">ChatGPT</a>（Codex Mobile）から自宅 Mac の <a href="./obsidian" class="internal alias" data-slug="obsidian">Obsidian</a> をリモート操作し、外出先のひらめきをそのままノートに落とし込む方法を解説。ChatGPT 無料プランでも現在プレビュー期間中は利用可能。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[スマホ ChatGPT アプリ] -->|Codex Mobile 経由| B[自宅 Mac の Codex Desktop]\n    B --> C[Obsidian Vault に接続]\n    C --> D[外出先からノート・フォルダを操作]\n    D --> E[帰宅後すぐ続きに着手できる]&quot;">flowchart TD
+    A[スマホ ChatGPT アプリ] -->|Codex Mobile 経由| B[自宅 Mac の Codex Desktop]
+    B --> C[Obsidian Vault に接続]
+    C --> D[外出先からノート・フォルダを操作]
+    D --> E[帰宅後すぐ続きに着手できる]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Codex Mobile とは — ChatGPT からリモートで Mac を操作する仕組み </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ChatGPT の新機能「Codex Mobile」を使うと、スマホアプリから自宅 Mac の Codex Desktop に接続し、Obsidian の Vault をそのまま操作できる。QR コードを読み取るだけでセットアップ完了（約 30 秒〜1 分）。現在プレビュー期間中のため、無料プラン・Go プランでも利用可能。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. セットアップ手順 — QR コード読み取りのみ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>① Mac に Codex Desktop をインストール・ChatGPT アカウントでログイン → ② アプリ左下のスマホアイコンをクリック → ③ QR コードをスマホで読み取り → ④ スマホの ChatGPT アプリに「Codex」ボタンが表示されれば接続完了。モバイル側でスキルを使いたい場合は「$スキル名」ではなく「このスキルを使って〜」と明示的に指示する必要がある。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. スリープ対策 — 外から繋ぐには Mac を起こしておく </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Mac 側の「電源アダプター使用時はディスプレイオフでスリープしない」をオン、さらに Codex アプリ設定 > 接続 > 「電源接続中はスリープしない」もオンにする。ノート PC ユーザーは必須設定。デスクトップ Mac なら不要なケースが多い。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. Claude のリモートコントロールとの違い </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Claude リモートコントロールはブラウザ URL 経由で会話の疎後がなく、CLI との双方向同期も取れる。一方 Codex Mobile はアプリ間通信のみで、スマホ側の会話が CLI 側に反映されない制約がある。Claude はプロ以上が必要、Codex Mobile は現在無料でも試せる点が大きな差。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 散歩・通勤中の音声入力でアイデアを Obsidian Inbox に直送</strong>
+スマホに語りかけてアイデアを Codex と会話 → 「Inbox フォルダに要点まとめたメモを保存して」と指示。帰宅後すぐ続きに着手できる状態を作れる。AI 導入推進のアイデア出しにも使える。</p>
+<p><strong>② Claude 契約なしでも今すぐ試せる</strong>
+ChatGPT 無料プランで試して、安定して使いたくなったら Plus へ。明日の朝、Codex Desktop をインストールしてQRコード接続まで試してみる。</p>
+</div>
+</blockquote>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> はいどうも今の親です今回はスマホのチャット gpt で外出先のひらめきをオブシリアンの 仕様に変えるっていうテーマでコーデックスモバイルっていう新しい機能が出たんでその使い方とセットアップの方法などを見ていきたいとおもいます 電車の中とかカフェあと散歩中あとシャワー上がりなんて場面でと良いアイディアが浮かんだのになかなかそれをですねオブシディアンのアイデアベースに落とし込めてないっていう状況ありませんかねメモを書いてそこで放置しちゃうみたいなことが多くあるかと思います気がついたら熱量が冷めていて結局そのメモって何だったんだっけなっていう風な</p>
+<p><code>00:37</code> そういう状態に私もよくなったことがあります今回紹介するコーデックスモバイル連携を使うと外出先ですとかリラックスしている時にふと浮かんだアイデアをですねPCを立ち上げずにスマホからオブシディアンに残せるようになりますこれまでスマホのAIアプリから自宅Macのオブシディアンを進める手段っていうのはほぼほぼクロード一択でしたこれは非エンジニア的にっていう文脈が入るんですけれどもその動画は以前私のチャンネルの中でもクロードのリモートコントロールっていう話をさせていただいたんですがただこの方法はクロードプロとかMAXという</p>
+<p><code>01:15</code> 有料プランの契約が前提になってますクロードを使ってないChatGPTユーザーの方からすると選択肢自体がその時点ではないという状況だったと思います結局スマホでメモして家に帰ってからPCで作業を続けるしかなかったという状況ですそこでこの5月Codex Mobileというものが登場しました結論から言うと同じ体験がChatGPT側でも体験できるようになったということですねリモートで仕事ができるようになったということになりますしかも現時点ではプレビュー期間中なので 無料版とかあとはGoPlanとかでもこの機能は使えます結論として AI のプロバイダーで縛られずに スマホの AI アプリで自宅 Mac の Obsidian が進められるっていう選択肢に広がってきたというわけです</p>
+<p><code>02:00</code> 今日はその仕組みを実際に動かしながら確認していきます今日お話しするポイントはこの3つになります1つ目は ChatGPT の無料プランから試せるっていうことで実際にクロードの契約は必要ありません現時点ではフリーやGoPlanもプレビュー期間中なのでまず無料でお菓子見てから安定して使いたい時にプラス以上選ぶという順番でも大丈夫です2つ目は自宅のMacについてなんですけれどもスリープさせずに待機させておくことが必要になります今回私の環境がMacBook Proなので</p>
+<p><code>02:33</code> それがプリープしないような状態になっているという前提で進めていきます後ほどデモで設定の仕方なんかも少しお話ししていきます3つ目がCodexの使い方に関してですCodexはエンジニアの人がコードを書くためのツールというふうに思われがちなんですけれども今日の動画ではObsidianのノートをまとめたり資料を更新したりという使い方を前提としていきますなおCodexモバイルの現在のプレビュー版の提供というのはMac環境のみとなってましてWindowsはそのうち出る予定になってますが予定は明確に出てませんので</p>
+<p><code>03:08</code> 一旦Macを使っている方限定の機能になりますのでその点だけご了承くださいこのチャンネルでは非エンジニアの方がAIとObsidianを使って仕事学習発信の進め方を楽にする方法を発信していますコードは書きませんでもAIはフル活用しますそんなスタイルに共感する方はぜひチャンネル登録をお願いしますでは早速やっていきましょうそれではですねデモの画面の方で始めていきたいと思いますがデスクトップ版のCodexのアプリを立ち上げていますインストール方法に関しては別の動画あるいはリンク概要欄に貼ってありますのでそこから普通にダウンロードしてインストールしていただければ</p>
+<p><code>03:44</code> このような画面立ち上がると思いますのでまずインストールから進めてくださいインストール後初期設定が終わっているという状態で基本的にはChatGPTのアカウントに紐づいてますのでそのログインまで終わらせておいてくださいその状況でまずこのデスクトップのアプリの左下ですねちょっと大きくしますけれども左下の設定の横にスマホのアイコンがあると思いますのでこれをクリックしますそうするとiOS版とAndroid版の2つのQRコードが出てくると思いますこのQRコードをお手持ちのiPhoneかAndroidの端末で</p>
+<p><code>04:22</code> 二次元バーコードを読んでもらいますそうするとChatGPTのアプリが立ち上がってログイン求められると思いますので同じアカウントですねこっちのデスクトップアプリでログインしているアカウントとスマホ側のChatGPTのアカウントは当然ながら同じじゃないと通信できませんので同じものでログインしますそこまで終わるとおそらくですねこの左側のマークがありますのでそれを開くとですねこの上から2つ目にコーデックスっていうのが出てると思いますこれ常に出てる場合もあるんですけれどもリンクしないとこちらのデスクトップ側見えないので</p>
+<p><code>04:56</code> ChatGPT側のこのコーデックスを押したらデスクトップ側のコーデックス側のモバイル側もこの辺の作業をしなきゃいけませんのでそちら先にやってもいいんですけれども基本的にはデスクトップ側から始めた方がスムーズかなというふうに思います結びついてるよっていう状態であればこのコーデックスっていうこのモバイル側のコーデックスボタンを押してもらうと今リンクしているデスクトップ側のコーデックスの情報を呼び出してくれるって形になりますはいこんな感じで私のですねObsidianのボルトですねデータベースのディレクトリーがこんな感じで見えてまして</p>
+<p><code>05:31</code> そのディレクトリーの中で会話したコーデックスの会話のリストがこんな感じで出ています使い方は本当にシンプルで例えばパソコン自宅で作業してたとしてここで何かテストしますってことでこれ入力しましたよね入力するとすでにこの右側のところに新しいチャットって出たと思うんですけれどもおそらくこれ投げるとこの新しいチャットっていうのが名前変わると思いますこれ投げてみますねそうすると投げた瞬間にもうこっちのモバイル側も新しいチャットのところでこの青いポチがついたと思います</p>
+<p><code>06:05</code> でテストしますでテスト受信しましたで会話のスレッドの名前がテストになってモバイル側もテストになりましたでこちらを開くと当然ながら同じテキストが出てきますモバイル側で例えばちょっと返信って打ってみますねそうするとスマホ側のメッセージが当然ながら同期してますんでデスクトップ側のものもチャットが出てくるとそしたらちょっとモバイル側からディレクトリを見てもらいましょうコメントしてみますねそうするとこんな感じでバババーっと出てきますと私のObsidianのディレクトリの一覧がバーって出てくるという形で</p>
+<p><code>06:43</code> もう完全に自分のですねObsidianの環境とこのスマホがつながっているっていう状況になっているのがわかると思いますですので使い方としてはですねまだちょっとこれ受信が若干遅れる時があるので回答を待つ必要があるかなと思いますはい回答完全に来ましたのでこれで同期しますねですので若干デスクトップ側とこのモバイル側の遅延が多少あります数十秒は今遅れてたと思うんでそんなにこんな風にパソコンいじりながらスマホを同時に見てメッセージ来ねえなっていうことはそんな使い方しないと思うので気にならないとは思うんですけれども</p>
+<p><code>07:21</code> 若干リプライ遅いなっていうことはご理解ますんでその点だけサービスまだプレビュー版なのでそういうもんかなと思いながら使ってもらえればなというふうに思いますその上であとはもうこのスマホの使い方なんですけれどもObsidianのVoltにつながっている状態なのでここでですねアップデートしたい内容とか最近の気になっていることなんかをコーデックスに直に相談して相談した内容をフォルダーのどっかに記録しておいてとかです基本的にはこのインボックスっていう何でも入れていいフォルダーあると思うんで</p>
+<p><code>07:53</code> ここにメモ入れといてみたいな形をするのが一番いいかなと思いますディスカッションした上でのドキュメントをここに入れることができるんで単純にテキストでメモ書いて何か投げ込むよりかはAIが整理した内容が入るのでこの方がですね自宅帰ってからこの作業の続きっていうところは進みやすいのかなというふうに思いますさらにですねこれCLIっていう黒い画面あると思うんですけれどもCLIで同じディレクトリーでコーデックスを立ち上げてメッセージをしてみますとCLI側こういうメッセージ出てるんですけれども</p>
+<p><code>08:28</code> 同じメッセージがこのCodexアプリ側でも出てますんで必ずしもアプリだけではないっていうことはご理解いただけるかなと思いますここでちょっと返信しますというのを投げますねここでお分かりいただいたと思うんですけれども今のこのCodexモバイルの仕様だと思いますけれどもモバイル側のこのアプリ側で会話した内容っていうのはこのローカル側のCLIのメッセージの続きには出てこないっていうことはご注意くださいっていうかそういうもんだと思って使ってください</p>
+<p><code>09:02</code> この会話の内容は引き継げるんですけれども引き継いだこのモバイル側の会話をローカル側が引き継いでるかっていうと引き継いでないのでその点だけご注意くださいこのアプリ側を見るとアプリ側は当然ながら同じメッセージになっているっていうことでCodexのCLIとアプリ側の動作っていうのが同期してない部分もあるのでその点だけご注意くださいそれでですねちょっと運用上の注意点を2つほどお話ししたいと思いますまず1個目はこのCodexのスキルの呼び出しになります</p>
+<p><code>09:37</code> Codexはスキルを呼ぶときっていうのはドルマークでスキルいろいろ入っているものが呼べるっていう形になってます同じようにデスクトップアプリ側もドルマークでスキルがわーっていっぱい出てきますスマホですねスマホがちょっと癖がありましてドルマークを入れてもスキルは出てきませんですのでモバイル側でスキル使いたい場合はこれこれのスキルを使って何々してっていう指示が必要になるってことですねこんな感じでこれこれのスキルを使って何々してっていう風に書かないとスキルは発動しないので</p>
+<p><code>10:13</code> 基本的に明示的なギルの使用を指示する必要があるっていうのがモバイル側の使い方の注意点かなというふうに思いますのでその点1点目の注意点ですねもう1個がスリープ対策ですねまずMac側の環境として環境設定のツールを使ってスリープってみると電源アダプター使用時はディスプレイがオフの時に自動的にスリープさせないってあるんでこれをオンにしておく必要があります基本的に私これだけオンにしておいて外からリモートでつながることができるので基本的に私の場合はノートブックパソコンは必ずこの設定が必要になるかと思います</p>
+<p><code>10:51</code> それと一緒でこのアプリ側にもスリープさせないっていう設定があってそれがどこかというとこの左下の設定ってところをクリックしてその中のまた設定っていうのを押しますそうすると一般ってところが書いてあるのでこの接続って真ん中にあるんですけれどもこれをクリックしますこの下側にother settingsってありますからここを見てもらうと電源接続中はこのコンピューターをスリープさせないっていうのがありますんでこれをオンにしておいてください画面がロックされていても別のデバイスからここでタスクを開始できるようにしますっていうことが書いてあるんで</p>
+<p><code>11:28</code> ここは必ずオンにしておいてくださいそれ以外にもcontrol this macって書いてあると思うんですけれどもこれ何かっていうとこの私のMacBook Proに接続している端末のリストが見える形になっててiPhoneとiPadとあと別のMacBook Airがあるんですけれどもその3台が繋がっているみたいな形になってますもしこのMacから他のMacを触りたいってなったらCtrl Other Macっていうところを選択してこのセットアップボタンからセッティングをしていくっていうところになりますですのでちょっと話戻りますけれどもこのスリープ設定はノートブックパソコンを家のパソコンとして使っている人は必ずやっておいてくださいデスクトップのMacを使っている人は多分これ必要ないと思いますはいということでデモは以上になります</p>
+<p><code>12:16</code> 続いてですねCodex Mobileとクロードでリモート操作するときのリモートコントロールっていうサービスあるんですけれどもその比較をしてます一つ目は料金なんですがCodex Mobileは基本プラス以上が使えるものになるのかなと思いますが今はプレビュー対応ということで無料版とGoもCodex Mobile使えるってことになってます一方でクロードのリモートコントロールの方はクロードのプロ以上のプランが必要になるということですねセットアップに関しては先ほど見ていただいた通りCodex MobileはQRコードを表示してアプリだけで完結するっていう</p>
+<p><code>12:54</code> 親切設計になってます作業だけだったら多分30秒とか1分以内に接続が完了するっていう形になります一方でプロド側はCLIの操作が必要だったりですね作ったセッションをリモート化するための設定が個別に必要だったりということで若干エンジニアよりの設定が必要になるっていうことはご注意ください最後に接続ってところで先ほども言いましたけれどもCodex Mobileに関してはこれはアプリ間通信が基本だと思ってくださいデスクトップアプリとモバイルのアプリの間で通信セッションを張るっていう形になりますので</p>
+<p><code>13:31</code> まずそこを基本として押さえておいてくださいその他にもデスクトップ側のコーデックスのCLIっていう黒い画面でログインしているセッションもアプリ側で見ることできるんですけれどもその続きからモバイル側でやった内容っていうのはデスクトップ側のCLI側には反映されないのでその点だけご注意ください一方でクロード側はこちらはブラウザーというかURLが発行されますんでブラウザーでも作業ができるアプリでももちろんできるって形になります会話した内容っていうのはデスクトップ側にもちゃんと反映されますんで</p>
+<p><code>14:06</code> 会話の疎後っていうところは基本的に起きないかなと思いますCodexモバイル側とクロードのリモートコントロールで動作の違いありますのでこの辺のちょっと使い分けみたいなところはご理解いただいた上で使うようにしてくださいはいということで最後なんですけれども今日はコーデックスモバイルのセットアップから外出先を想定してスマホから自宅のMacのコーデックスに話してOBCDANの勉強メモとか要点を追記してもらうみたいなことができるよっていう話をしてきました実際にやってみるとPCに向かわなくてもふと浮かんだアイディアをその場でコーデックスと相談できるっていう感覚がつかめると思いますもちろんテキストでやっても構いませんし</p>
+<p><code>14:46</code> マイクを使って音声で喋るっていうのが最近結構トレンドになっていると思うんで散歩中とかですね通勤中の歩いている時にスマホに語りかけてAI Codexと会話して思考を深めていくみたいな使い方もできるかなというふうに思いますCodex Mobileを試した方はどんな場面で便利だったかぜひコメントで教えてください外出先でオフィシディアの資料やノートを進める工夫も次の動画作りの参考にさせていただきたいと思います関連動画も概要欄の方に貼っておきますのでぜひまだ見てない方は確認してみてください</p>
+<p><code>15:20</code> 1本目は前回のクロード側なんですけれどもリモートコントロールの動画ですねクロードを契約してメインで使っている方はブラウザからもつながる運用ができますのでそちらもそちらです非常に便利なのでクロード契約している方はぜひそちらもご覧ください2本目はクロードのチャット履歴をObsidianに残す方法ということでこれはリモートコントロールとかコーデックスモバイルとか使わずに普通にクロードのアプリだけ使ってそのアーティファクトっていうファイルをですねObsidianに連携させるっていう話をしてますのでいろんな方法でObsidianにAIとした会話をですね</p>
+<p><code>15:56</code> 残す方法の一つとして参考にしていただければなというふうに思いますということで以上になりますこの動画良かったという方はぜひチャンネル登録と高評価もよろしくお願いしますではまた次の動画でお会いしましょうありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./obsidian-ai" class="internal" data-slug="obsidian-ai">obsidian-ai</a>（StructureNote）— Obsidian × AI 連携の概念まとめ</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）— AIワークフロー全般の横断整理</li>
+<li><a href="./Obsidian_クイックアクセスコツ" class="internal alias" data-slug="Obsidian_クイックアクセスコツ">Obsidian_クイックアクセスコツ</a>（PermanentNote）— Obsidian の効率的な操作テクニック</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote）— ナレッジマネジメント全般</li>
+<li><a href="./productivity" class="internal" data-slug="productivity">productivity</a>（StructureNote）— 生産性向上の実践手法</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-882" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

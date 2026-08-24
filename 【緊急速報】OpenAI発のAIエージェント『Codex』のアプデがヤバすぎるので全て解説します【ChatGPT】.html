@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】"/><meta name="twitter:description" content="📺 動画情報 【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-04 ・ ⏱️ 26分54秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのCodexが「誰でも使えるAIエージェント」に進化。コード実行・ブラウザ操作・外部サービス連携など5つの大型アップデートを解説した動画。 🗺️ 全体像 flowchart TD A[Codex = AIエージェント] --> B[コンピュータユーズ 42%高速化]..."/><meta property="og:description" content="📺 動画情報 【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-04 ・ ⏱️ 26分54秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのCodexが「誰でも使えるAIエージェント」に進化。コード実行・ブラウザ操作・外部サービス連携など5つの大型アップデートを解説した動画。 🗺️ 全体像 flowchart TD A[Codex = AIエージェント] --> B[コンピュータユーズ 42%高速化]..."/><meta property="og:image:alt" content="📺 動画情報 【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-04 ・ ⏱️ 26分54秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのCodexが「誰でも使えるAIエージェント」に進化。コード実行・ブラウザ操作・外部サービス連携など5つの大型アップデートを解説した動画。 🗺️ 全体像 flowchart TD A[Codex = AIエージェント] --> B[コンピュータユーズ 42%高速化]..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】 🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-04 ・ ⏱️ 26分54秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 OpenAIのCodexが「誰でも使えるAIエージェント」に進化。コード実行・ブラウザ操作・外部サービス連携など5つの大型アップデートを解説した動画。 🗺️ 全体像 flowchart TD A[Codex = AIエージェント] --> B[コンピュータユーズ 42%高速化]..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1790"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1790" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】</a></div></nav><h1 class="article-title">【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-05T15:00:00.000Z">2026年5月06日</time><span>56 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【緊急速報】OpenAI発のAIエージェント『Codex』のアプデがヤバすぎるので全て解説します【ChatGPT】</strong>
+🎙️ ClaudeCodeチャンネル ・ 📅 2026-05-04 ・ ⏱️ 26分54秒
+🔗 <a href="https://www.youtube.com/watch?v=XYcIVJudRzk" class="external">https://www.youtube.com/watch?v=XYcIVJudRzk<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>OpenAIのCodexが「誰でも使えるAIエージェント」に進化。コード実行・ブラウザ操作・外部サービス連携など5つの大型アップデートを解説した動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[Codex = AIエージェント] --> B[コンピュータユーズ 42%高速化]\n    A --> C[Codexペット 作業状態の可視化]\n    A --> D[開発領域の進化]\n    A --> E[日常業務連携 Slack/Gmail/Gcal]\n    A --> F[その他 サブエージェント/HeyGen/ブラウザ操作]\n    D --> D1[Supabase公式プラグイン]\n    D --> D2[Webサイト自動監査スキル]\n    D --> D3[GPT-Image 2.0でゲーム生成]&quot;">flowchart TD
+    A[Codex = AIエージェント] --> B[コンピュータユーズ 42%高速化]
+    A --> C[Codexペット 作業状態の可視化]
+    A --> D[開発領域の進化]
+    A --> E[日常業務連携 Slack/Gmail/Gcal]
+    A --> F[その他 サブエージェント/HeyGen/ブラウザ操作]
+    D --> D1[Supabase公式プラグイン]
+    D --> D2[Webサイト自動監査スキル]
+    D --> D3[GPT-Image 2.0でゲーム生成]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. コンピュータユーズ — 従来比42%高速でデスクトップを直接操作 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>スクリーンショットで画面を認識しながらボタン座標を特定・クリック・タイピングを自動実行する機能。以前はクロードコードでも使えたが遅すぎて実用外だったところ、Codexで42%高速化され実用レベルに到達した。アプリ内テストの自動実行、iPhoneミラーリング操作（LINEの自動返信等）、動画編集ソフトへの自動操作など幅広い用途が見込まれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Codexペット — AIが動いている状態を視覚＋通知で知らせるキャラ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>コデックスが長時間タスクを実行中、別作業に集中できるよう画面右下にキャラクターを常駐させる機能。「考え中」「許可を求めている」「エラーで停止」を表情で示し、プッシュ通知も送る。設定→外観→ペットから起動でき、カスタム画像もペットにできる。ペット経由でCodexへ指示も可能。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 開発領域の進化 — Supabase統合・Webサイト監査・GPT-Image 2.0でゲーム生成 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Supabase（認証・DB・API・ファイルストレージを提供するOSSバックエンド）がCodex公式プラグインになり、バックエンド構築をCodex内で完結できるようになった。WebサイトのURLを渡すだけでデザイン・フロントエンドを自動監査するスキルも登場。さらにGPT-Image 2.0との連携でゲームを約30分で生成できる事例が報告されており、個人レベルのアプリ開発が現実的になった。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 日常業務の外部サービス連携 — Slack/Gmail/Google Drive/Gcalと接続可能 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Codexに複数のSaaSを接続し、まとめて情報を取得・処理できるようになった。カレンダーを接続して「今週の予定を緊急度順に」といった指示が通る。定時に自動実行する設定も可能。コーディング特化ツールから、誰でも使えるパーソナルアシスタントへの進化を示す「Codex for Almost Everyone」のコンセプトを体現する機能。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. サブエージェント・HeyGen連携・ネイティブブラウザ操作 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>1つのCodexの下に最大7体のサブエージェントを置いて並列処理が可能になった（企画・台本・編集・サムネイル・タイトル・数値分析・投稿管理を同時進行など）。HeyGenが公式プラグインとなり、テキストからAIアバター動画を生成してCodex内で完結できる。Google Chrome等のブラウザ直接操作もサポートし、テスト・レビュー・Webスクレイピングに活用できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 明日の朝、Codexのコンピュータユーズをオンにしてみる</strong>
+設定 → コンピュータの仕様 → プラグイン でオン。PremierePro等の動画編集ソフトや普段使いのアプリをCodexに操作させる実験から始めると変化が実感しやすい。</p>
+<p><strong>② Slack/Gmail/Gcalを接続して朝の情報収集を自動化する</strong>
+カレンダー・Slack・Gmailを連携させて「今日やるべきこと」を自動でまとめてもらう。/ohayoスキルと組み合わせれば朝の工程表作成がさらに速くなる可能性がある。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> どうもクロードコードチャンネルの河村です今回は最近クロードコードよりですねCodexのアップデートがとにかく半端ないので直近起こったアップデートだったりとかそもそもCodexって何ができるの?とかどういうものなの?っていう初心者から中級者に向けてですねCodexについてまとめた動画をですねこれから撮影していきますのでクロードコード今使ってるけどCodexってどうなんだろう?とかChatGPTメインに使ってるけどCodexで何ができるのか知りたいっていう人はですねぜひ動画を最後まで見ていただけたらなと思いますまた今回ですね概要欄の公式LINE登録していただいた方限定で</p>
+<p><code>00:37</code> 今回の動画のCodexの情報についてまとめたGitHubをですね皆さんにプレゼントさせていただこうと思いますので今のうちにぜひ概要欄の公式LINEを登録いただいてプレゼントを受け取るようにしていってくださいそれでは本編に入っていきますはいということでここからCodexの最新情報まとめについてですねお話ししていこうと思うんですけどまずそもそもコデックスは何なのかっていうところから軽く解説させていただきます元々ですねチャットGPTだったりジェミニクロードのような対話型AIが主流だったのに対し直近ですねAIエージェントというものが出てきましてそれがコデックスアンチグラビティクロードコードマナスジェンスパークもそうですねそういったAIエージェントが台頭してきました</p>
+<p><code>01:20</code> その対話型AIとAIエージェントの違いとしては本当にざっくり言うとアドバイスをしてくれるAIと実行に移してくれるAIこの違いだと思っていただければと思います例えばAIの市場について教えてって質問した時にそれのデータを持ってきて答えを教えてくれるのが対話型AIになりますただ今回のAIエージェントについてはそれを例えばスプレッドシートにまとめて提出してくれたりとか他にもPDFドキュメントなどにまとめて持ってきてくれますしそれを元にウェブサイトを作ったりとかLPにしたりスライドに落とし込んだりとかする</p>
+<p><code>01:55</code> 回答するだけではなく作業を行ってくれる実行してくれるっていうのがこのAIエージェントの強みになりますその中でもクロードコードだったりコデックスっていうのは直接ファイルを編集しに行ったりとか元々のモデルGPT5.5だったりOPAS4.7っていうのがめちゃくちゃ優れてるからこそすごい注目されているんですけどもそれ以外にもいろんな機能っていうのを取り揃えておりまして今回はその機能に着目してお話ししようかなというふうに思いますじゃあここから最新情報の機能を解説する前にですねもういくつかだけお話しさせてください</p>
+<p><code>02:31</code> まずこれはですね実際にオープンAIが発信した内容になるんですけども先週までのCodexのアップデートはですねCodex for Almost Everythingっていうふうに総称されていましてどういうことかというとほぼ全ての作業に使えるCodexっていうふうにこの作業に特化したアップデートが多くありましたただ今週のアップデートはですねCodex for Almost Everyoneっていうことで全人類が使えるコデックスっていう風にアップデートしていきましたここら辺は重要な指標ではないんですけども単なるコードを書くAIからですね</p>
+<p><code>03:05</code> 誰もが使える職種関係なく仕事として使えるものに進化していったよっていうような解釈になりますなのでコデックスとかと聞いてコードをAIで書いてくれるやつでしょとかっていうイメージだったと思うんですけど今や全人類が使うべきAIっていう風に評価されておりましてだからこそ皆さんコデックス使った方がいいよということで今回の動画ぜひ最後まで見ていただきたいなというふうに思ってますそしてですねそもそもこのクロードコードとの違いっていうのを知っておかないと今からコデックスの最新情報だったり機能をですね解説したところでじゃあどう使い分けたらいいのかっていうのがわからず困惑される方も多くいると思うのでまずはそこの前提を押さえておきます</p>
+<p><code>03:44</code> クロードコードとの違いというのはこれもうめちゃくちゃシンプルな話でコデックスの頭脳として使われているのはGPT5.5になりますクロードコードの頭脳として使われているのがOPAS4.7ですなのでコデックスという道具の中にGPT5.5という頭脳が入っているクロードコードという道具の中にOPAS4.7という頭脳が入っている基本的にそれぐらいの違いになりますただやっぱり頭脳が違う分コデックスGPT5.5はですね修復力だったり安全設計そして自動レビューここに優れております例えばエラーが入ってきた時のそこからの回復力だったりとか</p>
+<p><code>04:21</code> 出来上がっているものに対して品質チェックをするここら辺がコデックスは優れているんじゃないかと言われております逆にクロードコードとはで言うと日本語力がまずピカイチですそして長時間のタスクに耐えるさらにmcp連携ここの3つが強みになっておりますじゃあどっち使えばいいのっていうと結論両方使いましょう例えば記事とかを作成するときはクロードコードを使うそれをもとにウェブサイトを作りましたそのウェブサイトを作ったやつをCodexでレビューさせるとかエラーを修復させるっていう風に両軸回していくとより使いやすいかなっていうところになりますここまで聞いていただいて</p>
+<p><code>04:55</code> Codexがどういう感じで使っていけばいいのかだったりとか今アップデートでこういうことが起きてるっていうのが分かっていただけたかと思うのでお待たせしましたここからですね最新情報だったりとか機能についてですね皆さんに紹介していきたいと思います今回このアップでそして機能なんですけども大きく分けて5つ持ってきました一つずつ紹介していくんですけども一つ目がコンピュータユーズになりますこちらの画面をご覧くださいCodexプラスコンピュータユーズが今日のCodexアプリのアップデートでこのワークフローを42%高速で実行するようになりましたこれが正直LLMが実際の人間と同じくらい早くGUIを操作するの初めて見た瞬間です</p>
+<p><code>05:39</code> Codexは今や以下のことができます完全なアプリを構築するブラウザでフローをテストするインターフェースを自律的にクリックして進むバグを検出修正するコンソール&amp;ネットワークログを読むタスクが完了するまで反復するということでそもそもコンピュータユーズっていうものはですね皆さんが立ち上げているデスクトップ直接編集するようになります原理としてはスクリーンショットを撮りながら次どのようなアクションを取るべきかを理解してスクリーンショットで押すべきボタンとか項目とかの座標を特定してそこにカーソルを持っていって</p>
+<p><code>06:11</code> タイピングするみたいな形になっておりますコンピュータユーズはそのまま使えるんじゃなくて左下のこの設定から左のタブにあるコンピュータの仕様っていうものを押してもらってここでプラグインしていただくとコンピュータユーズ使えるようになりますこれクロードコードとかでもできてたんですけどめちゃくちゃ遅かったんですよ1個の作業をするのにめちゃくちゃ時間かけてしまってたんですね正直使えるけどまだまだだよねっていう風に言われてたんですねこれがですねコネックスのコンピュータユーザーとなんと従来の42%高速で実行するようになったということで本格的にこのコンピュータユーザーを使えるようになったということになっております</p>
+<p><code>06:48</code> このコンピュータユーザーどういう風に使えばいいのかっていうと例えば皆さんが開発者として活動しておりまして何かアプリだったりとかを作ったとしますこれまでってその作ったアプリのコードをレビューしてそれの良し悪しを判断して修正していくっていうようなことが基本だったと思うんですけどそのコデックスにそのアプリを実際に動かしてやらせるでそこでエラーが起きて修正をするみたいな感じで実際にテストをしてくれるっていうような状態を作ることができるんですよ他にも皆さん知ってる方は知ってると思うんですけど例えばMacBookってお持ちのiPhoneをミラーリングして</p>
+<p><code>07:25</code> パソコンの中でスマホを動かすことができると思いますそれをコンピュータ映像使うことでなんとCodexがスマホを直接動かすことができるようになるんですよこれによって例えばですけどLINEの返信を自動でやったりとか今までスマホでやってたことをなんと自動で動かせるようになるっていう画期的なことが起きてるわけですこのコンピュータ映像一番に持ってきた理由としてはやっぱりめちゃくちゃ使えるからこそそしてかなり将来的にも重要な機能になってくるかなという風に個人的に思っているので今のうちにこのコンピュータユーズ使いこなせるようになったらいいかなという風に思います編集者とかだったらプレミアプロ立ち上げて素材を入れて</p>
+<p><code>08:02</code> AIがカットしてテロップを入れていくみたいな将来も全然あり得ますしSNS運用者の方とかでもコデックスがYouTubeを見に行ってそこから勝手に文字起こしを取得してみたいな将来も全然あり得るのでぜひそちらの方法ですね撮ってみていただけたらと思います2つ目ですねこちらはペットが登場しましたこれだけ聞くと何を意味わからないこと言ってるんだと思うかもしれないんですけどこれめちゃくちゃ画期的なのでぜひ見ていただきたいですそれがこちらの投稿になりますハッピーフライデーコデックスペットをちょうどリリースしました</p>
+<p><code>08:35</code> 8つのデフォルトから1つ採用するかコデックスにハッチペットスキルを取り込んでもらい自分で作ってみてくださいあんたのペットを下にドロップしてみんなで会いましょうということでこちらに映ってる通りですね自分の好きなキャラクターをコデックス内に配置することができるという感じになってましてこれ何がいいかというとやっぱりコデックスとかクロードコードって開発とかスライド作成ウェブサイト作成とか複雑なタスクをさせるがために一つの出力に何十分何時間とかかることってザラにあると思うんですよただその間ずっとコデックスを見とかないといけないのかっていうとやっぱりそれは</p>
+<p><code>09:09</code> 大変になってくるし違うじゃないですかその時に使うのがこちらで今動いてますよ今あなたの許可を求めてますよ今エラーが出て止まってしまってますよっていうのをですね視覚的にそして通知も飛ばして教えてくれるんですよなので別の作業に集中することができるそういうことができるようになったんですよじゃあ今回はそのペットの出し方をですね実際の画面を使って解説していきたいと思いますこちらがコデックスの画面になるんですけど実は呼び起こす方法ってめちゃくちゃ簡単で左下の設定から設定画面に飛んでいただいて左タブの外観を押してください</p>
+<p><code>09:44</code> この一番下にペットっていう欄がありましてこちらを開いていただくとこのようにペットを起こすっていうのがありますデフォルトだとこの一番上のコデックスっていうキャラクターを選択されてるんですけどもここから好きなものに選択することができますしさらにカスタムペットといって自分のフォルダーの中にある写真とか画像っていうのですね選んでいただくとそれをペットにすることもできます今回はこのデフォルトのままちょっと起こしてみたいと思いますこのペットを起こすを押していきますそしたらですね今右下にこのキャラクターが出てきましてこういう風に画面のどこにでも移動させることができますチャットに戻っていただいて例えばここで何か台本を作成してっていう 今回適当に指示していくんですけどこちらを送るとこんな感じで今考え中という</p>
+<p><code>10:30</code> 風な指示が出ておりますでこれを閉じていただいてもこのペットが残る状態になって まして作ってくれているのがわかるかと思いますここからなんと返信をすることもできまして なのでわざわざコデックス開かなくてもコデックスに支持することはできますこれめちゃくちゃ便利ですよねそして今このペットがこの状態に切り替わったのでこれを押していただくとODEXの画面を開けて台本が出来上がってる状態ですねこういうことができるようになるわけですよこれ結構便利ですよね作業中の状態を見える化できるっていうところと待ち時間の不安を少し減らせるっていうところで</p>
+<p><code>11:04</code> かなり便利な機能になってますのでぜひ使ってみてくださいじゃあ次3つ目ですね3つ目は開発領域の進化になりますここちょっと抽象的でざっくりとしたテーマになってるんですけども主に3ついいかなというふうに思ってまして1つ目がスーパーベースの公式プラグインになりますそもそもこのスーパーベースっていうのはオープンソースのファイアベースの代替だと思ってくださいそう言われてもまだわからない方のために認証機能とかリアルタイム通信とかAPIとかファイルストレージとかをですね包括的に提供するためのバックエンドサービスになります</p>
+<p><code>11:40</code> 開発者にとって結構必須ツールになっているんですけどもこれがなんとCodexと一体化したというものになりますこちらの投稿を見てください今起きたことに気づきましたがスーパーベースがCodexプラグインになりましたあなたのAIコーディングエージェントが今やバックエンド全体を構築できますセットアップしてロックダウンしてログを分析して全てをCodex内で出荷の消費がゼロになりましたということでそういったバックエンドサービスをですねCodex調で使うことができてより開発がスムーズに進めることができるようになったというものになってます開発者じゃない人にとっては縁もゆかりもないような話だと思うんですけども</p>
+<p><code>12:17</code> やっぱりこれからコーディングツールということでコデックスとかクロードコードが進化していく流れでおそらく皆さんもいずれ自分専用のアプリだったりとかウェブサイト開発するみたいなことが必ず起きてくると思いますのでこちらもですねぜひ情報として知っておく興味ある人は使ってみるってことをぜひやっていただきたいなと思います次ですねウェブサイトの採点をするスキルが登場しましたそれがこちらの投稿ですウェブサイトをレビューするコデックススキルとコデックスにURLを渡すだけでデザインとフロントエンドを自動監査しますということで最初にですねこのコデックスがレビューだったりとか</p>
+<p><code>12:52</code> 修復力そして安全設計に優れているというような解説させていただいたと思うんですけどもなんとスキルっていういわゆるマニュアルみたいなものでそのマニュアルを呼び出すだけでCodexが自動でそのマニュアル読んでその通りに動いてくれるというようなものなんですけどもそれが提供されたとなのでよりウェブサイトの設計とか導入みたいなところをですね支えてくれるようになったという感じで100%オープンソースなのでこのインストールのコマンドをですね入力するだけで導入することができますので皆さんぜひこちらもですね一緒に開発する時に使ってみていただけたらなというふうに思います</p>
+<p><code>13:27</code> こういったですねインストール方法とかさっきのスーパーベースの公式プラグインとかに関しても今回のプレゼントにもまとめて入れておきますので使ってみたいよって人はですね概要欄の公式ライン登録していただいてプレゼントを受け取っていろいろ情報入ってると思うんでそこから選んでいただくっていうのがいいかなと思います開発領域の進化最後3つ目ですねこれがGPT5.5×Image 2.0でアプリを作成することになりますまずはこちらの動画を見ていただきたいんですけどもこんな感じですゲームスタートを押すとですねこういう画面が立ち上がって</p>
+<p><code>13:59</code> はい、こんな感じでまあマリオみたいな感じですねゴールしたダメージくらったはいこちらになるんですけどもまだゲームとしては少しレベルが低いなって感じるかもしれないんですけどこれがなんと本当にコーデックスで作れるようになってるんですよ</p>
+<p><code>14:35</code> こちらの投稿になるんですけど娘のために彼女の好きなテディベアをモチーフに彼女自身を主人公にしたゲームを作りましたオープンAIのコーデックスとGPTイメージ2.0を使って約30分で完成しましたということで30分でおそらく普通の父親が娘のためにゲームを作ったとこれやばくないですかもう一般の人がこれぐらいのレベルのゲームだったら誰でも作れるようになってるとしかも30分ですこれの原理としてはGPT-2.0がめちゃくちゃ高品質な画像を生成できるということでその画像をもとにゲームを作成することができるんで</p>
+<p><code>15:09</code> このグラフィックデザインみたいなところはすでに整ってる状態で作れるとさらにGPT-5.5の登場によってその画像を読み解く力だったりとかもちろんモデル自体もめちゃくちゃ賢くなっているのでこういったゲームをですね簡単に作ることができるようになっているというところでバイブコーディングって言われるものになるんですけども独自のアプリ開発だったりとかが本当に個人レベルで誰でもできるようになっている時代になっておりますもちろんこういうゲームだけじゃなくて既存であるアプリをですね追加機能とか余計な機能を減らした状態で自分専用に作ることもできますし</p>
+<p><code>15:41</code> それをですね実際に出品する方もいましてこういった領域はどんどん広がっていくかなっていう風に思っておりますじゃあ次4つ目ですね4つ目がコード以外の日常業務の進化になりますさっきはですね開発領域っていういわゆるこのコーディングツールコデックスとかが最も得意とされる領域についてお話ししたんですけどそれ以外の日常業務ですね動画の冒頭でもですね今週のアップデートはCodex for Almost Everyoneっていう誰もがこのコデックスを使う時代になってるっていうような話をしたんですけどもそれがこちらの4番目のコード以外の日常業務の進化になりますまたまたCodexの画面に戻ってきたんですけども</p>
+<p><code>16:17</code> こちら下の画面ですね先ほどからちらちら映っていたと思うんですがスラック連携、Gmail連携、Googleドライブ連携、Googleカレンダー連携などこういった日常業務でも使えるアプリとの連携だったりとかそういったことができるようになっているという話になっておりますそれ以外にもですねこちら公式が投稿したものになるんですけどコデックスを使えば日常業務がこれまでになく簡単になると役割を選択し毎日使うアプリを接続し提案されたプロンプトを試してみましょうとコデックスは調査や計画から</p>
+<p><code>16:49</code> ドキュメントスライドスプレッドシートなどあらゆることをサポートするということでここにも書いてある通りスラック、Googleワークスペース、マイクロソフトなどのアプリを接続するということが可能になっておりますしこういう感じで誰もがパーソナルアシスタントを手に入れましたと実はこういう日常業務みたいなことがこれまでできなかった部分もあります結構コーディングに特化したようなアプリだったんですけどもここまでできるようになったということで本当にクロードコードに置き換わるツールになっているということになってます実際に試しにやってみるんですけどもまずカレンダーを接続してみますね</p>
+<p><code>17:22</code> こちらを押していただくとこんな感じでGoogleカレンダーをインストールっていう画面が出てきますので下の画面にあるGoogleカレンダーをインストールを押していただきますそしたら今ちょっと画面に映せないんですけどGoogleのアカウントの接続の画面が立ち上がりまして自分のアカウントを選んでいただくと今こんな感じでGoogleカレンダーが接続されましたという風に出てきましたそしたら自動でこのようなプロンプトが入りましてGoogleカレンダーを使って計画会議やプロジェクトレビューの準備を手伝ったという風に入りました今回ですねここちょっと変えてこんな感じでGoogleカレンダーを使って今日から1週間の予定を教えて</p>
+<p><code>17:54</code> 緊急度の高いもの順に並べ替えてほしいのと必要なタスクがあれば洗い出してという風に指示していきますそうしたらですねGoogleカレンダーのスキルを使って今日から7日分を時刻付きで確認します予定名だけでなく説明や参加者から緊急度と準備タスクも拾っていきますということで実際にGoogleカレンダーとつながってこんな感じでコデックスが動いてくれておりますはい今出てきましたこんな感じでGoogleカレンダーと連携して予定を出してくれまして緊急度の高い順だったりその日付予定そして理由を入れてくれておりますなのでもう皆さんがわざわざGoogleカレンダーを開く必要もありませんしこれぐらいだったらGoogleカレンダー直接見に行った方が早いと思うかもしれないんですけど</p>
+<p><code>18:32</code> 例えば決まった時間に自動で発火するように設定しておいたりとかGoogleカレンダーだけじゃなくてGoogleドキュメント、Googleスプレッドシート、Gmail、Slackなどのですね諸々のツールを一気に見に行ってくれてまとめて情報を取得してくれるっていうことも可能ですので皆さんのですね作業がだいぶ効率化されるかなというふうに思いますのでこちらの機能もですねぜひ使っていただけたらなと思いますじゃあ最後5つ目ですねここはですねその他っていうような分類にさせてもらってるんですけどまず一つ目サブエージェントが追加されたっていうことですねこのサブエージェントは何かというと</p>
+<p><code>19:06</code> 大元にこのコデックスっていうエージェントがいまして例えばYouTubeの動画を作成するってなった時に台本作成企画リサーチ編集サムネイル作成タイトル作成数値分析で投稿管理いろんなタスクがあると思うんですけどそれを一つのコデックスというエージェントがやろうとすると1個ずつ処理することになりますよねってなるとやっぱり膨大な時間がかかるわけですよそれをですねサブエージェントっていうものを使って1つのエージェントの下に7体のサブエージェントを置いて並列処理で全て進めていくそれぞれサブエージェントが大元のエージェントと繋がっているので</p>
+<p><code>19:41</code> 企画のリサーチができてそれを大元のコデックスが全体に振り分けることで全員がそのリサーチ情報を認識できたりとか台本が出来上がったからそのまま編集をするサムネイルを作るタイトルを作るこれ要は一つの企業が出来上がっているようなもので最近そういったクロードコードによる7人の社員を雇ってSNS自動化みたいな話ってよくあると思うんですけどもこれがCodexでもできるようになりましたこのサブエージェントその他に持ってきたんですけど結構重要な機能になってくるんで皆さんもぜひですねまずそちらを使ってみるっていうのをですね</p>
+<p><code>20:13</code> やっていただけたらなというふうに思いますじゃあ次ですねこちらHeyGenというですねAIツールがプラグインとして追加されましたこれまでクロードコードチャンネルではヒグスフィールドとピカがですねクロードコードとMCP連携したよって話をさせていただいたんですけどもなんとCodexではHagenがですね公式プラグインとして連携されましたHagenっていうのがそもそも何かというと結構ピカに近いものがありましてテキストを入力するだけでAIアバターが自然な口元リップシンクですねって話す動画を生成できるオンラインプラットフォームになりますなのでクロードコードがピカ</p>
+<p><code>20:47</code> CodexがHagenみたいな感じで面白い対決が出てきてるなっていうような感じはありますこちらが公式の投稿になるんですけどもHagenがですねHyperframes Codexの公式プラグインワンクリックでインストールCodexがエンドツーエンドのビデオ作業スペースになりますコードを書く編集するレンダリングする公開するここまでをCodexとしてできるようになったということでこの投稿の下にですねHagenのですねGitHubがありましてこれをCodexと連携させることで使えるようになるんですけども昨日のピカの動画の最後にですねワンピースの例え話として4項の元に全員が集まっていく</p>
+<p><code>21:21</code> ルフィの元にはこいつ黒ひげの元にはこいつが集まっていくみたいな話をしたんですけど今もう本当にその状態になっててフロードコードのとこにはビカヒグスフィールドとかコデックスの元にはヘイジェンっていう感じで分離していってるのですごい面白い時代が来るなっていう風に感じておりますGitHubに関してもですねプレゼントの中にもまとめて入れておきますのでそちらをですね開いていただいてコデックスに導入するようにしていってくださいアバター動画なんで例えば自分の商品をCodexで開発してそれを広める役割としてアバターでその商品をレビューする動画を作ってSNSに上げるみたいなことが可能なので</p>
+<p><code>21:55</code> ぜひやってみてくださいじゃあ最後ですねネイティブブラウザ機能になりますブラウザというとGoogle ChromeとかSafariとかそういったものが上げられるんですけどもそちらをCodexが動かすことができるようになったと認識してもらったらいいかなと思います実際にこちら動画がありますのでぜひ見ていただきたいんですけどもこんな感じでブラウザユーズということでこんな感じで今ブラウザをですね勝手に動かしてレビューというかテストしてくれてる感じですね</p>
+<p><code>22:37</code> これすごいこれすごくないですかこの緑が僕のカーソルでおそらくこれが黒がこの画面の人のカーソルだと思うんですけど今ずっと勝手に動いてましたねTo-Doリストを作ってる感じですねこんな感じでブラウザを直接操作できるようになったとこれコンピュータユーザーに近いんですけどもこのブラウザも動かせるようになったとそちらもですねこの設定からコンピュータの仕様の上にブラウザの仕様があるのでここでチェックしていただいてこの権限とかしっかりしていただきたいなと思うので</p>
+<p><code>23:11</code> 許可するのかしないのかこのサイトは絶対に入るなとか確認なしでも開くドメインとかも追加できるのでそちら設定いただいてから使うようにしていってくださいこれもですね先ほどと同様にテストだったりレビューみたいなところで使えますのでぜひ使ってみてくださいこんな感じで今回はCodexの最新情報まとめということでCodexについていろいろお話ししていきました他にもですねいろんな機能ありますしおそらくこの動画が出る頃にはまた新しい最新情報入ってるかなと思いますのでもしよろしければこういう機能使えるよとかこういう情報入ってますよとか</p>
+<p><code>23:47</code> みんな知らないかもしれないけどこういうのができるんだよっていうのがあればぜひコメント欄で教えていただけたらなと思いますもちろんですね質問とか感想とかありましたらぜひコメントしていただきたいですしいやいやコデックスじゃなくてクロードコードの方がすごいよっていう人はですねぜひそちらもですねコメントいただけたらなというふうに思っております今日のお話を聞いていただくとわかる通りやっぱりもうコデックスでも結構何でもできるようになったということでコデックス for almost everything だったりとかコデックス for almost everyone っていうふうに言われるように全ての作業がコデックスできる全ての人類がコデックスを使うようになるっていう未来は見えてきてます</p>
+<p><code>24:24</code> じゃあここから大事になってくることっていうのはですね僕2つあると思いまして一つはマネジメントです要は今までってすごいものを作れる人クリエイティブなことができる人っていうのが割と評価されてた時代だったんですけどもそれがもうAIによってできるようになったことでそのAIを管理するっていうのが評価される時代になってくると思いますなのでまずAIをしっかり学んでいただいてなぜAIはこの動きをするのかじゃあそのためにどういう指示をしたらいいのかどういう機能を使ったらいいのかっていうのをですね詳しく知っていただくと</p>
+<p><code>24:57</code> マネジメントの時代に一歩抜きんでた状態が作れるかなというふうに思ってますじゃあもう一個大事なことこのマネジメント大事だよねっていうのは実はもうすでにXでは結構言われておりましてもうそこができるようになったからといってもう一興の時代は作れませんただこれよりさらに上の状態がありましてそれはガバナンスになりますそもそもガバナンスっていうのは何かというと統治とか支配っていう意味になってくるんですけども企業や組織が目的を達成し持続的に成長するために内部で行う健全な管理体制とか統治の仕組みのことになるんですけど</p>
+<p><code>25:30</code> マネジメントと何が違うねんと思うかもしれないんですけど結構違いますマネジメントはですねただの一業務一実行をですね管理するのに対してこのガバナンスっていうのは組織の統治監視になるので例えばこれからAIがですね組織に入っていくっていう時にAIをどう制御するかどこまで許可してどう実行させるかっていうのをですね知っていただくと正直もう本当にトップオブザトップになりますまだ日本企業って全然AIを取り入れてないとかそういうのはありますけどこれからどんどん増えていく中でこういった統治監視っていうのがですねできるような人はですね必ず評価される時代になってくるのでそこも含めて今回の最新情報だったりとか使える機能みたいなところですねより詳しく知っていただきたいなと思いますのでそういったことをまとめたプレゼントですね今回公式LINEに入れております今回紹介した以上に公式からもですね実はコレックスのユースケースを出されていますし</p>
+<p><code>26:24</code> そちらでたまったノウハウとかもすべて一つのプレゼントにまとめましたのでぜひそちら受け取っていただきたいなというふうに思います概要欄の公式LINEから登録いただくとプレゼント受け取れますのでぜひそちら受け取っていってくださいこんな感じでクロードコードチャンネルでは最新のAI情報だったりとかコデックスとかクロードコードみたいなAIエージェントで何ができるのかっていうところをですね発信しておりますので興味がある人はこちらの動画に高評価とチャンネル登録をよろしくお願いいたしますそれでは今回の動画は以上になりますありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote） — AIエージェント全般のまとめ</li>
+<li><a href="./agent" class="internal" data-slug="agent">agent</a>（StructureNote/concepts） — AIエージェントの概念ページ</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts） — Claude Codeとの比較・使い分けに関連</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-688" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

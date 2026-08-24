@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】"/><meta name="twitter:description" content="📺 動画情報 【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-07-05 ・ ⏱️ 41分15秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notion Developer Platform の新機能「Sync External Data（外部データ同期）」を使い、Googleスプレッドシートのデータを自動でNotionに同期させる仕組みを、クロードコードの力を借りながらノーコード同然で構築する手順を解説する動画。 🗺️ 全体像 flowchart ..."/><meta property="og:description" content="📺 動画情報 【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-07-05 ・ ⏱️ 41分15秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notion Developer Platform の新機能「Sync External Data（外部データ同期）」を使い、Googleスプレッドシートのデータを自動でNotionに同期させる仕組みを、クロードコードの力を借りながらノーコード同然で構築する手順を解説する動画。 🗺️ 全体像 flowchart ..."/><meta property="og:image:alt" content="📺 動画情報 【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-07-05 ・ ⏱️ 41分15秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notion Developer Platform の新機能「Sync External Data（外部データ同期）」を使い、Googleスプレッドシートのデータを自動でNotionに同期させる仕組みを、クロードコードの力を借りながらノーコード同然で構築する手順を解説する動画。 🗺️ 全体像 flowchart ..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【新機能】Notion-Workers-Sync機能で外部ツールと同期する方法【スプシ連携】"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【新機能】Notion-Workers-Sync機能で外部ツールと同期する方法【スプシ連携】"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-07-05 ・ ⏱️ 41分15秒 🔗 www.youtube.com/watch 📝 要約 🎯 Notion Developer Platform の新機能「Sync External Data（外部データ同期）」を使い、Googleスプレッドシートのデータを自動でNotionに同期させる仕組みを、クロードコードの力を借りながらノーコード同然で構築する手順を解説する動画。 🗺️ 全体像 flowchart ..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【新機能】Notion-Workers-Sync機能で外部ツールと同期する方法【スプシ連携】"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1714"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1714" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】</a></div></nav><h1 class="article-title">【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-11T15:00:00.000Z">2026年7月12日</time><span>81 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【新機能】Notion Workers Sync機能で外部ツールと同期する方法【スプシ連携】</strong>
+🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-07-05 ・ ⏱️ 41分15秒
+🔗 <a href="https://www.youtube.com/watch?v=i4nVwxOHD7M" class="external">https://www.youtube.com/watch?v=i4nVwxOHD7M<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Notion" class="internal" data-slug="Notion">Notion</a> Developer Platform の新機能「Sync External Data（外部データ同期）」を使い、Googleスプレッドシートのデータを自動でNotionに同期させる仕組みを、<a href="./claude-code" class="internal alias" data-slug="claude-code">クロードコード</a>の力を借りながらノーコード同然で構築する手順を解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[ntn CLIをインストール] --> B[Notion Workersプロジェクト作成]\n    B --> C[クロードコードにソース実装を依頼]\n    C --> D[ntn workers deployでデプロイ]\n    D --> E[Google Cloud OAuth設定]\n    E --> F[環境変数にAPI認証情報を登録]\n    F --> G[ntn workers sync triggerで同期実行]\n    G --> H[Notion上にダッシュボード反映]&quot;">flowchart TD
+    A[ntn CLIをインストール] --> B[Notion Workersプロジェクト作成]
+    B --> C[クロードコードにソース実装を依頼]
+    C --> D[ntn workers deployでデプロイ]
+    D --> E[Google Cloud OAuth設定]
+    E --> F[環境変数にAPI認証情報を登録]
+    F --> G[ntn workers sync triggerで同期実行]
+    G --> H[Notion上にダッシュボード反映]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. Notion Developer Platformの3大機能 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>2026年5月にリリースされたNotion Developer Platformには「Sync External Data（外部ツールからNotionへのデータ同期）」「Give Notion AI New Tools（Notion AIカスタムエージェント用の自作MCPツール追加）」「Incoming Webhooks（外部からのWebhook受信処理）」の3機能がある。動画で扱うのは一番使用頻度の高いSync External Dataで、APIが公開されているツールなら何でも接続でき、スプレッドシート・Salesforce・Zendesk・Linear・YouTube/Googleアナリティクスなど幅広く対応する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. セットアップの流れ（ntn CLI → デプロイ） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>npmで公開されている<code>ntn</code>コマンドをインストールし、<code>ntn workers new</code>で新規Workersプロジェクトを作成する。VS Code＋クロードコード拡張機能を使い「Notion上にタスク管理の同期データベースを作りたい。プロパティは日付・タイトル・ステータス」のように自然文で指示するだけで、ソースコードの実装をクロードコードが自動生成してくれる。バイパスパーミッションをオンにすると確認なしで一気に実装が進む。完成後は<code>ntn workers deploy</code>でNotion上に反映する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Googleスプレッドシート連携の認証設定 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>スプレッドシートと同期するにはGoogle Cloud Platform側でプロジェクト作成→Google Sheets API有効化→OAuth同意画面設定→OAuthクライアントID/シークレット発行→リダイレクトURI登録という一連の設定が必要。取得したクライアントID・シークレット・スプレッドシートIDは<code>ntn workers env set</code>コマンドで環境変数として登録し、コードに直書きしない。認証は<code>ntn workers oos start google_oos</code>で通す。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 同期モードとスケジュールの使い分け </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>同期モードは「リプレイス（毎回全件送信して上書き）」と「インクリメンタル（前回差分のみ送信）」の2種類があり、データが1万件を超えない限りは実装がシンプルなリプレイスで十分。スプレッドシートは全件読み取りAPIしかないためリプレイス一択になる。実行頻度は「マニュアル（手動実行）」「○分ごと」「コンティニュアス（可能な限り頻繁）」の3種類から選べ、料金にも影響するため必要な頻度で設定する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 料金と活用アイデア </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>現在は無料で使えるが2026年8月11日以降は1回の実行あたり0.0023ドルの従量課金になる（Notion AIカスタムエージェント用クレジットを消費）。同期後は条件付きカラーで最新データの行だけ背景色を変えたり、数式でNotion上に達成率の棒グラフを作ったりできるため、スプレッドシートで運用している売上管理などをNotion側の全社ダッシュボードに一元化する使い方が紹介されている。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 案件の見積・売上スプレッドシートをNotionダッシュボード化するテストをしてみる</strong>
+案件ごとの見積・請求管理は今スプレッドシート/<a href="./Notion" class="internal" data-slug="Notion">Notion</a>で分散しがちなので、Sync External Dataでスプレッドシートの数字だけを自動でNotionに流し込み、Notion側で見やすいダッシュボードに加工する構成を小さく試してみる。まずは無料期間中（8/11まで）に触るのがコスパ良い。</p>
+<p><strong>② <a href="./claude-code" class="internal alias" data-slug="claude-code">クロードコード</a>に「自然文で仕様を伝えるだけでコードが書ける」実例として社内AI推進の説明材料に使う</strong>
+このNotion Workers連携は「エンジニアじゃなくてもクロードコードに指示するだけでAPI連携コードが書ける」という分かりやすい実例になっている。AI推進のプレゼン・研修で「非エンジニアでもここまでできる」の具体例として引用できそう。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちは、Notion Ambassadorのつぶらやです。本日も動画を見ていただきありがとうございます。本日は2026年5月にリリースされたNotion Developer Platformの中のNotion WorkersのSync機能について基本的な使い方を解説していければと思っています。まず前提知識のおさらいからなんですが2026年5月にDeveloper Platformリリースされましてこのようなかっこいいサイトがですね世の中に公開されました。おそらくSNSで皆さんこちらのサイトがリリースされたということはインプットされているのかなと思うんですけれども</p>
+<p><code>00:33</code> いかんせんこちらの内容がエンジニア向けでなんかすごそうだけど何に使えるのかはよくわかっていないという方が大半なんじゃないかなというふうに思っておりますそこで今回の動画ではなるべく小学者の方にもわかるように噛み砕いて一応皆さんの手元でも動かせるところまでは一緒に連れていければと思っておりますのでディベロッパープラットフォーム少し興味あるという方はぜひ動画最後までご覧いただけたらと思いますこのチャンネルではNotionに関する情報に特化して発信を行っておりますので今後もNotionを学んでいきたいという方はぜひチャンネル登録よろしくお願いしますそれでは解説の方を始めていきたいと思います</p>
+<p><code>01:09</code> まずは新しくリリースされたNotion Developer Platformの3つの主要機能についてインプットしていきましょうこちらのサイトの中にいろいろ書かれているんですがここの部分とあとこちらですねこちらとあと最後こちら3つの機能がリリースされておりまして順番に説明していければと思うんですがまず一つ目がSync External Dataという機能になりますこれが先月新しく追加された機能でして今日紹介するのもこちらの機能になりますおそらく一番使うのはこの機能になるのかなと思っていてこの後また詳しく解説はするんですけど</p>
+<p><code>01:43</code> 外部のツールからノーション上にデータを同期させる取り込んでくるということができるようになったという機能になります外部のツールというのはAPIが公開されているものであれば何でもよくてこちらの例にはZendeskだったりSalesforceだったりあとLinearだったりが載っているんですけれどもこれ以外にも例えばChatworkだったりSlackだったり今回デモするスプレッドシートからデータを取ってくるということもできますそれ以外にもYouTubeのアナリティクスGoogleのアナリティクスだったりそういったツールとも連携可能なのでAPI接続部分のコードさえかければNotion上にどんどんデータを取り込んでくることができますというのが今回の一番目玉のアップデート情報になります</p>
+<p><code>02:20</code> それ以外にも2つ機能がございましてGive Notion AI New ToolsということでNotion AIのカスタムエージェントで呼び出せる自作ツールの作成が可能になりましたこれどういうことかというとカスタムエージェントの中でこのような設定画面あると思うんですが少しスクロールしていただくと接続を追加ということで自作のMCPツールを追加することができますこのNotion Workers Sampleと天気チェッカーというのはつぶれ屋が実装したものになっていてこのワークスペース内で使えるようになっていますこちらに関しては今日の動画では割愛するんですが以前動画で解説したものありますので</p>
+<p><code>02:55</code> もし興味ある人はこちらの動画を見ていただけたらと思いますこちらの動画は3ヶ月前に公開という風になっているんですけれどもこのディベロッパープラットフォームがリリースされる前から実はあった機能になりますそして3つ目ですねこちらも今日の動画では割愛するのとあとあまり使う機会ないんじゃないかなと思ってるんですけれどもインカミングウェブフックって呼ばれる外部のツールからNotionWorkersにWebhookでリクエストを受け取った際にNtion Workersの中で処理を行わせるということもできるようになりましたこちらに関してはコミュニティ内の限定動画で解説しているのでNotion大学の会員さんはこちらから確認していただけたらと思います</p>
+<p><code>03:32</code> 今回新しくこの3つの機能がリリースされたんですが一番よく使うであろうThink External Dataの機能を今回の動画では紹介していきたいと思っています今回のNotion Developer Platformなんですけれども、このような実装、今までやろうと思えばGASを使ったりだとか、あと僕はクラウドフレアワーカーズというのが好きなので、その実行環境で今まで実装してデプロイするということをよくやっていたんですけれども、この実装がNotion上の実行環境で動かすことができるようになったというのが大きなメリットの一つになります。手元のエディタでタイプスクリプトでコードを書いて、Notionのアカウントさえ持っていれば、新しくクラウドフレアのアカウントを作ったりだとか、</p>
+<p><code>04:12</code> あとZapierとかMakeとかノーコードのツールを契約したりだとか、あとはGASですね。GAS上にコードを書いて、みたいなことが必要なくて、Notionが提供してくれている環境上で動かすことできるので、エンジニア用語でインフラというふうに呼んだりするんですけど、そこを準備する必要がありませんよというのが大きなメリットになります。イメージとしてはガスかかれたことある方わかると思うんですけれどもガスみたいなことがNotionの実行環境上でもできるようになりましたというイメージになります動画の後半では実際に行動をお見せしつつより具体的なところを話していくので現段階ではこんなもんだなって思っていただければ大丈夫です</p>
+<p><code>04:48</code> もう少しだけ詳細をインプットしていただければと思っておりまして料金のところですねこちらはNotionのビジネスプラン以上限定の機能になりますNotion AIが使えるのがこちらのビジネスプラン以上なんですがそちらと連動する形で逆に言うとビジネスプラン以上の方であればNotion Workersの機能誰でも使えるという形になっていますこのWorkersなんですが現在は無料で使えるんですけれども8月11日以降は有料になるというお知らせがありました1回の実行あたり非常に安いんですが0.0023ドルで実行できるという風に</p>
+<p><code>05:24</code> 公式ページに書かれておりまして公式ページのこちらですね8月11日以降はこの料金がかかる形になります直接ドルで支払うというよりはカスタムエージェントを使う際に使用するノーションのクレジットですねそちらを消費するという形になりますこちらのクレジットはカスタムエージェントとあと先ほど紹介したこの3つの機能ですねこちらそれぞれでかかってくるという形になりますただ1回の実行あたり非常に安いコストで実行できるということだったのでカスタムエージェントよりもね圧倒的に安い価格で実行できるのでそのあたりは正直あまり気にならないんじゃないかなと思っているというのがつぶらやの意見です</p>
+<p><code>06:00</code> とりあえず私は今無料期間中でガッツリ使っているという形になりますここからが本題でここは実際にNotionのページをお見せしつつ解説できればと思うんですが今日お伝えするのがSync External Dataという機能になるんですが今までも実はこの同期データベースという機能はありましてスラッシュコマンドからSyncと入力するとGitHubだったりAsanaだったりの同期データベースがこちらに表示されています他にもJiraだったりSalesforceだったり同期させることができるんですが、今回のアップデートでこのGitHubとかAsanaに限らず外部のAPI提供しているツールであれば何でも同期データベースができるようになったというイメージを持っていただければ大丈夫です。実際のサンプルをお見せしていければと思うんですけれども、こちらがNotion Workersで取り込んだページのサンプルになっておりまして、こちらのデータベースの情報は、</p>
+<p><code>06:49</code> スプレッドシートの情報が同期されている形になります。スプレッドシート上の、例えばこの7月6日の確定売上であったり、読売上であったりのデータが、Notion上にも自動反映される形になっておりまして、こちらの部分に情報が入力されています。Notionの同期データベースはこちらに同期済みというふうに表示されるようになっておりまして、前回の同期が21時間前ですよであったりとか、このプロパティは正常に同期されていますよというところが記載されています。同期されたプロパティは編集することができなくて、例えばこのチェックの部分なんですけど、自分でチェックを入れても自動でチェックが外れる仕様になっていたりだとか、こちらの数値の部分を編集するみたいなこともできません。ただノーション上でプロパティを追加していくということはできまして</p>
+<p><code>07:33</code> 少しわかりやすいようにここに区切り線入れているんですけれどもこの区切り線よりも右の部分はノーション側で追加したプロパティになりますスプレッドシートから取り込んだ情報をもとにノーション上で少し見やすく加工してあげてこの情報をもとにダッシュボードを作成していくみたいなことが可能になります実際に同期させる様子をデモできればと思うんですが今7月6日までデータが入っている状態になっているものを1つデータを追加して7月13日までデータを出してみたいと思います少しスプレッドシート側の情報を加工してあげて</p>
+<p><code>08:06</code> 7月13日のデータを追加しましたそしてこの状態で今後ちょうど詳しく説明できればとは思うんですが今同期のスケジュールがマニュアルという風になっているのでこのコマンドライン上から同期を実行させるためのコマンドを入力してあげますコマンドが正常に実行されましたよというログが流れるんですがこの状態でノーション側のデータを見てあげると7月13日のデータが今ちょうど追加されたのが分かったかと思うんですが新しくこちらの部分にチェックが入った状態でデータが追加されましたそして下のダッシュボードの部分も自動反映されるように連携しているので</p>
+<p><code>08:41</code> スプレッドシート上の情報がノーション上に自動反映されたというのが分かるかと思いますこのような形で今回はスプレッドシート上からの取り込みをしたんですが他の外部ツールから取り込んでノーション上でダッシュボードを作っていくみたいなことが可能になるので例えば営業チームの売上管理はスプレッドシートで管理しているけれども経営チームは普段はノーションを見ていてノーション上のダッシュボードで全ての部署の数値を見える化しているみたいな場合にこういった連携をしておくとノーションで一元管理するという未来が実現できたりします今回のソースコードではこのスケジュールの部分がマニュアルという風になっていたんですが</p>
+<p><code>09:17</code> こちらの部分を例えば5ミニッツという風に入力しておくことで5分に1回自動同期させることが可能になるので特に同期させたいタイミングで先ほどのコマンドを実行しなくても自動でスプレッドシートとノーションのデータが同期されているという状態を作ることもできます今回の動画の最終ゴールはこのスプレッドシート上のデータをノーション上に同期させるというところを皆さんと一緒に作っていければと思うんですがいきなりそこから始めると少しハードルが高いと思うのでまずは一番簡単なサンプルを作っていくというところからやってみたいと思いますここからはまずは一番簡単なサンプルからということで少しエンジニアリングの内容も入ってくるんですけれどもぜひ皆さん頑張って最後までついてきていただけたらと思います今回の作成したソースコードは皆さんそのままコピペして使える形で概要欄に貼っておこうと思いますのでもしそのまま参考にしたいという方は概要欄チェックしてそちらからダウンロードいただけたらと思います</p>
+<p><code>10:14</code> では早速始めていければと思うんですがまずノーションワーカー作るためにはntnというコマンドを今使っているパソコンにインストールしてあげる必要がありますNTNというコマンドはこちらのNPMというサービスで公開されておりまして少し名前が近くてややこしいんですけれどもNTN Notion NPMみたいな形で検索していただくとこちらのNPMのページがヒットしますのでこの方はNotionの社員さんなんですがこの方が開発してくれているこのNTNというものですねこちらのページからインストールしていきます</p>
+<p><code>10:47</code> 英語で記載されているので分かりにくく感じるかもしれないんですが順番通りやっていけば大丈夫なのでしっかりついてきてください今回私使っているパソコンがMacなのでMac想定で説明をしていくんですけれどもWindowsの方はこちらにWindows用のコマンドがあるので適宜読み換えつつ進めていってくださいMacの方はこのコマンドをTerminalと呼ばれる黒い画面で実行してあげる必要がありますTerminalはこのTerminal Upというものがあるのでこちらを起動してください私はいつもこのランチャーアプリですねここからTerminalと打ち込んで起動させているんですけれども</p>
+<p><code>11:23</code> こちらのファインダーですねファインダーの中のアプリケーションというフォルダの中から少し分かりにくいところにあるんですがこちらのユーティリティというフォルダの中ですねこの中からターミナルを選択して起動していただいても問題ありません私の場合なんですけれどもこのターミナルと同じ機能を持ったiTermというアプリを使っているので今回はこちらで説明していこうと思いますただこちらはターミナルと同じ挙動をしてくれるので特に違いがあるわけではないので同じものと思っていただいて大丈夫ですこちらのターミナルの中に先ほどのページに記載してあったこちらのコマンドですね</p>
+<p><code>11:59</code> こちらをコピーしてあげてターミナルに貼り付けを行いますこのままEnterキーを押していただいて実行すれば大丈夫です私の場合はすでにインストールしてあったのですぐ終わったんですが皆さんの場合は少し時間がかかるかもしれませんこちらでこのようなアイコンが出てきたら無事成功しています今回は成功しているんですがもしエラーが出てしまった場合はこちらのログをコピーしていただいて例えばNotionAIにエラーが出たんだけどどうすればいい?みたいな形で聞いてあげると的確な回答返ってくると思いますのでお使いのパソコンでちょっと相性が合わない</p>
+<p><code>12:33</code> みたいな時エラー出てしまったりすると思うのでそういった場合はうまくAIを活用しながら解決していってみてくださいこの後の説明も同様ですねエラーが出た場合はログをコピーしてAIに聞いていくということをやっていただければと思いますそうしましたらこのNTNのインストールは完了していますパソコンの中で ntn コマンドが使えるようになっています使えるかどうか確認するためには ntn 半角スペース-大文字の v ですねいうふうに入力してあげると現在の ntn のバージョンが表示されますこのように表示されれば無事 ntn のインストールが完了しているという形になりますこの動画を撮っている時点では0.18.1のバージョンを使わせていただいております ここまで完了したらノーションワーカーズを作る準備は整っています</p>
+<p><code>13:18</code> このコマンドを使ってノーションワークを作っていこうと思うんですがエンジニアリング初心者の方だとこの黒い画面ちょっと 馴染みないと思うので丁寧にお話ししていくんですけれども今この左に出ているのがのターミナルが今いる場所を表しています ニョロニョロというふうに書かれているんですけれども今このパソコンのホーム画面みたいなところにいると思っていただければよくて少し場所を移動してから新しいノーションワーカーズ を作っていければと思っています場所はこれどこでもいいんですけれども一番わかりやすい例で言うと例えばこちらのファインダーの中で一つ作業用のフォルダを作っていただいて</p>
+<p><code>13:53</code> 私の場合はこのホームの中にGitというフォルダを作っているのでこちらの中で作業を加えていこうと思っています皆さんも同じようにサイドバーの中にご自身の名前が書かれたこのホームのアイコンあると思うのでここの中でフォルダを作っていただいて右クリックで新規フォルダとやると新しいフォルダ作れますので同じ名前でGitを落としていただけるといいかなと思いますGitのフォルダが作れたらちょっとここからコマンドを打ち込んでいくんですけれどもそのフォルダに移動してあげます移動はChange Directoryの略でCDと打ちますで半角スペース開けてあげて</p>
+<p><code>14:28</code> Gitという風にフォルダ名を入力しますEnterキーを押すとこのにょろにょろとなっていた部分がGitと変わりますのでこのフォルダに移動できたよということがわかります例えばここでLSと打ち込んであげるとこのフォルダの中にある子供のフォルダが一覧で表示されるんですがファインダー上で見てあげた時もこのフォルダの中にいろいろフォルダがまた入っていると思うんですがこのフォルダの一覧を黒い画面のターミナル上でも確認することができます僕の会社のホームページだったりとかあと自作しているFastNotionというアプリのディレクトリがこの中に入っていますここの中に新しくNotion Workers作っていこうと思います</p>
+<p><code>15:06</code> NTNコマンドからここはお約束なんですがntn workers newというコマンドを入力して新しいNotion Workersを作成していきます実行してみます初めにこのディレクトリで作っていいですかという風に聞かれるんですがここの部分で今回作りたい新しいWorkersの名前を決めてあげます今回はYouTubeで使っているデモ用なのでdemo youtubeみたいな名前にしておきますここは皆さん自由に名前つけていただいて大丈夫ですわかりやすさのために同じ名前つけていただくと今後の作業スムーズになるかなと思います入力したらEnterキーを押していただいてGitの初期化をするかと尋ねられるのでこれイエスのままで大丈夫なのでそのままEnterキーを押す</p>
+<p><code>15:46</code> この後依存関係をインストールしますかと聞かれるのでこれも後々結局インストールしなければいけないのでイエスのままで大丈夫ですそのままEnterキーを押しますそうすると依存関係をインストールしつつNotionWorkersの準備をターミナル上で進めてくれる形になりますそうしましたらNext Stepということでコマンドが表示されるんですが細かいところも一応解説しておきますCDは先ほど皆さんと一緒に勉強しましたねChange Directoryの略で新しく作ったDemo YouTubeというフォルダに移動してくださいねっていう風に書かれています</p>
+<p><code>16:19</code> Finderの方を見てあげるとGitのディレクトリの中にDemo YouTubeというフォルダが新しくできているのが分かるかと思いますここの部分ですねここのファイルを先ほどNTNのコマンドで自動で作ってくれたという形になります今はGitというフォルダにいるので、Demo YouTubeのフォルダにCDコマンドで移動してあげたいと思います。ちなみに小技なんですが、途中まで入力してタブキーを押すと、残りの部分を保管してくれるようになります。例えばDだけ入力してタブキーを押すと、候補が2つ表示されるので、タブでどっちかを選ぶみたいなこともできたりします。</p>
+<p><code>16:53</code> 僕は割と何文字か入力してすぐタブを入力するみたいなのが手癖になっています。この辺操作できるようになると少し時短になるかなと思います。でもYouTubeのフォルダに移動してあげて、少しこのフォルダの中身を見ていきたいと思いますこの後一番簡単なサンプルを作るのでフォルダの中身を見ていければと思うんですがフォルダの中身を見ていくときにこのターミナル上でも一応見ていくことはできるんですが少し見づらいので皆さんぜひ無料で使えるこちらのVisual Studio Codeというアプリをインストールしてください先ほどはターミナルで操作したんですが</p>
+<p><code>17:28</code> このVisual Studio Codeを入れていただくとほぼほぼこのソフトウェア上で完結できるのでこの後の説明は全てこれを使ってやっていきます無料で使えるのでぜひダウンロードいただければと思うんですがVisual Studio Codeを起動してあげるとこのような黒い画面になっていると思いますこれは今何も開かれていない状態なんですけれどもこのファインダーの中の先ほどのDemo YouTubeというフォルダをここにドラッガーのドロップでポイッと投げ入れてあげるとこのような形でDemo YouTubeの中のファイルが参照できるようになりますこの後一番簡単なサンプルはこのソースというSRCですね</p>
+<p><code>18:05</code> フォルダの中のこちらのindex.tsというファイルを編集していきます実はもうこの段階ですでに一旦動作はするNotionWorkersのソースコード完成しているんですが今回これだけだと少し動きが分かりづらいと思うのでNotion上に同期データベースを作るというところまでソースコードを改変していければと思いますソースコードを書き換えていくときなんですけれどもここに手打ちでソースコードを記入していってももちろん良いんですがうまくAIの力を借りつつ実装していくのがおすすめです使うAIは何でも良いんですけれども</p>
+<p><code>18:39</code> このNTNが用意してくれているサンプルの中にはこのクロードというフォルダがあってこの中にスキルがいくつかありましてスキルの中にすでにプロンプトが仕込まれていますなのでクロードコードと非常に相性が良くてですねクロードコードに指示を出してあげるとこのスキルの中身を自動で分析してこのソースコードをいい感じに書き換えてくれるという仕組みがあらかじめ入っているので今回もクロードコードをうまく使いつつサンプルのコードを書いていければと思っていますどのように指示を出すかというところなんですが少しクロードコードの場所を移動させるんですが</p>
+<p><code>19:14</code> Notion上にタスク管理の同期データベースを作りたいまずはサンプルで3つのタスクだけハードコーディングされたものを同期できるようにしてほしいプロパティは日付、タイトル、ステータスの3つでOKこのような形で指示を出して送信のボタンをクリックしますちなみにこの右側のクロードコードなんですけれどもこのVS Codeの拡張機能というのがありまして右側のアイコンの中からこれですね四角形がたくさんあるやつなんですけどここでクロードコードを入れてあげるとこのエディタ上で使えるクロードコードの拡張機能ですね</p>
+<p><code>19:49</code> こちらインストールすることができましてそれを使うとこの画面上でクロードコードを簡単に使うことができますもちろんターミナル上でこのVS Codeでも先ほどの黒い画面を使ってここでクロードコードドをこのように起動させて、ここ上で指示を出していくということももちろんできるんですが、拡張機能を使っていただくと、ターミナルの操作に慣れていない方でも簡単に指示を出すことができるので、この拡張機能を入れていただくのはおすすめです。今、右側のクロードコードの画面で簡単なタスク管理の同期データベースを作ってくれています。一通りコードが書き終わったら実際にノーション上に反映させて挙動を見ていくのと</p>
+<p><code>20:26</code> 簡単にソースコードの解説をしていければと思っています今ソースコードがほぼほぼ書き終わりましたね左側が勝手に編集されたのがわかるかと思います少し余談なんですけど今回のようなサンプルを作るときはこちらのバイパスパーミッションズというのを使ってやってもいいかなと思いますクロードコードは1回1回この操作していいですかっていうのを確認してくれるというのがデフォルトの設定で非常に親切なものなんですけれども今回のように一気にコード書き上げてほしいときはこのバイパスパーミッションズオンにしてあげると一気に仕事を進めてくれるのでおすすめです</p>
+<p><code>20:58</code> 少し余談ですがノーション大学内のイベントでこれ私のイベントなんですがクロードコードの入門講座ということで今回のバイパスパーミッションの話だったりあとクロードコードを使ってこのポータルサイトを作る流れみたいなところを解説したのでもしクロードコードも興味あるよっていう方はコミュニティの中を覗いていただけたらと思います少し打線してしまったんですけれどもここまで完了しましたら先ほどのターミナル上でntn workers deployというコマンドを実行しますここに書いてあるコマンドですねなんですけどこのターミナルなんですがvsコード上でも操作することができてコマンドとjですね同時押しするとこの下にターミナル出てきますので基本的にはvsコード上でいろいろな仕事を完結させた方が早いかなと思うので</p>
+<p><code>21:42</code> このVS Code上のターミナルこちらの黒い画面と全く機能同じなので今後はこちらで実行していきたいと思いますこちらでNTN Workers Deployのコマンドを実行します失礼しましたその前にですね今NTN Workers Deployでここに株式会社添付という風に出てきてるんですが皆さんの場合はこれ一度ノーションにログインしてあげる必要がありますここの中からNTNログインというコマンドでどこのワークスペースにログインしますかという風に聞かれるのでここの中からワークスペースを選んであげます</p>
+<p><code>22:16</code> このような画面表示されるのでここからワークスペースを選んであげて承認と押すとそのワークスペース上にNotion Workersを反映させることができるようになります初回だけこの操作をしてあげる必要があります私の場合はすでにログイン済ませておりますのでログイン済ませた状態でntnworkers deployのコマンドを実行してくださいワーカーの名前聞かれるのでこれはそのままでもyoutubeという風にしてあげてデプロイを進めていきます大体30秒ぐらいですかね待ってあげるとワーカークリエイティブということで先ほどのタスクシンクというワーカーが無事反映されたのがわかるかと思います今度はノーションの方に移ってあげて実際にどこの画面に反映されているのかを確認していければと思います</p>
+<p><code>22:56</code> 先ほどの行動を実行した結果なんですがプライベートのセクションの中に最終更新日1分前ということでタスク管理のデータベースが完成していますこちらを開いてあげると先ほど見たのと同じ同期済みというアイコンが表示されていてミーティングの準備レポートを提出する資料を作成するという3つのタスクが表示されているのがわかるかと思いますこちらのタスクの中身は編集することができなくてですねどうなっているののかというと、こちらのソースコードの中でですね、ここの部分でサンプルタスク数というコードで資料を作成する、ミーティングの準備、レポートを提出するという3つのタスクがあって、これがノーション上に反映されたという形になります。実際のコードではこのようにコードの中に直接タスクを書き込むということはなくて</p>
+<p><code>23:41</code> ここの部分を外部のツールと接続するという処理を書いてあげて外部のツールからデータを引っ張ってきてノーション上と同期させるという処理に書き換わりますこのようなものをハードコーディングというふうに呼ぶんですがこの動画の後半戦ではスプレッドシートから情報を取得するという部分も一緒に書いていければと思うのでまず一旦ワーカーズを動かすというところまでこの時点ではわかっていれば大丈夫です少しだけこの時点でソースコードの解説をさせてください細かいところの仕様はさておき一番大事な2つのポイントだけこの時間でお伝えさせてくださいまず1つ目がモードということで</p>
+<p><code>24:16</code> ソースコード上で言うとこのワーカーシンクの中のこちらですねモード今リプレイスという風になっていますこのモードが2種類あってリプレイスとインクリメンタルというのがあります今回はリプレイスを選択しているんですけれども多くの場合はリプレイスで大丈夫ですというのが結論でそれぞれ何が違うのかというところなんですけどリプレイスの場合は外部から取得したデータを毎回全件送信してノーション上のデータを書き換えるという処理になります基本はこちらの方が実装シンプルになるのでデータの件数が1万件以上みたいな膨大なものでない限りは</p>
+<p><code>24:52</code> このリプレイスを基本的には使っていただければ大丈夫かと思いますもう一つインクリメンタルというモードがあるんですがこれは前回からの差分だけを送るというものになります毎回1万件以上のデータを送信していると送信量が多くなってしまってシステムに負荷がかかってしまいますのでデータ量が多い場合には差分だけ送信する少し実装を工夫してインクリメンタルのモードで使っていただくというのがおすすめですインクリメンタルなんですけれどもこちらは接続するAPIの仕様とも関係していて例えば今回実装するスプレッドシートは</p>
+<p><code>25:25</code> そもそも全件読み取りしかAPI開放されていないので、インクリメンタルモードというのは使えず、基本的にはリプレイスになるという形になります。詳しくなくて恐縮なんですけど、軽く調べた感じだと、StripeだったりSalesforceだったりの外部ツールは、この差分のAPIというのがあるっぽいので、データ数が多い場合には、インクリメンタルも検討いただければ良いかなと思います。繰り返しにはなりますが、基本的にはリプレイスで大丈夫かと思います。もう一つのポイントで、実行頻度スケジュールを自分で決めることができます実行頻度は3種類ありまして</p>
+<p><code>25:58</code> ソースコード上で言うとこちらですねスケジュールの部分になりますここが今1時間1a1となっているんですがマニュアルとしてあげると手動で実行そしてコンティニュアスを選択するとシステムが許す限り頻繁に実行みたいな形になりますここはどのくらいリアルタイム性を追求するかで選択していただけるといいかなと思っておりまして動画の冒頭でお伝えした料金にも関わってくるところなので適切な頻度で同期を実行させてあげると良いかと思います今回は頻繁に実行されなくて良いのでマニュアルという風にしておきたいと思います</p>
+<p><code>26:31</code> 最後このサンプル同期をもう一度実験して終わりにしたいと思いますもう一つタスクを新しく追加してあげてデイトを7月6日までとしてレポートを終了します規制するみたいなタスクを追加してみたいと思います追加した状態でまた先ほどと同じ操作ですねNTNワーカーズのデプロイと先ほどの設定でこちらのスケジュールを手動実行マニュアルに変更したので手動で同期させてみたいと思います同期のコマンドなんですがNTNワーカーズシンクと入力すると同期のオプションが出てくるので</p>
+<p><code>27:04</code> NTNワーカーズシンクトリガーというのを選択しますちょっと打ち込みますねNtnWorkers Trigger最後にこちらのWorkersの名前ですねデフォルトでTaskSyncとなっているのでこれを入力して実行してあげます失礼しましたNtnWorkers Sync Trigger TaskSyncのコマンドですねで、トリガーが完了しましたとなっていてNotionのデータベースを見てあげると少し待ってあげるとレポートを修正するというのが一つ追加されたのがわかるかと思います同期済みの部分をクリックしてあげると</p>
+<p><code>27:37</code> 前回の正常な同期が10秒前ということでこの3つのプロパティが正しく同期されましたよというのが表示されています繰り返しにはなりますが今回はハードコーディングされているコードなのでこの動画の次のパートでここの部分を実際にスプレッドシートと接続する部分を実装していきたいと思いますそれでは次にスプシ連携ということで先ほどのソースコードを改変してスプレッドシートのデータを取得してその情報をノーションに書き込むという処理を加えていきたいと思います最初のセットアップは先ほどと同様なのでこの部分は割愛して</p>
+<p><code>28:10</code> 先ほど作ったサンプルをそのまま改変していきたいと思います今回スプレッドシートもこのNotion Workers Sampleのスプレッドシートをそのまま使っていきたいと思いますスプレッドシートと同期させるには少しNotionとは別の世界でスプレッドシートがGoogle製のツールなのでGoogle Cloudというもののアカウントを作ってそこでスプレッドシートと接続させるための準備をしてあげる必要がありますここの部分少し複雑なんですが一緒にやっていければと思っておりましてまずGoogle Cloudと検索してあげてこちらですねGCPと呼ばれているものなんですが</p>
+<p><code>28:45</code> Google Cloud Platformを選択してあげますそして右上のコンソールというところをクリックしていただいてまずこのような画面までたどり着いてくださいまず初めにプロジェクトと呼ばれるものを作る必要がありますプロジェクトはこちらの部分をクリックしていただくと右上に新しいプロジェクトと表示されますのでこちらをクリックしてくださいプロジェクト名何でもいいんですが今回はデモYouTubeという風にしておきますそして作成のボタンをクリックしましょうプロジェクトの作成は少し時間がかかるので待ってあげて右上でこちらがチェックになれば</p>
+<p><code>29:17</code> プロジェクトの作成完了です注意点がプロジェクトを作成した時にここのプロジェクトが自動で切り替わらないのでこちらもう一度クリックしていただいて今回作ったこのデモYouTubeをクリックしてあげます画面の上の部分がデモYouTubeとなっていれば問題ありません次にAPIとサービスというところをクリックしますこのプロジェクトがGoogleシートと接続できるような設定を加えていくんですがAPIとサービスを有効にするをクリックしていただいてこのAPIライブラリの中からシートというふうに検索してあげますそうするとGoogleシーツAPIというのが表示されますので</p>
+<p><code>29:52</code> こちらクリックしていただいてこの中から有効にするのボタンを押してくださいこれを押すことでGoogleシートとの接続ができるようになります次に認証の設定を加えていききます。このOOS同意画面というところをクリックしていただいて、こちらの開始ボタンをクリックしてください。アプリ名の部分にデモYouTube、そしてユーザーサポートメールの部分にご自身のメールアドレスを入れてください。次へをクリックして、対象は内部を選択。そしてまた次へを選んで、連絡先情報も自分のメールアドレスを入れてください。さらに次へをクリックして、最後同意しますをクリックして、</p>
+<p><code>30:26</code> 最終的に続行を押せば作成が完了します少し複雑な設定なんですがもう一息ですこちらの指標の中にオースクライアント作成というボタンが表示されるのでこちらをクリックしてくださいアプリケーションの種類はウェブアプリケーション選択名前の部分こちらも何でもいいんですがでもYouTubeとしておきます後ほどこちらのリダイレクトURIという部分を設定していくんですがこちらがNotionWorkers上で取得するURLになるのでちょっと現段階ではわからないので一旦保留して作成ボタンをクリックしてください後ほどまたこの画面に戻っていきます</p>
+<p><code>31:01</code> で、OSのクライアント作成が完了するとこのような画面になるんですがクライアントIDとクライアントシークレットが表示されるのでそれぞれこちらを控えておくようにしてください今画面上で映しているんですけれども皆さんが管理される際はこの2つはIDとパスワードのようなものなので他の人に漏れてしまうと他の人がこのGoogleシートに誰でもアクセスできるようになってしまいますので取扱いには注意するようにしてください今回は解説動画なので実際にお見せしつつ解説していかないとちょっとイメージ湧かないと思うので</p>
+<p><code>31:33</code> お見せしつつやっていくんですが皆さんが管理される場合は気をつけてくださいこのクライアントIDとクライアントシークレットがまとまったこのJSONというファイルをダウンロードすることができるのでこちらをダウンロードしておけば後ほどこちらを参照することができます一旦今回はダウンロードして次に進んでおきたいと思いますこの作成したIDとパスワードを使ってGoogleに認証を通していく作業を行います認証を通すコードはこれなんですがNotionWorkersの中にOO数という関数があるのでこちらを使っていきます少しだけソースコードを解説しておくと</p>
+<p><code>32:06</code> このクライアントIDとクライアントシークレットのところに先ほどダウンロードしたクライアントIDとクライアントシークレットを仕込んでいきます今回はこの用意したソースコードをコピーして先ほど作ったサンプルのコードにペーストして進めていきたいと思います完成したソースコードは概要欄に貼っておくので後ほどそちら参照しつつ進めてみてくださいこちらのソースコードの中に直接クライアントIDを書き込んでもいいんですがこちらだと少しセキュリティ上問題があるのでそうではなくて環境変数と呼ばれる部分にクライアントIDとクライアントシークレットを仕込んでいきます</p>
+<p><code>32:40</code> 環境変数に仕込むコマンドはこの2つになりますnotionworkersのenvsetというコマンドを使っていくので少し一緒にやっていければと思うんですがNTNワーカーズenvset埋め込む環境変数の名前はまずはGoogleのクライアントIDですねGoogleクライアントIDイコール先ほどコピーしたクライアントIDをここにペーストしますこちらですねこちらをペーストしてEnterキーを押しますGoogleクライアントIDがセットされました同じようなコマンドでNTNワーカーズenv set</p>
+<p><code>33:11</code> 今度はクライアントシークレットを仕込んでいきますクライアントシークレットイコールこちらのコマンドですねこちらを実行していきますここまでの実装が完了したら一度デプロイを行います。デプロイのコマンドは先ほどやりましたね。ntnworkers deploy をコマンドを実行していきます。ここまでの実装が完了したら一度デプロイを行います。デプロイのコマンドは先ほどやりましたね。ntnworkers deployをコマンドを実行して新しく追加したGoogle Authのワーカーをデプロイしていきます。ここまで完了したらredirect urlというのを取得していきます。ntnworkers auth show redirect urlというコマンドを入力して実行してあげます。そうするとこれ毎回固定値だと思うんですけど</p>
+<p><code>33:44</code> このようなリダイレクトURL表示されますのでこちらをコピーしてあげてGCPの設定画面最後になります先ほど作成したクライアントIDの下の方ですねこちらのリダイレクトURIのところにURIを追加そして先ほどコピーした値をペーストで保存してあげますこれでGCP側の設定は完了です少し難しかったと思うんですけれども慣れるとすぐできると思うのでちょっと頑張って慣れていってくださいここまで完了したら実際にGoogleの認証が通るかどうか確かめていきたいと思います少し先ほど私見落としていたんですけれども</p>
+<p><code>34:19</code> このGoogle Auth後ほどのソースコードで使うんですが今のままだとこのGoogle Authどこでも読み取られない状態になっていてこのままだとデプロイできないのでこの44行目のコードでGoogle Authを読み取るためにコンソールログGoogle Authという風に仕込んであげますこれ皆様はソースコード私のやつコピーして動かしていただければこの処理いらないのでちょっと今回便宜的にこのように進めさせていただければと思いますこの状態でNTNワーカーズデプロイコマンドを実行しますもし私と同じ手順で進めていきたいという方は</p>
+<p><code>34:54</code> コンソールログでGoogleオースを44行目45行目あたりで仕込んであげてくださいそうするとこのケイパビリティズの部分でoos google oosというのが追加されていれば無事デプロイが完了していますこの状態で実際にGoogleの認証を通してみましょうntn workers oos start google oosのコマンドを実行してみますそうするとこのようにアカウントを選択してくださいと表示されて先ほどGCP側で設定したアカウントでログインをしていきますこのdemo youtubeというNotionのワーカーズがGoogleアカウントへのアクセスをリクエストしていますということで私が作ったものなので問題ないかなということで</p>
+<p><code>35:31</code> このスプレッドシートへの参照がここに入ってますねこれで許可のボタンをクリックしますこのようにプロバイダーとの接続が完了しましたという風に出ていれば無事Googleと接続できたということになります無事認証が通りましたねお疲れ様ですもしエラーが出てしまった方はエラーの内容をAIに貼り付けてAIと会話しながら進んでみてください少しこれ回りくどいやり方でGoogleオースを1回使うというやり方してしまったんですけれどもこのコードは後々使わなくなるので一旦削除しておきます認証が完了しましたらあとはソースコードを書いていくだけです完成したソースコードは概要欄に貼っておこうと思うんですが</p>
+<p><code>36:08</code> スプレッドシート側の定義とノーション側でどのようなデータベースの構成にするかというのが入力されていますスプレッドシートも概要欄に貼っておこうと思うんですが同じ構成にしてあげればそのままのソースコードで動きます今回はデータベースの名前を営業管理YouTubeサンプルとしてあげてこの状態でソースコードを実行していきます実行する前の準備でもう一つあってこのプロセスenvの部分なんですが先ほどGoogleのクライアントIDとクライアントシークレットは仕込んだと思うんですがこれ以外にスプレッドシートのIDですねこちらも入力してあげる必要がありますこちらも先ほどの円部をセットしたのと同様にntn workers 塩分セットスプレッドシート id イコールこちらのスプレッドシートの id ですね id は url のこの d スラッシュの後の部分ですねここの部分をコピーしてくださいこのスラッシュのエディットの手前までですね こちらを入力してあげますこれで環境変数のセットは完了になります</p>
+<p><code>37:06</code> ここまで完了したらもうだいたい予想つくかもしれないんですがNTNワーカーズデプロイを実行してあげますデプロイが完了しましたね先ほどのタスクシンクの関数は消してしまったのでこちらがマイナスで消えていて新しくセールスシンクというのが追加されていますもう一度ノーション側を見てあげるとノーションのプライベートセクションに営業管理YouTubeサンプルというのが追加されていてこちら開いてあげるとこのように新しくデータベースができています実際にシンクさせてみましょうかmotionworkersynctrigger sales syncのコマンドを実行してあげます少し時間が経つとここが同期済みということで</p>
+<p><code>37:45</code> スプレッドシートに入っているデータがこちらの中に反映されているのが分かるかと思います少し見やすく調整したいと思います順で並べ替えという風にしてあげるとこのように見やすくなっているのが分かるかと思いますスプレッドシートと見比べてあげると7月13日までのデータが入っていてここですねここまでのデータが入っていて10月12日までのデータは空っぽということでこのような形でここの部分は空っぽということがわかりますまた少し実験してみましょうか7月20日の部分にデータを入力して入力した状態でもう一度Syncのコマンドを実行してみます</p>
+<p><code>38:26</code> この状態で少しNotion側で待機してみようと思うんですが今新しくデータが増えましたね7月20日の部分にデータが入ってきたのがわかるかと思いますここまでで同期は完了です少し長い道のりだったかもしれないんですけれども一番難しいのが正直このGoogleの認証を通すところかなと思っていてNotion Workersの本筋とは違うところの説明でいっぱい時間を使ってしまったんですがここもよく使う設定だと思うのでぜひこの機会にインプットいただけたらと思っています最後カスタマイズの事例をお伝えして終わりにできればと思います動画の序盤でお見せしたNotion Workersのサンプルはこのような形になっていて</p>
+<p><code>39:03</code> このチェックが入っているところが最新のデータという形になっていますこちら最新のデータの部分が緑でハイライトされていると思うんですがこちらは条件付きカラーという機能で最新のフラグにチェックが入っている時にページの背景を緑にするという設定を加えているのでこれ入れておくとデータが少し見やすくなります今実際にやってみるんですがこちらの設定の中の条件付きカラーで最新のプロパティでチェックありのものに対して緑という風にしておくとここの部分が緑でハイライトされますこの最新のチェックボックスはこちらの最新ですねここと連動しております</p>
+<p><code>39:37</code> 加えてなんですがこのように数式で目標達成率みたいなのを表示させておくとわかりやすく棒グラフで可視化できるのでこれを下のダッシュボードのこちらの部分ですねこのように可視化させることができたりしますこの同期データベースでもプロパティを追加できるという特徴をうまく活用してスプレッドシートの元データをうまく加工して分かりやすく仕上げていくと視差のあるダッシュボードを作れると思うのでこの部分もぜひチャレンジしてもらえたらと思いますということで本日の動画は非常に長い動画で最後まで見てくださった方お疲れ様でしたという形なんですが</p>
+<p><code>40:12</code> Notion Developer Platformの一番の目玉機能あらゆるデータソースをNotionに同期できるという部分を解説させていただきました今回はGoogleシートを例に挙げて接続してみたんですけれども他のツールとも接続できるのでぜひ皆さんいろいろなツールと接続試してもらってこういうツールと接続したら便利になったよみたいなのがあればコメント欄で教えてもらえると嬉しいですこの動画少しでも参考になったよという方は高評価ボタン押してもらえると喜ぶのでぜひよろしくお願いしますチャンネル登録もお待ちしておりますまた動画の中で紹介したソースコードですね概要欄に貼っておこうとは思うんですが</p>
+<p><code>40:46</code> もしわからないところがあったらコメント欄で聞いてくださいもしね詰まってる人いたら相互で助け合いしてもらえればと思うのと僕もなるべく見ようとは思いますので回答できる範囲で回答させていただきますそれでは本日の動画は以上となります本当に長い動画でしたねお疲れ様でした最後までご視聴いただきありがとうございました次の動画でまたお会いしましょうつぶれでした</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion" class="internal" data-slug="Notion">Notion</a>（PermanentNote）</li>
+<li><a href="./claude-code" class="internal alias" data-slug="claude-code">クロードコード</a>（StructureNote）</li>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-651" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

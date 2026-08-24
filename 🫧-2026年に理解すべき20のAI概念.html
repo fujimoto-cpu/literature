@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>🫧 2026年に理解すべき20のAI概念</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="🫧 2026年に理解すべき20のAI概念"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="🫧 2026年に理解すべき20のAI概念"/><meta name="twitter:description" content="🫧 Threads 投稿情報 shevchenkofun @shevchenkofun · 📅 2026-05-25 🔗 元の投稿 📝 投稿内容 2026年に理解すべきAI 20概念。AIを使う人は多いが仕組みまで分かる人は少ない。難しい専門用語を、図でやさしく整理した入門ガイド。 📸 スライド内容 1/10 — タイトル / 4テーマ構成 「2026年に理解すべき AI 20概念」保存版。本シリーズは4つのテーマで構成： AIの土台 — AIの基本となる考え方や仕組み LLMの仕組み — 大規模言語モデルの内部構造を理解 モデル改善 — 学習や評価、改善のプロセスを学ぶ 実用シス..."/><meta property="og:description" content="🫧 Threads 投稿情報 shevchenkofun @shevchenkofun · 📅 2026-05-25 🔗 元の投稿 📝 投稿内容 2026年に理解すべきAI 20概念。AIを使う人は多いが仕組みまで分かる人は少ない。難しい専門用語を、図でやさしく整理した入門ガイド。 📸 スライド内容 1/10 — タイトル / 4テーマ構成 「2026年に理解すべき AI 20概念」保存版。本シリーズは4つのテーマで構成： AIの土台 — AIの基本となる考え方や仕組み LLMの仕組み — 大規模言語モデルの内部構造を理解 モデル改善 — 学習や評価、改善のプロセスを学ぶ 実用シス..."/><meta property="og:image:alt" content="🫧 Threads 投稿情報 shevchenkofun @shevchenkofun · 📅 2026-05-25 🔗 元の投稿 📝 投稿内容 2026年に理解すべきAI 20概念。AIを使う人は多いが仕組みまで分かる人は少ない。難しい専門用語を、図でやさしく整理した入門ガイド。 📸 スライド内容 1/10 — タイトル / 4テーマ構成 「2026年に理解すべき AI 20概念」保存版。本シリーズは4つのテーマで構成： AIの土台 — AIの基本となる考え方や仕組み LLMの仕組み — 大規模言語モデルの内部構造を理解 モデル改善 — 学習や評価、改善のプロセスを学ぶ 実用シス..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/🫧-2026年に理解すべき20のAI概念"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/🫧-2026年に理解すべき20のAI概念"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="🫧 Threads 投稿情報 shevchenkofun @shevchenkofun · 📅 2026-05-25 🔗 元の投稿 📝 投稿内容 2026年に理解すべきAI 20概念。AIを使う人は多いが仕組みまで分かる人は少ない。難しい専門用語を、図でやさしく整理した入門ガイド。 📸 スライド内容 1/10 — タイトル / 4テーマ構成 「2026年に理解すべき AI 20概念」保存版。本シリーズは4つのテーマで構成： AIの土台 — AIの基本となる考え方や仕組み LLMの仕組み — 大規模言語モデルの内部構造を理解 モデル改善 — 学習や評価、改善のプロセスを学ぶ 実用シス..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="🫧-2026年に理解すべき20のAI概念"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-7598"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-7598" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>🫧 2026年に理解すべき20のAI概念</a></div></nav><h1 class="article-title">🫧 2026年に理解すべき20のAI概念</h1><p show-comma="true" class="content-meta"><time datetime="2026-05-24T15:00:00.000Z">2026年5月25日</time><span>13 min read</span></p><ul class="tags"><li><a href="./tags/threads" class="internal tag-link">threads</a></li><li><a href="./tags/AI" class="internal tag-link">AI</a></li><li><a href="./tags/用語集" class="internal tag-link">用語集</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>🫧 Threads 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>shevchenkofun @shevchenkofun</strong> · 📅 2026-05-25
+🔗 <a href="https://www.threads.com/@shevchenkofun/post/DYtm95mER7_" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__1.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__2.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__3.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__4.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__5.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__6.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__7.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__8.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/threads/shevchenkofun_DYtm95mER7__9.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>2026年に理解すべきAI 20概念。AIを使う人は多いが仕組みまで分かる人は少ない。難しい専門用語を、図でやさしく整理した入門ガイド。</p>
+<h2 id="-スライド内容">📸 スライド内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-スライド内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="110--タイトル--4テーマ構成">1/10 — タイトル / 4テーマ構成<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#110--タイトル--4テーマ構成" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>「2026年に理解すべき AI 20概念」保存版。本シリーズは4つのテーマで構成：</p>
+<ul>
+<li><strong>AIの土台</strong> — AIの基本となる考え方や仕組み</li>
+<li><strong>LLMの仕組み</strong> — 大規模言語モデルの内部構造を理解</li>
+<li><strong>モデル改善</strong> — 学習や評価、改善のプロセスを学ぶ</li>
+<li><strong>実用システム</strong> — AIを使いこなすための実装と運用</li>
+</ul>
+<p>この20語がわかると、ChatGPT・Claude・画像生成AIの見え方が変わる。</p>
+<h3 id="210--part-1-aiの土台-">2/10 — PART 1 AIの土台 ①〜②<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#210--part-1-aiの土台-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>1. ニューラルネットワーク</strong> — AIの脳のような仕組み。入力層→隠れ層→出力層。つながりごとに重みがあり、学習で重みを調整する。精度が上がるほど予測がうまくなる。大規模モデルでは、この重みが何十億〜何兆規模。</p>
+<p><strong>2. トークン化</strong> — AIは文章をそのままではなく、細かい部品で読む。<code>playing → play + ing</code> / <code>ChatGPT → Chat + G + PT</code>。単語そのものとは限らない。新語や誤字にも対応しやすい。1 token ≒ 0.75 words の目安。</p>
+<blockquote>
+<p>AIは ①重みで学ぶ ②トークンで読む。この2つが出発点。</p>
+</blockquote>
+<h3 id="310--part-1-aiの土台-">3/10 — PART 1 AIの土台 ③〜⑤<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#310--part-1-aiの土台-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>3. 埋め込み（Embeddings）</strong> — 言葉の意味をベクトルに変える。意味が近い言葉は近くに並ぶ。距離と方向で意味を扱う。検索・推薦・RAGの土台。</p>
+<p><strong>4. Attention</strong> — 文脈で意味を決める。「彼女はApple株を買った」→ 株（果物）か株（企業の株）か。周囲の単語を見て重要度を決める。同じ単語でも意味が変わる。現代AIの大きな転換点。</p>
+<p><strong>5. Transformer</strong> — ほぼすべての現代AIの基本設計。Text → Tokens → Embeddings → Attention Layers → Output。2017年の大きなブレイクスルー。並列処理で高速に学習。GPT・Claude・Geminiなどの土台。</p>
+<blockquote>
+<p>意味は”距離”で、意味の決定は”文脈”で。Transformerがそれを一気につないだ。</p>
+</blockquote>
+<h3 id="410--part-2-llmの仕組み-">4/10 — PART 2 LLMの仕組み ⑥〜⑦<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#410--part-2-llmの仕組み-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>6. LLM（大規模言語モデル）</strong> — 書籍・記事 → コード → Webサイト → ウィキペディア → LLM。大量の文章を使って “次のトークン” を予測するモデル。学習の中心は次トークン予測。その繰り返しで要約・翻訳・コード生成もできるようになる。ChatGPT・Claude・Geminiはこの仲間。</p>
+<p><strong>7. コンテキストウィンドウ</strong> — AIが一度に見られる情報量。</p>
+<ul>
+<li>初期GPT：約4,000</li>
+<li>GPT-4：128,000</li>
+<li>Claude 3.5：200,000</li>
+<li>Gemini 1.5 Pro：1,000,000</li>
+</ul>
+<p>大きいほど長い文脈を扱いやすい。ただし全部を均等には見ない。真ん中を見落とす “Lost in the Middle” がある。</p>
+<blockquote>
+<p>LLMは “次のトークン予測” が核。性能を左右するのが、どれだけ文脈を持てるか。</p>
+</blockquote>
+<h3 id="510--part-2-llmの仕組み-">5/10 — PART 2 LLMの仕組み ⑧〜⑩<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#510--part-2-llmの仕組み-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>8. 温度（Temperature）</strong> — 0（低い=安定）〜 中間（バランス）〜 2+（高い=創造的）。低温はコード・要約向き。高温は発想・アイデア向き。設定次第で文章の雰囲気が変わる。</p>
+<p><strong>9. ハルシネーション</strong> — AIは “真実” ではなく “もっともらしい次の語” を出す。存在しない論文を作る／ないAPI関数を発明する／自信満々でも誤りがある。事実は必ず検証。</p>
+<p><strong>10. プロンプトエンジニアリング</strong> — 聞き方で答えは大きく変わる。</p>
+<ul>
+<li>悪い例：「APIを説明して」</li>
+<li>良い例：「REST APIの認証を、ジュニア向けにコード例つきで説明して」</li>
+</ul>
+<p>文脈を与える／役割を指定する／出力形式を決める／複雑な依頼は分ける。</p>
+<blockquote>
+<p>AIの出力は、設定と指示で大きく変わる。うまく使うには “聞き方” も技術。</p>
+</blockquote>
+<h3 id="610--part-3-モデル改善-">6/10 — PART 3 モデル改善 ⑪〜⑫<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#610--part-3-モデル改善-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>11. 転移学習（Transfer Learning）</strong> — 自転車 → バイク → 基礎知識 → 応用。すでに学習済みのモデルを土台に、新しい用途へ応用する。最初から作るより圧倒的に速い。コストを大きく下げられる。今のAI開発の基本戦略。</p>
+<p><strong>12. ファインチューニング</strong> — Base Model + Your Data → Tuned Model。事前学習済みモデルを、特定分野のデータで追加学習する。活用例：医療／法務／コード。専門分野に強くなる。社内用途や業界特化で効果大。通常は計算資源が多く必要。</p>
+<blockquote>
+<p>現代AI開発は “基礎モデルを活かして育てる” のが基本。</p>
+</blockquote>
+<h3 id="710--part-3-モデル改善-">7/10 — PART 3 モデル改善 ⑬〜⑮<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#710--part-3-モデル改善-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>13. RLHF（Reinforcement Learning from Human Feedback）</strong> — 人間が “良い回答” を評価して、役立つ振る舞いを学ばせる。Prompt → 複数回答 → 人が順位付け → モデル改善。Helpful・Honest・Safe を目指す。ChatGPTやClaudeが “アシスタントらしい” 理由。生のモデルを実用品に変える要素。</p>
+<p><strong>14. LoRA</strong> — モデル全体は凍結し、小さな追加層だけを学習。ベースモデル（凍結）+ アダプタ（LoRA・学習）→ 適用されたモデル（推論時）。ファインチューニングを低コスト化。1つのベースモデルに複数アダプタ。オープンソースAI普及の大きな理由。</p>
+<p><strong>15. 量子化（Quantization）</strong> — 32-bit → 4-bit → 軽量化。重みの精度を下げて、軽く速く動かす。メモリ消費を削減。品質低下が小さいことも多い。PCやスマホで動かしやすくなる。</p>
+<blockquote>
+<p>AIを広く使えるようにしたのは、“調整の低コスト化” と “軽量化”。</p>
+</blockquote>
+<h3 id="810--part-4-実用システム-">8/10 — PART 4 実用システム ⑯〜⑰<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#810--part-4-実用システム-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>16. RAG（Retrieval-Augmented Generation）</strong> — 質問 → 関連文書を検索 → 文脈として渡す → 回答。まず検索し、その情報を見ながら答える仕組み。RAGなし＝記憶だけで回答、RAGあり＝資料を見ながら回答。幻覚を減らしやすい。最新情報に強い。再学習せず文書更新で運用できる。</p>
+<p><strong>17. ベクトルデータベース</strong> — 意味の近さで文書を探すデータベース。質問ベクトル → 近い文書。キーワード一致だけに頼らない。同義語や言い換えに強い。RAGの検索部分を支える。</p>
+<blockquote>
+<p>実用AIの精度は、“探してから答える” 設計で大きく上がる。</p>
+</blockquote>
+<h3 id="910--part-4-実用システム-">9/10 — PART 4 実用システム ⑱〜⑳<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#910--part-4-実用システム-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>18. AIエージェント</strong> — 目標を受け取り、考え、行動し、結果を見てやり直す。Think → Act → Observe → Repeat。ツールを使えるのが強み。コード実行・Web検索・API連携が可能。チャットボットより一歩先の存在。</p>
+<p><strong>19. Chain of Thought（CoT）</strong> — 途中の考え方を段階化すると、正答率が上がりやすい。</p>
+<ul>
+<li>例：速さ × 時間 = 距離</li>
+<li>① 速さが60km/h、時間が2時間</li>
+<li>② 60×2 = 120</li>
+<li>③ よって、距離は120km</li>
+</ul>
+<p>複雑な問題ほど有効。早とちりを減らす。“段階的に考える” がコツ。</p>
+<p><strong>20. Diffusion Models</strong> — ノイズから少しずつ画像を作る生成モデル。Noise → denoise → image。画像生成AIの中核技術。動画・音声・3Dにも応用。描くのではなく “ノイズを消す” 発想。</p>
+<blockquote>
+<p>エージェントは行動し、CoTは考え、Diffusionは画像を生み出す。</p>
+</blockquote>
+<h3 id="1010--20概念のまとめ">10/10 — 20概念のまとめ<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1010--20概念のまとめ" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>カテゴリ</th><th>概念</th></tr></thead><tbody><tr><td>1 AIの土台</td><td>ニューラルネットワーク／トークン化／埋め込み／Attention／Transformer</td></tr><tr><td>2 LLMの仕組み</td><td>LLM／コンテキストウィンドウ／温度／ハルシネーション／プロンプト</td></tr><tr><td>3 モデル改善</td><td>転移学習／ファインチューニング／RLHF／LoRA／量子化</td></tr><tr><td>4 実用システム</td><td>RAG／ベクトルDB／AIエージェント／CoT／Diffusion</td></tr></tbody></table></div>
+<p><strong>覚えておきたい3ポイント</strong></p>
+<ul>
+<li>LLMの核は “次のトークン予測”</li>
+<li>実務ではRAGやAgent設計が重要</li>
+<li>AIの回答は必ず検証する</li>
+</ul>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>2026年AIリテラシーの基礎20語を、4カテゴリ（土台／LLM／改善／実用）で一気に整理した入門ガイド。</strong></p>
+</blockquote>
+<p>AIの土台5語（ニューラルネット・トークン化・Embeddings・Attention・Transformer）で「重みで学び、トークンで読み、距離で意味を、文脈で決定する」現代AIの設計思想を押さえる。LLM5語ではコンテキストウィンドウ（GPT-4=128K → Gemini 1.5 Pro=1M）の進化と Lost in the Middle 問題、温度設定、ハルシネーション、プロンプトエンジニアリングを扱う。モデル改善5語（転移学習・ファインチューニング・RLHF・LoRA・量子化）は「ゼロから作らず賢く育てる」現代開発の基本戦略を示し、特にRLHFがChatGPT/Claudeを”アシスタントらしく”した要素として整理。実用システム5語（RAG・ベクトルDB・AIエージェント・CoT・Diffusion）でAIが「答える」から「動く」への移行を解説し、実務ではRAGとAgent設計が精度を決めると締める。3つの実務ポイント：①LLMの核は次トークン予測 ②RAG/Agent設計が重要 ③回答は必ず検証。KONNEKT社員向けAIリテラシー資料の構成テンプレとしても流用可能。</p>
+<h2 id="-creative-direction-note">💡 Creative Direction Note<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-creative-direction-note" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>ゆりこさんへの活用提案 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① KONNEKT AI推進5/26定例の話題候補（完了済・継続展開用）</strong>
+20概念を4カテゴリで整理した本資料は、社員18名のAIリテラシー底上げ資料の「目次テンプレ」になる。すでに発表済みのAI効果数値化PJと組み合わせて「使いこなすための知識編」として横展開可能。</p>
+<p><strong>② AI Pulse質問設計の参考</strong>
+「自分はどこまで理解してる？」セルフチェック20問にそのまま転用可能。XPモデルに「知識クエスト」として実装すれば、活用度×知識度の2軸可視化ができる。</p>
+<p><strong>③ クライアント提案時のAI説明テンプレ</strong>
+RAG（16）／AIエージェント（18）／プロンプトエンジニアリング（10）の3つは、クライアントに「うちで何ができるか」を説明する時の必須3語。図解スタイル（左：仕組み図／右：チェックリスト3つ／下：一言まとめ）もそのまま提案資料に応用できる。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./ai" class="internal" data-slug="ai">ai</a> — AI全般のStructureNote</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a> — 18. AIエージェント に直結</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a> — エージェントのツール連携の実装層</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a> — 10. プロンプトエンジニアリング に直結</li>
+<li><a href="./2026-05-09-morchenliu-ai-fashion-workflow-guide" class="internal" data-slug="2026-05-09-morchenliu-ai-fashion-workflow-guide">2026-05-09-morchenliu-ai-fashion-workflow-guide</a> — AI実務活用の事例</li>
+</ul>
+<hr/>
+<p><a href="./Threads" class="internal" data-slug="Threads">Threads</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-3347" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#-スライド内容" data-for="-スライド内容">📸 スライド内容</a></li><li class="depth-1"><a href="#110--タイトル--4テーマ構成" data-for="110--タイトル--4テーマ構成">1/10 — タイトル / 4テーマ構成</a></li><li class="depth-1"><a href="#210--part-1-aiの土台-" data-for="210--part-1-aiの土台-">2/10 — PART 1 AIの土台 ①〜②</a></li><li class="depth-1"><a href="#310--part-1-aiの土台-" data-for="310--part-1-aiの土台-">3/10 — PART 1 AIの土台 ③〜⑤</a></li><li class="depth-1"><a href="#410--part-2-llmの仕組み-" data-for="410--part-2-llmの仕組み-">4/10 — PART 2 LLMの仕組み ⑥〜⑦</a></li><li class="depth-1"><a href="#510--part-2-llmの仕組み-" data-for="510--part-2-llmの仕組み-">5/10 — PART 2 LLMの仕組み ⑧〜⑩</a></li><li class="depth-1"><a href="#610--part-3-モデル改善-" data-for="610--part-3-モデル改善-">6/10 — PART 3 モデル改善 ⑪〜⑫</a></li><li class="depth-1"><a href="#710--part-3-モデル改善-" data-for="710--part-3-モデル改善-">7/10 — PART 3 モデル改善 ⑬〜⑮</a></li><li class="depth-1"><a href="#810--part-4-実用システム-" data-for="810--part-4-実用システム-">8/10 — PART 4 実用システム ⑯〜⑰</a></li><li class="depth-1"><a href="#910--part-4-実用システム-" data-for="910--part-4-実用システム-">9/10 — PART 4 実用システム ⑱〜⑳</a></li><li class="depth-1"><a href="#1010--20概念のまとめ" data-for="1010--20概念のまとめ">10/10 — 20概念のまとめ</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#-creative-direction-note" data-for="-creative-direction-note">💡 Creative Direction Note</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>
