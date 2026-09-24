@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。"/><meta name="twitter:description" content="📺 動画情報 Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。 🎙️ 飯塚浩也 | Obsidianでつくる最強の右腕 ・ 📅 2026-08-26 ・ ⏱️ 21分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Obsidianの中に溜まった過去メモとの「偶然の出会い」を仕組み化し、行き詰まった問題のブレイクスルーを起こす3つのプラグイン（ランダムノート／2Hop Links Plus／Spaced Repetition）を紹介する動画。 🗺️ 全体像 flowchart TD A[ランダムノート] --&amp;..."/><meta property="og:description" content="📺 動画情報 Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。 🎙️ 飯塚浩也 | Obsidianでつくる最強の右腕 ・ 📅 2026-08-26 ・ ⏱️ 21分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Obsidianの中に溜まった過去メモとの「偶然の出会い」を仕組み化し、行き詰まった問題のブレイクスルーを起こす3つのプラグイン（ランダムノート／2Hop Links Plus／Spaced Repetition）を紹介する動画。 🗺️ 全体像 flowchart TD A[ランダムノート] --&amp;..."/><meta property="og:image:alt" content="📺 動画情報 Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。 🎙️ 飯塚浩也 | Obsidianでつくる最強の右腕 ・ 📅 2026-08-26 ・ ⏱️ 21分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Obsidianの中に溜まった過去メモとの「偶然の出会い」を仕組み化し、行き詰まった問題のブレイクスルーを起こす3つのプラグイン（ランダムノート／2Hop Links Plus／Spaced Repetition）を紹介する動画。 🗺️ 全体像 flowchart TD A[ランダムノート] --&amp;..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。 🎙️ 飯塚浩也 | Obsidianでつくる最強の右腕 ・ 📅 2026-08-26 ・ ⏱️ 21分26秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 Obsidianの中に溜まった過去メモとの「偶然の出会い」を仕組み化し、行き詰まった問題のブレイクスルーを起こす3つのプラグイン（ランダムノート／2Hop Links Plus／Spaced Repetition）を紹介する動画。 🗺️ 全体像 flowchart TD A[ランダムノート] --&amp;..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-905"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-905" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。</a></div></nav><h1 class="article-title">Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-25T15:00:00.000Z">2026年8月26日</time><span>45 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/obsidian-ai" class="internal tag-link">obsidian-ai</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。</strong>
+🎙️ 飯塚浩也 | Obsidianでつくる最強の右腕 ・ 📅 2026-08-26 ・ ⏱️ 21分26秒
+🔗 <a href="https://www.youtube.com/watch?v=6r8xCPTD-PU" class="external">https://www.youtube.com/watch?v=6r8xCPTD-PU<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/Obsidianを使ってアウトプットのための絶対に使うべきプラグインを教えます。.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./obsidian" class="internal alias" data-slug="obsidian">Obsidian</a>の中に溜まった過去メモとの「偶然の出会い」を仕組み化し、行き詰まった問題のブレイクスルーを起こす3つのプラグイン（ランダムノート／2Hop Links Plus／Spaced Repetition）を紹介する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[ランダムノート] -->|完全ランダムに1件表示| D[過去メモとの偶然の出会い]\n    B[2Hop Links Plus] -->|リンクの2ホップ先を表示| D\n    C[Spaced Repetition] -->|未来の日付にメモを飛ばす| D\n    D --> E[セレンディピティ]\n    E --> F[未解決問題のブレイクスルー]&quot;">flowchart TD
+    A[ランダムノート] -->|完全ランダムに1件表示| D[過去メモとの偶然の出会い]
+    B[2Hop Links Plus] -->|リンクの2ホップ先を表示| D
+    C[Spaced Repetition] -->|未来の日付にメモを飛ばす| D
+    D --> E[セレンディピティ]
+    E --> F[未解決問題のブレイクスルー]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. ランダムノート — サイコロで過去メモと再会する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>コアプラグインの「Random Note」を設定→コアプラグインからONにすると、左サイドバーにサイコロアイコンが出る。押すたびに保管庫内のメモを完全ランダムに1件表示してくれる。「今日の占い」感覚で気軽に押せて、書いたことすら忘れていたメモに再会できるのが狙い。書いたメモの8割は二度と見返さなくてOK（80対20の法則）で、その中からたまたま拾えた1件が突破口になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 2Hop Links Plus — 「友達の友達」ノートを可視化する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>コミュニティプラグイン閲覧からインストール。自分が直接リンクを張ったノートだけでなく、リンク先からさらに1ホップ先（友達の友達）まで自動で下部に表示する。例えば「和歌山」ノートには、直接書いていなくても「みかん」という共通項を介して「愛媛」ノートが浮かび上がる。ランダムノートの完全ランダムと違い、内容がうっすら関連しているぶん「あ、こういうこと書いてたんだ」という気づきが起きやすい。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. Spaced Repetition（間隔反復） — メモを未来の日付に飛ばして再訪させる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>コミュニティプラグイン。設定→Spaced Repetitionのタグ欄に自分の好きなタグ（例: review／process／reading）を登録すると、そのタグを付けたノートがサイドバーに表示される。ノートを開いて「短く／長く／スキップ」のボタンを押すと、次にそのメモと再会する日付（例: 3日後・1ヶ月後）を自分で決められる。人は1時間で6割・1日で7割忘れるという忘却曲線に対抗する仕組みで、会議の頻度が安定するほど間隔が伸びていくのと同じ発想。忘れた頃にメモが目の前に現れ、次のアクション（図解を仕上げる等）を思い出させてくれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 3つのプラグインを今日中に有効化する</strong>
+設定→コアプラグインで「Random Note」をON、コミュニティプラグイン閲覧で「2Hop Links Plus」と「Spaced Repetition」を検索してインストール・有効化する。</p>
+<p><strong>② 案件で行き詰まったらまずサイコロを押す</strong>
+デザインや企画で手が止まった時、逆算スケジュールだけに頼らず、Random Noteを1回押して出てきたメモを1分読む習慣を挟む。トップダウンの逆算とボトムアップの偶然の接続を両方使う。</p>
+<p><strong>③ 議事メモ・企画メモに<code>review</code>タグを付けて未来に飛ばす</strong>
+「あとで見返したい」議事メモやアイデアメモに<code>review</code>タグを付け、Spaced Repetitionで1〜2週間後に再表示させる。/done や wiki-ingest では拾いきれない「ふとした再会」を仕組みで作る。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> こういう感じで自分の好きなタイミングでメモを遠くに飛ばすことができるとそしてその日付が来たらメモが勝手に自分の目の前に現れてくるとおぶしなに最強のメディアを作ろう! 飯塚です飯塚さん最近解決したい回とか悩みが結構多くてそのまま解決できないなーって放置してることが多いんですよね悩みは大きい年頃ですねそうなんですよおぶしなにとか使ってないですか?解決にってことですか?そうですね</p>
+<p><code>00:30</code> 使えるんですか?そういうのってメモ取ってます?メモは普段から普通に取ってますそのメモを見返して?見返さないですね取るだけ取って取るだけ取って?何やってるんですか?ダメですよね確かに全く見てないですね解決したい課題とか難しい問題があって解決法がわかんないとかアイデアが浮かばないって時にこういう時にオブシアンが威力を発揮するんですよね解決の時に使うんですねオブシアンはイメージつかないですね過去に書いたメモが思わぬ形で目の前に飛び込んできて</p>
+<p><code>01:03</code> それが突破口を開くと偶然たまたま見つけるみたいな感じなんですかそうなんですよえー何それ面白そうですね私はもう過去に何度もそういう体験があってこれとこれが繋がったーってリンクじゃないですかそうすごいそう全く想定もしなかったことがオブシアンを開いてて起きちゃうんですこれぞ人生の楽しみというか人生の楽しみ結構壮大になってきましたね壮大になってきましたせっかく皆さんがオブシリアンで時間をかけてメモを取ったのにもかかわらず一度も見返しないよとか眠ったままだよってなると難しい問題とか</p>
+<p><code>01:37</code> 新しいアイデアに活用されなくなってしまうんですねそうならないために今日はオブシリアンの活用法とオブシリアンの魅力とともにどう使っていけばいいのかについて手で解説します本日はオブシリアン内の過去ノートと対話して未解決問題のブレイクスルーを起こす方法を紹介しますお願いしますオブシアのメモって大前提たくさん溜まっていくんですけど全てが全部大事ってわけじゃないんですねよくこのチャンネルでは80対20の法則って紹介しますが自分にとって何度も何度も使うようなメモこれはオブシアの中にある全体のメモの中の2割しかない</p>
+<p><code>02:12</code> 残り8割はメモが二度と出てこないそれでOKだよっていうのが80対20の法則になりますでもその中でこの8割の中で偶然開いたメモが思わぬ突破口になるとそういうことが起こるんですよねこれ面白いなっていうのが例えば旅って観光するとかご飯屋に入るとかいろいろ考えることあるじゃないですかしっかり計画取ります?自分全然やらないですねやらない?やらない?はい意外でした僕もやらないですぶらっと観光してたまたまそこにいた人と喋りたまたま目についたところにご飯に入る</p>
+<p><code>02:47</code> っていうのが好きなんですそこで起こる偶然の繋がり偶然のイベントとかそっちの方がなんかワクワクするんですよねめちゃくちゃわかるかもしれないですねわかりますよね目星だけはつけとく感じですよねここには行くけどその道中は適当にやるような感じですよねそう逆に言うとこれ何時何分にこの電車に乗ってここに行ってここに行くっていうのをやると窮屈な気がするんですよねめっちゃわかりますわかりますよねこの2つをトップダウンとボトムアップ計画を立てる逆算するこれがトップダウンですね</p>
+<p><code>03:19</code> 一方でブラッと行くその場の雰囲気で偶然の繋がりを楽しむボトムアップ今回のこの話はボトムアップ偶然の発見それが思わぬ突破口になるってことなんですね例えば皆さんがずっと悩んでてふとシャワーを浴びた時とか公園の中を散歩した時にアイデアが上から降ってきたことってないでしょうかそういうことがオブシアの中で起こるってことですねこれをセレンディピティっていう言葉があります偶然の繋がりたまたま目にしたメモが自分のその抱えている悩みを解決する糸口つまりはオブシャンのメモを自分の言葉で書くとそしてオブシャンの メモを ai に一発出しして書かせるのではなく自分の言葉で書いていく自分の感情 とか驚いたことそういうのを残していく</p>
+<p><code>04:06</code> わけですよねそうしたメモたちの8割は 二度と開かないメモになるかもしれないんですけどそれで ok ある時ふとした タイミングで自分の目の前に飛び込んでそこから思わぬ着想があえて未解決問題のブレイクスルーが起きたりするんですねではどうやってこの確率を上げることができるか今日は偶然の繋がりを強化する3つのプラグインを紹介しますランダムノート、ツーホップリンクスプラスそしてスペースとレペティションになりますツーホップリンクスは以前動画で紹介しましたよねそうですね今回聞いた中だとツーホップリンクスプラスでしたっけ</p>
+<p><code>04:41</code> しか知らないですねランダムなというのはオブシラン公式が開発したプラグインで自分のオブシランの中にあるランダムなメモを一つポッて出してくれるそういう面白い機能なんですね面白いですねスペースレペティションは秘密兵器です秘密兵器ですかなんか超気になりますねこれですね私愛用しているプラグインでちょっと癖があるんですけど一度使うとやみつきになってしまう癖になっちゃうめちゃめちゃ気になる気になりますよね私はもうこれないと生きていけないそんなレベルなんですか</p>
+<p><code>05:14</code> そんなレベルですすごいというわけで早速実演したいと思いますはいそれでは3つのプラグインの導入そして実演をしたいと思います最初はコアプラグインのランダムノートですね左下の歯車からコアプラグインスクロールしてランダムノートこれをオンにしてくださいそうすると左のサイドバーになんかサイコロのやつが出てきましたねなんか出てきましたねでは残り2つのプラグインですね歯車からコミュニティプラグイン閲覧から2HopLinksプラスこちらをインストールしてください</p>
+<p><code>05:48</code> そして最後スペースとレペティションついにですよ初めて聞きましたこのツールはこれはやばいですやばいんですねこれはインストールしてください有効化ですねはいこれで準備が整いましたではどういう風にこのプラグインを使っているかを私のOptionVaultでご説明しますはいこちら私のOptionVaultになりますまず最初コアプラグインのランダムノートこちらですね左のサイドバー見るとこのようにサイコロのアイコンがあるんですねはいなんかありますねこちらを押していただくとこのように今まで書いたメモがポッと上に浮かんできますこのメモはどうやって選ばれたんですか</p>
+<p><code>06:23</code> ランダムですあだからランダムなんですかそうそうあそうなんだサイコロですよなるほどなので1日のどこかでこのサイコロをポッて振る感じですね今日の占いはどうだろうみたいな今日の占いどうだろうポッですねポッてやるとこういうメモがパッと飛び込んでくるのでそれを読むわけですねこれはもう本当にその時の運によってメモが表示されるという感じになります確かにこれだったら自分の昔書いたメモとかパッて出てきそうですねそうですね触ってないやつじゃんってなりますねでは続いて2つ目</p>
+<p><code>06:55</code> 2Hop Links Plusになりますこちらはリンクを強化するプラグになりまして以前ですねこのリンクの詳細解説について動画撮りましたので概要欄のリンクをチェックしてみてください早い話ツールホップリンクスプラスっていうのをインストールするとスクロールするとですねこのようにリンクが浮かんでくるわけなんですね特に面白いのがここですこれはですねこのプラグインをインストールしてるからこそ出てくるメモたちになります一般的にここにアンソロピックってリンクがあるじゃないですかこれはメモの中にリンクがあるんですね</p>
+<p><code>07:28</code> なのでこれは自分が意識してつけたリンクなのでさっき下に出てきたんですけど例えばAIは4ヶ月で2倍賢くなるこれはこのメモの中にどこにも出てきてないんですねどこから出てきてるんですか?これが2HopLinksなんです機能なんですねそう友達の友達を出してくれるプラグインなので自分が意識してなかったメモが浮かんでくるこれもそうですねクロードコードのプラグインこのメモも無意識のところから出てきたような感じなんですね例えるなら旅行をしてぶらっと歩いてた場所に友人がいたみたいな</p>
+<p><code>08:02</code> そういう感じになりますなるほどじゃあ悩みとか問題だなって思ってることをノートとして作ったりしてたらこうやって仲間がポポポって過去のやつから出てくる可能性あるってことですか?そうなんですよめっちゃすごいこれすごいですよこれさっきのランダムノートと何が違うかというとさっきは完全ランダムじゃないですかでもこっちは被ってるんですねちょっと似てるよねそう例えば和歌山はみかんが有名ですよね愛媛もみかんが有名ですよね有名ですねみかんっていう共通の知人がいるんですよいますねいますよね</p>
+<p><code>08:32</code> で和歌山というノートの中に愛媛が出てきた感じですみかんだけじゃなくて愛媛が出てくるんですねそうみかんつながりで共通の知人がいますよねみかんとだからこそ和歌山というメモの中に愛媛が出てきたとなので少なからず接点があるということですそういうメモがたまたま出てきたなんでこういうメモを読むわけですねあれ何書いたっけな読んでいくとあそうだそうだこういうことを書いてたんだとたまたま情報が飛び込んできてこれが思わぬ突破口になるという感じですね元々は私これ大好きな機能でスクラップボックスコセンスというサービスを使ってましたまさにこれがスクラップボックスコセンスって私が書いたメモですけど</p>
+<p><code>09:10</code> これをスクロールするとですねここにたくさんメモが載ってますよねいっぱい出てきてますねいっぱい出ますよねこういうメモを何書いたっけなと思って読んでみるわけですこれがまさに自分が予定してなかったけどたまたま目に飛び込んできて見てみるという感じですねこういうメモは無関係なメモじゃなくて関連しているメモなんですだからこそそこから意外な偶然なひらめきとか出てくるんですねリアルタイムの自分に対して過去の自分がリンクされていくみたいな感じなんですそうなんです過去の自分が答えを投げかけてくれるとめちゃくちゃいいですねこれ</p>
+<p><code>09:43</code> そうなんですよもちろん毎回気づきは得られるわけじゃないんですが思わぬ突破口にはなると思うんですよねぜひなんでこの2hoplinksプラスで出てきた下側のこのメモを読んでみてくださいそして最後スペースとリペティションになります待ってました来たこのプラグインね僕の生徒さんに教えてるんですけど皆さんこれ知ってからもう戻れないですねそんなに半端ないプラグインなんですか?半端ないんですこれ何なのかというと感覚反復的なことあります感覚反復ですか?定期的に何か学ぶみたいなことですか?まさにその通りで</p>
+<p><code>10:15</code> 人の脳って忘却曲線っていって人は覚えたことを1時間後に6割忘れるって言われてるんですねそんなに忘れるんですか?そう1日経つと7割忘れると2日経つと8割以上忘れるとそういう風に言われてるんですけどこれを何度も何度も感覚を調整しながら復習することで記憶を保持することができますよと感覚反復っていう概念がありますなので言うならばメモ書くじゃないですかそのメモをまた見返したいなとそうじゃないと忘れちゃうんですよそういう時にこのプラグインを使うと</p>
+<p><code>10:47</code> そのメモをまた遠くに飛ばして1週間後に見返そうって自分で設定するんですよそうすると1週間後にそのメモが来るんですよで読むじゃないですかふむふむって読んであもうだいぶ頭に溜まったからじゃあ次は2週間後でいいやって言ってまた2週間後に飛ばすと。そういう感じですね。これ実は私たちよくやってて会議それがまさに感覚反復なんです。会議は感覚反復なんですか?うちの会社も会議いっぱいあるんですけど最初は1週間ごとの会議だったのがもうなんかこれ安定してきたから1ヶ月に1回でいいやとか3ヶ月に1回でいいやってだんだん感覚長くなりません?</p>
+<p><code>11:22</code> 確かになりますね。なりますよね。1週間で1回やるってことはやっぱり緊急な決めなきゃいけないことがいっぱいある。そして不安定な状況だからこそ1週間に1回やるじゃないですかでも安定してきたらもう遠くでいいんですよ半年に1回1年に1回最終的にはなくなると会議がまさに感覚反復なんですよねこのシステムをメモに取り入れるそれがスペース取りプレッシャーになります私の場合どうやってるかというと例えば今ですねここにタグが3つついててプロセスリーディングレビューってタグがありますよねこのレビュータグの下に新規8月4日8月6日8月15日8月17日</p>
+<p><code>11:57</code> たくさん日付がありますよね未来の日付ですねそう今日8月2日なので未来の日付がここにあると例えば8月4日2日後に何が起こるかっていうとこのメモが来るんですよとシステム思考というメモが自分のところに飛び込んでくると反復で来るように設定できるんですかこれそうなんですよ会議と一緒ですね遠くに飛ばして飛ばした会議が近づいてくるとそれがこれですね8月4日になったらこのメモが出てくるという感じですとりあえず自分でサマリーだけ書いたのであとは裏目の図解をするっていうのがあるんですねこれが先ほどインストールした</p>
+<p><code>12:33</code> スペースとレペティションという機能になります私の場合レビューというタグをここに書いてあるのでこの日付8月4日になったらこのメモがきますよとでその後に例えばこのメモをいろいろ処理するじゃないですかOKってなったらじゃあ今度会議は3週間後でいいやみたいな感じで自分でここのカレンダーから18日でいいやとか1ヶ月後でいいやって調整をしたりとか例えばじゃあスキップって押すとこの日付が8月10になったっていう感じですねこういう感じで自分の好きなタイミングでメモを遠くに飛ばすことができると</p>
+<p><code>13:05</code> そしてその日付が来たらメモが勝手に自分の目の前に現れてくると8月17日はこのメモ覚えてないんですけどとりあえず遠くに飛ばしたのでその日が来ると意図してないタイミングになんかメモがポーンって出てくるんですねそういう感じですで例えばじゃあ8月15日にアブダクションっていうメモが来る予定なんですよこの日付忘れてましたでもとりあえず来るんですよ思わぬタイミングで会議が来るみたいなそういう感じですね確かに偶然の出会いですねそう偶然の出会い2週間後にこのメモ読むじゃないですかそうだそうだこういうメモ書いたなとネクストアクション図解がこれチェックついてないから</p>
+<p><code>13:38</code> これアブダクションの表の説明は書いたけど多分裏面の図解がまだ途中なのかなそうですねこれ画像しか貼ってないので自分なりにこれ図解書かなきゃなってことが分かるんですねそのメモでただ飛ばして見るだけじゃなくて何かを行うんですねアクションとして自分としてはそういう運用してます遠くに飛ばしてここのメモを書いたり図解を作ったりしてもしくはただ読んで今抱えてる課題とかひらめきと何か偶然の繋がりができないかなそういうことをやってるんですねこのスペースとリペティションっていうのを導入すれば</p>
+<p><code>14:11</code> 一度書いたメモをもう一回見たいって時にタグをつけるだけで遠くに飛ばすことができますそうするとその遠くに飛ばしたらある日再会するとまるで親友とバイバイって言って別れた後にまた会おうぜって言って3ヶ月後にまた会うみたいなそういう感じですねそういう出会いがオブジェラの中で作ることができるとこのスペースタルペティションは先ほどのプラグインの設定からこれ設定ですねノートっていうのをやるとここにタグっていうのを設定することができます私はレビュープロセスリーディングというタグを3つ設定してそしてこのタグをつけたら</p>
+<p><code>14:45</code> ここの右のサイドバーにプロセスリーディングレビューついてますよねここに表示するっていう設定をしておりますここは皆さんが好きなタグの名前をつけてでここのタグ図ってところにセットするとスペースとレペティション間隔反復がセットされるわけですねシンクメモ開いてプロパティタグ図レビューってやるとそうするとこのレビューってタグをつけたらここの新規ってところに無題のファイル34ですねこうしたものがセットされるのであとはこの3点印を押してレビュー長くスキップ短くどれか押すわけですね</p>
+<p><code>15:21</code> 短くてやると今日8月2日ですけど8月3日としてセットされました明日っていうところにこの無題のファイル34が来るとなのでタグをつけてここからまるで会議を1週間後にする、明日にする、3日後にするかのように次出会うタイミングをセットすることができるという感じですね。今日ご紹介したランダムノート、ツーホップリンクス、スペーストレペティション、こうしたプラグインを使ってぜひオブシアの中で偶然の出会いをたくさん作っていってください。はい、というわけで本日はオブシア内の過去ノートと対話して未解決問題のブレイクスルーを起こす方法をご紹介しました。難しい問題に立ち向かっている時とか</p>
+<p><code>16:00</code> 何かいいアイデアが浮かばないそういうシーンってよくありますよねそんな時は頭の中でずっと考えるのではなくオブジェアの過去に書いたメモを見るようにしてみてくださいランダムなノートだったり2HopLinksのリンクだったりもしくはスペースとレペティションのような以前書いたメモを見ることによって思わぬ突破口が開くことがありますメモを書いている時はこのメモ何の役に立つだろうともしかしたら思うかもしれませんしかし後から振り返った時にあのメモとあのメモが点と点が線で繋がったそういう時が来ると</p>
+<p><code>16:33</code> オブシチュアンってなんて楽しいんだときっとそのオブシチュアンの面白さに感動する日が来ると思いますあらかじめ未来が決まっているようなトップダウンを逆算ばかりするこれ人生と一緒で仕事とか打算的にここに入っておけば将来安泰でしょうとか目標を掲げてそれから逆算してこう行動しようっていうばかりだとなかなかうまくいかないですね難しい問題っていうのは正解がない問題であることがほとんどでそういう時にゴールから逆算するのではなく逆にボトムアップで積み重ねていくっていうやり方が思わぬ突破口になります</p>
+<p><code>17:07</code> つまりは一歩一歩セレンデピティという偶然の繋がりだったり予定不調はたまたま目にした時にあれとあれが繋がったと電流が走るような瞬間頭の中の連想がどんどん繋がっていって繋がったこれだってなるような瞬間がきっとあなたの未来に起こるはずですオブシランの過去に書いたメモと対話して課題解決をしてみてください本日はご視聴ありがとうございましたチャンネル登録と高評価よろしくお願いいたしますそしてスマホから見ている方はハイプでの運営もよろしくお願いいたしますやり方はすごく簡単ですコメント欄を左にサッとスワイプして</p>
+<p><code>17:38</code> 出てきたボタンをポチッと押すだけですさらに今はオブシランとエアワークを掛け合わせて10倍の成果を生み出すロードマップを無料配布しております詳細は概要欄のリンクをチェックしてみてくださいそれではまた次回の動画でお会いしましょうちょっとお疲れ様ですお疲れ様です今日の話は深い話だと思うんですよね今日の話は深かったんですか個人的には伝えたいことがこれだけあって多分これだけしか伝えられなかったんですけどひょうさんの一角なんて言うんでしょうね旅もそうだし人生もそうだし予定が決まってる人生ってつまらなくないですかあー深いですね</p>
+<p><code>18:12</code> そう偶然の出会いとか勢いとか縁とかですね僕は結構ノリと直感で動く直感ベース人間なんですよ確かに伊塚さんそういうイメージありますねそうなのであんまり計画を立てたりしたことはなくてそそれで何とか今まで生きてこれたんですけどでもふと後から振り返ってみるとそれが必然だったかのように点と点が線で繋がってまるでオブシアンのメモのようなですね今日はオブシアンのメモって話でしたけど今まで例えば自分で講座を作ってた時にどう考えても関係のないようなことが繋がって</p>
+<p><code>18:47</code> それが一本の美しい公式がそこから生まれたりすることがあったんですよね全然関係ないところからですか?それが今の自分の情報処理術知的生産の根幹を成してるんですよ例えば私が海外のZoltの師匠に飛び込んだじゃないですかそこで課題図書っていうのがあったんですねたまたまですよマーケティングの本だったんですよこれを読んでオブシランでメモ書いてみましょうってのがその時のワークショップの話だったんですけどそこで出たマーケティングの本がどんぴしゃでハマったんですよ</p>
+<p><code>19:19</code> 感動してこんなマーケティングあるのかって言ってそのZoltのワークショップが終わった2ヶ月後とかに海外のマーケの師匠のところに参加したんですそこで学んだこととZoltのこの教えが見事にリンクしてたんです似たような感じだったんですね同じだったんですさらに言うとZoltの2ヶ月前に学んだタスクシュートですねこれとも関係したんですリンクで繋がってこの3つってバラバラじゃないですかタスク管理、オブスティアンの情報処理、マーケティングそこに1本の線が走って今の自分のロジックというか世界で誰も見つけたことがない公式のようなものがあって今それを生徒さんにも教えているなので当時その時メモを書いてたんですよ</p>
+<p><code>20:01</code> タスクシュートゾルトのメモマーケティングのメモを書いてたんですよそれが見返して全部性につながって美しいというか震えましたね偶然の出会いでそんなほど綺麗にそう全く違うじゃないですか国内海外また海外違うですよ全部同じなんですよすごいですよねめちゃくちゃ面白いですね面白い面白いこういうことがありますよオブシアンの中に自分の言葉でメモ書くとそのメモが自分を将来驚かせてくれるような唯一無二のアイデアロジック世の中誰も解決したことのないような問題に対しても</p>
+<p><code>20:36</code> ものすごい威力を発揮するとトップダウンっていうのは逆算するので想像を超えないんですよでもボトムアップってリンクしていくじゃないですかリンクしていくと想像を遥かに超えるような面白いことが起こるんですよねなのでオブシアの魅力だったりボトムアップの力だったりそれを伝えられるといいですよね楽するために使うとかも一つの手かもしれないんですけどこうやって一個一個貯めたりとかすることが意外とメマレッジがかかってめっちゃ良かったりすることですよねそういうことなんですよ分かってるじゃないですかという今日の感動が伝えればいいなと思います</p>
+<p><code>21:12</code> 視聴者の皆さんもたくさんオブシアにも貯めていきましょうはい頑張っていきましょうまたね</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./obsidian" class="internal" data-slug="obsidian">obsidian</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./2026-05-17-pull-aggregation-solves-forgetting" class="internal" data-slug="2026-05-17-pull-aggregation-solves-forgetting">2026-05-17-pull-aggregation-solves-forgetting</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./2026-05-24-moc-as-context-jumper" class="internal" data-slug="2026-05-24-moc-as-context-jumper">2026-05-24-moc-as-context-jumper</a>（StructureNote）</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-377" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

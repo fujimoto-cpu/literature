@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術"/><meta name="twitter:description" content="📺 動画情報 【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-09-04 ・ ⏱️ 29分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノートで会議の文字起こし・要約を自動化しつつ、DJIマイク×ローカルWhisperで24時間分の発話を記録し秘書エージェントに食わせる、個人ナレッジ基盤の作り方を解説する動画。 🗺️ 全体像 flowchart TD A[会議・日常の発話] --..."/><meta property="og:description" content="📺 動画情報 【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-09-04 ・ ⏱️ 29分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノートで会議の文字起こし・要約を自動化しつつ、DJIマイク×ローカルWhisperで24時間分の発話を記録し秘書エージェントに食わせる、個人ナレッジ基盤の作り方を解説する動画。 🗺️ 全体像 flowchart TD A[会議・日常の発話] --..."/><meta property="og:image:alt" content="📺 動画情報 【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-09-04 ・ ⏱️ 29分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノートで会議の文字起こし・要約を自動化しつつ、DJIマイク×ローカルWhisperで24時間分の発話を記録し秘書エージェントに食わせる、個人ナレッジ基盤の作り方を解説する動画。 🗺️ 全体像 flowchart TD A[会議・日常の発話] --..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術 🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-09-04 ・ ⏱️ 29分24秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 NotionのAIミーティングノートで会議の文字起こし・要約を自動化しつつ、DJIマイク×ローカルWhisperで24時間分の発話を記録し秘書エージェントに食わせる、個人ナレッジ基盤の作り方を解説する動画。 🗺️ 全体像 flowchart TD A[会議・日常の発話] --..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1822"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1822" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術</a></div></nav><h1 class="article-title">【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-06T15:00:00.000Z">2026年9月07日</time><span>51 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術</strong>
+🎙️ ビジネスで使えるNotion by Kazuki ・ 📅 2026-09-04 ・ ⏱️ 29分24秒
+🔗 <a href="https://www.youtube.com/watch?v=F5k2C4JPYv8" class="external">https://www.youtube.com/watch?v=F5k2C4JPYv8<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【AI文字起こし完全版】会議も日常も全部AIの記憶に｜Notion×ローカルWhisperの文字起こし術.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./Notion" class="internal" data-slug="Notion">Notion</a>のAIミーティングノートで会議の文字起こし・要約を自動化しつつ、DJIマイク×ローカルWhisperで24時間分の発話を記録し秘書エージェントに食わせる、個人ナレッジ基盤の作り方を解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[会議・日常の発話] --> B[DJI Mic Miniで録音]\n    B --> C[ローカルWhisper Large V3で文字起こし]\n    C --> D[Notion APIでログDB保存]\n    D --> E[秘書エージェントがトリガー起動]\n    E --> F[必要ならSlackで本人に通知]\n    C --> G[ORCA IDEでリアルタイム字幕表示]\n    G --> H[ワンクリックでコピー/英語翻訳]&quot;">flowchart TD
+    A[会議・日常の発話] --> B[DJI Mic Miniで録音]
+    B --> C[ローカルWhisper Large V3で文字起こし]
+    C --> D[Notion APIでログDB保存]
+    D --> E[秘書エージェントがトリガー起動]
+    E --> F[必要ならSlackで本人に通知]
+    C --> G[ORCA IDEでリアルタイム字幕表示]
+    G --> H[ワンクリックでコピー/英語翻訳]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. NotionのAIミーティングノート＋カスタム要約ガイド </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>データベースのテンプレートにAIミーティングノートブロックを仕込んでおけば、会議開始時に「文字起こしを始める」ボタン一つで音声取得が始まり、終了ボタンで要約まで自動生成される。オンライン会議なら話者ごとに発言を区別してくれる。さらに「文字起こし要約ガイド」という自作のカスタムフォーマットをAIに渡しておくと、サービス名・人名・専門用語（例：非同期＝async）の言い間違い・聞き間違いを前後の文脈から自動修正してくれる。このガイドは過去の文字起こしや社内ドキュメントから作らせるのがコツ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. Notionカレンダー連携で押し忘れゼロ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Google MeetやZoomのリンクが入った予定に「同時に参加する」を設定しておくと、会議参加と同時にミーティング文字起こしも自動で立ち上がる。毎回データベースを探して開始ボタンを押す手間がなくなり、全ての会議で確実に記録が残る。過去の議事録もカレンダーから逆引きできる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 共有前の一目チェックが信頼を作る </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AI要約には「発言していない言葉が紛れ込む」誤りが起きうる。共有前にサッと目を通し、間違いがあれば置換して直すという10〜15秒の一工夫を必ず入れる。読み手が読むのにかける時間（1〜5分）を無駄にしないよう、書く側・共有する側が読み手の時間以上をかけて精度を上げるという考え方。これを怠ると社内の文字起こしが「使えないもの」として扱われ、誰も記録しなくなり資産化のチャンスを失う。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. DJIマイク×ローカルWhisperで24時間文字起こし </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>胸元に付けたDJI Mic Mini（バッテリー約1.5日・磁石で簡単脱着）で音声を拾い、Macのローカル環境でWhisper Large V3（無料・API不要）が15分間隔で文字起こしを実行、結果をPythonスクリプトからNotion APIでログDBに保存する。ログが追加されるたびに秘書エージェントにトリガーが走り、アクションが必要な内容ならSlackで本人に通知が来る。カレンダー情報とも紐付いており「この時間はランチ中の発言」などが後から分かる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. ORCA CLIでリアルタイム字幕・コピー・翻訳 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ORCAというIDEのクイックコマンドに文字起こしスクリプトを登録し、ワンクリックで起動。画面に直近の発言が字幕表示され、コピー1クリックでクリップボードに転記、翻訳ボタンで数秒後に英語訳も出せる。この仕組み自体もCodexやClaude Codeでのバイブコーディングでローカル完結・低コスト（翻訳APIのみ実質無料に近い）に自作可能。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 議事メモのカスタム要約ガイド化を試す</strong>
+次に会社Notionで議事メモを取るとき、AIミーティングノートのカスタム要約ガイドに「KONNEKT・BIGBANG・Armillary.」等の頻出案件名や「サブさん・ひなたちゃん」等の人名を事前登録してみる。文字起こしの誤変換が減って<code>meeting-notes.md</code>運用の手直しコストが下がるはず。</p>
+<p><strong>② 議事メモ保存前に一目チェックを挟む</strong>
+今の議事メモ運用にも「保存前に人名・案件名の誤変換だけ10秒見る」を足す。放置すると案件オーナーが読んだときに混乱するコストの方が大きい。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> みなさんこんにちは Notionの和樹です今日はですね 文字起こし完全版ということで私が普段使っている会議とかウェブ会議とかでのミーティングの文字起こしやまた自分の秘書アシスタントエージェントを作っているんですけどそいつに与えている24時間音声を録り続けるといった仕組みちょうど今胸元にもつけているこのマイクですねこれを使った文字起こしとその活用方法を紹介していきたいと思います一番最初はですね主にNotionで仕事中使っているですね文字起こしのやり方を紹介したいと思います</p>
+<p><code>00:43</code> NotionはですねAIミーティングノートという機能がありますこういった例えば自分の文字起こし26とかミーティングの文字起こしをまとめるデータベースがあったときにこのページの中に入れることのできるこのブロックこれをAIミーティングノートというふうに呼んでいますページの中にですねスラッシュでミーティングと入れるとこういうのが出てくるのでこれを追加すると入るというものですね毎回毎回入れるのはめんどくさいので基本的にはデータベースのテンプレートというところに</p>
+<p><code>01:20</code> このミーティングノートを入れておけばですね何かしら新しいミーティングが立ち上がるとですね自動的に入っているというものになります会議が始まったらこの文字起こしを始めるというボタンを押すだけで音声が取得されますボタンを押すとですねすぐさま始まって今ちょうど私が話している音声が出ていると思いますでこれあの今私が入っている音声をこのパソコン上で拾うこともできますしオンライン会議とかの場合はGoogle MeetとかZoomとか</p>
+<p><code>01:57</code> マイクロソフトのTeamsアプリとかで入ると思うんですけどその場合も相手の参加者の声も拾うことができますでオンラインでそうやって拾っている場合にはですね今これ私しか喋ってないですけども他の相手が喋ったものと自分が喋ったものを区別して記載してくれるので後から見返した時にこれが誰の発言だったかということも分かるようになるというものですミーティングが終わったら停止というボタンを押すとですねすぐさまこの要約機能が走りますこの要約というのはこの文字起こしの内容とあとミーティング中にメモも取ることができるので</p>
+<p><code>02:34</code> 例えば今日の参加者じゃあ私のみという話をしておくとですね要約のところにこの文字起こしとメモを踏まえた上で今回話した内容というのをまとめてくれます文字起こし上はですね例えばMicrosoft TeamsとかGoogle Meet Zoomは取れていますけど正しく音声として拾えないことってやっぱりあるんですよねけどかなりきれいに出ているのが分かると思いますこれはそもそもノーション側でですねちゃんと文字起こしが間違っていたとしても</p>
+<p><code>03:08</code> 前後の文脈を合わせてAIによって正しい要約が出るようにしているというのに加えて実は私この文字起こし要約ガイドという要約フォーマットを自分で作って渡していますこれはNotionが用意しているこのデフォルトのどういう時のミーティングですかというのを選ぶこともできますし自分でカスタムの形式を追加できるんですね例えば私の場合だとやっぱりサービス名とかツール名間違えることが多かったりするあと人名ですね英語を表記にしてほしいとかそういったものを入れてたりとかあとよく日本語で間違いやすい同音異義語</p>
+<p><code>03:44</code> 私の業界であれば手法というより手法のことだろうとかよくちょっとミーティングで使うasyncで非同期でやりましょうみたいな話もasyncってそもそも非同期のことなので非って聞き取りづらいんですけどまあおそらくこういうことだよねっていうところを入れてあげていますあと聞き間違い録音ボタンを録音ボタンとなってしまうとかですねそういったものを入れていますあとNotionの社内の用語とかかなあと英語と日本語を行き来することがあるのでそういった時のものとかこういったものをカスタムで作れるので</p>
+<p><code>04:17</code> 過去の文字起こしとか社内のドキュメントを漁ってですねこういった文字起こし要約ガイドをAIに作らせて要約のフォーマットとしてここにずっとデフォルトで設定しておけばこのぐらい汚い文字起こしだとしても綺麗なものが出てきたりとか人物のところもですね今回メモに書きましたけど発言の中でじゃあ私じゃあ和木さんやってくださいみたいなこと言われたらそれを拾ってここに名前がメンションされて出てきたりとかすることができますなので基本仕事で使う文字起こしはすべてこのAIミーティングノートで完結していますね</p>
+<p><code>04:55</code> すぐさまこれチームメンバーに共有することもできますしそもそもこれ今ちょっと今回用にプライベートのデータベースに入れてますけどこれをチームみんなで使っている議事録のデータベースに入れておけば共有ボタンを押すことなくミーティングが終わればもうすぐその内容をチームに共有することができるといいのでとても便利ですなのでミーティングが終わったらリンクをコピーしてスラックとかに貼り付けて共有するとかコメントでミーティングしましたよっていうのをメンションしていくとかですねそんな使い方を普段していますただとはいえミーティングするときにですね毎回じゃあNotion立ち上げてこのデータベース探してっていうのはめんどくさいので</p>
+<p><code>05:40</code> 基本的にはですねNotionカレンダーを使っていますNotionカレンダーはですね例えばGoogle Meetとかと連携をしていると普通のカレンダーとして使えるんですけど例えば何かしらのミーティングがあったときにですね例えばGoogle MeetやZoomのリンクが入っているとしますそうするとですね参加するときにミーティングに参加してそのままミーティングの参加をしつつミーティング文字起こしが同時に立ち上がるという設定ができるんですね実行ボタンも自動的に押されるのでミーティング入るときは</p>
+<p><code>06:14</code> この同時に参加するボタンを押して入ることによってですねGoogle MeetやZoomにも入れますし裏側でこのミーティングノートも立ち上がっているので押し忘れもなくですね必ず全てのミーティングで文字起こしがされるというような形になりますミーティングが終わって前の議事録とかを見返す時にもですねこのカレンダー情報を参照しておけば今のミーティングノートのリンクが追加されているのでカレンダーから左側を押すとさっきの内容がすぐ見れると</p>
+<p><code>06:51</code> という形で毎回ノーション側を開いてページを作ってミーティングノート開始ではなくてノーションカレンダーを使っていれば次会議があるなとなればここから入って自分が主催者の場合は特に文字起こしと同時にやるというようなやり方を普段していますこれだけでも仕事中のほとんどのミーティングがノーション上に溜まっていくのであとはこれをもとにノーションAIを使って今週1週間の議事録をまとめてであるとか</p>
+<p><code>07:28</code> この1ヶ月行ったユーザーインタビューの内容を議事録から探して新しい機能の提案をしてみたいな使い方もできるし営業担当者が商談の分析をしてとかこの顧客のミーティングをまとめてみたいなこともできるわけですこれはオンラインの会議ではなくてオフラインの会議でも意識的にやるとですね会議室に集まってノーション社内のやり方としては会議室集まったら誰かしらがミーティングノート立ち上げておきますね一人が立ち上げておけばですね</p>
+<p><code>08:01</code> 後でみんなシェアされるので無駄に議事録を取ることもないしスムーズに共有もできるので会議室入ってミーティング始まるときに私立ち上げておきますという一言をかけるというのがなんとなく文化として定着していますねこのようにイベントの内容と会議の文字起こしひも付けることで見返した後にも分かりやすい参加者にも共有しやすいというので仕事で使う上では必ずこういったことは</p>
+<p><code>08:33</code> やった方がいいんじゃないかなと思いますまたここはちょっとした使い方ではありますけどとはいえですね要約をした時に間違えっていうのもやっぱり発生してしまうんですよね例えば何ですかねじゃあTeamsって言ってないのに入っていましたとTeamsって発言してないのに間違えて入ってしまったと一応会議の主催者やこのミーティングノートを立ち上げた人の半分責任というわけではないんですけど共有する際に必ず一目ねパーッと見ることは必ずお勧めします</p>
+<p><code>09:10</code> やっぱり間違いがあった時に読んだ人が混乱してしまったりとか文字起こしのミスもあるんですよねじゃああんまないと思いますけどTeamsっていうのがどこかに点在しているとでこれ実はTeamsじゃなくて関係ないんだけどじゃあSlackと発言してたとしましょうとこれ私が主催者の場合は必ずパーッと見てあこれ間違いあるなそうだこれTeamsじゃなくてSlackだったなって時はこれをちゃんと置換してあげてですね正しいものに直すとか</p>
+<p><code>09:43</code> じゃあ参加者の名前が和木がよくあるんですけどなんか別の感じになってるよってことがあった場合には直してメンションに書いてあげるとかですねこんな一工夫本当10秒15秒の一工夫を入れた上で共有してあげるのがとてもいいと思いますよくあるAIの生成したドキュメントをあんまみんな読みたくないっていう話もありますけどそういった間違いもあるからっていうところもあると思うんですよね結構こう農書の社内や</p>
+<p><code>10:16</code> あと他のAI系の会社で最近言われているのが読む人が読む時間よりも書く人共有する人が時間をかけて作ろうという考え方があるんですねつまりじゃあ議事録予約しました5秒でできましたそれをパッと共有してでも読む人っていうのはこれを読むのに1分2分ひたしたら5分かかるわけですよねそうするとそこに間違いがあった時に読んだ人の5分間というのを無駄にしてしまう可能性があるなので共有する側AIを使って作る側というのは</p>
+<p><code>10:48</code> 読み手の読む時間以上の時間をかけて間違いを直したり読みづらくないかなとか無駄なものがあるなといえば消せばいいわけですから読み手が読みやすい形で共有する側もしましょうねといった最近よく言われているお作法じゃないんですけどそういったものがあるのでその一工夫は加えてあげるといいんじゃないかなと思いますこれがないとやっぱり社内の文字起こしがされているものの使えないものばかりが溢れていくと徐々に徐々に使われなくなる</p>
+<p><code>11:21</code> そうすると今度取る習慣もなくなってくるというので結局会社として大事な人間が発した会話の内容というのがデータ上残らなくてAIにも使われなくなって資産にならなくなって長期的にすごく損すると思うのでそんな一工夫は入れるといいんじゃないかなと思いますさあ一方でここまでは会議の内容でしたけれども私が実践しているのは冒頭もお話した通りこのマイクをですねこの首元につけてつけて実質24時間文字起こしをするというのもやっているので</p>
+<p><code>12:01</code> その話もしたいと思いますさあとはいえ24時間文字起こしするって何なのっていうことがあると思うんですけどそのちょっと結果だけ先にお見せするとこれは自分のエージェント秘書エージェントというのがいるんですがはいここにいますねカズケエージェントというのがいるんですがそいつに食わせているログのデータベースですこのログというのはですね詳細はちょっと以前のねYouTubeでも話したんですが私がパソコンで今どんな作業をどんなアプリでしているのかや</p>
+<p><code>12:34</code> スマホのiPhoneのアプリを自作してその位置情報を送ることで今どこにいるのかであるとかを食わせていますエージェントはこれに基づいて今こんなことしてるねってカレンダーに基づいてるので次こんな予定があるから今このドキュメント読んだ方がいいよとか今自宅を出たね次のミーティングまで何十分あるからこのぐらいにオフィスについて行こうよとかですねそんなことをアシストしてくれるエージェントを作ってますが過去のYouTubeで紹介しているのでぜひそれを見てください</p>
+<p><code>13:09</code> そのログの一つにですねこの文字起こしというのを入れていますこれ時間見ると分かる通り今は15分間隔とかでログを残しています例えばこの文字起こしはですね12時に行われていた文字起こしなんですがこの中身見ると細かくはもちろん読まないんですがこんな感じでバーッとその1時間かなで喋った内容っていうのがずっと記録されているんですねでイベントに今ランチでありますがこれ実はランチ中に多分つけてたのかなこれはカレンダー情報とひも付いていて</p>
+<p><code>13:45</code> この時間のこの発言だなというのが分かりますこれが実際のミーティングだったりとか社内のミーティングだったりとかっていうところでも常に実質会社にいるとき24時間録音しているような形ですよく見ると文字起こし修正フィニッシュドと書いてありますがこれNotionのエージェントなんですね一番最初は文字起こしで入ってきたものはすごく雑なデータだったりするのでそれをもとにある程度修正して用語集とか私の普段話す内容というのを</p>
+<p><code>14:21</code> 覚えさせておくとですね大体こういうことを言っているだろうという形でエージェントが文字起こしをさらに編集した上で保存してくれますなので先ほどと同様ミーティングノートのテンプレートと同様に言い間違いとか用語とかですねっていうのを最低限直した形で入れてくれているというものですなのでこの文字起こしがページが追加されるとこのエージェントが走って修正をして修正されたものをもとに私の秘書アシスタントエージェント和木エージェントと呼んでいるものがその内容を見て何かアクションが必要であればスラック上で私をメンションして</p>
+<p><code>14:59</code> 次こうですよこんなこと話しましたねとかっていうのを言ってくれたり今日こういう話をしましたねってようやく送ってくれたりということができるようになっていますこの文字起こしの仕組みがどうなっているかというとですね少し図にしながら話しましょうかまず私はこの胸元につけているDJIのマイクミニかなというものを使っていますこれは結構1日半2日弱ぐらい</p>
+<p><code>15:32</code> 仕事時間の2日分ぐらい持つのですごくバッテリー持ちも最低限いいですし1日は必ず持つのでいいですしすごい小型なんですよね見てもらうと分かる通りすごい使いやすい磁石でパチッと付けられるので私の普段付けているカバンとかあと首元の見えるかな首元のところに付けて録音しているという感じです本当はこの商品はですねこのレシーバーがついていて</p>
+<p><code>16:06</code> このType-CのレシーバーをですねこのiPhoneとかiPhoneとかにつけるとより音質がいい形で録音ができるようになってますただAIで文字起こしする分にはそんなに音質は関係ないのであまり私はこのレシーバーを使わずに直でBluetoothで連携しているので接続も簡単で電源を入れてパソコンとかiPhoneのBluetoothで接続をするだけですね。なので簡単に使えると。またこのDJIのマイクミニなんですけど、普通か弱持つとは言ったんですけど、もちろんね、ずっとずっとこうつけてたら、</p>
+<p><code>16:46</code> 電池持ちはやっぱり1日ちょっとで切れてしまうこともあるので、その時におすすめなのが、これは標準のケースがですね、少し大きいんですよね。カバンの中だとかさばるので、Amazonとかで、見えるかな?こういう小さい充電アダプターがあるのでこれを買っておくとですねバチッと磁石で付けられるのでここタイプCになっているのでこれを何かしらのねスマホとか充電するとこにピッと挿せばいいですし</p>
+<p><code>17:23</code> あと私はおすすめなのがこういう超短いタイプCのケーブルがケーブルというかアダプターがあるのでこれをつけておくとですねこのままパソコンの横にさせたりしますこのぐらいのサイズのこれをですねここにさしておくとこれだけでも充電できますしこれを外してねこの胸元につけるとで、しゃべらないなって時にはサクッとここにピッと入れとけばこれで充電されるのですごくいいですしこれ自体が持ち運び便利なサイズなのでカバンとかにしまっておくと外にいる時とかでも充電なくなった時でも簡単に充電できると思います</p>
+<p><code>18:02</code> このDJI Mic Miniで撮ったものをMacのパソコンですねラップトップにつなげているとこのMacのパソコンの中にですねAIで作った文字起こしの仕組みみたいなものを走らせています実際はPythonで書いてるんですけどもこのPythonのコードがですねOpenAIのWhisperというAPIじゃないWhisperという文字起こしのモデルがありまして</p>
+<p><code>18:40</code> こいつをですねローカルにインストールをしてこのPythonが呼び出すという形になってますPythonのスクリプトが呼び出すという形になってます今まではですねここはWisperのAPIを使ってたんですけれどもこれだとお金が毎回かかるので言うても数十円なんですけれども少しパソコンのスペックが良くなったのでローカルに入れてみようというのでローカルに入れていますモデルはですねWisperのLarge V3というやつで</p>
+<p><code>19:17</code> 多分調べるといろんな回数記事とかもあるんですが一番大きいモデルかなそれを入れているというところですねで文字起こししたものを今は15分間隔だったかな音声の途切れを検知をして今度NotionのAPIをこのPythonが叩きに行ってですね図が汚いですけど</p>
+<p><code>19:51</code> Motionのデータベースに保存するとこれがさっきのKazuki Real Logって言ってたさっき見せてたデータベースですねここに保存をしてくれているというものですでこのログがたまるページが追加されるとですね私の秘書アシスタントエージェントにトリガーが走ってこいつが何やら内容を見てですねもしアクションが必要な場合は</p>
+<p><code>20:32</code> スラックで通知をしてくれるとちょっときれいな図じゃないですけど大体はこんな仕組みで動いていますこのPythonのコードスクリプトを使ってウィスパー入れるっていうのはちょっと難しく聞こえると思うんですけど基本的にはローカルで完結するものなのでバイブコーディングでコーデックスとかクロードコードを使って全然作れると思います多分動画を公開するときにちょっと部分的にオープンソースで公開しようと思っているので</p>
+<p><code>21:08</code> YouTubeの概要欄を見ていただければと思います実際普段どう使っているかというとですね自分だけは使うものなのでリッチなアプリケーションGUIみたいなものは作っていなくてですねもうCLIから直で呼び出しています私は最近ORCAというIDEを使っていてこれ自体もすごく使いやすいのでどっかポッドキャストとかで解説しようと思ってますけど要はCLIターミナルから直で呼んでますこのORCAのいいところは</p>
+<p><code>21:41</code> この右上にクイックコマンドを設定できるのでここに文字起こしのコマンドを入れていますこれ自体ですねちょっと事前に作ったさっきのPythonのコードを呼び出すものをあとキャプション付きで呼び出すというのを入れているだけのシンプルなものなんですけどこれを入れておくとですねワンクリックで動きますこの時に今私が使っているこのDJIマイクミニがマイクとして接続されているのでこれで文字起こしがされているというものですね</p>
+<p><code>22:14</code> ちょうど今まさに喋っているものがリアルに出てます今これマルチディスプレイ使っているのでちょっとこの画面上に見えないんですけどちょっと別のところに字幕が出ていると思いますこれがさっき出たキャプションって言っているもので喋っている今の内容と3つ4つ前のログが画面上に出せるようにしているんですねこれ何がいいかというと今しゃべったものをこれコピーボタン入れているのでコピーもできますそうすると今しゃべったものがコピーされる</p>
+<p><code>22:53</code> もう一回やりますか今しゃべったものがコピーされるクリップボードにコピーされるクリップボードにコピーされるだけじゃなくて英語への翻訳機能も入れています出てきたもののこの右に翻訳ボタンがあるのでこれを押すとわずか数秒ぐらいかなNot only is it copied to the clipboardという形でさっき私が言ったものが即座に翻訳されてますよねもう一回やりましょうか</p>
+<p><code>23:27</code> こんにちは Notionの和樹ですはい翻訳ボタンを押すとHello this is Kazuki from Notionというところですねこんなこともできるとなので今これ短く話してますけどリアルタイムでこのキャプションが出ているので何か作業している中で会議とかでもいいし自分の発言とかも出ていてスラックに投稿したいときにこの件分かりましたこの後やっておきますとかって言うんですよねこれコピーしてスラックとかに貼り付けると</p>
+<p><code>24:11</code> 海外と仕事してるとかあるのでその時はさっきみたいに翻訳ボタンを押してこんな感じでやるという感じですね普通の最近音声入力アプリとかっていろいろ流行ってると思うんですけどショートカットをして立ち上げて英語に翻訳してとかっていうこともいろいろ試したんですけどめんどくさかったんでじゃあできるんだったら24時間文字起こしてずっと字幕を出して</p>
+<p><code>24:45</code> 必要な時にワンクリックでコピーしてとか英語に翻訳してとかすれば楽じゃんと思って最近はこんなやり方をしてますでセンテンスごとのコピーになっちゃうのでまとめてなんかこう考えながら5分ぐらい喋ったものはこのログの方を見ればバーっと全部出てるのでこれをコピーしてですねどっかに貼り付けるということをやったりとかあとは複数行を選択して今度はraycastで翻訳のコマンドがあるのでこのraycast上で今入れたものですね</p>
+<p><code>25:19</code> こんな感じでちょっと長い場合でも翻訳をしてこれをどっかに貼り付けるというような使い方をしていますなのでこれによってそもそも無料でこれ全部できるのでめちゃくちゃ楽だと文字起こしか翻訳のところだけはAPIを使っています今Googleの一番安いAPIかな数行の翻訳だったら全然今0.01円とかでできるのでそのぐらいでいいかな</p>
+<p><code>25:54</code> というところですね文字起こし自体は今ローカルで動かしているので無料で使えるので文字起こしアプリいろいろ流行っていて月1000円とか払うのもいいんですけどそれよりは自分でカスタマイズもできるのでこっちの方が便利かなと思って使っています今喋ってるのも結構いい精度ですよねこんな感じで綺麗に出ていると思いますでこれらのログがさっき言ったみたいにこんな感じでノーション側に常に記録もされていますでこの文字起こしを元にエージェントも動くという形でここでね示したようなものが循環ができるというか</p>
+<p><code>26:29</code> くるくる回っていくというのがめちゃくちゃ便利に使えていますねなのでこれ今全部日本語で喋ってますけど例えば英語のミーティングとかでもそうですし海外のカンファレンスに行くとかあとは海外のなんかポッドキャストとかYouTubeとか聞いてる時にこのウィスパーの言語を日本語にしておくと少し精度は落ちるんですけど英語で発話されたものが日本語で表示されてそれがさっきみたいに字幕で出るということもできるのでそういったちょっと言語の壁をサポートするということもできると思いますあとは自分で作っているカスタムのアプリなので</p>
+<p><code>27:06</code> 例えばじゃあここでじゃあNotionにページ作ってと私が言ったとしましょうそしたらこのNotionにページ作ってというのをもうハードコードっていうかもうこれを条件にして自動でNotion APIを使ってページを作るってこともできますしスラック開いてって今ね認識され一瞬でもう1秒以内で認識されましたけどって言ったらわからないけどスラックを開くってことも作りようによってはできるのでやっぱこれが手元にあるということと自分がカスタマイズできることっていうのをメリットだと思いまこういうアクションの部分を自分用にカスタマイズするというのもそうですしなんといってもこのデータそのもの文字起こしのデータというのが</p>
+<p><code>27:43</code> 今NotionにありますけどNotionに入れられる別にNotionが嫌だったらGoogleスプレッドシートでもどこでも好きな置き場所に置けるしローカルにも全てログを貯めているのでローカルでやりたきゃそれでもいいしという形でやっぱりデータのコントロールを自分の手元にあるっていうのはやっぱり文字起こしみたいなより一時情報というか生のデータっていうのはそっちの方がいいかなと思いますなので特定のツールとか特定のベンダーにそこは自分の文字起こしのワークフロー仕事の流れとかデータそのものが</p>
+<p><code>28:18</code> ロックされないような選択肢をした方ができる方はいいんじゃないかなというふうに思います安いですしねもちろんこれを作るためにクロードコード回したりとか多少バグとかもあってそれをちょいちょい直したりとかっていうので時間とお金がかかるんですけど私はこの運用して2ヶ月ぐらいしててもうこの数週間ほぼほぼ何もせずに完成したなっていう感じで字幕も出るしコピーもできるし翻訳もできるしっていうのでもう完全に完成したなっていう感じなんでここから半年はねもうこれだけでだいぶ仕事が楽になると思っていますね</p>
+<p><code>28:55</code> はいということでノーションを使って仕事のミーティングであればこのAIミーティングノートをデータベースに入れたいとかノーションカレンダーと紐付けることで必ず議事録会議というのは文字起こしをしてチームに共有しましょうという話ととはいえそれ以外の全ての自分のクローンのエージェント秘書のアシスタントを作る上ではこういったマイクをね手元につけてやっていくといいんじゃないかという話をしましたぜひ参考にしていただければと思いますありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./2026-05-31-ai-meeting-notes-verification" class="internal" data-slug="2026-05-31-ai-meeting-notes-verification">2026-05-31-ai-meeting-notes-verification</a>（StructureNote） — AI議事録の検証観点が本動画の「共有前チェック」と直結</li>
+<li><a href="./2026-05-31-meeting-intelligence-design" class="internal" data-slug="2026-05-31-meeting-intelligence-design">2026-05-31-meeting-intelligence-design</a>（StructureNote） — 会議インテリジェンス設計の関連まとめ</li>
+<li><a href="./2026-06-10-meeting-research-pipeline-4steps" class="internal" data-slug="2026-06-10-meeting-research-pipeline-4steps">2026-06-10-meeting-research-pipeline-4steps</a>（StructureNote） — 会議→リサーチのパイプライン設計</li>
+<li><a href="./🔧-Faster-Whisper" class="internal alias" data-slug="🔧-Faster-Whisper">🔧 Faster Whisper</a>（StructureNote/ツール） — 動画内で使われているWhisperローカル実装と同系統のツール</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-714" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

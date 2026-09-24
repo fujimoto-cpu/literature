@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion"/><meta name="twitter:description" content="📺 動画情報 【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion 🎙️ あやか⌇海外移住Webデザイナー ・ 📅 2026-09-19 ・ ⏱️ 35分30秒 🔗 www.youtube.com/watch 📝 要約 🎯 ChatGPTのCodex（有料プラン）とNotionを連携させ、ボイスチャットで話しかけるだけでタスク・プロジェクトを自動登録してくれる「秘書AI」の作り方を解説。会議の議事録から次のアクションを抽出したり、日程調整・見積書案の下書き・メール仕分けまで任せられる。 🗺️ 全体像 flowchart TD A[ChatG..."/><meta property="og:description" content="📺 動画情報 【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion 🎙️ あやか⌇海外移住Webデザイナー ・ 📅 2026-09-19 ・ ⏱️ 35分30秒 🔗 www.youtube.com/watch 📝 要約 🎯 ChatGPTのCodex（有料プラン）とNotionを連携させ、ボイスチャットで話しかけるだけでタスク・プロジェクトを自動登録してくれる「秘書AI」の作り方を解説。会議の議事録から次のアクションを抽出したり、日程調整・見積書案の下書き・メール仕分けまで任せられる。 🗺️ 全体像 flowchart TD A[ChatG..."/><meta property="og:image:alt" content="📺 動画情報 【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion 🎙️ あやか⌇海外移住Webデザイナー ・ 📅 2026-09-19 ・ ⏱️ 35分30秒 🔗 www.youtube.com/watch 📝 要約 🎯 ChatGPTのCodex（有料プラン）とNotionを連携させ、ボイスチャットで話しかけるだけでタスク・プロジェクトを自動登録してくれる「秘書AI」の作り方を解説。会議の議事録から次のアクションを抽出したり、日程調整・見積書案の下書き・メール仕分けまで任せられる。 🗺️ 全体像 flowchart TD A[ChatG..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion 🎙️ あやか⌇海外移住Webデザイナー ・ 📅 2026-09-19 ・ ⏱️ 35分30秒 🔗 www.youtube.com/watch 📝 要約 🎯 ChatGPTのCodex（有料プラン）とNotionを連携させ、ボイスチャットで話しかけるだけでタスク・プロジェクトを自動登録してくれる「秘書AI」の作り方を解説。会議の議事録から次のアクションを抽出したり、日程調整・見積書案の下書き・メール仕分けまで任せられる。 🗺️ 全体像 flowchart TD A[ChatG..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2191"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2191" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion</a></div></nav><h1 class="article-title">【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-20T15:00:00.000Z">2026年9月21日</time><span>60 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion</strong>
+🎙️ あやか⌇海外移住Webデザイナー ・ 📅 2026-09-19 ・ ⏱️ 35分30秒
+🔗 <a href="https://www.youtube.com/watch?v=P6WkYaFRSKI" class="external">https://www.youtube.com/watch?v=P6WkYaFRSKI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【神ワザ】自分専属のAI秘書を作る。話すだけでタスクが整理される｜Codex×Notion.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>ChatGPTのCodex（有料プラン）とNotionを連携させ、ボイスチャットで話しかけるだけでタスク・プロジェクトを自動登録してくれる「秘書AI」の作り方を解説。会議の議事録から次のアクションを抽出したり、日程調整・見積書案の下書き・メール仕分けまで任せられる。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[ChatGPT Codex + Notion + Googleカレンダーを連携] --> B[ボイスチャットで思いついたタスクを話す]\n    B --> C[NotionのDBにタスク/プロジェクトとして自動整理]\n    C --> D[空き時間抽出・送信文の下書き・議事録からのタスク化]\n    D --> E[定型作業をスキル化して専門チャットに分担]&quot;">flowchart TD
+    A[ChatGPT Codex + Notion + Googleカレンダーを連携] --> B[ボイスチャットで思いついたタスクを話す]
+    B --> C[NotionのDBにタスク/プロジェクトとして自動整理]
+    C --> D[空き時間抽出・送信文の下書き・議事録からのタスク化]
+    D --> E[定型作業をスキル化して専門チャットに分担]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 話すだけでNotionのタスク/プロジェクトDBに自動登録 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ChatGPT Plus（月額3000円）でCodexを使い、Notionのプラグイン連携＋Googleカレンダー連携を設定。思いついた順にタスクを話すと、期限が不明なものは仮の期限を提案しながらNotionのタスク・プロジェクトDBに振り分けて登録してくれる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 議事録・見積もり・日程調整も次のアクションに変換 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>議事録のNotionリンクを送るだけでアクションアイテムをタスク化。見積書のタスクには金額・クライアント名を空欄にした案と送付文案まで自動生成。日程調整では複数カレンダー・時差（ドバイ⇄日本）を考慮した空き時間を抽出できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 定型作業は「スキル化」して専門チャットに分担 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>「空き時間抽出専門」「Instagramストーリーズ文案専門」のように定型タスクごとに別チャットを作り、メインの秘書チャットが必要な時に専門チャットへ指示を出す構成にすると、並行して複数のタスクを進められる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. AIに任せず自分で残す3つの判断軸 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①外部へ送る系（メール送信・投稿・決済）は自分で最終確認してから実行、②お金・個人情報はそのまま入力せず伏せて扱う、③優先順位は自分で指定する、の3つは自動化せず人間が握っておくと紹介。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① タスク紐付けの手動確認をボイスチャットで代替できないか検討</strong>
+task-link スキルの「話した内容からタスクを検索・紐付け」の発想と近い。Notion連携の設計は既存のタスクDB運用と相性が良さそうなので、参考実装として控えておく。</p>
+<p><strong>② 「外部送信は人が確認」の3原則はKONNEKTの自動運用ルールと同型</strong>
+<code>.claude/rules/自動運用ルール</code>の「クライアント送信は必ずレビュー後」と考え方が一致しており、AI秘書設計の裏付けとして使える。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 今日のタスクを教えてください了解、今確認するねドバイ時間の予定も日本時間に合わせて空き枠を判定するねこれが私が最近使っている秘書AIです頭の中で考えていることを話すとやることがプロジェクトとタスクに分かれてAIができる限りのタスクをこなしてくれますタスクを書いたのにどこに書いたかいつまでやらなきゃいけないのかを忘れるタスクを手書きで管理していて今日も明日もずっと同じタスクが残ったままタスクごとの管理をできるけどプロジェクトがどこまで進んでいるか</p>
+<p><code>00:32</code> 全体像を把握できていないフリーランスやウェブ制作をしているとこういう制作以外の細かいところが積み重なって頭の中を占領してしまいますよねそこで今回はコーデックスとノーションを使って話した内容をそのままタスクとして記録をしてくれてできる限りのタスクをAIにやってもらうという秘書AIを作っていきますこの秘書AIは私が一から作り上げて毎日この秘書AIと一緒に仕事をしていますそこで実際に運用してみてマジで仕事の効率が上がったので</p>
+<p><code>01:05</code> 皆さんにその方法を全てシェアしていきます今回はですね実際に私が使っている秘書AIを完成形としてご紹介するだけではなく皆さんも一から作れるようにプロンプトも一緒に配布していきますぜひこのプロンプトを最後に受け取る方法をご案内しますのでぜひ動画の最後までご覧くださいそれではちょっと秘書AIのデモをやってみようと思います今日のスケジュールとやるべきタスクを洗い出してください了解2つのカレンダーとノートンのタスクを確認して今日の予定と優先タスクをまとめます</p>
+<p><code>01:38</code> MC担当者への挨拶は送ったんで済みにしておいてほしいんですけどMCの台本を考えなきゃいけないんでそこの台本は当日まででいいんですけどできる限り早めにしたいので8月中旬までにたたき台を出したいんでそれもタスクカードプロジェクト化しておいてください了解更新するねこれが私が使っている秘書AIですやってほしいことを秘書に頼んで実際に自分の専用の秘書が横にいるような形で秘書にタスクやスケジュールの確認をしたり</p>
+<p><code>02:15</code> 返信の文章を考えてもらったり台本を作ってもらったり飛行機のチケットを探してもらったりこんな感じで人間の秘書がリアルにやってくれるような内容をなんと月に3000円で自分好みに雇うことができますそれでは早速皆さんも秘書AIを一緒に作っていきましょうそして概要欄の公式LINEでは今かなり特別な特典をご用意していますなんとLINEに登録するだけで15個の特典が受け取れちゃいますまずはこの動画の特別特典そして1時間超えのAI時代に選ばれる</p>
+<p><code>02:50</code> ウェブクリエイターになる方法完全ウェビナーそして皆さんの学習や仕事に今すぐ活かすことができる11個のテンプレートや図解特典そしてさらに無料個別相談もご用意していますプロと話すことでこのAI時代にウェブクリエイターとしてどう勝っていけるのかというのをより明確にすることができます気になる方は今すぐ概要欄から公式LINEチェックしてみてくださいそれでは今回使うものは3つありますまず一つ目はコーデックスを使えるチャットGPTの有料プランに課金することです利用できるプランは現状はこのような形となっておりまして基本的にはプラスプランを使ってください月額3000円になります これを使うことでコーデックスの利用条件が拡大するというところなので</p>
+<p><code>03:39</code> go プランに入るよりは絶対にプラスプランの方が後でに使いやすいです そして2つ目がノーションですタスクとかプロジェクト会議メモなどを仕事として残したい情報を置く場所にします そして3つ目がグーグルカレンダーです打ち合わせや締め切り作業時間など時間を決めたい予定っていうのを管理しますまずはこの3つがあれば始められます私はですねノーションの有料プランも本当に便利なので使ってるんですが全員に必須というわけではありません</p>
+<p><code>04:12</code> まずは自分が管理したい仕事に合わせて無理のない形から始めてみてくださいノーションやGoogleカレンダーそのものの詳しい使い方っていうのは別の動画で紹介しますのでぜひそちらの動画をご覧いただければと思いますこの動画では作ったNotionをどう秘書AIとして動かすかというところに集中して解説をしていきます。それではまず、ChatGPTとNotionそれぞれデスクトップのアプリ版をダウンロードしてから次の作業を始めてみてください。それではここから一緒に作っていきましょう。今回は前回のNotionの動画で使用したこちらのダッシュボードテンプレートを使って、</p>
+<p><code>04:50</code> ここのタスクの欄に自動でプロジェクトを管理してくれたりタスクを管理してくれる非常AIと連結するということをしていこうと思います前回のこちらのテンプレートはですね今回も配布していきますので概要欄から受け取ることができますそしてですねノーションが用意できたらコーデックスとノーションを連結させます連結する方法はチャットGPTの画面からこちらのコーデックスに画面を切り替えてくださいそしてプラグインを選択してこちらでNotionと検索します現状私はすでにNotionのアプリこの中に入っているので接続済みなんですが</p>
+<p><code>05:28</code> 接続されていない方はですねボタンから接続していただいてブラウザに飛ぶのでそちらでNotionにログインしているメールアドレスでログインをしてくださいそうするとこの先ほど作ったテンプレートと紐づけることができますそれでは秘書AIどこに作るかというプロジェクトフォルダを作成していきますまずこちらのプロジェクトという欄を押していただいてプラスボタンを押しますそしてプロジェクトを作成のところに秘書AIでも私はちょっとでもという形で入れておきますね</p>
+<p><code>06:07</code> はいそしてプロジェクトを作成しますそうするとこの秘書AI関連のチャットだったりとかファイルっていうのをこの中に入るようになりますのでこのように分けておくのがおすすめですそれではこちらの秘書AIデモのところから新規でペンマークですねを押していただくと今回使っていくのがこちらのボイスチャットというものです最近このボイスチャットが進化しましてめちゃくちゃ精度が高いんですねなのでこの非常AIの強みはこのボイスチャットと話すだけでタスクが進んでいくということなので</p>
+<p><code>06:45</code> 最初からこちらどんどん活用していきましょうそれでは例えばですね今私の頭の中にいろいろタスクがあるんですねなのでそれをきれいな文章にする必要はないので思いついた順に話していきましょうまず今からこのチャットでは非常AIを作っていきますまずは私が思っているタスクを話していくのでNotionで管理できる形に整理してくださいNotionではすでにこれからリンクを送るんですがそちらのページでタスクとプロジェクトを管理するデータベースを持っています</p>
+<p><code>07:22</code> なのでそこにタスクを入れていってくださいタスクに付随するプロジェクトっていうのを別で管理するようにしてくださいできる限り期限も言っていくようにするんですが期限が不明なものは適切な期限を保有してくださいはいではその方向で進められるように段取りを考えますね期限がはっきりしないものは内容や優先度に合わせて仮の期限を提案しますねまずはノーションのリンクを送ってもらえるはいっていう感じで提案してくれるので</p>
+<p><code>07:56</code> こちらのテンプレートのノーションのリンクですねこちらのリンクをコピーリンクとしてくださいそしてここのリンクを送りますMyDiariesというNotionページのリンクを受け取りましたこの中にデータベースがあると思うんですがタスク管理の方とプロジェクト管理の方があると思うのでそちらにそれぞれプロジェクトとタスクを入れてほしいです了解 今の前提で進めるねテンプレートはタスクとプロジェクトの両方とひも付け項目も確認できたよ</p>
+<p><code>08:29</code> これから思いたくままタスクを話してくれれば整理してそれぞれに登録するね期限がなければ仮の期限も入れておくよそしたらまずSNS投稿しないといけなくてインスタグラムにストーリーズを毎日投稿するっていうのとあとは編集者さんと打ち合わせをする予定があるんですけどその日程候補を送る必要がありますあとはクライアントに対して見積もり書を送らないといけなくて</p>
+<p><code>09:02</code> 次はクライアントさんとのミーティングがあるから日程候補を5日程私のGoogleカレンダーから抽出してほしいです整理しながら入れていくねという感じで入れていきますざっくりですね入れていきます止めてるよ今SNS発信とYouTube制作編集者との打ち合わせ見積もり送付クライアントの面談で5件で整理しているOKですあとはちなみにですね</p>
+<p><code>09:35</code> こちらの先ほど日程広報を5日程出してほしいというような指令を出したんですけどこのような形でGoogleカレンダーと連携させることで自分のカレンダーの中にある予定が入っていないところの空き時間というのを候補として出してもらうこともできるのでその場合はブラグインのところからGoogleで調べてくださいそうするとGoogleカレンダーも紐づけることができますので自分のカレンダーが入っているGoogleアカウントと連携させるとこのようなこともできるようになりますので</p>
+<p><code>10:07</code> こちらのGoogleカレンダーもブラグインで連携させておいてくださいGoogleカレンダーはすでに連携できていて予定の空き時間を確認できるようさっきの5件のタスクと4件のプロジェクトはノーションに登録してそれぞれ対応するプロジェクトにも紐付けておいたからミーティングの長さと希望の期間を教えてくれれば5件空き時間の広報を出すよはい、と言っている間にプロジェクトを入れてくれましたねこんな感じでプロジェクトを入れてくれてますミーティングの長さは1時間で希望の期間は直近5日間でお願いしたいです明日から5日間</p>
+<p><code>10:46</code> 了解今から探すねはいという感じで気に入って戻してくれてます気に入って出せたりとか何か誰かに送付しなきゃいけないものはノーションのタスクの詳細ページの中に送信する文章を作って入れておいてください入れておくねはいこんな感じでプロジェクトプロジェクト自体の考え方自体は大きなタスクですねこのプロジェクトこの誰かの案件がこう進行しているとか自社の案件のこの一つのプロジェクトがある</p>
+<p><code>11:20</code> みたいなところでプロジェクトを大枠管理するのでこちらを入れていたりとかあとはタスクは一つずつのものですねタスクってすでに入れてますかまだ入ってなさそうに見えます今確認するねタスクは5件入れてあるよ誰かに送付するものの詳細ページには送信文を入れてるよ出てきましたフィルター分けが違ってたっぽいのでフィルター分けが違う場合はですね</p>
+<p><code>11:53</code> こちらのステータスをちょっと変更していただければと思いますはいこんな感じですねはい入ってますこんな感じでですねこちらのタスク名を保管していただくとオープンっていうのが出るのでこちらを押していただくとこのように送信文まで作ってくれましためちゃくちゃ優秀じゃないですか</p>
+<p><code>12:27</code> ちなみにミーティングの日程の出し方なんですけど日本時間でかつ1時間尺で割るんですけどもう空いてる時間全て出してほしいという感じです例えば10時から17時まで空いてれば10時から17時にしていただいてかつこれ日本時間にしてください多分カレンダー日本時間とドバイ時間で入ってたりとかちょっともしかしたら違うので確認して出すね私は海外なので時算も考慮して作ってもらう必要があるのでこの辺とかはGoogleカレンダーの設定だったりはするんですけど</p>
+<p><code>13:03</code> ドバイ時間で海外時間なのか日本時間なのかそういうところも指定していくといいと思いますはい、了解だよ今は日本時間で空いている連続時間をまとめて出すね1時間単位では区切らずに一続きの空きでまとめるよドバイ時間の予定も日本時間に合わせて空き枠を判定するねはいお願いしますこんな感じで進めてくれてますねはい進めるね基本的な使い方は本当にこんな感じですコーデックスにタスクをバーって言っていって</p>
+<p><code>13:37</code> 今日これ終わりました次あれ終わりましたみたいなことを言ったらそのタスクもどんどん更新していってくれるのでまずはノーションとコーデックスを紐付けるちゃんと紐付けてこのタスクを入れられるかっていうのを確認してみてくださいその上でそれぞれのタスクをちょっとずつ進めてもらうってことができるんですね送信まで自動化はできないけど送信前の文章を考えてもらうとか日程候補を出してもらうとかそれをコーデックスに出してもらうとコーデックスの中だと流れてしまうじゃないですか</p>
+<p><code>14:10</code> もういろんなタスクを行ってなのでノーションに入れといてもらうって感じですね一旦落ち着いたなと思ったらここを開いてこれをメッセージで送ってタスクを完了にするっていう風に使ってますあとはインスタグラムのストーリーズを毎日投稿するとかここの文章とかも考えてほしいんですけど例えば今日の文章を一つ考えてもらうことできますかまたノーションの詳細ページに書いてほしいんですけどトピックとしてはウェブデザイナーウェブクリエイターが学習している人のモチベーションが上がるような</p>
+<p><code>14:44</code> 投稿だといいなと思っています作るねその方向でストーリーズ文を作ってタスクの詳細ページに入れるねはい、という形で文章を作るみたいなところまでやってくれますはい、できましたねストーリーズ用のオープン版は毎日投稿するタスクの詳細ページに入っていて3枚構成でそのまま投稿できるようにしてあるよはいありがとうございます</p>
+<p><code>15:17</code> 確認したんですけどもうちょっとクオリティ上げたいなと思うのでちょっとこれはまた後で指定しますねっていう感じで使うことができますまずは基本的にタスク管理プロジェクト管理はこんな感じですじゃあ次の使い方です会議とか返信を次の行動につなげるっていうところで会議とかって意外とやっただけで終わりやすいしその後のタスク管理とかその後の進行って意外と大変だなと思います例えばミーティングをやって例えば私は議事録というページの中でヒアリング議事録を管理してるんですけどここまで終わったんだけど</p>
+<p><code>15:53</code> じゃあこの後のアクションアイテム何だったっけなとかアクションをタスクとして落とし込みたいみたいな時はどうするのかっていうのをやっていきます議事録をコピーしてリンクをコピーしていただいてこのクライアントとのミーティングが終わったのでタスクとして入れ込んでほしいですはい入れるねっていう感じでタスクとして議事録の内容をただポンって送ってそこからタスクをやらい出してもらったりとかあとはちょっとこのクライアントに見積もり書も出さないといけないので見積もり書もタスク化して見積もり書も作っておいてくださいはいやってみるね</p>
+<p><code>16:29</code> はいっていう感じですなので議事録はですねこちら前回の動画でも紹介したんですけどノーションの議事録が本当に優秀なので議事録を全部こちらで取っておいてそれを元に次のアクションにつなげるっていうことができるので議事録機能めっちゃおすすめなのでノーション課金ぜひしてみてください見積書のタスクにフタプラン資格の見積書案と送付文案を追加したよ金額とかクライアント名みたいな未確定の部分だけ空けてあるね</p>
+<p><code>17:02</code> はいありがとうございますこんな感じで作ってくれましたこれはですねNotion AIでやってきたりもするんですけど一応Codexだとこういう風にできますよというところですねあとはですねミーティングの候補日を抽出するミーティングの候補日ってまだ10時から11時なんですけど直すね分かった時間帯を日本時間の連続した空き枠で出し直すね</p>
+<p><code>17:38</code> はいという感じでできますなので送信前までやっていただこうじゃないかというところになりますねそして発展編使い方ここからが肝ですめちゃくちゃ便利なんでここから3つポイントを紹介していきます1つ目の発展的な使い方スクリーンショットを添付して今見ている画面の改善点とか確認点を相談するという使い方ですこれ自分でスクリーンショットを撮って送るのではなくてコーディックスの方にスクリーンショットを撮ってもらうということができますのでちょっとやっていきます</p>
+<p><code>18:12</code> 私の方がすでに設定しちゃってるので出てこないかもですねコーデックスの方で私が見てる画面を見てそれで何か判断するとか変身を考えることとかってできますかやってみるねできるよ今の画面をもとに要約とか確認ポイント改善案や返信の下書きまで作れるよ画面を切り替えたらこの画面を見てって言ってね</p>
+<p><code>18:49</code> わかりましたという感じでちょっとやってみましょうかね他のページを見たいから今見てるChatGPTの公式サイトの画面を見てどのプランが一番いいか判断してください見てみるね今見えました?スクリーンショットを勝手に撮ってるんですよっていう感じでLINEとかは接続することはできないんですけどLINEのメッセージをここ撮ってここ判断していったらその画面をスクリーンショットしてくれるんですね</p>
+<p><code>19:22</code> なので何かを見てもらうっていうこともできます基本的にはNotionだったら接続されているのでNotionこれ見てって言わなくてもNotionの中勝手に見に行ってくれるんですけどそれと接続できない系のアプリとかはこの感じでスクリーンショットを撮ってこれ何ですかとか聞くことができますこれ最初に皆さんやるときはなんか接続の設定とかあるのでそこだけちょっと設定だけしていただいてそれができたらこんな感じでスクリーンショットを撮れますその設定の際は一旦チャットGPTをシャットダウンして</p>
+<p><code>19:57</code> もう一回立ち上げるっていうステップがあるのでそこの設定は最初必要になりますどうでしたか?チャットGPTの公式サイトの画面見て今の画面をもう一度確認するね料金ページ見えたよ個人向けは無料、高、プラス、プロがあって今回の使い方ならプラスが一番バランスいいと思うよありがとうございますこんな感じでちゃんと認識してくれますよねスクリーンショットの内容もなのでこんな感じでスクリーンショットもできるようにして</p>
+<p><code>20:30</code> この画面見てくださいっていう風に使うっていう方法がまず一つでしたそして二つ目は定型作業をスキル化するということです例えばさっきタスクに作っていたものあるじゃないですか例えば空き時間を取ってくるだったりとか見積書を作るとかあとはインスタのストーリーズの文章を作るみたいなところは提携作業になるのでこれはですね一度うまくいったものをスキルとして保存しておくということができますこれはですねちょっと次の3つ目のポイントと</p>
+<p><code>21:03</code> 組み合わせるとめちゃくちゃ効果があるので次の方もやりますね3つ目がですね別のタスクを別のチャットに任せてメインの会話と同時並行するっていう方法ですこれがマジで革命的に便利なのでこれは皆さんやってみてください 例えばこのチャットを自分のAI秘書だとしたら別のチャットで youtube 企画チームを作ったりとyoutube 企画担当者を作ったりインスタのストーリーズ文書を作る専門家を作ったり あとは時間抽出する専門家を作るっていうような感じでチャットを分けるんですねそうするとチャット3つ並行しながらメインのチャットはずっとタスクを言い続けるみたいなことができるので</p>
+<p><code>21:45</code> ちょっとこれをやってみますはいそれではですね今回はちょっとお任せしたい仕事がありまして私のスケジュールの空き時間を取る専門チャットを別で作ってほしいですこの専門チャットに指定したいことをこのチャットに言ってください例えばそこの空き日程を作るチャットでは私のメインカレンダーと仕事カレンダー2つあるのでその空き時間を抽出することそして私はドバイ時間と日本時間で生活してるんですけど空き日程を提案する際は必ず日本時間で提案してください</p>
+<p><code>22:24</code> そしてミーティングが1時間の枠だったとしても空いている時間をすべて連続して出してください例えば10時から11時空いていれば10時から11時が空いているという形でお願いします基本的には次の日から5日って出すようなものにしてくださいもし指定の日からの5日間とかがあれば地区1相談します空き時間の抽出専門家族を作っておいたから必要な時に期間と時間それと表示したいタイムゾーンを教えてくれれば動けるよはいこんな感じで作ってくれました</p>
+<p><code>23:01</code> どこに作ってくれたかと言いますとあれ別のチャットここですねごめんなさいプロジェクトフォルダ指定するの忘れたんですけど秘書AIデモっていうプロジェクトのフォルダを中に作ってもらうことできますか今映せるか見てみるねはいあと今喋ってるこのチャットもそっちのプロジェクトの中に映すことできますかそれもやってみるね今私はここに作りたいです秘書AIデモっていうところにこの秘書AI関連をこれだプロジェクトを入れたいので</p>
+<p><code>23:34</code> ここに移したいんですけど移せましたかこの会話自体は別プロジェクトに移せないみたいでも専門タスクの方は秘書AIデモの中に新しく作ってやるよOKいけましたねありがとうございますっていう感じでボルダイドもやってくれるということでした空き時間の抽出の専門家の方にちょっとクライアントと日程調整したいから明日からの5日間分の日程を出してくださいその上で今後も同じように聞くので</p>
+<p><code>24:09</code> そのタスクをスキルとして保存しておいてくださいやってみるねはいっていう感じですまずはもう自分が話すのはこの非常AIだけにしゃべるんですねそうするとこのコーデックスの方で別のチャットに指令をしてくれるのでちゃんとAIが読みやすい指令を出してくれるんですこんな感じで空き時間の抽出を専門に搬送するアシスタントですみたいな感じでこれね今まではプロンプと勉強しましょうみたいな話だったと思うんですけどもうAIがAIに指定をするっていう形になるのでこんな感じでやってもらってます</p>
+<p><code>24:43</code> このようにですねこのボイスチャットってどこにでもいてくれるんで基本的に私はもう1時間ぐらい立ち上げっぱなしで喋りながら作業してますこことかで別の仕事をしながらそういえばあのタスクあったよねって言ってここに画面上にいてくれるのでこの画面上にいるGPTに話しながらタスクを進めていくっていうのをやってますこちらが別のチャットで進行してるという感じなので今こっちのメインチャットで話しながらもこっちの専門タスクが進行している状態ですね出てきました</p>
+<p><code>25:16</code> こんな感じですねそういえばちょっとこれ指定の仕方は間違えたんですけどまず日本時間の14時から23時までの空き枠だけにしてください基本的にドバイ時間の9時から始業なのと大体24時まで仕事してる人いないのでギリギリ23時ぐらいまでにしておくっていう感じでそれ以外の場合は候補出さなくて大丈夫ですっていう風にちょっとスキルを更新しておいてください更新して絞るね</p>
+<p><code>25:49</code> はいっていう感じでまた何か定期タスクをこのスキルを更新したい時はスキル更新しておいてくださいって言ったらこのメインチャットが専門チャットに依頼してくれてやってくれるのでもうこんな感じでどんどん進めていきます改めて明日から5日間の日程を出してください出力の仕方もちょっと違いましたね8月4日火曜日の15時から17時が空いていて18時から19時が空いているのであれば</p>
+<p><code>26:22</code> それはもう一行にまとめてください8月4日火曜日15時から17時点18時から19時点20時から23時みたいな形で出力をしてくださいそれでこちらもスキル化してください仕方もう直すね時差があるのでちょっと大変なんですけど皆さんはもうシンプルにできると思います日本時間これからここまで空いてるやつでっていう感じでできますあとはGoogleカレンダーの方はカレンダーごとの管理なので管理するに必要なカレンダー全部読み込ませておくっていうのも必要なので</p>
+<p><code>26:54</code> こちらはちょっと設定の段階でやってみてくださいはい綺麗に出力されましたねこんな感じですよかった最終形式を出すねはい今後もちょっと頼むと思いますいつでも頼んではいということで提携作業をスキル化していってくださいどんどんなので他にはインスタのストーリーズの文章を考える専門チャットも作ってほしくて同じプロジェクトフォルダーの中に入れてほしいのと参考もリサーチしつつやってほしいです</p>
+<p><code>27:28</code> というような感じでどんどん別のスキル別のタスクにして別のチャットに移すっていう風にしておくといいですはいという感じで日程広報の専門スキルできたと思うのでそのスキルを元にさっき言ってたタスクの日程広報を洗い直してほしいです例えばクライアントミーティングの広報日時を5件抽出するっていうやつとかあとは編集者との打ち合わせ広報を送るっていうところの日程も改めて見てタスクの中入れといてくださいストーリーズ担当の専門タスクは同じプロジェクト内に作っておいたよ</p>
+<p><code>28:05</code> 日程候補2件はこの後洗い直すねはいチャットも作成してくれてますねはい新しいチャットということでこんな感じでまた専門家を作ってくれましたせっかくなのでこの秘書AIチャットとして何か名前つけたいですねこのチャット名何がいいですかね秘書ハブリンはどうOKそれで名前変更しておいてください名前今変えるねメインの秘書タスクを秘書ハブリンに名前変更するねはいこんな感じで変更してくれまして</p>
+<p><code>28:42</code> これはもう手動で入れ替えれるんでこっちにちょっと入れ替えましたはいいいですねそれでちょっと秘書AIでなんかもうちょっとできることを皆さんにお見せできますか何か他できそうなことありますか例えばGメールを確認して返信が必要なものを洗い出して下書きまで誘導したり今日明日の予定から会議の準備メモや確認事項を作ったりあとは画面を見せてもらってデザインの改善案とか</p>
+<p><code>29:14</code> LP定作LINEの返信案を作ることもできるよ何から見る?はいこんなこともできるみたいですGメール確認はいいですねちょっとGメール確認もしてほしいななんか迷惑メールが大量に届いてて迷惑メールを解除するのも大変なんですけどなんかそこいい方法ないですかはいこんな感じでGメールも接続してくれるみたいなのでプラグインで確認してみてくださいGメールが入ってるかどうかですねこちらを確認していただいてGメール入ってない方はこちら入れてください</p>
+<p><code>29:48</code> できるかできないかはもうどんどん確認してみてください意外とそんなとこまでできるんですかみたいなことがあるので私は提案してくれたらそれできますかっていう風にまず聞くようにしてます出てきました配信停止候補70件と領収書領収書は自分で作りますねワードプレス通知というところでラベルをつけてくれましたこれを領収書何かサブスクライブ系の課金をした時の領収書とか新規で何かを登録した何かを買った系の領収書を入れたいんですけどそれって仕分け直せますか</p>
+<p><code>30:24</code> 購入サブスク請求決済のメールだけ残して今後も送付分けるように運用を変えられるようにこんな感じでラベルを分けてくれましたちょうどいいですねオーディブルに登録したやつとかAmazonで注文したものとか定期サブスク系のものとかも分けてくれたので月末の領収書を分けるとか結構大変じゃないですかここのメールフォルダ見るだけでメールが領収書とかして分けられるっていうのがすごい便利だなと思いますので</p>
+<p><code>30:58</code> また領収書請求書周りの自動化方法は別の動画でお伝えしますのでそちらも楽しみにしていただければと思います最後まとめとして秘書AIを使う時に絶対に残すべき3つの判断軸っていうのがあります私がAIに任せすぎずに自分で残している判断っていうのを3つお伝えするとまず1つ目は外部へ送る系のものですメールを送るとか投稿するとか</p>
+<p><code>31:31</code> LINEのメッセージを送るとか請求書を送る、購入するこれらは全部自分で確認してから自分の手で実行するようにしてますなので送信手前の文章まで考えてもらうけどそこからの送信っていうのは自分でやるようにしてます2つ目はお金とか個人情報ですね売上口座情報、請求金額とか顧客名、受講生情報とかそのまま入力せずに読み取らせないとか置き換えて使っていくような形にしています。このあたりのセキュリティ関連とかはまた別の動画でご紹介しようと思います。</p>
+<p><code>32:09</code> 3つ目はですね優先順位ですね。AIは候補としていろいろまとめてくれるんですけど、自分の仕事にとって何を今やるべきなのかっていうのは逐一自分で指定をして、こっちの方が優先度が高いのでここを先にやりましょうみたいな風に判断というのはしていますというところでAIに任せる範囲を決めておけば安心して仕事を進められるようになりますのでこちら3つの軸を持ってやっていただければと思いますそれではぜひ皆さんもご自身の秘書AIを作ってずっとしゃべり続けてみてくださいちなみにちなみにちなみにそうだ補足なんですけれども</p>
+<p><code>32:44</code> 今回コーデックスを使っている理由としましてはこのクレジットの消費量がクロードに比べて結構緩いのでここも緩やかに消費してくれるからこそ新調のタスクとか結構終わるよねっていうところですなのでこれをクロードでも同じことができると思うんですけどクロードにした場合画像生成できなかったりとかトークンの消費はとにかく早いのでそこをコーディックスにすることでもっといろんなタスクができるようになるというところですこれをずっとAIに指定しているわけなので結構トークンの消費は激しいですなので1週間の消費量とか割ともう1日2日で消費しちゃったりするので</p>
+<p><code>33:20</code> ここら辺はちょっとぜひ見ながらですねここを早く終わらせることが必要なのであれば課金する価値もあると思いますしちょっとトークン消費を緩やかにしながらやりたいなっていう場合は本当に人の時々秘書AIを立ち上げるっていう方がいいかなと思いますぜひこのコーデックスなど使ってですね秘書AIを作ってみてくださいはい皆さんお疲れ様でした今回はコーデックスとノーションを使って自分自身の秘書AIを作るという内容をやってきました最初から頭の中にあるものを全部自動化しようと思ったら難しいです</p>
+<p><code>33:54</code> ですが今頭の中にあるものを全て吐き出してみてそれをどうやったらできる限り自動化できるのかどうやったらより効率化できるのかっていうのをAIと議論しながら決めていってください今回やってきた秘書AIの作り方のプロンプト全てをまとめたものを特典として配布していきますので概要欄のリンクから公式LINEを追加していただいて秘書AIとキーワードを送ってくださいすぐに特典のリンクをお送りしますぜひこのプロンプトを使って自分の専用の秘書AIを作ってみてください</p>
+<p><code>34:28</code> 皆さんもぜひこの秘書AIを使ってみて感想あればぜひコメント欄に書いてください皆さんのコメントが私がYouTubeを続ける勇気と続ける理由となりますのでぜひ皆さんどしどしお気軽にコメントしてくれると嬉しいですそして私はインスタグラムとVlog個人チャンネルというのもやっておりますこちらでは私が普段このチャンネルでは話さないようなプライベートな部分までお見せしておりますので海外でフリーランスとして働く姿をリアルに知りたいという方やフリーランスの思考っていうのを</p>
+<p><code>35:01</code> 知りたいという方はぜひチャンネル登録をよろしくお願いしますそれではこの動画がいいなと思っていただけたらチャンネル登録と高評価をよろしくお願いしますそれでは次回の動画でお会いしましょうご視聴ありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-889" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

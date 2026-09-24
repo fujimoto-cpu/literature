@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ"/><meta name="twitter:description" content="📺 動画情報 【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ 🎙️ Design Homies / デザインホーミーズ ・ 📅 2026-09-18 ・ ⏱️ 23分25秒 🔗 www.youtube.com/watch 📝 要約 🎯 JR東日本の乗り換え検索アプリは、経路の候補を「時間の長さ＝画面上の長さ」で横方向に可視化する独自UIを10年間コアコンセプトを変えずに改善し続けている、という設計デザイナーの愛あるレビュー。 🗺️ 全体像 flowchart TD A[経路検索でGOを押す] -->|複数候補| B[横スクロール型の時間軸UI] B --&amp;..."/><meta property="og:description" content="📺 動画情報 【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ 🎙️ Design Homies / デザインホーミーズ ・ 📅 2026-09-18 ・ ⏱️ 23分25秒 🔗 www.youtube.com/watch 📝 要約 🎯 JR東日本の乗り換え検索アプリは、経路の候補を「時間の長さ＝画面上の長さ」で横方向に可視化する独自UIを10年間コアコンセプトを変えずに改善し続けている、という設計デザイナーの愛あるレビュー。 🗺️ 全体像 flowchart TD A[経路検索でGOを押す] -->|複数候補| B[横スクロール型の時間軸UI] B --&amp;..."/><meta property="og:image:alt" content="📺 動画情報 【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ 🎙️ Design Homies / デザインホーミーズ ・ 📅 2026-09-18 ・ ⏱️ 23分25秒 🔗 www.youtube.com/watch 📝 要約 🎯 JR東日本の乗り換え検索アプリは、経路の候補を「時間の長さ＝画面上の長さ」で横方向に可視化する独自UIを10年間コアコンセプトを変えずに改善し続けている、という設計デザイナーの愛あるレビュー。 🗺️ 全体像 flowchart TD A[経路検索でGOを押す] -->|複数候補| B[横スクロール型の時間軸UI] B --&amp;..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ 🎙️ Design Homies / デザインホーミーズ ・ 📅 2026-09-18 ・ ⏱️ 23分25秒 🔗 www.youtube.com/watch 📝 要約 🎯 JR東日本の乗り換え検索アプリは、経路の候補を「時間の長さ＝画面上の長さ」で横方向に可視化する独自UIを10年間コアコンセプトを変えずに改善し続けている、という設計デザイナーの愛あるレビュー。 🗺️ 全体像 flowchart TD A[経路検索でGOを押す] -->|複数候補| B[横スクロール型の時間軸UI] B --&amp;..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1854"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1854" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ</a></div></nav><h1 class="article-title">【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-21T15:00:00.000Z">2026年9月22日</time><span>44 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/ux-design" class="internal tag-link">ux-design</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ</strong>
+🎙️ Design Homies / デザインホーミーズ ・ 📅 2026-09-18 ・ ⏱️ 23分25秒
+🔗 <a href="https://www.youtube.com/watch?v=TEJwg8q1AQI" class="external">https://www.youtube.com/watch?v=TEJwg8q1AQI<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【JR東日本】デザイナーが惚れたJR公式乗り換えアプリ.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>JR東日本の乗り換え検索アプリは、経路の候補を「時間の長さ＝画面上の長さ」で横方向に可視化する独自UIを10年間コアコンセプトを変えずに改善し続けている、という設計デザイナーの愛あるレビュー。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[経路検索でGOを押す] -->|複数候補| B[横スクロール型の時間軸UI]\n    B -->|出発時刻を変更| C[乗り換え駅からの再検索]\n    B -->|走行位置タップ| D[号車ごとの混雑度・気温表示]\n    A -.姉妹サービス.-> E[JR-EAST GO 時間台まとめ検索]&quot;">flowchart TD
+    A[経路検索でGOを押す] -->|複数候補| B[横スクロール型の時間軸UI]
+    B -->|出発時刻を変更| C[乗り換え駅からの再検索]
+    B -->|走行位置タップ| D[号車ごとの混雑度・気温表示]
+    A -.姉妹サービス.-> E[JR-EAST GO 時間台まとめ検索]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 時間軸を横スクロールで見せるUI — 縦積みが定石の乗り換え検索を横型に転換 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>他社の乗り換え検索アプリは結果を縦に並べるのが一般的だが、JR東日本アプリは経路ごとに横方向へ並べ、かかる時間の長さをそのまま横幅の長さで表現する。14:38発で大崎乗り換え15分・14:41発の目黒線で21分・急行でより遅く乗ってより早着、といった選択肢の優劣が一瞬で分かる。横スクロールすると自動的に斜め方向にスクロールしていく独自の挙動まで実装されており、UIとしての完成度が高いと評価されている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 途中駅からの再検索ボタン — トラブル時の代替案をその場で提示 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>乗り換え駅で「乗り換え先の場所が分からず1本逃した」ような場面向けに、「出発時刻を変更」ボタンから今いる駅を起点に再検索できる。1本逃すと到着が何分遅れるかまで表示され、判断材料をその場で与える。UIは元の横スクロール比較表示に戻り、「複数候補の比較」と「1本の詳細確認」で見せ方を役割分担している。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 号車ごとの混雑度・気温、姉妹サービスJR-EAST GOの「時間台」検索 — 体験ベースで軸を再設計 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>走行位置タップで各号車の混雑度と車内気温まで見える（弱冷房車の判断にも使える）。姉妹サービスJR-EAST GOでは「18時何分」でなく「18時台」という粒度で全路線を一覧表示する。以前はスライダーで曖昧に時間を指定するUIだったが、微調整したくなる声を受けて「〇時台」表記に変更した。10年前に「Go by Train」として始まったアプリと同じコアコンセプトを保ちながら、こうした細部を継続的に検証・改善している。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「差の大きさ＝見た目の大きさ」で情報設計する視点を資料作りに持ち込む</strong>
+比較訴求のバナーやスケジュール表を作るとき、数値をただ並べるのでなく「差が大きいほど見た目でも差が出る」ように軸を作れないか一度考える。明日、比較系の資料を作るときにこの発想を1回試す。</p>
+<p><strong>② リリース後も「もっといい見せ方はないか」を軸から見直す</strong>
+JR-EAST GOのスライダー→「時間台」表記への変更のように、一度確定したUI・資料構成でも使われ方を見て軸自体を変える判断がある。デザイン確定後も安心して終わらせず、月次くらいで「この見せ方、まだ最善？」と見直す習慣を持つとCD力に効く。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> デザインホーミーズのアトラピです今回はゲスト会ということでゲストの方に来ていただきました普段都内の某所でオンスクリーンのプロダクトのデザイナーをしていますタフミと言います本日はよろしくお願いしますお願いしますオンスクリーンって何ですか?そうですよね普段皆さんあまり聞き慣れない言葉なのかなと思うんですけど簡単な定義を言うと例えばスマートフォンとかで動くようなアプリケーションのことを私はオンスクリーンプロダクトと勝手に言っていて皆さんに聞きなじみのある言葉だとデジタルプロダクトってよく言われたりするかなと思うんですけどデジタルって言うと結構言葉の概念が広いんですよね</p>
+<p><code>00:40</code> 例えばスクリーンを持ってないプロダクトのデザインとかもあるのでそうしてしまうと私にはそういう例えばスイカであるとかここをピッとするあのところのインターフェースとか私にはデザインどうやってもできない領域なので私はオンスクリーンプロダクトしかデザインできませんよということでオンスクリーンプロダクトデザイナーと名乗らせていただいておりますそういったの結構一般的というか他にも言ってる人いるんですか?どうなんでしょうねあんまり聞いたことないいやでも面白いですねそうですね確かにじゃあ私もオンスクリーンプロダクトデザイナーそうなんですね</p>
+<p><code>01:13</code> なるほどいいですね今日紹介したいのはこのJR東日本アプリというアプリでしてこちらのアプリが私すごい好きで至る所で紹介しているんですけれども開くと中身は普通のただの路線検索のアプリなんですねめっちゃシンプルですねそうですね最初のスクリーン開いてもらうと経路検索のタブでどこからどこの駅に行きますかっていうのを普通に選ぶタイプのアプリですねこのGOっていうのが面白いですねそうですねGOっていうところがだいぶここは</p>
+<p><code>01:46</code> 特徴的なそうですねおそらく歴史的経緯がおそらくあるんだろうなという面白いことになっております例えば今回だと目黒から武蔵小杉までという選択をさせてもらっているんですけどこの状態でGOというまさにこのボタンを押すとこんな形で表示されます結構この画面特徴的じゃないですか見たことないUIというかそうですよねよく他社の乗り換え検索とかだと縦に積まれている形のやつが多いかなと思うんですけど</p>
+<p><code>02:20</code> こちらは横に並んでいて視覚的にどこからどこまでが距離で分かる感じの時間ですねごめんなさい時間で分かる感じのUIになってますね上縦軸が時間軸ってことですかそうですね長ければ長いほどそこに時間かかるってことですねですですですこの例だと例えばこの14時38分発のJRで乗るやつは大崎で1回乗り換えて14時53分に着くで15分なんでこのぐらいの幅でこっちの次の目黒線のやつは1本で行けるんだけど21分かかる</p>
+<p><code>02:56</code> で14時41分発で15時2分着ですねでその隣の急行におそらく乗るとこの乗る時間は1個後になるんですけど着くのはより早いっていうのが視覚的に分かるんですよめっちゃ分かりやすいそうなんですよこれが私のこの画面でこのアプリ私大好きになっちゃいました確かにこれ一瞬で分かりますね見た瞬間にこれが短いからこっちの方が早いっていうのがそうなんですこれすごいですねこれ私結構UIの発明だなと思っていて確かにすごく視覚的に分かりやすくてさらに結構面白いなと思うのが</p>
+<p><code>03:31</code> スクローグの挙動がだいぶ面白くて普通だと縦に積まれているんですけど縦方向が時間なので路線の検索は横にどうしても並ぶと横スクローグになるんですけどこれ普通に考えたら縦横両方スクロールできるじゃないですかこれ横にスクロールすると斜めにスクロールしていくんですよなるほど確かにこっちにはないはずですもんねそうそう横真横にはそうなんですよだんだん後に連れて斜めに乗っていくんで横にただスクロールできても例えばここら辺まで行ったらもうちょっと縦にスクロールしたくなっちゃうな</p>
+<p><code>04:03</code> みたいなことになっちゃうんで斜めにスクロールするっていうこれ見ないですよね見たことない珍しいですねそうですねすごいこれだいぶ面白いなと私は思っておりますこれこういってこういって一本後とかも出るんですか出ます出ますギュッとやるとすごいよくできてますねこちらこれどういう意思決定でこうなったかというかなんか気になりますすごい気になりますね私ぜひこの開発者の人もし視聴者にいたらぜひ会ってみたいんですけど気になる確かに</p>
+<p><code>04:37</code> これなかなかセオリー通りというか一般的な感じで進めたらこうはならないじゃないですかそうそうそうなんですよでもやっぱりそこをちゃんと新しい見方というか表示の仕方で実際にこういいUXでやってるのはすごいですねそうなんですよねこちら結構面白いなと思ったのが言ってしまえばイメージ的にJR東日本って結構固いイメージあるじゃないですか確かにコストとかをすごく気にしながらこういうものを作られてるんだろうなって会社で</p>
+<p><code>05:11</code> この横のスクロールのこういう挙動とかなくてもいいじゃないですかコストをかけてここまで実装する意味があるのかって言われたら私だったら答えられないなと思っちゃうんですよ必要ですかって言われていやー必要だとは思うんですけどみたいな結構チャレンジングですねそれがGR東日本っていう会社内で出来上がった、ちゃんとコストかけて実装されたっていう事実が私はこれはね胸が熱いですね。すごいどんなストーリーがあったんだろうって気になっちゃうんですけど。</p>
+<p><code>05:46</code> 確かに毎日見ますもんね、理解案内文とか。すぐに視覚的に分かるみたいなそうなんですよ中身としてもすごくよくできててこちらの例えば1個選べますね今これ目黒駅から大崎駅経由して武蔵小杉駅までという形なんですけど乗っててよくあるのがここの大崎の乗り換えでその装鉄線のところ場所わかんなくて何か遅れちゃうとかあるじゃないですかはいはいはいはい</p>
+<p><code>06:20</code> なんかそういう時にここの出発時刻を変更ってボタンがあるんですよこれを押すと大崎駅にいる状態からこの先でどこまでどう乗るといい感じに行けるかがパッと出てくるんですよどういうことですかこれが大崎駅の今のルートになっててこっちになったらこの時間で着くよってですですですえーすごい一本逃しちゃうとこれ品川まで1回出て次着くの15時5分になっちゃうんだみたいなことがわかるめっちゃ便利です大崎駅でトイレ行こうかなと思ったけど今やめとくかみたいな意識ができるこれ行ったらこの時間になっちゃう</p>
+<p><code>06:58</code> それがこの画面に行くとさっきの面白い斜めのこのビューに戻るんですよねこの辺もよく相互が考えられていて比較をしたいのはこのビューで出して内側はちゃんとこの1本つながっているこれで出すんだっていうところがすごく意思決定としてちゃんとしてるなと思ってて使ってて本当に気持ちよさがあるなと思ってますねちゃんと体験が考えられてますね体験設計がそうですねそう思います</p>
+<p><code>07:30</code> 分かりやすいなそうなんですよあとJRなんでねどこに路線がいるとかっていうのも会社におそらく情報を持っているので例えばこの山手線であると帝国通りに恵比寿駅にいますよとかそういうのが分かるってことですね山手線よくあるのがよくあるというか時刻表書いてないじゃないですか駅行くとも分かんないですね多くてそういうところも今どこにいて何分後に着くんだろうなってことがリアルタイムに分かるっていうのがすごくいいところですね確かに遅れたりも結構する時あるんでね</p>
+<p><code>08:04</code> ありますねこれなんか使ってなかった自分が今までもったいなかったなって便利な機能がこれは私はすごくお勧めしたいアプリになっております確かにあんまりどうなんですかね自分は使ってなかったんですけど使ってる人周りで聞かなかったんでそうですね最近はそれこそ割とJR東日本アプリってことで広がってきたかなと思うんですけど実はこのアプリ自体は</p>
+<p><code>08:36</code> 結構前から同じコンセプトでずっと進んでいて一番最初Go by Trainっていう名前で始まったアプリだったんですよ2017年頃かななのでもう10年くらい前にJRが当時も全くこの同じUIで出してきてたんですよ実は結構前からあったんですかそうなんですその名残でここがGoなんですなるほどおそらくいいですねこれ現代時刻出たときGoみたいなGoがいいですよねこのように非常によくできてるんですけどさっき歴史の話もちょっとしたんですけど</p>
+<p><code>09:12</code> 面白いなと思っているのが10年前からコンセプトとして全然変わってないっていうのが非常にいいなと思っていてこのアプリ使っててアップデートがいろいろされてたんですよ実は最初さっき紹介した乗り換えのこの途中駅からの出発時刻変更ボタンがついたのこれ結構最近の話で実はそうなんです最初の頃なくて結構不便だなと思ってたんですけどこういうところのアップデートがついたりとか</p>
+<p><code>09:45</code> 毎回ちゃんとしたアップデートをしてくれるのでいいなと思っておりますそういうところってどうなんでしょうねコアコンセプトがすごくちゃんとしてるというか乗り換えの体験をいかに良くするかってところしか考えてないそういうモサみたいな人がおそらく軸がしっかりしているおそらくしているんだろうなというのがあって非常にそれが伝わってきていいアプリだなと思っています面白いですねそうなんですあとはインストール時とかの挙動もすごく良くて</p>
+<p><code>10:22</code> それとかはインストールした途端に広告の許諾であるとか位置情報の取得とかが常にであるとかそういうところを求められるんですけどそういうのもなくて非常にスッキリしたアプリでコンセプトがちゃんとしてるなというところが私は好感を持てるポイントですね確かにホームがめっちゃシンプルというかここからここまで無駄な情報がない結構こういう情報量が多いというか機能自体が多いじゃないですか</p>
+<p><code>10:54</code> こういう時にごちゃつきがちになっちゃいそうなイメージがあるんですけどちゃんと丁寧に分かりますなんかそぎ落とされてるというか急いでますもんねだいたい乗りたい時って早く調べたいみたいなだってゆとりもって駅に着くことなんかないじゃないですかないですねいつもギリギリまでやばいって思いながらすぐ調べてそうなんですよそれにめっちゃ体験が考えられてますねそうなんですよまさにねこれ開いた時にもそのなんていうのやっぱりさっきのこの視覚的に場所が わかりやすいというのもあるんですけどなんかよくあるじゃないですか</p>
+<p><code>11:34</code> 急行かなんか特急かどっちの名前かわかんないんだけどどっちの早く着くかわからんみたいな電車とかなんかそういう時にパッと調べて今57分57分の方が後に着くから次のに乗ろうみたいな判断できるっていうこういうところはすごく意欲できてるなと思いますね確かに見やすいですねそうなんですよ本当に私なんかこうダークトーンじゃないですかだからカラーが映えるというか確かに確かにそうですね山手線とかめっちゃ分かりやすいですし他社さんの路線でもちゃんとロゴ出て色出て</p>
+<p><code>12:13</code> この辺もよくできてますよね見やすいですねわかります私はこのアプリをずっと使い続けてずっと愛を語っているんですけど非常に皆さんにお勧めしたいなというかぜひ世の中の乗り換えアプリを全部これにしたいなと私は思っているんですけどこれで人生救われる人結構いる気がしますけどねいると思いますあんまり正直一般的にそんなに普及してるというかすごい認知があるわけではまだないと思うんで</p>
+<p><code>12:47</code> これをみんな使うことによってなんか人生の中で長い人生の中で結構救われそうだなってそうですね思いましたね便利すぎてですね面接とか遅れそうになった時も助けられそうですよね人生変わるかもしれないそうですね乗り換えやすい号車とかも出たりするんでこれいいですよね乗り換えやすい号車ってこれ乗り換えアプリに一番必要な情報じゃないですかこれ革命というか確かにこの号車はすぐ乗り換えられるってそれが知れるってことを知らないというか</p>
+<p><code>13:24</code> 乗り換えやすい号車がどこかって考えたことないそれを情報として知れるってことがまず面白い確かに確かに乗り換えやすい号車自体は他の検索アプリにも実は付いてたりするんですけどこんなに情報として見やすくできてないかもしれないですねいろいろとこの辺はなので非常によくできてますねただ残念なポイントは乗り換えやすい号車がある路線とない路線があるっていうのはちょっと残念なんですけどまあそうですよね</p>
+<p><code>13:59</code> これは情報が取れるかどうかにおそらくかかっているんでしょうね多いですからね無限にありますもんね本当にそう確かに篠ノ井線とか言い出したらどこが乗り換えやすいか情報作ったらしょうがないかもしれないですね面白いあとは私がたまに使う機能としてはスクショ保存って機能があるんですよこれを押すとこれも他にもあるのかなこの画面縦に長いんでスクショ撮れないじゃないですかめっちゃ便利かも</p>
+<p><code>14:34</code> そうするとこれ今スクショ保存するとこれ全体が1枚の画像になって共有できるんですよこれ私Googleマップとかで検索するんですけど毎回スクショ撮って明日のやつどうしようみたいなスクショ撮ってするんで私これでいきますみたいなのを他の人に共有したりとかもするんで確かにこれめっちゃ便利かもそうなんですよこれ私もまさに旅行する時とかに友達に予定表とかを送ることがあるんですけどそういう時にこれで検索してスクショ保存して</p>
+<p><code>15:10</code> 貼るともうそれで横行けちゃうみたいな感じの確かに大変便利さがありますねすごいこれなくても成立はするじゃないですかアプリとしてはそれをちゃんと入れてくれてるっていうユーザーへの気遣いみたいなところがそうそうそうそうやっぱすごいですね本当に考えられているそうなんですこの辺のこのコアの機能がほぼ同じUIで10年前からあったっていう事実が私は結構震えるんですよねそっか10年前からあるのかそうなんですよやばいなそれすごくないですかすごいですね発明ですよねもう</p>
+<p><code>15:43</code> これはもうちょっと知られるべきですね私もそう思いますデザイナーとかとかにUXとかUIとかやってる方には見てほしいですねそうですねわかります体験設計もしっかりしててそうなんですよこれ触ってて気づいたんですけど一個やばい機能見つけちゃって気になる山手線とかここの運転状況のタブのとこからここタップして列車の走行位置が見えるかも走行位置タップすると</p>
+<p><code>16:16</code> なんと各車両の混雑度合いと気温が見えるっていう気温?やば今の車内の温度ですかねすごやばくないですかこれ今なるほどね例えば1号車は人少なくてちょっと24度だけど2号車人多くて25度みたいな確かに確かに4号車だったら弱冷房になってるから冷房が良い人は4号車行った方がいいとこれこんなん知れるんだっていう衝撃これやばいですね</p>
+<p><code>16:49</code> マジかこれみんな知った方がいい確かに特に夏とか寒い日とか冬とかね暖かい車両行きたいとかなったらあと混雑してる車両嫌じゃないですか嫌ですね乗りたくないこれ見れるのはすごいですねってことはあれか例えば山手線の駅とか待ってて電車来てめっちゃ混んでんな次の電車どうなってんだろうって思ってこれ見たら次に空いてるから次の駅に1本待って乗るかみたいなのができる確かに確かにすごいめっちゃ空いてるのもある</p>
+<p><code>17:22</code> そうですね結構だって23度と26度と3度違うってのもあるんですごいこれは使っていきたいなこれは便利ですねこれはちょっとキラーですねすごいな皆さんもぜひ使ってみてくださいちょっと話ずれちゃうんですけど最近JR東日本がやっているJREGOっていうさっきの元のアプリのGOとはまた別なんですけどアプリというかウェブサイトがありましてエキネットってあるじゃないですか</p>
+<p><code>17:56</code> あれ新幹線登録契約なんていうの乗るのすごい大変といいますかそうですね探してます探したりが結構大変かなと思うんですけどそれを改善するプロジェクトとしてJRWiGOっていうサイトがありましてそのサイトが本当に良くてですね私ちょっと上田の方に旅行に行ったので東京駅から上田駅までを選んでこれで検索をしますとそうするとこんな感じで今この全路線がバーッと出たんですよねこの軽さでそもそもこの全路線出るのがまずすごいなと思うんですけど</p>
+<p><code>18:36</code> 確かにエキネットとかって大体同じ画面に3つぐらいしか豪車が出てこなくて次の時刻見ようと思ったら次へ押してまたローディング走って待ってみたいな感じになっていると思うんですけどなんかこれここで一旦全部見れるのがまず技術的にすごいなと思うんですよ全部っていうのはその14時どうなってるんですか朝の6時から夜の22時8分までの全路線がここに出ます早かったですね確かにそうそうそうそう</p>
+<p><code>19:07</code> でなんかちょっと早かったんで一旦戻るんですけどここで今14時台みたいに選ばれてるんですよここを例えば18時台みたいな風にするんですよねここってなんか結構特徴的で今までって何時何分って置いてたじゃないですかそれをこの18時台みたいな丸めた書き方をして検索を押すと18時台に飛ぶんですよ全路線出てるんで前も見れるんですよいいですねこれは革命だなと私思って結構震えましたね別に18時じゃなくてもいい</p>
+<p><code>19:39</code> そうそうそうそうなんですよ別に18時ちょうどに乗りたいわけじゃないじゃないですか確かに確かにここに例えば17時58分とかあったらそれでもいいなみたいな気がするんですけどそういうのが一覧でバッと出てバッと飛べるっていうのがまずすごいなと思いますね確かに普通の考えていくと18時で時間を検索してそれにマッチしたものを出せみたいな感じのロジックというかなるところをちゃんと体験ベースで考えているというかそこの資座を上げているところみたいなのがすごいですね</p>
+<p><code>20:16</code> 本当に電車に普段乗っている人が作っているんだろうな感じがすごく強くてすごくいいですね私これ一個挑戦的な取り組みだったのですごくデザイナーとして尊敬しているところがあるんですけど今これ18時台になっているんですけどこれちょっと前まで実はスライダーだったんですよこの左端が朝の6時何分右端がこの22時みたいなスライダーになっててそのスライダーをいい感じのところで止めると検索ができるみたいな</p>
+<p><code>20:53</code> 時間指定じゃなくてスライダーで曖昧に検索してここの画面に飛ばすっていうここの挙動同じなんですけど結果的にやっぱりスライダーだとどうしても微調整したくなっちゃう人も多いみたいであんまり好評がなかったのでおそらく18時台みたいな書き方にしたんだと思うんですけど私個人的にそういう新しいUIを思いついて出していこうみたいなそういう姿勢にデザイナーとして本当に感銘を受けてすごくいいチームでやってるんだろうなという勝手に想像してるんですけど</p>
+<p><code>21:30</code> だいぶ狂気的なだいぶ妄想が入っておりますが確かに検証するというかちゃんと作ったものをいいやって置いておくんじゃなくてもっといいものをいい体験みたいな感じでUIをこんだけ結構ユーザー数も多いと思うので変えるのはすごいですねそうなんですよ本当に勉強になりますわ本当に本当に勉強になりますみたいなところですごく私は今のこのJR東日本アプリとこのJREGOにすごく期待しているんですけどぜひ今後のアップデートも</p>
+<p><code>22:04</code> すごい楽しみだなと思っていますそうですね確かに今の話を聞いているとどんどんアップデートされていきそうですねちなみに私はJR東日本とは何の関係もございません寝回しとかではない?全くございません本当にお金ももらっておりません確かにちょっと怪しいかもしれないですねそうですねビューカードを契約してスイカを使っていくだけの人間です本当に愛があるというかファンってことですねそうですね私はすごく大ファンですね今日は田文さんにJR東日本アプリの愛を語ってもらいましたところで結構ねこんな機能あったんだとか</p>
+<p><code>22:43</code> これ日常で使ったらめっちゃ便利そうみたいな発見があってすごい面白かったですぜひ皆さんもこれ使うともしかしたらねなんか人生に影響があるかもしれないというか遅刻が減るかもしれないと思うんでデザイナーの皆さんもそうじゃない方たちもぜひ使ってみたら面白いんじゃないかなと思いますはいってことでタフミさん今日はJR東日本アプリの愛を語っていただきありがとうございましたありがとうございました楽しかったです</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./design" class="internal" data-slug="design">design</a>（StructureNote）</li>
+<li><a href="./ux-design" class="internal" data-slug="ux-design">ux-design</a>（StructureNote）</li>
+<li><a href="./🛤️-JR_山手線" class="internal alias" data-slug="🛤️-JR_山手線">🛤️ JR_山手線</a>（EntityNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-730" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

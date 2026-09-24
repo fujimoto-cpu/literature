@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説"/><meta name="twitter:description" content="📺 動画情報 【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-09-12 ・ ⏱️ 22分21秒 🔗 www.youtube.com/watch 📝 要約 🎯 AI時代は「調べれば分かる情報」の価値が下がり、自分だけが持つ日記・顧客情報・議事録の価値が上がる。その「貯める箱」としてNotionのデータベース機能が優れている理由と、初心者向けの作り方を解説する動画。 🗺️ 全体像 flowchart TD A[日記/議事録/顧客情報を記録] --> B[Not..."/><meta property="og:description" content="📺 動画情報 【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-09-12 ・ ⏱️ 22分21秒 🔗 www.youtube.com/watch 📝 要約 🎯 AI時代は「調べれば分かる情報」の価値が下がり、自分だけが持つ日記・顧客情報・議事録の価値が上がる。その「貯める箱」としてNotionのデータベース機能が優れている理由と、初心者向けの作り方を解説する動画。 🗺️ 全体像 flowchart TD A[日記/議事録/顧客情報を記録] --> B[Not..."/><meta property="og:image:alt" content="📺 動画情報 【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-09-12 ・ ⏱️ 22分21秒 🔗 www.youtube.com/watch 📝 要約 🎯 AI時代は「調べれば分かる情報」の価値が下がり、自分だけが持つ日記・顧客情報・議事録の価値が上がる。その「貯める箱」としてNotionのデータベース機能が優れている理由と、初心者向けの作り方を解説する動画。 🗺️ 全体像 flowchart TD A[日記/議事録/顧客情報を記録] --> B[Not..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説 🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-09-12 ・ ⏱️ 22分21秒 🔗 www.youtube.com/watch 📝 要約 🎯 AI時代は「調べれば分かる情報」の価値が下がり、自分だけが持つ日記・顧客情報・議事録の価値が上がる。その「貯める箱」としてNotionのデータベース機能が優れている理由と、初心者向けの作り方を解説する動画。 🗺️ 全体像 flowchart TD A[日記/議事録/顧客情報を記録] --> B[Not..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2020"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2020" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説</a></div></nav><h1 class="article-title">【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-19T15:00:00.000Z">2026年9月20日</time><span>47 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/business" class="internal tag-link">business</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説</strong>
+🎙️ 円谷 | Notion公式アンバサダー ・ 📅 2026-09-12 ・ ⏱️ 22分21秒
+🔗 <a href="https://www.youtube.com/watch?v=g48suNDvKG8" class="external">https://www.youtube.com/watch?v=g48suNDvKG8<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【初心者向け】AI時代のNotion活用術｜Notionへのデータの貯め方とデータベース基礎を解説.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>AI時代は「調べれば分かる情報」の価値が下がり、自分だけが持つ日記・顧客情報・議事録の価値が上がる。その「貯める箱」として<a href="./notion" class="internal alias" data-slug="notion">Notion</a>のデータベース機能が優れている理由と、初心者向けの作り方を解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[日記/議事録/顧客情報を記録] --> B[Notionデータベースにプロパティ付きで蓄積]\n    B --> C[毎日開く・構造化・API/MCP出口の3条件を満たす]\n    C --> D[AIがコンテキストとして読み取り分析・出力]&quot;">flowchart TD
+    A[日記/議事録/顧客情報を記録] --> B[Notionデータベースにプロパティ付きで蓄積]
+    B --> C[毎日開く・構造化・API/MCP出口の3条件を満たす]
+    C --> D[AIがコンテキストとして読み取り分析・出力]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. AI時代は「自分だけのデータ」の価値が上がる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>インターネット上の情報はAIで誰でも一瞬で手に入るようになった一方、日記・生活ログ・顧客情報・議事録など自分だけが持つデータの価値が相対的に上がっている。AIへの入力情報（コンテキスト）の質が回答の質を決めるため、貯め続けたデータが資産になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. データベース＋プロパティで「人間もAIも扱いやすい形」にする </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Notionはページの集合をデータベース化でき、各データに「プロパティ」（タグ・評価・関連分野など）を付けられる。この構造化により、AIに「2020〜2023年で評価が高かった本を5冊ピックアップして」のような指示を出しやすくなる。メモ帳的な使い方だけではこの強みを引き出せない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. ツール選定の3条件：毎日開く／構造化できる／出口がある </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>話者が挙げる「データを貯める箱」として優れている条件は①毎日開くツールか（ジャーナリング等で自然に開く習慣があるか）②データベースとして構造化して貯められるか③貯めたデータを後から取り出せる「出口」があるか（API開放・<a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>開放）。この3条件を全て満たすツールは少なく、Notionはこれを満たしている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 実務での活用例：リード管理・顧客管理・自動データ蓄積 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>インサイドセールスのリード管理、チャットワーク履歴の自動取り込みによる顧客管理データベース、AI議事録との連携など、複数のデータベースをリレーションさせることで資産として蓄積していける。月次レポート自動生成や、毎週決まった時間にダッシュボードを更新するカスタムAIエージェントの活用例も紹介されている。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① CORINのタスクDB・Log DBの「プロパティ設計」を見直す視点として使う</strong>
+既存のタスクDB・Log DB・Permanent DBは既にNotionで運用中。この動画の「毎日開く／構造化／出口がある」の3条件で、今のプロパティ設計に抜けがないか棚卸しする材料になる。</p>
+<p><strong>② 日記データを後から「今と昔の自分の比較」に使う発想</strong>
+AIに過去の日記と直近の日記を比較させて変化・停滞を指摘してもらう使い方は、<code>01_🏠 private/diary/</code> の運用にもそのまま応用できる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちは Notion Ambassador のつぶれです 本日も動画を見ていただきありがとうございます本日の動画では Notion へのデータのため方を データベースの基礎から解説していきたいと思います先になぜ今さらこのような話をするのかというところを 皆さんにお伝えさせていただければと思っていてここ数年 AI の登場によって インターネットで調べられるような情報は 誰でも一瞬で手に入るような世界になりましたこのような世界になって情報の価値っていうのはだんだんと下がってきているかなっていうふうに感じていて、一方で価値が上がっているのが自分自身の日記だったり生活のログだったり、</p>
+<p><code>00:37</code> あと仕事のシーンで言ったら顧客の情報だったり議事録だったり、そういった自分だけしか持っていないデータというのが相対的に価値が上がってきているように感じています。AIにインプットする情報のことをコンテキストと呼んだりするんですが、AIから返ってくる回答の質はこのコンテキストによって決まると言っても過言ではありませんAIが持っている情報っていうのはすぐ引き出せる一方で自分自身の記録っていうのはその瞬間しか取っておくことができない重要なものになってきます例えば僕はこういったことをしていて1年前の自分の日記と直近の自分の日記をAIに比較してもらって考え方の変化だったりとか逆に変わっていないところだったりをAIに分析してもらって</p>
+<p><code>01:18</code> 自分自身の変化だったり成長だったり停滞だったりというところを指摘してもらうみたいなことをしていますこういったことができるのはずっと一つのノーションというデータベースにデータを貯め続けていたからだと思っていてこのデータを貯める箱としてノーションは非常に相性いいツールだなと個人的に感じているので今日の動画で皆さんにノーションのデータベースの基礎というところを改めてお伝えして自分自身が入力しやすいデータであったりAIが取り出しやすいデータ構造であったりそういったところを作るコツみたいなところをお伝えできればなと思っています。ぜひ情報を貯めていきたいという方は動画最後までご覧いただけたらと思います。</p>
+<p><code>01:54</code> このチャンネルではノーションに関する情報に特化して発信を行っています。ノーションに詳しくなりたい、最新のノーション情報をキャッチアップしたいという方はぜひチャンネル登録よろしくお願いします。それでは本編パートいってみたいと思います。AI時代にデータを貯める重要性についてはご理解いただけたかなと思うんですけれども、ここからは実際にNotion上にどのようにデータを貯めていくのかについて話していきたいと思います。例えばの例なんですが、私はNotionの中に読んだ本を記録していくようにしていて、例えばこのアイディアの作り方っていう本、僕は非常に気に入っているんですけれども、</p>
+<p><code>02:31</code> NotionのデータベースはExcelのようにデータの集合体として扱うことができる一方で、今回は本なんですが一つ一つのデータの中にこのように記録を残しておくことができるツールになっていますNotionが単なるメモ帳ツールで終わってしまう人っていうのはこのデータベースの旨味を最大限引き出すことができていないのかなというふうに感じていてデータベースの中にNotion用語でこちらプロパティと呼ぶんですが例えばこれが本ですよっていうのを表すタグであったりとかこの本がどのぐらい良かったのかっていう評価だったりとかまたまた自分の人生のどういった分野と関連するのかを連携させていくだとか</p>
+<p><code>03:09</code> そういった情報をデータベースに自分に合った形で出せておくことができるというのがNotionの最大の強みです例えばこのように本をデータベース形式でまとめておくことでNotion AIに2020年から2023年で読んだ本の中で評価が高いものを5冊ピックアップしてYouTubeで紹介できる形で紹介文を出力してくださいここんな感じで指示を出してあげることで、自分が読んだ本を他の人に紹介したいときに、モーションAIに叩きを作ってもらうみたいなことができたりします。</p>
+<p><code>03:43</code> こんな感じでAIが出力してくれていて、4年間で読んだ数百冊から厳選ということで、こんな感じで本の紹介の台本を作ってくれているといった形になります。正直言うとここまでのことはNotionを使わなくても実現できてしまうかなというふうに感じていて例えばEvernoteだったりAppleのメモ機能だったりまたまたローカルのマークダウンファイルであったりObsidianであったり結局はデータが残ってさえいればため先はどこでも良いのかなというふうに思っていて何かしらの形でためておいて</p>
+<p><code>04:18</code> それをAIがコンテキストとして読み込むことができる状態になっていればこのようなことはどんなツールでも実現できるかなと思っていますただデータを入れる箱としてNotionが優れている理由っていうのがいくつかあると思っていて個人的にNotionのデータベースがAI時代に良いなと思っているところを挙げさせていただくとまずNotionっていうツールの特徴として今はインプットというページを表示させてるんですが僕は毎日日記をつけつつタスク管理をするみたいなことをやっているんですけれどもこのジャーナルと統合することができるので基本的にはこのNotionのページを開いたままで仕事を進めていくといったことをしています。</p>
+<p><code>04:56</code> 基本的にこの今日のジャーナリングのページを開きっぱなしにしているので、逆に言うとNotionがないと仕事が回らないみたいな状態になっているんですけれども、データを貯めておく箱として毎日開くツールかどうかっていうのは非常に大事なところかなと思っています。加えてiPhoneのメモになくてNotionにある機能の一つにこのデータベース機能というのがあって、これは人間が管理するときもAIが読み込むときも非常に強力なツールで、先ほども軽くお伝えしたんですが、データベース機能を使うことでこのデータにプロパティと呼ばれるデータの特徴みたいなのを与えることができます。基本的にデータベースというのは一番有名なのだとリレーショナルデータベースと呼ばれるものがあって、SQLというプログラミングのスクリプトを書いてそのデータベースを操作するということが多いんですけれども、</p>
+<p><code>05:46</code> Notionもそのリレーショナルデータベースっぽいものを画面上でポチポチ操作しながら特にコードを書かずに管理する土台を作ることができるというのが強力なポイントかなと思っていますこのデータベース機能を使うことで先ほどここ本だけをフィルターした状態で表示させているんですけれどもそういったことができたり評価順にデータを並べることができたりだとか人間が管理しやすいというのはもちろんですしAIが読み取るときもこのデータベースの中に本の情報が入ってますっていうのをプロンプトで渡してあげればAIもこの情報をコンテキストとして取得する際に</p>
+<p><code>06:21</code> 効率よく取得することができてここにはこういうデータが入っているんだっていうのを例えばクロードのスキル機能に覚えさせておくことで効率よく情報を取得することができるのでこの構造化してデータベースとして貯められるっていうのはNotionの非常に大きな強みの一つかなと思っていますもう一つあるかなと思っていてこれ意外と見落とされがちなポイントかなと思うんですけれどもきちんとこのデータの出口があることっていうのが大事かなと思っていて出口っていうのは貯めたデータを後から取り出すことができるのかどのぐらい取り出しやすいのかっていうのを</p>
+<p><code>06:54</code> ツール選定の時に意識していただくと良いかと思います基本的にどんなツールでもノーションにももちろんあるんですがこのデータベースの内容をExport CSVで出力するみたいな機能はあるかと思うんですけれども、AIにコンテキストとしてデータを食べさせるときに、CSVで毎回インポートしていると非常に工数がかかってしまうので、基本的にはAPIで連携させるか、またまたMCPを開放していて、他のAIツールから簡単に読み取ることができるようになっているか、みたいなところが大事なポイントになっています。基本的にNotionはAPI開放されているので、</p>
+<p><code>07:29</code> 僕が例えばクロードからNotionの情報を取得するときはMCPでももちろん取れるんですけどAPIでこのデータベースを指定してあげてクロードが取得しに行くみたいなことをやっています意外とここがAPI開放されてないツールだったりとかAPIを開放するには追加で料金が必要ですみたいなツールがあったりするので今お話しした3点毎日開くツールかどうか構造化してデータを貯められるのかそしてきちんと出口があるのかっていうところを3つとも満たしているツールっていうのがなかなか世の中にないんじゃないかなと思っていてMotionはこの3つが全部揃っているので</p>
+<p><code>08:03</code> AI時代の情報を貯めていく箱として非常に優秀なんじゃないかなと思っているというところです実際に次のパートでは今はインプットのデータベースをお見せしつつ一例を解説したんですけれどもデータベースを実際に作りながら日記を作っていくというところをデモしてみたいと思いますここからは実践編でプライベートで一番始めやすいライフログ管理からノーションのデータベースについて学んでいければと思っていますライフログ管理なんですけれども三日坊主でちょっと続かなかったみたいに思われる方もいるかと思うんですけれども</p>
+<p><code>08:38</code> 今回の話で言うと三日坊主だとしても後からまたそのデータベースに記録するっていうことが再開さえできれば言い換えると書きたい日だけちゃんと書いておけばその書いてあるデータが資産になっていくと感じています私の場合は結構豆な性格なので1日たりとも日記を書くっていうのを絶やしたことはないんですけれども皆さんの場合はここまで完璧にやる必要があるかと言われるとそこまで完璧目指しすぎなくてもいいのかなと思っていて完璧目指しすぎると苦しくなってしまうみたいなこともあると思うので特に日記を書かない日があったとしても</p>
+<p><code>09:13</code> AIが読み取った場合に参考になる情報が抜き出されればそれで問題ないのであまり完璧にやりすぎるというマインドは捨てていただいて大丈夫かなと思っていますこのように毎日データを貯めることで動画の冒頭でもお見せした内容ではあるんですがNotion AIにこのように資差出しをしてほしいとお願いすることで昔の自分と今の自分を比較してこういった点が成長してますよとかこういったところは停滞してますよみたいな文章を出してもらうみたいなことができたりします例えば私の場合だと</p>
+<p><code>09:46</code> 動画を書くっていうタスクがずっとセンターピーに置かれ続けていてあなたは1年中動画が課題ですねみたいなことをAIに言われたりしたんですけれどもそういったことが分かるようになってきますAIに自分自身を知ってもらうという意味でしっかり日記をつけていくっていうのは今の時代なおさら重要かなと思っていてその土台となるデータベースを皆さんと一緒に作っていければと思っていますNotion初学者の方を想定してデータベースの作り方から丁寧にやっていければと思うんですけれどもまずNotionの仕組みからなんですけれどもNotionは一つ一つのデータが</p>
+<p><code>10:18</code> ページという単位で表されます例えばこのページに今日の日付書いて、今日はお昼にカレーを食べた。とても美味しかったのでまた行きたいとか、天気が雨模様でテンションが上がらないとか、雨の日は仕事頑張りすぎると不調になってしまうのでほどほどにとか、こういったことを書いておくと。これが一つのページになるので、これをどんどん重ねていくことで、でどんどん追加していくことで日記のデータをNotionに溜め込んでいくということができます今日は晴れで気持ちいいとかねこういった形でページを増やしていくという</p>
+<p><code>10:51</code> 運用でももちろん良いんですけれどもNotionの良さはさらにこの奥にあると思っていて私の場合はですねこんな感じでデータベースという仕組みになっているんですけれども1日1つ日記のデータを作ってそこの中で情報を管理するということをやっています今画面で皆さんと一緒に作ったのはただのページなのでこれをデータベースに変換していきたいと思いますデータベースを作るためにはスラッシュコマンドからデータと入力するとデータベースインラインというのが出てきますのでこちらをエンターキーを押していただくとデータベースを一つ作ることができます</p>
+<p><code>11:25</code> 名前を日記というふうにしてあげてこの操作ちょっと難しいんですけれどもこの2つのデータを選択してですねドラッガーのドロップでこの横の線が出ている状態でポイッと中に入れてあげるとこういった形で先ほど作ったデータがデータベースの1レコード1ページとして管理されるようになります例えばこのデータベースの名前を日記サンプルとしておいてプロパティを追加の部分からご自身が管理したい項目をどんどん追加していくことができますここは好みに合わせて追加していただければと思うんですが例えば日付のプロパティで</p>
+<p><code>11:58</code> 今日の日付これは明日の日付と入れてあげたりとかこちらで日付管理できるようになったのでタイトルの部分は別の情報を入力できるので僕の場合はスラッシュ区切りでその日あった特徴的なイベントを入れたりしてるんですけれどもあれライスとか無印とか水族館みたいな形で入れたりだとかオフィス出社満員電車撮影3本とか好みに合わせて書いていただければと思うんですがページの中身とタイトルでうまくその日を表すような形で管理をすることができたりしますこのデータが入った状態で</p>
+<p><code>12:33</code> 右下のNotion AI起動させてみて日記サンプルを読んで私が日記で書くべきことを追加で提案してくださいみたいな形でAIにこの日記のページを読み取らせるということもできますここにデータがどんどん溜まっていくと先ほど私がお見せしたような去年の私と今年の私の比較みたいなことができるようになったりしますAIがいろいろ提案してくれてますね今日の気分スコアを追加するとどうですかみたいに言ってくれていて確かにこれいいなと思ったらプロパティを追加の部分から</p>
+<p><code>13:06</code> 今日の気分みたいなのを作ってあげて例えば星5つで評価してあげるとしたらこんな感じでノーションは選択肢をサクサク増やしていくことができるのでこの日は星3だったこの日は星5だったみたいな形で管理することができたりしますこんな感じでAIと壁打ちしつつ自分の好きな日記のデータベースを作っていくことがノーションだと簡単にできたりしますこの辺で気分みたいなのを入れておくことでその日あった内容と気分が紐づいてこういうことがあると気分が落ちやすいとかこういうことあるとハッピーな気持ちになりやすいとか自分自身を理解する手がかりになったりするのでこういった管理ぜひ皆さんやっていただけたらと思っています</p>
+<p><code>13:46</code> 今回は日記のサンプルということで非常にシンプルな仕組みを取り上げさせてもらったんですけれども僕の場合はこの日記のページの中でその日やるタスクの管理みたいなことをやっていたりします例えばこれ今撮っているのが17時54分のこのデータなんですけれども今実施しているタスクが撮影ということで先ほどの日記のページとタスク管理を統合して1日1ページ作って振り返りというプロパティに先ほどの日記みたいな項目を書き込むようにしています。これがひたすらデータがたまるとこんな感じになるというところですね。</p>
+<p><code>14:24</code> このデータベースなんですけれども、この時間で一緒に作ろうと思うと結構時間かかってしまうかなと思っていて、こちらライフログ2025というテンプレートで、私が管理しているジャーナルのデータベースと同じ仕組みのものをダウンロードしたらすぐ使えるような形で配布してますので、もし興味ある人はこちら見ていただけたらと思っています。加えてちょっと宣伝になるんですけれども私が運営しているノーション大学というコミュニティの中でこのテンプレートのクーポンをお渡ししていますこちらのクーポンを適用することで先ほどのテンプレート半額で購入できるようなものを配りしているので</p>
+<p><code>15:00</code> もしコミュニティとテンプレート両方興味あるよという方はノーション大学のご入会も検討していただけたらと思いますノーション大学は累計会員数1500名以上の国内最大規模のコミュニティでわからないことは24時間チャットツールでいつでも質問ができたりコミュニティ内の限定勉強会に参加できたり一から学べるNotion学習ロードマップでスキル磨けたり私の限定動画アーカイブ動画Notionの基礎が学べる講座が400本以上あったり定期的に開催している有料セミナーへの無料参加券があったりNotion大学限定のオフライン交流会があったりと学習コンテンツと特典盛りだくさんとなっておりますので</p>
+<p><code>15:34</code> 概要欄にURL貼っておこうと思うので興味ある方はぜひチェックしていただけたらと思います少し宣伝挟ませてもらったんですけれども、最後にお伝えしたいのが、この日記のサンプルは結構個人のプライベートのNotion活用でよく出てくる例かなと思っているんですが、これとは別に仕事で使うデータをどう管理していくかという話を最後にしたいと思います。例えばこれはNotionで作るインサイドセールスとフィールドセールスの業務管理のシステムになっているんですけれども、例えばNotionにデータをしっかりと貯めていくことでこのようなダッシュボードを作ることができたりとか</p>
+<p><code>16:09</code> このダッシュボードの中身を見てAIに仕探しをさせるみたいなことができたりしますこの基盤となるデータベースが例えば今表示しているのがリード管理のデータベースなんですけれどもこの架空の企業の架空の担当者様とのコンタクトの履歴みたいなものをノーションに残しておくことで例えばこの日に過電をしてアポを取れましたよだとか例えばこの日にウェブのズームでミーティングをしてその記録をAIミーティングノートで残しておくだったりとかそういった形でノーションの中にデータベースとデータベースを紐付けてリレーションさせた状態でデータを残しておくと</p>
+<p><code>16:43</code> このデータ自体が資産となって後々いろいろなことに活用できるような形になってくるかなと思っています今回はAI Meeting Noteでデータを残す例をお伝えしたんですけれどもそれ以外にも私たちの会社では例えばこれが顧客管理のサンプルのデータベースなんですけれども顧客に紐付けて過去のチャット履歴チャットワークからデータを自動で取り込むみたいな実装させてもらうことがよくあるんですけれどもこの架空の会社さんとのチャットの履歴がここに自動で溜まっていって1日に1回チャットの履歴が溜まっていってNotion上に資産として溜まっていく</p>
+<p><code>17:18</code> そういった仕組みを作っていくこともできたりします他にもまた別の動画でお伝えしようと思うんですけれどもプラウドのオートピンのようなAIボイスレコーダーからNotion上にデータを溜め込んでいく仕組みだったりとか自社内でツールを作って運用しているんですけどTLDBだったりZoomの文字起こしのデータからNotionの議事録と紐付けて自動でデータを入れていく仕組みだったりとか工夫次第でNotionにデータを自動で貯めていくっていうことはいろいろ手段があるのでNotion上にデータを貯めていくっていうことに興味持たれた企業様もしいらっしゃったらこちらも概要欄にリンク貼っておきますので</p>
+<p><code>17:51</code> うちの会社で支援させてもらえればと思っています予算がそこまで大きくない個人事業主の方とかもウェルカムなので気になった方はぜひご相談いただければと思います最後に貯めたデータをどう使っていくのかというところの話を軽くできればと思いますこれもまた繰り返しになるんですがこの動画の冒頭でお伝えした僕の場合は日記を貯めておくことで過去の自分との比較をAIにやってもらうみたいなことを紹介したんですけれどもそれ以外にも仕事のシーンで例えばノーション上に貯めているデータから各月のレポートを出すみたいなことができたりしますノーション上で完了したタスクをカウントしたりだとか</p>
+<p><code>18:28</code> あとチャットワークでお客様とやり取りした内容をAIに分析してもらってミスなくきちんと業務をこなすことができたかとかをAIに吐き出させることができます吐き出す方法なんですけれども2パターンあって1つ目がこの右下のAIチャットから呼び出すという仕組みですこれをまた別の動画でお伝えできればとは思うんですけれども最近のアップデートでちょっと仕様変わったんですが右下のチャットからスラッシュと入力することでノーション上のスキルを呼び出してこのようなレポートを吐き出すということもできますしスラッシュコマンドでなくとも月次のレポートを作ってみたいな指示で</p>
+<p><code>19:05</code> 適切なスキルが割り振られるというか裏側でスキルが動いてくれるという仕組みも最近リリースされたのでそういった仕組みを使っていただくというのも良いですそしてこのレポートのような毎回の定型業務毎月月初にこれをやらなきゃいけないみたいなタイミングが決まっている業務に関してはAIエージェントAIのカスタムエージェントを使ってあげるのも一つ手段としてあります私たちの会社では例えば経営ダッシュボード更新君ということで毎週月曜日8時にノーション上のダッシュボードを更新してくれるというカスタムエージェントを組んでいたり</p>
+<p><code>19:38</code> 他にもノーションニュース収集君ということで毎日1回指定されたデータベースに世の中のニュースの情報を蓄えたりカスタムエージェントを使うことでこういった定期実行の仕組みも可能になってきますさらに最近僕がよくやっているのはこのクロードのデスクトップアプリで例えば今回のYouTube動画の台本もそうなんですけれどもこのNotionの中に入っているYouTubeの過去の台本をもとにクロードがNotionの中身を読みに行って過去の台本データを参考にした僕の動画っぽい新しい動画の台本を作ってくれるそんなことができたりもします。</p>
+<p><code>20:13</code> 動画の冒頭でお伝えしたNotionはAPIが開放されているツールなので、他のAIツールからでもNotionのデータを読み解くことができるのでNotionの中にデータを貯めてそれをNotion AIを使って出力するというのももちろん良いですし他のご自身が普段使われているツールあと会社で導入されているAIツールがあるならNotionとそれをつないであげて自分のお気に入りのツールからNotionの中のデータをコンテキストにしてAIに仕事をしてもらうそういったこともできたりしますノーション上にデータさえ貯めておけばいろいろなツールと連携して可能性が広がるというか</p>
+<p><code>20:46</code> 今後AIってこうかときで新しいツールができたりとか新しい機能が出てきたりとかいろいろあると思うんですけど過去自分が貯めたデータっていうのが一番の資産になるっていうのはずっとこの先も変わらずだと思うのでデータを貯めていくっていうのをねぜひノーションで皆さんやっていただけたらなというのが今回の動画の一番伝えたいメッセージの部分でしたというわけで本日はノーションにデータを貯める必要性と貯めるためのデータベースの作り方使い方について解説してみましたプライベートでノーションを使われる方は</p>
+<p><code>21:19</code> 今日解説したタスクだったり日記のテンプレートから始めていただくのがおすすめで仕事で使われる方は議事録だったりチャットのデータをノーションに貯めていくところからぜひスタートしてみてください個人利用の方のノーションはテンプレートを配布しています仕事活用の方は私が経営している会社テンプルの方でご相談あればお受けすることできますので、もし技者にも導入したいという方いらっしゃれば概要欄に載せてあるURLからお問い合わせいただければと思います。記録しなかった情報っていうのはなかなか取り返せるものではないので、ぜひ今日からね記録し始めるということをチャレンジしていただけたらと思います。このチャンネルではノーションに関する情報に特化して発信を行っています。</p>
+<p><code>21:58</code> ノーションに詳しくなりたい、最新のノーション情報をキャッチアップしたいという方はぜひチャンネル登録よろしくお願いします。この動画少しでも参考になったという方は高評価ボタン押していただけると喜ぶので何卒よろしくお願いいたしますそれでは本日の動画は以上となります最後までご視聴いただきありがとうございました</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./notion" class="internal" data-slug="notion">notion</a>（StructureNote）</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（StructureNote）</li>
+<li><a href="./obsidian" class="internal" data-slug="obsidian">obsidian</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-807" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./📄-2026-09-21_AI時代のデータ蓄積_図解_v2" class="internal">📄 2026-09-21_AI時代のデータ蓄積_図解_v2</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

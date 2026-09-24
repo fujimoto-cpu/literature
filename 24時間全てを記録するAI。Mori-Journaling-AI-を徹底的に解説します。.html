@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>24時間全てを記録するAI。Mori Journaling AI を徹底的に解説します。</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="24時間全てを記録するAI。Mori Journaling AI を徹底的に解説します。"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="24時間全てを記録するAI。Mori Journaling AI を徹底的に解説します。"/><meta name="twitter:description" content="📺 動画情報 24時間全てを記録するAI。“Mori Journaling AI” を徹底的に解説します。 🎙️ Rei丨暮らしとNotion。 ・ 📅 2026-08-31 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 24時間装着して会話を自動録音・文字起こしし、AIが毎日ジャーナルを自動生成してくれるパーソナルデバイス「Mori Journaling AI」を解説する動画。日本企業製・MCP対応で他のAIとも連携できる。 🗺️ 全体像 flowchart TD A[デバイスを装着して24時間録音] --> B[会..."/><meta property="og:description" content="📺 動画情報 24時間全てを記録するAI。“Mori Journaling AI” を徹底的に解説します。 🎙️ Rei丨暮らしとNotion。 ・ 📅 2026-08-31 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 24時間装着して会話を自動録音・文字起こしし、AIが毎日ジャーナルを自動生成してくれるパーソナルデバイス「Mori Journaling AI」を解説する動画。日本企業製・MCP対応で他のAIとも連携できる。 🗺️ 全体像 flowchart TD A[デバイスを装着して24時間録音] --> B[会..."/><meta property="og:image:alt" content="📺 動画情報 24時間全てを記録するAI。“Mori Journaling AI” を徹底的に解説します。 🎙️ Rei丨暮らしとNotion。 ・ 📅 2026-08-31 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 24時間装着して会話を自動録音・文字起こしし、AIが毎日ジャーナルを自動生成してくれるパーソナルデバイス「Mori Journaling AI」を解説する動画。日本企業製・MCP対応で他のAIとも連携できる。 🗺️ 全体像 flowchart TD A[デバイスを装着して24時間録音] --> B[会..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/24時間全てを記録するAI。Mori-Journaling-AI-を徹底的に解説します。"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/24時間全てを記録するAI。Mori-Journaling-AI-を徹底的に解説します。"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 24時間全てを記録するAI。“Mori Journaling AI” を徹底的に解説します。 🎙️ Rei丨暮らしとNotion。 ・ 📅 2026-08-31 ・ ⏱️ 16分8秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 24時間装着して会話を自動録音・文字起こしし、AIが毎日ジャーナルを自動生成してくれるパーソナルデバイス「Mori Journaling AI」を解説する動画。日本企業製・MCP対応で他のAIとも連携できる。 🗺️ 全体像 flowchart TD A[デバイスを装着して24時間録音] --> B[会..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="24時間全てを記録するAI。Mori-Journaling-AI-を徹底的に解説します。"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-81"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-81" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>24時間全てを記録するAI。Mori Journaling AI を徹底的に解説します。</a></div></nav><h1 class="article-title">24時間全てを記録するAI。Mori Journaling AI を徹底的に解説します。</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-12T15:00:00.000Z">2026年9月13日</time><span>36 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>24時間全てを記録するAI。“Mori Journaling AI” を徹底的に解説します。</strong>
+🎙️ Rei丨暮らしとNotion。 ・ 📅 2026-08-31 ・ ⏱️ 16分8秒
+🔗 <a href="https://www.youtube.com/watch?v=oj9q3iCgDlA" class="external">https://www.youtube.com/watch?v=oj9q3iCgDlA<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/24時間全てを記録するAI。Mori-Journaling-AI-を徹底的に解説します。.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>24時間装着して会話を自動録音・文字起こしし、AIが毎日ジャーナルを自動生成してくれるパーソナルデバイス「Mori Journaling AI」を解説する動画。日本企業製・<a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>対応で他のAIとも連携できる。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[デバイスを装着して24時間録音] --> B[会話を自動で文字起こし]\n    B --> C[ホーム画面で時間帯別に自動分類]\n    C --> D[ジャーナルタブが1日1回自動生成]\n    D --> E[チャットで自分の記憶に質問できる]\n    E --> F[MCP経由で他のAIとも連携]&quot;">flowchart TD
+    A[デバイスを装着して24時間録音] --> B[会話を自動で文字起こし]
+    B --> C[ホーム画面で時間帯別に自動分類]
+    C --> D[ジャーナルタブが1日1回自動生成]
+    D --> E[チャットで自分の記憶に質問できる]
+    E --> F[MCP経由で他のAIとも連携]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. デバイス仕様 — 首下げ・ストラップ・リストバンドの3WAY </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>上部にマイクとLED（録音中は白点灯）、下部の丸ボタン長押しで録音停止・再開する。首下げ・ストラップ経由のフック・リストバンドの3パターンで装着でき、USB Type-C直差し充電で専用ケーブルが不要になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. アプリの4画面 — ホーム／ジャーナル／チャット／設定 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ホームは1日の行動を時間帯別に自動カテゴライズ（会議・仕事・趣味等）し、タップすると実際の会話の文字起こしまで確認できる。ジャーナルタブは会話内容に基づいた画像付きの日記を1日1回自動生成し、「今日の名言」やTo Doの自動抽出も含む。設定でジャーナル生成時刻（就寝前に合わせる等）や話す言語を調整できる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. チャット機能 — 自分の記憶に質問できるAI </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>蓄積した音声データをコンテキストに、「次にやるTo Doを整理して」のような質問にAIが答えてくれる。撮影者の場合、進行中のYouTube撮影タスクを正確に把握して回答していた。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 良かった点5つ — 日本製・無料枠・デザイン・MCP対応・ジャーナリング特化 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①日本企業製でデータの預け先に安心感があり、音声は文字起こし後すぐ削除される仕様。②無料プランでも10時間録音まで使え、有料はスタンダード30時間／アンリミテッド無制限。③プロダクトデザイナー柴田文江氏（Kinto・Vertebra等を担当）がハードを設計。④MCP対応で他のAIからも音声・ジャーナリング情報にアクセスできる。⑤会議記録ではなく個人のジャーナリング・内省に特化した世界初の設計。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 気になった点3つ — バッテリーのムラ・iOS限定・文字起こし精度 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①使用状況でバッテリー持ちにムラがある。②現状iOSアプリのみ対応（年内にAndroid・Web版を検討中）。③マイクが口から離れた位置にあるため文字起こし自体の精度はまちまちだが、そこからまとめの文章を生成するソフト側の精度は高い。クラウドファンディング実施中（〜10/30）、先行価格は本体+スタンダードプランが33,990円〜、本体+アンリミテッドプランが41,990円〜。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① MCP連携という発想を覚えておく</strong>
+このデバイスは録音データをMCP経由で他のAIに渡せる設計になっている。ゆりこがCORINで組んでいる <code>voice/</code> 音声パイプライン・日記自動生成の思想と近い。「録音→自動要約→チャットで参照」という一連の流れは、今後CORINの日記・実績ログ運用を見直すときの比較軸として覚えておく。</p>
+<p><strong>② AI×ライフログの動きとして1つメモしておく</strong>
+「会議記録」でなく「個人の内省」特化のAIデバイスというポジショニングは、CD視点でもAI×ライフログ市場の動きとして押さえておく価値がある。次にAI系トレンドを見るタイミングで、同ジャンル（ウェアラブル録音×自動要約）の他社製品も1つ軽く見ておくと比較の軸ができる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 皆さんこんにちはレイです。今日紹介していくのは本日公開となったパーソナルジャーナリングデバイスMori Journaling AIという製品です。実は今もつけているんですけれどもこちらが僕の声だったり人との会話を録音し続けてくれてその録音データを自動的に文字起こししてアプリに記録していってくれるというそしてなんと素晴らしいのがこちら24時間つけっぱなしを想定して作られているデバイスということでつけっぱなしにして日常生活すべてをずっと記録し続けてくれるデバイスということなんですね会議の記録はもちろん毎日の日記のために使ったり</p>
+<p><code>00:34</code> 第三者の視点から自動でレポートを作成してくれるなんて機能もあったりしますそしてこのデバイスの最も素晴らしいところは日本企業が作っているというところですこのようなデバイスが日本から世界にリリースされていくということでとても応援したくなるような気持ちにもさせられるかなと思います今日はそんな森ジャーナリングAIをいち早く触る機会をいただきましたのでこの製品の使い方やアプリの使い方まで徹底的に解説していこうかなというふうに思っています。ぜひ最後まで見ていってもらえると嬉しいです。それでは早速いってみましょう。まずは製品の概要について見ていきたいと思うんですけれども、録音するためのデバイスとアプリの解説が必要なので、一つずつ見ていこうと思います。</p>
+<p><code>01:12</code> まずは録音のデバイスから見ていきたいと思います。箱を開けるとね、このような形で本のようなね、見た目の想定で出てきます。中を開けるとこちらの録音デバイス本体と合わせてそれらを装着するための付属品が付いてきますこの上の部分こちらがマイクになっているそうでこのLEDが白く光っているのは絶賛今録音中ですということなんですね下の部分の丸いボタンを実はここ長押しをすると録音の停止そしてもう一度長押しをすると再度録音を開始というシンプルな構造になっています</p>
+<p><code>01:50</code> 付け方の一つ目としてはこれを首あたりにこんな感じで付けて例えばスーツとかに付けるのであればこのような形で付けるのがいいのかなと思いますそして二つ目にストラップが内蔵されているのでストラップの先にこのような形で本体を取り付けるフックが付いてますすごくシンプルなんですが肩掛けして使うというようなことも可能ですその他にもこのようなバンドも付属してきまして手首に付けて過ごすスタイルも可能ですそしてこのデバイス本当に嬉しかったのがなんとですね充電方法がUSB Type-C直差しでございます</p>
+<p><code>02:27</code> 素晴らしいいや本当にこれは嬉しいと思います知らない間に電源が切れていて出先には専用の充電ケーブルがなかったなんてことはねApple Watchとかでもあるあるかなと思うんですけれどもこれだけでこの仕様だけで欲しくなる方は結構いるんじゃないかなというふうに思います続いてアプリについても見ていきたいと思いますアプリは大きくホーム、ジャーナル、チャット、設定という画面になっています。この左側のホームでは、その日1日過去どんな時間でどのようなことが行われていたのかというのを、カテゴリーが自動で分けられて、例えばミーティングをしてましたとか仕事をしてましたみたいなことをタイトルと合わせて出してくれたりとか、</p>
+<p><code>03:12</code> 例えばね昨日僕はアベンジャーズを見たんですけれども映画を見てましたねとか自転車用品探してましたねとかそういったことをですね過去振り返りながらどんなことをしてたのかというのがまずざっくりと一覧になります例えば中開くとどのような感じになっているかというところなんですけれども例えばですね僕先日ロードバイクを購入してお店にロードバイクを買いに行った時なんですけれどもロードバイクを購入したことについて乗り心地など話しているという会話が残っていますねそして一番下のねこの文字起こしというのを押すと</p>
+<p><code>03:45</code> 実際の文字起こしデータというのも見ることができますこのねロードバイク買ったんですよみたいな会話だったりとかめっちゃかっこいいですみたいな会話がされてたっていうのがわかりますねそんな感じで過去この日何が起きたかっていうのがですねこと細かく時間分刻みで振り返ることができるようになるというのがこのホームの機能になりますそして個人的にすごく好きな機能なんですけれどもこのジャーナルというタブを開くと自動で毎日1回生成してくれる僕自身のジャーナリングの記録というのをね</p>
+<p><code>04:20</code> 見ることができます例えば中開いてみると実はねここの画像についても会話に基づいた画像が自動で挿入されているんですがこれもすごいかなと思うんですけど新宿でバックを探した1日ということでバックを探してましたねというのがねこんな感じでまとまっていましたねこれも全て僕の音声に基づいて整理してねこういった日記を生成してくれますこのタイミングではバックと道具を探してましたねということがまとまっていたりとか</p>
+<p><code>04:52</code> あとはですねコラボカフェに行きましたみたいな自分の趣味の活動してましたねとかあとはですねこのジャーナリングのページの方にはですね今日の名言というセクションがありましてその日1日の中でAIが自動で選んでくれた僕の名言というのが残るようになっています少し下に行くとですねアクションリストというのがあります僕が今後やるべきto doみたいなのも抽出してくれますね僕が触っている時点ではこのような簡易的な感じになっているんですけれどもこのTo Doというのも後々機能として追加されるそうで音声文字起こしデータ</p>
+<p><code>05:26</code> ただ24時間記録しているだけでTo Doというのが自動で抽出されてそのTo Doリストの管理とかもこのアプリでできるようになるそうですそしてですねチャットというタブに移ると僕の記憶に基づいて質問することができるようなチャットの画面も搭載されています例えばですねじゃあ次にやるTo Doを整理してとかこういうのできたら便利かなと思うんですけれども次にやることとしては製品レビュー動画の仕上げが中心に残っていますと僕のね現在のこのYouTubeを撮影するタスクが残っていますよというのが実際に出てきましたね結構ね本格的なAIと自分の記憶をポンテキストに会話することができるというような仕様になっています</p>
+<p><code>06:06</code> 設定周りの細かいところで言うと言語の設定もねすることができましてアプリ自体の言語だけではなくて僕が話す言語日本語以外の言語というのも指定することができるようになっていますかなりの数の言語を翻訳することができるのがわかるかなと思いますあとはねさっき紹介したジャーナルの生成時間もここで調整することができましてだいたいその人たちが寝る時間に合わせて変更することができますね僕とかだったら12時頃に寝るので1時ぐらいには作ってほしいなという感じで設定してみましたザザザッと製品の概要や使い方について見てきたんですけれども</p>
+<p><code>06:43</code> この製品をですね僕5日間ほどみっちり使わせていただいておりましてその期間でね分かったこの製品のいいところだったりとかここは気になるなっていうところもちょっと触れていこうかなというふうに思いますまず良かったところ一つ目は何と言ってもこのデバイスが日本企業が作っているというところですまあもう24時間僕がこのデバイスを付けっぱなしにするということでこのデータを預ける先がですね例えばなんかこうよくわからない外国の企業だったりとかするとちょっと不安だと思うんですけれどもその点このデバイスはかなり安心感があるかなというふうに思いますまたねここで録音された音声のデータというのはサーバーにアップロードはされるんですけれども文字起こしされた瞬間にそれらはすべて削除されるという仕様になっているのでそのあたりも安心かなというふうに思いました</p>
+<p><code>07:26</code> 個人的にはこういったデバイスって海外製のものがメインストリームになっているかなという感じがするので日本からこういったデバイスが世界に羽ばたいていくっていうのはかなり個人的には応援したいな広がってほしいなというデバイスかなというふうに感じます次に良かった2つ目の点はこのデバイスはですね有料のサブスクプランがあるんですけれども無料の枠がきちんとあるというところですプランを見てみると無料プランと有料プランの違いというか機能に制限が全くない状態になってまして制限があるのは時間のみという感じになってます無料プランでは10時間までの録音が可能でスタンダードは30時間そしてUアンリミテッドのプランが無制限になるという違いです 録音したい時だけこのボタンを押して終わっ</p>
+<p><code>08:11</code> たら録音を止めるという風な主導のスタイル にすればこの10時間でも自分の内製とかやったことのジャーナリングをするには 十分な時間なんじゃないかなというふうに思っていて製品を買ってサブスクをしない でも使えるというのはすごくいいポイントなのかなというふうに思います。 続いて3つ目に良かった点は、これはね少し主観が入るんですけれども、このデバイスやアプリのデザイン性がかなりいいかなというふうに思っています。 特にこのハードウェアをデザインされたのが、日本のプロダクトデザイナーの柴田文江さんという方で、ホームページ拝見すると僕がよくよく知っている製品、例えばKintoとかOfficechairのVertebraとか、数々のプロダクトをデザインされた方がこちらのデザインを担当されているそうです。</p>
+<p><code>08:52</code> 僕としてはですね、デザインもすごく好きですし、合わせてね、眼鏡とかをここにこうサングラスとか引っ掛けると、かなりね、違和感なく使えるんじゃないかなというふうに思いました。あとはですね、その日撮った写真なんかも実はね、自動でここに挿入してくれたりもして、本当にね、日記アプリとしてもめちゃくちゃ痒いところわかってるなっていうところを感じたりします。自分で日記を取る手間というのもかからないですし、眺めてワクワクするような画面デザインとかになっているんじゃないかなというふうに思います。そして4つ目なんですけれども、このデバイスなんとMCPに対応しております。</p>
+<p><code>09:27</code> MCPというのはですね、このデバイスに他のAIからもアクセスすることができる規格というのがMCPなんですけれども、例えば自分自身別のAIを使っていますとか、チャットGPD使っています、クロード使っていますという人がですね、この森で取った音声情報だったりとかジャーナリングの情報にアクセスして取得することができるんですねなので例えば森との会話の精度に不満があるからもっとより賢いクロードを使いたいとかそういった要望にも耐える企画になっていますし自分が普段使っているAIたちのコンテキストに普段の日常の会話</p>
+<p><code>10:04</code> 24時間のデータというのも読み込ませることができますなのでこのデバイスやアプリに閉じこもるのではなくてですね普段使っている自分のAIとも協業させる連携させることができるというのがすごく開かれたデバイスかなというふうに思いますそして最後めちゃくちゃ良かった5つ目のお気に入りポイントなんですけれどもこのデバイスがどちらかというと仕事向けではなくジャーナリングに意識を向けられて作られているデバイスであるというところです既存の製品というのは仕事とか会社での業務議事録の作成とかそういったことに特化されている製品が多い中で</p>
+<p><code>10:40</code> この製品はめちゃくちゃ珍しい世界初と歌っているだけであってジャーナリングとか自分の内製とか振り返りをするための個人のために特化されたデバイスであるというところですねこのチャンネルでは何度も何度もこのジャーナリングだったりとかこのAIでジャーナリングをする方法というトピックについて取り組んできました僕の趣味でもありますね僕自身は音声でジャーナリングをし始めてから実はですね2年ぐらいかなりの期間やってるんですけれども音声でジャーナリングをするってすごくねデバイス間の連携が複雑になりがちなんですね</p>
+<p><code>11:15</code> だからこそこういったデバイスからアプリその後の内製の時間まで全てねこれを手に入れることで完結してしまうというのはかなり考え抜かれたサービスなんじゃないかなという風に感じました一方でこの製品の気になるところもねいくつか散見されたのでこちらについても正直にレビューしていこうかなという風に思いますまず一つ目はですね電池持ちにムラがあるかなという風に感じました交渉値では24時間以上持つという風に書かれていたんですけれども僕の使い方のシチュエーションとかこの録音し続けるかしないかみたいなオンオフの何らかのシチュエーションの違いによって</p>
+<p><code>11:51</code> 持ちがいい日と悪い日というのがちょっとだけムラがありましたあのよく言えばですねこのまあまあ大きな筐体ではあるので例えばね2,3日持つとかそういったデバイスになってくれたら嬉しいなというのは個人的な感想ではありますね。バッテリーそのもの自体は多く積んでいるということみたいなので、例えば製品のリリース段階でもっともっと電池の持ちが改善しているということはあり得るかなというふうに思います。2つ目に気になったのは、現状こちらのアプリの対応がiOSのみであるということです。こちらはですね、開発者さんの方に直接インタビューさせてもらったんですけれども、今年中には確実にアプリがリリースされるということなので、おそらくですね、この製品が皆さんの手に届く頃には、Androidのアプリとか、あとはWeb版とかPC版とかの開発も視野に入れられているみたいなので、今後リリースされていくことかなというふうに思うんですけれども、発売時点の一番最新のタイミングではおそらくiOSのみでの対応になるというところだけ注意が必要かなと思います。</p>
+<p><code>12:52</code> そして最後気になった点なんですけれども文字起こしの精度についてですね先ほどのこのチェックインの直接入力する時の文字起こしというのはまあまあ精度がいいかなという風に見て取れるかなという風に思うんですけれども実際につける時はですね自分の口からやっぱ離れた位置にマイクがあるんですよね実際の中身のデータを見てみるとなんか取れているように見えて実際にこの当時僕が会話した内容じゃないかもって思うところがですね散見されるは散見されるんですね</p>
+<p><code>13:25</code> なんですけど実際のこの生成されるまとめの文章ですよねまとめの文章を見ると全然問題なく生成されているのでむしろこの音声データからこの整理された文章にされる時のソフトウェア側のチューニングはめちゃめちゃ賢い最後に製品についての情報なんですけれどもこちら現在幕開けでクラウドファンディングが実施中ということで本日投稿時点から今日からですね10月の30日の22時までクラウドファンディング実施中ということで安く買いたいという方はですね</p>
+<p><code>13:57</code> 概要欄のリンクからぜひチェックしてみてもらえるといいのかなというふうに思います幕開けではこの製品とアプリ側のプランスタンダードとプレミアムにそれぞれ安く入ることができる商品が最大40%ぐらい安くなる商品が販売されていまして先行販売価格は本体とスタンダードプランが安くなる方に関しては33,990円からそして本体とアンリミテッドプラン24時間記録することができるプランの40%オフのプランが41,990円から販売となっています最後に個人的な話なんですけれども</p>
+<p><code>14:36</code> よくこんなニッチな製品を日本で世界に発表させてくれたなっていうのが正直な感想で僕みたいに毎日の音声をただ自分の日記のためだけにつけ続けてGoogle Driveに貯めてそれをAIに読み込ませるっていう人はかなりニッチだと僕も思ってるんですね本来であれば会議用のデバイスとかに振るかなっていうところをあえて個人向けの内向きの製品に落とし込んでくれたというのが僕みたいな人がターゲットに作られたんだなっていう風には本当にぶっ刺さる製品だったので</p>
+<p><code>15:10</code> 今回の製品はですね忖度抜きにすごくお勧めできる製品なんじゃないかなという風に思っていますよければですね気になった方は概要欄のリンクからチェックしてみてもらえると嬉しいですということでこのチャンネルではこのような生産性に役立つサービスやガジェットを紹介していますこの動画がもし参考になったよと思ってくださった方は高評価やチャンネル登録まだの方はチャンネル登録もよろしくお願いしますまたこういった最新サービスやガジェットをカタエリアやコミュニティDiscordコミュニティもYouTubeメンバーシップにて運営しておりますのでよかったらそちらも合わせてチェックしてみてください最後までご視聴いただきありがとうございましたそれではまた次回の動画でお会いしましょうさよならん</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./2026-06-14-lifelog-grows-into-self-understanding" class="internal" data-slug="2026-06-14-lifelog-grows-into-self-understanding">2026-06-14-lifelog-grows-into-self-understanding</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./2026-06-13-private-vault-recording-design" class="internal" data-slug="2026-06-13-private-vault-recording-design">2026-06-13-private-vault-recording-design</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./2026-07-20-lifelog-tool-selection-axis" class="internal" data-slug="2026-07-20-lifelog-tool-selection-axis">2026-07-20-lifelog-tool-selection-axis</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（StructureNote）</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-41" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>バックリンク</h3><ul id="list-2" class="overflow"><li><a href="./📄-2026-09-13_Mori分析とゆりこ版ジャーナリング設計_v1" class="internal">📄 2026-09-13_Mori分析とゆりこ版ジャーナリング設計_v1</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>
