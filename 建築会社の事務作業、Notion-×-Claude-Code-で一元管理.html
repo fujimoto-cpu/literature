@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>建築会社の事務作業、Notion × Claude Code で一元管理</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="建築会社の事務作業、Notion × Claude Code で一元管理"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="建築会社の事務作業、Notion × Claude Code で一元管理"/><meta name="twitter:description" content="📺 動画情報 建築会社の事務作業、Notion × Claude Code で一元管理 🎙️ 建築 AI Studio ・ 📅 2026-05-10 ・ ⏱️ 26分59秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 建築会社の情報をぜんぶNotionに集約し、MCPで繋いだClaude Codeに請求書・発注書の作成や請求忘れチェックまで任せる事務効率化の仕組みを紹介する動画。 🗺️ 全体像 flowchart TD A[案件・請求・発注・日報をNotionに集約] -->|MCPで接続| B[Claude Codeが読み取る] B -..."/><meta property="og:description" content="📺 動画情報 建築会社の事務作業、Notion × Claude Code で一元管理 🎙️ 建築 AI Studio ・ 📅 2026-05-10 ・ ⏱️ 26分59秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 建築会社の情報をぜんぶNotionに集約し、MCPで繋いだClaude Codeに請求書・発注書の作成や請求忘れチェックまで任せる事務効率化の仕組みを紹介する動画。 🗺️ 全体像 flowchart TD A[案件・請求・発注・日報をNotionに集約] -->|MCPで接続| B[Claude Codeが読み取る] B -..."/><meta property="og:image:alt" content="📺 動画情報 建築会社の事務作業、Notion × Claude Code で一元管理 🎙️ 建築 AI Studio ・ 📅 2026-05-10 ・ ⏱️ 26分59秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 建築会社の情報をぜんぶNotionに集約し、MCPで繋いだClaude Codeに請求書・発注書の作成や請求忘れチェックまで任せる事務効率化の仕組みを紹介する動画。 🗺️ 全体像 flowchart TD A[案件・請求・発注・日報をNotionに集約] -->|MCPで接続| B[Claude Codeが読み取る] B -..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/建築会社の事務作業、Notion-×-Claude-Code-で一元管理"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/建築会社の事務作業、Notion-×-Claude-Code-で一元管理"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 建築会社の事務作業、Notion × Claude Code で一元管理 🎙️ 建築 AI Studio ・ 📅 2026-05-10 ・ ⏱️ 26分59秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 建築会社の情報をぜんぶNotionに集約し、MCPで繋いだClaude Codeに請求書・発注書の作成や請求忘れチェックまで任せる事務効率化の仕組みを紹介する動画。 🗺️ 全体像 flowchart TD A[案件・請求・発注・日報をNotionに集約] -->|MCPで接続| B[Claude Codeが読み取る] B -..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="建築会社の事務作業、Notion-×-Claude-Code-で一元管理"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3043"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3043" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>建築会社の事務作業、Notion × Claude Code で一元管理</a></div></nav><h1 class="article-title">建築会社の事務作業、Notion × Claude Code で一元管理</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-27T15:00:00.000Z">2026年9月28日</time><span>56 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>建築会社の事務作業、Notion × Claude Code で一元管理</strong>
+🎙️ 建築 AI Studio ・ 📅 2026-05-10 ・ ⏱️ 26分59秒
+🔗 <a href="https://www.youtube.com/watch?v=b5efs7rET4k" class="external">https://www.youtube.com/watch?v=b5efs7rET4k<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/建築会社の事務作業、Notion-×-Claude-Code-で一元管理.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>建築会社の情報をぜんぶ<a href="./notion" class="internal alias" data-slug="notion">Notion</a>に集約し、<a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>で繋いだ<a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>に請求書・発注書の作成や請求忘れチェックまで任せる事務効率化の仕組みを紹介する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[案件・請求・発注・日報をNotionに集約] -->|MCPで接続| B[Claude Codeが読み取る]\n    B -->|案件DB・マスターDBを参照| C[請求書・発注書をExcelで自動作成]\n    C -->|作成後| D[Notionの請求DBに自動記録]\n    A -->|完工なのに未請求| E[Notion側から毎朝自動リマインド]&quot;">flowchart TD
+    A[案件・請求・発注・日報をNotionに集約] -->|MCPで接続| B[Claude Codeが読み取る]
+    B -->|案件DB・マスターDBを参照| C[請求書・発注書をExcelで自動作成]
+    C -->|作成後| D[Notionの請求DBに自動記録]
+    A -->|完工なのに未請求| E[Notion側から毎朝自動リマインド]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 情報は必ずNotion一箇所に集約する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>スプレッドシートやExcelが社内に何個も分散すると情報がバラバラになり、<a href="./AI" class="internal" data-slug="AI">AI</a>に作業を任せる時代になるほど致命的になる。案件・請求・発注・マスター（元請け／協力業者の会社名・住所・電話番号）をすべて同じNotionワークスペースに集め、社員が知りたい情報はNotionを見れば分かる状態を先に作るのが前提。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. MCPでNotionとClaude Codeを接続する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>MCP（AIと外部サービスを繋ぐ標準規格）でNotionを連携すると、Claudeがデータベースを正確に読み取れる。「4月に完工している案件の請求書を作成して」と頼むだけで、案件DBのステータス・取引先を確認し、あらかじめ渡した請求書スキル（マニュアル）と<a href="./Excel" class="internal" data-slug="Excel">Excel</a>フォーマットを使って請求書を自動生成、Notionの請求DBにも作成履歴を自動で追記してくれる。2件の請求書作成で約3分。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. PDFはNotion経由でなく直接Claudeに渡す </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>見積書・仕様書・施工報告書などNotionに添付したPDF自体の中身はClaudeが読み取れない。Notionのデータベースを参照させる自動化と、PDFやGoogleドライブのファイルを直接Claudeに渡す作業指示は使い分けが必要。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 日報・タイムカードもNotionフォームで蓄積する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>職人にURLだけ渡せば、Notionアカウントが無くてもスマホから現場名・作業日・施工内容・写真を入力でき、即座にNotionデータベースへ反映される。現場ごとの詳細ページにも自動で紐付く。同じ仕組みで社員の出退勤を記録すれば、給与計算までClaudeに任せられる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 請求忘れ・入金漏れをNotion側で自動検知する </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>完工日を過ぎてもステータスが「請求済み」に変わっていない案件は、毎朝9時にNotion上でメンション通知される。別に入金管理データベースも持ち、支払予定日と実際の入金日を記録して未入金を追跡している。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 案件DBのプロパティ設計を真似する</strong>
+「元請け＝取引先」「ステータス」「着工日／完工日」のようにプロパティを揃えておく発想は、KONNEKTの案件ハブmdの <code>案件:</code> <code>status:</code> <code>client:</code> 設計と同じ思想。請求済み／未請求のようなステータス欄が自分の案件管理に無ければ、まずそこから揃えると同じ自動化が効きやすくなる。</p>
+<p><strong>② 「Notionから読めないもの」を先に仕分ける</strong>
+見積書PDFや仕様書をClaudeがNotion経由で読めない、という制約は自分の業務でも同じ。案件フォルダのファイルを「Notionから参照OKなもの」と「直接渡すもの」に分けて把握しておくと、次にAIへ自動化を頼むときに迷わない。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 資金的に余裕がなくなってしまうっていうのがあります1年前にやった工事の入金が実はされていなくて後々になって気づくタイムラインビューを使うことでこんな感じで工程表みたいなのも作れるので実際にAIエージェントがそのノーションを参考にして作っていくっていうイメージになりますURLを職人さんに渡しておけばこんな感じで日報を書くことができますはい皆さんご苦労様です今日はノーションとクロードコードを使って会社の売上管理だったり案件管理請求書の作成などをすべてノーションとクロードコードで完結させる方法を紹介していきたいと思いますこれまでの動画でこのクロードに対して作業を任せる請求書の作成だったり見積書の作成を任せるみたいなのを紹介してきたんですが</p>
+<p><code>00:45</code> 今後AIエージェントに作業を任せられるのは確かなんですがAIが参考にする情報っていうのを正確にかつ一つのところにきれいにまとまっているっていうことが重要になってきます例えば請求書を作成してくださいって言った時にどの現場のどの取引先への請求書をどういう風に作っていくのかっていうのをAIが正しく判断できるような状態にしておくっていうのが必要になってきます。そこで今回使うのがNotionになります。今回は僕が使っているNotionとこのクロードコードを組み合わせてAIが情報を正確に読み取って確実に作業をしてくれるっていう仕組みを紹介していきたいと思います。皆さんの会社でも現場の案件を管理しているスプレッドシートとかエクセルなどがあると思うんですが</p>
+<p><code>01:30</code> それが必要以上にスプレッドシートが何個もできてしまったりエクセルが何個もできてしまっていてその売上管理だったり現場の管理あとは請求の管理だったりっていうのを情報がいろんな場所にあって一つの場所に保管できていないっていう会社の方結構多いかと思いますまたその社内の重要な情報取引先との業務フローだったりマニュアルっていうのを担当者だけがその情報を知っていて他の社員は全然知らないとか一つの共有できる場所に情報を置いてないっていう会社の方結構多いんじゃないかと思ってますなんでこういうことになってしまうかっていうとやっぱりこの建築業者さんっていろんな取引先もいればいろんな協力業者さんがいると思うんですよね</p>
+<p><code>02:14</code> そうなるとどうしても情報がバラバラになってしまうっていうのはもちろんよくあると思いますこの状態だと会社の皆さんにとってもかなり非効率で何かをする時に仕事が止まっちゃったりっていうのは結構あると思いますしかも今後AIに作業を今回のようなクロードに任せていくっていう風になっているといろんな情報やデータがいろんなところにあったりするとAIが読み取りづらくなってしまうっていうのが結構問題になってきますAIは言われたことに関してはかなり正確に作業してくれるっていうのはあるんですが、その前提としてまずそのAIにしっかり正確な情報だったり見やすい情報、データを渡していかないといい作業をしてくれないっていうのがもちろん前提としてあります。なので僕のAIの活用する方法としてやってほしいことは、情報やデータをできるだけ一つの場所に集めておく。</p>
+<p><code>03:02</code> さらにそれが集めておく場所っていうのがAIにも読み取りやすいっていうところに集約しておくっていうことが重要になってくると思ってます。その集約先としてNotionを僕は使ってます。まずこれがNotionとクロードコードの関係性の図解なんですが、建築業者のAI活用としてまずNotionに関しては情報を置く場所として使っていきます。そしてその情報を元にしてこのクロードコードをエージェントとして動かして作業していくっていうこれが現状だと僕のベストな運用の仕方なのかなと思っていますノーションは情報をすべて集める場所</p>
+<p><code>03:39</code> 社員の皆さんが知りたがっている情報は基本的にはすべてノーションを見れば分かる状態っていうのを作っていきますそして一方でこのクロードコードっていうのはそのノーションの情報を読み取って僕たち人間が指示を出して書類を作ってとか報告書を作ってっていうことで実際にAIエージェントがそのノーションを参考にして作っていくっていうイメージになります。この2つが相性がいい理由っていうのが、まずこのMCPっていう連携方式でつなげられるからになります。MCPって何かっていうと、AIが見やすい、AIと外部サービスをつなぐ標準的なケーブルみたいな感じです。このMCPでAIに連携できるっていうのは、一番AIが読み取りやすい連携方法っていうことになります。</p>
+<p><code>04:23</code> NotionとクロードコードをMCPでつなぐと何ができるかっていうと、もちろん案件管理はできるんですが、その案件に対しての色々な書類をこのNotionをベースにして作ることができたりしますあとは請求漏れのリマインドとかもこのNotionですることができますなのでこのNotionは複数人のチームで使うことができるのでこの一つのNotionを共有しあって全ての社員さんがこのNotionの中に情報を集められるような仕組みを作っておくそうすることでNotionがオールインワンの管理ダッシュボードになってこのノーションを見れば今現状の会社の状況だったり現場の状況っていうのも全て把握することができるみたいな感じにしていくのがベストです</p>
+<p><code>05:05</code> もちろん会社に関して社長だけが見られるページだったり経理さんだけが見れる限定的な場所も作れるのでそういう使い勝手もかなりノーションはいいかと思ってます今まではこのクロードコワークを使っていたんですが今回はこのクロードコードを使っていきますこのクロードコワークとこのクロードコードの違いは何ですかっていう結構よく聞かれるんですが基本的な性能だったり使い方っていうのは一緒ですただ明確な違いがあるのはこのクロードと会話して1回の会話で読み込める情報の量が違いますフォアアークは例えばA4で言うと</p>
+<p><code>05:38</code> 約400ページぐらいの会話の量を1回で保存することができるんですがクロードコードになるとその約5倍A4サイズで約2000ページ分ぐらいの会話内容を1回で保存することができますただ使い方は先ほども言ったように基本的には同じなので難しく考えないで使っていただいて大丈夫ですはいでは早速デモの方やっていきたいと思いますここが僕が作ったこのダッシュボードになります一応全部データはデモのものになるので架空のデータが記載されているんですがこの中で全て案件を一眼で管理しているという形になります</p>
+<p><code>06:14</code> 上のこの4月の案件まず僕は月ごとでまとめているんですが物件の着工待ちだったり今施工中の物件観光した物件と請求済みで今分けていますこの4月案件とここの4月案件のデータベースは見栄えを変えているだけっていう形になりますこれを見方を変えられるんですがレイアウトのところから例えばこのボードだとこんな感じで工事の内容に分けて見れたりします一般的なこのテーブルビューっていうので見ていますこのデータベースっていうのが何かっていうとノーション上でExcelやスプレッドシートみたいに</p>
+<p><code>06:49</code> 情報を表にして一覧で管理する箱になります例えばこの一つの案件に対してこのプロパティっていうものをどんどん付けられるんですが例えば元受けはどこなのかあと工事内容だったり着工日だったり完工日っていうのも一応このプロパティに入れられますなので僕はこの4月案件のところを見れば今その月にどの案件が着工していてどういう内容なのかっていうのを一目で見ることができますこのNotionのデータベースっていうのはこのNotionで一番使う仕組みになっていてもちろんこういう感じでテキストを入れることもできるんですが</p>
+<p><code>07:25</code> こういったデータベースを作ってこういうところにですねファイルも付けられるんでこのテキストで表で管理するのとプラスでファイルも添付できるっていうのがNotionのすごいところですあとはさっき言ったようにいろんな見やすい形でレイアウトを変更できるので自分の好みの管理しやすいレイアウトで作る ことができますはいその次にこの4月の請求っていうところを僕は作っているんですが これはもう請求に関するデータベースになります例えばこの4月の案件でこの ステータスが観光になっている物件がこの2件あったとしますこの観光になっている 案件この2つの案件の請求書をクロードに</p>
+<p><code>08:03</code> 作成お願いするとクロードはこのデータベースを見てそこから請求書を作ってくれるって いう形になりますちょっと実際に行ってみますこれが僕のクロードコードの画面になりますこのクロード コードはこの黒子ワークと本当に同じで基本的にこの ui 見た目が違うだけでできることはあんまり変わらないですたださっき言ったようにこの新しい今ここから 開始する会話の記憶量っていうのがクロードコードの方が長く保存することができますこの一つの会話の中でAIに対してより多くの会話ができたりそれに対してコワークは</p>
+<p><code>08:37</code> クロードコードに比べると少し小さめの保存量になるので大きいタスクをしたり作業をする時っていうのはこのクロードコードを使うのが一番いいかと思いますさらに僕はノーションをこのクロードコードにつないでいるのでクロードコードに指示をしてあげると僕のノーションのデータを見て作業してくれるという形になりますmcp で連携されているのでよりこのクロードが正確にノーションのデータを読み取ってくれます例えば僕のノーションのデモ用ダッシュボードの中で4月に完工している案件の請求書を作成してこんな感じで4月に完工している物件の請求書を作成してほしいとお願いしてみますそうするとクロードはノーションの僕のダッシュボードを見て4月に何の案件が完工しているのかっていうのを確認して取引先も僕はすべて紐付けているので</p>
+<p><code>09:25</code> 取引先を見てそれに対する請求書を作成してくれます出来上がる請求書の会社名は僕は架空のものに作り上げているんですがそれで作成をしてくれると思いますなので月末に必ず請求書の作業っていうのはすると思うんですがこのノーションに全てのステータスを最新のものにしておいて構築だけしておけば月末に一言言うだけでそれぞれの取引先の請求書を作成してくれるっていう形になりますこの自動化だけでも事務員さんがかなり楽になると思っているのでこういう毎月もしくは毎日起きるようなタスクっていうのは</p>
+<p><code>09:58</code> このクロードにお願いしてやっていくのが一番楽になるのかなと思ってます僕はあらかじめスキルっていうのをクロードに教えてます請求書を作るための仕事のマニュアル書っていうのを教えているのでそこを今読みながらさらにこのNotionのデータを読みながら作ってもらっているという形になります僕はすべてExcelで請求書を作ってもらうようにしているのでもともとフォーマットを作ってこのクロードに渡しているのでそれを使って今作成しているって感じになります今実際にExcelで作ってくれたのでちょっと確認してみます今4月の案件で完工になっているのは</p>
+<p><code>10:34</code> このデモフォーム、元お客さんがデモフォームのM様邸と個人のお客さんのF様邸が4月の完工案件になってますまずこのデモフォームの請求書に関してはこんな感じで作ってくれてます請求日だったり金額税込みで253万ですねこの振込先もこれ架空なんですが自社の振込先をここに登録しておけば毎回この請求書っていうのはこの登録された口座番号で作成してくれますで日付の内容だったりもこんな感じでちょっとこういうところの細かいところは修正は必要なんですが大方の請求書はこんな感じでバッと作ってくれます</p>
+<p><code>11:09</code> そしてノーションを確認するんですが今クロードはこの4月の案件のデータベースを見て請求書を作ってくれましたそうすると4月請求っていうデータベースの行にもクロードは請求書を作った後に追加してくれますそうすることで1回請求書を作ればこの請求のところにクロードが自動的にこんな感じで行に加えてくれるので何を請求したのかっていうのがここで分かるようになってます。こっちが田中一郎さんの方なんですが、こっちも基本的な口座番号だったり、会社名の社番だったりっていうのは変わらないんですが、内容を記載してくれて、</p>
+<p><code>11:44</code> 宛先も変更して作ってくれます。田中さんの方に関しても、この4月請求のこの行に自動的に請求書を作った段階で作ってくれるので、請求書を作ってくれるのと、プラスでこのNotionの記録として残してくれるっていうのをクロードが自動でやってくれるっていう形になってます実際に今2件の観光案件があってその請求書を作るのに大体3分ぐらいかかっていたんですがどの会社さんも何件も取引先ごとに作っていると思うんですがNotionをクロードに連携しておくことで一言言うだけで請求書をまとめて作ってくれるので</p>
+<p><code>12:19</code> これでもかなり時間の効率化につながると思いますただしこの請求書を作ってもらうのはクロードにやってもらえるんですが最後の確認と修正みたいなのはもちろん人間がしなければいけないので必ず最後に確認してからその請求書を先方に送るという形にするのがいいかと思います今説明したのは請求書を作るっていうのをクロードにお願いしてやってもらったんですがその他にも例えば発注書っていうのもこのNotionを参考にクロードが作ってくれたりしますその発注書っていうのも</p>
+<p><code>12:50</code> 僕はこの発注データベースっていうのを別で作っているので案件に対しての発注先っていうのをこんな感じデータベースに登録だけしておけば現場名もしくはその月の発注物件の発注書を作ってっていうだけでさっきの請求書みたいに発注書を作ってくれるっていう形になりますさっきの請求書のデータベースもそうなんですが元受けさんをすべて僕は紐付けているのでその元受けさんの情報だったりさっきの発注書に関しても協力業者さんの情報をクロードがこのノーションから読み取って</p>
+<p><code>13:25</code> 発注書や請求書を作ってくれます元受けさんだったり協力業者さんの情報がどこにあるかっていうとこのマスターっていうデータベースに僕は入れてますこんな感じで会社名だったり住所から電話番号だったりそういうのもすべてここで管理しているのでこの元受けマスターのところを見て請求書の宛先などをExcelで記入してくれているって形になりますこっちが協力業者さんのマスターデータベースになりますとにかく協力業者さんってかなり多いと思うんですがその協力業者さんの情報をこんな感じで綺麗にまとめておくだけで発注書っていうのもクロードが正確に作ってくれます</p>
+<p><code>14:02</code> 今作ったようなこういう請求書だったり発注書近隣挨拶文っていうのもこの案件のさっきのデータベースの着工日だったり観光予定日っていうのを事前に入れておくことでクロードはNotionのこの案件データベースを読み込んで作ってくれるってことができますただしこのNotionの中からデータを抽出して作成できないものっていうのももちろんあってこのクロードは例えばNotionの中にPDFがあったとしたらそのPDF自体を読み込んだりはできないので例えば見積書、仕様書、施工報告書っていうのは今のNotionを参考にするではなくて</p>
+<p><code>14:38</code> クロードに業者さんから出てきた見積もりをクロードに渡して見積書のひな形に落とし込んであげるっていうのはできるんですがこのNotionからやるっていうよりかは直接データのPDFをクロードに渡したりもしくはGoogleドライブの中からダウンロードしてもらって仕様書を作ってもらったりっていうのができたりしますなのでこういうふうにNotionからデータを参考にクロードにやってもらうっていうのとクロードに対して直接データを渡して何か作業をしてもらうっていうのの使い分けが必要になってきますさっき言ったように</p>
+<p><code>15:11</code> 請求書を作るこのスキルっていうのも僕はクロードに教えていますなので請求書を作るためのスキルとあとは発注書を作るためのスキルっていうのをもともとこのクロードに1回教え込んでおくことでこのNotionを参考にクロードがその後はどんどんタスクを実行してくれるという形になりますダッシュボードに戻ったんですがこの一件一件の現場に対して他にも工程だったりお家の外壁の色だったり使う材料っていうのももちろん入力しなきゃいけないんですがこのNotionはこのデータベースだけではなくてこの開くっていうところがあるんですが</p>
+<p><code>15:45</code> ここを押すと詳細ページっていうのが開かれますここにはこの案件に対しての情報をこういう感じで細かく入れられるので例えば僕は塗装工事の会社をしているんですが現場の仕様っていうのもこんな感じで綺麗にデータベースでまとめることもできますし工程っていうのもタイムラインビューを使うことでこんな感じで工程表みたいなのも作れるのでNotionに入れることで工程表もこの一つの案件に紐付けられるという形になりますその他にもメモだったり注意事項現場の注意事項っていうのもこういうテキストで入れてあげることができてさらに後ほど説明するんですが</p>
+<p><code>16:21</code> この日報っていうのも現場の職人さんに書いてもらってそれを自動的にここに表示させるように僕はしてますあとはこの最後の資料欄ですね資料のところに現場の図面だったり工事の仕様書見積書っていうのをこのデータベースに入れてファイルに落とし込むってこともできますNotionにはデータも入れられるのでPDFだったり何枚かの画像っていうのは全て添付できるので一つの案件に対して紐づいてファイルも工程表も添付できるのでそこら辺が一元管理できるっていう意味ではかなり強いところかなと思ってます</p>
+<p><code>16:57</code> 次に日報ですね今言ったみたいに現場ごとの日報っていうのも職人さんに書いてもらったりしてると思うんですが僕はここに日報のデータベースっていうのも作っていますこれがどういうものかっていうと先ほどと同じようにデータベースで管理しています職人さんから上がってきた日報っていうのは全部ここに追加されていくようになってますその職人さんはどうやって日報を書いてるかっていうとこの日報の入力フォームっていうのがありますここに現場名だったりその作業の日程施工内容担当者の名前だったりあとはまあ場合によっては現場の写真っていうのもこの日報のフォームで入力することができます</p>
+<p><code>17:36</code> これはパソコンだけじゃなくて携帯スマホからでもできるのでリンクがあるんですが僕はこの日報のリンクを職人さんに渡しておいて職人さんが作業が終わった後にはここに入力してもらうことでその現場の内容が全てここのデータベースに溜まっていくっていう形になりますはい今さっきの日報のURLからこのスマホで開いてみましたURLを職人さんに渡しておけばこんな感じで日報を書くことができます実際に今入力してみるんですがこんな感じで日報を入力してみましたこれで送信を押してみます</p>
+<p><code>18:09</code> そうするとこのさっきの日本データベースに追加されています現場名の山田亭と作業日で僕の名前と施工内容が全て反される ようになってますこんな感じでこのリンクを渡しておけば職人さんにその日の日報をスマホから書いてもらってそれがすぐこっちに反映されるっていう形になるのでその 職人さんがノーションを使っていなくてもこれは url だけで回答ができるのでかなり便利な機能となってますその日報はどんどんここに溜まっていくんですが例えば この c 様体っていうこの現場の日報をだけを見たいっていう時はC様邸の詳細の中に日報のデータベースを入れています</p>
+<p><code>18:45</code> このC様邸の現場の日報のみ追加されるという形になっていきます今のNotionフォームで日報をこのNotionにどんどん貯めていくことによって例えば今のそのNotionフォームだけでも便利なんですがこれをさらにこのクロードと組み合わせることで例えば山田様邸の日報をまとめて現場の状況を教えてくださいっていうのもAIにお願いすることでAIが全て教えてくれたりどの作業がどういう順番で進んだのかっていうのも日報に貯めておくことで最後AIに聞けば回答をNotionから読み取ってしてくれるっていう形になります</p>
+<p><code>19:19</code> 今のは日報をNotionフォームでやっていたんですが社員さんがいる会社さんに関してはタイムカードっていうのもNotionのフォームで作ることもできたりします社員さんが出勤した時刻にNotionフォームで打ち込んであげてさらに退勤する時に情報を入れてあげれば社員さんの出勤状況っていうのもどんどんデータベースにたまって最終的に給料を計算するときにこのクロードにお願いして何々さんの給料計算だったりそういったことも自動化できてかなり効率化できるかなと思ってますここからは請求に関してなんですが</p>
+<p><code>19:55</code> これ建築業界の皆さんよくわかると思うんですが例えば4月に完工した物件があったとして4月末にしっかり請求をすれば例えば月末締めの40日サイトの取引先であれば6月10日に入金するっていうキャッシュフローになるんですがもし4月の末に請求忘れてしまったっていう時はその次の月5月の末に請求扱いになってしまって約1ヶ月後ろ倒しになってしまうっていうことがあったりします僕の会社でも過去に何回かあったんですが請求を忘れてしまうと入金サイクルが遅れるので</p>
+<p><code>20:31</code> 業者さんの支払いだったり資金的に余裕がなくなってしまうっていうのがあります特にこの建築業界っていうのはちょっとこの支払いのサイトが長いのでそういったところで言うと請求っていうのはもう必ず決まった日程にやらなければいけないと思ってますただやっぱりこの人間が請求書を作っていく過程になるのでもちろん忘れてしまうって時もあると思うんですね例えば今回みたいな4月完工でステータスが完工になっている案件があったとしますこの案件に関しては4月末に請求しなければいけないんですがその請求をせずに放置していた場合その場合っていうのは僕は毎日このノーション側からリマインドをしてくれる ような設計をしていますはい例えばさっきのこの4月案件のところでステータスが</p>
+<p><code>21:17</code> 完工になっている物件があったとします 完工になっている物件は4月30日に請求をしてでさらにこのステータスを請求済みにして請求完了という形になるんですがこの 税立つが請求済みではなくて観光のままになって5月1日になったとしますそうするとその5月1日になった瞬間にこのNotionの中で僕にメンションをしてくれてこの案件がまだ請求していませんっていう風に知らせてくれるっていう仕組みを作ってますこんな形で未請求リマインドっていうページを僕は作ってます毎日朝の9時に請求していない物件があったらこのリマインドをしてくれるっていう仕組みを作っているんですが</p>
+<p><code>21:57</code> このNotion上で通知が来るので観光日を過ぎているのにステータスを請求済みにしていない物件をここでリマインドしてくれるっていう形になってます今のが請求の管理方法になるんですがさらに僕は入金管理のデータベースっていうのも別で作っていますこのデータベースは請求した物件に対して入金確認をしてその入金がされていれば入金済みされていなければそのまま入金待ちっていうステータスに変えているっていう形になりますこれもよくあると思うんですが請求書は出したんですが入金確認をしていなくて</p>
+<p><code>22:31</code> 実際に1年前にやった工事の入金が実はされていなくて後々になって気づくっていうのも結構あったりしますなので僕はこの入金管理のデータベースを使って毎月支払予定日だったり実際に入金された日程だったりっていうのもここでプロパティを作って入力していますこうすることで請求書だけではなくて入金周りもこのデータベースで管理してさらに入金がされていない物件に関しては確認することができたりするのでこういう風に全部お金回りだったり案件回りっていうのも全て</p>
+<p><code>23:04</code> Notionで管理するようにしてますこんな感じで僕はこのNotionでダッシュボードを作って事務員さんだったり現場の監督さん社長さんもこのダッシュボードを見れば今の現状の会社の状態入金請求管理っていうのも全てこのNotion上で理解することができるっていう仕組みを作ってます僕はこのNotionを有料プランで使っているんですがもちろん無料でもこういうダッシュボードは作ることができますあとは現場の案件のページを例えば職人さんに共有したい時ってあると思うんですが</p>
+<p><code>23:38</code> その共有の仕方っていうのもかなり簡単にできるようになっていて例えばこのページここに関しては現場の内容しか入れていないので現場の仕様と工程表あとはメモ書きだったりどちらかというとこの現場サイドの職人さんに伝えなきゃいけない内容が記載されているんですがこれを職人さんにすぐ共有することもできますこの共有ってところを押して公開っていう形にするとこのリンクを知っている人に関してはこのリンクからこの ページを見ることができるので職人さんにこの現場の情報を共有するときにもページ の url を送ってあげることで情報を見ることができますやっぱりこのノーションの 一番いいところはこういう感じで自由に</p>
+<p><code>24:20</code> データベースを使って情報をまとめたり 工程表っていうのも簡単にこのタイムラインのレイアウトで作ることができるので皆さんの会社にあった情報の管理をする ことができる構築することができるっていうのが一番使いやすいっていうのとあとはノーションにすべて情報をまとめておくことで例えばクロードではなくて他の ai に切り替えた時に mcp でノーションに連携してあげることで新しいAIを使い始めた時でもこの自分の会社の情報を全て正確に渡せるっていうのが一番のメリットになっていると思います</p>
+<p><code>24:53</code> あとはスプレッドシートだったりExcelと違うところは表の中にこういった案件ごとの詳細のページを作ることができるっていうのとファイルも全て添付できるので本当にそのNotionのページの中で全て管理することができるっていうのが一番の魅力かなと思ってますはいいかがだったでしょうかこんな感じで僕はNotionを情報のハブとして会社の情報現場の情報っていうのを一元管理していますさらに今後先ほども言ったんですが今はクロードがかなりAIの中では使いやすくてさらに正確にいろいろ作業を行なしてくれるっていうものになっているんですが</p>
+<p><code>25:30</code> 今後オープンAIだったりジェミニっていう他のAIプラットフォームがクロードよりいい機能を出してきて他のAIに乗り換えるってなった時でもこのノーションに情報をすべて構築しておけばこのクロードだけではなくて他のAIにも簡単に乗り換えることができます今日のまとめに入るんですが建築業の多くの会社さんでいろんなプラットフォームに情報が散在している状況って結構あると思っていて今後AIを使っていくにはいろんな情報をいろんなところに置くんではなくて一箇所のプラットフォーム今回みたいなノーションに置くことで</p>
+<p><code>26:06</code> 今後さらにAIを活用していくっていうのが簡単にできていくと思いますなのでまずは一箇所に情報を集めてそこで社員の皆さんもそうですしAIが読める形っていうのを作っておくことで今後業務効率化をAIにお願いしていく上ではかなり重要になってくると思っています今回はこのノーションにすべて情報をまとめてその上でそのノーションの情報からどんどんAIにタスク作業をしてもらうっていうやり方を紹介させてもらいました今後もこんな感じで建築業の方の悩みを解決できるようなプラットフォーム、AI活用方法っていうのを発信していくので、ぜひ今後も見ていただければと思います。それでは次の動画で会いましょう。建築AIスタジオでした。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote）</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a>（StructureNote）</li>
+<li><a href="./ai-workflow" class="internal" data-slug="ai-workflow">ai-workflow</a>（StructureNote）</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（StructureNote）</li>
+<li><a href="./business" class="internal" data-slug="business">business</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1166" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>
