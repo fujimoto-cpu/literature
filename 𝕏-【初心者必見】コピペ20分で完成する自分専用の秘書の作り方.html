@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方"/><meta name="twitter:description" content="𝕏 投稿情報 @hiro44_pino · 📅 2026-06-23 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方 メール返信、議事録、社内への連絡文、日程調整……。 一つ一つは数分でも、積み重なると毎週まとまった時間が消えてます。 週3〜4時間、実はそこに溶けてるかもしれません。 それ、あなたのせいじゃない。「秘書」をまだ作っていないだけです。 今日は、そういった「書く系の雑務」をまるごと引き受けてくれる自分専用の秘書を、Claude Codeで作る方法を書きます。 少し前ま..."/><meta property="og:description" content="𝕏 投稿情報 @hiro44_pino · 📅 2026-06-23 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方 メール返信、議事録、社内への連絡文、日程調整……。 一つ一つは数分でも、積み重なると毎週まとまった時間が消えてます。 週3〜4時間、実はそこに溶けてるかもしれません。 それ、あなたのせいじゃない。「秘書」をまだ作っていないだけです。 今日は、そういった「書く系の雑務」をまるごと引き受けてくれる自分専用の秘書を、Claude Codeで作る方法を書きます。 少し前ま..."/><meta property="og:image:alt" content="𝕏 投稿情報 @hiro44_pino · 📅 2026-06-23 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方 メール返信、議事録、社内への連絡文、日程調整……。 一つ一つは数分でも、積み重なると毎週まとまった時間が消えてます。 週3〜4時間、実はそこに溶けてるかもしれません。 それ、あなたのせいじゃない。「秘書」をまだ作っていないだけです。 今日は、そういった「書く系の雑務」をまるごと引き受けてくれる自分専用の秘書を、Claude Codeで作る方法を書きます。 少し前ま..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-【初心者必見】コピペ20分で完成する自分専用の秘書の作り方"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-【初心者必見】コピペ20分で完成する自分専用の秘書の作り方"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 @hiro44_pino · 📅 2026-06-23 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方 メール返信、議事録、社内への連絡文、日程調整……。 一つ一つは数分でも、積み重なると毎週まとまった時間が消えてます。 週3〜4時間、実はそこに溶けてるかもしれません。 それ、あなたのせいじゃない。「秘書」をまだ作っていないだけです。 今日は、そういった「書く系の雑務」をまるごと引き受けてくれる自分専用の秘書を、Claude Codeで作る方法を書きます。 少し前ま..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-【初心者必見】コピペ20分で完成する自分専用の秘書の作り方"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-4818"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-4818" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方</a></div></nav><h1 class="article-title">𝕏 【初心者必見】コピペ20分で完成する自分専用の秘書の作り方</h1><p show-comma="true" class="content-meta"><time datetime="2026-06-22T15:00:00.000Z">2026年6月23日</time><span>47 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/productivity" class="internal tag-link">productivity</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@hiro44_pino</strong> · 📅 2026-06-23
+🔗 <a href="https://x.com/hiro44_pino/status/2069344410098397667" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 <a href="https://x.com/hiro44_pino/article/2069344410098397667" class="external">元の記事<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>（本文なし。記事へのリンク投稿）</p>
+<h2 id="-記事内容">📄 記事内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-記事内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>【初心者必見】コピペ20分で完成する自分専用の秘書の作り方</strong></p>
+<p>メール返信、議事録、社内への連絡文、日程調整……。 一つ一つは数分でも、積み重なると毎週まとまった時間が消えてます。 週3〜4時間、実はそこに溶けてるかもしれません。 それ、あなたのせいじゃない。「秘書」をまだ作っていないだけです。 今日は、そういった「書く系の雑務」をまるごと引き受けてくれる自分専用の秘書を、Claude Codeで作る方法を書きます。
+少し前まで、自分も同じでした。
+朝、パソコンを開いてまずやることは「メールの返信」。 1件1件、丁寧に書こうとすると、気づけば1時間が過ぎています。
+メールが終わったら、次は会議の議事録。 「あの発言、どう文章にすればいい？」 「決定事項と宿題事項、どう整理する？」
+議事録が終わったら、今度は日程調整の連絡。 「参加者全員の空き時間を確認して、候補日をまとめて……」
+気づけばお昼。本来やりたかった仕事は、何も進んでいない。
+「私の仕事って、書類を書くことだったっけ……」
+そう思いながら退社する日が続いていました。
+それが変わったのは、Claude Codeに「自分専用の秘書」を作ってもらったからです。
+今は、朝の雑務がまとめて15〜20分以内に終わります。 メールの下書き、議事録の骨子、連絡文のたたき台——全部秘書が用意してくれるので、私は確認してOKを押すだけ。 「この文章、どう言えばいいかな」と悩む時間がなくなりました。
+「こんな使い方ができるなら、もっと早く知りたかった」と思っています。
+この記事では、その「自分専用の秘書」の作り方を、プログラミング不要・コピペだけで完結する形でお伝えします。Claude Codeをインストール済みの方なら、今日中に使い始められます。
+以前の記事で「Skills」「Projects」「MCP」について書きましたが、今回はその中でも「すぐに効果を実感できるもの」として、自分専用の秘書を選びました。難しい設定は一切なし。コピペ20分で完成します。</p>
+<ol>
+<li>そもそも「自分専用の秘書」って何？という人へ
+自分専用の秘書とは、ひとことで言うと——
+「書く系の雑務を、自分の代わりにやってくれるAI」のことです。
+たとえばこんなことを頼めます：
+メールの返信下書き
+会議の議事録作成
+社内向けの定型連絡文・テンプレ作成
+日程調整の候補日まとめ
+今日の予定確認・スケジュール整理
+断り・お詫び・お礼など「気を使う文章」の下書きとチェック
+以前の記事で出てきた「Skills（スキルズ）」という機能、覚えていますか？ Claude Codeに特定の役割を覚えさせる機能でしたね。忘れていても大丈夫です。スルーしてください。
+自分専用の秘書は、そのSkillsを使って作る「自分だけの助手」です。 「こういう仕事をしてほしい」「こういうトーンで書いてほしい」「確認は必ず私に取ってほしい」——そういった指示を一度ファイルに書いておくだけで、毎回ゼロから説明しなくてよくなります。
+大事なポイントを3つだけ先に言っておきます。
+① コードを書く必要はない。日本語で書くだけプログラムのコードは一切書きません。「あなたは私の秘書です。やってほしいことは……」と日本語で書くだけで完成します。
+② 秘書は「下書き」を作るだけで、勝手に送信しませんAIが自動でメールを送ったりはしません。必ず「これでいいですか？」と確認が入ります。最終判断は常に自分です。ここが安心して使える最大の理由です。
+③ 一度作ると毎回使える設定を1回書くだけで、次から /secretary このメール返信して と入力するだけで動いてくれます。毎回説明しなくていい。これがSkillの強さです。
+よくある質問に先に答えておきます。
+Q. Claude Codeは有料ですか？はい、Pro以上のプランが必要です。月額$20（約3,000円）から使えます。
+Q. プログラミング知識が必要ですか？不要です。この記事で使うのはコピペだけです。
+Q. どんな仕事に使えますか？メール返信、議事録、日程調整の連絡文、社内向けのお知らせ文……など、毎日繰り返す「書く系の仕事」に向いています。
+Q. 個人情報が漏れないか心配ですClaudeはあなたのデータを外部に送信しません。また、個人情報は事前にダミーに置き換えてから使う方法を後ほど説明します。
+「なんとなくわかった」で十分です。次で具体的な話をします。
+Skillsを使う前と後で、何が変わるのか？
+Skillsを使う前は、Claudeを「毎回ゼロから説明しないといけない道具」として使っていました。「今日は議事録をお願いしたいんですが、フォーマットはこんな感じで、確認は必ずしてほしくて……」と毎回説明するのが地味に面倒で、「これなら自分でやった方が早いかも」と思う瞬間もありました。
+Skillsを設定してからは、/secretary 今日の会議メモから議事録を作って の一言だけでいい。前回教えた私のフォーマット、確認のルール、書き方の好み——全部覚えたまま動いてくれます。この「覚えてもらえている」感覚が、毎日の気持ちの負担をかなり減らしてくれます。</li>
+<li>Aさん（秘書なし）vs Bさん（秘書あり）の1日
+百聞は一見にしかず。まず「何が変わるのか」を見てもらいます。
+Aさんの1日（秘書なし）
+9時に出社して、まずメールを開く。昨日から12件溜まっていた。 「よし、返信から始めよう」と思ったのに、1件書くのに15分かかる。次の件は先輩に確認しないといけないと気づいて中断。「考えながら書いてると時間が溶ける……」
+10時半、ようやく昨日の会議の議事録に着手する。発言をどう文章にすればいいか悩んで、何度も手が止まる。「これ、毎回しんどいな……」
+11時半、今度は来週の打ち合わせの日程調整メール。参加者3人の空き時間を確認しながら書いていたら、あっという間にお昼になっていた。
+「午前中、また全部雑務で終わった。本来やりたかった仕事、何も進んでない」
+そのまま19時まで働いて退社。「明日こそは」と思いながら、また同じ朝が来る。
+Bさんの1日（秘書あり）
+9時に出社して、Claude Codeを開く。
+/secretary 溜まっているメール12件、返信の下書きを作って
+5分後、専用秘書から返答が来た。「すぐ返信できる9件」「要確認3件」に分類され、下書きまで揃っている。「★要確認：2件目の日付が不明確」という注意までついていた。「早い。しかも分類までしてくれた」
+9時15分、下書きを確認して手直し、送信完了。要確認の3件だけ先輩に聞きに行った。ここまで15分。
+/secretary 昨日の会議メモを渡すから議事録の骨子を作って
+メモを貼り付けると、10分後には決定事項と宿題事項まで整理された議事録の骨子が出てきた。「自分で書いたら30分かかってたやつだ」
+9時40分、日程調整メールも秘書に投げる。5分で下書きが出てきた。確認して送信。
+10時、本来の仕事に取りかかる。「今日、午前中から集中できてる」
+18時、定時退社。「今日、ちゃんと仕事できた」という感覚のまま帰る。</li>
+</ol>
+<p>同じ24時間。同じ仕事量。 違うのは、秘書を作っているかどうか。それだけです。
+「でも、こんなにうまくいくわけ……」と思った人へ。
+最初から完璧ではありません。使いながら育てていくものです。それでも、1週間後には確実に朝の時間の使い方が変わります。「雑務で午前中が消えていた」という人も、「1時間以内に終わるようになった」というケースが多いです。
+3. 自分専用の秘書の作り方（4ステップ）
+では実際に作っていきましょう。 必要なのはClaude Codeが入ったパソコンと、15〜20分の時間だけです。
+ステップ1｜秘書に何をしてほしいか、1つだけ決める
+📖 一言説明 最初から「全部やってほしい」と思わないこと。まず1つだけ選びます。
+😱 ビフォー 「メール返信もやってほしい。議事録も作ってほしい。日程調整もやってほしい。資料の下書きも……」 → やってほしいことが多すぎて、どこから設定すればいいかわからなくなる。結局「また今度やろう」で終わる。
+✅ アフター 「まずはメール返信の下書きだけ作ってもらおう」 → 1つに絞るから、今日中に終わる。慣れたら「議事録もお願いしよう」と自然に広げていける。
+なぜ「1つ」にするのか？
+自分専用の秘書は、指示が具体的なほど精度が上がります。「何でもやって」より「メール返信の下書きだけやって」の方が、圧倒的に使いやすいものができます。
+また、最初から完璧を目指すと、設定に時間がかかりすぎて「作ること自体」が目的になってしまいます。まず使い始めることが大事。使いながら育てていけばいい。
+たとえるなら、新人スタッフに初日から「全業務を覚えて」と言うか、「まずレジだけ覚えて」と言うかの違いです。後者の方が早く戦力になります。
+🎯 使う場面 これから自分専用の秘書を初めて作るとき。候補として多いのはこの5つです：
+受信メールの返信下書き（一番多い）
+会議の議事録作成
+日程調整の連絡文
+社内向けの定型お知らせ
+気を使う文章（断り・お詫び・お礼）の相談
+あなたが一番「うわ、毎日これ面倒だな」と思うものを1つ選びましょう。
+ステップ2｜Claude CodeにSkillファイルを作る
+📖 一言説明 Claude CodeのSkillsフォルダに「秘書のルールを書いたファイル」を作ります。コピペだけで完成します。
+Skillsって何？という人へ（30秒でわかる説明）
+「Skills」とは、Claude Codeに「/secretary と呼ばれたら、この役割で動いて」と覚えさせる機能です。
+たとえば—— /secretary このメール返信して → メール下書きモードで動く /secretary 会議メモを渡すから議事録を作って → 議事録作成モードで動く /secretary 今日の予定は？ → スケジュール確認モードで動く
+一度登録しておけば、次回からは /secretary と入力するだけ。毎回ゼロから説明しなくていい。これがSkillの強さです。
+前の記事でSkillsについて詳しく説明していますが、今回は「使い方」だけわかればOKです。
+Skillファイルをどこに作るか？
+Claude CodeのSkillは <del>/.claude/skills/ というフォルダの中に置きます。
+「</del>（チルダ）って何？」という人へ： ~ はあなたのホームフォルダのことです。Macの場合、Finderで自分の名前が書いてある場所がそれです。
+作る場所のイメージはこんな感じです：
+ホームフォルダ（~）
+└── .claude/          ← Claude Codeの設定フォルダ
+└── skills/       ← スキルを入れるフォルダ
+└── secretary/          ← 秘書スキルのフォルダ（これを作る）
+└── SKILL.md        ← 秘書の指示を書くファイル（これを作る）
+「でも、こういうフォルダの操作が難しそう……」と思いましたか？
+大丈夫です。Claude Codeに頼めばやってくれます。自分で操作する必要はありません。
+実際の手順（全部コピペするだけ）</p>
+<p>手順1：Claude Codeを開く
+ターミナルを開いて、claude と打ってEnterを押すだけです。</p>
+<p>手順2：秘書フォルダを作るよう頼む
+Claude Codeが起動したら、以下をそのままコピペして送信してください：
+~/.claude/skills/secretary/ というフォルダを作って、
+その中に SKILL.md というファイルを作成してください。
+これだけでフォルダとファイルが自動で作られます。自分でコマンドを打つ必要はありません。</p>
+<p>手順3：SKILL.mdの中身を書き込む
+次に、以下をそのままコピペして送信してください：
+さっき作った ~/.claude/skills/secretary/SKILL.md に、
+以下の内容をそのまま書き込んでください。</p>
+<hr/>
+<h2 id="name-secretarydescription-自分専用の秘書secretaryメール返信してsecretary議事録作ってsecretary連絡文を書いてsecretary日程調整メールを作ってと言われたら起動する">name: secretary
+description: 自分専用の秘書。「/secretaryメール返信して」「/secretary議事録作って」「/secretary連絡文を書いて」「/secretary日程調整メールを作って」と言われたら起動する。<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#name-secretarydescription-自分専用の秘書secretaryメール返信してsecretary議事録作ってsecretary連絡文を書いてsecretary日程調整メールを作ってと言われたら起動する" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h1 id="自分専用の秘書">自分専用の秘書<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#自分専用の秘書" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<p>あなたは私の秘書です。</p>
+<h2 id="やってほしいこと">やってほしいこと<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#やってほしいこと" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>メールの返信下書きを作る（送信はしない、下書きだけ）</li>
+<li>会議メモをもとに議事録の骨子を作る</li>
+<li>社内向けの定型連絡文・テンプレを作る</li>
+<li>日程調整の候補日まとめと連絡文を作る</li>
+<li>今日の予定や空き時間を整理して教える</li>
+<li>断り・お詫び・お礼など「気を使う文章」の下書きを作り、送る前のチェックもする</li>
+<li>複数のメールがある場合は「すぐ返信できるもの」と「確認が必要なもの」に分類する</li>
+</ul>
+<h2 id="書き方のルール">書き方のルール<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#書き方のルール" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>トーンは丁寧だけど親しみやすく</li>
+<li>長すぎず、要点を簡潔に（目安：200字以内）</li>
+<li>件名は内容が一言でわかる形で書く</li>
+<li>必ず日本語で書く</li>
+</ul>
+<h2 id="必ずやること">必ずやること<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#必ずやること" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>作業前に「何を作ればいいか」を一言確認する</li>
+<li>完成後は必ず「これでいいですか？修正点はありますか？」と確認する</li>
+<li>日付・金額・名前など重要な情報は「★要確認」と目印をつける</li>
+<li>わからないことがあれば勝手に判断せず、私に質問する
+「ファイルを作りました」とClaude Codeが返答したら完了です。</li>
+</ul>
+<p>手順4：Skillを有効にする
+ファイルを作ったら、Claude Codeを一度終了して再起動してください。
+再起動後、次のコマンドで読み込まれているか確認できます：
+/reload-skills
+※ /reload-skills はスキルをコンテキストに読み込みますが、/secretary などのスラッシュコマンドとして使えるようになるには再起動が必要です。動かない場合は必ず再起動してください。
+手順5：実際に使ってみる
+これで完成です。試しにこう送ってみてください：
+/secretary （自分のメールをここにコピペ）このメール、返信下書きを作って
+/secretary から始めることで、確実に自分専用の秘書が起動します。
+SKILL.mdの中身を解説します（読まなくてもOK）
+先ほど書き込んだファイル、何が書いてあるか気になる方向けに説明します。
+最初の3行（--- で囲まれた部分）
+name: secretary
+description: 自分専用の秘書。「/secretaryメール返信して」……
+これは「このSkillの名前」と「どんな言葉で呼び出すか」を書いています。 フォルダ名（secretary）がそのままスラッシュコマンドになるので、/secretary と入力すれば確実に起動します。
+「やってほしいこと」
+秘書が何をするかを書いています。ここを変えれば、仕事内容が変わります。
+「書き方のルール」
+文章のトーンや長さのルールです。「もっとカジュアルに」「もっと短く」という好みをここに書きます。
+「必ずやること」
+絶対に外してほしくないルールです。「完成後に確認する」「重要情報に★をつける」などはここに書きます。
+自分好みにカスタマイズしたい人へ
+テンプレートの各項目を書き換えるだけで、自分仕様になります。Claude Codeに「SKILL.mdのここをこう変えて」と頼めば、自分でファイルを開かなくても変更できます。
+例①：英語のメールにも対応してほしい</p>
+<h2 id="やってほしいこと追加">やってほしいこと（追加）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#やってほしいこと追加" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>英語のメールは英語で返信下書きを作る</li>
+<li>英語の場合、読みやすいビジネスライティングで
+例②：もっとカジュアルなトーンにしたい</li>
+</ul>
+<h2 id="書き方のルール-1">書き方のルール<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#書き方のルール-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>友達に話しかけるくらいの、くだけたトーンで</li>
+<li>短く、ポイントだけ</li>
+<li>句読点は少なめで
+例③：議事録のフォーマットを固定したい</li>
+</ul>
+<h2 id="やってほしいこと追加-1">やってほしいこと（追加）<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#やってほしいこと追加-1" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>議事録は必ず「①日時 ②参加者 ③決定事項 ④宿題事項（担当者・期限つき）」の順で作る
+自分の仕事スタイルに合わせて変えてみてください。
+😱 ビフォー 何も設定せずに「このメール返信して」とだけ伝える。 → Claudeがどういうトーンで書けばいいかわからず、毎回「どんな感じで書きますか？」と聞いてくる。毎回説明しないといけない。
+✅ アフター Skillファイルに一度書いておくだけ。 → /secretary このメール返信して と言うだけで、最初から自分に合った形で下書きが出てくる。毎回説明しなくていい。
+🎯 使う場面 初めて自分専用の秘書を作るとき。コピペして、手順通りに進めるだけです。
+ステップ3｜自分の話し方・好みを教える
+📖 一言説明 過去に自分が書いた文章を2〜3件見せるだけで、秘書があなたの「声」を覚えます。
+AIは指示通りに書こうとしてくれますが、最初は「なんか自分らしくない」と感じることがあります。それは当然です。あなたのことをまだ知らないから。
+でも、過去の文章を見せるだけで一気に変わります。
+😱 ビフォー 「丁寧に書いて」「プロフェッショナルに」とだけ伝える → なんとなく丁寧だけど、自分が書いたらこうは書かない、という文章が出てくる。「なんか違う……」と毎回感じる。
+✅ アフター 自分が書いた過去のメールや議事録を2〜3件そのまま貼って「このトーンで書いて」と伝える → 自分が書いたような自然な文章になる。手直しがほとんど不要になる。
+実際にどう伝えるか
+Claude Codeにこう送るだけです：
+/secretary 以下は私が実際に書いたメールです。これを参考に、私と同じトーンで返信を書いてください。</li>
+</ul>
+<p>（ここに自分が書いたメールや文章を2〜3件コピペ）
+それだけです。
+注意点：個人名・社名・金額などはダミーに置き換えてから貼ってください。 （例：「株式会社〇〇の田中部長」→「取引先の担当者」）
+たとえるなら、新しいアシスタントに「丁寧に対応して」と言うより、「このお客様への過去の対応メモを見て、同じように対応して」と伝える方が、圧倒的に早く仕事を覚えてもらえるのと同じです。マニュアルより実例の方が伝わりやすい。AIも一緒です。
+「もっと自分らしく」と感じたときの追加の伝え方
+こんなときは こう伝える     なんかよそよそしい 「もう少しフレンドリーな感じで」   固すぎる 「同僚に話しかけるくらいの感じで」   長い 「3文以内に収めて」   敬語が強すぎる 「社内向けなので軽めの敬語で」   英語混じりになった 「日本語だけで書いて」
+一言伝えるだけで、次からすぐ修正してくれます。
+🎯 使う場面 自分専用の秘書を作った直後、最初に使うとき。最初の数回だけ自分らしい例を見せておくと、その後がずっと楽になります。
+ステップ4｜実際に使って、ズレを直す
+📖 一言説明 最初から完璧を求めない。使いながら「もう少しこうして」と伝えて育てていきます。
+ここが一番大事なポイントです。
+多くの人が「1回使ってみたけど思ったのと違う」と感じて、それ以上使わなくなります。でもそれは、秘書が使えないからじゃありません。まだ「育てていない」からです。
+自分専用の秘書は、使えば使うほど精度が上がります。最初の1週間は「育てる期間」だと思ってください。
+😱 ビフォー 「なんか文章が長すぎる」「トーンが違う」と感じて、それ以上使わなくなる。 → 「結局AIって使えないな」という結論になる。
+✅ アフター 「もう少し短く」「もう少しカジュアルに」「この部分は削って」と一言伝えて調整する。 → 2〜3回のやり取りで、自分にぴったりの秘書になる。
+よくある「ズレ」と直し方
+こんなことが起きたら こう伝えるだけ     文章が長すぎる 「もっと短く、3文以内で書いて」   丁寧すぎてよそよそしい 「もう少しフレンドリーなトーンで」   内容がぼんやりしている 「要点を箇条書きで最初に書いて」   件名が的外れ 「件名は内容が一言でわかる形にして」   毎回同じ修正が必要 SKILL.mdのルール部分を更新する
+一言伝えるだけで、次からグッと使いやすくなります。
+「毎回同じ修正が必要」と感じたらSKILL.mdを更新しよう
+「毎回『短くして』と言っている」と気づいたら、SKILL.mdに反映させましょう。Claude Codeにこう頼むだけです：
+~/.claude/skills/secretary/SKILL.md の「書き方のルール」に
+「返信は3文以内、200字以内に収める」を追加してください。
+これで次から自動的に短い文章が出てくるようになります。自分でファイルを開く必要はありません。Claude Codeに頼めばやってくれます。
+🎯 使う場面 作った直後〜最初の1週間。完璧を求めず、気になったら一言伝えて直す。それの繰り返しで、自分だけの秘書が育っていきます。
+4. 慣れてきたら：秘書の使い方を広げる
+4ステップをひと通り終えて「使えそう」と感じたら、次の使い方も試してみてください。
+応用①：メールの分類・優先順位づけ
+受信トレイに大量のメールが届いているとき、こう頼むだけです：
+/secretary 今日届いたメールを、以下の3種類に分けてください。
+①今日中に返信が必要なもの
+②今週中でOKなもの
+③返信不要なもの（確認だけでOKなもの）
+応用②：会議の議事録作成
+会議中に取ったメモをそのまま貼り付けるだけで、議事録の骨子を作ってくれます：
+/secretary 以下は今日の会議メモです。「決定事項」「宿題事項（担当者・期限つき）」「次回議題」の3つに整理して議事録を作ってください。</p>
+<p>（会議メモをコピペ）
+応用③：日程調整の連絡文
+/secretary 来週の打ち合わせの日程調整メールを作ってください。
+候補日は月曜14時・水曜15時・木曜10時の3つ。参加者は3名です。
+応用④：今日の予定確認・スケジュール整理
+/secretary 今日の予定を教えて。午後に入れられる打ち合わせの空き時間も確認したい。
+「空き時間はどこか」「次の会議まで何分あるか」といった確認もそのまま聞けます。
+応用⑤：社内連絡のテンプレ作成
+毎月同じような連絡を送っている場合（月次報告、定例会のリマインド、勤怠締め連絡など）、一度テンプレを作っておけば次回から一瞬で完成します：
+/secretary 毎月末に社内に送る「勤怠締め連絡」のテンプレを作ってください。
+件名・本文・締め文まで含めて、日付だけ差し替えれば使える形で。
+応用⑥：気を使う文章の下書き＆チェック
+断りのメール、クレーム対応、上司への報告……こういう「言葉を選ぶ」文章の下書きから、送る前の最終確認まで一括で頼めます：
+/secretary お客様から「なぜこんなに遅いんだ」と怒りのメールが届きました。
+丁寧にお詫びしつつ、今後の対応方針も伝えるメールを書いてください。
+社内の工程遅延が原因ですが、それも自然な形で伝えてほしいです。
+書いてもらった後、そのまま続けて確認も頼めます：
+/secretary この文章、失礼な表現や改善点はありますか？
+慣れてくると「秘書がいない状態に戻れない」と感じるようになります。それくらい、使い始めると手放せなくなる。
+5. よくあるトラブルと対処法
+「手順通りにやったけど動かない」という場合のチェックリストです。</p>
+<p>トラブル①：「/secretary と打っても起動しない」（修正後）
+原因：Skillのスラッシュコマンドが反映されていない可能性があります。
+対処：Claude Codeを一度終了して再起動してください。再起動後に /reload-skills を実行すると、読み込まれているスキルを確認できます。</p>
+<p>トラブル②：「SKILL.mdが作れなかった」
+原因：フォルダがまだ存在しない場合があります。
+対処：Claude Codeにこう頼んでみてください：
+~/.claude/ フォルダの中に skills というフォルダはありますか？
+なければ作ってください。
+その中に secretary フォルダを作って、SKILL.mdを作成してください。</p>
+<p>トラブル③：「日本語じゃなく英語で出てくる」
+原因：SKILL.mdに言語の指定がない場合があります。
+対処：「日本語で書いて」と一言伝えるか、SKILL.mdの「書き方のルール」に以下が入っているか確認してください：</p>
+<ul>
+<li>必ず日本語で書く
+手順3のテンプレートにはすでに含まれているので、コピペ通りに進めていれば発生しないはずです。</li>
+</ul>
+<p>トラブル④：「一度使えたけど次の日は使えなくなった」
+原因：Claude Codeのセッションが切れると、Skillの読み込みがリセットされることがあります。
+対処：新しいセッションを始めるときに /reload-plugins を実行するか、Claude Codeを再起動してから使い始めてください。その後は /secretary で確実に呼び出せます。
+6. 使い始めて1週間で変わること
+自分専用の秘書を1週間使い続けると、こんな変化が起きます。
+時間の変化「書く系の雑務」にかかる時間が大幅に減ります。 メール処理・議事録・連絡文作成……これらが合計2時間かかっていたとしたら、30分以内に収まるケースが多いです。 週5日で計算すると、週に7〜8時間が手元に戻ってくる計算です。
+気持ちの変化「また書かないと……」という憂鬱感が減ります。「秘書に渡せばいい」という感覚になるだけで、朝のパソコンを開く気持ちが変わります。
+仕事の質の変化雑務に追われなくなった分、本来の仕事に集中できる時間が増えます。「今日ちゃんと仕事できた」という達成感のある退社が増えます。
+正直に言っておきます。
+最初の1〜2日は「うーん、なんか違う」と感じることがあります。それは普通のことです。新しい仕組みを「自分用に育てる」には少し時間がかかります。
+でも、育てた後の便利さは、最初の違和感とは比べものになりません。焦らずに使い続けてみてください。
+7. ⚠️ 秘書が言ったことをそのまま信じない
+ここで1つだけ、大事なことを伝えておきます。
+自分専用の秘書が作った下書き、そのまま送信しないでください。
+AIは自信満々に書いてきますが、間違えることがあります。これをハルシネーション（AI特有の「自信満々な誤り」）と呼びます。
+特に以下の3つは、必ず自分の目で確認してください。
+① 日付・曜日「来週月曜日」という指示に対して、日付がずれていることがあります。カレンダーと照合してから送りましょう。
+② 金額・数字見積書や請求書関連の文章で数字が出てくるとき、前の会話と違う数字が出てくることがあります。原本と照合してから使いましょう。
+③ 相手の名前・肩書き「田中部長」と書くべきところを「田中さん」と書いてしまうことがあります。送る前に必ず確認を。
+また、個人情報や社外秘の情報が含まれている場合は、AIに渡す前にマスキング（伏せ字や置き換え）を忘れずに。
+マスキングの例：
+「株式会社〇〇」→「取引先」
+「田中部長」→「担当者」
+「300万円」→「ご提示金額」
+「秘書は優秀なアシスタント。でも最後のハンコは自分が押す。」
+この感覚で使えば、安心して任せられます。
+8. まとめ表
+ステップ 一言で言うと 時間の目安<br/>
+① 何をしてほしいか1つ決める 欲張らない 5分<br/>
+② Claude CodeにSkillファイルを作る コピペするだけ 10分<br/>
+③ 自分の話し方を教える 過去の文章を2〜3件見せる 5分<br/>
+④ 使いながら育てる 「もう少しこうして」と伝えるだけ 使いながら
+合計：最初の設定は20分以内で終わります。
+9. 今日からこれだけやって
+4ステップ全部を今日やる必要はありません。
+まず①と②だけ。
+「一番面倒な作業を1つ決める」→「手順2のコピペを実行する」。 それだけです。20分もかかりません。
+それで「お、ちゃんと下書きが出てくる」と感じたら、③と④は自然とついてきます。
+「完璧に育ててから使おう」と思わなくて大丈夫です。 使い始めた人が、使わなかった人より確実に先を行きます。
+10. 最後に
+週3〜4時間が、来週から手元に戻ってきます。
+秘書を作るかどうかは、結局「やるかやらないか」だけです。
+この記事を読んで「なるほど」と思って終わる人がほとんどです。 でも、それだけでは来週も同じ朝が続きます。
+今日、手順2のコピペを実行した人だけが、来週から変わります。
+あなたはどちらですか？
+「やってみた」「うまくいった」「うまくいかなかった」どんな感想でも、ぜひコメントやリポストで教えてください。あなたの声が次の記事のヒントになります。
+役に立ったら、いいね・リポストで教えてもらえると嬉しいです。 AIを使った時短ネタ、引き続き書いていきます。フォローしておくと届きます。
+Claude Code、セットアップで詰まっていませんか？
+セットアップマニュアルを含む5大特典を、LINEオープンチャットで無料配布しています。
+👇中身はこちら
+受け取りはこちら↓
+<a href="https://line.me/ti/g2/dCgpjeHt90Y5GG4_DVxy0fhSlK06n6qSns30Aw?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default" class="external">https://line.me/ti/g2/dCgpjeHt90Y5GG4_DVxy0fhSlK06n6qSns30Aw?utm_source=invitation&amp;utm_medium=link_copy&amp;utm_campaign=default<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+記事の公開をご希望の場合</p>
+<h2 id="️-添付画像">🖼️ 添付画像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-添付画像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_02.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_03.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_04.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_05.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_06.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_07.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_08.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_09.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_11.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_12.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_13.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/hiro44_pino_2069344410098397667_14.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 Claude Codeのスキル機能で「書く系の雑務」を引き受ける自分専用の秘書を、コピペ20分で作る入門記事。メール返信・議事録・日程調整連絡・気を使う文章の下書きを任せ、送信と最終判断は自分が持つ設計。</p>
+</blockquote>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 4ステップ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①任せる作業を1つに絞る ②<code>~/.claude/skills/secretary/SKILL.md</code> を作る（役割・書き方のルール・必ずやること＝確認と「★要確認」の目印を日本語で書く） ③過去の自分の文章を2〜3件見せて口調を覚えさせる ④使いながらズレを直し、毎回同じ修正が出るならSKILL.mdに反映する。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 効果と使い方の広げ方（著者の自己申告） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>朝の雑務が15〜20分で終わり、週3〜4時間が戻るとされる。応用はメール分類（今日中／今週中／返信不要）、議事録骨子、日程調整文、テンプレ作成、お詫び文の下書き＋チェック。</p>
+</div>
+</blockquote>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 信じすぎない </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>下書きはそのまま送らず、日付・曜日、金額・数字、相手の名前と肩書きは必ず自分で確認する。個人情報は伏せ字に置き換えてから渡す。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「毎回同じ修正が必要」を見つけたらスキルに1行足す</strong>
+修正の繰り返しが型化のサイン。すでにCORINで動いている運用の確認として、足りないルールがないか見直す材料になる。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（concepts）</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（concepts）</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（concepts）</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1989" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-1"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-1"><a href="#-記事内容" data-for="-記事内容">📄 記事内容</a></li><li class="depth-1"><a href="#name-secretarydescription-自分専用の秘書secretaryメール返信してsecretary議事録作ってsecretary連絡文を書いてsecretary日程調整メールを作ってと言われたら起動する" data-for="name-secretarydescription-自分専用の秘書secretaryメール返信してsecretary議事録作ってsecretary連絡文を書いてsecretary日程調整メールを作ってと言われたら起動する">name: secretary
+description: 自分専用の秘書。「/secretaryメール返信して」「/secretary議事録作って」「/secretary連絡文を書いて」「/secretary日程調整メールを作って」と言われたら起動する。</a></li><li class="depth-0"><a href="#自分専用の秘書" data-for="自分専用の秘書">自分専用の秘書</a></li><li class="depth-1"><a href="#やってほしいこと" data-for="やってほしいこと">やってほしいこと</a></li><li class="depth-1"><a href="#書き方のルール" data-for="書き方のルール">書き方のルール</a></li><li class="depth-1"><a href="#必ずやること" data-for="必ずやること">必ずやること</a></li><li class="depth-1"><a href="#やってほしいこと追加" data-for="やってほしいこと追加">やってほしいこと（追加）</a></li><li class="depth-1"><a href="#書き方のルール-1" data-for="書き方のルール-1">書き方のルール</a></li><li class="depth-1"><a href="#やってほしいこと追加-1" data-for="やってほしいこと追加-1">やってほしいこと（追加）</a></li><li class="depth-1"><a href="#️-添付画像" data-for="️-添付画像">🖼️ 添付画像</a></li><li class="depth-1"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-2"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-1"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

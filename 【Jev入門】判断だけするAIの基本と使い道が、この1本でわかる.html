@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる"/><meta name="twitter:description" content="📺 動画情報 【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる 🎙️ 前田翼 | AIで100人力を目指す ・ 📅 2026-09-28 ・ ⏱️ 51分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「判断だけをする」AI TypeSafe AI（通称ジェブ）の基本と、ルーター／スコアリング／リアルタイム／ゲートの4つの使い道を、しくみX社内勉強会の実演を交えて解説する動画。 🗺️ 全体像 flowchart TD A[スクリプト&lt;br/>決まった手順] --> D{何が来た?} D -->|定型判..."/><meta property="og:description" content="📺 動画情報 【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる 🎙️ 前田翼 | AIで100人力を目指す ・ 📅 2026-09-28 ・ ⏱️ 51分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「判断だけをする」AI TypeSafe AI（通称ジェブ）の基本と、ルーター／スコアリング／リアルタイム／ゲートの4つの使い道を、しくみX社内勉強会の実演を交えて解説する動画。 🗺️ 全体像 flowchart TD A[スクリプト&lt;br/>決まった手順] --> D{何が来た?} D -->|定型判..."/><meta property="og:image:alt" content="📺 動画情報 【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる 🎙️ 前田翼 | AIで100人力を目指す ・ 📅 2026-09-28 ・ ⏱️ 51分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「判断だけをする」AI TypeSafe AI（通称ジェブ）の基本と、ルーター／スコアリング／リアルタイム／ゲートの4つの使い道を、しくみX社内勉強会の実演を交えて解説する動画。 🗺️ 全体像 flowchart TD A[スクリプト&lt;br/>決まった手順] --> D{何が来た?} D -->|定型判..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる 🎙️ 前田翼 | AIで100人力を目指す ・ 📅 2026-09-28 ・ ⏱️ 51分34秒 🔗 www.youtube.com/watch YouTube 📝 要約 🎯 「判断だけをする」AI TypeSafe AI（通称ジェブ）の基本と、ルーター／スコアリング／リアルタイム／ゲートの4つの使い道を、しくみX社内勉強会の実演を交えて解説する動画。 🗺️ 全体像 flowchart TD A[スクリプト&lt;br/>決まった手順] --> D{何が来た?} D -->|定型判..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1939"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1939" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる</a></div></nav><h1 class="article-title">【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる</h1><p show-comma="true" class="content-meta"><time datetime="2026-09-28T15:00:00.000Z">2026年9月29日</time><span>88 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる</strong>
+🎙️ 前田翼 | AIで100人力を目指す ・ 📅 2026-09-28 ・ ⏱️ 51分34秒
+🔗 <a href="https://www.youtube.com/watch?v=KeaaTdZr7qQ" class="external">https://www.youtube.com/watch?v=KeaaTdZr7qQ<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【Jev入門】判断だけするAIの基本と使い道が、この1本でわかる.jpg" width="auto" height="auto" alt/>
+<a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>「判断だけをする」AI <a href="./jev" class="internal alias" data-slug="jev">TypeSafe AI</a>（通称ジェブ）の基本と、ルーター／スコアリング／リアルタイム／ゲートの4つの使い道を、しくみX社内勉強会の実演を交えて解説する動画。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[スクリプト&lt;br/>決まった手順] --> D{何が来た?}\n    D -->|定型判断| B[ジェブ&lt;br/>はい/いいえ・選択肢・スコア]\n    D -->|生成が必要| C[LLM&lt;br/>文章生成]\n    B -->|自信度低い| E[人にエスカレーション]\n    B --> F[ルーター/スコアリング/リアルタイム/ゲート]&quot;">flowchart TD
+    A[スクリプト&lt;br/>決まった手順] --> D{何が来た?}
+    D -->|定型判断| B[ジェブ&lt;br/>はい/いいえ・選択肢・スコア]
+    D -->|生成が必要| C[LLM&lt;br/>文章生成]
+    B -->|自信度低い| E[人にエスカレーション]
+    B --> F[ルーター/スコアリング/リアルタイム/ゲート]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. ジェブとは何か — スクリプトとLLMの中間 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>決まった手順で動く「スクリプト」でも、文章を生成する「<a href="./llm" class="internal alias" data-slug="llm">LLM</a>」でもなく、「判断だけ」をするAI。ステート（問い合わせ文などの文脈）と質問＋回答候補を渡すと、Yes/No・選択肢・0〜1のスコアを一瞬で返す。文章は生成しない。LLM比でGPTが10秒／4600円かかる処理が0.4秒／60円で済み、正解率はほぼ同等（セキュリティ警報はジェブが上回り、請求書処理はやや劣る）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. ルーターパターン — 振り分けに使う </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>問い合わせ内容を見て「どの担当に回すか」を判定する使い方。通販サポートの実例では、注文状況・返品・請求など7択から自信度つきで分類し、確認済みの定型文を返す。当てはまらない場合や自信度が低い場合は人にエスカレーション。<a href="./notion" class="internal" data-slug="notion">notion</a>の全ページを選択肢として渡し「どこに振り分けるか」を判定させる、といった応用も紹介された。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. スコアリングパターン — 点数化して要不要を判定 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>のようなAIエージェントが自分の発言をコンテキストに溜め込み膨張する問題に対し、情報ごとに「今後も要る度合い」を0〜100でスコアリングし、閾値以下を削除する使い方。会議議事録の圧縮、メール・Slack通知の取捨選択、タスクのインパクト採点などにも応用できる。LLMに点数を付けさせるより一貫性が高い（ブレが小さい）。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. リアルタイムパターン — 応答速度を活かしたUX（要注意） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ジェブの応答が速いことを活かし、商談中に「次に何を聞くか」をリアルタイムに提示するなどのUX。バズりやすいがまだ検証コストが高く、自分の仕事に置き換えて考えすぎない方がよいと釘を刺されている。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. ゲートパターン — セルフリファインメントループの判定役（★最重要） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>LLMが生成した成果物が基準を満たすまで、ゲート（ジェブ）に判定させて作り直させる仕組み。提案書がクライアントの課題に答えられているか、SNS投稿が基準を満たしているか等を定量判定し、満たさなければLLMに差し戻す。表には出にくい（ワークフローの内部に組み込まれるため地味）が、4パターン中もっとも汎用性が高いと強調されている。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① AI推進の実例として社内共有ネタにする</strong>
+「判断だけするAI」という概念は、経費申請の自動承認・差し戻し判定や、問い合わせ振り分けなど、社内向けAI活用事例のスライドにそのまま使える具体例が多い。次回AI事例共有の資料候補として覚えておく。</p>
+<p><strong>② ゲートパターンを既存のAI出力チェックに当てはめてみる</strong>
+提案書・報告資料・SNS下書きなど「AIに作らせて→基準を満たすまで直させる」フローは fact-check スキルや資料レビューの考え方と親和性が高い。今度AIに何か作らせる時、「合格基準を先に決めて満たすまで回す」発想を意識してみる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> この動画は、しくみXの社内勉強会です。おっす。じゃあ、ちょっとジェブ勉強会やってきます。ジェブ勉強会をやろうと思った理由としては、ジェブという新しい概念に対して、共通認識を抑えておきたいというのが一番の目的ですね。共通認識を合わさっていないと、こいつをどこで使うかみたいなところの議論がしにくくなるので、なんで、ユースケースベースでセミナーしていきます。ちなみにタミさんがこのジェブ勉強会に参加するモチベというかどうなりたい何を知りたいとかって現時点でありますか</p>
+<p><code>00:35</code> やっぱそうだな使えるものを機能を2つ3つぐらいささっとMockで作れるようになりたいっていうのがゴールですいいですねMockで作るためにボトルネックは多分ジェブの使い方じゃなくてどのユースケースでジェブが有効かを考える力だと思うんでなので今日のゴールはジェブを使う仕事を自分の仕事一つ見つけるっていうのをゴール設定にしてますまず前提 今は自分の仕事でジェブ使うところないなってなることは基本的にありえないです</p>
+<p><code>01:07</code> まさにこういう言葉を最近別の方からいただいたんですけれど絶対にですね 自分の仕事に判断というものがある限りジェブは絶対に使えるんですよねまずジェブが何かを知るってところから行こうと思うんですけど我々がAIで仕事を自動化していくにあたって自動化の範囲でも決まった手順通り動くのは全てスクリプトでやろうという前提がまずありますね決まった手順であればもうAIさえ使わないでやっちゃえた方がコストも低いし早くて安定するしめっちゃいいっていう</p>
+<p><code>01:39</code> 一方問い合わせを受けるみたいな仕事だと毎回決まった手順じゃなくてその問い合わせの内容次第でエスカレーションすべきかを考えたりとか人間にエスカレーションする場合は人間に回すしAIが対応する場合は返事もAIが書くみたいな感じになると思うんですけれどこの辺とかはLLMじゃないとできないんでスクリプトから外れちゃう仕事がありますこれが結構コストマンからし遅くて困るみたいなのが元々あったのがジェブがいることによってエスカレーションすべきかみたいな判断をするだけみたいなパーツを</p>
+<p><code>02:12</code> スクリプトでもLLMでもなくその中間にあたるジェブという概念で抑えられるようになりましたジェブ判断だけするAIということでTypeSafeって会社が公開したAIで質問を送ると答えを返すはい、いいえで聞くとはいの確からしさっていうのがパーセントで返ってくる一瞬で返ってくるしその文章は書かないみたいな感じですねちなみにここまでどうですかねそのジェブの理解としては今回は知ってたよって感じなのかどうでしょうここまでは結構分かってました</p>
+<p><code>02:45</code> ただ一つずつ分かんなかったところがあってもともとLLMも似たようなものを内部でしてると思ってました内部で責任者を回すべきか返事を書くべきかのジェブ的な動きを内部でやってその後出力すると思ってたんで結局多分今回ってそこをジェブでやってその後LLMでやるってことだったんですけど全部をLLMでやっても結局そんなスピード同じなんじゃないのかなって思ってたんですけどそういうわけではないってことですよね既存のエレメントっていうのはそうか ちょっとこの例が確かにここを明確に分けずにぬるっと両方</p>
+<p><code>03:20</code> LLMで同時にやっちゃえるとは思うんでもうちょいここを自分に置き換える意義みたいな分かりにくくなるかもしれないんですけどちょっと考えやすくするためだけにこれをちょっとサブエージェントだと思ってほしくてエスカレーションサブエージェントと変字格サブエージェントがいたとしてそれぞれ違うエージェントに任せてるとしたらそれぞれ仕事としては結構遅いしこんなとこにコストかけたくないよねみたいなのはあると思うんですよね確かにそうですねちょっとそのイメージで聞いてください早いとか安いとかだけじゃなくてここだけにスコープが限られていることとか</p>
+<p><code>03:56</code> アウトプットが定量的であることとかもメリットとして出てくるんでちょっとその辺も加えながら話していきますはい で ちょっとすでに理解していることの整理なんですけれどジェブにはこの問い合わせ文みたいなステートと呼ばれるコンテキストみたいな情報を渡すのとあと質問と回答候補っていうのを渡すとそれをインプットとしてアウトプットはこんな感じで返ってくるはい88%みたいな先週届いた商品が壊れてましたどうしましょうみたいな問い合わせに対して責任者にエスカレーションすべきかどうかはい88%みたいな感じですね</p>
+<p><code>04:31</code> 数字でこういう風に返すっていう型の他にあと2つ形があってこの選択肢の中からどれですかっていうのもできます配送請求使い方その他どの担当に回しますか請求87%ですみたいなことかあとはスコアリングもできますどれくらい起こってますか0から2で答えてくださいみたいな1.47ですみたいなのができたりしますねこれノールって読むのかなちょっと読み方分かんないですけどノールチョイススコアっていうのがありますなんか疑問ありましたかいやないですなんか全部大体結局同じことを言ってるのかなっていう感じがしたっていう</p>
+<p><code>05:04</code> ノードチョイススコア全部選択肢を定量化するみたいなところできつく全部同じなのかなみたいな感じで納得しやすいなって思いましたちなみに一つの呼び出しで全部聞くことができてどういうことかっていうとぜひTypeSafeのアカウント作ってこのプレイグラウンドっていうのを触ってほしいんですけどここからジェブ試せますこれプレイグラウンドの画面を再現したものなんでこれとほぼ同じ画面が公式サイトから触れます</p>
+<p><code>05:39</code> さっき言ってたステートですねここに問い合わせ内容先週届いた商品は壊れてましたみたいな問い合わせ内容を書きつつ下に選択肢を書いてます例えばノールでこれは責任者にエスカレーションすべき問いですかっていうインストラクション図で選択肢2つTrueはこう、Falseはこう、Hiはこう、EAはこうみたいなの書いておいて一旦ちょっとこれで実行、ランリクエストみたいなのをするとこんな感じでエスカレーションすべき87%みたいな感じで出てきたりしますちょっと下にも出てるんですけど</p>
+<p><code>06:14</code> 同時に他の質問も投げることができてどの担当に回すかとかのチョイスですねどれくらい起こってるかのスコアリングも同時にやれるこれクリテリアの部分にその選択肢を選ぶべきプロンプトを書くみたいな感じですよねどんなときに選択肢を書くみたいな選択肢と説明多分クライテリアですねクライテリアってもいい?多分これでできる?ですですちなみにTypeSafe今もそうか分かんないですけど最初5ドルくらい無料クレジット渡されるんで</p>
+<p><code>06:48</code> 一旦API機作ってみるのすごいおすすめですありがとうございますいろんな質問ができますと問い合わせに対してNOWLチョイススコア他の問い合わせに対してもできますとここでもう一個概念があって自信度っていう概念もありますこうやって返ってきてたかなここですねこのコンフィデンス自信度って概念があるんですけどこれはジェブ的に自分がしてる回答の自信度ですねまさに話されてた</p>
+<p><code>07:24</code> ハミさんが話してた商談データベースの1商談と取引先のデータベースの1取引先の商合で自信度が低い時は通知が来るようにするみたいな案があったと思うんですけどあれとかまさにジェブの設計にぴったりです確かにですちょっとジェブvsGPTなんですけどスピードで言うとGPT10秒かかるところジェブ0.4秒だったり料金も4600円かかるとこ60円でできたり正解率はそれでいたほぼ変わらないみたいなセキュリティ警報みたいなやつはむしろジェブの方がスコア高くて</p>
+<p><code>08:00</code> なぜか請求書処理はジェブの方が点数が低いみたいですねちょっと前のジェブが画像を確か読み取れなかったみたいなのもあって多分画像渡しちゃったらそんな変わんないんじゃないかなって気はするけどねどうなんでしょうねあちらにVSGPT5.6Tera多いですね確かこれもあれですよね 画像も一旦GPTで文字とかHTMLとか文字情報にしてそれをその後ジェブに渡せば そこも解決ですよねいや もう今画像読めるっすね 確かジェブ 読めないかなすぐ読めるようになると思うんで</p>
+<p><code>08:34</code> 今のタミさんみたいなアイデアだと 結局GPTがボトルネックになるからちょっとだるいんですよね正解率ほぼ一緒なんだけど 25倍早くて77倍安いっていう最高のAIな感じですよねJVは振り分けてくれると経費申請とかも確からしさ 地震度が低いと人が確かめるようにしてくれて地震度激低だと差し戻しになるって書いてありますねこの差し戻しにするのか人が確かめるかみたいなのは別にあくまで人間側が設定することなんで</p>
+<p><code>09:09</code> 別に全部承認でもいいですし差し戻しなんて書いてなくて自信度50%以上は全部自動 50%以下は人間レビュー挟むとかでもいいですしこの使い方が一番多そうですし 差し戻しなんてがいいんじゃなくて 自信度50%以上は全部自動50%以下は人間レビュー挟むとかでもいいですし この使い方が一番多そうですけどねこのくらいおだしょーそうですねです ここからユースケースありきで 自分の使い方っていうのを4パターンに分けて考えていきます ルーターパターン スコアリングパターン リアタイムパターンゲートパターンですね 一番大事なのはゲートです なんですけど 一番難しいのはゲートなんで</p>
+<p><code>09:42</code> 上から順番に 左上から順番に話していきます今からこの話を聞きながら自分の仕事に当てはめながら聞いてほしくて最後4つ目まで話し終わった後にじゃあどの仕事のどこでジェブ使いますかって問いを投げるんで そのつもりでいてくださいこの4つの分類は公式じゃなくてちょっと私の方で実際色々調べながらこの4つじゃないかなって分類したやつなんでちょっと少なくとも2026年9月28日時点で見えてる範囲なんで本当はもっとここに漏れもあるかもしれないし再整理すると3つとかに再整理できる可能性もあります</p>
+<p><code>10:17</code> とも聞いてくださいはい じゃあルーターのとこ入っていくんですけどルーターとは何かっていうルーターは本当に振り分ける使い方ですねさっきの請求内容ごとにあれ これ請求 違うか これは問い合わせか窓口に問い合わせを送った時にジェブがどの担当に回しますかっていう質問に答えてこれは請求担当に回しますとかこれは配送担当ですとかこれ地震度低いんで人にエスカレーションしますみたいな仕事振り分けるっていうことをルーターと呼んでます</p>
+<p><code>10:52</code> 結構いろんなパターンがあってクライアントからメール届いたら担当メンバーに振り分けるとか資料作りの依頼が社内での依頼ももうAIが仕事割り振るみたいなことをしたりとかクライアントから資料が届いた時もどのフォルダに入れるか決めるみたいなこことかって結構思考の外だったりするんですよねフォルダの振り分けもルーターなんだというかついつい人間がやるものって認識は結構持ちがちだと思うんですけど多分ノーションとかもそうでノーションの全ページの情報を</p>
+<p><code>11:26</code> さっきの回答の選択肢に渡した状態でどこに割り振りますかとか言ったらかなり正確になりそうな雰囲気があるんですよねちなみにジェブって別に100万トークンとかも受け付けてるんで今みたいな組織内のノーションのページ全部選択肢に入れてパンって渡すみたいなのもちょっと未検証ですけど普通に成立するはずですですね すごいなGPT27万とか上がった気がしてるのでそうです</p>
+<p><code>12:00</code> ちょっと正確には分かんないですけど 最近だとAPI経由だと100万とかいけるようになってそうではある ですけどすごいなで ちょっとルーターで事例 結構 いろいろ調べたらいっぱいあったんですけど そのうち1個分かりやすい やつ 今日お話しますこれはチャットサポートの事例 通販のサポートの事例で このpavancharaniさんがXに投稿してたやつですね 一応ちょっとリスペクト持ってこの投稿の元投稿のXもこんな感じで見せておきます使う場面は通販の問い合わせのチャットサポート</p>
+<p><code>12:37</code> 人間がやると悪いとジェブを使うとジェブが確認済みの返事を返すって感じですねあくまで返信の生成自体はジェブでできないんでまずこれデモ画面なんですけどお客さんから注文どこですかって連絡が届きますここですね Where is my order?っていう風にジェブが7つの候補から種類を選ぶっていう風になってて注文の状況 返品返金とか色々あります今回自身の100%で注文の状況が選ばれてますね 素晴らしいスクリプトが確認済みの返信 あらかじめ作られた返信を作ります</p>
+<p><code>13:16</code> My orderからいつでも確認できますよみたいなこれめちゃくちゃ問い合わせ使えそうですよね既存の問い合わせのボタンでやっていくやつとかあるじゃないですかありますねあれとかはもう回答が提携文が返ってくると思うんですけどああいう仕様になってるやつとかはもう判定自分にすると自由質問を受け入れられてめっちゃいいですねですね 問い合わせいいな問い合わせで困ってたんでこれめちゃくちゃ使えますねで 注文内容 次 注文番号は何番ですって返信 メッセージ来たら なんかこれはあれですねありがとうございました 注文控えましたって返してるんですけれど</p>
+<p><code>14:03</code> 何になったんだろう オーダーステータスか注文状況を聞かれるっていう質問に 今回は分類してますねで 提携文返すと メール届きます?いつ届きますか?ってメッセージが来たときは これがどれも当てはまらないみたいなのになっちゃいましたと地震度88%でつまり返せる定型文がないってことなんですけどその場合はどの部署に回すかを自分が選ぶっていう風になって一般窓口に回そうみたいなこれエスカレーションですね定型文はエスカレーションしたんで待っててくださいって定型文になってますなんかいいですよね</p>
+<p><code>14:36</code> 我々だったらAIカンパニーだったらこのタイミングでAIが返信するとかでもいいですねそうですねそこでGPTとつなげてみたいな今の事例整理すると注文どこですかは確認済みの返信テンプレート返信して注文番号送られてきた時もテンプレート返信してメール届かないですみたいなのは人にエスカレーションしましたみたいな感じです自信度70%以上なら返信状態ですっていう風に言ってるけどこれはちょっと実際どうなんか分かんないですねこういうのをルーターって呼んでます</p>
+<p><code>15:11</code> ちょっと次スコアリングいきますねスコアリングは点付けるってことなんですけれど例えばエンジニアがこのバグ直してくださいってクロードコードに依頼したときのシチュエーションでAIってめっちゃ作業記録残すじゃないですかコンテキストとしてそうですねちょっと一応解説するとクロードコードはクロードコードが行った発言もコンテキストとして吸収してるんで無駄なセルフトークみたいなのが結構コンテキストに入ってくんで一気にコンテキストが膨らんでくるんですよね</p>
+<p><code>15:44</code> AIが自分自身で吐き出してしまった情報を分類したときに例えばテストのエラー分とかは今後も取っておきたい情報 参照したい情報だけど1回やっただけ もう論点として関係なくなった検索の履歴とかは情報としていらないですし古いビルドのログプログラムを組み上げる処理のログみたいなやつ古いものに関してもいらないみたいな逆に編集中のファイルの情報とか読み込んだ設定ファイルの情報とかは</p>
+<p><code>16:18</code> パーセントとしては高いみたいな時にこの50パイ以下の情報も全部消しちゃえばいいじゃんみたいなことができますちょっと一応補足するとクロードコードもコーデックスも自らで自分のコンテキストを膨らませていってトークンが増えていったらどっかで自動圧縮しますよねしますねあれはこれに近いことをやってると思うんですけどでもどっちかっていうと仕組みとしては要約みたいな仕組みになってる感じでここで今ジェブが提案してるのは</p>
+<p><code>16:51</code> もういらないやつは圧縮する前に消してしまえっていう話ですねですっていうことスコアリングっていうのはこの先もいる度合いみたいなのをスコアリングすることができたりあとは会議の議事録もいらない情報をどんどん削っていけそうだしクライアントに送るメールも相手を送らせそうですかとかそんなメール書かないとは思うんですけど一定の点数を超えてたら止めるみたいなのができますしあとうちでもやってるチームのタスクのインパクト採点って自動でやってるじゃないですか今GPTでやってるんですけど</p>
+<p><code>17:25</code> あれとかジェブでやれるともうちょい採点ロジックにこだわりやすくなるし最初から定量でちゃんと出るんでもう少し安定するかなというちなみにちょっと2つ補足があるんですけどもう少しロジックにこだわりやすくなるって言ったのはさっきプレイグラウンドで見せた通りジェブの設定ファイルというか渡す情報みたいなのって結構管理しやすそうじゃないですか ただのJSONなんであのJSON磨いていけばタスクの採点 インパクト採点も良くなってくるっていう共通認識ができるんで</p>
+<p><code>18:00</code> 結構みんなで一緒に編集しやすそうですでもう一個の補足はGPTに採点させると一応定量でも出させれるじゃないですかなんでみたいな感じででもちょっとこれ裸感も入るんですけどジェブほど定量化が安定しないんであれは擬似定量化って感じですなのでLLMとして点数を文章で返してるだけであって定量的に評価してるわけではないちょっとこの辺の仕組みも後で触れます評価レポート経営はなんか</p>
+<p><code>18:34</code> 大体使えそうですよねそうなんですしかもちょっと評価レポートに触れるのであればなんですけれど評価レポートに渡す情報自体はスクリプトで集めれるじゃないですかだからもしかすると全自動というかLLM一切挟まずに最終評価までいける可能性があってGPT前提だと全部の議事録渡すみたいな発想ってちょっと重かったじゃないですかそうですね</p>
+<p><code>19:05</code> でもジェブが相手なら100万トークンいっても言うて早いし金額も知れてるんで毎回評価の度にこれまでの議事録全てとこれまでのスラックのやり取り全てとみたいな使える情報全部一気に渡すみたいなことができ得るので点数が精度上がる可能性がありますですねあとは要約とかサマリーを出力させるみたいなそういうところの必要性をなくしていくっていうかそういうのがなければ全部いけそうですよねそうですね</p>
+<p><code>19:37</code> いいですねスクワリングの例です田村さんが公開してるやつでクロードコードのコンテキストが増えてったら削るってやつの事例ですねちなみにこれもXで投稿してくれてるみたいですねジェブとかそういうの新しく出てきたとき海外Xが結構いいですね 最近これはでもさっき説明したのと一緒なんですけどクロードコードの画面ですね これはコーデックスでも似たような画面があるっちゃあると思うんですけど</p>
+<p><code>20:13</code> 1ミリオン 100万トークンのキャパがあるのに対して90%のトークン食っちゃってますみたいなうち88%はメッセージの情報で食ってますみたいな状態になりましたとその時にジェブにいらない情報を判断させて消させるとその1秒でここが1割に減ったって話なんですけどこの1秒とかもすごいですよねコンテキスト圧縮してますよでも普段結構時間かかるしですとすごいなこの考え方はあらゆることで使えそうですよねパソコンの中のいらないファイルを消すとか</p>
+<p><code>20:51</code> 昨日100件のメールが来てるけど自分が読むやつは1%でいいみたいなシチュエーションとかストラックのメッセージとかも通知とかじゃなくてそもそもジェブが選んだものだけ見るとか制度問題はあれど今我々が抱えている認知負荷問題もこれで一気に解決できる可能性があるっていう最初の例でジェブが使えることないみたいな話がありましたけど逆でジェブにできないことの方が少なそうだなっていうのは逆な印象ですねそうですねその感覚になると日常のあらゆることが</p>
+<p><code>21:24</code> これジェブでいけるなになってくるんで今 タミさんもこの勉強会の目的を達成してる状態ですねもう作りたいっていう作れるなら作りたいって感じですね今回のAIのコンテキスト圧縮 コンテキスト削除の例で言うとエラーの全文とかは原文のまま残してファイル読んだ時の3000行の情報とかは 2000行か読んだことと先頭の300文字だけ残して 残りは消す コンテキストから例えばってことですよね</p>
+<p><code>21:57</code> 例えば検索しても使わない結果ってキロコットゲスみたいなこういうグラデーションの判断もできますこれはブラウザベースさんブラウザベースさんの検索結果からいらん情報を省くってやつなんですけどささっといきます検索したときに重要そうな情報トップ5だけが出るっていうやつですね今もそもそも検索をしないからあんまりこれちょっとピンとこないかもしれないですねで 一歩米国圏残す</p>
+<p><code>22:29</code> この情報も重要なのかな重要だから残す関係ないニュース記事は外すみたいな感じですねはい スコアリングは一旦これで次がリアルタイムってやつでここが結構ジェブにおけるジェブを分かりにくくしてる要因でもありジェブの可能性の話ですリアルタイムっていうのはUXの話でしてジェブの応答速度が鬼早いことによってリアルタイムな体験結構作れるよねっていう話ですね例えば営業の商談の通話をしてる時に</p>
+<p><code>23:06</code> お客さんから記録が大変で困ってますみたいに言われた時にジェブが次に行くこはどれかっていうのを 決めてジェブが時期を聞くんだみたいな言ってきたら人間が時期 を聞いて来月に入れたいんだって言われたら次の情報聞いてみたいな イメージ営業担当のパソコンの画面に常に次何聞けばいいか出て くるみたいなUXを作れますみたいな話ですねちょっと例の方が分かり やすいので進みます例えばクレジットクライアントへのヒアリングの時は次にどれ聞くかをジェブが教えてくれたり、</p>
+<p><code>23:42</code> 社内の会議だったらこの中の話した内容で、今現時点で決まったこととか宿題とかそれ以外はどれですかっていう、会議が終わってから出すんじゃなくて、会議中にこれをどんどん整理していくみたいなことですね。参加者が意見を出すみたいなやつは、どの論点に入るか、ジェブが割り振ってくれたら読みやすいよねみたいな。目の前で一周ツリーをグラフィックレコーディングしてくれるみたいなイメージなんですけどちょっと事例モリッツさんの投稿ですねこれも面白いですけど</p>
+<p><code>24:15</code> 商談中にお客さんと話している最中に次の一手をどんどんジェブが出してくるっていうテーマです商談してますと言ってますねこんなCRM使ってるんですけどみたいな言われた時に次の一手は課題の大きさを数字で聞くんだって言ってますジェブがその例文 聞き方の例文に関しては 定型文から選ばれてますねで セイって書いてあるんですけど これを言えってことですねチーム全体でそれに週何時間くらい取られてますかって 聞けっていうのがジェブから指示されててで この画面見ながら 営業担当は話していくことができるみたいな</p>
+<p><code>24:51</code> これいいですねお客さんからこういうこと言われたら これを言えみたいなこの情報が加えられたら これを言えみたいな次のこれもめっちゃ面白いんですけどこれ日本人です岡村さんっていう人が挙げてたんですけど業務フローズをリアルタイムで作っていくっていうやつですね会議の中で会議の中というかこのジェブのソフトウェアに向かって業務の流れを話しますとそうすると文章がどんどん文字起こしされていきますここちょっと画面ちっちゃいんですけど</p>
+<p><code>25:24</code> 業務の話なのかあと図をどうするかっていうのが判定されてます業務の話である確率89%かつ後っていう即興フローズに何かを追加するっていう判定が98%で出てますジェブが担当を決めきれないときはここでエスカレーション来てますねこれで合ってますかみたいなエスカレーション来たやつに限ってはこのオレンジの枠になるようになってるんで確認されるまではフィックスされないみたいな感じになっています修正依頼を上げるとそれもまたこっちで修正されるとちょっと画面見にくいですね</p>
+<p><code>25:58</code> この右側のここの業務フローズがとにかく離していくと勝手に作られていくってことですこれができるということはロジックツリーを自動で作るAIとかも作れるはずなんですけど結構この辺のUXとかは未来的というかさっきの営業のやつも含めてなんですけど我々としては今あんま検証したくない領域ではあります変数が大きい人間側がどういうふうな体験をすることが結局一番ベストなのかみたいなところの変数もあるしあとこれを動かすのも結構ロジックが</p>
+<p><code>26:32</code> 調整ありそうでいい業務フローズとは何かみたいなところの理解がこの作られ方にすごい影響しちゃったりとかするんでここから先の未来としてこういうUXがバシバシ出てくるよくらいに思ってちょっとこれに関しては自分ごと化しすぎない方がいいです今一時さんからも質問あったんですけどこれ文章を生成してるんじゃないかってところで業務不動内に文章書かれると思うんですけどそれって生成ってわけじゃないのかな鋭いですねこれはしてますこれはこの文章の要約の部分に</p>
+<p><code>27:08</code> 多分カルメのLLM挟んでますねなんで純度100%のジェブではないですと推測されますこれなんか入力データをリアルタイムでどこに貯めるかってところとUIどうするのかってところとあとジェブをそもそもリアルタイムでずっと起動中みたいな状態にしていく必要があるわけですよね設計が難しそうというかまだ分かってないですねだからどこまで話したら一旦ジェブに渡すのかみたいな区切りがこのラインだと思うんですけど多分コレックスのオリジナルの録音してリアルタイムで録音してどっかのデータベースどっかに保持する、そういうものを作ってるってことですよね。これは多分、フロントだけでデータベースとかは作ってないと思いますね。</p>
+<p><code>27:57</code> なるほど。じゃあその時渡したものを、一時的に、コンピューターわかんないですけど、どっかに貯めてるってことですよね。そうですね。メモリみたいなところに貯めてると思ったらいいかもしれないですね。一時ファイルだと思います。なるほど。はい。一応Draw.io使ってます。Draw.ioって 図書サービスなんで、こっちはCanvaとかFigmaみたいな感じで保存されます。 こっちは保存してないと思います。なるほど。文字起こしもAI使ってるんで、 ジェブじゃないやみたいな話し始めると文字起こしも使ってるやんではあります。</p>
+<p><code>28:34</code> これはコンピュータユーズみたいな感じではないんですか? Codexの。どうやって触ってるっていうか。これコンピュータユーズじゃないです。ドローIo側にAPIがあるはずですね。だからAIはAPIでドローIoのどこに何を追加するかっていうのをポンって送ってる感じです。推測含むって回答しました。かなりイメージできました。ていうか、頭いいっすよね。ジェブがこれ作れるじゃんって気づくまでが早すぎるんで、今回リサーチしててめっちゃ思ったんですけど、</p>
+<p><code>29:07</code> ジェブっていう新しい一定一区切り置かないと理解できない感覚でいうと1時間数やってたのに2時間数に突入したみたいなこれどうやって応用するんだみたいなそういう瞬間なはずなのにみんなの応用がめっちゃ早いんですよ多分みんなその時悩んでるものがあってその悩んでるものに応用できるじゃんみたいな感じでそれが早すぎますねというのがリアルタイムでしたリアルタイムはあんまり気にしないようにしましょう</p>
+<p><code>29:40</code> いつかはしたいですね リアルタイムもちなみにジェブって仕組み的にGPTでも普通に組み込まれると思うんですよね GPTとかクロードになのでそういうのも含めて今急いでそんなに動くべきじゃないみたいなのもありますいや それはちょっと後で触れます最後 これが一番大事です ゲートですねゲートっていうのは概念を理解するためまずセルフリファインメントループのおさらいからなんですけどLLMが何かを作った時にジェブにゲートさせて</p>
+<p><code>30:12</code> 事情を満たしているかどうか判定させます判定を満たしていなければもう1回LLMに差し戻してもう1回作り直せって言って何回も作らせるっていうこういうのをセルフリファインメントループって言いますいつもよく思ってたんですけど結局同じロジックだったら何回も同じ採点になって何回もループしちゃうんじゃないかなと思ってるんですけどそこってどうやってるんですか?例えばこれで言うと文字数が少ないっていう問題が起きてるって情報がフィードバックされるんで修正されます</p>
+<p><code>30:43</code> なるほどいいですあれ、あのなんか昔流行ったプロンプトでAIが出してきたアウトプット例えばXの投稿文とか作られた時にあなたの文章は50点ですなので原点された50点が何か考えてもう1回持ってきてくださいみたいな言うと良くなるみたいなのがあってそれを1回だけじゃなくて5回とか繰り返すとどんどん良くなっていくみたいなのがあるんですよね何がダメかとか言ってないのに50点だからもっと頑張れ</p>
+<p><code>31:16</code> 50点だからもっと頑張れっていうだけでもアウトプットはエレベルなりに良い方に向かいますその前提を知っていればフィードバックするAIがここがダメだっていう情報込みでフィードバックすれば良くなるのは自明であるっていう風に捉えられるかなと思いますLLMに採点させてました今まではセルフリファイメントループはただ点数もぶれるしフィードバックに一貫性がないんで結構いい結果になるけどなんだかなみたいなところはちょっとだけあるみたいなのが今までですね</p>
+<p><code>31:52</code> 別にエンベディングするって方法があってこれはめちゃくちゃ有効な方法でもともと存在してます例えばYouTubeの動画を作る台本を作らせるときにこの台本の文章全体を章ごとに分けて例えば10個のパートに分けてあとこの動画のコアメッセージを定義してそのコアメッセージのベクトルと10個のパートのベクトルがちゃんと同じような方向を向いてるのかみたいなことをチェックさせてベクトルの同じ方向を向いてるかどうかって計算式なんで必ず毎回同じ数値になるんですよなのでLLMにこれコアメッセージに沿ってる?みたいに聞くのよりも</p>
+<p><code>32:38</code> 一貫性を持ったフィードバックができてそれをすることによって一定の数字ベクトルとベクトルがどれくらい同じ方向を向いてるかっていうのをベクトルの内積で取れるんですけどその数字が一定を超えるまではフィードバックさせ続けるみたいな方法で結構できてたりとかさらにもって言うと10個のパートが全部同じこと言ってたらつまんないから隣接するパートごとはできる限り違うことを言っててほしいみたいなその方が面白くなるからなので隣接するパート同士のコサイン類似度とか呼ばれてたりするんですけどベクトルの内積みたいなものが</p>
+<p><code>33:12</code> 逆にちゃんと離れてるかみたいなのをチェックして各ベクトルの隣接するベクトルは要するにパートごとには結構シーンの切り替わりがあるようになってるんだけど一方で全体一貫したメッセージになってたりとかターゲットの求めるものに近いメッセージになってるとかを計算式で出させてフィードバックするみたいなするとすげえいいコンテンツができるみたいな方法があってそういうのをやってましたこれ絶対にやった方がいいし超有効な方法なんだけど多分あんまりやってない人多くてそれはそもそも今の話を理解するのがむずいみたいなことと</p>
+<p><code>33:46</code> そもそもめんどくせえみたいなことがあってなんで手軽さがないなみたいな問題がありましたとスクリプトでチェックする何文字いないかとかスクリプトでフィードバックするのは意味的な判断ができないんでどれも弱点がありましたみたいな一方でジェブは意味で判断することもできるし安く早く測れるし定量的に測れるこれ点数のブレなんですけどやっぱLLMで点数出させるとこんだけブレるに対してジェブで出させると</p>
+<p><code>34:18</code> こんなに点数のぶれないらしいですすごいですよねすごいかつ手軽で作れるだから結構この目線エンベディングでフィードバックするみたいなやってた人からするとあれこれエンベディングに近いことがめっちゃ簡単にできるなみたいなことを思わせられたみたいなジェブの裏文脈がありましてなんでこれだといいよねみたいなありますジェブがいいよねという例えばどういうところで使えるかというと提案書の下書きに対して</p>
+<p><code>34:51</code> クライアントの課題に答えられるかという状況を満たすまでリファインメントループ回すみたいなことですねこれうちでめっちゃやりたいですちなみに毎回商談をする中でクライアントの課題っていうことの解像度がどんどん上がってくると思うんですけどそれに対して網羅的に次の提案でしてる資料が網羅的に回答になっているのかももって言うと課題だけじゃなくてちょっと触れた内容とかも含めて向こうが持ってる疑問とか全部解消できてるかみたいなのをジェブで判定してそうじゃなければフィードバック回すみたいなのやりたかったりとかあと報告スライドとか議事録のまとめとか</p>
+<p><code>35:28</code> リファインメントループめっちゃ回せますよねみたいな感じですちょっとこの辺のビジネスっぽい仕事だとあんまり差分が見えにくいんですけどエンドユーザーというか通信系のものとか最終行に放たれるアウトプットとかだとこの辺のゲートの良さでめちゃくちゃアウトプット変わるんでかなり重要なところですあちらにこのスライドもジェブでループ組んでてめっちゃ不合格になってるらしいですね作ったスライドが94件不合格になって</p>
+<p><code>36:02</code> 作り直させられてるらしいですなんかいいですよねスライド全体的にこれどうやって作ったんですかそもそも最後に行こうと思ったんですけどこれどうやって作ったんですかこれはクロードコードで作っててオーパス5.5で作ってます裏側はHTMLで作られてて結構長いことフィードバックしながらこのフィードバックをゲート化してくださいっていうのを依頼してジェブを育てながら作りましたゲートの例1個だけいきますSNSの下書きにゲートマウスみたいなやつで</p>
+<p><code>36:38</code> オーバーさんが上げてたやつですねちょっとこれ人間向けのゲートだったんですけどAI向けのゲートとして捉えてもいいと思ってて人が投稿の下書き書き上げますここAIでもいいですね仮にAIが投稿の下書き書き上げるとするジェブが基準ごとに採点するスクリプトでその点数の合計を出す点落としてる部分がチルダーになってるんですけどふにょふにょですねふにょふにょの部分は次に直すところみたいな感じだからそのAQSNS投稿の採点基準みたいなのがうまく作れればゲートでだいぶクオリティコントロールができます</p>
+<p><code>37:14</code> 基準1スクロールを止めるかとかいい基準ですね前置きなしで始まるかとか具体的な例が入ってるかいやいいですねちなみになんか私がやりたいことで言うと会議の資料とか上がってくる時とかにこのロジックツリーって条件満たしてるのかなみたいなのを評価したくて 書かれてるロジックツイに対してそもそも民主になってるかとか あとは親と子のつながりが近いかとかあと 兄弟同士の抽象度が合ってるのか みたいなこととか</p>
+<p><code>37:54</code> そういうのを一通りフィードバックしてくれれば キレイなロジックができて上がってくるかもなみたいなのを 持ってたりとかしますですっていうのがゲートですねちょっと4つ例あげましたルータースコアリングリアルタイムゲートリアルタイムは無視しましょうですゲートはめっちゃ使えるんで特にうちみたいな全ての仕事がAI化されてる前提からで言うともうあらゆるとこにゲート仕込みたいじゃないですかワンテンのところ差し込む先無限にありますという感じですルータースコアリングまでだと</p>
+<p><code>38:27</code> 結構自分の仕事でそんな有効に使えるとこないかもって思った人もいるかもしれないんですけどゲートに関しては使えないなんて絶対にありえないのでなので ジェブは全ての人に必要だなと思います全部の作業で使えるみたいな結論になってるというかうん そうです問題はジェブとLLMの受け渡しの部分が むずいなってちょっと思ってるって感じですね受け渡すときどこにデータを置くのかっていうか 受け渡す情報っていうのをどこに保管してそれをどうLLMに読ませるのかみたいなところが ちょっと具体的に難しそうだなってぐらいですね</p>
+<p><code>39:06</code> でも補完とかはなくてLLMから見たらジェブはプログラムみたいなもんなんですよLLMがプログラム使ってノーションから情報を取ってきてそれを読むっていうこととLLMがプログラムでジェブを叩いてその結果を読むってことはLLM目線は一緒ですじゃあ普通にGPTにジェブを使ってしろって言ったら勝手にこうして使ってその出力部分だけGPTで実際にALMで出力させるみたいなことができるって感じですかねそうですね 8割イエスですね</p>
+<p><code>39:41</code> とはいえGPTがまだジェブのことを全然よく分かってないんでその言い方だとすごい下手な使い方はしそうですけどでも言ってることはそういうことですプログラム作ってやってねって言ったらやってくれるのと同じようにジェブ使ってやってねって言うだけで一定成立しそうですねなるほどなるほど ジェブAPIみたいなのあるんですかありますありますさっきの形式プレイグラウンドの時に見せた形式で渡すとアナウンスが返ってくるAPIがあります</p>
+<p><code>40:14</code> なんでてかジェブはプログラムではないですけどプログラムだと思っていいです体験は完全にスクリプトですですね 確かに本当に中間だなっていうかあんな簡単なプランプでできるんだっていうはいなるほどジェブは判断だけ受け持つところです役割分担の整理ですねスクリプトが情報を取ってきてジェブが判断してLLMが生成をしてもう一回ジェブがゲートしてみたいな感じですね人が確かめる場合は自信度低いものは人にもエスカレーションするスクリプトジェブLLMこの役割を抑えていきましょうと同じことの繰り返しですね</p>
+<p><code>40:54</code> 意味の判断をやっていきます全部人が確かめるみたいな風になっている現場からすると少しずつ自動化していけるといいよねと逆でもいいですけどねいきなり全部自動化してダメなとこ削ってくればいいですけどねはい で ちょっとジェブの仕組み 知っておきましょうジェブは何でこんなに早くて安いのかっていうことですねで ジェブの仕組み自体は公開されていないですただ Dジェブっていう ジェブを真似て作られたOSSがありましてそれベースでちょっと分析かけてきたというか こういうことなんじゃないかという推測を立ててます</p>
+<p><code>41:29</code> で まずLLMの挙動は こういうプロンプトを渡されたとき返金してほしい 希望する対応は?みたいなこういうプロポーターを使えたら こんな感じで答え出ますよねただこの生成って遅いじゃないですかポンポンポンポンポンポンポンポンみたいなこれ実際こういう仕組みになっててLLMはこの文章の次に来るであろう文章を推測して確率が高いものを返すっていう基本構造になってるんでなので文章をどんどん継ぎ足していく形で成立しています一方でDJVはここまでの計算は一緒というか</p>
+<p><code>42:10</code> もらったプロンプトに対して次どの文字が来る確率が高いかみたいなトークンベースで来る確率の高いテキストを探すっていうことの仕組み自体はおそらく一緒なんですよただLLMみたいにこうやって文章を作らない確率だけを返すっていう風にしているのでそもそもこの文章の生成分のコストはかかんないのとこの文章の生成の連鎖のコストもかかんないなので安くて早いっていうそもそもGPTとかもこのプロンプトに対してどれが一番確率高いかなって返すだけだったら早いんですよね</p>
+<p><code>42:48</code> めちゃくちゃ早いんですよねっていう仕組みになってますもともとLLMってネット上に広がって全ワードの中から一番合いそうなものを見つけてつなげてってわけですよねめちゃくちゃあるってことですね 無限にその時間がかかるっていうそれを選択肢絞ってやってる感じですねそりゃ早いわっていうか早いですよね全部トークンなんでこれは把握してるかもしれないですけどテキストは全部ベクトル化して</p>
+<p><code>43:22</code> ベクトル計算で出してるベクトルの計算出してるんでだから生成される前に1回数字になってるんですよねその数字ベースでこの方向性のトークンの確率が高いから文章をこれにしようみたいな感じで出てるはずなんでマジでLLMの対価バージョンなんですよ実は全部って確かにその進化途中で止めたみたいなはいこんな感じですよね今話してることは多分に推測を挟んでるんですけど含んでるんですけどおそらくこれに近い仕組みなんで逆に言うとGPTとかクロードもここすぐ作れると思うんですよね</p>
+<p><code>43:58</code> 自分の予想だと一応ジェブはジェブでジェブ用の学習を繰り返してますっていう前提があるんでだからGPTに同じことやらせても精度出ないはずみたいなスタンスはジェブ側にはあると思うんですけどなんかそれも実際やってみないとどうか分かんないんで多分GPTですぐ作れるんじゃないかなと推測されてます本当に私は推測してるだけですがなんで早いのかの回答は生成をしないからが答えですね確かにはいじゃあ最後自分の仕事で探すってところでなんかありますかっていう</p>
+<p><code>44:32</code> 感じなんですけれどでも無限にあるぞって例えば最初のルーターでも例えばこんな例がありますけどちょっと一個このフォーマットで回答もらってもいいですか1番としては AIが作った文字起こしで会議が 商談の会議が終わった後に 情報を整理するときですねうんうん ごめんでした文章としては 商談データベースの情報と会議マスターデータベース 議事録データベースですね</p>
+<p><code>45:08</code> の情報ですで 自分への質問としてはいくつかあるんですけど次の商談で必要な情報が全て入ってるかどうかを聞いてイエスノーのノールですかねそっかイエスノーで入ってたら入ってる情報をエデレームで探して抽出させればよくて入ってなかったら入ってないやつは</p>
+<p><code>45:42</code> 次に聞くべき商談の情報として置くっていうだからその今ある情報と今まだない情報まだない商談情報で分けるってことができるかなと思ってますいいですねちょっとだけ微調整するとスコアリングの方が使いやすそうでちょっとすでに伝わってると思うんですけど一応話し切るとこの商談における聞くべきことのリストを先に出しておいて各項目 例えば具体度とかでスコアリングするといいのかもしれないですけど</p>
+<p><code>46:21</code> どれだけ具体的に聞けてるかみたいな数字を出せばどこが弱いかとかでそうですね確かにそうですね 商談情報のレポートっていうよりも商談の営業マンの評価レポートみたいな感じで営業マン自体の評価のレポートとしてはすごい使えそうだなって感じがしましたスコアリングできてるかなあーいいですね営業マンの評価ってなると今度はこうもしかしたら本当に打ち解けられているかみたいなスコアリングもできるかもしれないですしそうですねはい魅力的なことを言えてるかとかうんですしはい</p>
+<p><code>46:55</code> 定例もちろん案件の方の定例でも使えるなと思ったんで会議の評価であればどこでも使える感じがしましたはいそうですねいやー本当になのでこれテストも過去100件分をスコアリングしてみて妥当性チェックするとかも結構素早くできるので良いですちょっとこれ本当はみんなでやりたかったっていう他の人の聞くといろんなアイデアが出ます自分を使う仕事見つかりましたか見つかってれば今日は成功です成功ですね結構早い段階で分かってそうでしたね</p>
+<p><code>47:28</code> 無限にあるどれからやろうって感じでしたやっぱゲートの事例が少なくてSNSで事例調べるのに注意しなきゃいけないことが2点あって1つはリアルタイムの体験っていうのがバズりがちというかSNSの親和性がいいんでこういうのがいっぱい流れてくると思いますどっちかっていうと自分にゲームやらせてみたとかですね確かに表面的なインパクトみたいなところってあります?勉強にはなるけど実用にはまだちょっと遠いような印象ですここは</p>
+<p><code>48:08</code> あれです天才であれば作れるがそうじゃなければそうじゃないとかコスパよくいくならあんま触らないときましょうがリアルタイムっていうのが1個の注意点とあともう一個ゲートっていうものに関してはあんまり表に出てこないですなんでかっていうともともとやってた長いワークフローの中にゲートが仕込まれていくわけであってここだけ切り出してこんなのできましたって言って理解してもらえるものじゃないからですねこういうガチ運用事例みたいなのはSNSあるあるですけどなんか外に出てこないんで</p>
+<p><code>48:43</code> なんで結構こう今話してた最終ゲートだよねメインはみたいなところはXとかリサーチするとギャップがあるかもしれなくてなので惑わされないようにした方が良さそうです確かに今までも既存のやり方でもそのゲートは一応できてはいたわけですもんねだからあんまりインパクトがないからってことですよねきっとXはいやそうですインパクト一番のゲートですよでもインパクト一番のゲートだと思うんですけどなんですけどちょっとこう切り出して1分とかで分かる状態の</p>
+<p><code>49:18</code> 情報の塊で外に出すのができないんでゲートはだからバズらないですなるほどということで最後ちょっともう1回だけプレイグラウンドだけ見ときましょうかこの主張自体がジェブの凄さを表してるっていうかゲートの凄さを表してますねそうですよでもあれですけどねオーパス5.5が結構いいみたいなのがありますこのスライドの良さでいうと初期段階というかスタート時点で結構良かった一応結構良かった感じそうです</p>
+<p><code>49:51</code> 雰囲気いいのは出てきますすぐこれ改めてプレグランド見て終わろうと思うんですけどステートっていう問い合わせ文とかを書くところがあって100万トークンとかいけるんでここにもっとぶち込んでもOKですとここにクエスチョンがあって2択入れたり選択肢上げたりスコアリング入れたりするって感じですねちなみにこれだと入出力を決める場所っていうのがどっかにあるはずなんですけど</p>
+<p><code>50:23</code> 出力はどこに出てくるっていうのと入力をどこで設定とかしてるんですかこれだと入力はこれとこれですよあれ回答になってるかな今青くしたのが入力ですってことは他のAPIでこのジェブを使うときはこのステート部分を自動で書き込むみたいなそうですそうですステートとクエスチョンを作ってジェブに送るって感じですなるほどですね出力フォーマットを指定してるのがクエスチョンなんでOKです一応念のため補足するとこっから下を消すと</p>
+<p><code>50:55</code> この2つが出なくなるって感じですねなるほどですねそうかレスポンスに出力が結果が書かれてるってことですねそうですそうですなるほどレスポンスもこんな感じですね実際はまずこれを分かりやすい形に加工してそれを見せてくれているとこれをAIに渡すという感じですかね一回終了したくてこれちょっと録画をロードコードに渡したらYouTube動画になるかもしれないなと思って一旦ここで締めます</p>
+<p><code>51:30</code> 皆さんお疲れ様でした</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./jev" class="internal" data-slug="jev">jev</a>（StructureNote/concepts）</li>
+<li><a href="./llm" class="internal" data-slug="llm">llm</a>（StructureNote/concepts）</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote/concepts）</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote/concepts）</li>
+<li><a href="./automation" class="internal" data-slug="automation">automation</a>（StructureNote/concepts）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-768" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

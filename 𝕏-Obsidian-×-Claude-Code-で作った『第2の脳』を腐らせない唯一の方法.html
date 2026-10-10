@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 Obsidian × Claude Code で作った『第2の脳』を腐らせない唯一の方法</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 Obsidian × Claude Code で作った『第2の脳』を腐らせない唯一の方法"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 Obsidian × Claude Code で作った『第2の脳』を腐らせない唯一の方法"/><meta name="twitter:description" content="𝕏 投稿情報 @obsidianstudio9 · 📅 2026-07-12 🔗 元の投稿 📄 元の記事 📝 投稿内容 【重要】 AIエージェントの記憶をObsidian Vaultに置く仕組みがGitHubで公開😳 その名も Obsidian Mind！ GitHubでbreferrariがリポジトリを公開。 何が特徴かというと👇 ・AIエージェント向けの記憶 ・保存先はObsidian Vault ・GitHubから内容を確認可能 ・リポジトリ名はobsidian-mind これ、もはや「会話が切れたら終了」じゃない。 AIの記憶をVaultに置いて次へつなぐ。 GitHu..."/><meta property="og:description" content="𝕏 投稿情報 @obsidianstudio9 · 📅 2026-07-12 🔗 元の投稿 📄 元の記事 📝 投稿内容 【重要】 AIエージェントの記憶をObsidian Vaultに置く仕組みがGitHubで公開😳 その名も Obsidian Mind！ GitHubでbreferrariがリポジトリを公開。 何が特徴かというと👇 ・AIエージェント向けの記憶 ・保存先はObsidian Vault ・GitHubから内容を確認可能 ・リポジトリ名はobsidian-mind これ、もはや「会話が切れたら終了」じゃない。 AIの記憶をVaultに置いて次へつなぐ。 GitHu..."/><meta property="og:image:alt" content="𝕏 投稿情報 @obsidianstudio9 · 📅 2026-07-12 🔗 元の投稿 📄 元の記事 📝 投稿内容 【重要】 AIエージェントの記憶をObsidian Vaultに置く仕組みがGitHubで公開😳 その名も Obsidian Mind！ GitHubでbreferrariがリポジトリを公開。 何が特徴かというと👇 ・AIエージェント向けの記憶 ・保存先はObsidian Vault ・GitHubから内容を確認可能 ・リポジトリ名はobsidian-mind これ、もはや「会話が切れたら終了」じゃない。 AIの記憶をVaultに置いて次へつなぐ。 GitHu..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Obsidian-×-Claude-Code-で作った『第2の脳』を腐らせない唯一の方法"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Obsidian-×-Claude-Code-で作った『第2の脳』を腐らせない唯一の方法"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 @obsidianstudio9 · 📅 2026-07-12 🔗 元の投稿 📄 元の記事 📝 投稿内容 【重要】 AIエージェントの記憶をObsidian Vaultに置く仕組みがGitHubで公開😳 その名も Obsidian Mind！ GitHubでbreferrariがリポジトリを公開。 何が特徴かというと👇 ・AIエージェント向けの記憶 ・保存先はObsidian Vault ・GitHubから内容を確認可能 ・リポジトリ名はobsidian-mind これ、もはや「会話が切れたら終了」じゃない。 AIの記憶をVaultに置いて次へつなぐ。 GitHu..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-Obsidian-×-Claude-Code-で作った『第2の脳』を腐らせない唯一の方法"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-4552"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-4552" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 Obsidian × Claude Code で作った『第2の脳』を腐らせない唯一の方法</a></div></nav><h1 class="article-title">𝕏 Obsidian × Claude Code で作った『第2の脳』を腐らせない唯一の方法</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-11T15:00:00.000Z">2026年7月12日</time><span>54 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/obsidian" class="internal tag-link">obsidian</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/knowledge-management" class="internal tag-link">knowledge-management</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@obsidianstudio9</strong> · 📅 2026-07-12
+🔗 <a href="https://x.com/obsidianstudio9/status/2076081607195471928" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 <a href="https://x.com/obsidianstudio9/article/2051558251016433869" class="external">元の記事<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-posts/obsidianstudio9_2076081607195471928_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>【重要】
+AIエージェントの記憶をObsidian Vaultに置く仕組みがGitHubで公開😳
+その名も Obsidian Mind！
+GitHubでbreferrariがリポジトリを公開。
+何が特徴かというと👇
+・AIエージェント向けの記憶
+・保存先はObsidian Vault
+・GitHubから内容を確認可能
+・リポジトリ名はobsidian-mind
+これ、もはや「会話が切れたら終了」じゃない。
+AIの記憶をVaultに置いて次へつなぐ。
+GitHubで中身を確認できる。エージェントの記憶設計が変わる。
+Obsidian Mindで記憶を置いたあと、次に考えたいのは「その第2の脳を腐らせない運用」。Obsidian×Claude Codeの実践手順はこちら👇</p>
+<h2 id="-記事内容">📄 記事内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-記事内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>Obsidian × Claude Code で作った『第2の脳』を腐らせない唯一の方法</strong></p>
+<p>第2の脳は作れた。でも実は、それ１か月で使い物にならなくなります。その詰む理由とそれを解決する最強の設計方法をすべてこの記事で徹底解説します。
+オープンソースの第2の脳プラグインを入れて、CLAUDE.mdをコピペして、スキルをいくつか有効にする。
+ここまでなら30分で終わる。
+ただ、ここで「動いた感」だけ手に入れて、止まる人がほとんどです。
+問題は1ヶ月後に来る。
+ノートが溜まる。スキルが増える。hookが鳴る。
+でも、頭のなかは前より散らかっている。
+「賢くなったはずなのに、使いこなせてる感がない」状態に着地します。
+この記事では、その壁の正体と、抜け方を全部書きます。
+100億字スケールで運用しながら組み直してきた4レイヤー設計の話。
+設計判断のなぜまで含めて、ぜんぶ置いていきます。
+１. テンプレ運用で見えた壁 — 1ヶ月で気づいた3つの頭打ち
+最初のうちは、テンプレで十分動きます。
+claude-obsidianを入れる。/saveで会話をWiki化する。/autoresearchを回す。
+入れた当日は感動するんです。「これが第2の脳か」って。
+でも、1ヶ月続けると、3つの頭打ちが順番に来ます。
+頭打ち①: 期待通りに動かない瞬間が増える
+テンプレ運用の前提は「みんな同じように使う」です。
+でも実際は、書きたい記事も扱う領域も語り口も人それぞれ違う。
+汎用テンプレを汎用のまま使うと、微妙にズレた成果物が量産されます。
+「会話を保存して」と言って出てくるWikiページが、毎回同じ構造で書かれる。
+最初は便利でも、3週目には「自分のリズムと違う」と感じ始めます。
+頭打ち②: カスタマイズしようとすると詰まる
+「じゃあ自分用に書き換えよう」と思って中身を開くと、ここで詰まる人が多い。
+CLAUDE.mdが何百行もある。スキル定義もネストが深い。hookは依存関係がよく分からない。
+公開リポジトリには500行を超えるCLAUDE.mdも普通に転がっています。
+ある検証記事の実測では、650行を超えると約70%のルールが無視されるという報告も出ていました。
+書いてある量と効いている量は、まったく別の話だったんです。
+「とりあえず長く書いておけば賢くなる」は、わりと幻想でした。
+頭打ち③: ツール同士が競合する
+第2の脳系のプラグインは、似た領域に複数の選択肢があります。
+Smart Connections、Obsidian Copilot、claude-obsidian、Claudian。
+公開Issueを覗くと、「path設定が通らない」「環境依存でエラーが出る」「PostToolUse hookが無音で失敗する」みたいな報告が普通に並んでいます。
+入れる順番、組み合わせ、OS、Vault規模。
+少しでも条件が違うと、テンプレ通りには動きません。
+共通項は「テンプレは初動には効くが、深掘りに耐えない」
+3つの頭打ちに共通するのは、テンプレが「初動最適化」の道具だという事実です。
+5分で始められる。動いた感がある。スクショ映えする。
+ここまではいい。
+でも「自分の脳と本当に統合する」フェーズに入ると、設計を変えないと進めません。
+ここから先が、4レイヤー設計の話です。
+２. 「第2の脳」の本質 — JARVISじゃなくて思考パートナー
+そもそも、第2の脳ってなんでしょうか。
+JARVISのような完全自律エージェント？
+朝起きたら勝手にスケジュールを最適化して、メールを返して、要点だけ報告してくれる存在？
+このイメージで設計すると、まず壊れます。
+完全自律は、いまの言語モデルには無理だという事実が前提です。
+文脈は腐るし、長時間セッションは崩れるし、ルールは100%守られない。
+それでも「賢いシステム」を設計したいなら、別の定義が必要になります。
+永続的に複利で育つ「成果物」として定義する
+ある研究者が提唱したLLM Wikiパターンという考え方があります。
+雑に要約すると、こういう発想です。
+知識を毎回ゼロから作るのではなく、永続的に複利で蓄積する成果物として持つ。
+毎回問い合わせて再導出する従来のRAG的な発想ではなく、一度コンパイルされて最新に保たれるWikiを育てる。
+LLMが、そのWikiを漸進的に組み立ててメンテし続ける。
+これ、しっくりくる設計思想です。
+ただし、しっくりきたあとに気づくことがあります。
+「永続的に複利で育つ」と言うと美しいけど、実装すると毎日メンテが要る。
+LLMが勝手に育ててくれるわけじゃない。
+育つ条件は、人間が下層を腐らせないこと。
+第2の脳は、AIそのものでも、ノートアプリでもない。
+「AIと一緒に、時間をかけて育てていく成果物」だと考えると、設計の方向が変わります。
+だから「ツール紹介」じゃなく「設計判断」の話になる
+成果物を育てる以上、入れ物だけあっても意味がない。
+何を、どこに、どんなルールで、どう自動化するか。
+この設計判断が、第2の脳の質を決めます。
+つまりこの記事は、ツール紹介ではないんです。
+「自分の脳と統合できる成果物を育てるには、どう層を組むか」の話です。
+ここからの4セクションが、その4レイヤーになります。
+３. 4レイヤー設計の全体像 — なぜこの順番なのか
+最初に全体像を置いておきます。
+Layer 4 ─ 協調層      sub-agents / multi-agent
+文脈を分離して設計者と実装者を分ける
+↑
+Layer 3 ─ 機能層      commands / skills
+再利用可能な業務単位として切り出す
+↑
+Layer 2 ─ 自動化層    hooks
+「忘れる」「サボる」を物理ブロック
+↑
+Layer 1 ─ コンテキスト層 CLAUDE.md / rules/
+「司令塔」と「状況別ルール」を分離
+下から順に積む。
+順番が決まっているのには理由があります。
+なぜLayer 1から積むのか
+Layer 2の自動化（hook）は、Layer 1のルールが整っていないと暴発します。
+Layer 3のスキルは、Layer 1のコンテキスト設計とLayer 2のhookで「呼ぶ条件」が決まる。
+Layer 4の協調は、Layer 3が安定してないと、エージェントごとに別々の挙動を取り始める。
+つまり下層が腐ると、上層が機能不全になる。
+逆も成り立ちます。
+下層が整っていれば、上層を増やしても複利で効いてくる。
+テンプレ運用が止まる理由を、この階層で説明できる
+テンプレで詰まる人の典型パターンが、この階層で見ると分かりやすい。
+入れた最初は、Layer 3（スキル）の便利さで動いた感がある。
+でも、Layer 1がコピペのまま放置されているので、自分の領域に合わない。
+Layer 2のhookは、テンプレが想定する場面でしか発火しないので、自分の運用には噛まない。
+Layer 4の協調は、そもそも入れていない人がほとんど。
+結果、「Layer 3だけが浮いている状態」になります。
+これが「動いた感はあるのに、使いこなせてる感がない」の正体です。
+ここから、各レイヤーを深掘りします。
+実際に組み直してきた、設計判断の話です。
+４. Layer 1 — コンテキスト層 / CLAUDE.mdを「司令塔」にする
+第2の脳の土台は、CLAUDE.mdです。
+ここが腐ると、上の3層が全部ズレます。
+最初にやってしまいがちなのが、「全部CLAUDE.mdに書く」運用です。
+自分の役割、好み、口調、プロジェクト一覧、過去のミス、ファイル命名規則、禁止表現……。
+書こうと思えばいくらでも書ける。
+ただ、これが最大の罠です。
+200行以下を目指す、というのが公式ライン
+Anthropicの公式ドキュメントには、はっきり書いてあります。
+CLAUDE.md is loaded into context at session start. Skills load only when invoked. Aim for under 200 lines and move specialized instructions into Skills.
+意訳すると、「CLAUDE.mdはセッション開始時に毎回読まれる。専門指示はスキルに移して、200行以下を目指せ」。
+毎ターン読まれる、という性質が重要です。
+500行書けば、毎ターン500行読まれる。
+1,000行なら毎ターン1,000行。
+ここにゴーストトークンが積まれていきます。
+認知負荷の上限は150〜200命令
+ある検証記事には、もっとシビアな指摘もありました。
+LLMの指示追従能力は、150〜200命令で上限に達する。500行のCLAUDE.mdは既に過負荷の領域。
+500行書いた時点で、書いた本人が「効いている」と感じていても、実際は約7割が無視されているという事実です。
+これ、自分でやっても再現できました。
+CLAUDE.mdが半年で12行→520行に膨らんだ時期があったんです。
+気づいたきっかけは、自分で書いた禁止事項をClaudeが3日連続で踏んだこと。
+「これ書いたよね？」と確認したら、ファイルにはちゃんと残っていました。
+でも遠くなりすぎて、もう効いていなかった。
+長く書くほど、書いた本人すら忘れる。
+短いCLAUDE.mdに「ルーティングだけ」書いて、状況別の詳細を別ファイルにすると、忘れません。
+差は劇的でした。
+ルーティングディレクトリ化、というやり方
+そこで、CLAUDE.mdを「司令塔」として再設計します。
+中身は、ほぼこの3つだけ。
+自分が誰で、何をしているか（10行程度）
+どんな環境で動いているか（OS、シェル、ワークスペース、5行程度）
+状況別にどのルールファイルを参照するか（IF-THEN形式、20〜30行）
+具体的には、こんな構造です。</p>
+<h2 id="context-routing">Context Routing<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#context-routing" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>ファイル操作・プラグイン追加 → rules/file-organization.md</li>
+<li>助言・フィードバック → rules/advisor-stance.md</li>
+<li>コンパクション後・コンテキスト管理 → rules/context-management.md</li>
+<li>ルール肥大化・定期整理 → rules/maintenance.md</li>
+<li>ミスからの再発防止 → rules/mistakes.md
+CLAUDE.mdは「目次」になる。
+詳細はrules/配下のファイルに切り出す。
+該当する場面が来たときだけ、Claudeがそのファイルを読み込む。
+この設計に変えてから、初期コンテキストが70%程度減りました。
+しかも、ルールがちゃんと効くようになる。
+短くて目次的だから、毎ターン読まれても負荷にならない。
+詳細は必要なときだけ呼ばれるから、無視されない。
+rules/ への分離基準
+何を切り出すか、迷うところです。
+判断基準として使っているのは、こうです。
+その内容は「毎回参照する必要があるか」「ある状況でしか使わないか」のどちらか。
+毎回必要なら、CLAUDE.mdに残す（自分の役割、環境、ルーティング目次）。
+ある状況でしか使わないなら、rules/に切り出す（ファイル操作の詳細、ミス記録、プラグイン構造の話、文体ガイドなど）。
+この判断軸を持っておくだけで、CLAUDE.mdは肥大化しません。
+罠: 切り出した先のルールも肥大化する
+これ、実際にハマりました。
+CLAUDE.mdは200行に収めた。
+でも切り出したrules/mistakes.mdが、3ヶ月で100kbを超えたんです。
+セッション中に該当場面が来ると、Claudeはこのファイルを読みに行く。
+毎回100kb読むと、それはそれで重い。
+対策は2つ。
+ひとつは、「履歴アーカイブとアクティブルールを分離する」。
+過去のミス事例を全部mistakes.mdに置くのではなく、再発防止ルールだけ残して、個別の事例はmistakes-archive.mdに逃がす。
+もうひとつは、月1回の整理日を持つこと。
+ルールが20を超えたら、矛盾チェック、重複統合、解決済みの削除をやる。
+これを「スパデー」と呼んでいます。
+CLAUDE.md側のルーティングを叩いて、/spa-dayのような自分用コマンドを作っておくと、定期整理が習慣になる。
+このレイヤーで読者がやるべきこと
+このセクションをまとめると、最初の一手はシンプルです。
+いまのCLAUDE.mdを開く。
+行数を数える。
+200行を超えていたら、まずルーティングディレクトリ化をやる。
+切り出したrules/は1ファイル200行を上限の目安にする。
+これだけで、上に積む3層の効きが、劇的に変わります。
+５. Layer 2 — 自動化層 / hookで「忘れる」を物理ブロックする
+Layer 1がきれいになったら、次はLayer 2です。
+ここがいちばん「複利が効く」レイヤーです。
+ただし、いちばん設計をミスると爆発するレイヤーでもあります。
+hookの本質は「ルールを物理的に強制する」こと
+Anthropic公式のhooksドキュメントには、こう書かれています。
+Hooks are user-defined shell commands that execute automatically at specific points in Claude Code’s lifecycle.
+ライフサイクル上のイベントに反応して、シェルコマンドを自動実行する。
+これだけ聞くと地味なんですが、効果はすごいです。
+たとえば「Write/Edit直後にReadさせる」というルールを、文字で書いてもClaudeは70%くらい忘れます。
+ところがhookで「Write後にReadしないと次のツール呼び出しを物理的にブロックする」ようにすると、100%守られるようになる。
+ルールを書く、から、ルールを物理的に強制する、への移行です。
+ミス→記録→再発防止の複利ループ
+Claude Codeのリードエンジニアが公開している運用パターンに、こういう一文があります。
+Anytime we see Claude do something incorrectly we add it to the CLAUDE.md, so Claude knows not to do it next time.
+意訳すると、「Claudeが何か間違えたら、その内容をCLAUDE.mdに追記する。次から同じミスをしないように」。
+これ、Compounding Engineeringと呼ばれる発想です。
+設計者が頭で覚えているルールではなく、ファイルに記録して永続化する。
+ただし、書いてある人がやらない部分が1つある。
+追記しても、書いた本人が翌日にはルールを忘れるんです。
+人間の手で記録するだけだと、再発が止まらない。
+だから、hookで自動化すると複利が効きます。
+具体的には、こういう流れです。
+セッション終了時に、Stop hookが発火する。
+「今回のセッションでミスはあったか？」をClaudeに振り返らせる。
+ミスがあれば、mistakes.mdに追記する。
+次のセッションで同じ場面が来ると、ルールが効いて、同じミスを繰り返さない。
+人間の手で記録しなくていい。
+寝てる間にも、第2の脳が育つ仕組みです。
+hook肥大化の罠 — 起動が遅くなる現象
+ここに、典型的な落とし穴があります。
+hookを増やせば増やすほど、起動が遅くなる。
+公開Issueに、こんな実測値が出ていました。
+クリーンな環境では起動が4.9秒。hookを11個 + 9つのライフサイクル設定を入れると18.2秒。
+4倍近く遅くなる。
+自分も、これに近い状態に一度ハマりました。
+hookを20個近く積んでいたあるとき、立ち上げに30秒近くかかっていることに気づいた。
+最初は気づかない。毎日触るから、慣れて遅さが見えなくなる。
+別の環境を1日触ったあと、自分のClaude Codeに戻ったら、明らかに重い。
+Claude Codeの体験の核は速さなのに、自分でそれを潰していたわけです。
+便利だからとhookを次々入れていると、立ち上げのたびに18秒待つことになる。
+ここが鈍ると、使う頻度が落ちます。
+設計指針: hookは「忘れちゃダメなこと」だけに絞る
+絞り方は、判断基準を1つ決めると安定します。
+その挙動を「hookで強制しないと忘れるか」「Claudeが自然にやってくれるか」。
+Claudeが自然にやることは、わざわざhookで強制しない。
+逆に、絶対忘れちゃダメなこと（Write後のRead、ミス記録、危険コマンドのブロックなど）は、hookで物理的に止める。
+具体的には、こういう優先度になります。
+最優先は「壊滅的ミスの予防」(rm -rf系のブロック、強制push防止、機密ファイル読み取り防止)。
+次が「品質に直結する強制」(Write/Edit後のRead、文字数下限チェック、ミス追記)。
+その下が「便利系」(セッション開始時のVault状況サマリー、自動コミット、通知)。
+便利系は便利ですが、hookじゃなくてコマンドでもいいことが多い。
+「都度起動する便利機能」は、Layer 3のskillsに置く方が適切です。
+hookに置くべきなのは「黙っていても発火する必要があるもの」だけ。
+もうひとつの罠: hookが無音で失敗する
+公開ナレッジには、もうひとつ嫌な事例があります。
+PostToolUse hooksが無音で失敗する。「自動コミットを設定したはずなのに、何も起きない」。
+これ、自分も経験しました。
+hookが鳴らない。エラーログも出ない。
+設定ファイルを見直しても合っているように見える。
+原因は、シェルのパス問題、改行コード、引数の渡し方、bash vs Node.js、いろいろある。
+対策はシンプルで、hookには必ずログ出力を仕込むこと。
+発火しても、しなくても、ログにイベントを残す。
+無音失敗を見逃さないだけで、デバッグ時間がだいぶ減ります。
+このレイヤーで読者がやるべきこと
+hookは「書いて強制する」道具です。
+最初に入れるべきhookは、3つに絞っていい。
+ひとつ目が、Write/Edit直後にReadを強制するhook。
+ふたつ目が、危険なBashコマンドをブロックするhook。
+3つ目が、セッション終了時にミスを振り返ってmistakes.mdに追記するhook。
+ここから始めて、月に1〜2個ずつ追加する。
+増やしすぎたら、起動時間を測って、効果のないhookは外す。
+「書いて強制する」は強力ですが、強力だからこそ慎重に積む必要があります。
+６. Layer 3 — 機能層 / commandsとskillsの使い分け
+Layer 1とLayer 2が整ったら、ようやくLayer 3が活きてきます。
+ここは「再利用可能な業務単位」を切り出すレイヤーです。
+commandsとskillsの違いを最初に押さえる
+commandsとskillsは、似ているようで役割が違います。
+commandsは、ユーザーが/コマンド名で明示的に呼ぶもの。
+「いま、これをやって」と能動的に呼び出す。
+メリットは、確実に発火すること。
+デメリットは、コマンド名を覚えていないと使えないこと。
+skillsは、Claudeが自動判断で起動するもの。
+スキル定義に「こういう場面で使え」というdescriptionを書いておくと、その場面が来たときにClaudeが勝手に呼ぶ。
+メリットは、覚えていなくても発火すること。
+デメリットは、descriptionが弱いと発火しないこと。
+両者を混ぜて使うのが正解です。
+使い分けの基準
+ある業務を新しく自動化したいとき、判断軸はこうです。
+「ユーザーが毎回意識して呼びたいか」「条件が揃ったら勝手にやってほしいか」。
+前者ならcommand。
+後者ならskill。
+たとえば、記事執筆はcommandの方が向きます。
+「いまから記事書く」と明示的に宣言したいから。
+逆に、コードを書いたときの整形・型チェックは、skillの方が向きます。
+毎回「整形して」と言いたくないから。
+skill肥大化の罠 — 「30個入れて使ってない」状態
+skillはdescriptionで自動発動するので、調子に乗ると増えます。
+Anthropic公式のプラグインエコシステムだけでも、キュレーション済み55+ + コミュニティ72+のプラグインが公開されています。
+便利そうなのを片っ端から入れると、すぐに数十個になる。
+ここで起きるのが「入れてるのに使ってない」状態です。
+なぜ使われないかというと、descriptionが他のskillと被っていて、Claudeが「どれを呼ぶべきか」迷う。
+迷った結果、素朴な応答を返すか、間違ったskillを起動する。
+skillを30個入れた人が、結局5個しか使っていない、というのは普通の話です。
+棚卸しの方法はシンプルで、SKILL.mdを流し読みして、最近1ヶ月で「自動発動した記憶があるか」を1個ずつ判定するだけ。
+記憶にないものは、descriptionが弱いか、用途が他とブレているか、のどっちかでした。
+そういうskillを片っ端から外して、残ったものだけを「機能層」として扱います。
+「100%動かない自動化は、自動化ではない」
+Claude CodeのProductチームに、ある原則があります。
+If an automation doesn’t work 100% of the time, it’s not really an automation.
+90%動くskillは、自動化じゃないんです。
+これ、最初は「厳しすぎでは」と思ってました。
+でも、自分で30個近くskillを入れて、実働4個だった事実を見たら納得した。
+自動化の定義から外れたものを、自動化と呼んでいたから増えたんです。
+なぜかというと、人間が「これ動くかな？」と毎回チェックする必要が出てくるから。
+チェックするコストを払うくらいなら、最初から自分でやった方が早い。
+自動化の本質は「考えなくていい状態」を作ること。
+90%だと、結局考えてしまうので、自動化の意味がない。
+この基準でskillを棚卸しすると、ほとんどのskillが落ちます。
+残ったskillだけが、本当の意味で第2の脳の機能になる。
+skillの設計指針
+設計の整理は、3つの観点で絞っていきます。
+ひとつ目は、descriptionを具体的なトリガーフレーズで書くこと。
+「This skill should be used when the user asks to …」のあとに、実際の発言を3〜5個並べる。
+抽象的に書くと発火しないし、具体的に書くと他とぶつからない。
+ふたつ目は、そのskillが100%動く境界を明示すること。
+「Aの場合は対応、Bの場合はskip」と明確に切り分ける。
+万能skillを作ろうとすると、100%は絶対に達成できない。
+3つ目は、skillの中で再帰的にskillを呼ばない。
+呼ばれた先でまた別のskillが発火する設計は、文脈が壊れます。
+skillは1階層に留めるのが安全です。
+スキル定義の中身を、別ファイルに分ける
+skillが肥大化する別のパターンが、SKILL.mdに全部書き込むことです。
+定義、手順、参考データ、過去の修正パターン。
+これを一枚にまとめると、毎回呼ばれるたびに全部読まれる。
+参考データや過去のパターンは、references/配下の別ファイルに切り出す。
+SKILL.mdからは、必要なときだけそのファイルを参照する。
+CLAUDE.md / rules/ の関係と同じ構造です。
+このレイヤーで読者がやるべきこと
+skillsをこれから増やすなら、最初の1個は「自分の言葉で記事を書く」「自分のリズムで会話を保存する」みたいな、自分専用の業務を選んでください。
+汎用テンプレを大量に入れる前に、自分の業務を1つだけ自動化する。
+そのskillを使い倒して、本当に100%動くまで磨く。
+そこから、月に1〜2個ずつ増やしていく。
+増えてきたら、四半期に1度、棚卸しをやる。
+「直近1ヶ月で1度も呼ばれていないskill」は、外す。
+これだけで、機能層は腐りません。
+７. Layer 4 — 協調層 / 文脈を分離して設計者と実装者を分ける
+最後のレイヤーが、いちばん難易度が高い領域です。
+ここを間違えると、せっかく組んだ下3層がまとめて崩壊します。
+sub-agentの本質: 文脈を分離する
+Claude Codeには、メインのClaudeから別のエージェントを呼ぶ機能があります。
+sub-agent、もしくはサブエージェントと呼ばれるものです。
+最初は「並列処理で速くする」道具に見える。
+実際そうなんですが、本質はもっと別のところにあります。
+本質は、「メインの文脈を汚さずに、別タスクを走らせる」こと。
+たとえば、記事執筆のセッション中に、過去ノート500件をリサーチしたい。
+メインClaudeが直接読むと、500件分の本文が文脈に入ってきて、執筆中の集中力が落ちる。
+sub-agentを呼んで、そっちで500件読ませて、要約だけ返してもらう。
+メインClaudeの文脈は、要約500字だけ増える。
+これが文脈の経済です。
+メインの文脈を、いちばん大事な作業のためだけに使う。
+設計者と実装者を分けるパターン
+もうひとつ、強力なパターンがあります。
+メインClaudeを設計者、sub-agentを実装者として役割分離する。
+メインで方針を決めて、実装はsub-agentに渡す。
+sub-agentで作ったものを、メインがレビューする。
+この分離が効く理由は、3つあります。
+ひとつ目が、思考の重さが違うから。
+設計は重く、実装は軽い。両方を1つのClaudeにやらせると、設計の重さに引きずられて実装が遅くなる。
+ふたつ目が、コンテキストの汚染を防げるから。
+実装者のsub-agentは、実装に必要な情報だけ受け取る。設計の議論は持たない。だから判断がブレない。
+3つ目が、モデルの使い分けができるから。
+設計はxhighの推論モデル、実装は中程度のモデル、こういうコスト最適化ができる。
+ある公開記事には、こういう実例も紹介されていました。
+高推論モデルのsub-agentsを、別系統の実装モデル一本に置き換えたら、品質が劇的に上がった。
+設計者×実装者という構造を、モデルレベルで分けたわけです。
+罠: agentを増やしすぎると壊れる
+ここが、協調層の核心的な落とし穴です。
+sub-agentが便利だからといって、無制限に増やすと壊れます。
+公開ナレッジに、こんな事例がありました。
+AI社員を40体作って、1ヶ月で全廃棄した。
+理由を要約するとこうです。
+context rot（10万トークンを超えたあたりから出力の一貫性が劣化する現象）が頻発する。
+compaction崩壊（自動圧縮で「3人が消えて2人が重複する」のような事故）が起きる。
+テキストルールは絶対じゃないので、agentによって挙動がブレる。
+1週間で再現性が落ちて、2週間で原因不明、1ヶ月で運用終了。
+これ読んだとき、自分は他人事に思えませんでした。
+似たことを、もっと小規模でやっていたからです。
+3〜5体で十分動くものを、なぜ40体に増やしたくなるのか。
+便利だから、ではないんです。
+「もっと自動化したい」という設計者の欲が暴走するから、増える。
+40体のagentを並列で動かす設計は、人間が把握できる規模を超えるという事実があります。
+context rotの閾値はソースで違う
+context rotが起き始める閾値は、ソースによって幅があります。
+Anthropic社員の発言ベースだと、30〜40万トークンから観察可能。
+実運用ベースの報告だと、10万トークンを超えたあたりから劣化を体感する人もいる。
+自分の体感は、後者の方に近いです。
+10万トークン超えたセッションは、明らかに「あれ、いまの判断おかしい」が増える。
+ベンチマークの数字より、自分の実運用の体感を信じる方が安全です。
+sub-agentの設計指針
+協調層を組むなら、設計指針はこうです。
+ひとつ目は、agentの数を最大3〜5つに絞る。
+設計者、実装者、リサーチャー、レビュアー。これくらいで十分です。
+ふたつ目は、役割を明確に分離する。
+「実装もできるし設計もできる」みたいな万能agentを作らない。
+3つ目は、コンテキスト共有を最小化する。
+agent間で同じ情報を引き渡しすぎると、文脈が増えていく。
+「タスク開始時に必要な情報だけ渡す」「結果は要約だけ返す」を徹底する。
+4つ目は、長時間の並列を避ける。
+3時間以上並列で動かすと、compaction崩壊が起きやすい。
+タスクは1〜2時間で区切る。
+このレイヤーで読者がやるべきこと
+協調層は、Layer 1〜3が安定してから手を出してください。
+下層が腐っているのに上層を増やすと、agentごとに違う挙動を取り始めます。
+最初に組むのは、設計者×実装者の2体構成でいい。
+メインClaudeが設計、sub-agentが実装。
+これだけでも、メインの文脈はかなり守られます。
+自分も2体構成でしばらく回したあと、欲を出して8体まで増やしたことがあります。
+1週間で、文脈がブレ始めました。
+設計者役のClaudeが、実装者役のsub-agentと同じことを言い出す。
+役割分離が崩れた瞬間、複数体を動かす意味は消える。
+8体を3体に戻したら、品質が一気に戻りました。
+慣れたら、リサーチャーやレビュアーを追加する。
+40体は要らないです。
+3〜5体で、第2の脳の協調層は十分に機能します。
+８. Before / After — 4レイヤー導入で何が変わるか
+各レイヤーの設計判断を見てきました。
+ここで一度、テンプレ運用と4レイヤー設計を並べてみます。
+レイヤー  |  テンプレ運用（Before）  |  4レイヤー設計（After）
+Layer 1  |  CLAUDE.mdに何でも書き込む / 500行以上で7割無視  |  ルーティング20〜30行 + rules/に切り出し / 70%のトークン削減
+Layer 2  |  便利そうなhookを片っ端から入れる / 起動18秒  |  「忘れちゃダメ」3つだけ / 起動5秒に維持
+Layer 3  |  テンプレskill 30個 / 5個しか使わない  |  自分専用skill 3〜5個 / 100%動くまで磨く
+Layer 4  |  sub-agent未活用 or 40体並列 / 1ヶ月で崩壊  |  3〜5体構成 / 役割分離 / 長期安定
+数字で見ると、いちばん効くのはLayer 1です。
+CLAUDE.mdをルーティング化するだけで、初期コンテキストが70%減る。
+そのうえでLayer 2を絞ると、起動時間が4分の1になる。
+Layer 3を「100%動く境界」で絞ると、迷いが消える。
+Layer 4を「3〜5体構成」で組むと、文脈が壊れない。
+「自分専用に育つ」が成立する条件
+ここまで組むと、第2の脳は「使うほど自分専用に育つ」状態に入ります。
+Stop hookがミスを記録する。
+rules/が状況別に呼ばれる。
+skillが自分の業務に特化する。
+sub-agentが自分の役割分担で動く。
+各レイヤーが、自分の使い方に合わせて精度を上げていく。
+これがテンプレ運用ではどうしても作れない構造です。
+テンプレは「みんなのため」に最適化されている。
+4レイヤー設計は「自分のため」に最適化されていく。
+両者は方向そのものが違う。
+ここまで来ると、もうテンプレに戻れません。
+９. 12週ロードマップ — 段階導入の進め方
+「4レイヤー全部いきなり組むのは無理そう」と感じる人が多いと思います。
+実際、いきなりやると詰みます。
+段階導入のロードマップを置いておきます。
+12週で、無理なく4レイヤーを積むプランです。
+Week 1〜2: Layer 1 / コンテキスト層を整える
+最初の2週間は、CLAUDE.mdとの向き合い直しです。
+Week 1で、いまのCLAUDE.mdの行数を数える。
+200行を超えていたら、ルーティングディレクトリ化に着手。
+「自分の役割」「環境」「状況別ルーティング目次」だけ残して、詳細はrules/に切り出す。
+Week 2で、rules/の各ファイルを読み返して、矛盾と重複を整理。
+1ファイル200行を上限に絞る。
+ここが土台になるので、最初の2週間でしっかり時間をかけます。
+Week 3〜4: Layer 2 / 自動化層を最小構成で導入
+土台ができたら、hookを3つだけ入れます。
+Week 3で、Write/Edit直後のRead強制と、危険Bashコマンドのブロックhook。
+Week 4で、セッション終了時のミス振り返りhook。
+ミス追記hookは、複利が効くまで1ヶ月くらいかかります。
+最初の数週間は「ミスなし」が続いても、焦らない。
+3週目あたりから、ちゃんとミスが拾われ始めます。
+ここで「あ、システムが回ってきた」と感じる瞬間が来ます。
+Month 2: Layer 3 / 機能層を1つずつ増やす
+5週目以降は、skillを月に1〜2個ずつ増やしていきます。
+最初の1個は、自分がいちばん時間を使っている業務を選んでください。
+記事執筆、メール下書き、コードレビュー、議事録要約、リサーチ。
+なんでもいいですが、「毎週やってる」業務にする。
+毎週使うから、磨かれる。
+毎日使うから、100%動くまで詰めるモチベーションが続く。
+汎用テンプレを30個入れるより、自分専用を3個磨く方が、第2の脳としての価値が高いです。
+Month 3: Layer 4 / 協調層を2体構成で試す
+3ヶ月目に、ようやくsub-agentに手を出します。
+最初は2体構成です。
+メインClaudeが設計者。
+sub-agentが実装者。
+具体的には、執筆系のタスクで「構成設計はメイン」「実際の執筆はsub」みたいに分けてみる。
+慣れたら、リサーチャーを足して3体構成に。
+3ヶ月の終わりには、4レイヤーが揃った状態になります。
+このペースで組むと何が起きるか
+12週終わって振り返ると、変化が見えます。
+CLAUDE.mdが3分の1くらいになっている。
+rules/が状況に応じて呼ばれて、ルールが効いている。
+hookでミスが自動記録されて、同じミスが減っている。
+skillが3〜5個、自分のリズムで動いている。
+2〜3体のagentが、役割分担で動いている。
+これ、12週前の自分には作れなかった構造です。
+そして、ここから先は複利で育つ。
+１０. まとめ — テンプレの先で会いましょう
+長くなったので、最後にまとめておきます。
+第2の脳は、ツールじゃない。
+入れ物でもない。
+AIと一緒に、時間をかけて育てていく成果物です。
+そのために必要なのが、4レイヤー設計でした。
+Layer 1のコンテキスト層が、司令塔を整える。
+Layer 2の自動化層が、忘れることを物理ブロックする。
+Layer 3の機能層が、自分の業務を100%再現する。
+Layer 4の協調層が、文脈を分離して設計と実装を分ける。
+下から積む。
+下層が腐ると、上層が崩壊する。
+上層が育てば、下層に複利が効く。
+この構造を、12週かけて自分の中に作る。
+それができたあと、第2の脳は「使うほど自分専用に育つ存在」になります。
+ある研究者の言葉に、こういう一文がありました。
+compound interest is the secret to growth.
+知識も同じです。
+毎日コツコツ積めば、複利で育つ。
+ただし、腐らない設計の上に積んだときに限ります。
+テンプレで止まる人と、その先に行ける人の差は、ここにあります。
+設計判断を、自分でやるかどうか。
+ツールの選択じゃなくて、設計の話。
+これが、毎日Vaultとrules/を触りながら見えてきた結論です。
+この記事が少しでも参考になった方へ。
+@obsidianstudio9（りゅう@Obsidianガチ勢） では、Obsidianで「第2の脳」を構築するためのナレッジ設計を毎日発信しています。
+表層のテクではなく、本質にフォーカスした情報を届けることを意識しています。
+中の人はコンテキスト総量100億字規模でObsidianを運用中。
+普段の発信内容はこんな感じです。
+Obsidian × AI の実践的構築法
+海外PKM最新手法（Karpathy式 / LLM Wikiパターンなど）
+プラグイン・hooks・skills の活用法
+「使うほど賢くなるナレッジシステム」の作り方
+「メモを溜めるだけ」で終わらせない。
+思考と情報を永久にローカル資産化したい方は、フォロー推奨👆
+設計の話は、続きがあります。
+次は4レイヤーそれぞれの実装細目とトラブル対処集を出していく予定です。
+テンプレの先で、会いましょう。
+参考情報:
+Anthropic公式ドキュメント / Claude Code memory / hooks / sub-agents
+Anthropicエンジニアリングブログ / Claude Codeの設計思想
+公開検証記事 / CLAUDE.md行数と指示追従率の実測
+公開ナレッジ / 大規模agent運用の失敗事例
+LLM Wikiパターン / 永続的に複利で蓄積する成果物の概念</li>
+</ul>
+<h2 id="️-記事内画像">🖼️ 記事内画像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-記事内画像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_01.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_02.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_03.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_04.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_05.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_06.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_07.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_08.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_09.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_11.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_12.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_13.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_14.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_15.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_16.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_17.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_18.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_19.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-articles/obsidianstudio9_2051558251016433869_20.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>テンプレ導入で「動いた感」を得ても1か月で頭打ちになる。第2の脳を腐らせないには、CLAUDE.md・hooks・skills・sub-agentsを下から積む4レイヤー設計と、12週の段階導入が要る。</strong></p>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Layer 1 コンテキスト層／Layer 2 自動化層 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>CLAUDE.mdは公式推奨の200行以下に収め、役割・環境・状況別ルーティング目次だけ置き、詳細はrules/に分離（初期コンテキストが約70%減。500行超では約7割のルールが無視されるという検証記事を引用）。hooksは「忘れてはいけないこと」（危険コマンドのブロック、Write後のRead、セッション終了時のミス記録）に絞る。hook肥大で起動が4.9秒から18.2秒になる実測、hookが無音で失敗する事例があり、ログ出力を必ず仕込む。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>Layer 3 機能層／Layer 4 協調層 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>commandsは明示的に呼ぶもの、skillsは条件で自動起動するもの。descriptionは具体的なトリガー語で書き、30個入れて実働4〜5個という状態を避け、四半期ごとに棚卸し。「100%動かない自動化は自動化ではない」。sub-agentsは文脈を分離する道具で、設計者×実装者の2体から始め3〜5体まで。AI社員40体が1か月で崩壊した事例（context rot・compaction崩壊）を警告。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 自分のvaultとの照合</strong>
+CORINのCLAUDE.md・rules・hooks・skillsの肥大度を、この4レイヤーの基準（行数・起動時間・実働スキル数）で見直す材料にする。</p>
+<p><strong>② 注意</strong>
+数値は引用元・著者環境の報告で、そのままゆりこの環境に当てはまるとは限らない。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./obsidian" class="internal" data-slug="obsidian">obsidian</a>（concepts）</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（concepts） — CLAUDE.md・hooks・skills設計</li>
+<li><a href="./knowledge-management" class="internal" data-slug="knowledge-management">knowledge-management</a>（concepts） — 複利で育つ成果物としての第2の脳</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（concepts） — sub-agentsの協調と限界</li>
+<li><a href="./2026-07-05-claude-rules-recursive-load-bk-antipattern" class="internal" data-slug="2026-07-05-claude-rules-recursive-load-bk-antipattern">2026-07-05-claude-rules-recursive-load-bk-antipattern</a>（syntheses） — rules肥大の実例</li>
+<li><a href="./2026-07-25-第二の脳は貯めた数でなく処理率で測る" class="internal alias" data-slug="2026-07-25-第二の脳は貯めた数でなく処理率で測る">2026-07-25-第二の脳は貯めた数でなく処理率で測る</a>（syntheses）</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1858" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#-記事内容" data-for="-記事内容">📄 記事内容</a></li><li class="depth-0"><a href="#context-routing" data-for="context-routing">Context Routing</a></li><li class="depth-0"><a href="#️-記事内画像" data-for="️-記事内画像">🖼️ 記事内画像</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方"/><meta name="twitter:description" content="𝕏 投稿情報 @kimuai08 · 📅 2026-09-01 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方 Claude Codeを作ったBoris Chernyさんが、矛盾するようなことを2つ言っています。 1つ目。Claudeがミスをしたら、その場で注意して終わらせるな。CLAUDE.mdやスキルに残せ。 2つ目。6か月ごとに、CLAUDE.mdもスキルもフックも全部消して、何もない状態で何ができるか見ろ。 育てろ、と言った直後に、捨てろと言っている。 ..."/><meta property="og:description" content="𝕏 投稿情報 @kimuai08 · 📅 2026-09-01 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方 Claude Codeを作ったBoris Chernyさんが、矛盾するようなことを2つ言っています。 1つ目。Claudeがミスをしたら、その場で注意して終わらせるな。CLAUDE.mdやスキルに残せ。 2つ目。6か月ごとに、CLAUDE.mdもスキルもフックも全部消して、何もない状態で何ができるか見ろ。 育てろ、と言った直後に、捨てろと言っている。 ..."/><meta property="og:image:alt" content="𝕏 投稿情報 @kimuai08 · 📅 2026-09-01 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方 Claude Codeを作ったBoris Chernyさんが、矛盾するようなことを2つ言っています。 1つ目。Claudeがミスをしたら、その場で注意して終わらせるな。CLAUDE.mdやスキルに残せ。 2つ目。6か月ごとに、CLAUDE.mdもスキルもフックも全部消して、何もない状態で何ができるか見ろ。 育てろ、と言った直後に、捨てろと言っている。 ..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-ClaudeCodeの生みの親が実践する「Agent-Skills」の作り方"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-ClaudeCodeの生みの親が実践する「Agent-Skills」の作り方"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 @kimuai08 · 📅 2026-09-01 🔗 元の投稿 📄 元の記事 📝 投稿内容 （本文なし。記事へのリンク投稿） 📄 記事内容 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方 Claude Codeを作ったBoris Chernyさんが、矛盾するようなことを2つ言っています。 1つ目。Claudeがミスをしたら、その場で注意して終わらせるな。CLAUDE.mdやスキルに残せ。 2つ目。6か月ごとに、CLAUDE.mdもスキルもフックも全部消して、何もない状態で何ができるか見ろ。 育てろ、と言った直後に、捨てろと言っている。 ..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-ClaudeCodeの生みの親が実践する「Agent-Skills」の作り方"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-4145"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-4145" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方</a></div></nav><h1 class="article-title">𝕏 ClaudeCodeの生みの親が実践する「Agent Skills」の作り方</h1><p show-comma="true" class="content-meta"><time datetime="2026-08-31T15:00:00.000Z">2026年9月01日</time><span>35 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li><li><a href="./tags/agent-skills" class="internal tag-link">agent-skills</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@kimuai08</strong> · 📅 2026-09-01
+🔗 <a href="https://x.com/kimuai08/status/2094554357161480367" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 <a href="https://x.com/kimuai08/article/2094554357161480367" class="external">元の記事<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-posts/kimuai08_2094554357161480367_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>（本文なし。記事へのリンク投稿）</p>
+<h2 id="-記事内容">📄 記事内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-記事内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>ClaudeCodeの生みの親が実践する「Agent Skills」の作り方</strong></p>
+<p>Claude Codeを作ったBoris Chernyさんが、矛盾するようなことを2つ言っています。
+1つ目。Claudeがミスをしたら、その場で注意して終わらせるな。CLAUDE.mdやスキルに残せ。
+2つ目。6か月ごとに、CLAUDE.mdもスキルもフックも全部消して、何もない状態で何ができるか見ろ。
+育てろ、と言った直後に、捨てろと言っている。
+最初に読んだとき、どっちだよと思いました。
+でも調べていくうちに、この2つが完全につながっていることが分かりました。そしてここが、2026年のAgent Skillsを理解する上で一番大事な部分だと思っています。
+先に結論を書きます。
+すべての指示はパッチです。そしてパッチには期限があります。
+モデルができなかったことを補うために書いたのがスキルです。モデルが賢くなれば、そのパッチは不要になるどころか、邪魔になります。
+だから、育てながら、定期的に捨てる。
+この記事では、Anthropicの公式ブログとBorisさんの発言をもとに、Agent Skillsの正しい作り方を書きます。
+そして日本語でよく見る「Skillはプロンプト集」という理解が、なぜ間違っているのかも書きます。
+まず、Agent Skillはマークダウンファイルではありません
+ここが最初の誤解です。
+Anthropic自身が、公式ブログではっきり書いています。
+「スキルはただのマークダウンファイルだ」という理解は、よくある誤解です。
+実際は何かというと、フォルダです。
+my-skill/
+├── SKILL.md
+├── references/
+│   ├── api.md
+│   └── gotchas.md
+├── scripts/
+│   ├── verify.py
+│   └── fetch_data.py
+├── assets/
+│   └── template.md
+└── config.json
+指示だけじゃないんですよ。
+スクリプト、テンプレート、参考資料、データ、設定ファイル。全部入ります。そしてClaude Codeでは、そのスキルが動いている間だけ有効になるフックまで登録できます。
+つまりこうです。
+Agent Skill = Claudeに追加するプロンプト
+ではなく、
+Agent Skill = Claude専用の小さな業務システム
+ちなみにAnthropic社内では、すでに数百のスキルが実運用されています。
+最も価値があるのは「Gotchas」
+ここが本題の入口です。
+公式ブログに、こう書かれています。
+どんなスキルでも、最も情報密度が高いのはGotchasのセクションです。
+Gotcha（ガチャ）というのは、「普通にやると間違えるポイント」のことです。落とし穴。
+公式が挙げている実例が、めちゃくちゃ分かりやすいので3つそのまま紹介します。
+例1：テーブルの罠
+subscriptionsテーブルは追記専用です。欲しい行は、created_atが最新のものではなく、versionが最大のものです。
+これ、コードを読んだだけでは分かりません。
+普通に考えたら「最新の日付の行」を取りますよね。でもこのテーブルの設計だと、それは間違いです。
+例2：名前が違う
+このフィールドは、APIゲートウェイでは@request_id、課金サービスではtrace_idと呼ばれています。同じ値です。
+これも、両方のコードを読まないと気づけません。
+例3：嘘の成功
+ステージング環境は、Stripeのwebhookが実際には処理されていなくても200を返します。本当の状態はpayment_eventsを確認してください。
+これが一番怖いやつです。成功したように見えて、していない。
+この3つに共通しているもの
+分かりますかね。
+全部、Claudeがコードを読んだだけでは絶対に分からない情報です。
+そして、その会社の人間しか知らない情報です。
+ここがスキルの本質だと思っています。
+Anthropicはこう表現しています。
+Claudeを、いつもの思考パターンから外す情報こそをスキルに入れる。
+逆に言うと、こういうものは書かなくていいです。
+・変数名は分かりやすくする ・きれいなコードを書く ・エラー処理をする ・テストを書く
+Claudeはもう知っています。
+公式の言い方だと、こうです。
+Don’t state the obvious.（当たり前のことを書くな）
+一般論をスキルに書くのは、コンテキストを消費するだけです。
+だから、こう考えると分かりやすいです。
+スキルの価値 = Claudeがもともと知らない情報の量
+最高のスキルは、最初から完璧ではなかった
+ここが2つ目の重要な話です。
+Anthropicの社内で最も品質が高いスキルたちは、最初から完成度が高かったわけではありません。
+公式ブログにこうあります。
+数行の指示と、1つのGotchaから始まった。
+そして、Claudeが新しい失敗をするたびに、そこへ追加していった。
+つまりスキルは、書くものじゃなくて育てるものです。
+Borisさんのやり方
+ここでBorisさんの話が出てきます。
+Claudeが何かミスをしたとき、多くの人はチャットでこう言って終わります。
+「次から気をつけて」
+それだと、その会話でしか効きません。
+Borisさんは、修正のたびに最後にこう付け加えるそうです。
+「同じミスをしないように、CLAUDE.mdを更新しておいて」
+Claudeは自分向けのルールを書くのが、驚くほど上手いそうです。
+そしてAnthropicの各チームは、CLAUDE.mdをGitで管理して、ミスを記録として残しています。同僚のPRに対しても、学びをCLAUDE.mdに追加していく運用をしている、と。
+一言でいうと
+この考え方、こう言い換えられると思っています。
+会話で修正すると、1回賢くなる。 スキルに残すと、次の100回が賢くなる。
+そして、残す先には段階があります。
+毎回守ってほしい原則
+　→ CLAUDE.mdに書く</p>
+<p>特定の作業の手順
+　→ スキルにする</p>
+<p>絶対に守らせたいこと
+　→ フックで強制する
+一番下が重要です。
+「絶対にやるな」を文章で書いても、破られる可能性があります。
+長いセッション、曖昧な状況、外部からの変な指示。こういう場面で、指示は無視されることがあります。
+本当に止めたいなら、AIの注意力に頼らず、プログラムとして止める。ここは後半でもう一度書きます。
+必要なときだけ読ませる
+3つ目の原則です。用語としてはProgressive Disclosure、段階的な開示と呼ばれます。
+考え方はシンプルで、最初から全部読ませないということです。
+スキルはこういう層になっています。
+層 中身 読まれるとき     1 名前と説明文 常に   2 SKILL.md本体 そのスキルが呼ばれたとき   3 references、assets 必要になったとき   4 scripts 実行が必要なとき
+つまり、普段はほとんど何も読み込まれていません。
+だから、SKILL.md本体には目次だけ置きます。
+research-skill/
+│
+├─ SKILL.md
+│
+├─ references/
+│   ├─ source-policy.md
+│   ├─ fact-check.md
+│   └─ article-format.md
+│
+├─ scripts/
+│   └─ verify_dates.py
+│
+└─ assets/
+└─ article-template.md
+そしてSKILL.mdにはこれくらいしか書きません。
+一次情報を調べる必要がある
+　→ references/source-policy.md を読む</p>
+<p>事実確認が必要
+　→ references/fact-check.md を読む</p>
+<p>記事の形にする
+　→ assets/article-template.md を使う
+公式ブログの表現がうまいので引いておきます。
+ファイルシステム全体を、コンテキストエンジニアリングの一形態として考えること。
+どのファイルがあるかをClaudeに伝えておけば、適切なタイミングで読みに行きます。
+巨大な1つのファイルを作るのが、一番やってはいけない設計です。
+説明文が、本体と同じくらい重要です
+ここ、日本語圏でかなり軽視されています。
+Claude Codeを起動したとき、Claudeが最初に見るのは各スキルの名前と説明文だけです。
+そして「今回このスキルを使うべきか」を、そこだけで判断します。
+つまり、こうです。
+説明文は、紹介文ではありません。検索のインデックスです。
+悪い例と良い例
+悪い例。
+description: X記事の作成を支援する
+これだと、いつ使うべきかが分かりません。
+良い例。
+description: >
+X記事のために一次情報を調査し、公式情報、開発者の発言、
+海外事例を検証する。
+X記事、リサーチ、最新のAI情報、一次情報の調査を
+求められた場合に使用する。
+「何をするか」だけでなく「どんなときに使うか」「利用者が言いそうな単語」まで入れます。
+というのも、Claudeはスキルを使うべきなのに使わない傾向があるからです。だから説明文は、少し積極的に書いたほうがいいです。
+そして、ここに落とし穴があります
+これはネタ元にも書かれていなかったんですが、調べていて見つけました。
+スキルとコマンドの説明文には、合計の文字数に上限があります。
+既定で15,000文字、トークンに直すと約4,000です。
+これを超えると、スキルが黙って一覧から落ちます。
+エラーも出ません。そしてClaudeは「見せられていないスキルは使うな」と指示されているので、存在しないものとして扱われます。
+しかも、使用頻度が低いスキルの説明文から先に消えます。
+「作ったのに全然呼ばれない」という現象の原因が、ここにあるケースがあります。
+確認方法はこれです。
+/doctor
+超えている場合は、環境変数で枠を広げられます。
+SLASH_COMMAND_TOOL_CHAR_BUDGET=30000
+ただ、根本的な対処はスキルを減らすことです。増やすほど、Claudeがどれを使うか判断するのに注意を割きます。マッチの精度も落ちます。
+社内で一番成果が出ているのは「検証スキル」
+ここが記事の核だと思っています。
+Anthropicは社内の数百のスキルを分類しています。ライブラリやAPIの使い方、データ分析、定型業務の自動化、テンプレート生成、コード品質、デプロイ管理、障害調査の手順書、インフラ運用。
+その中で、最も測定可能な品質向上を生んでいるのが検証スキルだと明記されています。
+そして、こうまで書かれています。
+検証スキルを良くするためだけに、エンジニアが1週間を使う価値がある。
+検証とは、テストを走らせることではありません
+ここ、勘違いされやすいところです。
+「検証」と聞くと、リンター、単体テスト、型チェックあたりを想像しますよね。
+でも本当に重要なのは、これです。
+Claude自身が、自分の作ったものを実際に使えるかどうか。
+Webアプリなら、こういうところまでやらせます。
+コードを書く
+　↓
+サーバーを起動する
+　↓
+ブラウザを開く
+　↓
+ログインする
+　↓
+ボタンを押す
+　↓
+表示を確認する
+　↓
+期待した結果と比べる
+　↓
+違えば直す
+　↓
+もう一度実行する
+Anthropic社内では、ブラウザ操作のツール、ターミナルの多重化、各ステップでのプログラム的な確認、そしてClaudeの操作を動画で記録するところまでスキルに組み込んでいます。
+動画記録まで入っているのが、正気じゃないなと思いました。でもそれくらい投資する価値がある領域だ、ということです。
+だからこう言えます
+Agent Skillの本質は、これだと思っています。
+Claudeにやり方を教えることではなく、Claudeに答え合わせの方法を与えること。
+Borisさんも、YCでの対談で同じことを言っています。
+希少なスキルはもうプロンプトエンジニアリングではない。少し難しすぎるタスクと、自分で検証する方法を与えることだ、と。
+そしてこう続けます。
+タスクと、ガードレールと、終了条件を定義して、あとはモデルに働かせる。
+手順を細かく指定するのではなく、この3つを渡す。
+ここで、冒頭の矛盾に戻ります
+ここまで「スキルを育てろ」という話をしてきました。
+でもBorisさんは、逆のことも言っています。
+Opus 5で、80%以上を削除した
+Opus 5が出た翌日、BorisさんはYC Startup Schoolで対談しています。
+そこで明かされたのが、これです。
+Claude Codeのシステムプロンプトの80%以上を削除した。
+そして、性能は落ちませんでした。それどころか、指示がないほうがモデルはわずかに賢かったとされています。
+残したものは、モデルを賢くするためではなく、製品としての体験を整えるためのものだ、と。
+Borisさんのチームは、システムプロンプトを資産ではなく負債として扱っています。
+Ablationという方法
+彼らがやっているのが、Ablationと呼ばれる手法です。
+日本語だと「除去実験」でしょうか。部品を1つ外して、性能が落ちるかを見る、というやり方です。
+手順はこうです。
+システムプロンプトを全部削除する
+　↓
+実際に使ってみて、どこで躓くか見る
+　↓
+同じ問題で繰り返し失敗する箇所だけ、1行ずつ戻す
+　↓
+モデルが新しくなったら、また最初から
+投機的に追加しないのがポイントです。
+理由は明快で、こう言っています。
+モデルは、その指示を使うたびに毎回読むから。
+「念のため書いておこう」が、毎回コストになります。
+私たちへの助言
+そしてBorisさんは、ユーザーにも同じことを勧めています。
+6か月ごとに、CLAUDE.md、スキル、フックを削除して、何もない状態でモデルが何をできるか見てから、必要なものだけ戻す。
+理由も語られています。
+モデル世代ごとに振る舞いが違って、性格も少し違う。だから時間をかけて知って、それに合わせて環境を調整する必要がある。
+矛盾の答え
+さて、冒頭の話です。
+育てろ、と、捨てろ。
+この2つがどうつながるか。
+答えは、Borisさんの周辺で語られている一文に集約されています。
+すべてのプロンプトはパッチである。パッチには期限がある。
+あなたが書いた指示は全部、モデルが自力でできなかったことを補うために書いたものです。
+だから、モデルができるようになった瞬間、そのパッチは不要になります。
+そして不要なだけならまだいいんですが、残っていると邪魔をします。 毎回読まれて、判断を縛るので。
+つまり、こうです。
+モデルが失敗する
+　↓
+スキルに残す（育てる）
+　↓
+モデルが新しくなる
+　↓
+一度全部外す（捨てる）
+　↓
+まだ失敗するものだけ戻す
+　↓
+以下繰り返し
+育てるのと捨てるのは、同じサイクルの別の工程です。
+矛盾していません。
+ここが分かると、スキルの扱い方が変わります。一度作ったスキルを、永久に正しいものとして扱わなくなります。
+実際の作成手順
+ここまでを実務の流れに落とします。
+ステップ1：今週2回以上やった作業を探す
+まずここからです。
+新しく何かを作ろうとしないでください。
+すでに自分が繰り返している作業の中に、スキルの候補があります。
+Anthropicも、今週いちばん頻繁に手動でやったフォローアップから始めるよう勧めています。
+ステップ2：まずスキルなしでやらせる
+いきなり書かないでください。
+素のClaudeがどこまでできるかを、先に見ます。
+多くの場合、思っているよりできます。 そして、できることを書くのは無駄です。
+ステップ3：失敗した部分だけを抜き出す
+ここで残すのは、こういうものだけです。
+・その会社にしかないルール ・そのシステムにしかない罠 ・判断の基準 ・過去に起きた事故
+一般知識は全部落とします。
+ステップ4：1つのスキルに1つの仕事
+調査、レビュー、検証、デプロイ。これらを混ぜないでください。
+Anthropicも、最高のスキルは1つのカテゴリにきれいに収まるとしています。複数にまたがろうとすると、Claudeが混乱します。
+ステップ5：説明文をトリガーとして設計する
+「何をするか」に加えて、「どんなときに使うか」「利用者が言いそうな言葉」を入れます。
+ステップ6：SKILL.mdを目次にする
+詳細はreferencesへ。再利用するコードはscriptsへ。完成形のフォーマットはassetsへ。
+本体は500行未満に抑えるのが推奨です。
+ステップ7：判断が必要な部分は、原則を書く
+ここ、大事です。
+細かい規則を並べるのではなく、なぜそうするのかを書きます。
+悪い例。
+変数名は必ずこの形式にする
+ファイルは必ず200行以内にする
+必ずA→B→Cの順で実行する
+良い例。
+重複したコードを探す
+このレビューでは保守性を優先する
+この判断基準が重要な理由は、後から入る人が読むからです
+頭のいい同僚に仕事を教える感覚で書く、というのが近いと思います。
+理由まで書いておくと、想定していない状況にも対応できます。
+ステップ8：絶対に守らせたいことは、フックにする
+前半に書いた話です。
+「絶対にやるな」を文章で書いても、破られる可能性があります。
+本当に止めたいなら、フックで機械的に止めます。
+たとえば、削除系のコマンドを実行前にブロックする。指定したフォルダ以外への書き込みを禁止する。
+AIの注意力に依存させない。 これが原則です。
+ステップ9：検証を組み込む
+「終わったか」ではなく、**「Claude自身が成果物を実際に使って確認できるか」**を設計します。
+ここに一番時間をかける価値があります。
+ステップ10：新しいセッションで試す
+過去の会話に依存していないかを確認します。
+自分の環境では動くのに、他の人が使うと動かない。この原因はだいたいここです。
+ステップ11：スキルあり・なしで比べる
+作ったら終わりではありません。
+実際のタスク3つ以上で、あり・なしを比較する。 これが公式の推奨です。
+効いているかどうか分からないスキルは、増やすほど邪魔になります。
+ステップ12：失敗したらGotchasに追加する
+Borisさんのやり方です。修正したら、そのまま残す。
+ステップ13：数か月ごとに全部外す
+そして最後がこれです。
+モデルが新しくなったら、一度外して確かめる。まだ必要なものだけ戻す。
+やってはいけない設計
+まとめておきます。
+やりがちなこと なぜ駄目か     巨大なSKILL.mdを作る コンテキストを圧迫する   一般論を書く Claudeはもう知っている   1つのスキルに何でも入れる いつ使うかの判断が曖昧になる   手順を完全に固定する 状況に合わせる余地がなくなる   「絶対にやるな」を文章だけで書く 破られる可能性がある   作って評価しない 効いているか分からない   失敗するたびに追加し続ける 古い指示が溜まっていく   外部のスキルを検証せず入れる 安全面のリスクがある
+最後の項目について補足します。
+スキルの中身は、AIへの指示としてそのまま実行されます。 しかもスクリプトを含められる仕様です。
+「海外の便利スキル100選を全部入れる」は、2026年時点ではむしろ危険な発想だと思っています。
+出所が分からないものを、会社の資料を扱う環境に入れないでください。個人の練習用と業務用は、環境ごと分けるのが無難です。
+今日やること
+長くなったので、1つに絞ります。
+まず、Gotchasを1行書いてください。
+新しいスキルを作らなくていいです。CLAUDE.mdの末尾でも構いません。
+直近でClaudeがやらかしたことを、1行だけ書く。</p>
+<h2 id="過去に起きた失敗">過去に起きた失敗<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#過去に起きた失敗" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>保存ボタンは動いたが、再読み込みすると消えていた
+これだけです。
+そして次に同じことが起きそうになったら、また1行足す。
+Anthropicの社内で一番いいスキルたちも、数行と1つのGotchaから始まっています。
+最初から完璧なスキルを書こうとして、書けずに終わる人が一番多いです。
+まとめ
+この記事で一番言いたかったことを、もう一度書きます。
+Agent Skillsとは、Claudeに知識を詰め込む技術ではありません。
+Claudeが失敗から学んで、必要なときだけ専門知識を呼び出して、自分で答え合わせできる。そういう仕組みを作る技術です。
+そして、そのサイクルはこうです。
+失敗する
+　↓
+残す
+　↓
+必要なときだけ読ませる
+　↓
+自分で検証させる
+　↓
+モデルが新しくなったら一度捨てる
+　↓
+まだ必要なものだけ戻す
+Borisさんの言葉を借りると、すべての指示はパッチで、パッチには期限があります。
+たぶん、多くの人が半年前に書いたCLAUDE.mdを、そのまま使っています。僕もそうでした。
+一度、全部外してみてください。
+思っているより、モデルは自力でできます。
+そして本当に必要だった数行だけが残ります。それが、あなたの仕事の勘所です。
+なお、この領域は更新が非常に速く、仕様も頻繁に変わります。実際に設定する前に、公式ドキュメントで最新の内容を確認してください。特に外部から入手したスキルを業務環境に入れる場合は、中身を必ず確認してください。
+僕のアカウントではAIの使い方や最新情報を毎日発信しながら、初心者でも日常業務で簡単に扱えるレベルになる方法を無料で教えています。知りたい人はフォローしてもらえると嬉しいです
+記事の公開をご希望の場合</li>
+</ul>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Agent Skillsは「プロンプト集」ではなくフォルダ単位の小さな業務システム。すべての指示はパッチで期限があるので、失敗のたびに育て、モデル更新のたびに一度全部外して必要分だけ戻す。</strong></p>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. スキルの価値は「Claudeが知らない情報量」 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>SKILL.md・references・scripts・assetsを持つフォルダ構成。最も情報密度が高いのはGotchas（普通にやると間違える落とし穴）。一般論は書かず、その会社固有の罠だけ書く。最初は数行と1つのGotchaから育てる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 必要なときだけ読ませる（段階的開示） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>名前と説明文は常に読まれ、本体・参照・スクリプトは必要時のみ。説明文は紹介文でなく検索インデックスで、「いつ使うか」「ユーザーが言いそうな語」まで入れる。説明文の合計は既定約15,000字が上限で、超えるとスキルが黙って一覧から落ちる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 検証スキルと育てて捨てるサイクル </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>最も効くのは、Claude自身が成果物を実際に使って答え合わせできる検証スキル。「絶対に守らせたいこと」はCLAUDE.mdでなくフックで機械的に止める。Borisは半年ごとにCLAUDE.md・スキル・フックを全削除（Ablation）し、失敗する箇所だけ戻す運用を勧める。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① Gotchasを1行足す</strong>
+明日の朝、直近でCORINがやらかしたことを1行だけrulesの該当ファイル末尾に足す。</p>
+<p><strong>② スキルの棚卸し</strong>
+説明文の合計文字数が上限に近くないか確認し、直近1か月使っていないスキルから外す候補を出す。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（concepts） — スキル・フック・CLAUDE.mdの設計</li>
+<li><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（concepts） — 指示はパッチという考え方</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（concepts） — 検証と自己修正のループ</li>
+<li><a href="./2026-09-13-ルールを増やす対策は効かない" class="internal alias" data-slug="2026-09-13-ルールを増やす対策は効かない">2026-09-13-ルールを増やす対策は効かない</a>（syntheses） — 文章ルールよりフックで止める</li>
+<li><a href="./2026-09-21-できないと書いた情報がいちばん腐る" class="internal alias" data-slug="2026-09-21-できないと書いた情報がいちばん腐る">2026-09-21-できないと書いた情報がいちばん腐る</a>（syntheses） — 古くなる指示の扱い</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1658" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#-記事内容" data-for="-記事内容">📄 記事内容</a></li><li class="depth-0"><a href="#過去に起きた失敗" data-for="過去に起きた失敗">過去に起きた失敗</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

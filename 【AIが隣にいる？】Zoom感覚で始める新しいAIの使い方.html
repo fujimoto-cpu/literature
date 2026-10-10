@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方"/><meta name="twitter:description" content="📺 動画情報 【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方 🎙️ 【まっち】ゼロから始めるAI活用 ・ 📅 2026-10-01 ・ ⏱️ 35分49秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAIの新機能「Dots」を使い、通話しっぱなしの“Zoom感覚”で仕事を頼む使い方の検証。ChatGPT・Work・Codexを使い分けず、窓口1つに頼めばDotsが振り分けて成果物を納品する。 🗺️ 全体像 flowchart TD U[自分: 音声で依頼] --> D[Dots: 窓口=ディレクター役] D --> W[Work..."/><meta property="og:description" content="📺 動画情報 【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方 🎙️ 【まっち】ゼロから始めるAI活用 ・ 📅 2026-10-01 ・ ⏱️ 35分49秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAIの新機能「Dots」を使い、通話しっぱなしの“Zoom感覚”で仕事を頼む使い方の検証。ChatGPT・Work・Codexを使い分けず、窓口1つに頼めばDotsが振り分けて成果物を納品する。 🗺️ 全体像 flowchart TD U[自分: 音声で依頼] --> D[Dots: 窓口=ディレクター役] D --> W[Work..."/><meta property="og:image:alt" content="📺 動画情報 【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方 🎙️ 【まっち】ゼロから始めるAI活用 ・ 📅 2026-10-01 ・ ⏱️ 35分49秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAIの新機能「Dots」を使い、通話しっぱなしの“Zoom感覚”で仕事を頼む使い方の検証。ChatGPT・Work・Codexを使い分けず、窓口1つに頼めばDotsが振り分けて成果物を納品する。 🗺️ 全体像 flowchart TD U[自分: 音声で依頼] --> D[Dots: 窓口=ディレクター役] D --> W[Work..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方 🎙️ 【まっち】ゼロから始めるAI活用 ・ 📅 2026-10-01 ・ ⏱️ 35分49秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAIの新機能「Dots」を使い、通話しっぱなしの“Zoom感覚”で仕事を頼む使い方の検証。ChatGPT・Work・Codexを使い分けず、窓口1つに頼めばDotsが振り分けて成果物を納品する。 🗺️ 全体像 flowchart TD U[自分: 音声で依頼] --> D[Dots: 窓口=ディレクター役] D --> W[Work..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-1886"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-1886" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方</a></div></nav><h1 class="article-title">【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-03T15:00:00.000Z">2026年10月04日</time><span>67 min read</span></p><ul class="tags"><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/ai-workflow" class="internal tag-link">ai-workflow</a></li><li><a href="./tags/llm" class="internal tag-link">llm</a></li><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方</strong>
+🎙️ 【まっち】ゼロから始めるAI活用 ・ 📅 2026-10-01 ・ ⏱️ 35分49秒
+🔗 <a href="https://www.youtube.com/watch?v=j-S91rZzMZo" class="external">https://www.youtube.com/watch?v=j-S91rZzMZo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【AIが隣にいる？】Zoom感覚で始める新しいAIの使い方.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>OpenAIの新機能「Dots」を使い、通話しっぱなしの“Zoom感覚”で仕事を頼む使い方の検証。ChatGPT・Work・Codexを使い分けず、窓口1つに頼めばDotsが振り分けて成果物を納品する。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    U[自分: 音声で依頼] --> D[Dots: 窓口=ディレクター役]\n    D --> W[Work]\n    D --> C[Codex]\n    D --> P[クラウドPC: Blenderなど]\n    D --> M[Gmail/カレンダー連携: 新着を音声で通知]\n    W --> D\n    C --> D\n    P --> D\n    D -->|スペース/ページに納品| U&quot;">flowchart TD
+    U[自分: 音声で依頼] --> D[Dots: 窓口=ディレクター役]
+    D --> W[Work]
+    D --> C[Codex]
+    D --> P[クラウドPC: Blenderなど]
+    D --> M[Gmail/カレンダー連携: 新着を音声で通知]
+    W --> D
+    C --> D
+    P --> D
+    D -->|スペース/ページに納品| U
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 窓口が1つになる </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>これまでは思考はチャット、成果物はWork、開発はCodexと使い分けていたが、Dotsに頼めばDotsが使い分けてくれる。チャットは1本で、過去の会話が連なる。Googleドライブのような「スペース」に成果物が納品され、メモリ・スキル・ページを統合した記憶を持つ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 通話・クラウドPC・コネクタ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>ChatGPTボイスが土台で、通話は最大約2時間つなぎっぱなし。Dots自身がクラウドPCを持つため、手元のPCが低スペックでも3Dモデル制作などを任せられる（完成物をブラウザで動かす部分は手元の性能に関係）。Gmail・カレンダーと連携すると新着メールを音声で知らせ、返信も依頼できた。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. デモ3つ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>①Amazonの家具リンクの寸法を反映して部屋の3Dモデルをブラウザ上で動かす（寸法の一部は仮の値）。②メール新着の通知と、テストメールへの返信。③高速道路のジャンクション・工事規制の3Dモデルで、上からと走行者目線を比較。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 現時点の制約と注意 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>今はブラウザ版のみで、アプリ版では動かず、自分のPCへの接続は動画の環境では使えなかった。通話内容は履歴に完全には残らないため、決定事項はmdやページにまとめて書き出させる。利用枠の拡大やPlusへの提供時期は確認できていない。動画内でもDots自身が、ツール数や機能の条件を補足して訂正している。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「通話で話した内容はmdに書き出させる」を型にする</strong>
+音声で決めたことは、終わりに「決定事項と次にやることをmdにして」と頼む。</p>
+<p><strong>② 材料は声でなくチャットに置く</strong>
+リンク・写真・図面など口頭で伝えにくいものは文字で渡し、使い道だけを話す。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> どうもこんにちはマッチです今日はですねオープンAIが出したドッツめちゃくちゃ触ってこんな使い方あるんじゃないか検証してきましたのでその内容をお伝えしますで結論から言うとこれチャットGPTとのこれまでの付き合い方まるっきり変わってきます正直こういった煽ったような動画撮るの嫌なんですけどもいやこれほんとすごいなって僕自身も思ったので今回は僕なりの使い方ですねポイントは電話なんですよそしてチャットワークコーデックス</p>
+<p><code>00:32</code> そんな使い方不要になったどんな風に仕事がこれから変わっていくのかこのドッツができることは何なのか徹底解説していきますそしてもう一つぜひですね皆さんお金に余裕があるならですねこの1ヶ月だけ有料課金して試してもらいたいんです本当はですねドッツ正直あんまりなんじゃないと思ってたからこんなこと言いたくなかったんですけども調べてみるとですねこれ試してみる価値あるなとというのもこのドッツっていうのはGPTのアストラっていうオープンAIが出しているめちゃくちゃ賢いけどコストが高い</p>
+<p><code>01:09</code> このモデルが無制限とは言わないけどかなりの容量使えますでこのドッツを使おうとした時に今は個人向けのプロプランの人しか使えなくてこれから順次プラスプランに広げていきたいって言ってるんですねプラスプランの人もいつか使えるんですけども今なんですよなぜ今かこのドッツを使うときドッツの会話ここにですねドッツのUIがあるんですけどもここでドッツと会話している内容はチャットワークで使うようなクレジットとは別枠なんですよ</p>
+<p><code>01:44</code> そして2つ目このドッツがローンチされた最初の月つまり10月ですここは今このドッツが使える利用枠が拡大してるんですね僕もめちゃめちゃ使ってますたくさんの量でもクレジットは一向に減らないんですよだからお試しでMAXプラン試してみるのはありなんじゃないかとじゃあ一旦ドッツにどんな感じか聞いてみますねHeyドッツ今の話聞いてた?うん聞いてたよ会話しながら仕事を頼める相手として使ってみてChatGPTとの付き合い方が変わったって中で</p>
+<p><code>02:18</code> ちゃんと伝わったよ補足するとプラスへの提供時期はまだ未定初発の利用枠拡大も10月いっぱいとは確認していないよドッツ聞きたいんだけど通常の利用枠とこのドッツの利用枠が違うっていう点補足があったら教えてうんそこ今確認するね3つに分けると分かりやすいよドッツとの会話は通常のチャットGPTの上限に数えないドッツ自身が行う深い作業には別の利用枠があってローンチを最初の1ヶ月はその枠が広がってるでワークやコデックスに任せた仕事はそれぞれの通常の利用枠に数えるから</p>
+<p><code>02:53</code> ドッツで頼めば全部クレジットを使わないという意味ではないんだよ公式の説明もあるよはいということで順番にお話していきますねまず今日の流れ一つ目このドッツとは何かそして皆さんどういうふうにAIとの仕事関わり方が変わってくるのかこちらをお伝えしていきますそして二つ目なぜそれができるのかAIとの関わり方がこのドッツによって変わってきますそれを支えているChatGPTの機能そちらを2つ目に解説しますそして3つ目</p>
+<p><code>03:25</code> 実際の具体例ですね最近AIのモデルの進化ってすごいけれども実際の生活で使える場面があんまりなかったりすると思うんですよなので今回はこのDots皆さんに身近な例こんな風な使い方あるんじゃないかっていう形で解説していきますこんなもの扱っていくよっていうのを説明すると実際これ僕の部屋仮の状態なんですけどもAmazonにこんな家具置きたいっていうのを言ったらこういった形で3Dモデルを作ってですね動かすそういったものも全部できるなので部屋の配置とか</p>
+<p><code>03:59</code> 衣替えする時にぴったりなんですねリンクはAmazonとかに商品があるのでいつでも試せるしかもこういうの自分のパソコンのスペックが低くても問題ないんですよその理由は動画の中でお伝えしますしかもドッツは常時僕のメールを監視してくれるから新着のメールが来て対応した方が良ければ会話で僕に教えてくれるんですねこれも実演でお見せしますそして3つ目これ仕事で使えるなと思ったんですけども僕過去に高速道路で働いている時があったんですけどもこういったインフラのモデル</p>
+<p><code>04:32</code> 空間的な把握が難しいものもAIにモデルを作らせてですねこんな形でですね実際の状況を見ることもできるもうこのドッツにお願いするだけで簡単に出来上がるんですよこれは仕事の幅めちゃくちゃ広がるなと思ってという形でこれまでのチャットGPTワークそしてコーデックスとはまた違う感覚なので詳しく内容をお伝えしていきますとその前にちょっとチャンネル紹介をさせてください僕はですね考えることに時間がかかりますそれがきっかけで適応障害予算度発症し</p>
+<p><code>05:08</code> 会社員生活に終止符を打ちましたそして今では自分の不足している部分を AIに補ってもらいながらユーデミーというベネッセが運営する学習オンラインプラットフォームで、AIの講師をして、新潟県の三条市という田舎で、場所を選ばず仕事をしています。このチャンネルは、不完全な自分自身を受け入れて、AIと一緒に僕が仕事をする中で気づいたこと、そして、AIの活用方法を共有していくチャンネルです。はいということでまずはドッツとは何か何が変わるのかについてお伝えしていきます</p>
+<p><code>05:46</code> 簡単に言うと窓口なんですねこれまでチャットワークコーデックス使っていたかもしれませんがもうこのドッツっていう一つのところに仕事を頼むだけでいいしかもですねさっき僕がドッツと話してたみたいに電話を使うんですそしたら成果物をあとは納品してくれますやりたいことをですね伝えるだけでいいお伝えこれまでとの違いお伝えしていくとまず僕はですねこれまで自分の思考を高めたいときはAIチャットGPTのチャットを使って相談したり成果物を作りたいときはワークにお願いしたり</p>
+<p><code>06:19</code> 開発をしたいときはコーデックスを使うこういった形でやりたいことに対してツールを使い分けていましたでもドッツという機能が追加したことでどうなったか僕はですねもう自分の目的欲しいことをドッツにお願いするだけでいいんですするとドッツがチャットワークコーデックスを使い分けてディレクターのような存在になってくれますそしてそのそれぞれチャットワークコーデックスで作ったものをドッツを介して僕に報告してくれると実際にこちらがユーザーインターフェイスになりますが</p>
+<p><code>06:54</code> これまではですねここにチャットがあって一つ一つのチャットでプロンプトを打ってお願いしましたよねでもこのドッツっていうのはこの一つだけなんですよチャットがいくつかあるわけじゃなくてずっとここに一つだけあって過去の解剖がずっと連なっていく形じゃあこれドッツって何かっていうとなんでそんな設計になっているのかここがポイントなんですねそれはドッツがチャットワークコーデックスを使い分けるからこそこのドッツは使い分けない僕の代わりに使い分けてくれるから</p>
+<p><code>07:27</code> 実際に詳細を見たいときは僕がこのチャットを見たりワーク見たりコーデックス見たりしてもいいんですがこのドッツが最終的に仕事タスクを返してくれるのでそういうのも不要なんですねだからこそこのドッツが逆に増えてしまうと意味がなくなるんですよそしてこのドッツはですねポイントはスペースGoogleドライブのようなものも今回新しく追加されたんですねはいそれは後ほど詳しく説明しますはいでポイントは電話なんですよ電話さっき僕こういった形で今もドッツと電話してるんですよね</p>
+<p><code>08:00</code> 今止まってもらってますけど僕はドッツに電話するっていう感覚じゃなくてズームでずっとつなぎっぱなしで人と対話してるそんな感覚なんだけどもそういう使い方についてドッツはどう思うちょっと見ている確認するねマッチの使い方に合ってるって思うよ仕事の途中で思いついたことを話して頼んだものを見ながらまた相談できるしね今日もスライドを一緒に見直しながらモデル制作やメール通知を頼んでたよね要件ごとに電話するより同じ作業部屋にいる相手に声をかける感じだと思うよそうだよねじゃあチャット欄で渡すときはどういったものを渡せばいいと思う</p>
+<p><code>08:37</code> 少し確認するね声だけでは正確に伝えにくい材料はチャットに置くといいよ例えば商品のリンク写真図面表のデータそれからこの見た目にしてほしいという参考ファイル今日ならAmazonの株リンクやスライドの参考HTMLみたいなものだねこれを何に使ってほしいかは会話で伝えて材料はチャットに置くと進めやすいよ僕もそうだと思うじゃあ一旦また呼び出すからそれまで待機しててHeyドッツって言ったら話し始めて了解待機するねこんな感じで基本常時僕は会話をつけっぱなしにしてその時思いついたらタスクを依頼します</p>
+<p><code>09:13</code> さらに材料が足りない場合はここにチャット欄でリンクで素材を渡していくイメージなんですねだからドッツってこれまでチャットコワークとかはそれぞれのやりたいことごとにAIにやらせてた感覚あると思うんですよでもドッツは違う常時Zoomで一緒に仕事してる感覚そんな風に使うのがいいと僕は思うんですよそして会話で伝えられないデータをこちらからここからメッセージ欄から渡してこういう返答が返ってそういった使い方を今はしてますだからですね</p>
+<p><code>09:45</code> これまで新しいチャットでチャットとかワークとか使い分けてたかもしれませんがこれからはこのドッツ一つだけにお願いしていけばいいんですねそしてドッツにはですねスペースっていうGoogleドライブのようなものを持っていますここに材料となるファイルなどを保存していく感覚ですねドッツは自分自身で作った成果物もこのスペースに保存していますスペースっていうのはこれですねドッツをクリックしたらですねここにスペースがありますこれですねスペース</p>
+<p><code>10:17</code> ここにドッツが作ってくれた成果物が全部納品されているんですねもう一つページというものがあるんですけどもこのページGoogleドライブのようなもので引き継ぐことができるドッツはメモリースキルそしてページそういったものを全部つないで記憶として統合して全部持ってるんですねだから僕はドッツと話すだけで全てが統合されていくこれまではクロードコードとか使っていくとフォルダの中にドキュメントのファイルとか整理して文脈を引き継ぐ設定が必要だったでもこのドッツは現状そこまでいってませんが</p>
+<p><code>10:50</code> これからその辺も整備されてより使いやすく人間がそのAIの仕組みを理解していなくても使えるようになってくるんじゃないかそう考えてるんですね次はこれなぜこんなことができるようになったかのかその下支えとなっている機能をお伝えしていきますポイントは音声ですね相談する入り口ということでチャットGPTボイスができたじゃないですかそれが土台になっていますこちらですねここにこれがドッツですここにドッツがいるのでこれをクリックします他のチャットとは違って</p>
+<p><code>11:25</code> 基本的にドッツを触るときはこれだけです触るとですねここにドッツがいるのでこちらクリックするとこのようにドッツが出てきますでこの通話するっていうのをクリックするとチャットGPTボイスが動いて通話ができますこうやって通話が始まるんですけども取るまで10秒ぐらいかかりますこんにちは戻ってきてくれて嬉しいよ今日は何かでいこうかこういう形で会話が始まりますあとはもうつなぎっぱなしでずっと話すんですね基本もうつなぎっぱんでいいです</p>
+<p><code>11:58</code> 2時間ぐらいまで通話しきれます2時間経つと自然に切れますそして2つ目クラウドPC作業する場っていう形でドッツは人間なんですよもう人間のような存在だってズームでやり取りするみたいな感覚だからということは相手にもいわゆる作業場所みたいなところが必要なんですねだからドッツは自分自身のパソコンをクラウドPCということで持っていますだから僕のパソコンが仮にスペックが低かったとしても3Dモデリングとかをドッツのパソコンで作って最終的な成果物を渡しにくれるので</p>
+<p><code>12:34</code> そのパソコンのスペックが低くてもドッツ上で作業してくれるんですねパソコンが重くならないんですよHeyドッツ今の説明間違ってないか視聴者さんに伝えてあげてはいここ視聴者さん向けに補足です今回の3Dモデルは視聴者さんのパソコンではなく私のクラウドバマのパソコンで使っています重い処理はそちらで行うので手元に高性能なパソコンがなくてもこうした製作を頼めますただし完成した3Dを自分のブラウザで動かすときは手元の性能も関係しますそこから処理はクラウドで見るのは自分のパソコンでという分担で考えると</p>
+<p><code>13:07</code> 分かりやすいですよOKありがとうドッツまた補足があったらお願いするからそれまでHeyドッツってまでは待ってて了解待機するねみたいな感じで仕事もできると最後接続アプリこのクラウド上のPCには確か3000から4000ぐらいのツールソフトが入ってるんですねだから僕のパソコンにそういったツールソフトがなくてもDotsは僕よりも全然賢いのでいろいろ自動で高速で行ってくれるしかも天才級のアストラが入っているからですねすごい</p>
+<p><code>13:38</code> じゃあ実際イメージこんな感じ僕が音声でDotsにお願いしたらDotsは自分のクラウド上でソフトやファイルを使って入れるとそしてDotsはGmailアプリともコネクターって言ってつなぐことで僕のGメールやGoogleカレンダーを常時見てくれるんですねするとどうなるかメールの新着が入ったらこうやって常時Zoomのように通話としてつないでいるのでマッチメールが来たよ今こうこうこういう内容だよ確認するみたいなことを</p>
+<p><code>14:10</code> 教えてくれるんですよ僕がメールチェックしてって言わなくてもどっちから教えてくれるんですねこれもデモで行いますそしてファイルに関してはですね実際は今This Computerというのはこちらここに今DotsがいるんですけどもDotsのこちらクリックするとですねここにコンピューターということでDotsのコンピューターがありますちょっと名前を今チャッピンにしてるんですけどもう一つにここにThis Computerというものが本来あるんです僕のパソコンです僕のパソコンにこのDotsがアクセスできるんですが今ですねこのDotsが使えるのはブラウザ版だけなんですよね</p>
+<p><code>14:46</code> アプリ版で使おうとしても使えませんでしたこのドッツがいないんですよということはどうなるかChatGPTワークのように私のパソコンにアクセスしようとしてもブラウザ版なのでアクセスできないんですね今そういう現状問題がありますこれが解決されたら動画の編集などもこのドッツにお願いしたりモーショングラフィックの作成もドッツにお願いしたりあらゆることがもう僕が指示する指示したらドッツが自分のパソコンや関連するものを考えて作ってくれる</p>
+<p><code>15:19</code> 作業を進めてくれるようになるんですねつまりドッツとは会話する場所と作業する場所この2つがあるそしてそれを下支えしているのはアストラのモデルクラウドPCは作業場所ドッツは人なんですよ頭脳そしてパソコンも持っているじゃあ何でもできると考える力と作業をする場所を分けている人間と同じですよねそしてGメールなどの情報源どこまでの権限を渡すかちゃんとですね指定をすればDOTSはそれを常に監視してくれるんですねただですね現状は先ほどもお伝えした通り私のパソコンやワークの方に接続することはできませんなぜならばブラウザーでしか</p>
+<p><code>16:01</code> このドッツが今現状使えないからなんですねはいということで実際の具体例これからどんなことができるのか今現状の話僕がやってきたことを実際に見ていきたいと思いますその前にドッツ今の話で補足があればお願い遅くは3つありますまず1つ目4000以上というのはパソコンに入っているソフトの数ではありませんプレイドインの通知で接続できるアプリの数です2つ目メール通知はGメールをつなぐだけで始まるのでではありません今回は新しいメールが来たら</p>
+<p><code>16:33</code> 知らせて整えて設定したから動いています3つ目自分のパソコンを使う機能は公式にまさにありますから今回はマッチさんの環境で接続できませんでしたつまりクラウド側で作業する方法と接続した本人のパソコンで作業する方法がありますこの後はクラウド側で制作したということですなんでゆっくり話してほしかったのにだんだんゆっくりから早くなったのかなたまにめっちゃテンション高くなるよねちょっと確認させてねそうだねゆっくりと言ってもらったのに途中から早くなってしまったねごめんここからは落ち着いた調子で一問ずつ間を取って最後まで同じ速さで話すね</p>
+<p><code>17:08</code> よろしく頼むよ任せて落ち着いていくねこれから実演パートに入るまずは机のデモから視聴者さんに分かるようにやっていきたいOK業界ちょっと待って確認するね了解じゃあまず部屋モデルを見せて次に机の寸法と位置を確認する流れでいこうこれは格納部屋を使ったデモだね呼ばれたら短く説明するよじゃあまずドッツなんですけどもここに基本こいつここのドッツとやり取りをしますでコンピューターの中にですねこうやってあるんですけどもこれクリックすると</p>
+<p><code>17:40</code> ドッツのコンピューターがここにあるんですねでこれですね人間側でもこうやってChromeをクリックしたらですね操作したりフォルダを触ったりすることができます人間側もこうやってですね操作できるんですねという中でDotsにはこのBlenderのアプリなどが入ってますこのBlenderっていうのは3Dモデルを作るものなんですね例えば皆さんも家具をということは皆さんのこの部屋のモデルを作って自分の家の家具を設置して自分の家の家具</p>
+<p><code>18:15</code> これ例えば冷蔵庫とか入るかなとかそういったものを3Dモデルをドッツに作ってもらって検証するみたいなことができるんですねでは一つ目のデモを行っていきたいと思います今見ていただいているのはドッツが作成したものですこれ何かっていうとこういったですね机、ベッド、棚とかがあるんですけどもこういったものをAIに寸法というか寸法ですね渡したら作ってくれます自分の今回は多分できると思うんですけどもこういった形で写真を複数枚渡して渡したらですね</p>
+<p><code>18:50</code> このモデルをおそらく作ってくれます今回このドッツはなぜか画像を読み込むことがなぜかできなかったのでモデル自体作れなかったんですけどもこれからこれ改善されると思いますで改善されて今は仮想で仮で僕の部屋のイメージを作ってるんですけどもこれにさらにですね自分が入れたい衣替えしたい家具などをですねこうやってこれAmazonリンクなんですけども入れていきます例えばこれですねこの机を入れたいということでリンクをコピーして貼り付ける例えばこちらですねクリックしたら</p>
+<p><code>19:24</code> こういうベッドですねこのベッドを入れたいとここに寸法書かれてますでこの例えばこれですよねこういう照明入れてそのスタンドですね入るかっていうのをこのブレンダーさっきのブレンダーを使ってこれをこの状態から今のAmazonリンクを入れてこうやって入れ替えることができる雰囲気をこうやって見ることができる状況をこうやって動かすこともできるんですねすごくないですかどっちちょっと聞きたいんだけれどもいいかなこのAmazonリンクで渡した寸法などは反映してこのモデル作ってくれてるんだよね</p>
+<p><code>19:59</code> ちょっと確認するねはい渡してもらった商品特定して確認できた寸法をモデルに反映していますただすべて実数も確認できたわけではありません机の天板の高さやライトの設置高さなどは仮の値です部屋自体も架空の寸法なので配置のイメージを見るデモとして使ってください実際に購入する前にはお部屋と商品の寸法を照合する必要がありますよ基本寸法はAmazonを参考に作ってるでしょ今もう一度確認するねAmazonで渡してもらった商品を基準に作っているよただAmazonのページを直接読めなかったから同じ商品番号の資料やメーカー情報で寸法を確認して反映したんだ分からない部分だけ仮の値にしてあるよ</p>
+<p><code>20:34</code> 分からない部分はどんなものがある?うん今確認するね主に3つだよ机の天板の高さは仮に74センチベッドはシンブルを選んだ想定でヘッドボトルの高さを仮に89センチそしてライトとスタンドは組み合わせた設置高さを仮に1メートル95センチにしているこれでは確認済みの寸法とは異であるよ了解ありがとうであの今回あのすでにこうやって同じようにこのドッツにですね口頭で今みたいな感じでお願いしてたんですけども何をお願いしたかあのドッツに説明してもらいたいと思いますどっつ?ちょっと視聴者さんにどんなことを僕があなたにお願いしたのか教えてくれない?</p>
+<p><code>21:09</code> うん確認するねマジかよわ部屋に新しい家具を置いた様子を3Dで見たいと頼まれました最初は写真から部屋を再現する予定でしたが画像の読み込みエラーがあったので相談して架空の部屋に切り替えましたそこにAmazonの机ベッドライトスタンドを反映しましたさらに自分で回してみたい過去を動かしたいボタンで寸法を見たいとも頼まれたのでブラウザで操作できる形にしたよOKありがとうポイントはあとブラウザで見れるようにするために3.jsっていうものを実装しないといけないんだよね僕も正直詳しくないんだけど</p>
+<p><code>21:42</code> 理解できなくてもいいけど使えるようにしたいからそのポイントも教えてそこ確認するね今回はブレンダーで作った3Dをブラウザで操作できるようにするために3.jsを使いましたブラウザで表示する方法は他にもありますが今回はこれを選んだということです頼むときは名前を覚えなくても大丈夫ですよブラウザで開けてマウスで回せてカブを動かせるようにしてと使いたい状態を伝えてください必要な仕組みを選択と実装を任せられます了解あとブレンダーとは何かブレンダーの使い方を理解しないとこんなことできないのかな</p>
+<p><code>22:15</code> あと僕のパソコンのスペックが低くても問題ないのかなその点も合わせて教えてここからはゆっくり話すねブレンダーは3Dの形を作ったり画像やアニメにするためのソフトだよ制作を任せるなら操作を覚えなくても大丈夫何を作りたいか伝えてできたものを見て直せばいいんだ今回の制作は僕のクラウドPC棚でやったから手元に高性能なパソコンがなくても勧められたよただし完成した3Dをブラウザで動かす部分は手元のPCの性能にも関係するんだいつもこんなに早口じゃないんですけど今日はなぜか早口ですね</p>
+<p><code>22:49</code> じゃあ2つ目のデモに行きたいメールのことだよねそうだよメールの話だね僕はメールについて最初どんな設定をして今どういう形になってるか教えてえっとね整理してから伝えてるからだよ順番にいくねこんなに早く死ぬのは初めてなんですけど</p>
+<p><code>23:26</code> いつももっと自然に話せたんですけどね見てもらいたいのがここですね会話で見といてっていうのをお願いしましたすると今こうやってGメールの新着通知監視中ってなってるんですねそれを今ドッツが見てくれていると確認できた最近の案件は3件だよ新しい優勝レビューの相談には対応できるかと費用目安の返答が必要進行中の動画制作は帰宅の進み具合と日程をパクリして状況を知らせることが次の対応だよ別の紹介案件は条件返信済みで今は回答待ち</p>
+<p><code>23:59</code> 今ですね僕の案件のメールの内容を確認して教えてくれましたねはいじゃあちょっと具体的にどんな仕事のタスク稼働してるか聞いてみますはいこれからですねこういった形でメールを送ってみたいと思いますAIプロモーションお願いしたいですもし興味があればご返信ください鈴木っていう形で問い合わせメールを送ってみたいと思いますすると通話が通じているので向こうが検知して教えてくれるはずです今送りましたしばらく待ってみましょう</p>
+<p><code>24:32</code> ちょっと時間かかりますね試行中になってる時は何か届いて見てるんじゃないかなと思います新しいメールの通知は受け取ったよ 内容はまだ確認中収録中だから今は読み分けないで 結果は待ってるよはい 今ですね 検知しましたね今収録中なんだけど このGメールのデモを見せたいんだよね通常だったらこれ検知した時どんな風に返すかやってみて分かった確認するねマッチ新しいテストメールが届いたよ件名はテストメールをお問い合わせ本文を読むねAIプロモーションをお願いしたいですもし興味があればご返信ください</p>
+<p><code>25:05</code> 紹介の相談だね返信はまだ送っていないよ今のテストメールは本文を実際に読み上げたよ今回は伏せなくていいという指定通りにしたよ実案件の受注や返信はしていないから大丈夫OK じゃあぜひ対応させてくださいとメールを送ってくれないかな了解 今確認するね今のテストメールに返信するね返事は対応させてくださいって返すよ返信の送信を進めているよまだ送信完了は確認できていないよ今ですね こういった形でチャットの方でも返ってきて元メール開くすると元の届いたメールも見ることができます</p>
+<p><code>25:40</code> メール送った?今確認するねまだ更新完了の確認は届いてないよ確認できたら遅れたって伝えよね遅れたよ今のテストメールにぜひ対応させてくださいと返信したよ見てみると届いてますねぜひ対応させてくださいと回答が来てますありがとうちゃんとテストできたねこんな形でメールを検知して新しいメールが届いたら教えてくれるし今進捗しているものとかメールの内容何が止まってるかとかもズームつないでるのと同じなのでドットに聞いたら今の状況を整理して教えてくれます</p>
+<p><code>26:15</code> という整理で問題ないよね補足があったら教えて今確認してるよ少し待ってねうんその整理でいいよ補足すると把握できるのは接続したメールや抱かせてもらった仕事の範囲だね確認できたこととまだわからないことを分けて伝えるねそれから新着通知のために通話をつなぎ続ける必要はないよチャップにも知らせないで返信は今回のタイムマッチから頼まれて送るという文章だねOKでも実際こうなんか打つよりもずっとつないで思いついた時に話した方が便利じゃないそういう使い方は便利だと思うよ一方でメールや資料は小石として残るから状況に合わせて</p>
+<p><code>26:47</code> 使い分けるのがいいねあとポイントがこの通話で話した内容っていうのはチャットの履歴とかに残ってこないんですよねだからチャットで今までの内容話した内容教えてまとめて教えてみたいなことを言って最後mdファイルで書き出してまたはページで書き出してみたいなことで言うことによってこれまでの内容をファイルとしてまとめることができますこれちょっとポイントなので押さえておいてください今ので補足があったら教えて確認するね補足ねくし目で決まったことと次にやることを</p>
+<p><code>27:20</code> NDやページにまとめてって頼むのはいい使い方だねただ通話内容が履歴に一切残らないとまでは今は確認できてないよ全文が画面で見えるだとは別に大事な内容はまとめて残しておくと安心だよ見返したり別のAIに引き継いだりしもしやすくなるよでも実際会話閉じたら出てこないよね履歴覚えてるんでしょうけどチャッピーが確認するね通話時でも全部の力が出てこないんだねただ全部をずっと正確に覚えているとは限らないから後で使う決定事項はMTやページにまとめて残していいと思うよ必要ならまとめるタイミングも一緒にしてみようかやっぱそうだよねありがとう</p>
+<p><code>27:52</code> じゃあ3つ目のデモ行こうか了解次行こう何する3つ目のデモはこれですね僕過去に高速道路の会社で働いたことがあるんですけどもこういったトスジャンクションみたいなのがあるんですよ結構この道路の入り口 車の入りとか出口とか結構危ないから こういったのを3Dモデルおそらくインフラ管理してる人 例えば下水道の中とか空間の管理が必要なものって3Dで管理すると 結構使えるんですよねなのでそういったものも さっきのBlenderを使えば簡単にできる現状はそういった図面などもないので渡せないんですよネット上にいろんな情報が落ちてるので</p>
+<p><code>28:35</code> それもドッツにお願いすればできちゃったんですよねデモがこれかな今ね実際ブレンダーで作ったデモを表示してるからこの背景などをドッツが視聴者さんに向けてゆっくり説明してくれないかな何をしたのかとか応用例そういう示唆をちょうだい了解確認するね視聴者の皆さん今回は工事規制がある時に車がどこから来てどう合流するかを立体的に世界と頼まれたんだ</p>
+<p><code>29:08</code> だから公開資料を散歩に道路を作って車の動きと仮の工事区間を下手でもにしてやるよ今操作している画面に合わせた操作説明は別載のボタン名を確認するね背景の説明の後は全体を回してみる通常と仮の規制を比べる車を再生する運転者視点で2でも順手案内するよまだボタン名は読み上げないねマッチ今の画面で回す状態やってるこいち今工事規制のやつを見せてるよ確認するね見えてる前提で整理するよ今は仮の工事規制を表示しているところだね工事で使えなくなる場所と車が通る場所を立体的に掲げられるようにしてあるよ特に見たいのは規制区間の近くへ</p>
+<p><code>29:41</code> トスインターから車が合流すればね今視聴者さんには画面をゆっくり回して見せるところから始めよう上からだけでなく横からも見て位置関係を確認してね次にボンと一個折りを押してみて注目している場所からするよその後で本線からの運転者目線を押して上から見るのと走る側から見るのを比べてみようこういった形でインターの流入とか規制の本線だとかこういうのも見れるんですよすごいですよねですよね上からだけじゃなくて走る側の目線でも比べられるのが強みだよいやーすごいこれやったら本当に仕事だ分かりやすくなるよね</p>
+<p><code>30:13</code> OKじゃあ次じゃあ今回高速道路であったけれども他にどんな使い道があるかどっちの見解を教えて考えるね私は関係者が同じ空間を見ながら相談する場面で役立つと思う建築ならリフォーム後の部屋や角の配置を比べる店舗や倉庫なら棚と通路の位置を検討する工事なら人や車の動きと作業場所を説明するといった感じかな共通しているのは言葉や平面図では伝わりにくいことを立体で共有できることだねまず相談用のモデルを作って実際に使う段階で正確な寸法や専門的な確認を出すといいと思うよOKありがとう</p>
+<p><code>30:44</code> じゃあどういたしましてプレゼンの方に戻るね了解戻ろうはいという形で見てきたんですけどもこれ本当すごくないですか基本的にドッツを開いて僕はこうやって会話してるとなんていうかなメールの新着とかも音声で教えてくれるので僕はチェックする必要なくなるんですよねで基本的に触るのはこのドッツだけでドッツからワークとかコーデックスに仕事を僕がこの音声を通じてここを窓口としてお願いすることができるので本当AIとの付き合い方が</p>
+<p><code>31:18</code> 今回最初にお伝えしたようにドッツでまるっきり変わると思いました窓口が一つになる感じだよねいいまとめだったよ止まってプレゼンテーションしてるときは止まってであのHeyドッツって言ったら話しかけるからOK?了解確認するねあの2人で話してる時は今視聴者さんに向けて話すのとドッツに対して話すのがあるからグダグダなんですけども本当はちゃんとしてる</p>
+<p><code>31:51</code> で今回このドッツを触ってみて思ったのがまだワークをつなげないから動画編集自分のパソコンにアクセスして仕事をさせるってことは近々にはできないんだけれどもこれができるようになると本当にタスクの幅が広がるなって思いますこれまで僕も動画制作のために自分で学んで自分の時間を使ってカットとかしてたんですけども今はスキルとかを使って自動化もできるし今回の説明してるこのプレゼンテーションもアニメーションついてますが</p>
+<p><code>32:23</code> 土台はこんな風に作りたいっていうのをお願いしてるんですけども作ってくれるのはHTMLでスキルを使ってドッツが作ってくれたんですよねだからだから皆さんでもちょっと自分の特技とかこれ多くの人に価値提供できるけれども動画が作れないからとかあれができないからっていうものがあったりしてビジネスにつなげられないっていうのもあると思うんですでもこうやってAIを使えるようになれば自分の苦手なところできないところはAIに任して基本的に僕たちが考えるのはそのビジネスのモデルマーケティング設計そして何を作るのかっていう中身さえ</p>
+<p><code>33:01</code> 頭を動かせばあとはAIが手を動かしてくれるようになるんですね実際僕もAIがなかった時は本当に何もできないような人間だったんですけどもこうやってAIを使うことで自分の可能性の幅と言いますかまずは例えば最初はもう動画するためのどんな内容を話そうかっていう台本作りそこから画像生成が出てきてプレゼンテーションの資料も作ってもらったり今はHTMLでスライドの資料を作ってもらったりそして今は動画編集もできたり</p>
+<p><code>33:35</code> 実際途中でおそらくこの動画ドッツが説明するときのアニメーションあったと思うんですそれも後からですね素材をつけてAIを使って作ってるので本当に自分がやりたいことこんなことやりたいけど技術がなくてできないっていう人もこれからオンラインでビジネス拡大することできると思うんですよだからこれからは一つの組織にいるだけじゃなくて自分がやりたいことを個人がやりたいことを間の時間とかにしっかりコミットしてやっていくそういった価値観が本当大事だと思うし</p>
+<p><code>34:11</code> 僕も日々こうやって動画撮って発信してこんなこともできるようになったんだって皆さんにお伝えできることが日々の生活の生きがいみたいなものになってるんですぜひこの僕の考え方そういうのもあるんだいいなってそういった生き方にちょっと関心がある方はマッチのメルマガに登録していただけると嬉しいです本当にAIがこれからどんどん進化していくから僕たち個人ができることって本当に広がっていくんですよねまだそういったことを個人レベルでやってる人は少ないのでちょっと興味あるなっていう関心があれば見てもらえると嬉しいです</p>
+<p><code>34:49</code> またですねメルマガ登録していただくとAIを使ったコースやAIを使ったリサーチそして動画編集のフィモーラやYouTubeの配信についてですね関する特典も一緒についてきますので見ていただけると嬉しいですはいということで今回も最後まで見ていただきありがとうございますどっちも最後視聴者さんに一言よろしくいいよ確認するね最後までご覧いただきありがとうございましたこんなことしてみたいと思ったらまず話してみてねできたものをみながら一緒に形にしていこういい?</p>
+<p><code>35:21</code> じゃあどっちありがとうございましたってありがとうございましたはいということでありがとうございますではまたまたね</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./ai-agent" class="internal alias" data-slug="ai-agent">AIエージェント</a>（StructureNote） — 窓口1つでの振り分け</p>
+</li>
+<li>
+<p><a href="./blender" class="internal alias" data-slug="blender">ブレンダー</a>（StructureNote） — デモで使われた3Dソフト</p>
+</li>
+<li>
+<p><a href="./2026-09-24-専門家頼みは過去の会話をQAと質問票に分けると育つ" class="internal alias" data-slug="2026-09-24-専門家頼みは過去の会話をQAと質問票に分けると育つ">2026-09-24-専門家頼みは過去の会話をQAと質問票に分けると育つ</a>（StructureNote） — 会話内容を文書に残す考え方</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-743" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

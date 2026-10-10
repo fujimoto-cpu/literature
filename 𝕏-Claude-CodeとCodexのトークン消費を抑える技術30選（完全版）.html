@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>𝕏 Claude CodeとCodexのトークン消費を抑える技術30選（完全版）</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="𝕏 Claude CodeとCodexのトークン消費を抑える技術30選（完全版）"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="𝕏 Claude CodeとCodexのトークン消費を抑える技術30選（完全版）"/><meta name="twitter:description" content="𝕏 投稿情報 @kawai_design · 📅 2026-07-14 🔗 元の投稿 📄 元の記事 📝 投稿内容 Claude Codeがわからない… から卒業しませんか？ 「例え」を使って、中学生 でもわかるAIの授業を実施します。 難しい話はしないので 中級・上級者の方は 向かないかもしれません。 初級者、未経験者のための やさしい内容です😊 📄 記事内容 【完全版】Claude Code・Codexのトークン消費を抑える技術30選〜CLAUDE.md、/compact、Skills、MCP など〜 【完全版】Claude Code・Codexのトークン消費を抑える技術30..."/><meta property="og:description" content="𝕏 投稿情報 @kawai_design · 📅 2026-07-14 🔗 元の投稿 📄 元の記事 📝 投稿内容 Claude Codeがわからない… から卒業しませんか？ 「例え」を使って、中学生 でもわかるAIの授業を実施します。 難しい話はしないので 中級・上級者の方は 向かないかもしれません。 初級者、未経験者のための やさしい内容です😊 📄 記事内容 【完全版】Claude Code・Codexのトークン消費を抑える技術30選〜CLAUDE.md、/compact、Skills、MCP など〜 【完全版】Claude Code・Codexのトークン消費を抑える技術30..."/><meta property="og:image:alt" content="𝕏 投稿情報 @kawai_design · 📅 2026-07-14 🔗 元の投稿 📄 元の記事 📝 投稿内容 Claude Codeがわからない… から卒業しませんか？ 「例え」を使って、中学生 でもわかるAIの授業を実施します。 難しい話はしないので 中級・上級者の方は 向かないかもしれません。 初級者、未経験者のための やさしい内容です😊 📄 記事内容 【完全版】Claude Code・Codexのトークン消費を抑える技術30選〜CLAUDE.md、/compact、Skills、MCP など〜 【完全版】Claude Code・Codexのトークン消費を抑える技術30..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Claude-CodeとCodexのトークン消費を抑える技術30選（完全版）"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/𝕏-Claude-CodeとCodexのトークン消費を抑える技術30選（完全版）"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="𝕏 投稿情報 @kawai_design · 📅 2026-07-14 🔗 元の投稿 📄 元の記事 📝 投稿内容 Claude Codeがわからない… から卒業しませんか？ 「例え」を使って、中学生 でもわかるAIの授業を実施します。 難しい話はしないので 中級・上級者の方は 向かないかもしれません。 初級者、未経験者のための やさしい内容です😊 📄 記事内容 【完全版】Claude Code・Codexのトークン消費を抑える技術30選〜CLAUDE.md、/compact、Skills、MCP など〜 【完全版】Claude Code・Codexのトークン消費を抑える技術30..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="𝕏-Claude-CodeとCodexのトークン消費を抑える技術30選（完全版）"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-3935"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-3935" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>𝕏 Claude CodeとCodexのトークン消費を抑える技術30選（完全版）</a></div></nav><h1 class="article-title">𝕏 Claude CodeとCodexのトークン消費を抑える技術30選（完全版）</h1><p show-comma="true" class="content-meta"><time datetime="2026-07-13T15:00:00.000Z">2026年7月14日</time><span>28 min read</span></p><ul class="tags"><li><a href="./tags/x" class="internal tag-link">x</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li><li><a href="./tags/mcp" class="internal tag-link">mcp</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>𝕏 投稿情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>@kawai_design</strong> · 📅 2026-07-14
+🔗 <a href="https://x.com/kawai_design/status/2076807725187826169" class="external">元の投稿<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+📄 <a href="https://x.com/kawai_design/article/2076807725187826169" class="external">元の記事<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+</div>
+</blockquote>
+<p><img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_01.jpg" width="auto" height="auto" alt/></p>
+<h2 id="-投稿内容">📝 投稿内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-投稿内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Claude Codeがわからない…
+から卒業しませんか？</p>
+<p>「例え」を使って、中学生
+でもわかるAIの授業を実施します。</p>
+<p>難しい話はしないので
+中級・上級者の方は
+向かないかもしれません。</p>
+<p>初級者、未経験者のための
+やさしい内容です😊</p>
+<h2 id="-記事内容">📄 記事内容<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-記事内容" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><strong>【完全版】Claude Code・Codexのトークン消費を抑える技術30選〜CLAUDE.md、/compact、Skills、MCP など〜</strong></p>
+<p>【完全版】Claude Code・Codexのトークン消費を抑える技術30選〜CLAUDE.md、/compact、Skills、MCP など〜
+KAWAI
+@kawai_design
+·
+Jul 14
+Subscribe
+1
+10
+94
+17K
+Claude CodeやCodexを使い込むと、利用枠の減りが早くなります。
+消費源は質問文だけではありません。CLAUDE.md、Skills、MCPの定義、会話履歴、AIの出力や推論も積み上がるためです。
+この記事で分かるのは、何を削り、何を残すべきかです。まずは今日3つ、上級者は30項目を順番に点検できます。
+対象は、Claude CodeのCLI・アプリ、CodexのCLI・アプリ、API運用です。プランの利用枠とAPI料金は別物なので、分けて整理します。
+見出し画像はAIで生成しました。
+プロンプトは200,000文字超えの記事に掲載中。
+毎日プロンプトは増えていきます。
+目次
+まず知るべき、トークン消費の5分類
+常時読み込まれる情報を減らす6選
+会話とセッションを軽くする6選
+1回の依頼とモデルを軽くする6選
+ツールとAPI運用を最適化する6選
+30項目チェックリスト
+最短ルート
+今すぐ効くのは、<code>/context</code>で内訳を見る、CLAUDE.mdを短くする、使わないMCPを切る、<code>/compact</code>と<code>/clear</code>を使い分ける、Codexのreasoning effortを下げる、という5つです。</p>
+<p>まず知るべき、トークン消費の5分類
+質問文を短くするだけでは、トークン節約に限界があります。
+まず把握したいのは、AIへ渡る次の5種類です。
+常時読み込み: CLAUDE.md、AGENTS.md、Skillsのdescription、MCPのツール定義
+会話履歴: これまでの質問、回答、ツール出力、貼り付けたファイル
+出力・推論: AIの回答、コード、説明、reasoning tokens
+ツール実行: 大量のログ、巨大なdiff、検索結果、MCPの返却データ
+APIの再送: 同じ長い前提を何度も送る入力
+Claude Code公式によると、CLAUDE.md、auto memory、MCPツール名、Skillsのdescriptionは起動前からコンテキストへ入ります。
+Codexも、タスクの規模や複雑さ、セッションの長さによって使用量が変わる仕組みです。
+つまり、節約の基本は短文の名人になることではありません。重要なのは、毎回AIに読ませる情報の設計です。</p>
+<p>常時読み込まれる情報を減らす6選
+ここで減らす対象は、「毎回読む情報」です。
+効果が大きく、品質を落としにくい順に確認します。</p>
+<ol>
+<li>
+<p>CLAUDE.mdの文字数と行数を減らす
+Claude Code公式は、200行を超えるCLAUDE.mdについて、コンテキスト消費が増え、指示の遵守率が下がる可能性を案内しています。
+残すのは、全セッションに必要な事実だけで十分です。
+候補は、ビルドコマンド、ディレクトリ構造、絶対に守る規約、テスト方法です。背景説明、古い経緯、毎回は不要な手順は削除候補になります。</p>
+</li>
+<li>
+<p>「毎回必要」と「その時だけ必要」を分ける
+CLAUDE.mdへ、デザイン、DB、デプロイ、請求など全分野のルールを詰め込む必要はありません。作業領域ごとのRulesやSkillsへ分離してください。
+毎回読むルールが増えるほど、重要なルールは埋もれます。短く保つことは、節約と指示精度の両方に効く施策です。</p>
+</li>
+<li>
+<p>path-scoped rulesへ移す
+特定のファイルを触る時だけ必要な指示は、パス条件付きのRulesへ移すのが適切です。Claude Code公式も、大きなプロジェクトでは関連時だけロードする方法を案内しています。
+ただし、パス条件付きRulesは<code>/compact</code>後に自動で戻らない場合があります。必要なファイルと関連ルールを再確認する運用が必要です。</p>
+</li>
+<li>
+<p>Skillsのdescriptionを短くする
+Skillsでは、descriptionが「いつ呼ぶか」の判断材料として常時参照されます。
+ここに書くのは、対象作業と発火条件だけで十分です。
+長い使い方、背景、手順はSKILL.md本文へ移してください。
+例:
+description: PDFを作成・検査する時に使う。PDF、請求書、印刷レイアウトが対象。
+「このSkillは何でもできます」という説明は、トークンを消費するうえ、自動発火の精度低下も招きます。</p>
+</li>
+<li>
+<p>使わないSkillsを減らす
+Skillsは、多いほど便利になるとは限りません。古いSkill、重複Skill、ほぼ使わないSkillは棚卸しの対象です。
+直近1か月で使っていないものは、別フォルダへ移すか無効化して再検証します。削除する場合も、復元できる形にしてください。</p>
+</li>
+<li>
+<p>CLAUDE.mdとAGENTS.mdの重複をなくす
+Claude CodeはCLAUDE.md、CodexはAGENTS.mdを主に参照します。両方へ同じ長文をコピーしても、管理コストと読み込み量が増えるだけです。
+共通ルールを1つへ集約し、片方から参照する構成が有力です。
+Claude Code公式は、CLAUDE.mdからAGENTS.mdをimportする方法も案内しています。ただし、実際の読み込み方は利用環境で確認してください。
+これで、毎回読む情報の棚卸しは完了です。次は、すでに積み上がった会話を整理します。</p>
+</li>
+</ol>
+<p>会話とセッションを軽くする6選
+長い会話には、過去のツール出力や失敗まで残ります。タスクの継続と、履歴の抱え込みは別問題です。</p>
+<ol start="7">
+<li>
+<p><code>/context</code>で消費源を確認する
+Claude Codeでは<code>/context</code>を使うと、システム、ツール、メモリ、メッセージなどの内訳を確認できます。
+削る対象は推測で決めず、上位の消費源から見直してください。</p>
+</li>
+<li>
+<p><code>/compact</code>を限界まで待たずに使う
+<code>/compact</code>は、会話履歴を要約へ置き換えるコマンドです。
+手動で使うなら、調査終了時、実装へ移る時、大量のログを読んだ直後が目安になります。
+残す情報の焦点まで指定すると、次の作業へつなぎやすくなります。
+/compact 次の実装に必要な変更ファイル、決定事項、未解決のテストだけ残す</p>
+</li>
+<li>
+<p><code>/clear</code>で別タスクを始める
+<code>/clear</code>は、会話を空にして新しい作業へ移るコマンドです。過去のセッションは保存されるため、必要になれば再開できます。
+バグ修正の途中で、関係ない記事執筆や別機能の相談を始めても、不要な履歴が増えるだけです。作業の目的が変わった時点で、clearへ切り替えてください。</p>
+</li>
+<li>
+<p>セッションを「調査・実装・検証」に分ける
+1つのセッションへ、要件整理、コード実装、UI確認、リリース文まで詰め込む必要はありません。
+作業単位で分け、各セッションの入口に成果物と完了条件を渡すと、目的が明確になります。
+分割の例:
+調査: 変更対象と制約を<code>plan.md</code>に記録
+実装: <code>plan.md</code>を読んで変更
+検証: <code>git diff</code>とテスト結果だけを渡す</p>
+</li>
+<li>
+<p>セッション名を付け、必要な時だけresumeする
+Claude Codeは、<code>--resume</code>や<code>/resume</code>で過去のセッションへ戻れます。
+すべてを1つの会話へ詰め込まず、必要な履歴だけを再開してください。
+別案を試す時には、forkで分岐してください。
+不要な失敗履歴を次の案へ持ち込まずに済みます。</p>
+</li>
+<li>
+<p><code>/compact</code>後に必要ファイルを再読する
+compactは万能な記憶ではありません。
+プロジェクトルートのCLAUDE.mdやauto memoryは再注入されますが、ネストしたCLAUDE.mdやパス条件付きRulesは、必要なファイルを読むまで戻りません。
+そのため、compact直後には「変更対象のファイルと関連ルールを再確認して」と依頼してください。
+これだけでも、要約後の取りこぼしを減らせます。
+会話を軽くした後は、1回の依頼で発生する出力と推論へ進みます。</p>
+</li>
+</ol>
+<p>1回の依頼とモデルを軽くする6選
+必要なのは、安いモデルへの一律変更ではありません。作業の難しさに合わせた、出力と推論の調整です。</p>
+<ol start="13">
+<li>
+<p>依頼を「目的・対象・完了条件・出力形式」で書く
+曖昧な依頼は、AIの探索と説明を増やす原因です。最初に範囲を固定してください。
+目的: ログイン画面のエラー表示を直す
+対象: src/login.tsx と関連テストだけ
+完了条件: 型チェックと対象テストが通る
+出力: 変更ファイル、テスト結果、残課題を各1行</p>
+</li>
+<li>
+<p>読ませるファイルを指定する
+「プロジェクトを確認して」ではなく、「<code>src/login.tsx</code>と<code>src/login.test.tsx</code>だけ確認して」と対象を指定します。
+AIに自由な探索を任せる場合も、最初の探索対象と除外対象は必要です。
+巨大なvendor、生成物、lockfile、ログは、先に読ませる対象から外してください。</p>
+</li>
+<li>
+<p>長いファイルをそのまま貼らず、必要箇所を絞る
+手元のターミナルで<code>rg</code>、<code>sed</code>、<code>git diff</code>、<code>wc</code>などを使えば、該当行だけを切り出せます。AIへ渡す前に、ローカルで情報量を絞る方法です。
+特にログとJSONは、全文より「エラー行と前後20行」の方が判断しやすくなります。</p>
+</li>
+<li>
+<p>出力形式と上限を指定する
+説明が不要な作業では、出力形式を先に決めます。
+説明は不要。変更ファイル、実行したテスト、失敗時の原因候補だけ箇条書きで返す。
+APIでは、<code>max_tokens</code>や<code>max_output_tokens</code>など、APIごとの出力上限も有効です。
+ただし、上限を小さくしすぎると途中で切れ、再実行を招きます。完成に必要な量は確保してください。</p>
+</li>
+<li>
+<p>Codexのreasoning effortを作業別に下げる
+Codexの対応モデルでは、reasoning effortを調整できます。
+単純な整形、検索、定型変換はlow、設計変更や難しいデバッグはmedium以上が目安です。
+ただし、低くすれば常に正解になるわけではありません。
+品質確認が必要な仕事まで下げると、修正の再実行で消費が増えます。</p>
+</li>
+<li>
+<p>単純作業は小さいモデルへ振り分ける
+分類、要約、定型変換、単純なテスト修正には、miniや軽量モデルが候補です。一方、設計、セキュリティ、複雑なリファクタリングは強いモデルに向いています。
+モデルの価格と対応機能は更新されます。固定の「最安モデル」を覚えるのではなく、実行時点のモデル一覧と料金から選んでください。
+ここまでが、CLI・アプリ利用者に最も効く範囲です。次は、MCPとAPIを使う人向けの高度な節約へ進みます。</p>
+</li>
+</ol>
+<p>ツールとAPI運用を最適化する6選
+ツール定義やAPIの再送は、質問文より大きな固定費になる場合があります。
+基本は、使う仕組みを減らすことではなく、必要な時だけ渡す設計です。</p>
+<ol start="19">
+<li>
+<p>使わないMCPサーバーを無効化する
+Claude Code公式は、コンテキストが足りない時に未使用のMCPサーバーを無効化するよう案内しています。
+MCPの返却データも、ツール定義と同じく履歴に残るためです。
+常時必要なMCPと、調査時だけ必要なMCPを分けてください。</p>
+</li>
+<li>
+<p>MCPのツール数を減らす
+1つのMCPサーバーに大量の機能がある場合は、実際に使うものだけへ絞ります。似た機能の重複登録も避けたいところです。
+「使えるツールを増やす」より、「今回使うツールを明示する」方が、判断とコンテキストの負荷を軽くできます。</p>
+</li>
+<li>
+<p>サブエージェントの継承ツールを見直す
+Claude Code公式は、サブエージェントが親セッションのMCPツール定義を継承し、最初のターン前からコンテキストを埋める可能性を説明しています。
+起動前に、不要なMCPがないか確認してください。
+調査だけを別コンテキストで実行し、メインには要約だけ返す構成も有効です。</p>
+</li>
+<li>
+<p>APIでは固定の前半を先に置く
+同じシステム指示、ルール、ツール定義を何度も送るAPIでは、変わらない前半と毎回変わる後半を分けてください。
+OpenAIのPrompt CachingやAnthropicのPrompt Cachingでは、同じprefixを保つほどキャッシュヒットの機会を高められます。
+ただし、キャッシュの保持期間、料金、データ保持条件はサービスごとに異なります。機密情報を含む場合は、料金よりポリシーの確認が先です。</p>
+</li>
+<li>
+<p>APIではPrompt Cachingを使う
+Anthropic公式料金資料では、キャッシュヒットの入力単価が通常入力より低い設定です。OpenAIのAPIレスポンスでも、input tokensとcached tokensの内訳を確認できます。
+これは、Claude CodeやCodexの画面利用へそのまま設定する話ではありません。自分でAPIを呼ぶアプリ、エージェント、バッチ処理向けの施策です。</p>
+</li>
+<li>
+<p>急がない大量処理はBatchへ送る
+OpenAI Batch APIは、24時間以内に非同期処理を行う仕組みで、公式割引率は50％です。
+AnthropicのBatch APIも、大量の非同期処理を対象に、入出力50％割引を設けています。
+向いているのは、議事録の分類、商品説明の整形、評価データの一括処理など、即時応答が不要な仕事です。対話型の修正作業には向きません。</p>
+</li>
+</ol>
+<p>30項目チェックリスト
+全部を一度に変える必要はありません。最初の基準は、<code>/context</code>で確認できる上位の消費源です。該当する項目だけ実行してください。</p>
+<p>常時読み込み
+CLAUDE.mdを200行未満へ近づけた
+全セッション不要のルールを分けた
+path-scoped rulesへ移した
+Skillsのdescriptionを1〜2文へした
+使っていないSkillsを棚卸しした
+CLAUDE.mdとAGENTS.mdの重複をなくした</p>
+<p>会話・セッション
+<code>/context</code>で内訳を確認した
+履歴が膨らむ前に<code>/compact</code>した
+タスクが変わったら<code>/clear</code>した
+調査・実装・検証を分けた
+必要なセッションだけresumeした
+compact後に必要ファイルを再読した</p>
+<p>依頼・モデル
+目的・対象・完了条件・出力形式を書いた
+読ませるファイルを指定した
+ログやJSONを前処理した
+出力形式と上限を指定した
+Codexのreasoning effortを作業別にした
+単純作業を軽量モデルへ振った</p>
+<p>ツール・API
+未使用MCPを無効化した
+MCPのツール数を減らした
+サブエージェント起動前にツールを見直した
+APIの固定prefixを揃えた
+Prompt Cachingを検討した
+非同期処理をBatchへ送った</p>
+<p>さらに効く運用上の6項目
+<code>git diff</code>中心でレビューし、リポジトリ全体を再読させない
+生成物・vendor・ログをAIの探索対象から除外した
+1回の依頼で「調査だけ」「実装だけ」を混ぜない
+失敗時に全文再送せず、差分とエラーだけ再送した
+同じ質問を何度も試す前に、完了条件を修正した
+週1回、<code>/context</code>と利用量を見て設定を棚卸しした</p>
+<p>やってはいけない節約
+次の施策は、数字上は減っても再作業を増やしやすいものです。
+CLAUDE.mdから安全ルールやテスト条件まで削る
+<code>/compact</code>の要約だけを信じ、重要な決定事項をファイルに残さない
+難しい設計作業まで常にmini・low reasoningへ落とす
+出力上限を極端に小さくして、途中切れを再実行する
+料金だけを理由にキャッシュへ機密情報を入れる
+すべてのMCPを切って、手作業を増やす
+節約の基準は、1回の使用量ではありません。目的達成までに必要な総トークンと、やり直しの回数です。</p>
+<p>今日やること
+Claude Codeなら<code>/context</code>、Codexなら利用量画面を開き、上位の消費源を1つだけ特定してください。最初の改善は、その1つで十分です。</p>
+<p>次に読む記事
+CLAUDE.mdを短くした後は、残すルールとSkillsやRulesへ移すルールの設計へ進めます。
+<code>Claude CodeにHTMLを読ませるとトークンが溶ける</code></p>
+<p>Claude Codeをもっと学びたいあなたに
+初心者も安心！0からわかる
+Claude Code完全授業｜Claude Camp 2
+🔽 詳細・お申込みはこちら
+KAWAI
+@kawai_design
+·
+Jun 26
+Claude Codeがわからない…
+から卒業しませんか？</p>
+<p>「例え」を使って、中学生
+でもわかるAIの授業を実施します。</p>
+<p>難しい話はしないので
+中級・上級者の方は
+向かないかもしれません。</p>
+<p>初級者、未経験者のための
+やさしい内容です😊
+Quote
+YOUTRUST（仕事専用SNS）
+@YOUTRUSTinc
+·
+Jun 25
+／
+今聞いておきたい！
+0からわかるClaudeCode完全授業👨‍💻
+＼</p>
+<p>初心者でもわかりやすいClaudeCodeのイロハを
+川合卓也氏( @kawai_shiftai  )に教えていただきます🏫</p>
+<p>日程：2026年7月23日（木）21:30〜22:30
+会場：オンライン（Zoom）
+費用：無料
+2
+13
+48
+44K
+🔽Claude Code 逆引き辞典はこちら
+KAWAI
+@kawai_design
+·
+Jul 9
+Claude Codeを使っていて、
+「あのコマンド、なんだっけ？」
+で手が止まる人へ。</p>
+<p>機能名から探すのではなく、
+やりたいことから検索できる
+Webサイトを作りました。</p>
+<p>🟧「PRを直したい」
+🟧「権限確認を減らしたい」
+🟧「別端末で続けたい」</p>
+<p>164項目、87コマンド系。
+検索、分類、詳細つき。
+Claude
+Show more
+18
+96
+1K
+141K
+🔽 中学生でもわかる「Claude Code」完全授業
+KAWAI
+@kawai_design
+·
+May 17
+Article
+中学生でもわかる「Claude Code」完全授業
+Claude Codeは、名前だけ見るとむずかしく見えます。
+ターミナル、MCP、hooks、Skills、APIが一気に出てくるため、最初の1時間で迷子になります。
+この記事では、Claude…
+4
+75
+835
+476K
+🔽【超初心者OK】Claude Code / Codex 個別サポート
+KAWAI
+@kawai_design
+·
+Apr 19
+Claude Codeの設計、
+どうやったら良いですか？</p>
+<p>よく聞いてくださる方が多いので
+こんなプランを作りました。</p>
+<p>1週間悩んでいるなら、
+1時間で解決しませんか？</p>
+<p>10本のセミナー・動画を観るより
+手っ取り早いかもしれません。</p>
+<p>気になる方はスレッドから
+詳細をご確認ください。</p>
+<p>※
+Show more
+1
+1
+34
+13K
+各種お問い合わせはプロフィールの
+リンクからお待ちしています。</p>
+<h2 id="️-添付画像">🖼️ 添付画像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-添付画像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_02.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_03.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_04.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_05.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_06.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_07.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_08.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_09.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_10.jpg" width="auto" height="auto" alt/>
+<img src="./99_🖼️-picture/x-posts/kawai_design_2076807725187826169_11.jpg" width="auto" height="auto" alt/></p>
+<blockquote class="callout note" data-callout="note">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>動画 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>この投稿には動画が付いているが、動画本体は未DL。</p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong><a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>とCodexの利用枠を減らす原因を5分類し、「毎回読ませる情報の設計」で30項目を点検する実践ガイド。</strong></p>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 消費源は質問文だけではない（5分類） </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>常時読み込み（CLAUDE.md・Skillsのdescription・MCPのツール定義）／会話履歴／出力と推論／ツール実行の出力／APIの再送。まず <code>/context</code> で内訳を見て、上位の消費源から削る。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 常時読み込みを減らす </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>CLAUDE.mdは200行未満へ。毎回不要なルールはpath-scoped rulesやSkillsへ分離。Skillsのdescriptionは対象作業と発火条件だけにして、使っていないSkillsは棚卸し。CLAUDE.mdとAGENTS.mdの重複もなくす。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 会話・依頼・ツールを軽くする </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><code>/compact</code> は限界まで待たず、別タスクは <code>/clear</code>。調査・実装・検証でセッションを分ける。依頼は「目的・対象・完了条件・出力形式」で書き、ログは前処理して渡す。未使用の<a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>は無効化し、APIはPrompt CachingとBatchを使う。</p>
+</div>
+</blockquote>
+<blockquote class="callout warning" data-callout="warning">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>やってはいけない節約 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>安全ルールやテスト条件まで削る／重要な決定を <code>/compact</code> の要約だけに頼る／難しい設計までlow・miniに落とす。基準は1回の使用量でなく、目的達成までの総トークンとやり直し回数。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 今日1つだけ：<code>/context</code> で上位の消費源を1つ特定</strong>
+全30項目をやらず、内訳の最上位1つだけ直す。CORINのルール全文常時ロードが重い話と直結するので、まず内訳を見る。</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a> — Claude Code運用の本体</li>
+<li><a href="./2026-07-04-context-budget-rent-vs-payperuse" class="internal" data-slug="2026-07-04-context-budget-rent-vs-payperuse">2026-07-04-context-budget-rent-vs-payperuse</a> — コンテキスト予算の考え方</li>
+<li><a href="./2026-07-05-claude-rules-recursive-load-bk-antipattern" class="internal" data-slug="2026-07-05-claude-rules-recursive-load-bk-antipattern">2026-07-05-claude-rules-recursive-load-bk-antipattern</a> — ルールの常時ロードとbk退避の落とし穴</li>
+<li><a href="./mcp" class="internal" data-slug="mcp">mcp</a> — MCPの定義が常時消費になる話</li>
+</ul>
+<hr/>
+<p><a href="./X" class="internal" data-slug="X">X</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-1556" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-投稿内容" data-for="-投稿内容">📝 投稿内容</a></li><li class="depth-0"><a href="#-記事内容" data-for="-記事内容">📄 記事内容</a></li><li class="depth-0"><a href="#️-添付画像" data-for="️-添付画像">🖼️ 添付画像</a></li><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>
