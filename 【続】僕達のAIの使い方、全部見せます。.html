@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>【続】僕達のAIの使い方、全部見せます。</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="【続】僕達のAIの使い方、全部見せます。"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="【続】僕達のAIの使い方、全部見せます。"/><meta name="twitter:description" content="📺 動画情報 【続】僕達のAIの使い方、全部見せます。 🎙️ monograph/ 堀口英剛 ・ 📅 2026-10-19 ・ ⏱️ 33分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 前回から1か月ほどで変わった、クリエイター4人の最新のAI環境の共有回。メインはClaude Codeに回帰し、タスク管理アプリにAIチャット・連絡ツールを内包した自作UIを作る流れが共通。24時間録音デバイス「森」の導入も。最後は「この話は1週間後には変わる、鵜呑みにしない」と締める。 🗺️ 全体像 flowchart TD A[モデルはClaudeに回帰] -->..."/><meta property="og:description" content="📺 動画情報 【続】僕達のAIの使い方、全部見せます。 🎙️ monograph/ 堀口英剛 ・ 📅 2026-10-19 ・ ⏱️ 33分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 前回から1か月ほどで変わった、クリエイター4人の最新のAI環境の共有回。メインはClaude Codeに回帰し、タスク管理アプリにAIチャット・連絡ツールを内包した自作UIを作る流れが共通。24時間録音デバイス「森」の導入も。最後は「この話は1週間後には変わる、鵜呑みにしない」と締める。 🗺️ 全体像 flowchart TD A[モデルはClaudeに回帰] -->..."/><meta property="og:image:alt" content="📺 動画情報 【続】僕達のAIの使い方、全部見せます。 🎙️ monograph/ 堀口英剛 ・ 📅 2026-10-19 ・ ⏱️ 33分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 前回から1か月ほどで変わった、クリエイター4人の最新のAI環境の共有回。メインはClaude Codeに回帰し、タスク管理アプリにAIチャット・連絡ツールを内包した自作UIを作る流れが共通。24時間録音デバイス「森」の導入も。最後は「この話は1週間後には変わる、鵜呑みにしない」と締める。 🗺️ 全体像 flowchart TD A[モデルはClaudeに回帰] -->..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/【続】僕達のAIの使い方、全部見せます。"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/【続】僕達のAIの使い方、全部見せます。"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 【続】僕達のAIの使い方、全部見せます。 🎙️ monograph/ 堀口英剛 ・ 📅 2026-10-19 ・ ⏱️ 33分0秒 🔗 www.youtube.com/watch 📝 要約 🎯 前回から1か月ほどで変わった、クリエイター4人の最新のAI環境の共有回。メインはClaude Codeに回帰し、タスク管理アプリにAIチャット・連絡ツールを内包した自作UIを作る流れが共通。24時間録音デバイス「森」の導入も。最後は「この話は1週間後には変わる、鵜呑みにしない」と締める。 🗺️ 全体像 flowchart TD A[モデルはClaudeに回帰] -->..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="【続】僕達のAIの使い方、全部見せます。"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-2394"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-2394" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>【続】僕達のAIの使い方、全部見せます。</a></div></nav><h1 class="article-title">【続】僕達のAIの使い方、全部見せます。</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-19T15:00:00.000Z">2026年10月20日</time><span>53 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/notion" class="internal tag-link">notion</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/automation" class="internal tag-link">automation</a></li><li><a href="./tags/ai-agent" class="internal tag-link">ai-agent</a></li><li><a href="./tags/claude-code" class="internal tag-link">claude-code</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>【続】僕達のAIの使い方、全部見せます。</strong>
+🎙️ monograph/ 堀口英剛 ・ 📅 2026-10-19 ・ ⏱️ 33分0秒
+🔗 <a href="https://www.youtube.com/watch?v=Hn__5ppCOUY" class="external">https://www.youtube.com/watch?v=Hn__5ppCOUY<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/【続】僕達のAIの使い方、全部見せます。.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>前回から1か月ほどで変わった、クリエイター4人の最新のAI環境の共有回。メインは<a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>に回帰し、タスク管理アプリにAIチャット・連絡ツールを内包した自作UIを作る流れが共通。24時間録音デバイス「森」の導入も。最後は「この話は1週間後には変わる、鵜呑みにしない」と締める。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[モデルはClaudeに回帰] --> B[自作UIでタスク管理+AIチャット+連絡を一本化]\n    B --> C[秘書と部下の多層構成]\n    C --> D[録音デバイスの記録も接続]\n    D --> E[承認する人に寄りすぎる懸念と手書きで考える時間]&quot;">flowchart TD
+    A[モデルはClaudeに回帰] --> B[自作UIでタスク管理+AIチャット+連絡を一本化]
+    B --> C[秘書と部下の多層構成]
+    C --> D[録音デバイスの記録も接続]
+    D --> E[承認する人に寄りすぎる懸念と手書きで考える時間]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. メインのAIはClaudeに戻った — Codexが一時的に弱くなった </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>前回はCodex推しだった人も、新モデル（Opus 5.5）が賢くなったためClaudeに戻った。Codexを重課金で回して上限に達し、費用が9〜10万円になった例もある。月3万円プランを1週間でほぼ使い切る使い方をしている。サブとしてCodexやDOTS、Grokbotを併用する人もいる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. 全員が自作UIに行き着いた — タスク管理がハブ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>タスク管理アプリをベースに、タスクごとにAIチャット・メモ・ブラウジング・Slack/メール/DMをまとめ、1アプリで管理から完了まで完結させる。Paseoというアプリ内のプラグインとして作り、配布もできる形にしている人もいる。iPhone版はTailscaleで繋いで状況をリアルタイム監視する。個人情報が詰まるので全世界公開は怖く、UIだけ渡す形が現実的との意見。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 秘書＋部下の多層（オーケストレーション）構成 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>窓口の秘書AIに頼むと、その下の担当（YouTube・Podcastなど）に自動で振り分けられる。社長・部長・メンバーのように会社を真似て作ったが、マネジメント経験の少なさを痛感し、自分に合う形を模索した。Grokbotは通知のタイミングと内容がちょうど良く、メモリ・スケジュール・定期実行のハーネス設計がうまいと評価される。ただしClaude本体が同等機能を出せば今作っているものの賞味期限は切れる、との見方。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. 実務の自動化例 — メルカリ出品と動画編集 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Mac miniがメルカリにログインした状態で、写真を撮るとGoogleフォト経由で製品と状態を判別し、相場を見て下書きまで作る。人は価格を調整して出すだけ。動画編集は95%ほど自動化でき、残るのはサムネとタイトル。AIの案と自分の案を並べて戦わせ、たまにAIが勝つ。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>5. 考える時間を守る — 手書きとスマホ断ちの価値 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>常にAIの提案を承認するだけの「ボタンを押すマシーン」になる怖さが語られる。対策としてGoodNotesに手書きで企画を書く、ボクシング中の45分間スマホに触れない時間で考えを出す。森のような24時間録音デバイスは家族の用事（登園時間・持ち物）まで拾って通知してくれて便利という声もある。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 「承認ボタンを押すマシーン」にならない線を決める</strong>
+AIの提案を受けるだけにならないよう、企画の最初の1案だけは自分で書く時間を決める。明日の朝、1件だけ手書きの案出しをする。</p>
+<p><strong>② 賞味期限を前提に作る</strong>
+「今作っているものはモデル側の機能で置き換わる」という前提を、CORIN側の仕組みづくりでも持っておく。作る前に戻し方と出口を決める。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> おはようございますおはようございますちょっと今日パイロット版ということでね試しに今動画を回してるんですけれども今日はねAIの話をしようと思いますというのもですねちょっと数週間、もう1ヶ月前くらいかそうですね前回僕たちのAIの使い方こんなことしてますみたいのをやったんですよ4本立てでお送りしたとんでもないボリュームのものがあってあれ結構反響が良かったんだよね</p>
+<p><code>00:33</code> そうですね次回作も欲しいですみたいなのがあったんですけどまたあれ一日ずつやるのはちょっとしんどすぎるカロリーがあるねでも確かに僕らって今これボクシングで朝集まってるんですけど朝こんな感じで作業しながら毎日エアリーの話をしてるんですよねなんでどうせ話してるんだったらその内容をたまにこうやって、まあ、ポッドキャストじゃないけど、音声ベースでみんなに話してもいいのかなと思って、ちょっと試しに動画回してみてます。はい。</p>
+<p><code>01:09</code> で、まあ、これがもし、あの、もっと聞きたいとか、そういう声があったら、独立してポッドキャストみたいな感じでやるかもしれない。なるほど。うん。いいね。メンバーも今いるのは僕、なごみけ、れいさん、けいすけなんですけど基本この収録をしている日に集まった人でやろうと思います流動的な第1回はしかもご褒美だったから俺いないのよ俺ご褒美受けられなかったから前回はこのボクシングにちゃんと来てる人だけ</p>
+<p><code>01:44</code> 目標を達成した人だけやりましょうっていうので前回あの4人だったんだけど今回はケイスがいますサボったかサボってないかがコロにバレるここに来てるってことはちゃんと運動をしてそうそうそうそうここに来てこの朝話してる状態っていうところでもう勝ちが決まってる来てないのに行ってますって言ってる人たちがいますからねそれが分かる誰か分かるからそんなわけでAIの話なんだけど</p>
+<p><code>02:17</code> 正直前回の動画と状況が全く変わってる確かに全部違うななのでちょっと簡単に今どんな感じの構成になってるか話していくメイン何使ってるか使ってるエアモデルじゃあけいすけから俺多分前回のやつやってないからそもそも前回は共有してないんだけどクロードはメインで使っててサブでコーデックスと、あとね、なんだかんだ僕DOTS使ってる。</p>
+<p><code>02:53</code> あー、DOTSね。確かに前回の収録時点でDOTSまだ出てなかったから。それも含めて大きく変わってる。変わってる変わってる。メインで言うとそんな感じ。UIみたいなところは、これから話すでしょどうせ。ちょっとね、ちらちら見せながら。あー、まあそうね。ちらちら見せた方がいいのか。いやなんか、これ全部出せんのかな。絶対出せないじゃないですか。 特に出しづらいよね。それぞれの役割は何なんですか?例えば動画編集するとか、基本的に全部のこと。今ここだと僕のポッドキャストの編集、動画の編集、あとはこのAI関連のアプリの回収、あとInstagram Storiesの閲覧率とかのアナリティクス、あとは自分のプリセットとか販売してるサイトの回収。</p>
+<p><code>03:49</code> これも全部ここのクロードにぶち込んでてか今UIを作ってて多分ナンバー今日動画出すんでしょ?多分今日だからこれ動画いつやん今日出そうかなじゃあ分かりました僕そうですねみんな今やってるんでやってるところで言うとなんかもうアプリを作っちゃってそのアプリの中でこんな感じで見えるのかな?スクショ出します?それだけしょうがないもう全部個人情報入れてやめてくれよ</p>
+<p><code>04:22</code> そのままなんかそのこのなんていうのこのUIの中でもう完結させてるというかここの一番左のタブのところでクロードに直接お願いをしてそっから自分で判断してクロードかコーデックスかに作業分けてもらってるって感じでみんな多分その方法がいいねってなってるけどそうだね今ちょっと一旦話すか話してどんなものを使ってるかなこのままだと俺だけになっちゃうでもね流れは一緒なんだよそうかとした</p>
+<p><code>04:55</code> 多分大体似たような感じになってててれいさんも自分で作った?僕も作りました正確にはちょっと違うんで今話すとメインはクロードコードになりました前回まではさもういらないって言ってませんでした?前回の動画ではクロードばかりになりすぎたんでコーデックスで行きますって一人だけ言ってたなんですけどやっぱあの後コーデックスもバカになったんですよてかアストラが輝いてたのあの1週間だけだったよね</p>
+<p><code>05:28</code> あの撮影の時のアストラは輝いてたバカになってクロードに戻ってきましたやっぱオーパス5.5オーパス5.5やばい賢くなったんでクロードに戻ってきましたやってることはほぼ一緒で、僕もUIみたいなのを作って、一括でそこに頼めるようにし始めました。で、多分唯一違うのは、Paseoっていうアプリを使ってて、そのPaseoっていうのが、前回僕チラッとOrcaっていう、AIを動かすためのADDっていうサービスを使ってるって言ってたんですけど、その乗り換えみたいなので</p>
+<p><code>06:09</code> オルカみたいなアプリでPaseoっていうのを使ってそのPaseo内でプラグインを作れるんですよなるほどでそれがほぼアプリになってる僕の場合は全然わかんなこれマジさ言葉だけでまったり伝わんないよね普段のAIはほぼクロードコードなんですけど僕はこれPaseoっていうアプリで動かしてます裏裏作じゃなくてパセオのサービス型でiPad版とかMac版とか全部オルカと一緒ですほぼオルカということで</p>
+<p><code>06:44</code> なんですけどここに僕が作ったアプリを入れれるんですよなるほどだからこれが僕が作ったUIでノーションだもんね見たことないノーションを再現してAI使えるようにしてって言い続けた結果がこれで一番右がサイドバーAIと対話できるやつで真ん中開くとその中のチャットも開ける感じでステータス管理できるやつを作ってるこれがパセオのプラグインで作ってるんで今ちょっと裏でやらせてるのはこの中で</p>
+<p><code>07:17</code> メール見れるようにしてとかノーション見れるようにしてみたいなのを開発は今裏で動いてる完全に独立したやつを作っているかプラグインを作ってなるほどね運用してるっていうのが今って感じですPaseoのプラグインでやってるのがいいのが結構プラグインなんで配布できるあーなるほどねあの皆さん独自のやつ作りすぎて共有できない気がするんですけど僕ばろうかなっていう俺これねめっちゃ可能性感じてんだよねレイさんと相性がすごいいいなと思ってて</p>
+<p><code>07:52</code> レイさんってノーションのテンプレート売ってたりするじゃんそれの次がこれなんじゃないかなと思ってちょっと問題はパセオの認知度が低いっていうのがあるんですけど今後クロードとかもこういう感じになってくるんじゃないかなってなってくると思うなクロードのベースがあってそこのテンプレートをいろいろみんな誰かが作ったの入れれますみたいな世界になると思うんだよねそんな気がしますよねこれはメンバーシップとかで配布しようと思ってるんですけど今作ったやつは配布予定なるほど</p>
+<p><code>08:24</code> ナンバーは?同じですでもねそうなってたよねみんなここで流行ってるのはターミナルのUIを個々人がちまちま好きな感じにいじってるっていうようなんですけど僕はそれこそ動画が多分出てると思うので詳しくはそれを見ていただきたいんですがタスク管理アプリをベースにそれぞれのタスクの中にAIでのチャットとメモ機能とかブラウジングとか</p>
+<p><code>08:56</code> あとは各種連絡用のツールスラック、メール、DMだそこら辺を全部内包させてこの1アプリでタスクの管理から完了までワンストップで完結させようっていうのが僕のアプリのちょっと違うところ開くアプリもそれだけみたいなこれと僕は動画編集用のダビンチリゾルブの2アプリしかほぼ使ってないでも同じそんな感じそれの見た目が多分それぞれ違う</p>
+<p><code>09:30</code> モデルはクロード?モデルは僕はクロードですねだからチャットGPTアストラ良かったんですけどその時3万円プランが封じられてたんですよ僕が使い始めた時1万5000円のプランで頑張ってたらそれに重量課金になっちゃって上限いっちゃったその度課金したら9万10万ぐらいにいっちゃったんでもうダメだダメだってクロードに戻ってきたぐらいでオーパスが進化したちょうどよくオーパスでいいじゃん今オーパスの月3万のプランを</p>
+<p><code>10:05</code> 1週間かけてほぼ100発買い切るぐらいで回してますねなるほどね俺も前回からで言うと変わったのはグロックボットがその後出てきたのよドッツがちょっと出てくる前にグロックボットがね正直めっちゃいい今も使ってるなんかね気の利きぐらいがドッツほどうざくないのとドッツってなんかそれはもういいよみたいなのを結構さ、提案してくるんじゃないかな。で、プラスやっぱそのエージェントが分かれるから会話がごっちゃにならないみたいなところと、あと全部自立で動いてくれるから、自分でパソコンのセットアップとかしなくていいっていうのもあって、</p>
+<p><code>10:48</code> GlockBotが非常に優秀だなっていうところから、このね、話して。最初に持ち込んだ人ですからね。そうだねグロックボックみたいな感じで全部完結するクロードのアプリが欲しいなと思って作ったのよそれがディープパープルっていうディープパープルの理由知ってる?知らない全然ハンターハンターにさもらうっていうもらうってあの雲のくるくるくるくる</p>
+<p><code>11:21</code> そうそうそう煙でさいっぱい兵隊作れるやついるじゃんあいつみたいに煙をいっぱい動かすっていう意味でディープパープルにした秀野さん名付けキモくない?ケルベロスとかさケルベロスキモいよねもう1案あったんですよもう1案なんだっけ?もう1案なんだったっけ?ヨルゲンマンションハイディアンドシークねハイディアンドシークハイディアンドシークちょっと中二病すぎるなと思ってディープパープルもそうよ</p>
+<p><code>11:54</code> ペアのもう一人のハンター×ハンターでそう作ってますやってること一緒一人コンシェルジュみたいなやつがいてそいつに頼むとその下に部下が何人もいてその部下がそれぞれYouTubeの担当とかそのPodcastの担当とか分かれててあとはその中でも自動で動いてくれるっていうシステムにしてる最近はそのそのシステムの担当の下にまた部下が3人くらいついていわゆるオーケストレーションってやつなんだけど</p>
+<p><code>12:31</code> 社長、部長、メンバーみたいな感じになっててやっぱり会社ってすごいちゃんとしたシステムだったのかなと思った最初それを真似て自分で作ってみたんですけど全然ハマんなかったの会社に慣れてないよ社会的に社会的に自分が社長で割り振っていくわけじゃないですかそういうマネジメントだのディレクションだのの経験のなさを</p>
+<p><code>13:03</code> そこで痛感しましたなるほどね自分に合う形を模索し始めたなるほどねこれは流れ的にはみんな来てるからAIのモデルを元にして自分の使いやすい形に改造していくって流れも絶対に今後来ると思う。そんな中で多分個性がいろいろ出てるんだろうね。で、その先にやっぱりレイさんみたいなテンプレートを売るというか、結構マジであると思うな。これまぁ作るのなんだかんだ1日2日かかりますね。</p>
+<p><code>13:45</code> 結構やりますよね。結構このUIがいけてないとか。それって各々一から作ってるからそうなってるけど、これをパーツごとに切るわけじゃない。同じようなパーツみんな持ってるから。それを簡単に入れる元のアプリとプラグインと。あったらなんかもっといいんだろうなあったりそうですよ まあクロードプラグインでロードプラグインみたいなねこれでももう配布できる形にはしてるよなそうですエリコちゃんには オープン画面も用意しててねポチってやるとセットアップされるようになっているはいそれどうなんですかね僕らは 自作してる</p>
+<p><code>14:24</code> でもその人のを使っているエリクさんはなんか順のできていますかだからえっとそれを ベースにもカスタマイズできるようにしてあるやりこちゃんも結局クロードとコーデックス使ってるからもうそれを入れてあと自分で好みにUIとかそういうの改善してねって言ってやるだから多分それもできると思う最初のスターターキットぐらいの感じにしておいてみたいなねでなんかセットアップ画面もねサクッと作ってって言ったらめちゃめちゃ簡単そうだったポチポチって本当に押していくだけこんな風にできるんだと思って</p>
+<p><code>14:57</code> じゃあなんか意外とハードル低いかもねまあそうね、なんかそのどっちかというとこっち側が個人情報その中に本当に入ってないみたいなそうそうそうそういう不安もある身内に渡すければいいけどさ、なんか全世界に公開するのはこれ相当怖いよねそうそうそう、それは相当怖い全てが詰まってるからほんとそうMaseoとかは基本機能はMaseoのサポートフリーでやらせてくれてそのUIだけをプライムインナーが渡すみたいなそこはやっぱそのねちゃんとこう責任とってくれる場所が別であるのがいいよねそうなるんじゃないかなーって気がするんだよね</p>
+<p><code>15:35</code> なるほどね自分の使い方というか多分なんかモデルも選べるようになってみたいな別にそのチャットGPT版のそれでもいいじゃないか最近の細かいちょっと関係ないですけど結構便利だなっていう僕の中でアップデートをしたんですけどメルカリを半自動化できたんですよやりたいそれじゃあ赤本公開してよ自動化した例出しておいてでも別に仕組みとしてはそんな複雑なものではなくて</p>
+<p><code>16:11</code> 単純にその家のMac miniがメルカリにログインした状態で写真を撮るだけにしたんですよなるほどね写真撮ったらGoogleフォトで連携してMac miniがそのGoogleフォトから写真を見てこれが何の製品かみたいなのとかどこまでが次の製品みたいなのも簡単に判別できるようになっているので写真撮ったら製品とその状態もなんとなく把握してメルカリの下書きまで入れてくれるんですよ製品の状態とかあと相場監視があると価格も一応入れてもらうあとは僕がそれを見て</p>
+<p><code>16:44</code> もうちょい下げたい上げたいみたいな価格を設計してあとは出すだけみたいな出品がすごくはかどる確かにね発送までしてくれる?全然そこでもそれこそメッセージやり取りしなきゃいけないじゃないですか発送件数増えるとめんどくさくなるけどそれもさっき言った各々が作ってるハブに接続させればメルカリの通知でも適宜メッセージはすぐ返せるようにしてるんで管理もしやすい具合があるんですね最近結構そこはすごいありがたい</p>
+<p><code>17:20</code> ヘルカリ確かに頑張らなきゃいけないなGoogle Podsを読ませてくれるんですね?結構勝手に見てくれますブラウザ?ブラウザですブラウジングかこれさ、アプリさ、iPhoneにも入れてる?入れてます入れてますiPhone用のやつ作ってる?iPhone用のやつ作ってます作ってるって言っても別にこれのパソコン版の簡易的なというか僕の場合タスク管理なんでタスク追加したりAIに相談したりPCで始めたセッションを状況監視できたりするっていうのはテールスケールで繋げてるんで</p>
+<p><code>17:56</code> もうリアルタイムで確認はできるスマホもテールスケールで繋いでるってこと?そうですなるほどねなんでなんならクロード人生アプリよりもORCAよりも圧倒的に安定してそうだよな見れるようになりましたへぇPaseoもできるんだっけ?PaseoもできますPaseoも完全にスマホ版があるのでいやもうそれこそそのiPadはAIから離れるために買ったんですよ僕あははは使いにくいモバイルだったら使いにくいじゃあちょっとAI離れるためにiPad買おうってなったんですけどバスではiPad1もスマホもあるから</p>
+<p><code>18:30</code> もう離れられない最近メモにも書いてきてます物が増えてる俺もiPadにも書いてるでも書かないと考えることがなくなって確かに考えることなくなってきたよね怖くない?まあ怖いけどこうなると思うけどねこうなると思うから考えることが俺なんか差別化につながると勝手に思ってるから手書きを増やしてるいやそうだね</p>
+<p><code>19:03</code> 定期的に返ってくるねそうそうそう何を考えるんですか?動画の企画とかですか?もうちょい広い方向に考える何を撮るかとか何をすべきかとか今週の流れはもちろんこの中にあるけどそのもう映画に働かされてる感じになっちゃうから分かる分かるとりあえず時代の流れに合った企画とか出してくるしだからそれ撮るべきなんだろうなとか思ってくるけど考えないとめちゃめちゃわかるな</p>
+<p><code>19:35</code> なんかその承認ボタン押すマシーン編集もやってくれるっちゃうからこれ開くと始まるじゃないですか始まるねこれ開いてからは俺はもうAIのクズそうですよねAIが来て、返して、そして次のAIのやつが来てるから返してを2時間ぐらいやってやべやべやべやべいやそうなんだよね俺もう、そのタスクの管理とか動画の企画とかも全部ここあー、一回手書きね</p>
+<p><code>20:10</code> GoodNotesに全部入れてここでもう企画とかもそのAIに出されたやつできなくてうん、なんかその、なんかテンション上がるんですよあー、それはわかるなんか言われてやりたくないしなみたいなそうそうそうそうだからもう結局手書きあー、わかりますよりこのさ、ボクシングの45分間の何にもスマホ触れない時間なんかねすごい大事大事大事大事常に接続されてますからあの時間で強制的にシャットアウトされることによって考えがなんか出てくる</p>
+<p><code>20:47</code> そうね。殴ってる間ちょっと考えてるもんね。いやそう、考えてる考えてる。なんなら俺遊ぶ以外考えてないから。ほぼAI。ほぼAI感をね。そうね。でもあと前回から変わった話で言うと、もう森。森。はいはい。みんなな持ってるけど3人ね、もうなんか今あるかも録音のデバイスね24時間録音して、その内容が文字起こしされてスマホとかで見れるそうそうそう</p>
+<p><code>21:19</code> これがさ、もうまたクロードと繋がってるからさ、もうこれで勝手に提案してくれるからそうそうそう今日いついつまであの手紙出してくださいとかよりAIになってくる僕持ってないんですけど実際にここで得たデータを普段のAIとのやり取りもオブシリアンとかに載せてるわけじゃないですかそこと混ぜてやったりしてるんですか俺はやってるリアルな情報を得れるメリットって何があるんですか結構変わるけどなそもそも家族系の話とかって</p>
+<p><code>21:54</code> あんまりパソコンでやったりしないからめっちゃ便利よ明日保育園9時までに登園しなきゃいけないとかお迎えの時に先生がさ明日じゃあ水筒とこれをお願いしますねみたいなの言ってくれるんですよそれをメモするの結構面倒くさいじゃん毎回覚えておかなきゃいけないんだけどそういうのを夜とか朝に提案してくれるからマジで普通に便利それさグロックボットに提案してもらっていいですか今両方かな</p>
+<p><code>22:27</code> ディープパープルの方も手話してくれるけどグロックモッドの方がよりスピーディーというかなんかねいい時に連絡くれるから勝手に自発的にスケジュールされて毎日例えば朝7時にまとめて連絡してもらうとかじゃなくて勝手に判断してくれる通知くれる夜は多分だいたいね前の日の夜とかかな明日の朝これなんで用意しておいてくださいみたいなだからもう森とかこの音声録音系のデバイスも絶対に今後デフォルトになると思うグロックボット使ってるさそのさディープアブルとさ統合しない理由何?</p>
+<p><code>23:10</code> 本当は統合したよけどなんかグロックボットの方がまだちょっと1枚上手でまだそこに俺の近づけ入れてないって感じ何が上手なんですか?通知してくるタイミングと内容のちょうど良さが違うんだよねGlockを使ってないんでマジでその肌感覚がわかんないでも俺Glockbotが一番優秀だと思うよ正直僕もそう思います多分それは記憶メモリー機能とスケジューリングの機能と</p>
+<p><code>23:48</code> 定期的な実行みたいなハーネスって呼ばれるAIの動きを決める部分の設計がうまいそれをクロードで再現するには結構骨が折れるというかなんだチューニングうまいなっていう感じがする俺ね多分DOTSの方が簡単じゃんGlotBotより設定いらないじゃんまずまあそうでも同じくらいかなインストールするだけじゃない?でなんかドッツは秘書みたいな感じだから逆に窓口1個なのが楽なんだよね</p>
+<p><code>24:22</code> 窓口複数に分かれるのは便利なのも分かるんだけどだったらこっちのアプリでいいかなと思っちゃってグロッカーで基本的にまずやっぱ秘書がいるのよ秘書がいてその下に部下がいるシステムになってるから基本話すのは秘書だけでいいのよペアンクレーンのもの個別の話したいときはその下の部下と話すみたいなちゃんと使おうかなグロック使うのは確かにこれの進化がわからない気がしてでもどうせクロードがそろそろ来るそうなんだよね</p>
+<p><code>24:57</code> クロードが元出したときに多分もう全部それになると思うから多分俺らが今作ってるやつも賞味期限は?そうそれが出るまでだと思うね今だけ説はありません確かにねだってクロードのBOTSが一番いいじゃんクロードのBOTSが一番いいな一番欲しいからさこれどうですか?PaseoのBOTSってやつ何それ?僕BOTSっていうプラグインがあってPaseoに有名な多分公式に近いアプリなんですけどこれはでも結構近くて</p>
+<p><code>25:30</code> クロードコードを動かすブロックボットみたいな感じで僕もマネージャーとメール秘書とリサーチャーみたいな感じで作っていて裏側はクロードコードで動いてくれるんですけどでもこのメール秘書とか開くとなんかルーティンみたいな設定の中にこのソールこれ全然わかんないよこれ多分わかんないけどブロックボッツの裏側もこうなってるんですよこの人の人格</p>
+<p><code>26:07</code> この人のメモリーこの人のスケジュールタスクみたいな裏側は分かんないじゃないですかそれをクロードでやるための仕組みが最初から整ってるこれ入れてくれたら全部できますよみたいな多分もうすぐこういうのがクロードから正式に人格を作れるようになるレイさんこの裏側やるの得意ですよねなんか理解したいっていう気持ちがありますねこれどういう仕組みみたいなどうやって動いてるのみたいなそもそもチャットGPTのどっつだっけ</p>
+<p><code>26:39</code> どっつと何が普通のチャットGPTと違うんだっけなんか分かんなくなってきませんいやそうだね何が違うんだっけとか裏側はどうなってるのかちょっと一歩一歩理解して進んでる感はありますねこのPaseoの動画もそのうち上がる?Paseoの動画作ります詳しくはそれをいやーそうでもねこれ恐ろしいのは今この話してるけど来週にはまた違うこと言ってるっていう</p>
+<p><code>27:12</code> いや可能性あるこれ結構割とハマってるけどな僕もなんか最近クロードのプロジェクト機能が出たじゃないですかでなんかみんなでもう終わったかみたいなもう終わったとか言ってたけどやっぱ自分で作ったやつがまだ使いやすい病気じゃんそうだねチューニングできるからね新機能をどんどん自分のやつに取り込んでいけば慕われないのかなと思うあとはクロードでやるとクロードしか使えないじゃないですか確かに今はいいけどクロードがまたバカになった時に</p>
+<p><code>27:45</code> 仕事進まないから環境を作っておくのは結構いいとエンジン変えれるってのはいいと思う少なくとも今ここにいる4人が全員その仕組みになってる以上流れ的には絶対そうなる便利めちゃめちゃ便利これなしではもう無理無理動画編集は?動画編集半端なくない? 動画編集のコースがだいぶ減ったいつもだったら昨日とか1時ぐらいに撮影して 編集してダラダラやっちゃって7時ぐらいに終わるとかだけど</p>
+<p><code>28:26</code> 3時とかに終わるもんね全部パッて見たら終わってるから 終わってるわみたいな感じだけどなんかもう今の時点で本当に95%ぐらい勝手に作ってくれるんだからもう多分あと2、3ヶ月で本当に一切手を加えなくなってなんなら多分勝手に動画が上がってくるぐらいの世界があるんじゃないかな早すぎて今キツ叩かれててAIお前早くサムネ作れよお前早くタイトル考えろよみたいな</p>
+<p><code>29:01</code> レイさんと話したんだけど、あとはもうサムネとタイトルだけだねって話になってでもそこもやってる?サムネとタイトル僕自分の動画のサムネはもうほぼ写真だけなんでそんなに手がかからないですけどでもそこの選定はやっぱ自分でやりたくなっちゃうが大きいことで、多分任せてもいいんですけどやりたくなっちゃってもいかないとポッドキャストのサムネはちょっと作ろうとちょっと手を込んでるのでキャンバーでクロードに</p>
+<p><code>29:33</code> 3案ぐらい作ってって言って出してもらったけど全部微妙ってなったんですよねだから結局それをベースにちょっといじるとか全任せというよりは最初の30%ぐらいっていうかねはいはいはいなんか変わりました?いや俺もまだそこはね行けてない行けてないんだなんかサムネとタイトルをやんなくなったらもう何をするんだろうっていう俺ね結構それで言うと任せてるかもあそうなんだ</p>
+<p><code>30:05</code> ただ一旦素案を出してもらってくるのが大事動画を全部渡したタイミングで文字起こしするからそこからタイトルとサムネに入れる文字と概要欄まで全部生成してもらってタイトルとかは何枠に出してもらってそれを選ばない時もあるけどそれをカスタマイズして自分で入れるサムネイルも仮でメインとなる画像を渡してあるからサムネイルも仮で出してくれてでもちょっとAI感あるじゃん文字がそれが嫌だから配置とかはそれを参考にしながらフォトショップ最後作るAI感消すために自分でフォトショップやってる</p>
+<p><code>30:45</code> 俺サムネイルFigmaで作ってるけどFigmaとMCP繋がってるからFigmaでやるともうAI感なくなるそれもある自動化したいようなしたくないようなのをこの狭間なんだよね本当にそう あのあそこのクリーティーとしてほしいよもういいよあそこまでどう抜かれちゃう日が来るんだろうな まあそうねーでもさ、今さ、何パターンかさ、入れれるからさ、自分のやつとやっぱAIのやつをさ、常にさ、乗せて、戦わせて</p>
+<p><code>31:25</code> 負けた瞬間が信じられるそうそうそうそうなんかさ、AIの方が伸びるとしても嫌じゃない?まあ、わかる、わかるよそれはわかるそれは、悲しい最近、タイトル負けるんですよああ、マジかタイトルAIと戦わせててADですよねたまに負けるときあるそれとは悲しいまってまって成績での評価とブランディングでの評価あるやんそれはどうするっていうタイトルはまだ文字だからそこまでしかも変わらなかったりする</p>
+<p><code>32:00</code> そうだよねあんまり精度はそこ上がってきててそこまでAIっぽくもないしたまに負けるのが悲しいいいねーどんどん支配されてるわもちろんその基準を作ったのは僕なんですけどまあそうねそんな感じそんな感じ第0回第0回一応これが良かったらポッドキャストになるかもしれないんでまあそして</p>
+<p><code>32:33</code> 多分これ今こんな感じで話してますけど1週間後には変わってるんで鵜呑みにしない鵜呑みにせず参考程度に見てくださいじゃあまた次回お会いしましょうありがとうございます</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./Notion_マークダウン記法" class="internal alias" data-slug="Notion_マークダウン記法">Notion_マークダウン記法</a>（StructureNote）</li>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./claude-code" class="internal" data-slug="claude-code">claude-code</a>（StructureNote） — メインのAI環境</li>
+<li><a href="./ai-agent" class="internal" data-slug="ai-agent">ai-agent</a>（StructureNote） — 秘書＋部下の多層構成</li>
+<li><a href="./2026-07-28-一本道からハブ型へAIワークフローを再設計する" class="internal alias" data-slug="2026-07-28-一本道からハブ型へAIワークフローを再設計する">2026-07-28-一本道からハブ型へAIワークフローを再設計する</a>（StructureNote） — ハブ型の設計</li>
+<li><a href="./2026-09-13-AIに任せる線引きは見るか変えるかで引く" class="internal alias" data-slug="2026-09-13-AIに任せる線引きは見るか変えるかで引く">2026-09-13-AIに任せる線引きは見るか変えるかで引く</a>（StructureNote） — 任せる線引き</li>
+<li><a href="./2026-09-21-思想は移植できるが速度と運転手は移植できない" class="internal alias" data-slug="2026-09-21-思想は移植できるが速度と運転手は移植できない">2026-09-21-思想は移植できるが速度と運転手は移植できない</a>（StructureNote） — 他者の構成を参考にする際の注意</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-976" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>
