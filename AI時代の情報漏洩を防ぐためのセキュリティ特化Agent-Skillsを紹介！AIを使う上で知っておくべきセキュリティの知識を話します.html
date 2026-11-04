@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します"/><meta name="twitter:description" content="📺 動画情報 AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-28 ・ ⏱️ 34分54秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAI・GitHub・AWS・Anthropic・Cloudflareの5社が出しているセキュリティ点検用Agent Skillsを、点検の対象と使いどころで整理した動画。どれも「全部防げる道具」ではなく、自分のコードを点検する道具として持っておく位置づけ。 🗺️ 全体像 ..."/><meta property="og:description" content="📺 動画情報 AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-28 ・ ⏱️ 34分54秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAI・GitHub・AWS・Anthropic・Cloudflareの5社が出しているセキュリティ点検用Agent Skillsを、点検の対象と使いどころで整理した動画。どれも「全部防げる道具」ではなく、自分のコードを点検する道具として持っておく位置づけ。 🗺️ 全体像 ..."/><meta property="og:image:alt" content="📺 動画情報 AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-28 ・ ⏱️ 34分54秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAI・GitHub・AWS・Anthropic・Cloudflareの5社が出しているセキュリティ点検用Agent Skillsを、点検の対象と使いどころで整理した動画。どれも「全部防げる道具」ではなく、自分のコードを点検する道具として持っておく位置づけ。 🗺️ 全体像 ..."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/AI時代の情報漏洩を防ぐためのセキュリティ特化Agent-Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/AI時代の情報漏洩を防ぐためのセキュリティ特化Agent-Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-28 ・ ⏱️ 34分54秒 🔗 www.youtube.com/watch 📝 要約 🎯 OpenAI・GitHub・AWS・Anthropic・Cloudflareの5社が出しているセキュリティ点検用Agent Skillsを、点検の対象と使いどころで整理した動画。どれも「全部防げる道具」ではなく、自分のコードを点検する道具として持っておく位置づけ。 🗺️ 全体像 ..."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="AI時代の情報漏洩を防ぐためのセキュリティ特化Agent-Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-266"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-266" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します</a></div></nav><h1 class="article-title">AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-27T15:00:00.000Z">2026年10月28日</time><span>66 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/agent" class="internal tag-link">agent</a></li><li><a href="./tags/ai-security" class="internal tag-link">ai-security</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>AI時代の情報漏洩を防ぐためのセキュリティ特化Agent Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-28 ・ ⏱️ 34分54秒
+🔗 <a href="https://www.youtube.com/watch?v=glL7Dzn8iDQ" class="external">https://www.youtube.com/watch?v=glL7Dzn8iDQ<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/AI時代の情報漏洩を防ぐためのセキュリティ特化Agent-Skillsを紹介！AIを使う上で知っておくべきセキュリティの知識を話します.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>OpenAI・GitHub・AWS・Anthropic・Cloudflareの5社が出しているセキュリティ点検用Agent Skillsを、点検の対象と使いどころで整理した動画。どれも「全部防げる道具」ではなく、自分のコードを点検する道具として持っておく位置づけ。</strong></p>
+</blockquote>
+<h3 id="️-全体像">🗺️ 全体像<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-全体像" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    A[何を点検したい?] -->|鍵と部品| B[GitHub]\n    A -->|作っている最中| C[Anthropic セキュリティガイダンス]\n    A -->|既存コード全体・変更箇所| D[OpenAI / Anthropic]\n    A -->|設計書から対応まで| E[AWS]\n    A -->|公開前の監査| F[Cloudflare]&quot;">flowchart TD
+    A[何を点検したい?] -->|鍵と部品| B[GitHub]
+    A -->|作っている最中| C[Anthropic セキュリティガイダンス]
+    A -->|既存コード全体・変更箇所| D[OpenAI / Anthropic]
+    A -->|設計書から対応まで| E[AWS]
+    A -->|公開前の監査| F[Cloudflare]
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-ポイント">📌 ポイント<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ポイント" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. 前提 — 弱点があることと被害が出たことは別 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>脆弱性は悪用されると被害につながる仕組みの弱点。誰かに見つかる前に先に見つけて直すのがスキルの役目。見る観点の基礎は、誰が読めるか（権限）、鍵がコードに書かれていないか、追加した部品に既知の弱点がないかの3つ。スキルを使っても冒頭のような流出が全部防げるわけではない。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. OpenAI（Codexセキュリティ）と GitHub </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>OpenAIのプラグインは、コード全体を見るスキャン、変更箇所だけ見るディフスキャン、見つかった問題が成り立つか確かめるバリデーションの3スキル。関連コードまで追って権限の抜けを探す。GitHubはシークレットスキャニング（APIキー等）とディペンデンシースキャニング（追加した部品の既知の弱点）の2つで、GitHub自身の検査機能をMCP経由で呼び、結果をエージェントが説明する。MCP接続と認証が必要で、入れただけでは自動点検されず、部品追加時やコミット前に頼む使い方になる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. AWS と Anthropic </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>AWSはAWS Security Agentへの窓口で、設計書レビュー・コード点検・指摘への対応までを一続きで行う。コードをAWS側に送るため、送る範囲の確認とアカウント・権限の準備が必要。Anthropicは、作りながら点検するセキュリティガイダンス、全体や変更箇所を監査するクロードセキュリティ、単発のスラッシュセキュリティレビューの3系統。レビューは書いた側と別の新しい文脈で行い、修正パッチの適用は利用者が決める。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>4. Cloudflare（セキュリティオーディット） — 話者が最重要とした1本 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>画面・API・認証・データなど構成を整理して点検範囲を記録し、複数のエージェントで探索して、別担当が検証する。検証側は問題が起きない理由も探す。候補は確認済み・追加検証・却下の3つに分かれ、確認済みと未確認が後から分かる。Cloudflareで動かすアプリでなくても使え、複数人で作ったウェブアプリの公開前監査に向く。実行を制限できる環境が無い場合は、確かめきれなかった候補が追加検証として残る。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① 作ったアプリの公開前に1回だけ点検を頼む</strong>
+社内ツールやTaskForge系のアプリなど、人に見せる前のものを1本選び、Cloudflareのセキュリティオーディットか/security-reviewで1回点検してもらう。</p>
+<p><strong>② コードを外部に送る点検は先に確認する</strong>
+AWSのようにコードを外部へ送る方式は、会社のコードなら送ってよい範囲を先に確認してから使う。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> 最近個人情報を流出したみたいなニュースめちゃくちゃ多くないですか?大手のそれこそ5社がそれぞれ出してたりするのよね5社もあるんです実はこの5つ目のスキルが一番大事なんじゃないかなと思っていて皆さんこんにちは AIプログラミング講師の今乳ですこのチャンネルではトップ10%のAI人材を目指す方に向けて実践的なAI活用法をお届けしています最近個人情報を流出したみたいなニュースめちゃくちゃ多くないですか?確かにここ最近ほんと毎日のように出てきてるよねそうですよねニュース見るたびに大きい会社でもこういうことあるんだなと思って</p>
+<p><code>00:35</code> 確かにな正直しかも今ってAIがいろんなことできちゃうし大きな会社とかだけじゃなくてAIに頼めばJ君もそうだと思うけどちょっとしたアプリなら自分でも作れちゃうじゃんちゃんと自分で作ったアプリの方も気にしなきゃいけないってことなんですねまあそうよね正直セキュリティって何気にしてもいいか分かんないんですけど僕自身もセキュリティの超専門家っていうわけじゃないからある程度のセキュリティ知識しか守っていないというのは事実ですとただ実は今結構最近かなちょっと前ぐらいからAIエージェントにセキュリティの点検みたいなのを</p>
+<p><code>01:11</code> 手伝ってもらうためのスキルこれをいろんな会社が出してるんだけど知ってる?スキルってエージェントスキルのことですよねそうそうセキュリティ用のエージェントスキルがあるってことですか?そういうことしかもジェックも知ってるようなオープンAIとかあとGitHub、AWS、Anthropic、クラウドフレアっていう大手のそれこそ5社がそれぞれ出してたりするんよね5社もあるんですか?そうそれぞれでもちょっと違うみたいな感じそうよね確かに名前だけ並べられても結局セキュリティの何が違うのみたいな話だと思うので今日は最近のセキュリティとか個人情報漏洩とか脆弱性みたいな話題に即した形で</p>
+<p><code>01:54</code> エージェントスキルズの中でもセキュリティ編ということでスライドを用いつつですねこの5社のセキュリティ用のスキルをちょっと紹介していこうかなというふうに思っています各社ともどんなスキルなのかとかどういう仕組みで動くのかとかあとはどんな場面で使うのかみたいなところですね順に見ていきたいなと思いますはいお願いしますということでスライドを用いながらですねいろいろと会話していこうかなと思いますが</p>
+<p><code>02:28</code> J君がさっき言ってたニュース少しだけ振り返っておこうかなと正直ピックアップしたらたくさんあるから最初に出てきたものとかで有名なもので言うと9月頃にカーシアのタイムズカーでウェブサイトが不正アクセスを受けて660万アカウント分の簡易情報が流出しましたみたいな公表されてたよね運転免許証の画像も含まれてたってこれ結構大事じゃんそれが流出しました僕のも確かメール来てたからあれなんだけど</p>
+<p><code>03:01</code> 不正アクセスの簡易情報に含まれてたっていうので僕のも流出してます困ったことにあとは10月の9日とかだったかなブックオフが子会社の会員管理システムみたいなので不正アクセス受けて最大で643万件の会員情報が流出しましたみたいなそういう可能性があるって発表してるんよね半端ないですねこういうのって最近のAIを使った攻撃みたいな感じですかねそれも可能性は全然ある正直ただ別にこういう不正アクセスみたいなのは今に始まった話ではないので</p>
+<p><code>03:38</code> AIが原因っていうのは明確にはなってないけどもやっぱりAIのせいでローカルLLMとかがみたいな話はチェラーはホラー聞くよねどちらもそのウェブのシステムに外から入られて会員の情報が持ち出されてるみたいなさっきも話したけど今AI使えば会員登録画面とか管理画面アプリも作れちゃうしセキュリティ周りとかもいろいろ見れたりしちゃうじゃんそういうアプリにも同じような弱点が入っちゃってるかもしれないってことですかねそういうことよねなので自分たちで確かめる必要があるわけだよねこれは僕とかJ君とかそれこそ僕もこうやってAIを使って</p>
+<p><code>04:15</code> いろいろとツール作りましょうシステム作りましょうみたいなAIコーディングの素晴らしさを広めているからこそこのセキュリティの部分もじゃあ今からセキュリティの専門家にみんななれ難しいじゃんなのでまず自分たちでできることとしてはもちろんセキュリティの知識を身につけていくっていうことプラスちょっと武器を持っておいた方がいいとそれがさっき言ったエージェントスキルみたいな話になるわけですここで言葉をちょっと2つぐらい押さえておこうかなと思いますセキュリティと脆弱性ってところねセキュリティは情報とかあとは操作の権限とか</p>
+<p><code>04:49</code> サービスを守ることでこれをちょっと多分頭の中にあると思うそのまんまのセキュリティで大丈夫です脆弱性っていうのは悪用されると被害につながってしまう仕組みの弱点のことを言うのね例えばだけど本来は担当者と管理者しか見られない顧客一覧を権限のない人でも開けちゃうこれが脆弱性で悪用されると顧客の情報が当たり前だけど外に出ちゃうよね脆弱性があったらもうすでに情報が漏れちゃってるっていうことですか</p>
+<p><code>05:22</code> そこはちょっと違ってて弱点があることと被害が起きたことってのは別だよねだからさっきの顧客一覧で言うと権限のない人でも開けてしまう状態が弱点それを実際に誰かが開いて情報を持ち出したら被害につながるってことよね誰かに見つかる前に脆弱性を見つけて先に直しちゃえばいいってことですかねそういうこと今回のスキルはまさにその先に見つけるみたいなところを手伝ってくれるものになります見つけるっていうと行動のどこを見ればいいみたいなのがあるんですかね</p>
+<p><code>05:57</code> それで言うと一応3つぐらいあると言われていてこれはあくまで基礎的なところとしてお伝えしておくと1つ目は誰が読めるかっていうところでさっきの顧客一覧みたいに操作の許可が正しいかっていうところ2つ目は鍵が書かれていないかつまり秘密的な秘密情報そういったもの例えばよくJ君も知ってるかなAPIキーとか外部のサービスを操作するための鍵それをコードにそのまま書いてあると誰でも使えちゃうんだよね</p>
+<p><code>06:29</code> これよくある話よく環境変数に置きましょうとかそれこそAPIキーは直接コードに書かないでねとかは最初の最初の方でセキュリティの基礎知識として習うことではあるけどそういった観点で鍵がきちんとコードの中に書かれていないかっていうところだよね3つ目は追加して使っていってる部品にそれこそいろんな部品を組み合わせてシステムとかツールアプリって作るわけなんだけども基地のすでに分かっている弱点がないかみたいなちなみにこれからのスキルとかエージェントスキルで</p>
+<p><code>07:03</code> 冒頭のような流出みたいなさっき挙げたような問題とかこれ全部防げるかというとそういうわけではないとあくまで自分たちのコードを点検する道具として持っておいてほしいのでこれ使えばもう絶対セキュリティ大丈夫というものではないというのはちゃんと頭の中に入れておいてほしいなと思いますで早速ですがエージェントスキルまず一つ目オープンAI社から出しているものです一番強そうですねそうですコーデックスセキュリティというプラグイン普通にチャットGPTのデスクトップとかから</p>
+<p><code>07:38</code> コーデックスセキュリティとか調べていただくとプラグインありますプラグインってスキルとコネクタこれらをまとめたものがプラグインなのねでその中にこのプラグインというものの中にはスキルが3つ入っていてコード全体を点検するセキュリティスキャンというスキルあとは変更した箇所だけを点検するセキュリティディフスキャン見つかった問題の広報が本当になり立つかを確かめるバリベーションというのがあるんだけど一応これ英語で軽くお伝えしておくとセキュリティというのはわかるじゃんスキャンは検査みたいなところろだよねリフってよく出てくるんだけどこれ分かる?これなんか眼鏡みたいなゾフですねすいませんちょっとボケちゃって</p>
+<p><code>08:21</code> そういうボケが来るんですね成長したね思わぬ変化球来たからリフって何ですかゾフですねリフは差分を意味するプログラミングとかの技術的な用語なのねこれ覚えておいてほしいんだけど例えば何かコード書きます修正しましたそこに変化の差分が出てくるこれを確かめるという意味でセキュリティディフスキャン元々あったものが変更されましたその差分を見に行くという意味だよねバリデーションはよくあるけど</p>
+<p><code>08:53</code> 検証みたいな話です全体を見るか変更したとこだけ見るか確かめるようかみたいな感じです理解できてるじゃんそういうことです点検する範囲と目的で使い分けるみたいな感じかな流れとしてはなんだけどもまず全体化変更箇所化を選んで範囲を指定するみたいな次にコードを根拠にして問題の候補を探して最後に根拠と調べた範囲を報告してくれるみたいな流れなんだよねコードを調べていく流れとしてここで結構大事なところとして</p>
+<p><code>09:28</code> 変更箇所の点検だけでも点検でも変更した行だけを見るわけじゃない変更しましたっていうそこだけを見るわけじゃなくて関連するコードまで追いかけて本当に問題につながるかとか問題につながるところがないかっていうのを判断してくれるような感じです周りの環境というかつながりのとこまで分かんないと判断できないってことなんですかねそうここってさ基本的にコードっていろんなものの組み合わせでパズルのようにさ出来上がっているものだからさたとえこの1箇所だけ変更したとしてもそのピンポイントじゃなくて</p>
+<p><code>10:00</code> そこの変更した箇所で新しい呼び場所があったり新しいところから何かを入れてこんでたりとかそういういろんな関係性があるっていうことなのでそういう問題の候補が見つかったら必要に応じてバリデーションとかスキルとかで再現やコードの確認をして確かめるみたいな感じですこれちょっと今回1個1個全ての5つのスキルとか各社が出しているものを見に行こうとするとちょっと時間かかりすぎるのとセキュリティチェックするのと見た目としてつまんないというとあれですが差分が分かりにくかったりするので</p>
+<p><code>10:33</code> 今回はちょっとスライドを用いて説明しますが皆さんはこの内容を聞いてそれこそ先ほどのコーデックスのセキュリティプラグインこういうのをちょっと入れて使ってみてほしいなという風に思うのでこの後お話しする4つもそうなのでちょっとその辺を頭の中に入れといてください使い分けとしては既存のプロジェクトだったら全体見てもらった方がいいじゃん既にあるプロジェクトだったらそうじゃなくて機能を追加しますとか修正しましただけだったら変更箇所だよね気になる指摘があれば検証していくみたいな感じで</p>
+<p><code>11:07</code> 例えばAIにファイルのダウンロード機能を追加してもらったとしようかこれを変更箇所の点検にかけると関連するコードまで追って自分のファイルだけを取れるようになっているかを確かめてくれるってわけだよね要は自分がダウンロードしたいものだけちゃんとダウンロードできてるかって話よね他の人のファイルまで取れちゃったらまずいですもんねそういうことしかもこういう問題ってダウンロードの処理だけ見ても気づきにくいよねログインの確認とかあとはファイルの持ち主の管理とか権限どうなってるかとか別の場所に書かれてたりすることも多いので</p>
+<p><code>11:41</code> ファイルのダウンロード機能を追加しましただけじゃなくてそのファイルのダウンロード機能を使うユーザーの権限どうなってますかとか関連するところまで見に行かなければいけないそれで関連するコードまで覚えてきたんですかそうその通りだよねなおこれは説明用のあくまで例なんですけど使うにはですねこのエージェントスキルとか使うにはちゃんと環境が対応しているかどうかみたいなところも一応確認しておいてもらえたらなと思いますが基本的にオープンAIを使っているチャットGPT普段使っているのであれば問題なく使えるかなと思うので一旦全体とか変更の差分だけ見るようなものとか大きく3つのスキルをコーディックスセキュリティプラグインというもので用意してくれているので</p>
+<p><code>12:24</code> こういうのはぜひぜひ積極的に使ってもらえたらいいかなと思います今西さんついに完成したんですねそうなんよ完成しちゃいましたなんとですね皆さんに有効見せしていた私の資料作成スキルこれを配布する準備がついに整いましたちなみにこのスキルはどうやったらもらえるんですかこちらに記載のキーワードYouTubeの概要欄にも記載のキーワードをLINE登録後にご入力いただけたら説明動画そしてそのスキルのファイル類をですねお送りする形となっておりますもう今お見せしているのはこんな感じの資料がですね作れるようなスキル完成しましたのでぜひぜひ皆さんLINEより受け取っていただけたら嬉しいなと思います</p>
+<p><code>13:00</code> 続いて2つ目GitHubです公式のねこれコーパイロットアドバンスドセキュリティプラグインにこれまたスキルが2つ入ってますこれはAPIキーやパスワードみたいな機密情報を点検するシークレットスキャンニングというものシークレット秘密情報だよね追加した部品に基地の弱点がないかを点検するディペンデンシースキャンニングというこの2つがありますさっきのオープンAIのスキルでも十分な気がしたんですけど何か違うんですか?</p>
+<p><code>13:33</code> それでいうとオープンAIの方は誰が何をできるかみたいなコードの動きまで追ってたじゃんただGitHubのこの2つは鍵と部品に対象を絞ってるんだよね要はシークレットキーみたいなAPIキーとか機密情報問題ないかってところとあとは追加した部品要は差分で追加変更を加わった場所に対してそういうところに対してそれであれか追加した部品だからすでにあるものすでにある位置の弱点とかがないかってのを</p>
+<p><code>14:06</code> 点検してくれるっていうのが大きく違うので全体見てるわけじゃない仕組みとしてはエージェントが点検する対象を一旦集めてMCPで繋がったGitHubの検査機能これを呼び出すのよねAIが自分でコード読んで判断するってわけじゃないんですかねそうなんですGitHubが元々持っている検査の仕組みがあってそれを使ってその結果をエージェントが分かりやすく説明してくれるというものなのでGitHubのMCPへの接続と認証が必要になります</p>
+<p><code>14:38</code> 具体的にはAIが書き換えた設定ファイルにAPIキーが入ってないかとかをシークレットスキャンニングっていうスキルで確認しAIが追加した部品のバージョンこれは部品って言うとちょっと分かりにくいかもしれないけどライブラリとかいろいろそういうのがあった時にいろんなものを組み立てていろんなものを使ってシステムとかツールって作ってるよねあった時にすでにいろんなものを外部が作ってくれたものがあるわけじゃんそれらをインストールして使いこなしていくそうするとアプリとかできるわけなんだけど</p>
+<p><code>15:11</code> そもそもの外部のもの外部の部品これに基地の問題すでに知られているような問題がないかみたいなそういうのをディペンデンシースキャンニングで点検するという使い方になりますちなみに一応この画面の表示している鍵はダミーですプラグイン入れておけば勝手に動いて見てくれる感じですかね入れただけで常に自動で点検してくれるわけではないですこっちからお願いする必要があるのでタイミングとしては先ほどもあったように部品を追加した時要は機能を追加した時みたいなところとかもそうなんだけども</p>
+<p><code>15:46</code> 外部から何かを入れ込んだ時だよねライブラリー追加しましたとかあとは変更をコミットしてつまり変更を保存して誰かに共有する前のコミットは変更を記録することです1回記録して共有しちゃったら鍵とかも一緒に広まっちゃうってことですかそういうことなのでその前に一度見てもらうのがいいよねって感じだよねそれから問題なしと出たとしても全ての弱点がなくなったっていう意味ではないのでこの2つの観点では見つからなかったよということなのでそこもちょっと頭の中に入れておけるといいのかなと思います</p>
+<p><code>16:21</code> なのでさっき言ったようにこの2つっていうのは機密情報とかそういうシークレットキーとか入ってないかっていうのを探すのとディペンデンシースキャンニングこれは依存関係とかディペンデンシーで依存関係みたいなことで要は入れていくライブラリーのバージョン的になんかすでに知られているような問題バグとかがないかとかそういうのを調べてチェックしてくれるそんな感じですはいということで続きまして3つ目AWSですこれ僕知らないんですけど会社</p>
+<p><code>16:53</code> AWS知らないの?なんすかAWSアジュールは?GCPは?知らないです悲しいよ僕は3大クラウドを覚えておいてくださいこれはAIとかじゃないですクラウドクラウドクラウドみたいなのが言われた時から出てきた3大巨頭です習ってないですすいませんでした僕が悪くてクラウドサービスですこれは覚えておいてください天下のGoogle GCPGoogleクラウドプラットフォーム</p>
+<p><code>17:27</code> そして2つ目マイクロソフトが出しているマイクロソフトAzure3つ目天下のAmazonが出しているAmazonのAWSAmazon Web Serviceです略してAWSこの3つはめちゃくちゃ大きなクラウドサービスでその中でAWSが出しているAWS Agents for DevSecOpsっていうプラグインのスキルでAWSセキュリティエージェントっていうサービスにつなぐ窓口みたいなものなんだよねできることとしてはコードの点検設計書のレビュー</p>
+<p><code>18:02</code> そして指摘への対応の3つになります設計書ってことはコード作ってる途中というか書く前から見てくれる感じですかそう設計の段階でどこに問題が起きそうかみたいなのを整理してくれる感じコードの点検は手元のエージェントがコードをまとめてこれまたAWSに送ってAWSセキュリティエージェントが点検してその結果を手元に取ってくるっていう流れです一回コードをAWSに送ることですか?そうここが大事で手元だけで完結してるわけじゃないんだよねこのAWSのものに関しては</p>
+<p><code>18:34</code> なので元でエージェントが見てくれるっていうわけじゃなくてあくまでこのコードをAWSセキュリティエージェントがAWS側で確認して見てくれるっていうなのでどの範囲のコードを送るのかっていうのはちゃんと理解しておくというとあれだけど知っておく必要があるかなと思いますもちろんこれAWSにデータを送るということは使う前にはAWSのアカウントや操作の権限保存先みたいなのは用意しておく必要があります例えばAWSを使った社内アプリAWSってウェブサービスウェブアプリとか</p>
+<p><code>19:09</code> 作っていく上でのインフラだと思ってくださいそんな大事なんですかめちゃくちゃでかいインフラそれを簡単に使えるようにしているのがAWSでありAzureでありGCPなんだけれどもAWSを使った例えば社内アプリがありますとなったら設計書の段階で問題が起きそうな場所を整理して実装したらコードを点検して指摘が出たら対応するみたいな要は設計から対応までAWSのサービスと連携して一続き進めたい場面には向いてるってことなんだよねAWSで動かすアプリじゃないと使えないってことですか?</p>
+<p><code>19:44</code> いやAWSで動かすコードしか点検できないというわけではないですなのであくまでAWSのサービスAWS上にはエージェントを使うという観点でAWSを使う必要はあるけど必ずしもAWSで動かすコードじゃないといけないかというとそういうわけじゃないかなちょっと休憩しませんちょっとつけましたちょっとねちょっとだけねたまには雑談タイムみたいなはいやりますかそういうので僕ら結構ご近所さんになりましたよねまああいにく近くなってしまいましたいいじゃないですか</p>
+<p><code>20:16</code> ちゃんとお伝えすると僕が近づいたわけじゃなくてJ君が近づいてきたここはちゃんと整理しておきますワンチャンもう深夜とか電車なくてもとことこ歩いてこれる距離そう来ないでね全然来てほしくないんですけどまああの場所はどこかを一旦置いておき ますがまあ都内でまあそれなりにあの近くになんかジェイクが引っ越してきたみたい だからなんかねたくさん youtubeあげるために来たんだよね近くにいっぱい ご飯を送ってもらうかなってねたかるために なるほどですなどが僕でなんだかねってファミマファミレスのご飯が一番好きだ 確かによくロイホとか行くもんねほわー</p>
+<p><code>20:54</code> デニーズとかでも全然もうちょっと下げても大丈夫分かりました今度サイズでもいきましょうまずサイズいきましょうかありがとうございますこれはJ君もさすがに知っているアンソロピックです作っている最中に点検してくれるセキュリティガイダンスというものとあとは全体とか変更箇所を監査してくれるクロードセキュリティこの2つがプラグインである感じですもう一つ単発でレビューをしてくれるスラッシュセキュリティレビューというものもあってスキルコマンドがあって</p>
+<p><code>21:28</code> こっちはクロードコードに最初から入っているコマンドですどういうことですか1個はスキルだけど他2個はプラグインなんですかそう3つのスキルってわけじゃないんですかそう作りながらチェックするのか依頼して監査してもらうのかで使い分ける感じかなセキュリティガイダンスっていうのは作業の段階によって点検する範囲が広がっていきますとやっぱり編集した時は編集した箇所に危ない書き方のパターンがないかを検査するし作業の一区切りでは作業を一区切りしたタイミングではその回の変更をレビューするし要はこの一区切りしましたってなったら前からここまでの変更をレビューするし</p>
+<p><code>22:07</code> またクロードがコミット変更を保存する時は周辺のコードまで確認したりという感じだよねレビューってことはコードを書いたクロード自身が自分で見直すってことですか?いやレビューは書く側とは別に新しい文脈で別で行われるんよね思い込み引きずらずに見直せるってことこのまま書いた人が点検するよりも第三者的にやった方がいいじゃんさすがにそうですよねただ書き込みとかコミットといわゆる保存とかを止める機能ではないし見落としも全然あるわけね</p>
+<p><code>22:40</code> コミット時の確認っていうのはクロード自身があくまでコミットした場合の話っていう感じかなクロードセキュリティの方はコードの構成を把握して問題の起点を整理して複数のエンジェントで探索して独立した検証を経てから報告するっていうのが一つの特徴かなと見つかったらそのまま直してくるんですか?選んだ指摘から修正パッチでも修正の中で作れるんだけど適用するかどうかは利用者が確認して決めますなおもちろんこれは利用料トークンは消費するし</p>
+<p><code>23:15</code> 外部に何も送られないというわけでもないのでそのあたりはちょっと抑えておいてほしいかなというふうに思います意外と大手のアナソラフィックちょっと抜け回りそうな感じですどうだろうねでもやっぱりこのセキュリティ周りってさ多くの人たちがバイブコーディングとかAIコーディングというのでいろんなものを作るようになったからこそより危機意識というか危機管理をしていかなければいけないよねっていう中でアンセロピックとかはだいぶ前からこういうスキルとかこういった仕組みっていうのは作ってきてたかなと思いますだからちょっと場面でこれ分けると管理画面を作っている最中とかならセキュリティガイダー使って</p>
+<p><code>23:51</code> 以前からある認証とかつまりログインみたいに相手を確かめる処理を見直したいとかならなんかクロードセキュリティとかこれもねちょっと難しいちょっとパッと分かんない気がするんだけどあとはブランチっていう枝分かれする機能があるんだけどGitにブランチっていうのを1回だけ点検したようなスラッシュセキュリティレビューみたいなのを使うっていうこの辺はね細かくは分からなくていいですどちらかというと内容云々っていうのはエンジニア寄りの話になってきちゃいそうなのであんまり理解しておかなくてよくてこういうものがあるんだなぐらいに思っていただくのがいいかな</p>
+<p><code>24:25</code> 作ってる途中なのかもうあるコードを見直したいのかで選べばいいってことですかねそんな感じかなすでにある既存のものを見直していくのか作っている途中のものを連携するのかみたいな感じでやればいいんだけどじゃあクローズセキュリティって いうあのこれまたホスト型の製品はちゃんと入れる別の製品もあるんだけどほらこれ はあの一応今回紹介しているプラグインとは別の形態なので皆さんが使えるような プラグインとは別でクロードセキュリティのセキュリティに特化したものとかもどんどん 発生してできてきているというような感じですプロダクトとしてね弊社では社員研修 やセミナー登壇のほか ai ネイティブ</p>
+<p><code>25:04</code> な組織づくりのための社員生活支援など ai かける教育領域で様々な支援を行っていますご興味のある方は概要欄に記載の フォームよりご連絡ください最後5つ目クラウドフレアですあんま知ら ないクラウドフレア知らないのやばいよ聞いたことあるんですけど知らないって感じもうそれはねクラウドフレア知らないのはねダメですよ僕もいろいろとシステムとかツールアプリとかをクラウドフレアにデプロイいわゆる公開してたりとかするんだけども</p>
+<p><code>25:39</code> クラウドフレアにはデータベースもあるしストレージ機能もあるしセキュリティ周りもめちゃくちゃ強いというかセキュリティ周りとかもかなり得意だしいろいろなものを包含しているようなインターネットこのウェブサービスを作る上でのインフラを提供しているみたいな感じですAWSとかそっちとは若干毛色は違うんですけれどもでも結構有名どころで最近かなり注目を集めている10年前ぐらいから確かあったサービスだから別に今に始まった最近のサービスってわけではないんだけれどもいろいろな変遷を経てこのクラウドフレアというのは</p>
+<p><code>26:13</code> 最近特に開発者じゃない人たちに対しても結構知れ渡ってきているというのがあっていますそのクラウドフレアが出している実はこの5つ目のスキルが一番大事なんじゃないかなと思っていてセキュリティオーディットっていうコーディングエージェントに加えて使うこのコード監査のスキルなんだよね探索して検証して報告っていうこの段階を踏んで進んでくれる複数の作業用エージェントとツールを使える環境が必要なんだけどクラウドフレアでアプリを動かしないと使えないってことですか?クラウドフレアでアプリを動かしないと使えないってわけじゃない</p>
+<p><code>26:48</code> これも別にさっきのAWSみたいにそういうわけではなくてそれにJ君が使おうと思えばいかがでも使える感じでそれこそセキュリティオーディットでスキルで特徴的なのがどこを調べるかを先に決めるんだよね画面とかAPI認証データベースデータみたいに構成を整理して点検する範囲を記録していくその上で分担して探索していくという探していくみたいな感じですどこをまだ見てないかとかちゃんと残るっていうことですかそういうこと確認済みと未確認が後から見ても分かるようになっているのでこれ簡単にそれこそクラウドフレアセキュリティオーディットっていう風に</p>
+<p><code>27:26</code> スキルで検索してもらえたら出てくるのでこの5つ目が一番多分重要というか一番使いやすい皆さんにとって使いやすいし多分いろいろと適用範囲も広かったりするので多くの人たちがまずこれを使うべきなのかなと最初に持ってこいよって話なんですけれども5つ目のこのクラウドフレアセキュリティオーディットはぜひぜひ入れてみてスラッシュセキュリティオーディットで使ってみるといいんじゃないかなとでちょっと話戻って見つけた広報要はここに問題があるんじゃないかみたいな見つけた広報に関しては見つけた担当とは別の担当者が確認するエージェントが確認していくっていうところで</p>
+<p><code>28:00</code> これ押さえてほしいところとしては確認する側は問題が起きない理由も探すんだよね起きない理由ですか例えば別の場所でちゃんとチェックされていて実際には悪用できないというケースもあるわけよ候補は確認済み追加検証規格の3つに分かれていて最終的には指摘の根拠と調べた範囲追加で確認が必要な点が報告に残るみたいな感じです例えばなんですけど複数人で作ったウェブアプリを公開する前に監査したい場合とかに向いてます</p>
+<p><code>28:35</code> 人が多いと誰どこ書いたとか全体把握しきれないってこと?そうそういうことそういう時に指摘の根拠とかあとはどこまで調べたかみたいなのを確認できるのがいいところだよねただその対象のコードを実際に動かす時は通信とか書き込みを制限した場所で行ったりするっていう感じかなそういう場所なかったらどうなるんですかその場合はコードを実行せずに確かめきれなかった候補は追加検証の状態でただ残るっていう感じこの5社も見てくると結局どれ使うのかなってなっちゃうんですけどまあそうね確かに今5社パーッとめっちゃ概要のみをかいつまんで伝えたので</p>
+<p><code>29:15</code> ちょっと難しく感じた部分もJ君とか視聴者の方もあったかなと思うんだけどそうね一応まとめておくと何を点検したいのかで絞るみたいな感じが大事でその機密情報みたいな鍵とか部品とかならGitHub作っている最中ならセキュリティガイダンスみたいな変更箇所とか全体なら各社の対応している機能から選ぶっていうのでAWSには設計書のレビューもあるよねってところではあるんだけどさっき言った僕は最後のクラウドフレアのところとかは皆さんにとって一番使いやすい部分ではあるかなと思ってます例えばAIに部品というか</p>
+<p><code>29:51</code> いろいろなコードを変更してもらった直後とかだったらGitHubがいいって感じですかね使ってみるといいんじゃないかなっていうところでここも明確な区切りがあるわけではなくこの辺ってやっぱりJ君も今日聞いててちょっと難しいなって感じた部分あると思うんだよ何も分かったですけどそれでいいと思ってたりだけど結局そういう手段を知っているのが大事なので今回はどうしてもこの5社が出しているスキルこういうのがあるんだよって知っておくってのが大事だと思っていて実際に皆さんが作ったものに対してチェックしてみてこういうものが出てくるんだ</p>
+<p><code>30:22</code> こういう問題点が出てくるんだみたいなのをAIにやってもらうっていうアクションを取れるかどうかが大事かなと思っていますただやっぱ対象J君も聞いてて難しいと感じた部分もあれば似てないみたいに重なっているみたいなところも感じたかなと思うのでどこが一番ということじゃなくてあくまで目安としてこういう領域で使っているんだよみたいな感じで認識してもらえればいいかなと思いますあとは自分の環境で使えるかみたいなところももちろん大事で一つは今使っているエージェントで使えるか</p>
+<p><code>30:55</code> 要はクロードコードとかコーデックスからも使えるのかみたいなところとかあと2つ目は必要な接続とか権限が揃っている感じかなGitHubだったら確かMCP接続と認証でAWSだったらアカウントの権限とか準備みたいなそういうこと3つ目はコードをどこへ送るかみたいなところも含めて例えばAWSの点検とかだとコードをAWSに送るって言ったよね会社のコードなら送って良い範囲を先に確認しておく人安心かなと思うしどれも追加の条件なしで無料で使えるというわけではないので</p>
+<p><code>31:29</code> 自分が使えるものに絞ってやっていくといいかなと要は何が何でも使って使ってみたいな感じのJ君みたいに全部やればいいやってわけじゃなくてお金がかかるものも全然あるわけだよね最後にこの点検の結果が出た後どのスキルを使っても修正するかどうかを判断するのはあくまで利用者側ユーザー側なので僕とかJ君とかなわけだよね何が問題なのかとかどこまで調べたのか本当に起きるのかこの3つをAIとカビ打ちしながら理解を深めていくとか本当に理想はねセキュリティに強い人に入ってもらうっていうのはあるんだけど</p>
+<p><code>32:03</code> それはちょっと現実的ではないのでいわゆる非エンジニアができることとしてはこういった5つのスキルを使いながらセキュリティにチェックを入れていくっていう感じかなと思いますということで今回は5つほどスキル紹介したんですけれども本当に先ほどから何度もお伝えしているようにあくまでこういうものがあるんだちょっと使ってみようと思っていただくための今回は動画でした一つ一つの内容とかでちょっと難しく感じたかなと専門用語だなとか技術的だなとか僕も結構内容をかいつまんで話しましたので理解できなかった部分もあるかもしれないですけど</p>
+<p><code>32:38</code> 今回がまず学び始めるきっかけになればいいかなと思いますしセキュリティの意識を高めていくきっかけになったら嬉しいなというふうに思っていますはいありがとうございます今日のコメント返信コーナーに来ていただきます今日はですねロードコードプロジェクトの速攻出した動画にここから言いたいコメントですGlockではとっくにやってたよねこれってことなんですけどそうなんですか?あーわかんないそうなんですか?GlockでそれやってたからGlockにプロジェクト機能あったのかもしれないけどやってたのかななんかまあカーソルとかではやってたけどGlockベースに開発しなかったりしたので</p>
+<p><code>33:12</code> GlockビルドであったのかなGlockあったようななかったようなって感じかなちょっと正直僕は分からないと思いましたみんなまだ注目してないですけど、 使っているGlockとかCursorもまた動画出していけたらいいですね。そうね。それで言うと、Glockはめちゃくちゃ注目してたんだけど、 今GlockっていうよりもGlockBotが熱い。なんかめっちゃ聞いたことあるけど、何か分かんないです。めちゃくちゃ熱い。まあOpenAIのDotsとかと同じ感じなんだけれども、 このね、あのGlockBotはめちゃくちゃ熱いね。でしょ、早く撮影してくださいよ。</p>
+<p><code>33:43</code> いやでもこれね難しい部分があってなんかその挙動を見せるともろ個人情報とかもろ社外記の情報がバーッと出てくるから撮影難しいなっていうところはあるんだけどそれ専用にボットを作ってやっていくとかは何かできたらいいかなとは思ってはいますっていう感じでグロックの話になりましたがグロックボットとかプロアクティブエージェントですね勝手に動いてくれるようなエージェントたちっていうのは今めちゃくちゃホットな話題なので</p>
+<p><code>34:17</code> この辺り含めていろいろとお話ししていければと思いますし可能な限りですねクロードのプロジェクト機能のように最新情報を皆さんにお届けしたいなと思っていますので最新情報を最新でキャッチアップするためにもぜひチャンネル登録していない方はしていただけたらと思いますし今回の動画を見てですね皆さんがセキュリティに関して感じていることとかコメントにお寄せいただけると嬉しいなというふうに思いますということで本日は以上になりますまた次回チャンネル登録してね!</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</li>
+<li><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</li>
+<li><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</li>
+<li><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</li>
+<li><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</li>
+<li><a href="./ai-security" class="internal" data-slug="ai-security">ai-security</a>（StructureNote）</li>
+<li><a href="./agent" class="internal" data-slug="agent">agent</a>（StructureNote）</li>
+<li><a href="./claude-code" class="internal alias" data-slug="claude-code">Claude Code</a>（StructureNote）</li>
+<li><a href="./mcp" class="internal alias" data-slug="mcp">MCP</a>（StructureNote）</li>
+<li><a href="./2026-09-13-ツール選定はデータがどこへ行くかで決める" class="internal alias" data-slug="2026-09-13-ツール選定はデータがどこへ行くかで決める">2026-09-13-ツール選定はデータがどこへ行くかで決める</a>（StructureNote）</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-132" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-1"><a href="#️-全体像" data-for="️-全体像">🗺️ 全体像</a></li><li class="depth-1"><a href="#-ポイント" data-for="-ポイント">📌 ポイント</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>

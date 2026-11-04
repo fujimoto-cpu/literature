@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr"><head><title>API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto Sans JP:wght@400;700&amp;family=Noto Sans JP:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="robots" content="noindex, nofollow"/><meta name="og:site_name" content="📚 Literature Notes"/><meta property="og:title" content="API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします"/><meta name="twitter:description" content="📺 動画情報 API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-25 ・ ⏱️ 19分58秒 🔗 www.youtube.com/watch 📝 要約 🎯 Codex App Serverでサブスク内のChatGPT画像生成を呼び出し、API課金ゼロでバナー・サムネを3案並行生成する自作アプリ「Codex Image Studio」の作り方と開発のコツ。 1."/><meta property="og:description" content="📺 動画情報 API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-25 ・ ⏱️ 19分58秒 🔗 www.youtube.com/watch 📝 要約 🎯 Codex App Serverでサブスク内のChatGPT画像生成を呼び出し、API課金ゼロでバナー・サムネを3案並行生成する自作アプリ「Codex Image Studio」の作り方と開発のコツ。 1."/><meta property="og:image:alt" content="📺 動画情報 API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-25 ・ ⏱️ 19分58秒 🔗 www.youtube.com/watch 📝 要約 🎯 Codex App Serverでサブスク内のChatGPT画像生成を呼び出し、API課金ゼロでバナー・サムネを3案並行生成する自作アプリ「Codex Image Studio」の作り方と開発のコツ。 1."/><meta property="og:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:url" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta name="twitter:image" content="https://fujimoto-cpu.github.io/literature/static/og-image.png"/><meta property="og:image:type" content="image/.png"/><meta property="twitter:domain" content="fujimoto-cpu.github.io/literature"/><meta property="og:url" content="https://fujimoto-cpu.github.io/literature/API課金一切なし！ChatGPT-Images-2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします"/><meta property="twitter:url" content="https://fujimoto-cpu.github.io/literature/API課金一切なし！ChatGPT-Images-2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="📺 動画情報 API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします 🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-25 ・ ⏱️ 19分58秒 🔗 www.youtube.com/watch 📝 要約 🎯 Codex App Serverでサブスク内のChatGPT画像生成を呼び出し、API課金ゼロでバナー・サムネを3案並行生成する自作アプリ「Codex Image Studio」の作り方と開発のコツ。 1."/><meta name="generator" content="Quartz"/><script src="./static/literature-ui.js" defer></script><link href="./index.css" rel="stylesheet" type="text/css" data-persist="true"/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL3ByaXZhdGUvdG1wL3F1YXJ0ei1saXRlcmF0dXJlL3F1YXJ0ei9jb21wb25lbnRzL3N0eWxlcyIsInNvdXJjZXMiOlsibWVybWFpZC5pbmxpbmUuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTs7O0FBS0Y7RUFDRTtFQUNBOzs7QUFJSjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTs7QUFHRjtFQUNFO0VBQ0E7O0FBSUo7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBOztBQUVBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7O0FBSUY7RUFDRTtFQUNBO0VBQ0EiLCJzb3VyY2VzQ29udGVudCI6WyIuZXhwYW5kLWJ1dHRvbiB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxvYXQ6IHJpZ2h0O1xuICBwYWRkaW5nOiAwLjRyZW07XG4gIG1hcmdpbjogMC4zcmVtO1xuICByaWdodDogMDsgLy8gTk9URTogcmlnaHQgd2lsbCBiZSBzZXQgaW4gbWVybWFpZC5pbmxpbmUudHNcbiAgY29sb3I6IHZhcigtLWdyYXkpO1xuICBib3JkZXItY29sb3I6IHZhcigtLWRhcmspO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiB2YXIoLS1saWdodCk7XG4gIGJvcmRlcjogMXB4IHNvbGlkO1xuICBib3JkZXItcmFkaXVzOiA1cHg7XG4gIG9wYWNpdHk6IDA7XG4gIHRyYW5zaXRpb246IDAuMnM7XG5cbiAgJiA+IHN2ZyB7XG4gICAgZmlsbDogdmFyKC0tbGlnaHQpO1xuICAgIGZpbHRlcjogY29udHJhc3QoMC4zKTtcbiAgfVxuXG4gICY6aG92ZXIge1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBib3JkZXItY29sb3I6IHZhcigtLXNlY29uZGFyeSk7XG4gIH1cblxuICAmOmZvY3VzIHtcbiAgICBvdXRsaW5lOiAwO1xuICB9XG59XG5cbnByZSB7XG4gICY6aG92ZXIgPiAuZXhwYW5kLWJ1dHRvbiB7XG4gICAgb3BhY2l0eTogMTtcbiAgICB0cmFuc2l0aW9uOiAwLjJzO1xuICB9XG59XG5cbiNtZXJtYWlkLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBmaXhlZDtcbiAgY29udGFpbjogbGF5b3V0O1xuICB6LWluZGV4OiA5OTk7XG4gIGxlZnQ6IDA7XG4gIHRvcDogMDtcbiAgd2lkdGg6IDEwMHZ3O1xuICBoZWlnaHQ6IDEwMHZoO1xuICBvdmVyZmxvdzogaGlkZGVuO1xuICBkaXNwbGF5OiBub25lO1xuICBiYWNrZHJvcC1maWx0ZXI6IGJsdXIoNHB4KTtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xuXG4gICYuYWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gIH1cblxuICAmID4gI21lcm1haWQtc3BhY2Uge1xuICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgdG9wOiA1MCU7XG4gICAgbGVmdDogNTAlO1xuICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xuICAgIGhlaWdodDogODB2aDtcbiAgICB3aWR0aDogODB2dztcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRlbnQge1xuICAgICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgICAgdHJhbnNmb3JtLW9yaWdpbjogMCAwO1xuICAgICAgdHJhbnNpdGlvbjogdHJhbnNmb3JtIDAuMXMgZWFzZTtcbiAgICAgIG92ZXJmbG93OiB2aXNpYmxlO1xuICAgICAgbWluLWhlaWdodDogMjAwcHg7XG4gICAgICBtaW4td2lkdGg6IDIwMHB4O1xuXG4gICAgICBwcmUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGJvcmRlcjogbm9uZTtcbiAgICAgIH1cblxuICAgICAgc3ZnIHtcbiAgICAgICAgbWF4LXdpZHRoOiBub25lO1xuICAgICAgICBoZWlnaHQ6IGF1dG87XG4gICAgICB9XG4gICAgfVxuXG4gICAgJiA+IC5tZXJtYWlkLWNvbnRyb2xzIHtcbiAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgIGJvdHRvbTogMjBweDtcbiAgICAgIHJpZ2h0OiAyMHB4O1xuICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgIGdhcDogOHB4O1xuICAgICAgcGFkZGluZzogOHB4O1xuICAgICAgYmFja2dyb3VuZDogdmFyKC0tbGlnaHQpO1xuICAgICAgYm9yZGVyOiAxcHggc29saWQgdmFyKC0tbGlnaHRncmF5KTtcbiAgICAgIGJvcmRlci1yYWRpdXM6IDZweDtcbiAgICAgIGJveC1zaGFkb3c6IDAgMnB4IDRweCByZ2JhKDAsIDAsIDAsIDAuMSk7XG4gICAgICB6LWluZGV4OiAyO1xuXG4gICAgICAubWVybWFpZC1jb250cm9sLWJ1dHRvbiB7XG4gICAgICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgICAgICB3aWR0aDogMzJweDtcbiAgICAgICAgaGVpZ2h0OiAzMnB4O1xuICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICAgIGNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNHB4O1xuICAgICAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgICAgIGZvbnQtc2l6ZTogMTZweDtcbiAgICAgICAgZm9udC1mYW1pbHk6IHZhcigtLWJvZHlGb250KTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIDAuMnMgZWFzZTtcblxuICAgICAgICAmOmhvdmVyIHtcbiAgICAgICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgICB9XG5cbiAgICAgICAgJjphY3RpdmUge1xuICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWSgxcHgpO1xuICAgICAgICB9XG5cbiAgICAgICAgLy8gU3R5bGUgdGhlIHJlc2V0IGJ1dHRvbiBkaWZmZXJlbnRseVxuICAgICAgICAmOm50aC1jaGlsZCgyKSB7XG4gICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgcGFkZGluZzogMCAxMnB4O1xuICAgICAgICAgIGZvbnQtc2l6ZTogMTRweDtcbiAgICAgICAgfVxuICAgICAgfVxuICAgIH1cbiAgfVxufVxuIl19 */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" data-persist="true"/><script src="./prescript.js" type="application/javascript" data-persist="true"></script><script type="application/javascript" data-persist="true">const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://fujimoto-cpu.github.io/literature/index.xml"/></head><body data-slug="API課金一切なし！ChatGPT-Images-2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">📚 Literature Notes</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg><p>検索</p></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="検索ワードを入力" placeholder="検索ワードを入力"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="ダークモード"><title>ダークモード</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="ライトモード"><title>ライトモード</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="リーダーモード"><title>リーダーモード</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-272"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>エクスプローラー</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-272" class="explorer-content" aria-expanded="false" role="group"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします</a></div></nav><h1 class="article-title">API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします</h1><p show-comma="true" class="content-meta"><time datetime="2026-10-24T15:00:00.000Z">2026年10月25日</time><span>41 min read</span></p><ul class="tags"><li><a href="./tags/youtube" class="internal tag-link">youtube</a></li><li><a href="./tags/ai" class="internal tag-link">ai</a></li><li><a href="./tags/design" class="internal tag-link">design</a></li><li><a href="./tags/programming" class="internal tag-link">programming</a></li><li><a href="./tags/prompt-engineering" class="internal tag-link">prompt-engineering</a></li></ul></div></div><article class="popover-hint"><blockquote class="callout info is-collapsible is-collapsed" data-callout="info" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📺 動画情報 </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><strong>API課金一切なし！ChatGPT Images 2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします</strong>
+🎙️ いまにゅのAIプログラミング塾 ・ 📅 2026-10-25 ・ ⏱️ 19分58秒
+🔗 <a href="https://www.youtube.com/watch?v=PGDdIoTU4us" class="external">https://www.youtube.com/watch?v=PGDdIoTU4us<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a>
+<img src="./99_🖼️-picture/youtube_thumbnails/API課金一切なし！ChatGPT-Images-2.5を搭載した実用的な画像生成アプリの作り方や開発のコツをAIのプロがお話しします.jpg" width="auto" height="auto" alt/></p>
+</div>
+</blockquote>
+<h2 id="-要約">📝 要約<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-要約" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote>
+<p>🎯 <strong>Codex App Serverでサブスク内のChatGPT画像生成を呼び出し、API課金ゼロでバナー・サムネを3案並行生成する自作アプリ「Codex Image Studio」の作り方と開発のコツ。</strong></p>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>1. API課金なしの仕組み — Codex App Server </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>Codexをアプリの裏側に載せると、ChatGPTのサブスク枠内でAI機能入りのWebアプリが作れる。従量課金APIは高いので、余っているサブスク枠を使えるのが最大のメリット。自分用ツール向き。注意点として、画質（high/low/auto）をプログラム側で固定できずautoやlowになり、ChatGPT本体で作るより画質が落ちる場合がある。本格運用ならAPI接続が選択肢。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>2. アプリの機能 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>用途（バナー等）・比率（16:9）・必ず入れる文字・配色を指定し、参考画像に役割（配色/ロゴ/人物）を振れる。「制作レシピ」で裏側のプロンプトをセットし、3案を並行生成。生成後にCodexが検品して点数（例: 95点）を付け、範囲指定の部分修正や別サイズへの展開、書き出し（PNG/JPEG/WebP）もできる。履歴・生成に使った拡張プロンプトも残る。データはローカルフォルダに溜まる。</p>
+</div>
+</blockquote>
+<blockquote class="callout example" data-callout="example">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>3. 作り方のコツ — 役割分担 </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p>要件はAIとの壁打ちで詰めてから実装させる。実装はCodex、UI/UXデザインはClaude Codeと使い分ける。Codex単体だとデザインが「Codex感」で微妙だったため、動くアプリに対してClaude Codeでデザイン案を複数作らせ、良いものを本番適用した。デザインシステム（コーポレートカラー基調）を用意して毎回使うのも効く。</p>
+</div>
+</blockquote>
+<blockquote class="callout tip" data-callout="tip">
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>💡 ゆりこの活用メモ </p></div>
+                  
+                </div>
+<div class="callout-content">
+<p><strong>① デザインはClaude・実装は別ツールで分業</strong>
+見た目だけ別パターンを作らせて選ぶ流れは、ゆりこの制作スピード課題にそのまま使える。次にツールを作る時は先にデザイン案を3つ出させる。</p>
+<p><strong>② 「3案並行＋検品点数」を自分の制作フローに</strong>
+バナー・SNS素材をたたき3案で出し、AI検品で粗を潰してから自分が仕上げる形にすると、デザインに時間がかかりすぎる課題を削れる。</p>
+</div>
+</blockquote>
+<h2 id="️-文字起こし">🎙️ 文字起こし<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文字起こし" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<blockquote class="callout quote is-collapsible is-collapsed" data-callout="quote" data-callout-fold>
+<div class="callout-title">
+                  <div class="callout-icon"></div>
+                  <div class="callout-title-inner"><p>📝 文字起こし全文（クリックで展開） </p></div>
+                  <div class="fold-callout-icon"></div>
+                </div>
+<div class="callout-content">
+<p><code>00:00</code> チャットGPっていうの画像生成を裏側で使える画像生成アプリ3つ一気に作るの?そう、3つ並行して作るのサムネとかこれで作れそうですねサブスクの範囲内で使えるっていうのは本当にメリットしかない皆さんこんにちは、AIプログラミング講師の今西ですこのチャンネルではトップ10%のAI人材を目指す方に向けて実践的なAI活用法をお届けしています今西さん、最近ちょっと触れてなかったんですけど画像生成これもなんかチャットGPTのイメージだっけなのモデルがちょっと上がったみたいでどうなんですか</p>
+<p><code>00:37</code> そんな大きな変化はないかなって感じはするけどもちろんよくはなったよね画像生成の中でもやっぱり今ナノバナナプロ使ってる人よりもチャットGPTのイメージ使ってる人の方が多いかなともちろん中華系の画像生成モデル使ってる人もたくさんいるしっていう感じだよねそうなんですね昔バナナスタジオって作ってたじゃないですかナノバナナプロを使えるねあれ良かったです確かにこれで言うとちょうどコーデックスアップサーバーって覚えてる?コーデックスのモデルをサブスクリーンで使えて</p>
+<p><code>01:10</code> アプリ作るみたいなやつそうそうそうそうあれを使うというかあれをどういうものかっていうのを実現するためにちょうどコーデックスアップサーバーでバナナスタジオみたいなのを作ったんだよ要はチャットGPTイメージをチャットGPTの画像生成を裏側で使える画像生成アプリイメージスタジオってますかそうイメージスタジオコーデックスイメージスタジオって名付けたんだけどそうなんですか見たいです見たいです見ますかじゃあ今日はこれどうやってこのアプリ作ったのかみたいなところそれこそコーデックスアップサーバー</p>
+<p><code>01:43</code> 知らない人もいるかもしれないし結構アプリケーションのクオリティは高いと思うのでこれどういう過程で作っていったのかとかこれどんなことができるのかとかそういったのを皆さんにお伝えしていこうかなという風に思いますはいということでJ君はいどうこれコーディックスイメージスタジオというこちらいやなんかちょっと全然どうやって使うんですかまあまずこれちょっとね過去にやってたやつなんだけれどもまあベースこれ全然変えていくことはできるんだけれどもまあ最初にサーナー作ってもらいましたみたいなその中でもう一回なんか新しいサーナー作ってみたいなことを言って</p>
+<p><code>02:20</code> これをベースにちょっと修正加えたのがこれこれを元にちょっともっと文字の足台加えてみたいなことを言ったのがこれわかる?これをベースにここだけ変えてかつ色を変えるみたいな色だけ変えるみたいなそんななんていうんですか維持したまま画像修正できる?ChatGPTのイメージ使えば全然できるかなっていうところで正直このアプリ自体ってChatGPTワークとかコーデックス使えば似たようなものはできますとやっぱり画像生成を本格的にやるとか結構バナー作るの多いよって人いるじゃんそれは毎回毎回チャット立ち上げてると結構めんどくさいと思うんだよね</p>
+<p><code>02:57</code> それだったらコーデックスアップサーバーを使っていわゆるコーデックスを手元にインストールしている人は使えるのでコーデックスアップサーバーを使って裏側でこのチャットGPTイメージを動かすみたいな形にすれば全然問題ないかなという風に思うのでそんな感じで使えるようにしたアプリケーションどんな風に使う?見せてあげますよこれ左側で新しい作成というのをして何でもいいかなじゃあバナー画像ということでそうだなAIうーんとAIセキュリティ入門講座という文字が入ったセミナーのバナー画像を作成</p>
+<p><code>03:34</code> みたいな感じにしておきましょうとでこれで例えば一旦始めるとしますそうするとここにこうやってこんな感じで左側に入ってるの分かるかなでここでここに制作の条件ということでバナーなのか何なのかとか決めることができるんですけどもバナーとかにしますで比率どうしましょうか16対9にします必ず入れる文字っていうのがあるので例えばここで入れますで配色そうだな黒と赤とかにしておきましょうかっていう風に入れて黒と赤セキュリティで言うと黄色何色がイメージある?セキュリティですか?うん黄色っす黒と黄色にしておきますかって形にしますあとはここに参考画像みたいなので</p>
+<p><code>04:12</code> 何かもしあればね今回追加しないけれども画像をここに追加していくことができるので例えばこれが配色の参考にしたい画像なのかロゴを入れたいのかあとは人物を入れたいのかってあるじゃん要は人物を入れて例えば僕の画像を入れてみたいな形だったらそうだな僕の画像じゃあ入れますか僕の画像として、こんな感じで役割をちゃんと参考画像ごとにちょっと分けることができるよね。これで言うと参考画像、僕の画像を入れて、これを入れますよみたいなことができて、他に画像を追加したければ画像をどんどん追加していくことができるみたいな、ざっくりそんな感じです。これで3案を作るとか、もしくは左側に制作レシピってあるんだけれども、</p>
+<p><code>04:52</code> 読みやすいサムネイル、洗練されたバナー、印象に残るビジュアルとかいろいろあるので、これいわゆる裏側にプロンプトをセットしてるみたいな感じねこの辺は細かいことは一旦割愛しますが印象に残るビジュアルっていうこの制作レシピみたいなのがある中でこれを適用して3案を作るとこんな感じで3つ一気に作るの?そう3つ並行して作るのUIとか結構凝ってますね今気づいちゃった?はいなんかかっこいいですねこれこれ見違えるカラーというか僕のよく出してるスライドとかと同じようにウェブアプリケーションとかアプリを作るようにこのUI UXみたいなのを</p>
+<p><code>05:25</code> ちゃんとデザインシステムを用意していて作る時毎回使うやつみたいなこれは僕自身スライドとかを作る用のHTMLスライドかHTMLスライドを編集したりHTMLスライドを投影するためのデスクトップアプリとして1個作ってるデスクトップアプリがあってそれも同じような色合いでやってます僕自身コーポレートカラーをベースにしたデザインシステムがめちゃくちゃ好きだったりするので基本的に何か作るってなったらもうこれでやってるって感じね今こうやって作ってくれてますこれを適用していわゆる左側が一種のプロジェクトみたいな感じだよね</p>
+<p><code>05:59</code> こういう風にプロジェクトをどんどん立てていってそれこそこっちここにあってこれはこんな感じで動いててみたいな裏側はコーデックスが紐づいてるんだよねコーデックスが紐づいてるのでそのコーデックスに紐づいた形でチャットGPTのイメージを呼び出す形になります注意点があってチャットGPTのイメージを呼び出す際にクオリティとかがハイとかローとかオートとかっていうのが一応プログラム側で制御できるんだけれどもこれがねちょっとハイっていうのに設定できずにオートになったりとかローになったりするから若干ChatGPTとかChatGPTワーク側で作るバナーよりも</p>
+<p><code>06:35</code> クオリティが下がる場合も全然ありますもしこれはねこれ今まだ搭載してないんだけれどももしそれを本格的なものをもっと作るっていうのであれば基本的にはChatGPTのAPIを紐付けてそこに対して画像生成してもらうみたいなことが考えられるんだけどそれはちょっと一旦置いておきますっていうところで今これ作ってくれていてほらこうやって買っていってくれたねAIセキュリティ入門講座これちゃんと検品してますってあるんだけども裏側でコーデックス挟んでるからコーデックスって別に画像生成するだけじゃなくて</p>
+<p><code>07:08</code> 画像生成ももちろんできるんだけれどもいわゆるちゃんと画像チェックしてくれてもいいっていう風にこんな感じでやってくれて描いてます順番待ってますみたいな感じで今やってくれてると例えばこれに対して編集したければここを選択してこうこうこういう風にしたいみたいなことをやっていくことができるんだけれども一旦こんな感じで作ってくれているような状況ですとでまだまだ修正していくことができると思うのでここは追って修正していこうかなと思うんですがこのアプリをさらに修正とかいやこの画像ね画像そうそうそう修正していこうかなと思うんですけど</p>
+<p><code>07:42</code> まず3は出てからという感じかなちょっとどうしてもねこのコーデックス経由でコーデックスアップサーバー経由でチャットGPTイメージを使ってたりすると画像生成自体が遅いというよりもこれをチェックしたりとか裏側でコーデックスが動いている都合上ちょっと遅かったりするっていうのがあるんだけどとはいいつつポチッとしたら勝手にねこうやって作ってくれるのであればバナーを普段作る人とかするとかなりいいツール使い勝手がいいんじゃないかなみたいなちょっと確かにバリエーション変えてきましたバリエーション変えて黒と黄色みたいなところ入れてるよねてか僕もこれ使いたいんですけど出たまたいつも通りこれ僕にも共有してくださいよ</p>
+<p><code>08:18</code> バナナスタジオの時みたいにバナナスタジオ僕大防戦になりましたから本当?J君にはちょっと配らないんだけどいつも通りちゃんとLINE登録してくださった方には概要欄に記載のキーワードを入力していただけたらこちらのCodex Image StudioのファイルこれChatGPTがCodexに読み込まれすればそのまま使えると思うので読み込めないとしても多分言えば使えるようになるのでそのファイルと諸々をプレゼントしようかなと思いますありがとうございますやったこれ何がいいかってCodexとかChatGPTサブスクリプション内で使えます</p>
+<p><code>08:54</code> まずもし改善したければ改善しちゃって大丈夫ですこのアプリから自分でいじっていいってことですかもちろん大丈夫ですただそのなんかこれ自分が作りましたよみたいな感じで再配布したりとか販売するのはちょっとやめていただきたいんですけどでもご自身の使いたいように使ってもらえたらと思いますしなんかそれこそね僕のこのアプリケーションのUI UXって結構いいと思うのでこれをもとになんか参考にして何か作るとかするとまあ一ついいものができるんじゃないかなっていう風にも思いますなのでこれYouTubeの概要欄キーワード記載しておきますのでぜひぜひそちらの内容をですねそちらからキーワード入れていただいて</p>
+<p><code>09:30</code> ぜひ受け取っていただけたらいいかなというふうに思います今西さんついに完成したんですねそうなんよ完成しちゃいましたなんとですね皆さんに有効お見せしていた私の資料作成スキルこれを配布する準備がついに整いましたちなみにこのスキルはどうやったらもらえるんですかこちらに記載のキーワードYouTubeの概要欄にも記載のキーワードをLINE登録後にご入力いただけたら説明動画そしてそのスキルのファイル類をですねお送りする形となっておりますもう今お見せしているのはこんな感じの資料がですね作れるようなスキル完成しましたのでぜひぜひ皆さんLINEより受け取っていただけたら</p>
+<p><code>10:03</code> 嬉しいなと思いますという話をしていたらできましたこんな感じでAIセキュリティとか出てきて大きく変わってるわけじゃないのでJ君的にどれがいい?僕的には最真ん中かなそれいいですねなるほどねこれに対してここでアンニで仕上げるってポチッとしてここでそうだな文字がなんかちょっと日本語フォントとして微妙だなと思いましたNotSansGPのようなフォントにしつつ文字自体にセキュリティ感あるあしらいを入れてほしいです背景が黄色で</p>
+<p><code>10:36</code> ちょっとシンプルすぎるなと思ったので背景自体にもちょっと動きを加えてセキュリティ感を強めてほしいなという風に思います若干ちょっと淡々としているというかシンプルすぎるなと思いますという風に伝えますあとはこれ範囲だけ直すっていうのも一応できて例えばなんかこういう風にあーそこのポイントで修正そうそうそうそうここでみたいなことできるよねこういう風に範囲だけ修正とかできるのはかなりいい部分あとやっぱりちゃんと人物って言ってたからこうやって僕の顔とかもねほぼ変わらずほぼ変わってないうんもんもです</p>
+<p><code>11:07</code> ちゃんと入れてくれてるってのは大きいかなと全体を直すにしておきましょうかこれで修正版を作るとするとまたこの画像をベースに修正してくれるみたいな感じだよねでじゃあこれ作ってくれてる間にこれどうやって作ったのかってお話をさせていただくと僕が結構前に数ヶ月前ぐらいにCodex App Serverという動画を出しておりますのでそちら見ていただくのが一番手っ取り早いんですけれどもCodexですね本当にありがたいことにCodex App Serverというものを使用すると自分のウェブアプリケーションこれ自分のCodex Image Studioというアプリケーションね</p>
+<p><code>11:42</code> このアプリケーションの裏側にCodexを搭載することができるサブスクのまんま使えると素晴らしいよく覚えてましたそうなんだよ今までだとアプリケーション入れるとかってなったらアプリケーションの中にAIを組み込むってなるとサブスクリプションとは別でAPI重量課金で入れ込むっていう形が多かったんだけど皆さんも多くの方知ってるかなと思いますがAPIの重量課金まあ高いんよ高いですよね高いなのでできればサブスク内でやりたいじゃん多くの人って多分サブスクものによっては結構余ってる人もいると思うんだよねその枠がっていう意味でもこのアプリケーション内にコーデックスを搭載してそのサブスクの範囲内で使えるっていうのは本当にメリットしかないので何か僕が</p>
+<p><code>12:23</code> それこそ自分の自分で使うようなアプリねこれ配布用とかじゃなくて配布用というか他社も共有する用のものではなくて自分自身で使うアプリケーションという観点においてはこのコーデックスアップサーバーを使うとAI搭載のウェブアプリケーションを自分で作ることができるツールを作ることができるのでかなり素晴らしい機能かなというふうに思っていますおすすめですけどコーデックスコーデックスでアプリケーションを作るのであればすごいおすすめです僕自身はコーデックスアップサーバーを使って何かしらのアプリケーションツールを作っていますしそれこそ作り方どうやってやったのかというと</p>
+<p><code>12:58</code> 普通に画像生成スタジオのようなアプリケーションを作りたいとコーデックスアップサーバーを使ってみたいなことを伝えつつ要件を伝えていきました最初3案作るねとか何するねとかっていうのを要件を詰めていってここはもう普通に壁打ちだよねAIとの壁打ち僕の今までの動画で何度もお伝えしているようにAIとどんどんどんどん要件をブラッシュアップしていきその要件でいいなと思ったらそれを元に実装してもらったとただこれちょっと一つ付け加えておくとこのUI UXは正直コーデックスだけだと</p>
+<p><code>13:34</code> 実現難しいかなと思いますデザインはやっぱりクロードのカットで言っていますよねこれはもともと最初は実はコーデックスで作ったものはコーデックス感あるというかデザインは正直微妙でしたそれに対してクロードコードで出来上がったアプリケーション動いているアプリケーションに対して新たにデザインのみをいろいろパターン作らせていくつかこのデザインをブラッシュアップしブラッシュアップしたデザインでいいなと思ったものを本番に適用したという流れを取ったのねなので実装自体はベースはコーデックスでもデザインとかUI UXの部分に関しては</p>
+<p><code>14:10</code> 基本的にはこのクロードコードがやったみたいななるほどっていう風に積み分けてるんだよね使い分けですねだからデザインの部分に関してはね本当にねクロードに勝るものはないかなと思ってますお出てきたこんな感じでちょっとさっきよりはなりましたがちょっとなんかね荒れてる部分はあったりするんだけどもこんな感じでいっていけばもっと特定の部分だけ足らいを追加してとかなんかもっと工夫していくことは全然できるかなという風には思いますこれは正直どう伝えるかとかプロンプト的な話にもなりますし</p>
+<p><code>14:43</code> ここは場合によってはもっともっとクオリティ上げていけるしそれこそさっきのこれとかさこれマジいいですねこれも同じようなので作ってるしプロンプト次第なところはあるよね正直例えばこれで取ったらこの版で書き出すみたいな形にしてあげるとここでPing JPEG WebPとかファイル名決めてこれで1枚書き出すって言うと普通にピンク画像で出力されます召喚の保存できるんですかそうここでこんな感じでほらサムネとかこれで作れそうですね全然サムネ用とかにチューニングしていけばできるかなと思うんで</p>
+<p><code>15:14</code> 僕がこれ配布させていただく中でぜひ僕のものをそのまま使うとかじゃなくて改善していってほしいですベースがあるのでベースのデザインとか機能仕組みがもう出来上がってるわけなのでこれを元にいいものを作っていってほしいなっていう風に思ってるので細かな部分は僕はチューニングあえてしてないんですよねだいぶ概ねの流れはできてるただ細かい部分まで作り込んでいないっていうのはそういう背景もあります実はこの制作レシピのところとか見てあげるとこうやって編集してレシピ名とかこのルールとかこうやって入れていけるんだよね</p>
+<p><code>15:47</code> こういったのでレシピを新しく作っていくこともできるしこうやってネオンとテクノロジーサムネイルこうやっていろいろあったりするからこれを使うってやったりするとここで何か使っていくこともできるし適用してやっていくこともできたりとか新しいのを制作してっていう風にやっていくこともできるとしかもこうやってたまってるのは基本的にローカルのウェブアプリなのでつまり自分のフォルダー内にどんどんどんどんこの情報がたまっていくので今こうやってデータベースとか使っているわけではなくここにたまっているとこんな感じに入っているというそんな感じのアプリケーションですなるほど</p>
+<p><code>16:19</code> 次がコーデックスアップサーバーのチャットGPというサブスクリプションの紐付けで接続しているというのを確認した上でやっていく形になるので、先ほども話したようにコーデックスアップサーバーでやりつつも、画像生成の部分はもっとクオリティを上げていきたいというのであればAPIを通してあげるといいかもなと思いますし、別にこれでもさっきの見てわかるように全然悪くないものを作れてしまうのかなというふうに思います。ここで言うと足雷を追加してみたいな形で言ったりしたので、あとはここの僕個人的に思うところとしてはこれちゃんと一応言ってるね</p>
+<p><code>16:51</code> ここでもっと背景にあしらよって定例記に入れてほしいとかあと文字が崩れてるみたいな形でこんな風にきちんと履歴残ってるんだよねやり取りの記録スタジオ側と僕自身のフィードバックの内容を見れてたりしてるのでなんかこの履歴を見ることもできるしできればこのねなんか個人的にはこの修正にって書いてあるところにどんなフィードバックをして出来上がったものなのかとかが入ってるといいかなと見てほら検品結果とか出てくるここに検品結果検品とかしてくるの参考画像を追加してとかもできるし検品し直すとか95点</p>
+<p><code>17:24</code> 95点別サイズに広げるこの作り方はレシピですよそういう風にどんどん広げていくこともできるしこれ90点で一応出てきてるみたいな不要な文字は少しは見当たりませんみたいな感じでいろいろ書いてくれてたりしてるわけだよねっていう風に生成に使った指示とかもこうやって見ることできるほら見て生成に使った指示この僕が言ったのを拡張している感じなんだよね追加してくれるというか自動でやってくれるいわゆるコーデックスが僕の話を元によりいいプロンプトというかブラッシュアップしてプロンプトを作ってくれたみたいな感じです</p>
+<p><code>17:58</code> なるほどという感じで今回このコーデックスアップサーバーで作ったコーデックスイメージスタジオかなりUI UX機能は研ぎ澄まされているかなと思いますがまだまだ改善していける余地はあると思っているのでぜひぜひ受け取っていただきこれをベースにご自身オリジナルの画像制作スタジオそれこそバナーを量産するものとかもいいですよねそういったのを作っていただけると面白いんじゃないかなと思います弊社では社員研修やセミナー登壇のほかAIネイティブな組織作りのための内製化支援などAI×教育領域で様々な支援を行っています</p>
+<p><code>18:33</code> ご興味のある方は概要欄に記載のフォームよりご連絡くださいありがとうございました今日の最後コメント返信コーナーです今日はですね新平さんからのコメントですありがとうございますドッツ関連の動画で一番わかりやすい動画でしたとのことですありがとうございます嬉しいですねやっぱなんかこれはちょっとドッツに関係ないんですけれども僕自身ねこのAIという領域にも教えてるからこそなんかAI領域からなんか教えるの始めたやつみたいにたまに思われるんですけど僕はもう大学時代の塾講師歴も含めると10年以上ずっと教え続けてきています</p>
+<p><code>19:09</code> だからこそいまだにですねやっぱ教えるというところに関して分かりやすいとかっていうコメントいただけると非常に嬉しいなと思いますしこういった学びたいと思っている人が多いような領域でですね僕自身自分の中で噛み砕いて分かりやすく伝えていくっていうところを積極的にいろんな領域でやっていければなと思いますのでぜひぜひこういう表現がいいんじゃないかとかこの辺が分かりやすかったとかそういうのがあればですねコメントをお寄せいただけると嬉しいですしまだチャンネル登録していない方多分いないんですけどもまさかチャンネル登録していないというのであればぜひチャンネル登録</p>
+<p><code>19:41</code> そしてコメントいただけると嬉しいなという風に思っていますということで本日は以上になりますまた次回</p>
+</div>
+</blockquote>
+<h2 id="関連ノート">関連ノート<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#関連ノート" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li>
+<p><a href="./🎇-AI_A-little-behind-the-scenes-of-my-creative-process.." class="internal alias" data-slug="🎇-AI_A-little-behind-the-scenes-of-my-creative-process..">🎇 AI_A little behind the scenes of my creative process..</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./AI_Structure-Note" class="internal alias" data-slug="AI_Structure-Note">AI_Structure Note</a>（StructureNote）</p>
+</li>
+<li>
+<p><a href="./フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント" class="internal alias" data-slug="フォント_JikiTourai-(磁気到来)-レトロフューチャー仮名フォント">フォント_JikiTourai (磁気到来) レトロフューチャー仮名フォント</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./生成AIテクスチャ変換" class="internal alias" data-slug="生成AIテクスチャ変換">生成AIテクスチャ変換</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./AIプロンプト例_夢の職業に就くためのキャリアパス" class="internal alias" data-slug="AIプロンプト例_夢の職業に就くためのキャリアパス">AIプロンプト例_夢の職業に就くためのキャリアパス</a>（PermanentNote）</p>
+</li>
+<li>
+<p><a href="./ai-workflow" class="internal alias" data-slug="ai-workflow">AIワークフロー</a>（StructureNote） — 役割分担型の制作フロー</p>
+</li>
+<li>
+<p><a href="./prompt-engineering" class="internal" data-slug="prompt-engineering">prompt-engineering</a>（StructureNote） — 拡張プロンプト・制作レシピ</p>
+</li>
+</ul>
+<hr/>
+<p><a href="./YouTube" class="internal" data-slug="YouTube">YouTube</a></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>グラフビュー</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-135" aria-expanded="true"><h3>目次</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul id="list-1" class="toc-content overflow"><li class="depth-0"><a href="#-要約" data-for="-要約">📝 要約</a></li><li class="depth-0"><a href="#️-文字起こし" data-for="️-文字起こし">🎙️ 文字起こし</a></li><li class="depth-0"><a href="#関連ノート" data-for="関連ノート">関連ノート</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>作成 <a href="https://quartz.jzhao.xyz/">Quartz v4.5.2</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript" data-persist="true">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module" data-persist="true">function E(a,e){if(!a)return;function t(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function n(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}a?.addEventListener("click",t),window.addCleanup(()=>a?.removeEventListener("click",t)),document.addEventListener("keydown",n),window.addCleanup(()=>document.removeEventListener("keydown",n))}function f(a){for(;a.firstChild;)a.removeChild(a.firstChild)}var m=class{constructor(e,t){this.container=e;this.content=t;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),t=this.onMouseMove.bind(this),n=this.onMouseUp.bind(this),o=this.onTouchStart.bind(this),r=this.onTouchMove.bind(this),i=this.onTouchEnd.bind(this),s=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",t),document.addEventListener("mouseup",n),this.container.addEventListener("touchstart",o,{passive:!1}),document.addEventListener("touchmove",r,{passive:!1}),document.addEventListener("touchend",i),window.addEventListener("resize",s),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",t),()=>document.removeEventListener("mouseup",n),()=>this.container.removeEventListener("touchstart",o),()=>document.removeEventListener("touchmove",r),()=>document.removeEventListener("touchend",i),()=>window.removeEventListener("resize",s))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let t=this.createButton("+",()=>this.zoom(.1)),n=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(n),e.appendChild(o),e.appendChild(t),this.container.appendChild(e)}createButton(e,t){let n=document.createElement("button");return n.textContent=e,n.className="mermaid-control-button",n.addEventListener("click",t),window.addCleanup(()=>n.removeEventListener("click",t)),n}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}onTouchStart(e){if(e.touches.length!==1)return;this.isDragging=!0;let t=e.touches[0];this.startPan={x:t.clientX-this.currentPan.x,y:t.clientY-this.currentPan.y}}onTouchMove(e){if(!this.isDragging||e.touches.length!==1)return;e.preventDefault();let t=e.touches[0];this.currentPan={x:t.clientX-this.startPan.x,y:t.clientY-this.startPan.y},this.updateTransform()}onTouchEnd(){this.isDragging=!1}zoom(e){let t=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),n=this.content.getBoundingClientRect(),o=n.width/2,r=n.height/2,i=t-this.scale;this.currentPan.x-=o*i,this.currentPan.y-=r*i,this.scale=t,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){let t=this.content.querySelector("svg").getBoundingClientRect(),n=t.width/this.scale,o=t.height/this.scale;this.scale=1,this.currentPan={x:(this.container.clientWidth-n)/2,y:(this.container.clientHeight-o)/2},this.updateTransform()}},T=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],y;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;y||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let t=y.default,n=new WeakMap;for(let r of e)n.set(r,r.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let c=n.get(s);c&&(s.innerHTML=c)}let r=T.reduce((s,c)=>(s[c]=window.getComputedStyle(document.documentElement).getPropertyValue(c),s),{}),i=document.documentElement.getAttribute("saved-theme")==="dark";t.initialize({startOnLoad:!1,securityLevel:"loose",theme:i?"dark":"base",themeVariables:{fontFamily:r["--codeFont"],primaryColor:r["--light"],primaryTextColor:r["--darkgray"],primaryBorderColor:r["--tertiary"],lineColor:r["--darkgray"],secondaryColor:r["--secondary"],tertiaryColor:r["--tertiary"],clusterBkg:r["--light"],edgeLabelBackground:r["--highlight"]}}),await t.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let r=0;r<e.length;r++){let v=function(){let g=l.querySelector("#mermaid-space"),h=l.querySelector(".mermaid-content");if(!h)return;f(h);let w=i.querySelector("svg").cloneNode(!0);h.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new m(g,h)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},i=e[r],s=i.parentElement,c=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(c),L=c.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),E(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript" data-persist="true"></script><script src="./postscript.js" type="module" data-persist="true"></script></html>
